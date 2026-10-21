@@ -1,5 +1,7 @@
 # Infosys SE Prep
 
+**Live site:** https://infosys-se-prep.vercel.app
+
 A self-contained preparation library for the **Infosys Systems Engineer (Trainee)** campus drive, 2026-27 batch.
 
 Built from evidence rather than memory: every claim about the test carries a confidence tag, and the question banks, mock test, worked solutions and core course are generated and verified in this repository.
