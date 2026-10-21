@@ -1,0 +1,3009 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P5 — Arrays — 1D and 2D Traversal and Indexing · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem current" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Pseudocode</span></div>
+    <article class="prose">
+<h1 id="p5-arrays-1d-and-2d-traversal-and-indexing">P5 — Arrays — 1D and 2D Traversal and Indexing</h1><p class="fm-line" style="color:var(--ink-faint);font-size:13px;margin:-.4em 0 1.2em">Tier 2 · Pseudocode · 1.8% of marks · about 0.8 h · confidence Medium</p>
+<p><em>Adapted from <code>accenture-prep-final/accenture-prep-library/topics/T15-B3-arrays-1d-2d.md</code>; verified in that library's QA. §1 and §10 are regenerated for Infosys from <code>data/weightage.json</code>; §2 gains an Infosys evidence table; §3–§9 are the source text unchanged, so "observed" in the worked examples refers to the source paper.</em></p>
+<h2 id="1-why-this-topic-matters-here">1. Why this topic matters here</h2>
+<p>Expect about <strong>0.7 questions and 1.4 marks</strong> on this topic (about 1.8% of the 75 scored marks). It sits in <strong>Pseudocode</strong>: 5 questions, 10 marks, 10 minutes. <strong>Tier 2</strong>, 0.8 hours to reach reliable recall, confidence <strong>Medium</strong>.</p>
+<p><strong>2 questions on this topic are in the observed Infosys pool</strong> (P12, P15), from 1 source. They are listed in §2 and solved in <code>../question-banks/QB-99-OBSERVED-POOL.md</code>.</p>
+<p><strong>Why the tier:</strong> its ROI alone would place it lower, but this section has its own cut-off and this topic is needed to reach 60% of the section's marks. Every section has its own cut-off, so a zero here costs the whole section's chance, not only these marks. There is no calculator. Negative marking: none reported.</p>
+<h2 id="2-exactly-what-gets-asked">2. Exactly what gets asked</h2>
+<h3 id="what-infosys-asked">What Infosys asked</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Source date</th>
+<th>What was asked</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P12</td>
+<td>2026-09-18</td>
+<td>total = product of all elements; result[i] = total / a[i]. Input 2, 3, 4, 5. Output?</td>
+</tr>
+<tr>
+<td>P15</td>
+<td>2026-09-18</td>
+<td>cur = 1, best = 1. for i = 1 to n-1: if a[i] &gt; a[i-1] then cur++ ; best = max(best, cur) else cur = 1. Output for [1, 2, 2, 3, 4, 5, 1]?</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The pattern notes below come from the library this file was adapted from. Any frequency or "observed paper" remark in them describes that source paper, not Infosys. The Infosys evidence is the table above.</p>
+</blockquote>
+<ol>
+<li><strong>2D initialiser to element access.</strong> Given <code>Integer arr[2][2] = {{0, 1}, {4, 1}}</code>, know immediately that <code>arr[0][0]=0</code>, <code>arr[0][1]=1</code>, <code>arr[1][0]=4</code>, <code>arr[1][1]=1</code>. Confirmed in 4 items.</li>
+</ol>
+<p><strong>1. Correct: (d) <code>arr[1]</code> gives 3</strong></p>
+<ul>
+<li>(b) <code>arr[2] = 9</code> — off by one; index 2 is the <em>third</em> element.</li>
+<li>(c) <code>arr[0] = 7</code> — first element, not second.</li>
+<li>(a) <code>arr[5]</code> — out of range; a size-5 array has valid indices 0–4.</li>
+</ul>
+<hr />
+<ol start="2">
+<li><strong>Bitwise on array elements inside a guard.</strong> <code>If((3 &amp; arr[1][1]) &lt; (arr[1][0] + 1))</code>.</li>
+</ol>
+<p><strong>2. Correct: (c) 6</strong></p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>j</th>
+<th>arr[i][j]</th>
+<th>s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 5 — <code>s</code> initialised to <code>arr[0][1]</code>, so <code>arr[0][0] = 0</code> never added.</li>
+<li>(b) 7 — <code>arr[1][1] = 1</code> added one extra time after the loops.</li>
+<li>(d) 10 — <code>arr[1][0] = 4</code> counted twice and <code>arr[0][0] = 0</code> skipped.</li>
+</ul>
+<hr />
+<ol start="3">
+<li><strong>In-place modification then re-read.</strong> <code>arr[0][0] = (arr[0][0] ^ 2) + arr[0][0]</code> — the element appears on both sides.</li>
+</ol>
+<p><strong>3. Correct: (b) 5</strong></p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>3 &amp; arr[1][1]</code> = <code>3 &amp; 1</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>arr[1][0] + 1</code> = <code>4 + 1</code></td>
+<td>5</td>
+</tr>
+<tr>
+<td><code>1 &lt; 5</code></td>
+<td>True → line 4</td>
+</tr>
+<tr>
+<td><code>t = arr[0][1] + arr[1][0]</code> = <code>1 + 4</code></td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 1 — comparison read reversed, so the Else branch runs: <code>0 + 1</code>.</li>
+<li>(c) 4 — <code>t</code> set to <code>arr[1][0]</code> alone.</li>
+<li>(d) 6 — sum of all four elements instead of just the two.</li>
+</ul>
+<hr />
+<ol start="4">
+<li><strong>Print a sum of two elements.</strong> The standard ending.</li>
+</ol>
+<p><strong>4. Correct: (c) 10</strong></p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>arr[0][0] = (0 ^ 2) + 0</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>arr[0][1] = 1 + 2</code></td>
+<td>3</td>
+</tr>
+<tr>
+<td><code>arr[1][0]</code>, <code>arr[1][1]</code> unchanged</td>
+<td>4, 1</td>
+</tr>
+<tr>
+<td><code>2 + 3 + 4 + 1</code></td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 8 — line 3 uses the <em>original</em> <code>arr[0][0] = 0</code>, so <code>arr[0][1]</code> stays 1.</li>
+<li>(d) 12 — <code>arr[0][0]</code> counted twice in the Print.</li>
+<li>(b) 6 — <code>^</code> read as exponentiation, giving <code>arr[0][0] = 0</code> and <code>arr[0][1] = 1</code>.</li>
+</ul>
+<hr />
+<ol start="5">
+<li><strong>1D indexing and the off-by-one.</strong> Which index is the "second element" of a zero-indexed array (index 1). Confirmed in the array-initialisation item.</li>
+</ol>
+<h3 id="the-two-grids-that-actually-appeared">The two grids that actually appeared</h3>
+<table>
+<thead>
+<tr>
+<th><code>{{0,1},{4,1}}</code></th>
+<th>col 0</th>
+<th>col 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>row 0</strong></td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>row 1</strong></td>
+<td>4</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>{{1,2},{2,4}}</code></th>
+<th>col 0</th>
+<th>col 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>row 0</strong></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td><strong>row 1</strong></td>
+<td>2</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>Memorise the <em>shape</em> of that mapping, not these two grids.</p>
+<h2 id="3-concept-notes">3. Concept notes</h2>
+<p><strong>Convention used below:</strong> every array in this section is <strong>zero-indexed</strong> unless stated otherwise. Loop bounds are inclusive. Statements are given in generic pseudocode (<code>DECLARE</code>, <code>FOR</code>, <code>WHILE</code>, <code>IF</code>, <code>OUTPUT</code>).</p>
+<h3 id="31-what-an-array-is">3.1 What an array is</h3>
+<p>An array is a <strong>fixed-size, ordered collection of elements of the same type</strong>. Each element is reached by its <strong>index</strong> (its position number).</p>
+<ul>
+<li>Fixed size: the length is set at declaration and does not change.</li>
+<li>Ordered: element order is part of the structure.</li>
+<li>Same type: all elements are the same data type.</li>
+<li><strong>Contiguous memory:</strong> the elements sit in consecutive memory cells, one after another, with no gaps.</li>
+</ul>
+<p>Because the block is contiguous, the machine can compute the address of any element directly:</p>
+<div class="codehilite"><pre><span></span><code>address(arr[i]) = base_address + i * element_size_in_bytes
+</code></pre></div>
+
+<p>This is the same formula every time, so it costs the same work for <code>i = 0</code> and for <code>i = 999999</code>. That is why indexing is <strong>O(1)</strong> — constant time. The computer does not scan; it multiplies and adds.</p>
+<table>
+<thead>
+<tr>
+<th>Operation on a 1D array</th>
+<th>Cost</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Read <code>arr[i]</code></td>
+<td>O(1)</td>
+<td>address arithmetic</td>
+</tr>
+<tr>
+<td>Write <code>arr[i] = x</code></td>
+<td>O(1)</td>
+<td>address arithmetic</td>
+</tr>
+<tr>
+<td>Find an element by value (linear search)</td>
+<td>O(n)</td>
+<td>must inspect up to n cells</td>
+</tr>
+<tr>
+<td>Find max / min</td>
+<td>O(n)</td>
+<td>every element must be read</td>
+</tr>
+<tr>
+<td>Sum</td>
+<td>O(n)</td>
+<td>every element must be read</td>
+</tr>
+<tr>
+<td>Insert at front / middle</td>
+<td>O(n)</td>
+<td>must shift elements</td>
+</tr>
+<tr>
+<td>Delete at front / middle</td>
+<td>O(n)</td>
+<td>must shift elements</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-zero-based-vs-one-based-indexing">3.2 Zero-based vs one-based indexing</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Zero-based</th>
+<th>One-based</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First element index</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Second element index</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>k-th element index</td>
+<td>k − 1</td>
+<td>k</td>
+</tr>
+<tr>
+<td>Last element index</td>
+<td>n − 1</td>
+<td>n</td>
+</tr>
+<tr>
+<td>Valid index range</td>
+<td>0 to n − 1</td>
+<td>1 to n</td>
+</tr>
+<tr>
+<td>Number of valid indices</td>
+<td>n</td>
+<td>n</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The exam trap.</strong> For a zero-indexed array:</p>
+<table>
+<thead>
+<tr>
+<th>Phrase in the question</th>
+<th>Index</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>first element</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>second element</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td>third element</td>
+<td>2</td>
+</tr>
+<tr>
+<td>last element</td>
+<td>n − 1</td>
+</tr>
+<tr>
+<td>element at position n</td>
+<td>does not exist</td>
+</tr>
+</tbody>
+</table>
+<p>Candidates lose marks by answering index 2 for "second element". The second element is <strong>index 1</strong> because counting starts at 0.</p>
+<p><strong>Length vs last index.</strong> If an array has <code>n</code> elements, its last index is <code>n − 1</code>. So <code>last index = length − 1</code> and <code>number of elements = last index + 1</code>.</p>
+<p><strong>Out of bounds.</strong> A reference is out of bounds if the index is outside the valid range.</p>
+<table>
+<thead>
+<tr>
+<th>Base</th>
+<th>Out of bounds when</th>
+<th>Typical result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>zero-based</td>
+<td><code>i &lt; 0</code> or <code>i &gt; n − 1</code></td>
+<td>runtime error, or undefined/garbage value</td>
+</tr>
+<tr>
+<td>one-based</td>
+<td><code>i &lt; 1</code> or <code>i &gt; n</code></td>
+<td>runtime error, or undefined/garbage value</td>
+</tr>
+</tbody>
+</table>
+<p>The most common off-by-one bug: writing <code>FOR i = 0 TO n</code> instead of <code>FOR i = 0 TO n-1</code>. The first version runs n + 1 times and reads <code>arr[n]</code>, which is out of bounds.</p>
+<h3 id="33-declaring-and-initialising-1d-arrays-in-pseudocode">3.3 Declaring and initialising 1D arrays in pseudocode</h3>
+<div class="codehilite"><pre><span></span><code>DECLARE arr[5]                      // 5 elements, valid indices 0..4
+arr = [10, 20, 30, 40, 50]
+
+DECLARE nums[5] = [1, 2, 3, 4, 5]   // declare and initialise together
+
+DECLARE n = 4
+DECLARE flags[n]                    // length taken from a variable
+</code></pre></div>
+
+<p>Filling an array by reading input, and printing it:</p>
+<div class="codehilite"><pre><span></span><code>DECLARE a[5]
+FOR i = 0 TO 4
+    READ a[i]
+END FOR
+
+FOR i = 0 TO 4
+    OUTPUT a[i]
+END FOR
+</code></pre></div>
+
+<p>Setting every element to the same value:</p>
+<div class="codehilite"><pre><span></span><code>FOR i = 0 TO n-1
+    a[i] = 0
+END FOR
+</code></pre></div>
+
+<p>Note: <code>DECLARE arr[5]</code> gives <strong>5</strong> cells, not 6. The 5 is a <strong>count</strong>, not the largest index. The largest index is 4.</p>
+<h3 id="34-traversal-patterns-1d">3.4 Traversal patterns (1D)</h3>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Pseudocode</th>
+<th>Iterations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Forward</td>
+<td><code>FOR i = 0 TO n-1</code></td>
+<td>n</td>
+</tr>
+<tr>
+<td>Backward</td>
+<td><code>FOR i = n-1 DOWNTO 0</code></td>
+<td>n</td>
+</tr>
+<tr>
+<td>Every other element</td>
+<td><code>FOR i = 0 TO n-1 STEP 2</code></td>
+<td>ceil(n/2)</td>
+</tr>
+<tr>
+<td>Every third element</td>
+<td><code>FOR i = 0 TO n-1 STEP 3</code></td>
+<td>ceil(n/3)</td>
+</tr>
+<tr>
+<td>Skip first, rest</td>
+<td><code>FOR i = 1 TO n-1</code></td>
+<td>n − 1</td>
+</tr>
+<tr>
+<td>All but last</td>
+<td><code>FOR i = 0 TO n-2</code></td>
+<td>n − 1</td>
+</tr>
+</tbody>
+</table>
+<p>Forward:</p>
+<div class="codehilite"><pre><span></span><code>FOR i = 0 TO n-1
+    OUTPUT a[i]
+END FOR
+</code></pre></div>
+
+<p>Backward — often asked, required for reverse printing:</p>
+<div class="codehilite"><pre><span></span><code>FOR i = n-1 DOWNTO 0
+    OUTPUT a[i]
+END FOR
+</code></pre></div>
+
+<p>Every other element (indices 0, 2, 4, …):</p>
+<div class="codehilite"><pre><span></span><code>FOR i = 0 TO n-1 STEP 2
+    OUTPUT a[i]
+END FOR
+</code></pre></div>
+
+<p>Count check for the every-other loop: <code>ceil(n/2)</code>. For n = 5 the indices are 0, 2, 4 → 3 iterations = ceil(5/2) = 3. For n = 4 the indices are 0, 2 → 2 iterations = ceil(4/2) = 2.</p>
+<h3 id="35-2d-arrays-the-mental-model">3.5 2D arrays: the mental model</h3>
+<p>A 2D array is a <strong>grid of rows and columns</strong>. Think of a table or a spreadsheet. Every cell is identified by two numbers: its row and its column.</p>
+<div class="codehilite"><pre><span></span><code>DECLARE grid[R][C]     // R rows, C columns
+grid[row][column]
+</code></pre></div>
+
+<ul>
+<li>The <strong>first</strong> index selects the <strong>row</strong>.</li>
+<li>The <strong>second</strong> index selects the <strong>column</strong>.</li>
+<li>Total number of cells = R × C.</li>
+<li>Valid row indices: 0 to R − 1. Valid column indices: 0 to C − 1.</li>
+</ul>
+<p>Some exam papers declare <code>arr[C][R]</code> instead; always check which dimension the paper treats as rows. Unless the question says otherwise, assume <code>arr[rows][cols]</code>.</p>
+<h4 id="reading-an-initialiser-into-a-grid">Reading an initialiser into a grid</h4>
+<p>The initialiser is written as a list of row lists, <strong>outer braces = the whole grid, inner braces = one row, left to right</strong>.</p>
+<p><strong>Example A:</strong> <code>arr[2][2] = {{0,1},{4,1}}</code></p>
+<p>Row 0 = <code>{0,1}</code>, Row 1 = <code>{4,1}</code>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>col 0</th>
+<th>col 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>row 0</strong></td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>row 1</strong></td>
+<td>4</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>So:</p>
+<table>
+<thead>
+<tr>
+<th>Cell</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>arr[0][0]</code></td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>arr[0][1]</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>arr[1][0]</code></td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>arr[1][1]</code></td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example B:</strong> <code>arr[2][2] = {{1,2},{2,4}}</code></p>
+<p>Row 0 = <code>{1,2}</code>, Row 1 = <code>{2,4}</code>.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>col 0</th>
+<th>col 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>row 0</strong></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td><strong>row 1</strong></td>
+<td>2</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p>So:</p>
+<table>
+<thead>
+<tr>
+<th>Cell</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>arr[0][0]</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>arr[0][1]</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>arr[1][0]</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>arr[1][1]</code></td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reading rule to memorise.</strong> The first number inside an inner brace is column 0 of that row; the second is column 1; and so on. The first inner brace is row 0.</p>
+<p>A non-square example: <code>arr[2][3] = {{5,6,7},{8,9,10}}</code></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>col 0</th>
+<th>col 1</th>
+<th>col 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>row 0</strong></td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+</tr>
+<tr>
+<td><strong>row 1</strong></td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p>Total cells = 2 × 3 = 6. <code>arr[1][2] = 10</code>.</p>
+<h3 id="36-row-major-vs-column-major-storage">3.6 Row-major vs column-major storage</h3>
+<p>Memory is one-dimensional; a 2D array is flattened into it in one of two orders.</p>
+<ul>
+<li><strong>Row-major:</strong> store row 0 completely, then row 1, then row 2, … (used by C, C++, Java, Python).</li>
+<li><strong>Column-major:</strong> store column 0 completely, then column 1, then column 2, … (used by Fortran, MATLAB, R).</li>
+</ul>
+<p>Let <code>R</code> = number of rows, <code>C</code> = number of columns, <code>w</code> = element size in bytes, <code>base</code> = address of <code>arr[0][0]</code>, and indices zero-based.</p>
+<table>
+<thead>
+<tr>
+<th>Order</th>
+<th>Address of <code>arr[i][j]</code></th>
+<th>Linear element number (0-based)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Row-major</td>
+<td><code>base + (i * C + j) * w</code></td>
+<td><code>i * C + j</code></td>
+</tr>
+<tr>
+<td>Column-major</td>
+<td><code>base + (j * R + i) * w</code></td>
+<td><code>j * R + i</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Worked example.</strong> <code>R = 3</code>, <code>C = 4</code>, <code>w = 4</code> bytes, <code>base = 1000</code>. Find the address of <code>arr[2][1]</code>.</p>
+<p>Row-major:</p>
+<div class="codehilite"><pre><span></span><code>linear index = i * C + j = 2 * 4 + 1 = 9
+address      = 1000 + 9 * 4 = 1000 + 36 = 1036
+</code></pre></div>
+
+<p>Column-major:</p>
+<div class="codehilite"><pre><span></span><code>linear index = j * R + i = 1 * 3 + 2 = 5
+address      = 1000 + 5 * 4 = 1000 + 20 = 1020
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Linear index</th>
+<th>Byte offset</th>
+<th>Address</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Row-major</td>
+<td>9</td>
+<td>36</td>
+<td>1036</td>
+</tr>
+<tr>
+<td>Column-major</td>
+<td>5</td>
+<td>20</td>
+<td>1020</td>
+</tr>
+</tbody>
+</table>
+<p>Sanity checks: for <code>arr[0][0]</code> both formulas give the base address 1000. For the last cell <code>arr[2][3]</code> in row-major: <code>2*4 + 3 = 11</code>, address <code>1000 + 44 = 1044</code>; the array has 12 cells (0…11), so 11 is indeed the last linear index.</p>
+<p>If indices are <strong>one-based</strong>, subtract 1 from each index first, or use <code>base + ((i-1) * C + (j-1)) * w</code> for row-major.</p>
+<h3 id="37-nested-loop-traversal-of-a-2d-array">3.7 Nested-loop traversal of a 2D array</h3>
+<div class="codehilite"><pre><span></span><code>FOR i = 0 TO R-1
+    FOR j = 0 TO C-1
+        OUTPUT arr[i][j]
+    END FOR
+END FOR
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Loop</th>
+<th>Runs</th>
+<th>Body of inner loop runs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Outer <code>i</code></td>
+<td>R times</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Inner <code>j</code></td>
+<td>C times per outer pass</td>
+<td>R × C times</td>
+</tr>
+<tr>
+<td>Statement <code>OUTPUT arr[i][j]</code></td>
+<td>—</td>
+<td>R × C times</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Total iteration count of the inner body = R × C.</strong> For a 3 × 4 array that is 12. For a 2 × 2 array that is 4.</p>
+<table>
+<thead>
+<tr>
+<th>Traversal shape</th>
+<th>Iteration count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1D, <code>0 TO n-1</code></td>
+<td>n</td>
+</tr>
+<tr>
+<td>1D, <code>0 TO n-1 STEP 2</code></td>
+<td>ceil(n/2)</td>
+</tr>
+<tr>
+<td>2D rectangular R × C</td>
+<td>R × C</td>
+</tr>
+<tr>
+<td>2D triangular, inner <code>j = 0 TO i</code></td>
+<td>R(R+1)/2</td>
+</tr>
+<tr>
+<td>3D, R × C × D</td>
+<td>R × C × D</td>
+</tr>
+</tbody>
+</table>
+<p>Traversal orders:</p>
+<table>
+<thead>
+<tr>
+<th>Order</th>
+<th>Pseudocode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Row by row (row-major order)</td>
+<td>outer loop over rows, inner loop over columns</td>
+</tr>
+<tr>
+<td>Column by column</td>
+<td>outer loop over columns, inner loop over rows</td>
+</tr>
+<tr>
+<td>Reverse rows</td>
+<td><code>FOR i = R-1 DOWNTO 0</code></td>
+</tr>
+</tbody>
+</table>
+<p>Row-by-row traversal of <code>{{0,1},{4,1}}</code> visits 0, 1, 4, 1 in that order. Column-by-column traversal visits 0, 4, 1, 1.</p>
+<h3 id="38-common-operations">3.8 Common operations</h3>
+<p>All snippets assume zero-based indexing and <code>n</code> elements (1D) or <code>R × C</code> (2D).</p>
+<h4 id="sum">Sum</h4>
+<div class="codehilite"><pre><span></span><code>sum = 0
+FOR i = 0 TO n-1
+    sum = sum + a[i]
+END FOR
+</code></pre></div>
+
+<p>Trace on <code>a = [4, 1, 7]</code>:</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>a[i]</th>
+<th>sum after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr>
+<td>2</td>
+<td>7</td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+<p>Result 12.</p>
+<h4 id="max">Max</h4>
+<div class="codehilite"><pre><span></span><code>max = a[0]
+FOR i = 1 TO n-1
+    IF a[i] &gt; max THEN
+        max = a[i]
+    END IF
+END FOR
+</code></pre></div>
+
+<p>Trace on <code>a = [3, 9, 2]</code>:</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>a[i]</th>
+<th>max after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>—</td>
+<td>—</td>
+<td>3 (initial)</td>
+</tr>
+<tr>
+<td>1</td>
+<td>9</td>
+<td>9</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<p>Result 9. The loop starts at <code>i = 1</code> because <code>a[0]</code> is already the seed. Starting the loop at 0 also works.</p>
+<h4 id="min">Min</h4>
+<div class="codehilite"><pre><span></span><code>min = a[0]
+FOR i = 1 TO n-1
+    IF a[i] &lt; min THEN
+        min = a[i]
+    END IF
+END FOR
+</code></pre></div>
+
+<p>Trace on <code>a = [3, 9, 2]</code>: min starts at 3 → i=1: 9 is not &lt; 3 → i=2: 2 &lt; 3 → min = 2. Result 2.</p>
+<h4 id="reverse-in-place">Reverse in place</h4>
+<div class="codehilite"><pre><span></span><code>left = 0
+right = n-1
+WHILE left &lt; right
+    temp = a[left]
+    a[left] = a[right]
+    a[right] = temp
+    left = left + 1
+    right = right - 1
+END WHILE
+</code></pre></div>
+
+<p>Trace on <code>a = [1, 2, 3, 4]</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>left</th>
+<th>right</th>
+<th>Array after swap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start</td>
+<td>0</td>
+<td>3</td>
+<td>[1, 2, 3, 4]</td>
+</tr>
+<tr>
+<td>swap</td>
+<td>0</td>
+<td>3</td>
+<td>[4, 2, 3, 1]</td>
+</tr>
+<tr>
+<td>swap</td>
+<td>1</td>
+<td>2</td>
+<td>[4, 3, 2, 1]</td>
+</tr>
+<tr>
+<td>stop</td>
+<td>2</td>
+<td>1</td>
+<td>left &lt; right is false</td>
+</tr>
+</tbody>
+</table>
+<p>Result <code>[4, 3, 2, 1]</code>. Number of swaps = floor(n/2). For n = 5, middle element (index 2) is never touched.</p>
+<h4 id="swap-two-elements">Swap two elements</h4>
+<div class="codehilite"><pre><span></span><code>temp = a[i]
+a[i] = a[j]
+a[j] = temp
+</code></pre></div>
+
+<p>Trace on <code>a = [5, 6, 7]</code> with <code>i = 0</code>, <code>j = 2</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Statement</th>
+<th>Array</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start</td>
+<td>[5, 6, 7]</td>
+</tr>
+<tr>
+<td><code>temp = a[0]</code></td>
+<td>[5, 6, 7], temp = 5</td>
+</tr>
+<tr>
+<td><code>a[0] = a[2]</code></td>
+<td>[7, 6, 7]</td>
+</tr>
+<tr>
+<td><code>a[2] = temp</code></td>
+<td>[7, 6, 5]</td>
+</tr>
+</tbody>
+</table>
+<p>The order of the three statements matters. Writing <code>a[i] = a[j]</code> before saving <code>a[i]</code> destroys the value. If <code>i == j</code>, the swap is a no-op and is still correct with a temp variable (XOR-swap without a temp fails when <code>i == j</code>).</p>
+<h4 id="count-occurrences">Count occurrences</h4>
+<div class="codehilite"><pre><span></span><code>count = 0
+FOR i = 0 TO n-1
+    IF a[i] = key THEN
+        count = count + 1
+    END IF
+END FOR
+</code></pre></div>
+
+<p>Trace on <code>a = [2, 3, 2, 5, 2]</code>, <code>key = 2</code>:</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>a[i]</th>
+<th>Match?</th>
+<th>count after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>2</td>
+<td>yes</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>no</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>yes</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>5</td>
+<td>no</td>
+<td>2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2</td>
+<td>yes</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>Result 3. Iterations always = n (no early exit).</p>
+<h4 id="linear-search">Linear search</h4>
+<div class="codehilite"><pre><span></span><code>found = -1
+FOR i = 0 TO n-1
+    IF a[i] = key THEN
+        found = i
+        BREAK
+    END IF
+END FOR
+</code></pre></div>
+
+<p>Trace on <code>a = [9, 4, 7, 4]</code>:</p>
+<table>
+<thead>
+<tr>
+<th>key</th>
+<th>Scanned</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>a[0]=9 no, a[1]=4 yes → break</td>
+<td>1 (first match)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>a[0] no, a[1] no, a[2] yes → break</td>
+<td>2</td>
+</tr>
+<tr>
+<td>6</td>
+<td>all four compared, none match</td>
+<td>−1</td>
+</tr>
+</tbody>
+</table>
+<p>Best case 1 comparison, worst case n comparisons, so O(n). Without <code>BREAK</code>, the loop returns the <strong>last</strong> match instead of the first.</p>
+<h3 id="39-in-place-modification-trap">3.9 In-place modification trap</h3>
+<p>"In place" means updating the same array without a copy. If an element is written early and then read again later in the same pass, the read sees the <strong>new</strong> value, not the original. This changes the answer.</p>
+<div class="codehilite"><pre><span></span><code>FOR i = 1 TO n-1
+    a[i] = a[i] + a[i-1]
+END FOR
+</code></pre></div>
+
+<p>Trace on <code>a = [1, 2, 3, 4]</code>:</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>a[i-1] read</th>
+<th>a[i] before</th>
+<th>a[i] after</th>
+<th>Array</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>[1, 3, 3, 4]</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3 (already updated)</td>
+<td>3</td>
+<td>6</td>
+<td>[1, 3, 6, 4]</td>
+</tr>
+<tr>
+<td>3</td>
+<td>6 (already updated)</td>
+<td>4</td>
+<td>10</td>
+<td>[1, 3, 6, 10]</td>
+</tr>
+</tbody>
+</table>
+<p>Result <code>[1, 3, 6, 10]</code> — running totals. If instead the original values were used (<code>a[i] + original_a[i-1]</code>), the result would be <code>[1, 3, 5, 7]</code>. Same code shape, different answer, purely because of the read-after-write.</p>
+<p>Contrast with the safe direction:</p>
+<div class="codehilite"><pre><span></span><code>FOR i = 0 TO n-2
+    a[i] = a[i] + a[i+1]
+END FOR
+</code></pre></div>
+
+<p>Here <code>a[i+1]</code> has not been updated yet when it is read (the loop moves forward and writes to i, reads from i+1). Trace on <code>[1, 2, 3, 4]</code>:</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>a[i]</th>
+<th>a[i+1]</th>
+<th>a[i] after</th>
+<th>Array</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>[3, 2, 3, 4]</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+<td>[3, 5, 3, 4]</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>7</td>
+<td>[3, 5, 7, 4]</td>
+</tr>
+</tbody>
+</table>
+<p>Result <code>[3, 5, 7, 4]</code>, computed from original neighbours.</p>
+<p><strong>Rule of thumb for the exam:</strong> when tracing an in-place loop, write the array after <strong>every single iteration</strong>. A loop that reads a lower index (<code>a[i-1]</code>) while running forwards reads already-modified data; a loop that reads a higher index (<code>a[i+1]</code>) while running forwards reads original data.</p>
+<p>Also watch for compound traps: overwriting with 0 or −1 before a later comparison, e.g. setting <code>a[i] = 0</code> in one loop and later counting how many elements equal 0.</p>
+<h3 id="310-jagged-arrays-brief">3.10 Jagged arrays (brief)</h3>
+<p>A jagged (ragged) array is an array of arrays whose rows have <strong>different lengths</strong>.</p>
+<div class="codehilite"><pre><span></span><code>DECLARE jag[3][]
+jag[0] = [1, 2]
+jag[1] = [3, 4, 5, 6]
+jag[2] = [7]
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Row</th>
+<th>Length</th>
+<th>Elements</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>2</td>
+<td>1, 2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>4</td>
+<td>3, 4, 5, 6</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<p>Traversal must use each row's own length, not a fixed column count:</p>
+<div class="codehilite"><pre><span></span><code>FOR i = 0 TO rows-1
+    FOR j = 0 TO length(jag[i]) - 1
+        OUTPUT jag[i][j]
+    END FOR
+END FOR
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Rectangular 2D array</th>
+<th>Jagged array</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Row lengths</td>
+<td>all equal</td>
+<td>may differ</td>
+</tr>
+<tr>
+<td>Bounds</td>
+<td>row 0..R-1, col 0..C-1</td>
+<td>row 0..R-1, col 0..len(row)-1</td>
+</tr>
+<tr>
+<td>Address formula</td>
+<td>single formula works</td>
+<td>no single formula</td>
+</tr>
+<tr>
+<td>Total cells</td>
+<td>R × C</td>
+<td>sum of row lengths</td>
+</tr>
+<tr>
+<td>Contiguity</td>
+<td>one contiguous block</td>
+<td>rows may be scattered</td>
+</tr>
+</tbody>
+</table>
+<h3 id="311-array-vs-linked-list">3.11 Array vs linked list</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Array</th>
+<th>Linked list</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Size</td>
+<td>fixed at creation</td>
+<td>grows and shrinks at runtime</td>
+</tr>
+<tr>
+<td>Memory layout</td>
+<td>contiguous block</td>
+<td>nodes scattered, joined by pointers</td>
+</tr>
+<tr>
+<td>Access by index</td>
+<td>O(1)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Insert at front</td>
+<td>O(n) — shift all</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Insert at end</td>
+<td>O(1) if space remains</td>
+<td>O(1) with a tail pointer, else O(n)</td>
+</tr>
+<tr>
+<td>Insert in middle</td>
+<td>O(n) — shift</td>
+<td>O(1) after reaching the position, O(n) to reach it</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>O(n) — shift</td>
+<td>O(1) after reaching the position</td>
+</tr>
+<tr>
+<td>Memory overhead</td>
+<td>none</td>
+<td>one pointer per node</td>
+</tr>
+<tr>
+<td>Cache performance</td>
+<td>good (contiguous)</td>
+<td>poor (scattered)</td>
+</tr>
+<tr>
+<td>Binary search possible</td>
+<td>yes, if sorted</td>
+<td>no (no O(1) index)</td>
+</tr>
+<tr>
+<td>Random access</td>
+<td>yes</td>
+<td>no</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-must-memorise-block">4. Must-memorise block</h2>
+<h3 id="index-range-and-traps">Index range and traps</h3>
+<table>
+<thead>
+<tr>
+<th>Fact</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zero-based valid range</td>
+<td>0 to n − 1</td>
+</tr>
+<tr>
+<td>One-based valid range</td>
+<td>1 to n</td>
+</tr>
+<tr>
+<td>Number of elements</td>
+<td>last index + 1</td>
+</tr>
+<tr>
+<td>Last index</td>
+<td>length − 1</td>
+</tr>
+<tr>
+<td>Out of bounds (zero-based)</td>
+<td><code>i &lt; 0</code> or <code>i &gt; n − 1</code></td>
+</tr>
+<tr>
+<td>Out of bounds (one-based)</td>
+<td><code>i &lt; 1</code> or <code>i &gt; n</code></td>
+</tr>
+<tr>
+<td><code>FOR i = 0 TO n</code> on an n-element array</td>
+<td>runs n + 1 times, reads <code>arr[n]</code> → out of bounds</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Trap table — "which index is that?" (zero-based array):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Asked for</th>
+<th>Index</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>first element</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>second element</strong></td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td>third element</td>
+<td>2</td>
+</tr>
+<tr>
+<td>last element</td>
+<td>n − 1</td>
+</tr>
+<tr>
+<td>element before last</td>
+<td>n − 2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2d-initialiser-grid-example-a">2D initialiser → grid, example A</h3>
+<p><code>arr[2][2] = {{0,1},{4,1}}</code></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>col 0</th>
+<th>col 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>row 0</strong></td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>row 1</strong></td>
+<td>4</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><code>arr[0][0] = 0</code> · <code>arr[0][1] = 1</code> · <code>arr[1][0] = 4</code> · <code>arr[1][1] = 1</code></p>
+<h3 id="2d-initialiser-grid-example-b">2D initialiser → grid, example B</h3>
+<p><code>arr[2][2] = {{1,2},{2,4}}</code></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>col 0</th>
+<th>col 1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>row 0</strong></td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td><strong>row 1</strong></td>
+<td>2</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p><code>arr[0][0] = 1</code> · <code>arr[0][1] = 2</code> · <code>arr[1][0] = 2</code> · <code>arr[1][1] = 4</code></p>
+<h3 id="address-formulas">Address formulas</h3>
+<table>
+<thead>
+<tr>
+<th>Order</th>
+<th>Address of <code>arr[i][j]</code></th>
+<th>Linear index (0-based)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Row-major</td>
+<td><code>base + (i*C + j) * w</code></td>
+<td><code>i*C + j</code></td>
+</tr>
+<tr>
+<td>Column-major</td>
+<td><code>base + (j*R + i) * w</code></td>
+<td><code>j*R + i</code></td>
+</tr>
+</tbody>
+</table>
+<p>R = rows, C = columns, w = element size in bytes, zero-based indices. For one-based indices, subtract 1 from i and j first.</p>
+<h3 id="nested-traversal-iteration-count">Nested traversal iteration count</h3>
+<table>
+<thead>
+<tr>
+<th>Loop form</th>
+<th>Inner-body iterations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FOR i = 0 TO n-1</code></td>
+<td>n</td>
+</tr>
+<tr>
+<td><code>FOR i = 0 TO n-1 STEP 2</code></td>
+<td>ceil(n/2)</td>
+</tr>
+<tr>
+<td><code>FOR i = 0 TO R-1 / FOR j = 0 TO C-1</code></td>
+<td>R × C</td>
+</tr>
+<tr>
+<td><code>FOR i = 0 TO R-1 / FOR j = 0 TO i</code></td>
+<td>R(R+1)/2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="one-line-recall-list">One-line recall list</h3>
+<ul>
+<li>Contiguous memory → <code>base + i*w</code> → <strong>O(1) indexing</strong>.</li>
+<li>Zero-based: 0 … n−1. One-based: 1 … n.</li>
+<li>Second element of a zero-indexed array is index <strong>1</strong>, not 2.</li>
+<li><code>DECLARE a[5]</code> = 5 cells, indices 0–4.</li>
+<li><code>arr[row][col]</code>; first initialiser brace = row 0; first value in a row = column 0.</li>
+<li>Row-major = row by row; column-major = column by column.</li>
+<li>Nested R × C traversal = R × C iterations.</li>
+<li>Reverse in place = floor(n/2) swaps; middle element of an odd-length array never moves.</li>
+<li>Linear search returns the <strong>first</strong> match only if it breaks; without <code>BREAK</code> it returns the <strong>last</strong>.</li>
+<li>In-place trap: a value written earlier in the same pass is read back as the new value. Trace the array after every iteration.</li>
+</ul>
+<h2 id="5-worked-examples">5. Worked examples</h2>
+<p>Convention used throughout: indexing is <strong>zero-based</strong>, <code>arr[row][column]</code>, <code>For i = 0 to 1</code> executes i = 0 and i = 1 (bounds inclusive), integers divide with truncation, and <code>^</code> is bitwise XOR, <code>&amp;</code> bitwise AND, <code>&gt;&gt;</code> right shift.</p>
+<h3 id="example-1-bitwise-condition-guarding-a-2d-element-update">Example 1 — Bitwise condition guarding a 2D element update</h3>
+<div class="codehilite"><pre><span></span><code>1  Integer arr[2][2] = {{0,1},{4,1}}
+2  If ((3 &amp; arr[1][1]) &lt; (arr[1][0] + 1))
+3     arr[0][0] = (arr[0][0] ^ 2) + arr[0][0]
+4  End If
+5  Print arr[0][0] + arr[1][0]
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>arr[0][0]</th>
+<th>arr[0][1]</th>
+<th>arr[1][0]</th>
+<th>arr[1][1]</th>
+<th>Condition / value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>4</td>
+<td>1</td>
+<td>array initialised</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0</td>
+<td>1</td>
+<td>4</td>
+<td>1</td>
+<td>3 &amp; 1 = 1; 4 + 1 = 5; 1 &lt; 5 → <strong>True</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td>2</td>
+<td>1</td>
+<td>4</td>
+<td>1</td>
+<td>arr[0][0] = (0 ^ 2) + 0 = 2 + 0 = 2</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2</td>
+<td>1</td>
+<td>4</td>
+<td>1</td>
+<td>if-block ends (no operation)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2</td>
+<td>1</td>
+<td>4</td>
+<td>1</td>
+<td>Print 2 + 4 = 6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Answer: 6</strong></p>
+<h3 id="example-2-nested-loops-over-a-2d-array-diagonal-weighted-double">Example 2 — Nested loops over a 2D array, diagonal weighted double</h3>
+<div class="codehilite"><pre><span></span><code>1  Integer arr[2][2] = {{3,5},{7,2}}
+2  Integer i, j, s
+3  s = 0
+4  For i = 0 to 1
+5    For j = 0 to 1
+6      If (i == j)
+7        s = s + arr[i][j] * 2
+8      Else
+9        s = s + arr[i][j]
+10     End If
+11   End For
+12 End For
+13 Print s
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>i</th>
+<th>j</th>
+<th>arr[0][0]</th>
+<th>arr[0][1]</th>
+<th>arr[1][0]</th>
+<th>arr[1][1]</th>
+<th>s</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>–</td>
+<td>–</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>–</td>
+<td>array initialised</td>
+</tr>
+<tr>
+<td>2</td>
+<td>–</td>
+<td>–</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>–</td>
+<td>i, j declared</td>
+</tr>
+<tr>
+<td>3</td>
+<td>–</td>
+<td>–</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>0</td>
+<td>s = 0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0</td>
+<td>–</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>0</td>
+<td>outer loop begins</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>0</td>
+<td>inner loop begins</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>0</td>
+<td>0 == 0 → True</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0</td>
+<td>0</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>6</td>
+<td>s = 0 + arr[0][0] * 2 = 0 + 6</td>
+</tr>
+<tr>
+<td>8</td>
+<td>0</td>
+<td>0</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>6</td>
+<td>Else skipped (not executed)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>0</td>
+<td>0</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>6</td>
+<td>if-block ends</td>
+</tr>
+<tr>
+<td>11</td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>6</td>
+<td>End For: j → 1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>6</td>
+<td>inner loop body</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>6</td>
+<td>0 == 1 → False</td>
+</tr>
+<tr>
+<td>8</td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>6</td>
+<td>–</td>
+</tr>
+<tr>
+<td>9</td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>11</td>
+<td>s = 6 + arr[0][1] = 6 + 5</td>
+</tr>
+<tr>
+<td>10</td>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>11</td>
+<td>if-block ends</td>
+</tr>
+<tr>
+<td>11</td>
+<td>0</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>11</td>
+<td>j → 2, exceeds bound; inner loop ends</td>
+</tr>
+<tr>
+<td>12</td>
+<td>1</td>
+<td>–</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>11</td>
+<td>i → 1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1</td>
+<td>–</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>11</td>
+<td>outer loop body</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1</td>
+<td>0</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>11</td>
+<td>inner loop begins</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1</td>
+<td>0</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>11</td>
+<td>1 == 0 → False</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1</td>
+<td>0</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>11</td>
+<td>–</td>
+</tr>
+<tr>
+<td>9</td>
+<td>1</td>
+<td>0</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>18</td>
+<td>s = 11 + arr[1][0] = 11 + 7</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1</td>
+<td>0</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>18</td>
+<td>if-block ends</td>
+</tr>
+<tr>
+<td>11</td>
+<td>1</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>18</td>
+<td>j → 1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>18</td>
+<td>inner loop body</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>18</td>
+<td>1 == 1 → True</td>
+</tr>
+<tr>
+<td>7</td>
+<td>1</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>22</td>
+<td>s = 18 + arr[1][1] * 2 = 18 + 4</td>
+</tr>
+<tr>
+<td>8</td>
+<td>1</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>22</td>
+<td>Else skipped (not executed)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>1</td>
+<td>1</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>22</td>
+<td>if-block ends</td>
+</tr>
+<tr>
+<td>11</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>22</td>
+<td>j → 2; inner loop ends</td>
+</tr>
+<tr>
+<td>12</td>
+<td>2</td>
+<td>–</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>22</td>
+<td>i → 2; outer loop ends</td>
+</tr>
+<tr>
+<td>13</td>
+<td>2</td>
+<td>–</td>
+<td>3</td>
+<td>5</td>
+<td>7</td>
+<td>2</td>
+<td>22</td>
+<td>Print 22</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Answer: 22</strong></p>
+<h3 id="example-3-1d-array-rewritten-in-place-with-xor">Example 3 — 1D array rewritten in place with XOR</h3>
+<div class="codehilite"><pre><span></span><code>1  Integer arr[3] = {5, 2, 7}
+2  Integer i
+3  For i = 0 to 2
+4     arr[i] = (arr[i] ^ 3) + i
+5  End For
+6  Print arr[0] + arr[2]
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>i</th>
+<th>arr[0]</th>
+<th>arr[1]</th>
+<th>arr[2]</th>
+<th>Value computed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>–</td>
+<td>5</td>
+<td>2</td>
+<td>7</td>
+<td>array initialised</td>
+</tr>
+<tr>
+<td>2</td>
+<td>–</td>
+<td>5</td>
+<td>2</td>
+<td>7</td>
+<td>i declared</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0</td>
+<td>5</td>
+<td>2</td>
+<td>7</td>
+<td>i = 0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0</td>
+<td>6</td>
+<td>2</td>
+<td>7</td>
+<td>arr[0] = (5 ^ 3) + 0 = 6 + 0 = 6</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1</td>
+<td>6</td>
+<td>2</td>
+<td>7</td>
+<td>End For: i → 1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1</td>
+<td>6</td>
+<td>2</td>
+<td>7</td>
+<td>loop body</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1</td>
+<td>6</td>
+<td>2</td>
+<td>7</td>
+<td>arr[1] = (2 ^ 3) + 1 = 1 + 1 = 2</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2</td>
+<td>6</td>
+<td>2</td>
+<td>7</td>
+<td>i → 2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2</td>
+<td>6</td>
+<td>2</td>
+<td>7</td>
+<td>loop body</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2</td>
+<td>6</td>
+<td>2</td>
+<td>6</td>
+<td>arr[2] = (7 ^ 3) + 2 = 4 + 2 = 6</td>
+</tr>
+<tr>
+<td>5</td>
+<td>3</td>
+<td>6</td>
+<td>2</td>
+<td>6</td>
+<td>i → 3, exceeds bound; loop ends</td>
+</tr>
+<tr>
+<td>6</td>
+<td>3</td>
+<td>6</td>
+<td>2</td>
+<td>6</td>
+<td>Print 6 + 6 = 12</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Answer: 12</strong></p>
+<h3 id="example-4-column-sum-with-then-a-bitwise-branch">Example 4 — Column sum with <code>&gt;&gt;</code>, then a bitwise branch</h3>
+<div class="codehilite"><pre><span></span><code>1  Integer arr[2][2] = {{3,6},{1,2}}
+2  Integer j, t
+3  t = 0
+4  For j = 0 to 1
+5     t = t + (arr[j][1] &gt;&gt; 1)
+6  End For
+7  If (t &gt; arr[0][0])
+8     t = t ^ arr[1][0]
+9  Else
+10    t = t + arr[1][1]
+11 End If
+12 Print t
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>j</th>
+<th>arr[0][0]</th>
+<th>arr[0][1]</th>
+<th>arr[1][0]</th>
+<th>arr[1][1]</th>
+<th>t</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>–</td>
+<td>3</td>
+<td>6</td>
+<td>1</td>
+<td>2</td>
+<td>–</td>
+<td>array initialised</td>
+</tr>
+<tr>
+<td>2</td>
+<td>–</td>
+<td>3</td>
+<td>6</td>
+<td>1</td>
+<td>2</td>
+<td>–</td>
+<td>j, t declared</td>
+</tr>
+<tr>
+<td>3</td>
+<td>–</td>
+<td>3</td>
+<td>6</td>
+<td>1</td>
+<td>2</td>
+<td>0</td>
+<td>t = 0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0</td>
+<td>3</td>
+<td>6</td>
+<td>1</td>
+<td>2</td>
+<td>0</td>
+<td>j = 0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0</td>
+<td>3</td>
+<td>6</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>t = 0 + (6 &gt;&gt; 1) = 0 + 3</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1</td>
+<td>3</td>
+<td>6</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>End For: j → 1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1</td>
+<td>3</td>
+<td>6</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>loop body</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1</td>
+<td>3</td>
+<td>6</td>
+<td>1</td>
+<td>2</td>
+<td>4</td>
+<td>t = 3 + (2 &gt;&gt; 1) = 3 + 1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>2</td>
+<td>3</td>
+<td>6</td>
+<td>1</td>
+<td>2</td>
+<td>4</td>
+<td>j → 2, exceeds bound; loop ends</td>
+</tr>
+<tr>
+<td>7</td>
+<td>2</td>
+<td>3</td>
+<td>6</td>
+<td>1</td>
+<td>2</td>
+<td>4</td>
+<td>4 &gt; 3 → True</td>
+</tr>
+<tr>
+<td>8</td>
+<td>2</td>
+<td>3</td>
+<td>6</td>
+<td>1</td>
+<td>2</td>
+<td>5</td>
+<td>t = 4 ^ 1 = 5</td>
+</tr>
+<tr>
+<td>11</td>
+<td>2</td>
+<td>3</td>
+<td>6</td>
+<td>1</td>
+<td>2</td>
+<td>5</td>
+<td>if-block ends (lines 9, 10 skipped)</td>
+</tr>
+<tr>
+<td>12</td>
+<td>2</td>
+<td>3</td>
+<td>6</td>
+<td>1</td>
+<td>2</td>
+<td>5</td>
+<td>Print 5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Answer: 5</strong></p>
+<h3 id="example-5-halving-the-main-diagonal-inside-a-row-sum-loop">Example 5 — Halving the main diagonal inside a row-sum loop</h3>
+<div class="codehilite"><pre><span></span><code>1  Integer arr[2][2] = {{2,4},{6,8}}
+2  Integer i, s
+3  s = 0
+4  For i = 0 to 1
+5     arr[i][i] = arr[i][i] / 2
+6     s = s + arr[i][0] + arr[i][1]
+7  End For
+8  Print s
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>i</th>
+<th>arr[0][0]</th>
+<th>arr[0][1]</th>
+<th>arr[1][0]</th>
+<th>arr[1][1]</th>
+<th>s</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>–</td>
+<td>2</td>
+<td>4</td>
+<td>6</td>
+<td>8</td>
+<td>–</td>
+<td>array initialised</td>
+</tr>
+<tr>
+<td>2</td>
+<td>–</td>
+<td>2</td>
+<td>4</td>
+<td>6</td>
+<td>8</td>
+<td>–</td>
+<td>i, s declared</td>
+</tr>
+<tr>
+<td>3</td>
+<td>–</td>
+<td>2</td>
+<td>4</td>
+<td>6</td>
+<td>8</td>
+<td>0</td>
+<td>s = 0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0</td>
+<td>2</td>
+<td>4</td>
+<td>6</td>
+<td>8</td>
+<td>0</td>
+<td>i = 0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0</td>
+<td>1</td>
+<td>4</td>
+<td>6</td>
+<td>8</td>
+<td>0</td>
+<td>arr[0][0] = 2 / 2 = 1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0</td>
+<td>1</td>
+<td>4</td>
+<td>6</td>
+<td>8</td>
+<td>5</td>
+<td>s = 0 + arr[0][0] + arr[0][1] = 0 + 1 + 4</td>
+</tr>
+<tr>
+<td>7</td>
+<td>1</td>
+<td>1</td>
+<td>4</td>
+<td>6</td>
+<td>8</td>
+<td>5</td>
+<td>End For: i → 1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1</td>
+<td>1</td>
+<td>4</td>
+<td>6</td>
+<td>8</td>
+<td>5</td>
+<td>loop body</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1</td>
+<td>1</td>
+<td>4</td>
+<td>6</td>
+<td>4</td>
+<td>5</td>
+<td>arr[1][1] = 8 / 2 = 4</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1</td>
+<td>1</td>
+<td>4</td>
+<td>6</td>
+<td>4</td>
+<td>15</td>
+<td>s = 5 + arr[1][0] + arr[1][1] = 5 + 6 + 4</td>
+</tr>
+<tr>
+<td>7</td>
+<td>2</td>
+<td>1</td>
+<td>4</td>
+<td>6</td>
+<td>4</td>
+<td>15</td>
+<td>i → 2, exceeds bound; loop ends</td>
+</tr>
+<tr>
+<td>8</td>
+<td>2</td>
+<td>1</td>
+<td>4</td>
+<td>6</td>
+<td>4</td>
+<td>15</td>
+<td>Print 15</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Answer: 15</strong></p>
+<h2 id="6-traps-and-gotchas">6. Traps and gotchas</h2>
+<table>
+<thead>
+<tr>
+<th>Trap</th>
+<th>Why it catches people</th>
+<th>How to avoid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Assuming 1-based indexing</td>
+<td>School maths notation starts at 1; pseudocode here starts at 0, so <code>arr[2][2]</code> has valid indices 0 and 1 only</td>
+<td>Read the declaration first: <code>arr[R][C]</code> means rows 0..R−1 and columns 0..C−1; index 2 in a 2×2 is out of bounds</td>
+</tr>
+<tr>
+<td>Writing <code>arr[j][i]</code> instead of <code>arr[i][j]</code></td>
+<td>Both are syntactically valid and both in range for a square array, so nothing errors — the answer is just silently wrong</td>
+<td>Chant "row first, column second". In nested loops the outer counter is always the row</td>
+</tr>
+<tr>
+<td>Treating <code>&amp;</code> as <code>&amp;&amp;</code> (or <code>\|</code> as <code>\|\|</code>)</td>
+<td><code>2 &amp;&amp; 4</code> is 1, but <code>2 &amp; 4</code> is 0; the two give opposite-looking results on the same inputs</td>
+<td><code>&amp;&amp;</code>/<code>\|\|</code> return only 0 or 1 as a truth value; <code>&amp;</code>/<code>\|</code>/<code>^</code> combine the individual bits of the numbers</td>
+</tr>
+<tr>
+<td>Re-using an array element assuming it still holds its initial value</td>
+<td>Line 5 may have overwritten <code>arr[i][i]</code>; later lines and the final <code>Print</code> see the new value</td>
+<td>Trace with the element columns in the table, not from memory of the declaration line</td>
+</tr>
+<tr>
+<td>Ignoring integer-division truncation</td>
+<td><code>5 / 2</code> is 2, not 2.5; a half-integer answer anywhere means a wrong final print</td>
+<td>Do every <code>/</code> with integer values and drop the fraction immediately, before adding anything to it</td>
+</tr>
+<tr>
+<td>Reading <code>For i = 0 to n</code> as "n iterations"</td>
+<td>The <code>to</code> bound is inclusive, so it runs n + 1 times</td>
+<td>Count the loop rows explicitly in the trace rather than multiplying in your head</td>
+</tr>
+<tr>
+<td>Evaluating mixed bitwise/arithmetic expressions strictly left to right</td>
+<td><code>^</code> binds looser than <code>+</code> and <code>*</code>, so <code>arr[0][0] ^ 2 + arr[0][0]</code> is not <code>(arr[0][0] ^ 2) + arr[0][0]</code></td>
+<td>Where brackets are given, use them; where they are not, apply precedence: <code>* / + -</code> first, then <code>&lt;&lt; &gt;&gt;</code>, then <code>&lt; &gt;</code>, then <code>== !=</code>, then <code>&amp;</code>, then <code>^</code>, then <code>\|</code></td>
+</tr>
+<tr>
+<td>Assuming <code>arr[i][i]</code> or a diagonal covers the whole array</td>
+<td>A diagonal touches only <code>min(R, C)</code> cells, but the <code>Print</code> may sum all elements</td>
+<td>Separate "cells touched by the loop" from "cells read by the Print" and list them explicitly</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-practice-questions">7. Practice questions</h2>
+<p><strong>1. [Easy]</strong> <em>(B3 — 1D indexing and the second-element trap)</em></p>
+<p>In pseudocode, <code>Integer arr[5] = {7, 3, 9, 2, 5}</code> uses zero-based indexing. Which statement correctly extracts the <strong>second</strong> element of <code>arr</code>?</p>
+<p>(a) <code>arr[5]</code> gives 5
+(b) <code>arr[2]</code> gives 9
+(c) <code>arr[0]</code> gives 7
+(d) <code>arr[1]</code> gives 3</p>
+<p><strong>2. [Medium]</strong> <em>(B3 — 2D nested traversal)</em></p>
+<div class="codehilite"><pre><span></span><code>1  Integer arr[2][2] = {{0,1},{4,1}}
+2  Integer i, j, s
+3  s = 0
+4  For(i = 0; i &lt; 2; i = i + 1)
+5      For(j = 0; j &lt; 2; j = j + 1)
+6          s = s + arr[i][j]
+7      End For
+8  End For
+9  Print s
+</code></pre></div>
+
+<p>(a) 5
+(b) 7
+(c) 6
+(d) 10</p>
+<p><strong>3. [Medium]</strong> <em>(B3 — bitwise condition on array elements)</em></p>
+<div class="codehilite"><pre><span></span><code>1  Integer arr[2][2] = {{0,1},{4,1}}
+2  Integer t
+3  If((3 &amp; arr[1][1]) &lt; (arr[1][0] + 1))
+4      t = arr[0][1] + arr[1][0]
+5  Else
+6      t = arr[0][0] + arr[1][1]
+7  End If
+8  Print t
+</code></pre></div>
+
+<p>(a) 1
+(b) 5
+(c) 4
+(d) 6</p>
+<p><strong>4. [Medium]</strong> <em>(B3 — assignment with XOR then a sum Print)</em></p>
+<div class="codehilite"><pre><span></span><code>1  Integer arr[2][2] = {{0,1},{4,1}}
+2  arr[0][0] = (arr[0][0] ^ 2) + arr[0][0]
+3  arr[0][1] = arr[0][1] + arr[0][0]
+4  Print arr[0][0] + arr[0][1] + arr[1][0] + arr[1][1]
+</code></pre></div>
+
+<p>(a) 8
+(b) 6
+(c) 10
+(d) 12</p>
+<p><strong>5. [Hard]</strong> <em>(B3 — while loop over a 2D diagonal)</em></p>
+<div class="codehilite"><pre><span></span><code>1  Integer arr[2][2] = {{0,1},{4,1}}
+2  Integer i = 0
+3  While(i &lt; 2)
+4      arr[i][i] = arr[i][i] + arr[i][1 - i]
+5      i = i + 1
+6  End While
+7  Print arr[0][0] + arr[1][1]
+</code></pre></div>
+
+<p>(a) 2
+(b) 5
+(c) 6
+(d) 1</p>
+<p><strong>5. Correct: (c) 6</strong></p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>Body</th>
+<th>arr[0][0]</th>
+<th>arr[1][1]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><code>arr[0][0] = 0 + arr[0][1] = 0 + 1</code></td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>arr[1][1] = 1 + arr[1][0] = 1 + 4</code></td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Print</td>
+<td><code>1 + 5</code></td>
+<td></td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 2 — loop runs only for <code>i = 0</code>; <code>arr[1][1]</code> stays 1, so <code>1 + 1</code>.</li>
+<li>(b) 5 — first iteration skipped; <code>0 + (1 + 4)</code>.</li>
+<li>(d) 1 — loop never executes; original diagonal <code>0 + 1</code>.</li>
+</ul>
+<hr />
+<p><strong>6. [Hard]</strong> <em>(B3 — 1D in-place reversal, then index read)</em></p>
+<div class="codehilite"><pre><span></span><code>1  Integer arr[6] = {1, 2, 3, 4, 5, 6}
+2  Integer i, t
+3  For(i = 0; i &lt; 3; i = i + 1)
+4      t = arr[i]
+5      arr[i] = arr[5 - i]
+6      arr[5 - i] = t
+7  End For
+8  Print arr[1] + arr[4]
+</code></pre></div>
+
+<p>(a) 6
+(b) 7
+(c) 3
+(d) 5</p>
+<hr />
+<p><strong>6. Correct: (b) 7</strong></p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>Swap</th>
+<th>arr after iteration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td><code>arr[0] ↔ arr[5]</code></td>
+<td>{6, 2, 3, 4, 5, 1}</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>arr[1] ↔ arr[4]</code></td>
+<td>{6, 5, 3, 4, 2, 1}</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>arr[2] ↔ arr[3]</code></td>
+<td>{6, 5, 4, 3, 2, 1}</td>
+</tr>
+<tr>
+<td>Print</td>
+<td><code>arr[1] + arr[4] = 5 + 2</code></td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 6 — Print reads <code>arr[1] + arr[5]</code> = <code>5 + 1</code>.</li>
+<li>(d) 5 — swap treated as a no-op; original <code>arr[1] + arr[4]</code> = <code>2 + 3</code>.</li>
+<li>(c) 3 — Print reads <code>arr[4] + arr[5]</code> = <code>2 + 1</code>.</li>
+</ul>
+<hr />
+<ol start="7">
+<li>For <code>Integer A[5] = {8, 3, 7, 1, 9}</code>, which expression gives the second element?<br />
+<strong>[Easy]</strong> <em>(B3 — 1D indexing)</em><br />
+(a) <code>A[0]</code><br />
+(b) <code>A[1]</code><br />
+(c) <code>A[2]</code><br />
+(d) <code>A[5]</code></li>
+</ol>
+<p><strong>7. (b) <code>A[1]</code></strong><br />
+- (a) <code>A[0]</code> is the first element, <code>8</code>.<br />
+- (c) <code>A[2]</code> is the third element, <code>7</code>.<br />
+- (d) <code>A[5]</code> is out of bounds; valid indices are <code>0</code> to <code>4</code>.</p>
+<hr />
+<ol start="8">
+<li>What is printed?<br />
+<strong>[Medium]</strong> <em>(B3 — 2D indexing + bitwise condition)</em>  </li>
+</ol>
+<div class="codehilite"><pre><span></span><code>7. Integer arr[2][2] = {{0,1},{4,1}}
+8. Integer sum = 0
+9. If((3 &amp; arr[1][1]) &lt; (arr[1][0] + 1))
+10.     arr[0][0] = (arr[0][0] ^ 2) + arr[0][0]
+11. End If
+12. sum = arr[0][0] + arr[0][1]
+13. Print sum
+</code></pre></div>
+
+<p>(a) 1
+(b) 5
+(c) 3
+(d) 2</p>
+<p><strong>8. (c) 3</strong><br />
+| Variable | Value |
+|---|---|
+| <code>arr[1][1]</code> | 1 |
+| <code>3 &amp; arr[1][1]</code> | 1 |
+| <code>arr[1][0] + 1</code> | 5 |
+| <code>arr[0][0]</code> after line 4 | <code>(0 ^ 2) + 0 = 2</code> |
+| <code>sum</code> | <code>2 + 1 = 3</code> |
+- (a) 1: assumes condition is false, so no update.<br />
+- (d) 2: prints only <code>arr[0][0]</code>.<br />
+- (b) 5: adds <code>arr[0][1] + arr[1][0] = 1 + 4</code>.</p>
+<hr />
+<ol start="9">
+<li>What is printed?<br />
+<strong>[Medium]</strong> <em>(B3 — nested 2D traversal)</em>  </li>
+</ol>
+<div class="codehilite"><pre><span></span><code>7. Integer M[3][2] = {{2,5},{4,1},{6,3}}
+8. Integer s = 0
+9. For i = 0 to 2
+10.     For j = 0 to 1
+11.         s = s + M[i][j]
+12.     End For
+13. End For
+14. Print s
+</code></pre></div>
+
+<p>(a) 18
+(b) 12
+(c) 21
+(d) 27</p>
+<p><strong>9. (c) 21</strong><br />
+| <code>i</code> | <code>j</code> | <code>M[i][j]</code> | <code>s</code> |
+|---|---|---|---|
+| 0 | 0 | 2 | 2 |
+| 0 | 1 | 5 | 7 |
+| 1 | 0 | 4 | 11 |
+| 1 | 1 | 1 | 12 |
+| 2 | 0 | 6 | 18 |
+| 2 | 1 | 3 | 21 |
+- (b) 12: stops after row <code>i = 1</code>.<br />
+- (a) 18: omits the last element <code>M[2][1] = 3</code>.<br />
+- (d) 27: double-counts the first row <code>{2,5}</code>.</p>
+<hr />
+<ol start="10">
+<li>What is printed?<br />
+<strong>[Medium]</strong> <em>(B3 — 1D traversal with condition)</em>  </li>
+</ol>
+<div class="codehilite"><pre><span></span><code>7. Integer A[5] = {3, 1, 4, 2, 0}
+8. Integer x = 0
+9. For i = 0 to 4
+10.     If(A[i] &gt; i)
+11.         x = x + A[i]
+12.     End If
+13. End For
+14. Print x
+</code></pre></div>
+
+<p>(a) 4<br />
+(b) 7<br />
+(c) 8<br />
+(d) 10</p>
+<p><strong>10. (b) 7</strong><br />
+| <code>i</code> | <code>A[i]</code> | <code>A[i] &gt; i</code> | <code>x</code> |
+|---|---|---|---|
+| 0 | 3 | true | 3 |
+| 1 | 1 | false | 3 |
+| 2 | 4 | true | 7 |
+| 3 | 2 | false | 7 |
+| 4 | 0 | false | 7 |
+- (a) 4: adds only <code>A[2]</code>, misses <code>A[0]</code>.<br />
+- (c) 8: uses <code>&gt;=</code> instead of <code>&gt;</code>, so also adds <code>A[1] = 1</code>.<br />
+- (d) 10: sums all positive values, ignoring <code>A[i] &gt; i</code>.</p>
+<hr />
+<ol start="11">
+<li>What is printed?<br />
+<strong>[Hard]</strong> <em>(B3 — 2D assignment + bitwise)</em>  </li>
+</ol>
+<div class="codehilite"><pre><span></span><code>7. Integer arr[2][2] = {{0,1},{4,1}}
+8. Integer a = arr[1][1]
+9. If((arr[0][1] + a) &gt; (arr[1][0] - 1))
+10.     arr[1][1] = (arr[1][0] &amp; 3) + arr[0][0]
+11. Else
+12.     arr[0][0] = (arr[0][0] ^ 3) + 1
+13. End If
+14. arr[0][0] = arr[0][0] + arr[1][1]
+15. Print arr[0][0] + arr[1][0]
+</code></pre></div>
+
+<p>(a) 4
+(b) 8
+(c) 5
+(d) 9</p>
+<p><strong>11. (d) 9</strong><br />
+| Step | Value |
+|---|---|
+| <code>a</code> | 1 |
+| Condition | <code>(1+1) &gt; (4-1)</code> → <code>2 &gt; 3</code> false |
+| Line 6 | <code>arr[0][0] = (0 ^ 3) + 1 = 4</code> |
+| Line 8 | <code>arr[0][0] = 4 + arr[1][1] = 4 + 1 = 5</code> |
+| Print | <code>5 + arr[1][0] = 5 + 4 = 9</code> |
+- (a) 4: takes true branch and prints <code>0 + 4</code>.<br />
+- (c) 5: stops before adding <code>arr[1][0]</code>.<br />
+- (b) 8: omits line 8, so prints <code>4 + 4</code>.</p>
+<hr />
+<ol start="12">
+<li>What is printed?<br />
+<strong>[Hard]</strong> <em>(B3 — nested traversal + parity)</em>  </li>
+</ol>
+<div class="codehilite"><pre><span></span><code>7. Integer A[2][3] = {{1,2,3},{4,5,6}}
+8. Integer s = 0
+9. For i = 0 to 1
+10.     For j = 0 to 2
+11.         If((A[i][j] &amp; 1) == 0)
+12.             s = s + A[i][j]
+13.         Else
+14.             s = s + (j + 1)
+15.         End If
+16.    End For
+17. End For
+18. Print s
+</code></pre></div>
+
+<p>(a) 12
+(b) 21
+(c) 18
+(d) 15</p>
+<hr />
+<p><strong>12. (c) 18</strong><br />
+| <code>i,j</code> | <code>A[i][j]</code> | Branch | <code>s</code> |
+|---|---|---|---|
+| 0,0 | 1 | odd: <code>+(0+1)</code> | 1 |
+| 0,1 | 2 | even: <code>+2</code> | 3 |
+| 0,2 | 3 | odd: <code>+(2+1)</code> | 6 |
+| 1,0 | 4 | even: <code>+4</code> | 10 |
+| 1,1 | 5 | odd: <code>+(1+1)</code> | 12 |
+| 1,2 | 6 | even: <code>+6</code> | 18 |
+- (a) 12: sums only even values.<br />
+- (b) 15: adds <code>j</code> for odd values, not <code>j + 1</code>.<br />
+- (d) 21: sums all values, ignoring the condition.</p>
+<hr />
+<h2 id="8-resources">8. Resources</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Type</th>
+<th>Link</th>
+<th>Free/Paid</th>
+<th>Time</th>
+<th>Why this one</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PrepInsta — Accenture pseudocode</td>
+<td>Practice set</td>
+<td>https://prepinsta.com/accenture/pseudo-code/general-pseudo-code/</td>
+<td>Free</td>
+<td>45 min</td>
+<td>Includes array-based output prediction</td>
+</tr>
+<tr>
+<td>CodeChef — Accenture interview questions</td>
+<td>Practice set</td>
+<td>https://www.codechef.com/practice/accenture-interview-questions</td>
+<td>Free</td>
+<td>45 min</td>
+<td>Company-tagged practice</td>
+</tr>
+<tr>
+<td>GfG — Bitwise operators</td>
+<td>Article</td>
+<td>https://www.geeksforgeeks.org/cpp/bitwise-operators-in-c-cpp/</td>
+<td>Free</td>
+<td>20 min</td>
+<td>Every observed array item contains a bitwise operation</td>
+</tr>
+<tr>
+<td><code>question-banks/QB-T15-B3-arrays-1d-2d.md</code></td>
+<td>Question bank</td>
+<td>(this library)</td>
+<td>Free</td>
+<td>40 min</td>
+<td>35 original questions, 2D-with-bitwise heavy</td>
+</tr>
+</tbody>
+</table>
+<p><em>All external links verified resolving 2026-09-16.</em></p>
+<h2 id="9-self-check">9. Self-check</h2>
+<ul>
+<li>[ ] <strong>Given any <code>{{a,b},{c,d}}</code> initialiser I can state all four element values in under 5 seconds</strong></li>
+<li>[ ] I know the valid index range of an n-element array is 0 to n−1</li>
+<li>[ ] I know the "second element" of a zero-indexed array is at index 1</li>
+<li>[ ] I can evaluate a bitwise expression on array elements inside a guard</li>
+<li>[ ] I correctly handle an element that is assigned from its own current value</li>
+<li>[ ] I can compute the total iterations of a nested 2D traversal</li>
+<li>[ ] I can apply the row-major address formula</li>
+<li>[ ] I scored 9/12 or better on the practice questions</li>
+</ul>
+<h2 id="10-sources">10. Sources</h2>
+<p><strong>Teaching content (§3–§9)</strong> is adapted from <code>accenture-prep-final/accenture-prep-library/topics/T15-B3-arrays-1d-2d.md</code>, which lists its own sources and was verified in that library's QA. <strong>Infosys evidence</strong> for this file: observed questions P12, P15 in <code>../data/questions-observed.csv</code>; section structure and marks in <code>../research/03-pattern-synthesis.md</code> §1; weightage, tier and hours in <code>../data/weightage.json</code> (code <code>P5</code>). Confidence <strong>Medium</strong>. Nothing in this file is a published Infosys syllabus.</p>
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html"><span>Previous</span><strong>P4 — Pre/post-increment and fill-the-blank</strong></a><a class="pager next" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html"><span>Next</span><strong>P6 — Conditionals and Branch Selection in Pseudocode</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#p5-arrays-1d-and-2d-traversal-and-indexing">P5 — Arrays — 1D and 2D Traversal and Indexing</a><a class="toc-l1" href="#1-why-this-topic-matters-here">1. Why this topic matters here</a><a class="toc-l1" href="#2-exactly-what-gets-asked">2. Exactly what gets asked</a><a class="toc-l1" href="#3-concept-notes">3. Concept notes</a><a class="toc-l1" href="#4-must-memorise-block">4. Must-memorise block</a><a class="toc-l1" href="#5-worked-examples">5. Worked examples</a><a class="toc-l1" href="#6-traps-and-gotchas">6. Traps and gotchas</a><a class="toc-l1" href="#7-practice-questions">7. Practice questions</a><a class="toc-l1" href="#8-resources">8. Resources</a><a class="toc-l1" href="#9-self-check">9. Self-check</a><a class="toc-l1" href="#10-sources">10. Sources</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

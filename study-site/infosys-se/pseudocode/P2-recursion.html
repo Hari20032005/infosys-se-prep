@@ -1,0 +1,2699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P2 — Recursion — Trace, Base Case, Accumulation · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem current" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Pseudocode</span></div>
+    <article class="prose">
+<h1 id="p2-recursion-trace-base-case-accumulation">P2 — Recursion — Trace, Base Case, Accumulation</h1><p class="fm-line" style="color:var(--ink-faint);font-size:13px;margin:-.4em 0 1.2em">Tier 4 · Pseudocode · 1.1% of marks · about 1.0 h · confidence Medium</p>
+<p><em>Adapted from <code>accenture-prep-final/accenture-prep-library/topics/T31-B6-recursion.md</code>; verified in that library's QA. §1 and §10 are regenerated for Infosys from <code>data/weightage.json</code>; §2 gains an Infosys evidence table; §3–§9 are the source text unchanged, so "observed" in the worked examples refers to the source paper.</em></p>
+<h2 id="1-why-this-topic-matters-here">1. Why this topic matters here</h2>
+<p>Expect about <strong>0.4 questions and 0.9 marks</strong> on this topic (about 1.1% of the 75 scored marks). It sits in <strong>Pseudocode</strong>: 5 questions, 10 marks, 10 minutes. <strong>Tier 4</strong>, 1.0 hours to reach reliable recall, confidence <strong>Medium</strong>.</p>
+<p><strong>3 questions on this topic are in the observed Infosys pool</strong> (P07, P10, P11), from 1 source. They are listed in §2 and solved in <code>../question-banks/QB-99-OBSERVED-POOL.md</code>.</p>
+<p><strong>Why the tier:</strong> expected marks per study hour, weighted by confidence, is 0.69 against a paper average of 1.84 (<code>../data/analysis-tables.md</code> §6). Every section has its own cut-off, so a zero here costs the whole section's chance, not only these marks. There is no calculator. Negative marking: none reported.</p>
+<h2 id="2-exactly-what-gets-asked">2. Exactly what gets asked</h2>
+<h3 id="what-infosys-asked">What Infosys asked</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Source date</th>
+<th>What was asked</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P07</td>
+<td>2024-12-18</td>
+<td>Standard recursive factorial; output for n = 5?</td>
+</tr>
+<tr>
+<td>P10</td>
+<td>2024-12-18</td>
+<td>function calc(a, b): if b == 0 return 1 else return a * calc(a, b - 1). Output of calc(6, 3)?</td>
+</tr>
+<tr>
+<td>P11</td>
+<td>2024-12-18</td>
+<td>function f(x, y): if y == 0 return x else return f(x + y, y - 1). Output of f(7, 2)?</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The pattern notes below come from the library this file was adapted from. Any frequency or "observed paper" remark in them describes that source paper, not Infosys. The Infosys evidence is the table above.</p>
+</blockquote>
+<ol>
+<li><strong>"What does this recursive function compute?"</strong> Confirmed local item. You identify the accumulation, not trace it.</li>
+</ol>
+<p><strong>Q1. Correct: (b) 10</strong></p>
+<p>Variable trace table:</p>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th style="text-align: right;">Computation</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F(0)</td>
+<td style="text-align: right;">base</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>F(1)</td>
+<td style="text-align: right;">1 + F(0)</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>F(2)</td>
+<td style="text-align: right;">2 + F(1)</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td>F(3)</td>
+<td style="text-align: right;">3 + F(2)</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td>F(4)</td>
+<td style="text-align: right;">4 + F(3)</td>
+<td style="text-align: right;">10</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 24: uses <code>n * F(n - 1)</code> and computes factorial.</li>
+<li>(c) 4: returns only the top-level <code>n</code>, ignoring recursive additions.</li>
+<li>(d) 0: returns the base-case value without adding <code>1+2+3+4</code>.</li>
+</ul>
+<hr />
+<ol start="2">
+<li><strong>The plus-versus-times trap.</strong> <code>n + f(n-1)</code> is a sum; <code>n * f(n-1)</code> is a factorial.</li>
+</ol>
+<p><strong>Q2. Correct: (a)</strong></p>
+<p>Check table for the correct edit:</p>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th style="text-align: right;">F(0)</th>
+<th style="text-align: right;">F(1)</th>
+<th style="text-align: right;">F(2)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Correct: base <code>1</code>, multiply</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1 * 1 = 1</td>
+<td style="text-align: right;">2 * 1 = 2</td>
+</tr>
+<tr>
+<td>Only multiply</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1 * 0 = 0</td>
+<td style="text-align: right;">2 * 0 = 0</td>
+</tr>
+<tr>
+<td>Only base <code>1</code></td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1 + 1 = 2</td>
+<td style="text-align: right;">2 + 2 = 4</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) With <code>F(0)=0</code>, multiplying gives <code>F(1)=0</code>, so it is not <code>1!</code>.</li>
+<li>(c) Changing only the base leaves the <code>+</code> accumulation, so it is not factorial.</li>
+<li>(d) <code>(n - 1) * F(n)</code> calls <code>F(n)</code> with the same <code>n</code>, so it does not progress to a base case.</li>
+</ul>
+<hr />
+<ol start="3">
+<li><strong>Call-stack tracing.</strong> What is returned at each level for a small input.</li>
+</ol>
+<p><strong>Q3. Correct: (d) 4</strong></p>
+<p>Variable trace table:</p>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th style="text-align: right;">n</th>
+<th>Return expression</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F(0)</td>
+<td style="text-align: right;">0</td>
+<td>base</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>F(1)</td>
+<td style="text-align: right;">1</td>
+<td>1 + F(0)</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>F(2)</td>
+<td style="text-align: right;">2</td>
+<td>2 + F(1)</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td>F(3)</td>
+<td style="text-align: right;">3</td>
+<td>3 + F(2)</td>
+<td style="text-align: right;">6</td>
+</tr>
+</tbody>
+</table>
+<p>Calls made: <code>F(3)</code>, <code>F(2)</code>, <code>F(1)</code>, <code>F(0)</code> = 4.</p>
+<ul>
+<li>(a) 3: counts only non-base calls or omits the initial call.</li>
+<li>(b) 5: counts an extra call, such as <code>F(-1)</code> or treats <code>PRINT</code> as a call.</li>
+<li>(c) 6: counts more than the actual recursive calls, often by counting statements.</li>
+</ul>
+<hr />
+<ol start="4">
+<li><strong>Base-case reasoning.</strong> What happens when it is missing, or which input terminates immediately.</li>
+</ol>
+<p><strong>Q4. Correct: (c) 9</strong></p>
+<p>Variable trace table:</p>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th style="text-align: right;">Computation</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F(-1)</td>
+<td style="text-align: right;">base</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>F(1)</td>
+<td style="text-align: right;">1 + F(-1)</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>F(3)</td>
+<td style="text-align: right;">3 + F(1)</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td>F(5)</td>
+<td style="text-align: right;">5 + F(3)</td>
+<td style="text-align: right;">9</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) 15: sums all integers <code>1..5</code> instead of stepping by 2.</li>
+<li>(d) 8: computes <code>5 + 3</code> and drops the final <code>+1</code>.</li>
+<li>(a) 5: returns only the first <code>n</code>.</li>
+</ul>
+<hr />
+<ol start="5">
+<li><strong>Call counting.</strong> How many calls a naive fibonacci makes for a small n.</li>
+</ol>
+<h2 id="3-concept-notes">3. Concept notes</h2>
+<h3 id="what-recursion-is">What recursion is</h3>
+<p>A function that calls itself. Each call must work on a smaller/simpler input until a stopping condition is reached.</p>
+<h3 id="two-mandatory-parts">Two mandatory parts</h3>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Role</th>
+<th>If missing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Base case</td>
+<td>Returns a value without calling itself; stops recursion</td>
+<td>Infinite recursion → stack overflow</td>
+</tr>
+<tr>
+<td>Recursive case</td>
+<td>Calls the function on a smaller/simpler input</td>
+<td>Function never progresses toward a result</td>
+</tr>
+</tbody>
+</table>
+<h3 id="call-stack-factorial4">Call stack: factorial(4)</h3>
+<div class="codehilite"><pre><span></span><code>FACTORIAL(4) CALL STACK
+
+WINDING (push)                          UNWINDING (pop)
+----------                              ----------
+
+factorial(4) needs 3                    factorial(0) returns 1
++----------------+                      +----------------+  value = 1
+| factorial(4)   |                      | factorial(0)   |
++----------------+                      +----------------+
+
+factorial(3) needs 2                    factorial(1) = 1 * 1 = 1
++----------------+                      +----------------+  value = 1
+| factorial(3)   |                      | factorial(1)   |
++----------------+                      +----------------+
+| factorial(4)   |
++----------------+
+
+factorial(2) needs 1                    factorial(2) = 2 * 1 = 2
++----------------+                      +----------------+  value = 2
+| factorial(2)   |                      | factorial(2)   |
++----------------+                      +----------------+
+| factorial(3)   |
++----------------+
+| factorial(4)   |
++----------------+
+
+factorial(1) needs 0                    factorial(3) = 3 * 2 = 6
++----------------+                      +----------------+  value = 6
+| factorial(1)   |                      | factorial(3)   |
++----------------+                      +----------------+
+| factorial(2)   |
++----------------+
+| factorial(3)   |
++----------------+
+| factorial(4)   |
++----------------+
+
+factorial(0) base case                  factorial(4) = 4 * 6 = 24
++----------------+                      +----------------+  value = 24
+| factorial(0)   |                      | factorial(4)   |
++----------------+                      +----------------+
+| factorial(1)   |
++----------------+
+| factorial(2)   |
++----------------+
+| factorial(3)   |
++----------------+
+| factorial(4)   |
++----------------+
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Stack level</th>
+<th>Computation</th>
+<th>Returned value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>factorial(0)</td>
+<td>base case</td>
+<td>1</td>
+</tr>
+<tr>
+<td>factorial(1)</td>
+<td>1 * factorial(0) = 1 * 1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>factorial(2)</td>
+<td>2 * factorial(1) = 2 * 1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>factorial(3)</td>
+<td>3 * factorial(2) = 3 * 2</td>
+<td>6</td>
+</tr>
+<tr>
+<td>factorial(4)</td>
+<td>4 * factorial(3) = 4 * 6</td>
+<td>24</td>
+</tr>
+</tbody>
+</table>
+<h3 id="winding-and-unwinding-phases">Winding and unwinding phases</h3>
+<ul>
+<li><strong>Winding (down):</strong> each call pushes a stack frame and reduces the input. Statements <strong>before</strong> the recursive call run here.</li>
+<li><strong>Unwinding (up):</strong> frames pop and return values combine. Statements <strong>after</strong> the recursive call run here.</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>function f(n):
+    if n == 0:
+        return
+    print &quot;down&quot;, n      // BEFORE recursive call
+    f(n-1)
+    print &quot;up&quot;, n        // AFTER recursive call
+
+f(3)
+</code></pre></div>
+
+<p>Output:</p>
+<div class="codehilite"><pre><span></span><code>down 3
+down 2
+down 1
+up 1
+up 2
+up 3
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th>Runs before f(n-1)</th>
+<th>Runs after f(n-1) returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f(3)</td>
+<td>print down 3</td>
+<td>print up 3</td>
+</tr>
+<tr>
+<td>f(2)</td>
+<td>print down 2</td>
+<td>print up 2</td>
+</tr>
+<tr>
+<td>f(1)</td>
+<td>print down 1</td>
+<td>print up 1</td>
+</tr>
+<tr>
+<td>f(0)</td>
+<td>base case, return</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Before-call prints descend <code>3,2,1</code>. After-call prints ascend <code>1,2,3</code>.</p>
+<h3 id="direct-vs-indirect-recursion">Direct vs indirect recursion</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Definition</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Direct</td>
+<td>Function calls itself directly</td>
+<td><code>factorial(n)</code> calls <code>factorial(n-1)</code></td>
+</tr>
+<tr>
+<td>Indirect (mutual)</td>
+<td>A calls B; B calls A</td>
+<td><code>isEven(n)</code> calls <code>isOdd(n-1)</code>; <code>isOdd(n)</code> calls <code>isEven(n-1)</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="tail-recursion">Tail recursion</h3>
+<p>A recursive call is the last operation in the function; no work is pending after it returns. Some compilers/interpreters reuse the current stack frame instead of pushing a new one (tail-call optimisation), making stack space O(1) instead of O(n).</p>
+<p>Non-tail factorial:</p>
+<div class="codehilite"><pre><span></span><code>factorial(n):
+    if n == 0: return 1
+    return n * factorial(n-1)   // multiplication pending AFTER call
+</code></pre></div>
+
+<p>Tail factorial:</p>
+<div class="codehilite"><pre><span></span><code>factorial(n, acc):
+    if n == 0: return acc
+    return factorial(n-1, acc*n)  // call is last operation
+</code></pre></div>
+
+<h3 id="worked-traces">Worked traces</h3>
+<h2 id="_1"></h2>
+<h2 id="1-factorial5-120">1. factorial(5) = 120</h2>
+<div class="codehilite"><pre><span></span><code>factorial(n):
+    if n == 0: return 1
+    return n * factorial(n-1)
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Call</th>
+<th>Expands to</th>
+<th>Value returned</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>factorial(5)</td>
+<td>5 * factorial(4)</td>
+<td>5 * 24 = 120</td>
+</tr>
+<tr>
+<td>2</td>
+<td>factorial(4)</td>
+<td>4 * factorial(3)</td>
+<td>4 * 6 = 24</td>
+</tr>
+<tr>
+<td>3</td>
+<td>factorial(3)</td>
+<td>3 * factorial(2)</td>
+<td>3 * 2 = 6</td>
+</tr>
+<tr>
+<td>4</td>
+<td>factorial(2)</td>
+<td>2 * factorial(1)</td>
+<td>2 * 1 = 2</td>
+</tr>
+<tr>
+<td>5</td>
+<td>factorial(1)</td>
+<td>1 * factorial(0)</td>
+<td>1 * 1 = 1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>factorial(0)</td>
+<td>base case</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Final answer: <strong>120</strong>.</p>
+<h2 id="_2"></h2>
+<h2 id="2-fibonacci5-5-call-tree-and-call-count">2. fibonacci(5) = 5, call tree and call count</h2>
+<div class="codehilite"><pre><span></span><code>fib(n):
+    if n == 0: return 0
+    if n == 1: return 1
+    return fib(n-1) + fib(n-2)
+</code></pre></div>
+
+<p>Call tree:</p>
+<div class="codehilite"><pre><span></span><code>fib(5)
+├── fib(4)
+│   ├── fib(3)
+│   │   ├── fib(2)
+│   │   │   ├── fib(1) = 1
+│   │   │   └── fib(0) = 0
+│   │   └── fib(1) = 1
+│   └── fib(2)
+│       ├── fib(1) = 1
+│       └── fib(0) = 0
+└── fib(3)
+    ├── fib(2)
+    │   ├── fib(1) = 1
+    │   └── fib(0) = 0
+    └── fib(1) = 1
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th>Number of calls C(n)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1 + C(1) + C(0) = 3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1 + 3 + 1 = 5</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1 + 5 + 3 = 9</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1 + 9 + 5 = 15</td>
+</tr>
+</tbody>
+</table>
+<p>Total calls including top-level fib(5): <strong>15</strong>.<br />
+Final answer: fib(5) = <strong>5</strong>.</p>
+<h2 id="_3"></h2>
+<h2 id="3-sum-of-first-n-natural-numbers-n-fn-1-n-5-15">3. Sum of first n natural numbers: n + f(n-1), n = 5 → 15</h2>
+<div class="codehilite"><pre><span></span><code>sum(n):
+    if n == 0: return 0
+    return n + sum(n-1)
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Call</th>
+<th>Expands to</th>
+<th>Value returned</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>sum(5)</td>
+<td>5 + sum(4)</td>
+<td>5 + 10 = 15</td>
+</tr>
+<tr>
+<td>2</td>
+<td>sum(4)</td>
+<td>4 + sum(3)</td>
+<td>4 + 6 = 10</td>
+</tr>
+<tr>
+<td>3</td>
+<td>sum(3)</td>
+<td>3 + sum(2)</td>
+<td>3 + 3 = 6</td>
+</tr>
+<tr>
+<td>4</td>
+<td>sum(2)</td>
+<td>2 + sum(1)</td>
+<td>2 + 1 = 3</td>
+</tr>
+<tr>
+<td>5</td>
+<td>sum(1)</td>
+<td>1 + sum(0)</td>
+<td>1 + 0 = 1</td>
+</tr>
+<tr>
+<td>6</td>
+<td>sum(0)</td>
+<td>base case</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Final answer: <strong>15</strong>.</p>
+<h2 id="_4"></h2>
+<h2 id="4-reverse-a-string">4. Reverse a string</h2>
+<div class="codehilite"><pre><span></span><code>reverse(s):
+    if length(s) &lt;= 1: return s
+    return reverse(s[1..end]) + s[0]
+</code></pre></div>
+
+<p>Trace for <code>"CAT"</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Call</th>
+<th>Expands to</th>
+<th>Value returned</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>reverse("CAT")</td>
+<td>reverse("AT") + "C"</td>
+<td>"TA" + "C" = "TAC"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>reverse("AT")</td>
+<td>reverse("T") + "A"</td>
+<td>"T" + "A" = "TA"</td>
+</tr>
+<tr>
+<td>3</td>
+<td>reverse("T")</td>
+<td>base case</td>
+<td>"T"</td>
+</tr>
+</tbody>
+</table>
+<p>Final answer: <strong>"TAC"</strong>.</p>
+<h2 id="_5"></h2>
+<h2 id="5-power25-32">5. power(2,5) = 32</h2>
+<div class="codehilite"><pre><span></span><code>power(x, n):
+    if n == 0: return 1
+    return x * power(x, n-1)
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Call</th>
+<th>Expands to</th>
+<th>Value returned</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>power(2,5)</td>
+<td>2 * power(2,4)</td>
+<td>2 * 16 = 32</td>
+</tr>
+<tr>
+<td>2</td>
+<td>power(2,4)</td>
+<td>2 * power(2,3)</td>
+<td>2 * 8 = 16</td>
+</tr>
+<tr>
+<td>3</td>
+<td>power(2,3)</td>
+<td>2 * power(2,2)</td>
+<td>2 * 4 = 8</td>
+</tr>
+<tr>
+<td>4</td>
+<td>power(2,2)</td>
+<td>2 * power(2,1)</td>
+<td>2 * 2 = 4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>power(2,1)</td>
+<td>2 * power(2,0)</td>
+<td>2 * 1 = 2</td>
+</tr>
+<tr>
+<td>6</td>
+<td>power(2,0)</td>
+<td>base case</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Final answer: <strong>32</strong>.</p>
+<h2 id="_6"></h2>
+<h2 id="6-gcd-via-euclid-gcd4818-6">6. GCD via Euclid: gcd(48,18) = 6</h2>
+<div class="codehilite"><pre><span></span><code>gcd(a, b):
+    if b == 0: return a
+    return gcd(b, a mod b)
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Call</th>
+<th>a mod b</th>
+<th>Next call</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>gcd(48,18)</td>
+<td>48 mod 18 = 12</td>
+<td>gcd(18,12)</td>
+<td>6</td>
+</tr>
+<tr>
+<td>2</td>
+<td>gcd(18,12)</td>
+<td>18 mod 12 = 6</td>
+<td>gcd(12,6)</td>
+<td>6</td>
+</tr>
+<tr>
+<td>3</td>
+<td>gcd(12,6)</td>
+<td>12 mod 6 = 0</td>
+<td>gcd(6,0)</td>
+<td>6</td>
+</tr>
+<tr>
+<td>4</td>
+<td>gcd(6,0)</td>
+<td>base case b == 0</td>
+<td>—</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>Final answer: <strong>6</strong>.</p>
+<h3 id="recursion-with-vs-the-sum-vs-factorial-trap">Recursion with + vs *: the sum-vs-factorial trap</h3>
+<p><code>number + func(number-1)</code> computes a <strong>SUM</strong>, not a factorial. The operator is plus.</p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Base case</th>
+<th>What it computes</th>
+<th>n = 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>n + f(n-1)</code></td>
+<td><code>f(0)=0</code></td>
+<td>Sum 1+2+...+n</td>
+<td>15</td>
+</tr>
+<tr>
+<td><code>n * f(n-1)</code></td>
+<td><code>f(0)=1</code></td>
+<td>Factorial n!</td>
+<td>120</td>
+</tr>
+</tbody>
+</table>
+<p><code>f(5)</code> with plus: 5+4+3+2+1+0 = <strong>15</strong>, not 120.<br />
+<code>f(5)</code> with multiply: 5×4×3×2×1 = <strong>120</strong>.</p>
+<h3 id="recursion-vs-iteration">Recursion vs iteration</h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Recursion</th>
+<th>Iteration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Memory</td>
+<td>Uses call stack; O(n) frames for depth n</td>
+<td>Usually O(1) extra memory</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>Function-call overhead; often slower</td>
+<td>Generally faster</td>
+</tr>
+<tr>
+<td>Readability</td>
+<td>Clean for trees, divide &amp; conquer</td>
+<td>Clean for simple repetition</td>
+</tr>
+<tr>
+<td>Stack risk</td>
+<td>Stack overflow for deep recursion</td>
+<td>No stack overflow from loop depth</td>
+</tr>
+<tr>
+<td>Termination</td>
+<td>Explicit base case</td>
+<td>Loop condition</td>
+</tr>
+<tr>
+<td>Examples</td>
+<td>factorial, fib, tree traversal</td>
+<td>factorial, fib, array loops</td>
+</tr>
+</tbody>
+</table>
+<h3 id="time-complexity-of-naive-fibonacci-and-memoisation">Time complexity of naive fibonacci and memoisation</h3>
+<p>Naive <code>fib(n)</code> recomputes the same subproblems. Number of calls grows exponentially: <strong>O(2^n)</strong>. For fib(5) it is 15 calls; for fib(30) it is millions.</p>
+<p>Memoisation stores each <code>fib(k)</code> the first time it is computed. Later calls read the stored value. Each k from 0 to n is computed once.</p>
+<table>
+<thead>
+<tr>
+<th>Version</th>
+<th>Time</th>
+<th>Space</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Naive recursion</td>
+<td>O(2^n)</td>
+<td>O(n) stack</td>
+</tr>
+<tr>
+<td>Memoised recursion</td>
+<td>O(n)</td>
+<td>O(n) table + O(n) stack</td>
+</tr>
+<tr>
+<td>Iterative</td>
+<td>O(n)</td>
+<td>O(1)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exam-shortcut-without-tracing-every-level">Exam shortcut without tracing every level</h3>
+<table>
+<thead>
+<tr>
+<th>Question asks</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Factorial n!</td>
+<td>Multiply n down to 1; 5! = 120</td>
+</tr>
+<tr>
+<td>Sum 1..n with <code>n + f(n-1)</code></td>
+<td>n(n+1)/2; n=5 → 15</td>
+</tr>
+<tr>
+<td>Power x^n</td>
+<td>Multiply x n times; 2^5 = 32</td>
+</tr>
+<tr>
+<td>Fibonacci n</td>
+<td>Use fib table: 0,1,1,2,3,5,8,13,21</td>
+</tr>
+<tr>
+<td>Number of fib calls</td>
+<td>C(n)=1+C(n-1)+C(n-2); C(0)=C(1)=1</td>
+</tr>
+<tr>
+<td>Print order</td>
+<td>Before recursive call → descending; after → ascending</td>
+</tr>
+<tr>
+<td>GCD</td>
+<td>Apply a mod b until b = 0; last non-zero remainder is answer</td>
+</tr>
+<tr>
+<td>String reverse</td>
+<td>Last character moves to front, recurse on rest</td>
+</tr>
+<tr>
+<td>+ vs *</td>
+<td>Plus → sum; star → product/factorial</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-must-memorise-block">4. Must-memorise block</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Recall</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Two mandatory parts</td>
+<td>Base case (stops recursion) + recursive case (calls itself on smaller input)</td>
+</tr>
+<tr>
+<td>Missing base case</td>
+<td>Infinite recursion → stack overflow</td>
+</tr>
+<tr>
+<td>Call-stack order rule</td>
+<td>Work BEFORE recursive call runs on the way down (winding); work AFTER recursive call runs on the way up (unwinding)</td>
+</tr>
+<tr>
+<td>Direct recursion</td>
+<td>A calls A</td>
+</tr>
+<tr>
+<td>Indirect recursion</td>
+<td>A calls B, B calls A</td>
+</tr>
+<tr>
+<td>Tail recursion</td>
+<td>Recursive call is last operation → can reuse stack frame → O(1) stack</td>
+</tr>
+<tr>
+<td>Naive fib time</td>
+<td>O(2^n)</td>
+</tr>
+<tr>
+<td>Memoised fib time</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>fib(5) call count</td>
+<td>15 calls</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Factorials</strong></p>
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n!</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>6</td>
+<td>24</td>
+<td>120</td>
+<td>720</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fibonacci</strong> (F(0)=0, F(1)=1)</p>
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>fib(n)</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>5</td>
+<td>8</td>
+<td>13</td>
+<td>21</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sum-vs-product trap</strong></p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Base case</th>
+<th>Computes</th>
+<th>n = 5</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>n + f(n-1)</code></td>
+<td><code>f(0)=0</code></td>
+<td>Sum 1+2+...+n</td>
+<td>15</td>
+</tr>
+<tr>
+<td><code>n * f(n-1)</code></td>
+<td><code>f(0)=1</code></td>
+<td>Factorial n!</td>
+<td>120</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Call-stack order rule</strong></p>
+<table>
+<thead>
+<tr>
+<th>Phase</th>
+<th>Direction</th>
+<th>What runs</th>
+<th>Example output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Winding</td>
+<td>Down</td>
+<td>Statements before recursive call</td>
+<td>5,4,3,2,1</td>
+</tr>
+<tr>
+<td>Unwinding</td>
+<td>Up</td>
+<td>Statements after recursive call</td>
+<td>1,2,3,4,5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recursion vs iteration</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Recursion</th>
+<th>Iteration</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Memory</td>
+<td>O(n) stack</td>
+<td>O(1) extra</td>
+</tr>
+<tr>
+<td>Speed</td>
+<td>Slower (call overhead)</td>
+<td>Faster</td>
+</tr>
+<tr>
+<td>Risk</td>
+<td>Stack overflow</td>
+<td>No stack overflow</td>
+</tr>
+<tr>
+<td>Use</td>
+<td>Trees, divide &amp; conquer</td>
+<td>Simple loops</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-worked-examples">5. Worked examples</h2>
+<h3 id="example-1-number-funcnumber-1-computes-a-sum">Example 1 — <code>number + func(number - 1)</code> computes a sum</h3>
+<div class="codehilite"><pre><span></span><code>1  FUNCTION f(n)
+2    IF n == 1 THEN
+3      RETURN 1
+4    ELSE
+5      RETURN n + f(n - 1)
+6    END IF
+7  END FUNCTION
+8  PRINT f(4)
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Step</th>
+<th style="text-align: right;">Line</th>
+<th style="text-align: right;">n</th>
+<th>Computation / Return</th>
+<th>Call stack (top last)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td><code>4 == 1</code> false</td>
+<td><code>f(4)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5 (call)</td>
+<td style="text-align: right;">4</td>
+<td>call <code>f(3)</code>; pending <code>4 + f(3)</code></td>
+<td><code>f(4) → f(3)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td><code>3 == 1</code> false</td>
+<td><code>f(4) → f(3)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5 (call)</td>
+<td style="text-align: right;">3</td>
+<td>call <code>f(2)</code>; pending <code>3 + f(2)</code></td>
+<td><code>f(4) → f(3) → f(2)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td><code>2 == 1</code> false</td>
+<td><code>f(4) → f(3) → f(2)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">5 (call)</td>
+<td style="text-align: right;">2</td>
+<td>call <code>f(1)</code>; pending <code>2 + f(1)</code></td>
+<td><code>f(4) → f(3) → f(2) → f(1)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td><code>1 == 1</code> true</td>
+<td><code>f(4) → f(3) → f(2) → f(1)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">3 (return)</td>
+<td style="text-align: right;">1</td>
+<td>return <code>1</code></td>
+<td><code>f(4) → f(3) → f(2) → f(1)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">5 (return)</td>
+<td style="text-align: right;">2</td>
+<td>return <code>2 + 1 = 3</code></td>
+<td><code>f(4) → f(3) → f(2)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">5 (return)</td>
+<td style="text-align: right;">3</td>
+<td>return <code>3 + 3 = 6</code></td>
+<td><code>f(4) → f(3)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">5 (return)</td>
+<td style="text-align: right;">4</td>
+<td>return <code>4 + 6 = 10</code></td>
+<td><code>f(4)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">—</td>
+<td>print <code>10</code></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Answer: <code>f(4) = 10</code>. The <code>+</code> computes the sum <code>4 + 3 + 2 + 1 = 10</code>; if line 5 used <code>*</code>, it would be <code>4 * 3 * 2 * 1 = 24</code>.</strong></p>
+<h3 id="example-2-same-shape-but-computes-factorial">Example 2 — same shape, but <code>*</code> computes factorial</h3>
+<div class="codehilite"><pre><span></span><code>1  FUNCTION fact(n)
+2    IF n &lt;= 1 THEN
+3      RETURN 1
+4    ELSE
+5      RETURN n * fact(n - 1)
+6    END IF
+7  END FUNCTION
+8  PRINT fact(4)
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Step</th>
+<th style="text-align: right;">Line</th>
+<th style="text-align: right;">n</th>
+<th>Computation / Return</th>
+<th>Call stack (top last)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td><code>4 &lt;= 1</code> false</td>
+<td><code>fact(4)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5 (call)</td>
+<td style="text-align: right;">4</td>
+<td>call <code>fact(3)</code>; pending <code>4 * fact(3)</code></td>
+<td><code>fact(4) → fact(3)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td><code>3 &lt;= 1</code> false</td>
+<td><code>fact(4) → fact(3)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5 (call)</td>
+<td style="text-align: right;">3</td>
+<td>call <code>fact(2)</code>; pending <code>3 * fact(2)</code></td>
+<td><code>fact(4) → fact(3) → fact(2)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td><code>2 &lt;= 1</code> false</td>
+<td><code>fact(4) → fact(3) → fact(2)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">5 (call)</td>
+<td style="text-align: right;">2</td>
+<td>call <code>fact(1)</code>; pending <code>2 * fact(1)</code></td>
+<td><code>fact(4) → fact(3) → fact(2) → fact(1)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td><code>1 &lt;= 1</code> true</td>
+<td><code>fact(4) → fact(3) → fact(2) → fact(1)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">3 (return)</td>
+<td style="text-align: right;">1</td>
+<td>return <code>1</code></td>
+<td><code>fact(4) → fact(3) → fact(2) → fact(1)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">5 (return)</td>
+<td style="text-align: right;">2</td>
+<td>return <code>2 * 1 = 2</code></td>
+<td><code>fact(4) → fact(3) → fact(2)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">5 (return)</td>
+<td style="text-align: right;">3</td>
+<td>return <code>3 * 2 = 6</code></td>
+<td><code>fact(4) → fact(3)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">5 (return)</td>
+<td style="text-align: right;">4</td>
+<td>return <code>4 * 6 = 24</code></td>
+<td><code>fact(4)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">—</td>
+<td>print <code>24</code></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Answer: <code>fact(4) = 24</code>. The <code>*</code> computes <code>4 * 3 * 2 * 1 = 24</code>.</strong></p>
+<h3 id="example-3-counting-calls-not-summing-values">Example 3 — counting calls, not summing values</h3>
+<div class="codehilite"><pre><span></span><code>1  FUNCTION countCalls(n)
+2    IF n == 0 THEN
+3      RETURN 1
+4    ELSE
+5      RETURN 1 + countCalls(n - 1)
+6    END IF
+7  END FUNCTION
+8  PRINT countCalls(4)
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Step</th>
+<th style="text-align: right;">Line</th>
+<th style="text-align: right;">n</th>
+<th>Computation / Return</th>
+<th>Call stack (top last)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td><code>4 == 0</code> false</td>
+<td><code>countCalls(4)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5 (call)</td>
+<td style="text-align: right;">4</td>
+<td>call <code>countCalls(3)</code>; pending <code>1 + countCalls(3)</code></td>
+<td><code>countCalls(4) → countCalls(3)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td><code>3 == 0</code> false</td>
+<td><code>countCalls(4) → countCalls(3)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5 (call)</td>
+<td style="text-align: right;">3</td>
+<td>call <code>countCalls(2)</code>; pending <code>1 + countCalls(2)</code></td>
+<td><code>countCalls(4) → countCalls(3) → countCalls(2)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td><code>2 == 0</code> false</td>
+<td><code>countCalls(4) → countCalls(3) → countCalls(2)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">5 (call)</td>
+<td style="text-align: right;">2</td>
+<td>call <code>countCalls(1)</code>; pending <code>1 + countCalls(1)</code></td>
+<td><code>countCalls(4) → countCalls(3) → countCalls(2) → countCalls(1)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td><code>1 == 0</code> false</td>
+<td><code>countCalls(4) → countCalls(3) → countCalls(2) → countCalls(1)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">5 (call)</td>
+<td style="text-align: right;">1</td>
+<td>call <code>countCalls(0)</code>; pending <code>1 + countCalls(0)</code></td>
+<td><code>countCalls(4) → countCalls(3) → countCalls(2) → countCalls(1) → countCalls(0)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td><code>0 == 0</code> true</td>
+<td><code>countCalls(4) → countCalls(3) → countCalls(2) → countCalls(1) → countCalls(0)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">3 (return)</td>
+<td style="text-align: right;">0</td>
+<td>return <code>1</code></td>
+<td><code>countCalls(4) → countCalls(3) → countCalls(2) → countCalls(1) → countCalls(0)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">5 (return)</td>
+<td style="text-align: right;">1</td>
+<td>return <code>1 + 1 = 2</code></td>
+<td><code>countCalls(4) → countCalls(3) → countCalls(2) → countCalls(1)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">5 (return)</td>
+<td style="text-align: right;">2</td>
+<td>return <code>1 + 2 = 3</code></td>
+<td><code>countCalls(4) → countCalls(3) → countCalls(2)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td style="text-align: right;">5 (return)</td>
+<td style="text-align: right;">3</td>
+<td>return <code>1 + 3 = 4</code></td>
+<td><code>countCalls(4) → countCalls(3)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">5 (return)</td>
+<td style="text-align: right;">4</td>
+<td>return <code>1 + 4 = 5</code></td>
+<td><code>countCalls(4)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">—</td>
+<td>print <code>5</code></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Answer: <code>countCalls(4) = 5</code>. It counts 5 calls total including the initial call and the base call <code>countCalls(0)</code>; non-base recursive calls are 4.</strong></p>
+<h3 id="example-4-two-recursive-calls-fibonacci-style-trace">Example 4 — two recursive calls: Fibonacci-style trace</h3>
+<div class="codehilite"><pre><span></span><code>1  FUNCTION fib(n)
+2    IF n &lt;= 1 THEN
+3      RETURN n
+4    ELSE
+5      RETURN fib(n - 1) + fib(n - 2)
+6    END IF
+7  END FUNCTION
+8  PRINT fib(4)
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Step</th>
+<th>Call</th>
+<th style="text-align: right;">Line</th>
+<th style="text-align: right;">n</th>
+<th>Computation / Return</th>
+<th>Call stack (top last)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>A</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td><code>4 &lt;= 1</code> false</td>
+<td><code>fib(4)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>A</td>
+<td style="text-align: right;">5 (call)</td>
+<td style="text-align: right;">4</td>
+<td>call <code>fib(3)</code>; pending <code>fib(3) + fib(2)</code></td>
+<td><code>fib(4) → fib(3)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>B</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td><code>3 &lt;= 1</code> false</td>
+<td><code>fib(4) → fib(3)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>B</td>
+<td style="text-align: right;">5 (call)</td>
+<td style="text-align: right;">3</td>
+<td>call <code>fib(2)</code>; pending <code>fib(2) + fib(1)</code></td>
+<td><code>fib(4) → fib(3) → fib(2)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>C</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td><code>2 &lt;= 1</code> false</td>
+<td><code>fib(4) → fib(3) → fib(2)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>C</td>
+<td style="text-align: right;">5 (call)</td>
+<td style="text-align: right;">2</td>
+<td>call <code>fib(1)</code>; pending <code>fib(1) + fib(0)</code></td>
+<td><code>fib(4) → fib(3) → fib(2) → fib(1)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>D</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td><code>1 &lt;= 1</code> true</td>
+<td><code>fib(4) → fib(3) → fib(2) → fib(1)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>D</td>
+<td style="text-align: right;">3 (return)</td>
+<td style="text-align: right;">1</td>
+<td>return <code>1</code></td>
+<td><code>fib(4) → fib(3) → fib(2)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>C</td>
+<td style="text-align: right;">5 (call)</td>
+<td style="text-align: right;">2</td>
+<td>call <code>fib(0)</code>; pending <code>1 + fib(0)</code></td>
+<td><code>fib(4) → fib(3) → fib(2) → fib(0)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>E</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td><code>0 &lt;= 1</code> true</td>
+<td><code>fib(4) → fib(3) → fib(2) → fib(0)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td>E</td>
+<td style="text-align: right;">3 (return)</td>
+<td style="text-align: right;">0</td>
+<td>return <code>0</code></td>
+<td><code>fib(4) → fib(3) → fib(2)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td>C</td>
+<td style="text-align: right;">5 (return)</td>
+<td style="text-align: right;">2</td>
+<td>return <code>1 + 0 = 1</code></td>
+<td><code>fib(4) → fib(3)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">13</td>
+<td>B</td>
+<td style="text-align: right;">5 (call)</td>
+<td style="text-align: right;">3</td>
+<td>call <code>fib(1)</code>; pending <code>1 + fib(1)</code></td>
+<td><code>fib(4) → fib(3) → fib(1)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">14</td>
+<td>F</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td><code>1 &lt;= 1</code> true</td>
+<td><code>fib(4) → fib(3) → fib(1)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">15</td>
+<td>F</td>
+<td style="text-align: right;">3 (return)</td>
+<td style="text-align: right;">1</td>
+<td>return <code>1</code></td>
+<td><code>fib(4) → fib(3)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td>B</td>
+<td style="text-align: right;">5 (return)</td>
+<td style="text-align: right;">3</td>
+<td>return <code>1 + 1 = 2</code></td>
+<td><code>fib(4)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">17</td>
+<td>A</td>
+<td style="text-align: right;">5 (call)</td>
+<td style="text-align: right;">4</td>
+<td>call <code>fib(2)</code>; pending <code>2 + fib(2)</code></td>
+<td><code>fib(4) → fib(2)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">18</td>
+<td>G</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td><code>2 &lt;= 1</code> false</td>
+<td><code>fib(4) → fib(2)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">19</td>
+<td>G</td>
+<td style="text-align: right;">5 (call)</td>
+<td style="text-align: right;">2</td>
+<td>call <code>fib(1)</code>; pending <code>fib(1) + fib(0)</code></td>
+<td><code>fib(4) → fib(2) → fib(1)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">20</td>
+<td>H</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td><code>1 &lt;= 1</code> true</td>
+<td><code>fib(4) → fib(2) → fib(1)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">21</td>
+<td>H</td>
+<td style="text-align: right;">3 (return)</td>
+<td style="text-align: right;">1</td>
+<td>return <code>1</code></td>
+<td><code>fib(4) → fib(2)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">22</td>
+<td>G</td>
+<td style="text-align: right;">5 (call)</td>
+<td style="text-align: right;">2</td>
+<td>call <code>fib(0)</code>; pending <code>1 + fib(0)</code></td>
+<td><code>fib(4) → fib(2) → fib(0)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">23</td>
+<td>I</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td><code>0 &lt;= 1</code> true</td>
+<td><code>fib(4) → fib(2) → fib(0)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">24</td>
+<td>I</td>
+<td style="text-align: right;">3 (return)</td>
+<td style="text-align: right;">0</td>
+<td>return <code>0</code></td>
+<td><code>fib(4) → fib(2)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">25</td>
+<td>G</td>
+<td style="text-align: right;">5 (return)</td>
+<td style="text-align: right;">2</td>
+<td>return <code>1 + 0 = 1</code></td>
+<td><code>fib(4)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">26</td>
+<td>A</td>
+<td style="text-align: right;">5 (return)</td>
+<td style="text-align: right;">4</td>
+<td>return <code>2 + 1 = 3</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td style="text-align: right;">27</td>
+<td>—</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">—</td>
+<td>print <code>3</code></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Answer: <code>fib(4) = 3</code>. Naive recursion makes 9 total calls; the returned value is <code>2 + 1 = 3</code>.</strong></p>
+<h3 id="example-5-off-by-one-base-case">Example 5 — off-by-one base case</h3>
+<div class="codehilite"><pre><span></span><code>1  FUNCTION s(n)
+2    IF n == 1 THEN
+3      RETURN 0
+4    ELSE
+5      RETURN n + s(n - 1)
+6    END IF
+7  END FUNCTION
+8  PRINT s(4)
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Step</th>
+<th style="text-align: right;">Line</th>
+<th style="text-align: right;">n</th>
+<th>Computation / Return</th>
+<th>Call stack (top last)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td><code>4 == 1</code> false</td>
+<td><code>s(4)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5 (call)</td>
+<td style="text-align: right;">4</td>
+<td>call <code>s(3)</code>; pending <code>4 + s(3)</code></td>
+<td><code>s(4) → s(3)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td><code>3 == 1</code> false</td>
+<td><code>s(4) → s(3)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5 (call)</td>
+<td style="text-align: right;">3</td>
+<td>call <code>s(2)</code>; pending <code>3 + s(2)</code></td>
+<td><code>s(4) → s(3) → s(2)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td><code>2 == 1</code> false</td>
+<td><code>s(4) → s(3) → s(2)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">5 (call)</td>
+<td style="text-align: right;">2</td>
+<td>call <code>s(1)</code>; pending <code>2 + s(1)</code></td>
+<td><code>s(4) → s(3) → s(2) → s(1)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td><code>1 == 1</code> true</td>
+<td><code>s(4) → s(3) → s(2) → s(1)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">3 (return)</td>
+<td style="text-align: right;">1</td>
+<td>return <code>0</code></td>
+<td><code>s(4) → s(3) → s(2) → s(1)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">5 (return)</td>
+<td style="text-align: right;">2</td>
+<td>return <code>2 + 0 = 2</code></td>
+<td><code>s(4) → s(3) → s(2)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">5 (return)</td>
+<td style="text-align: right;">3</td>
+<td>return <code>3 + 2 = 5</code></td>
+<td><code>s(4) → s(3)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">11</td>
+<td style="text-align: right;">5 (return)</td>
+<td style="text-align: right;">4</td>
+<td>return <code>4 + 5 = 9</code></td>
+<td><code>s(4)</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">—</td>
+<td>print <code>9</code></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Answer: <code>s(4) = 9</code>. The base <code>s(1) = 0</code> omits 1, so the sum is <code>4 + 3 + 2 + 0 = 9</code> instead of 10.</strong></p>
+<h2 id="6-traps-and-gotchas">6. Traps and gotchas</h2>
+<table>
+<thead>
+<tr>
+<th>Trap</th>
+<th>Why it catches people</th>
+<th>How to avoid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>+</code> in recursive call mistaken for factorial</td>
+<td><code>n * f(n-1)</code> is the familiar factorial shape; <code>n + f(n-1)</code> looks similar and candidates answer product</td>
+<td>Read the operator literally. Test <code>n = 4</code>: plus gives <code>4 + 3 + 2 + 1 = 10</code>; times gives <code>4 * 3 * 2 * 1 = 24</code></td>
+</tr>
+<tr>
+<td>Base case <code>n == 0</code> vs <code>n == 1</code></td>
+<td>Off-by-one changes the sum or product by one term</td>
+<td>Substitute the base into the smallest call. For sum <code>1..n</code>, use <code>n == 1 return 1</code>; for factorial, use <code>n &lt;= 1 return 1</code></td>
+</tr>
+<tr>
+<td>Missing or unreachable base case</td>
+<td>Recursion never stops or skips the base, causing infinite recursion or stack overflow</td>
+<td>Check every recursive path reaches the base. For example, <code>n - 2</code> with base <code>n == 0</code> misses odd <code>n</code></td>
+</tr>
+<tr>
+<td>Counting calls vs computing values</td>
+<td><code>1 + f(n-1)</code> looks like a sum, but the <code>1</code> may count calls rather than add data</td>
+<td>Identify what each literal represents. Separate the returned value from any side-effect counter</td>
+</tr>
+<tr>
+<td>Wrong evaluation order in two-call recursion</td>
+<td><code>f(n-1) + f(n-2)</code> fully finishes the left branch before starting the right branch</td>
+<td>Trace depth-first, left to right. Do not interleave the two recursive calls</td>
+</tr>
+<tr>
+<td>Confusing total calls with recursion depth</td>
+<td><code>fib(4)</code> has depth 4 but 9 total function calls</td>
+<td>Track stack depth separately from total invocations. Count every call, including repeated subproblems</td>
+</tr>
+<tr>
+<td>Ignoring zero and negative inputs</td>
+<td>Base <code>n &lt;= 1</code> handles <code>0</code>; base <code>n == 1</code> does not, so <code>n = 0</code> can loop or fail</td>
+<td>Test <code>n = 0</code> if the function allows it. Read the base condition exactly as written</td>
+</tr>
+<tr>
+<td>Product with base returning <code>0</code></td>
+<td>A factorial-style recursion with <code>n == 0 return 0</code> collapses the whole product to <code>0</code></td>
+<td>Factorial base returns <code>1</code>. Sum base may return <code>0</code>; match the base to the operation</td>
+</tr>
+<tr>
+<td><code>PRINT</code> inside the recursive function vs final <code>PRINT</code></td>
+<td>Intermediate values may be printed on every call, so the visible output is not only the final return value</td>
+<td>Separate side effects from return values. Identify what the final line actually prints</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-practice-questions">7. Practice questions</h2>
+<ol>
+<li><strong>[Easy]</strong> <em>(B6 — plus vs multiply)</em><br />
+What is printed?</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>1  FUNCTION F(n)
+2      IF n == 0 THEN
+3          RETURN 0
+4      END IF
+5      RETURN n + F(n - 1)
+6  END FUNCTION
+7  PRINT F(4)
+</code></pre></div>
+
+<p>(a) 24
+(b) 10
+(c) 4
+(d) 0</p>
+<ol start="2">
+<li><strong>[Easy]</strong> <em>(B6 — base case edit)</em><br />
+Given the function below, which edit makes <code>F(n)</code> return <code>n!</code> for <code>n &gt;= 0</code>?</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>1  FUNCTION F(n)
+2      IF n == 0 THEN
+3          RETURN 0
+4      END IF
+5      RETURN n + F(n - 1)
+6  END FUNCTION
+</code></pre></div>
+
+<p>(a) Change line 3 to <code>RETURN 1</code> and line 5 to <code>RETURN n * F(n - 1)</code>.
+(b) Change only line 5 to <code>RETURN n * F(n - 1)</code>.
+(c) Change only line 3 to <code>RETURN 1</code>.
+(d) Change line 5 to <code>RETURN (n - 1) * F(n)</code>.</p>
+<ol start="3">
+<li><strong>[Easy]</strong> <em>(B6 — counting calls)</em><br />
+How many total calls to <code>F</code> occur while evaluating <code>PRINT F(3)</code>, including the initial call?</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>1  FUNCTION F(n)
+2      IF n == 0 THEN
+3          RETURN 0
+4      END IF
+5      RETURN n + F(n - 1)
+6  END FUNCTION
+7  PRINT F(3)
+</code></pre></div>
+
+<p>(a) 3
+(b) 5
+(c) 6
+(d) 4</p>
+<ol start="4">
+<li><strong>[Medium]</strong> <em>(B6 — step size)</em><br />
+What is printed?</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>1  FUNCTION F(n)
+2      IF n &lt;= 0 THEN
+3          RETURN 0
+4      END IF
+5      RETURN n + F(n - 2)
+6  END FUNCTION
+7  PRINT F(5)
+</code></pre></div>
+
+<p>(a) 5
+(b) 15
+(c) 9
+(d) 8</p>
+<ol start="5">
+<li><strong>[Medium]</strong> <em>(B6 — factorial trap)</em><br />
+What is printed?</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>1  FUNCTION F(n)
+2      IF n == 0 THEN
+3          RETURN 1
+4      END IF
+5      RETURN n * F(n - 1)
+6  END FUNCTION
+7  PRINT F(5)
+</code></pre></div>
+
+<p>(a) 15
+(b) 120
+(c) 720
+(d) 5</p>
+<p><strong>Q5. Correct: (b) 120</strong></p>
+<p>Variable trace table:</p>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th style="text-align: right;">Computation</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F(0)</td>
+<td style="text-align: right;">base</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>F(1)</td>
+<td style="text-align: right;">1 * F(0)</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>F(2)</td>
+<td style="text-align: right;">2 * F(1)</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>F(3)</td>
+<td style="text-align: right;">3 * F(2)</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td>F(4)</td>
+<td style="text-align: right;">4 * F(3)</td>
+<td style="text-align: right;">24</td>
+</tr>
+<tr>
+<td>F(5)</td>
+<td style="text-align: right;">5 * F(4)</td>
+<td style="text-align: right;">120</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 15: uses <code>+</code> instead of <code>*</code>, giving <code>1+2+3+4+5</code>.</li>
+<li>(c) 720: computes <code>6!</code> or multiplies one extra term.</li>
+<li>(d) 5: returns only <code>n</code> and ignores the recursive product.</li>
+</ul>
+<hr />
+<ol start="6">
+<li><strong>[Medium]</strong> <em>(B6 — even sum)</em><br />
+What is printed?</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>1  FUNCTION G(n)
+2      IF n == 0 THEN
+3          RETURN 0
+4      END IF
+5      RETURN n + G(n - 2)
+6  END FUNCTION
+7  PRINT G(6)
+</code></pre></div>
+
+<p>(a) 12
+(b) 20
+(c) 21
+(d) 6</p>
+<p><strong>Q6. Correct: (a) 12</strong></p>
+<p>Variable trace table:</p>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th style="text-align: right;">Computation</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>G(0)</td>
+<td style="text-align: right;">base</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>G(2)</td>
+<td style="text-align: right;">2 + G(0)</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>G(4)</td>
+<td style="text-align: right;">4 + G(2)</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td>G(6)</td>
+<td style="text-align: right;">6 + G(4)</td>
+<td style="text-align: right;">12</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) 20: adds an extra even term, such as <code>8</code>, or uses a wrong upper bound.</li>
+<li>(c) 21: sums <code>1+2+3+4+5+6</code>.</li>
+<li>(d) 6: returns only the first <code>n</code>.</li>
+</ul>
+<hr />
+<ol start="7">
+<li><strong>[Medium]</strong> <em>(B6 — two recursive calls)</em><br />
+What is printed?</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>1  FUNCTION H(n)
+2      IF n &lt;= 1 THEN
+3          RETURN 1
+4      END IF
+5      RETURN H(n - 1) + H(n - 2)
+6  END FUNCTION
+7  PRINT H(5)
+</code></pre></div>
+
+<p>(a) 8
+(b) 13
+(c) 5
+(d) 16</p>
+<p><strong>Q7. Correct: (a) 8</strong></p>
+<p>Variable trace table:</p>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th style="text-align: right;">Computation</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H(0)</td>
+<td style="text-align: right;">base</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>H(1)</td>
+<td style="text-align: right;">base</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>H(2)</td>
+<td style="text-align: right;">H(1) + H(0)</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td>H(3)</td>
+<td style="text-align: right;">H(2) + H(1)</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td>H(4)</td>
+<td style="text-align: right;">H(3) + H(2)</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td>H(5)</td>
+<td style="text-align: right;">H(4) + H(3)</td>
+<td style="text-align: right;">8</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(c) 5: reports <code>H(4)</code> instead of <code>H(5)</code>.</li>
+<li>(b) 13: computes one extra Fibonacci step, such as <code>H(6)</code>.</li>
+<li>(d) 16: adds or doubles without correctly applying the base values.</li>
+</ul>
+<hr />
+<ol start="8">
+<li><strong>[Medium]</strong> <em>(B6 — print order)</em><br />
+What is printed?</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>1  FUNCTION P(n)
+2      IF n == 0 THEN
+3          RETURN 0
+4      END IF
+5      PRINT n
+6      RETURN P(n - 1)
+7  END FUNCTION
+8  P(3)
+</code></pre></div>
+
+<p>(a) 3 2 1 0
+(b) 1 2 3
+(c) 0 1 2 3
+(d) 3 2 1</p>
+<p><strong>Q8. Correct: (d) 3 2 1</strong></p>
+<p>Variable trace table:</p>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th>Action</th>
+<th>Output / Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P(3)</td>
+<td>n=3, <code>PRINT 3</code>, call P(2)</td>
+<td>output 3</td>
+</tr>
+<tr>
+<td>P(2)</td>
+<td>n=2, <code>PRINT 2</code>, call P(1)</td>
+<td>output 2</td>
+</tr>
+<tr>
+<td>P(1)</td>
+<td>n=1, <code>PRINT 1</code>, call P(0)</td>
+<td>output 1</td>
+</tr>
+<tr>
+<td>P(0)</td>
+<td>n=0, base</td>
+<td>return 0</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) 1 2 3: prints after the recursive call instead of before it.</li>
+<li>(c) 0 1 2 3: prints at the base case too and reverses the order.</li>
+<li>(a) 3 2 1 0: prints <code>0</code> before checking the base case.</li>
+</ul>
+<hr />
+<ol start="9">
+<li><strong>[Hard]</strong> <em>(B6 — precedence and recursion)</em><br />
+Assume multiplication is evaluated before addition. What is printed?</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>1  FUNCTION F(n)
+2      IF n == 0 THEN
+3          RETURN 1
+4      END IF
+5      RETURN n + F(n - 1) * 2
+6  END FUNCTION
+7  PRINT F(3)
+</code></pre></div>
+
+<p>(a) 7
+(b) 30
+(c) 19
+(d) 26</p>
+<p><strong>Q9. Correct: (c) 19</strong></p>
+<p>Variable trace table:</p>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th style="text-align: right;">Computation</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F(0)</td>
+<td style="text-align: right;">base</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>F(1)</td>
+<td style="text-align: right;">1 + F(0) * 2 = 1 + 2</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td>F(2)</td>
+<td style="text-align: right;">2 + F(1) * 2 = 2 + 6</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr>
+<td>F(3)</td>
+<td style="text-align: right;">3 + F(2) * 2 = 3 + 16</td>
+<td style="text-align: right;">19</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) 30: evaluates <code>(n + F(n - 1)) * 2</code> left-to-right.</li>
+<li>(a) 7: ignores <code>* 2</code> and uses a pure sum with base <code>1</code>.</li>
+<li>(d) 26: evaluates as <code>n * F(n - 1) + 2</code>.</li>
+</ul>
+<hr />
+<ol start="10">
+<li><strong>[Hard]</strong> <em>(B6 — digit recursion)</em><br />
+<code>DIV</code> is integer division. What is printed?</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>1  FUNCTION Q(n)
+2      IF n == 0 THEN
+3          RETURN 0
+4      END IF
+5      RETURN (n MOD 10) + Q(n DIV 10)
+6  END FUNCTION
+7  PRINT Q(1234)
+</code></pre></div>
+
+<p>(a) 1234
+(b) 10
+(c) 4
+(d) 24</p>
+<p><strong>Q10. Correct: (b) 10</strong></p>
+<p>Variable trace table:</p>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th style="text-align: right;">Computation</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Q(0)</td>
+<td style="text-align: right;">base</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>Q(1)</td>
+<td style="text-align: right;">1 + Q(0)</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>Q(12)</td>
+<td style="text-align: right;">2 + Q(1)</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td>Q(123)</td>
+<td style="text-align: right;">3 + Q(12)</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td>Q(1234)</td>
+<td style="text-align: right;">4 + Q(123)</td>
+<td style="text-align: right;">10</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 1234: ignores <code>MOD</code> and <code>DIV</code>, returning the original number.</li>
+<li>(c) 4: returns only the last digit.</li>
+<li>(d) 24: multiplies digits <code>1*2*3*4</code> instead of adding them.</li>
+</ul>
+<hr />
+<ol start="11">
+<li><strong>[Hard]</strong> <em>(B6 — call counting in branching recursion)</em><br />
+How many total calls to <code>F</code> occur while evaluating <code>PRINT F(4)</code>, including the initial call?</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>1  FUNCTION F(n)
+2      IF n &lt;= 1 THEN
+3          RETURN n
+4      END IF
+5      RETURN F(n - 1) + F(n - 2)
+6  END FUNCTION
+7  PRINT F(4)
+</code></pre></div>
+
+<p>(a) 15
+(b) 8
+(c) 5
+(d) 9</p>
+<p><strong>Q11. Correct: (d) 9</strong></p>
+<p>Variable trace table / call table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Order</th>
+<th>Call</th>
+<th>Invoked from</th>
+<th>Recursive calls made</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>F(4)</td>
+<td>initial</td>
+<td>F(3), F(2)</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>F(3)</td>
+<td>F(4)</td>
+<td>F(2), F(1)</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>F(2)</td>
+<td>F(3)</td>
+<td>F(1), F(0)</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>F(1)</td>
+<td>F(2)</td>
+<td>none, base</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>F(0)</td>
+<td>F(2)</td>
+<td>none, base</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>F(1)</td>
+<td>F(3)</td>
+<td>none, base</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>F(2)</td>
+<td>F(4)</td>
+<td>F(1), F(0)</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>F(1)</td>
+<td>F(2)</td>
+<td>none, base</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>F(0)</td>
+<td>F(2)</td>
+<td>none, base</td>
+</tr>
+</tbody>
+</table>
+<p>Total calls = 9.</p>
+<ul>
+<li>(b) 8: omits the initial call or misses one base call.</li>
+<li>(a) 15: counts extra branches or treats the recursion tree as larger than it is.</li>
+<li>(c) 5: counts distinct values <code>F(4)</code>, <code>F(3)</code>, <code>F(2)</code>, <code>F(1)</code>, <code>F(0)</code> instead of actual calls.</li>
+</ul>
+<hr />
+<ol start="12">
+<li><strong>[Medium]</strong> <em>(B6 — call stack)</em><br />
+When tracing <code>F(n) = n + F(n - 1)</code> down to base case <code>F(0)</code>, in what order are the additions actually evaluated?</li>
+</ol>
+<p>(a) During the forward call phase, as <code>n + (n-1) + ... + 0</code>.
+(b) The stack discards pending additions when it reaches <code>F(0)</code>.
+(c) After the base case, from <code>F(0)</code> upward to <code>F(n)</code>.
+(d) Only the first addition <code>n + F(n-1)</code> is evaluated; the rest are skipped.</p>
+<p><strong>Rule:</strong> Trace recursion down to the base case, then evaluate upward. The return expression decides the operation: <code>n + F(n-1)</code> sums; <code>n * F(n-1)</code> multiplies/factorials. Counting calls is separate from computing the returned value.</p>
+<p><strong>Q12. Correct: (c)</strong></p>
+<ul>
+<li>(a) Additions do not happen during the forward call phase; calls are still being pushed.</li>
+<li>(b) The first addition cannot complete without the recursive return value.</li>
+<li>(b) The stack keeps pending frames with their stored <code>n</code> values until the calls return.</li>
+</ul>
+<hr />
+<h2 id="8-resources">8. Resources</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Type</th>
+<th>Link</th>
+<th>Free/Paid</th>
+<th>Time</th>
+<th>Why this one</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PrepInsta — Accenture pseudocode</td>
+<td>Practice set</td>
+<td>https://prepinsta.com/accenture/pseudo-code/general-pseudo-code/</td>
+<td>Free</td>
+<td>40 min</td>
+<td>Recursion output-prediction items</td>
+</tr>
+<tr>
+<td>CodeChef — Accenture interview questions</td>
+<td>Practice set</td>
+<td>https://www.codechef.com/practice/accenture-interview-questions</td>
+<td>Free</td>
+<td>40 min</td>
+<td>Company-tagged practice</td>
+</tr>
+<tr>
+<td>GfG — Complexity analysis guide</td>
+<td>Article</td>
+<td>https://www.geeksforgeeks.org/dsa/complete-guide-on-complexity-analysis/</td>
+<td>Free</td>
+<td>20 min</td>
+<td>For the O(2ⁿ) naive-fibonacci result</td>
+</tr>
+<tr>
+<td><code>question-banks/QB-T31-B6-recursion.md</code></td>
+<td>Question bank</td>
+<td>(this library)</td>
+<td>Free</td>
+<td>30 min</td>
+<td>20 original questions</td>
+</tr>
+</tbody>
+</table>
+<p><em>All external links verified resolving 2026-09-16.</em></p>
+<h2 id="9-self-check">9. Self-check</h2>
+<ul>
+<li>[ ] <strong>I read the operator before deciding what a recursion computes — <code>+</code> is a sum, <code>*</code> is a factorial</strong></li>
+<li>[ ] I can name the two mandatory parts of any recursion</li>
+<li>[ ] I can say what happens when the base case is missing</li>
+<li>[ ] I can trace <code>factorial(5)</code> and <code>fibonacci(5)</code> by hand and get 120 and 5</li>
+<li>[ ] I know the factorials up to 6! and the fibonacci numbers up to F(8)</li>
+<li>[ ] I can explain why work before the recursive call happens on the way down and work after it on the way up</li>
+<li>[ ] I know naive fibonacci is O(2ⁿ) and that memoisation fixes it</li>
+<li>[ ] I can compare recursion and iteration on memory and stack risk</li>
+<li>[ ] I scored 9/12 or better on the practice questions</li>
+</ul>
+<h2 id="10-sources">10. Sources</h2>
+<p><strong>Teaching content (§3–§9)</strong> is adapted from <code>accenture-prep-final/accenture-prep-library/topics/T31-B6-recursion.md</code>, which lists its own sources and was verified in that library's QA. <strong>Infosys evidence</strong> for this file: observed questions P07, P10, P11 in <code>../data/questions-observed.csv</code>; section structure and marks in <code>../research/03-pattern-synthesis.md</code> §1; weightage, tier and hours in <code>../data/weightage.json</code> (code <code>P2</code>). Confidence <strong>Medium</strong>. Nothing in this file is a published Infosys syllabus.</p>
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/pseudocode/P1-loops-iteration.html"><span>Previous</span><strong>P1 — Loops and Iteration Counting</strong></a><a class="pager next" href="../../infosys-se/pseudocode/P3-bitwise-operators.html"><span>Next</span><strong>P3 — Bitwise Operators and Operator Precedence</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#p2-recursion-trace-base-case-accumulation">P2 — Recursion — Trace, Base Case, Accumulation</a><a class="toc-l1" href="#1-why-this-topic-matters-here">1. Why this topic matters here</a><a class="toc-l1" href="#2-exactly-what-gets-asked">2. Exactly what gets asked</a><a class="toc-l1" href="#3-concept-notes">3. Concept notes</a><a class="toc-l1" href="#_1"></a><a class="toc-l1" href="#1-factorial5-120">1. factorial(5) = 120</a><a class="toc-l1" href="#_2"></a><a class="toc-l1" href="#2-fibonacci5-5-call-tree-and-call-count">2. fibonacci(5) = 5, call tree and call count</a><a class="toc-l1" href="#_3"></a><a class="toc-l1" href="#3-sum-of-first-n-natural-numbers-n-fn-1-n-5-15">3. Sum of first n natural numbers: n + f(n-1), n = 5 → 15</a><a class="toc-l1" href="#_4"></a><a class="toc-l1" href="#4-reverse-a-string">4. Reverse a string</a><a class="toc-l1" href="#_5"></a><a class="toc-l1" href="#5-power25-32">5. power(2,5) = 32</a><a class="toc-l1" href="#_6"></a><a class="toc-l1" href="#6-gcd-via-euclid-gcd4818-6">6. GCD via Euclid: gcd(48,18) = 6</a><a class="toc-l1" href="#4-must-memorise-block">4. Must-memorise block</a><a class="toc-l1" href="#5-worked-examples">5. Worked examples</a><a class="toc-l1" href="#6-traps-and-gotchas">6. Traps and gotchas</a><a class="toc-l1" href="#7-practice-questions">7. Practice questions</a><a class="toc-l1" href="#8-resources">8. Resources</a><a class="toc-l1" href="#9-self-check">9. Self-check</a><a class="toc-l1" href="#10-sources">10. Sources</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

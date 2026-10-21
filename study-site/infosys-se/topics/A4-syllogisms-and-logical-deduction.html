@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A4 — Syllogisms and logical deduction · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem current" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Topic files</span></div>
+    <article class="prose">
+<!-- Drafted by DeepSeek V4.1 Flash via ds.py; reviewed by Claude 2026-09-21. Answer
+     letters rebalanced by data/shuffle.py (correctness-preserving: option text is
+     swapped and the key letter repointed). Numeric keys re-checked by
+     data/verify_keys.py. -->
+
+<h1 id="a4-syllogisms-and-logical-deduction">A4 — Syllogisms and logical deduction</h1><p class="fm-line" style="color:var(--ink-faint);font-size:13px;margin:-.4em 0 1.2em">Tier 2 · Reasoning Ability · 2.2% of marks · about 0.8 h · confidence High</p>
+<p><em>Adapted from <code>L&amp;T/lt-prep-library/topics/L6-syllogisms-and-logical-deduction.md</code>; verified in that library's QA. §1 and §10 are regenerated for Infosys from <code>data/weightage.json</code>; §2 gains an Infosys evidence table; §3–§9 are the source text unchanged, so "observed" in the worked examples refers to the source paper.</em></p>
+<h2 id="1-why-this-topic-matters-here">1. Why this topic matters here</h2>
+<p>Expect about <strong>1.6 questions and 1.6 marks</strong> on this topic (about 2.2% of the 75 scored marks). It sits in <strong>Reasoning Ability</strong>, part of the 25-question aptitude block (Reasoning Ability 15 Q / 25 min + Technical Ability 10 Q / 35 min, one cut-off each). <strong>Tier 2</strong>, 0.8 hours to reach reliable recall, confidence <strong>High</strong>.</p>
+<p><strong>6 questions on this topic are in the observed Infosys pool</strong> (R10, O11, O12, O13, O14, O15), from 2 sources. They are listed in §2 and solved in <code>../question-banks/QB-99-OBSERVED-POOL.md</code>.</p>
+<p><strong>Why the tier:</strong> expected marks per study hour, weighted by confidence, is 2.03 against a paper average of 1.84 (<code>../data/analysis-tables.md</code> §6). Every section has its own cut-off, so a zero here costs the whole section's chance, not only these marks. There is no calculator. Negative marking: none reported.</p>
+<h2 id="2-exactly-what-gets-asked">2. Exactly what gets asked</h2>
+<h3 id="what-infosys-asked">What Infosys asked</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Source date</th>
+<th>What was asked</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O11</td>
+<td>2020-09-22</td>
+<td>Nurses, demand, efficient: choose the three related statements (multi-select)</td>
+</tr>
+<tr>
+<td>O12</td>
+<td>2020-09-22</td>
+<td>Rohan, jesters, magicians, criminals: choose the three related statements (multi-select)</td>
+</tr>
+<tr>
+<td>O13</td>
+<td>2020-09-22</td>
+<td>Books, novels, fiction: which triple is logically related?</td>
+</tr>
+<tr>
+<td>O14</td>
+<td>2020-09-22</td>
+<td>Painters, farmers, choreographers: which triple is logically related?</td>
+</tr>
+<tr>
+<td>O15</td>
+<td>2020-09-22</td>
+<td>Fishes, swimmers, carnivorous: which triple is logically related?</td>
+</tr>
+<tr>
+<td>R10</td>
+<td>2025-09-29</td>
+<td>Statements: All shoes are legs. Some legs are pairs. Some pairs are hands. Conclusions: I. Some hands are shoes. II. Some pairs are shoes.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The pattern notes below come from the library this file was adapted from. Any frequency or "observed paper" remark in them describes that source paper, not Infosys. The Infosys evidence is the table above.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Sub-pattern</th>
+<th>How it appears</th>
+<th>Roughly how often</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Two-statement syllogism</td>
+<td>"All A are B. Some B are C." Then 4-5 conclusions; pick which follow</td>
+<td>Most common by far</td>
+</tr>
+<tr>
+<td>Three-statement syllogism</td>
+<td>Chain of All/Some/No; ask which conclusion is valid</td>
+<td>Common</td>
+</tr>
+<tr>
+<td>Possibility conclusions</td>
+<td>"Which is a possibility?" - needs the possibility rule, not certainty</td>
+<td>Frequent</td>
+</tr>
+<tr>
+<td>"Either-or" conclusion pair</td>
+<td>Two conclusions where exactly one must hold</td>
+<td>Occasional</td>
+</tr>
+<tr>
+<td>Statement + course of action</td>
+<td>Given a situation, decide which action logically follows</td>
+<td>Occasional</td>
+</tr>
+<tr>
+<td>Statement + assumption / inference</td>
+<td>Mark the hidden assumption or the direct inference</td>
+<td>Occasional</td>
+</tr>
+<tr>
+<td>Blood-relation or direction deduction</td>
+<td>Short coded deduction, 2-3 steps</td>
+<td>Occasional, overlaps L5/L7</td>
+</tr>
+</tbody>
+</table>
+<p>Count the conclusion set, not the statements. A 5-conclusion question costs 5 quick checks, but each check is mechanical once the Venn is drawn.</p>
+<h2 id="3-concept-notes">3. Concept notes</h2>
+<h3 id="31-the-four-statement-types">3.1 The four statement types</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Form</th>
+<th>Venn picture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Universal affirmative</td>
+<td><strong>All A are B</strong></td>
+<td>A fully inside B</td>
+</tr>
+<tr>
+<td>Universal negative</td>
+<td><strong>No A is B</strong></td>
+<td>A and B fully disjoint</td>
+</tr>
+<tr>
+<td>Particular affirmative</td>
+<td><strong>Some A are B</strong></td>
+<td>A and B overlap by at least one element</td>
+</tr>
+<tr>
+<td>Particular negative</td>
+<td><strong>Some A are not B</strong></td>
+<td>At least one element of A lies outside B</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-the-three-line-diagram-method-the-fast-method">3.2 The three-line diagram method (the fast method)</h3>
+<p>Draw only what the statements force. Then test each conclusion against <strong>every</strong> diagram consistent with the statements. A conclusion follows only if it is true in all of them.</p>
+<p>Rule: if you can draw one valid diagram where the conclusion fails, the conclusion does not follow.</p>
+<h3 id="33-immediate-inference-rules">3.3 Immediate inference rules</h3>
+<ul>
+<li><strong>All A are B</strong> gives <strong>Some B are A</strong> (valid - overlap is non-empty), and <strong>Some A are B</strong> (valid).</li>
+<li><strong>No A is B</strong> gives <strong>No B is A</strong> (valid - disjointness is symmetric).</li>
+<li><strong>Some A are B</strong> gives <strong>Some B are A</strong> (valid - overlap is symmetric).</li>
+<li><strong>Some A are not B</strong> gives <strong>Some A are not B</strong> only; you may <strong>not</strong> convert it to "Some B are not A". The element outside B may or may not be in B's complement in a way that gives B elements. This is the single most exploited trap.</li>
+</ul>
+<h3 id="34-the-two-statement-chain-rules">3.4 The two-statement chain rules</h3>
+<ul>
+<li>All A are B + All B are C → <strong>All A are C</strong>. Also gives Some A are C, Some C are A.</li>
+<li>All A are B + No B is C → <strong>No A is C</strong>. Also No C is A.</li>
+<li>All A are B + Some B are C → <strong>No definite conclusion</strong>. "Some A are C" is a <em>possibility</em>, not a certainty, because the Some-B could sit outside A.</li>
+<li>Some A are B + All B are C → <strong>Some A are C</strong>. Also Some C are A.</li>
+<li>Some A are B + No B is C → <strong>Some A are not C</strong>.</li>
+<li>No A is B + All B are C → <strong>Some C are not A</strong> (the B-part is outside A).</li>
+<li>Two "Some" statements → <strong>no conclusion</strong>.</li>
+<li>Two "No" statements → <strong>no conclusion</strong> in either direction beyond the stated disjointness.</li>
+</ul>
+<h3 id="35-the-possibility-rule">3.5 The possibility rule</h3>
+<p>A conclusion is a <strong>possibility</strong> when at least one consistent diagram makes it true, and no statement forbids it.</p>
+<ul>
+<li>All A are B ⇒ "Some A are B" is a possibility (and in fact a certainty).</li>
+<li>All A are B ⇒ "Some A are not B" is <strong>not</strong> possible; it is contradicted.</li>
+<li>Some A are B ⇒ "All A are B" <strong>is</strong> a possibility. This surprises people; a single overlap does not forbid full containment.</li>
+<li>No A is B ⇒ "Some A are B" is impossible.</li>
+</ul>
+<p>Shortcut line: <strong>possibility = can be drawn without breaking a statement.</strong></p>
+<h3 id="36-the-either-or-rule">3.6 The either-or rule</h3>
+<p>For the pair "Some A are B" and "Some A are not B" to be an either-or answer, both must individually fail, and they must be exact complements. Then exactly one must hold. If both fail and they are not complements, nothing follows.</p>
+<h3 id="37-the-complement-table">3.7 The complement table</h3>
+<table>
+<thead>
+<tr>
+<th>Conclusion</th>
+<th>Complement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>All A are B</td>
+<td>Some A are not B</td>
+</tr>
+<tr>
+<td>Some A are B</td>
+<td>No A is B</td>
+</tr>
+<tr>
+<td>No A is B</td>
+<td>Some A are B</td>
+</tr>
+<tr>
+<td>Some A are not B</td>
+<td>All A are B</td>
+</tr>
+</tbody>
+</table>
+<h3 id="38-course-of-action">3.8 Course of action</h3>
+<p>An action follows only if it is (a) practical for the authority named, and (b) directly aimed at fixing the stated problem. Actions that are morally nice but unrelated are rejected. "Both I and II follow" is a normal answer.</p>
+<h2 id="4-must-memorise-block">4. Must-memorise block</h2>
+<p><strong>Statement meanings</strong>
+- <strong>All A are B</strong> = A ⊆ B
+- <strong>No A is B</strong> = A ∩ B = ∅
+- <strong>Some A are B</strong> = A ∩ B ≠ ∅
+- <strong>Some A are not B</strong> = A − B ≠ ∅</p>
+<p><strong>Conversions</strong>
+- All A are B → Some B are A ✔
+- Some A are B → Some B are A ✔ (two-way)
+- No A is B → No B is A ✔ (two-way)
+- Some A are not B → <strong>no valid converse</strong> ✘</p>
+<p><strong>Chain results (definite conclusions only)</strong>
+- All + All → All ✔
+- All + No → No ✔
+- All + Some → <strong>nothing certain</strong> (only a possibility)
+- Some + All → Some ✔
+- Some + No → <strong>Some A are not C</strong> ✔
+- Some + Some → nothing ✘
+- No + All → <strong>Some C are not A</strong> ✔</p>
+<p><strong>Possibility</strong>
+- Possibility is allowed unless a statement forbids it.
+- <strong>Some A are B ⇒ "All A are B" is possible.</strong></p>
+<p><strong>Either-or</strong>
+- Both conclusions must fail alone AND be complements.</p>
+<p><strong>Time budget</strong>
+- Two-statement syllogism: <strong>20 seconds</strong>
+- Three-statement: <strong>35 seconds</strong>
+- If over 45 seconds, mark and move. No negative marking means never leave a blank.</p>
+<h2 id="5-worked-examples">5. Worked examples</h2>
+<p><strong>Example 1.</strong> Statements: All dogs are mammals. All mammals are animals. Conclusions: I. All dogs are animals. II. Some animals are dogs.
+Fast method: All + All → All, so I follows. All A are B gives Some B are A, so II follows. <strong>Both follow.</strong>
+Slow method: drawing three circles costs 40 seconds for the same result.</p>
+<p><strong>Example 2.</strong> Statements: All pens are books. Some books are red. Conclusions: I. Some pens are red. II. Some red are books.
+I: All + Some → nothing certain; the red books may lie outside the pen set. Fails. II: direct conversion of "Some books are red". Follows. <strong>Only II follows.</strong></p>
+<p><strong>Example 3.</strong> Statements: No cat is a dog. All dogs are pets. Conclusions: I. Some pets are not cats. II. No pet is a cat.
+I: No + All → Some C are not A, i.e. Some pets are not cats. Follows. II: the pet set includes cats? Not forbidden, and not forced. Not a certainty. <strong>Only I follows.</strong></p>
+<p><strong>Example 4.</strong> Statements: Some A are B. Some B are C. Conclusion: Some A are C.
+Two Some statements give nothing. Draw A and C as separate overlaps on B - the conclusion fails. <strong>Does not follow.</strong> A frequent wrong answer is "follows", which is exactly why this pattern is set.</p>
+<p><strong>Example 5.</strong> Statements: Some roses are flowers. Conclusion: All roses are flowers.
+Under the possibility rule, a single overlap does not forbid full containment, so "All roses are flowers" is a <strong>valid possibility</strong>. If the question says "definitely follows", the answer is no; if it says "is a possibility", the answer is <strong>yes</strong>.</p>
+<h2 id="6-traps-and-gotchas">6. Traps and gotchas</h2>
+<table>
+<thead>
+<tr>
+<th>Trap</th>
+<th>Why it catches people</th>
+<th>How to avoid it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Converting "Some A are not B"</td>
+<td>Feels symmetric like the other three</td>
+<td>Memorise: this one does <strong>not</strong> convert</td>
+</tr>
+<tr>
+<td>Reading "Some" as "only some"</td>
+<td>Everyday English implies a part, not an overlap</td>
+<td>In logic, Some = at least one, possibly all</td>
+</tr>
+<tr>
+<td>Assuming "All + Some" chains</td>
+<td>Looks like a chain, is not one</td>
+<td>All + Some → no definite conclusion</td>
+</tr>
+<tr>
+<td>Treating possibility as certainty</td>
+<td>Both are asked with near-identical wording</td>
+<td>Look for the word "possibility" in the stem</td>
+</tr>
+<tr>
+<td>Drawing one diagram and stopping</td>
+<td>One diagram can make a false conclusion look true</td>
+<td>Test the counter-diagram before answering</td>
+</tr>
+<tr>
+<td>Ignoring the either-or requirement</td>
+<td>Picking a pair where only one fails</td>
+<td>Both must fail, and they must be complements</td>
+</tr>
+<tr>
+<td>Choosing "Both follow" too fast</td>
+<td>Two conclusions look compatible</td>
+<td>Verify each independently</td>
+</tr>
+<tr>
+<td>Blank answers</td>
+<td>Fear of being wrong</td>
+<td><strong>No negative marking - never leave a blank</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-practice-questions">7. Practice questions</h2>
+<ol>
+<li>
+<p>Statements: All A are B. All B are C. Conclusions: I. All A are C. II. Some C are A.
+a) Only I follows b) Only II follows c) Neither follows d) Both follow</p>
+</li>
+<li>
+<p>Statements: Some P are Q. All Q are R. Conclusions: I. Some P are R. II. All R are P.
+a) Neither follows b) Only II follows c) Both follow d) Only I follows</p>
+</li>
+<li>
+<p>Statements: No X is Y. All Y are Z. Conclusions: I. Some Z are not X. II. No Z is X.
+a) Both follow b) Only II follows c) Only I follows d) Neither follows</p>
+</li>
+<li>
+<p>Statements: All cats are animals. Some animals are wild. Conclusion: Some cats are wild.
+a) Does not follow b) Follows c) Follows only if no wild is a cat d) Cannot be determined but likely true</p>
+</li>
+<li>
+<p>Statements: Some cups are saucers. Conclusion: All cups are saucers.
+a) Definitely follows b) Is a possibility c) Definitely does not follow d) Contradicts the statement</p>
+</li>
+<li>
+<p>Statements: All engineers are graduates. Some graduates are managers. Conclusions: I. Some engineers are managers. II. Some managers are graduates.
+a) Only I follows b) Only II follows c) Both follow d) Neither follows</p>
+</li>
+<li>
+<p>Statements: Some A are B. Some B are C. Conclusions: I. Some A are C. II. Some C are A.
+a) Only I follows b) Only II follows c) Neither follows d) Both follow</p>
+</li>
+<li>
+<p>Statements: All roses are flowers. No flower is a stone. Conclusions: I. No rose is a stone. II. Some stones are roses.
+a) Only I follows b) Only II follows c) Both follow d) Neither follows</p>
+</li>
+<li>
+<p>Statements: No doctor is a lawyer. Some lawyers are rich. Conclusions: I. Some rich are not doctors. II. No rich person is a doctor.
+a) Only II follows b) Only I follows c) Both follow d) Neither follows</p>
+</li>
+<li>
+<p>Statements: All M are N. All N are O. Some O are P. Conclusions: I. All M are O. II. Some P are M.
+a) Neither follows b) Only II follows c) Both follow d) Only I follows</p>
+</li>
+<li>
+<p>Statements: Some books are novels. No novel is a magazine. Conclusions: I. Some books are not magazines. II. All books are magazines.
+a) Both follow b) Only II follows c) Only I follows d) Neither follows</p>
+</li>
+<li>
+<p>Statements: All keys are locks. Some locks are doors. All doors are windows. Conclusions: I. Some locks are windows. II. Some keys are windows.
+a) Only I follows b) Only II follows c) Both follow d) Neither follows</p>
+</li>
+</ol>
+<h3 id="answer-key">ANSWER KEY</h3>
+<ol>
+<li><strong>d)</strong> All + All chains to All A are C, and All A are B gives Some C are A.</li>
+<li><strong>d)</strong> Some + All gives Some P are R; "All R are P" reverses a particular and fails.</li>
+<li><strong>c)</strong> No + All gives Some Z are not X; Z may still overlap X, so II fails.</li>
+<li><strong>a)</strong> All + Some gives no definite conclusion; wild animals may lie outside cats.</li>
+<li><strong>b)</strong> A single overlap does not forbid full containment, so All cups are saucers is possible.</li>
+<li><strong>b)</strong> All + Some gives nothing for I; II is straightforward conversion of Some graduates are managers.</li>
+<li><strong>c)</strong> Two Some statements yield no conclusion in any direction.</li>
+<li><strong>a)</strong> All + No gives No rose is a stone; II contradicts the statements outright.</li>
+<li><strong>b)</strong> Some lawyers are rich, and no lawyer is a doctor, so some rich are not doctors; II is not forced.</li>
+<li><strong>d)</strong> All M are N and All N are O chain to All M are O; the Some O are P branch gives nothing about M.</li>
+<li><strong>c)</strong> The books that are novels lie outside the magazine set, so some books are not magazines; II contradicts.</li>
+<li><strong>a)</strong> Some locks are doors and All doors are windows give Some locks are windows; the keys branch never meets doors.</li>
+</ol>
+<h2 id="8-resources">8. Resources</h2>
+<ul>
+<li><strong>Syllogism - Verbal Reasoning Questions and Answers</strong> — https://www.indiabix.com/verbal-reasoning/syllogism/ — MCQ set with options, answers and explanations (verified).</li>
+<li><strong>Syllogism</strong> — https://www.geeksforgeeks.org/aptitude/syllogism/ — page content not classified - read it before relying on it.</li>
+<li><strong>Logical Deduction - Logical Reasoning Questions and Answers</strong> — https://www.indiabix.com/logical-reasoning/logical-deduction/ — MCQ set with options, answers and explanations (verified).</li>
+<li><strong>Statement and Assumption - Logical Reasoning Questions and Answers</strong> — https://www.indiabix.com/logical-reasoning/statement-and-assumption/ — MCQ set with options, answers and explanations (verified).</li>
+<li><strong>Syllogism - Wikipedia</strong> — https://en.wikipedia.org/wiki/Syllogism — reference article.</li>
+</ul>
+<h2 id="9-self-check">9. Self-check</h2>
+<ol>
+<li>Can you state the four statement types and their Venn meanings without looking?</li>
+<li>Do you know instantly that "Some A are not B" does not convert?</li>
+<li>Can you produce the definite conclusions for All+All, All+No, Some+All, Some+No, and No+All?</li>
+<li>Do you apply the possibility rule correctly, including "Some A are B ⇒ All A are B is possible"?</li>
+<li>Can you state both conditions for an either-or pair to be the answer?</li>
+<li>Can you finish a two-statement syllogism in under 25 seconds without a full diagram?</li>
+</ol>
+<h2 id="10-sources">10. Sources</h2>
+<p><strong>Teaching content (§3–§9)</strong> is adapted from <code>L&amp;T/lt-prep-library/topics/L6-syllogisms-and-logical-deduction.md</code>, which lists its own sources and was verified in that library's QA. <strong>Infosys evidence</strong> for this file: observed questions R10, O11, O12, O13, O14, O15 in <code>../data/questions-observed.csv</code>; section structure and marks in <code>../research/03-pattern-synthesis.md</code> §1; weightage, tier and hours in <code>../data/weightage.json</code> (code <code>A4</code>). Confidence <strong>High</strong>. Nothing in this file is a published Infosys syllabus.</p>
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/topics/A3-operator-logic.html"><span>Previous</span><strong>A3 — Operator logic and equation balancing</strong></a><a class="pager next" href="../../infosys-se/topics/A5-blood-relations.html"><span>Next</span><strong>A5 — Blood relations</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#a4-syllogisms-and-logical-deduction">A4 — Syllogisms and logical deduction</a><a class="toc-l1" href="#1-why-this-topic-matters-here">1. Why this topic matters here</a><a class="toc-l1" href="#2-exactly-what-gets-asked">2. Exactly what gets asked</a><a class="toc-l1" href="#3-concept-notes">3. Concept notes</a><a class="toc-l1" href="#4-must-memorise-block">4. Must-memorise block</a><a class="toc-l1" href="#5-worked-examples">5. Worked examples</a><a class="toc-l1" href="#6-traps-and-gotchas">6. Traps and gotchas</a><a class="toc-l1" href="#7-practice-questions">7. Practice questions</a><a class="toc-l1" href="#8-resources">8. Resources</a><a class="toc-l1" href="#9-self-check">9. Self-check</a><a class="toc-l1" href="#10-sources">10. Sources</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

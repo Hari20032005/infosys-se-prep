@@ -1,0 +1,2207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P8 — Reading Time and Space Complexity off a Snippet · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem current" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Pseudocode</span></div>
+    <article class="prose">
+<h1 id="p8-reading-time-and-space-complexity-off-a-snippet">P8 — Reading Time and Space Complexity off a Snippet</h1><p class="fm-line" style="color:var(--ink-faint);font-size:13px;margin:-.4em 0 1.2em">Tier 4 · Pseudocode · 0.7% of marks · about 0.8 h · confidence Low</p>
+<p><em>Adapted from <code>accenture-prep-final/accenture-prep-library/topics/T32-B9-snippet-complexity.md</code>; verified in that library's QA. §1 and §10 are regenerated for Infosys from <code>data/weightage.json</code>; §2 gains an Infosys evidence table; §3–§9 are the source text unchanged, so "observed" in the worked examples refers to the source paper.</em></p>
+<h2 id="1-why-this-topic-matters-here">1. Why this topic matters here</h2>
+<p>Expect about <strong>0.3 questions and 0.5 marks</strong> on this topic (about 0.7% of the 75 scored marks). It sits in <strong>Pseudocode</strong>: 5 questions, 10 marks, 10 minutes. <strong>Tier 4</strong>, 0.8 hours to reach reliable recall, confidence <strong>Low</strong>.</p>
+<p><strong>No Infosys question on this topic was recovered.</strong> It rests on syllabus lists or first-hand naming only (C1), so its share is an allocation, not an observation.</p>
+<p><strong>Why the tier:</strong> expected marks per study hour, weighted by confidence, is 0.38 against a paper average of 1.84 (<code>../data/analysis-tables.md</code> §6). Every section has its own cut-off, so a zero here costs the whole section's chance, not only these marks. There is no calculator. Negative marking: none reported.</p>
+<h2 id="2-exactly-what-gets-asked">2. Exactly what gets asked</h2>
+<h3 id="what-infosys-asked">What Infosys asked</h3>
+<p>No question on this topic was recovered. Listed by: C1.</p>
+<blockquote>
+<p>The pattern notes below come from the library this file was adapted from. Any frequency or "observed paper" remark in them describes that source paper, not Infosys. The Infosys evidence is the table above.</p>
+</blockquote>
+<ol>
+<li><strong>Snippet → complexity.</strong> A 4–8 line loop structure, and you name O(n), O(n²) or O(log n).</li>
+</ol>
+<p><strong>1. Correct: (b) 15</strong><br />
+Variable trace:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">i</th>
+<th style="text-align: right;">sum after line 4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">15</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>(a) 10</strong>: Adds only 1+2+3+4, stopping one iteration early.</li>
+<li><strong>(c) 20</strong>: Initializes <code>sum = 5</code> before the loop.</li>
+<li><strong>(d) 25</strong>: Uses n² instead of summing 1 to n.</li>
+</ul>
+<hr />
+<hr />
+<ol start="2">
+<li><strong>Nested versus sequential.</strong> Whether two loops multiply or add.</li>
+</ol>
+<p><strong>2. Correct: (b) O(n)</strong><br />
+Trace/growth:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">Loop iterations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">16</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>(a) O(1)</strong>: Ignores the loop bound n.</li>
+<li><strong>(c) O(log n)</strong>: Thinks <code>i</code> doubles or halves; here <code>i</code> increments by 1.</li>
+<li><strong>(d) O(n²)</strong>: Assumes every FOR implies a nested loop.</li>
+</ul>
+<hr />
+<hr />
+<ol start="3">
+<li><strong>A counter that doubles or halves.</strong> The O(log n) signature.</li>
+</ol>
+<p><strong>3. Correct: (a) 7</strong><br />
+Variable trace:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Iteration</th>
+<th style="text-align: right;">i at check</th>
+<th>i &lt; 100?</th>
+<th style="text-align: right;">count after</th>
+<th style="text-align: right;">i after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td>true</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td>true</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td>true</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td>true</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">16</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">16</td>
+<td>true</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">32</td>
+<td>true</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">64</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">64</td>
+<td>true</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">128</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">128</td>
+<td>false</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">128</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>(c) 6</strong>: Uses floor(log₂ 100) only and omits one valid iteration.</li>
+<li><strong>(b) 8</strong>: Counts the final failing check <code>i = 128</code> as an iteration.</li>
+<li><strong>(d) 50</strong>: Assumes the loop runs n/2 times because n = 100.</li>
+</ul>
+<hr />
+<hr />
+<ol start="4">
+<li><strong>Space complexity.</strong> Whether a snippet uses O(1) or O(n) auxiliary space, including recursion stack depth.</li>
+</ol>
+<p><strong>4. Correct: (b) 12</strong><br />
+Variable trace:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">i</th>
+<th>j values</th>
+<th style="text-align: right;">count after inner loop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>1, 2, 3</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>1, 2, 3</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>1, 2, 3</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>1, 2, 3</td>
+<td style="text-align: right;">12</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>(a) 7</strong>: Adds outer and inner counts: 4 + 3.</li>
+<li><strong>(c) 16</strong>: Uses 4 × 4 and ignores the inner limit 3.</li>
+<li><strong>(d) 20</strong>: Uses 4 × 5 or 5 × 4.</li>
+</ul>
+<hr />
+<hr />
+<ol start="5">
+<li><strong>Simplification.</strong> What O(3n² + 5n + 7) reduces to.</li>
+</ol>
+<h2 id="3-concept-notes">3. Concept notes</h2>
+<h3 id="the-counting-rule">The counting rule</h3>
+<p>Time complexity is driven by the number of times the innermost statement runs as a function of <code>n</code>. Find the statement executed most often, count its executions, then drop constants and lower-order terms.</p>
+<h3 id="pattern-recognition-table">Pattern-recognition table</h3>
+<table>
+<thead>
+<tr>
+<th>Snippet shape</th>
+<th>Time complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Single statement</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Single loop to n</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Two sequential loops (each to n)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Two nested loops, both to n</td>
+<td>O(n^2)</td>
+</tr>
+<tr>
+<td>Nested loop, inner bound = outer variable</td>
+<td>O(n^2)</td>
+</tr>
+<tr>
+<td>Loop with <code>i *= 2</code> or <code>i /= 2</code></td>
+<td>O(log n)</td>
+</tr>
+<tr>
+<td>Loop with <code>i * i &lt; n</code></td>
+<td>O(√n)</td>
+</tr>
+<tr>
+<td>Nested loops, inner runs constant times</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Loop calling an O(n) operation inside</td>
+<td>O(n^2)</td>
+</tr>
+<tr>
+<td>Recursion halving, one call</td>
+<td>O(log n)</td>
+</tr>
+<tr>
+<td>Recursion halving, two calls</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Recursion decrementing by one, one call</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Recursion decrementing by one, two calls</td>
+<td>O(2^n)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="detailed-patterns-with-snippets">Detailed patterns with snippets</h3>
+<table>
+<thead>
+<tr>
+<th>Shape</th>
+<th>Pseudocode snippet</th>
+<th>Time</th>
+<th>One-line justification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Single statement</td>
+<td><code>x = a + b</code></td>
+<td>O(1)</td>
+<td>Executes once.</td>
+</tr>
+<tr>
+<td>Single loop to n</td>
+<td><code>for i = 1 to n:</code><br><code>x = x + 1</code></td>
+<td>O(n)</td>
+<td>Body runs n times.</td>
+</tr>
+<tr>
+<td>Two sequential loops</td>
+<td><code>for i = 1 to n:</code><br><code>x = x + 1</code><br><code>for j = 1 to n:</code><br><code>y = y + 1</code></td>
+<td>O(n)</td>
+<td>n + n = 2n; drop constant.</td>
+</tr>
+<tr>
+<td>Two nested loops, both to n</td>
+<td><code>for i = 1 to n:</code><br><code>for j = 1 to n:</code><br><code>x = x + 1</code></td>
+<td>O(n^2)</td>
+<td>n × n.</td>
+</tr>
+<tr>
+<td>Nested, inner bound = outer variable</td>
+<td><code>for i = 1 to n:</code><br><code>for j = 1 to i:</code><br><code>x = x + 1</code></td>
+<td>O(n^2)</td>
+<td>Sum 1+2+...+n = n(n+1)/2 → O(n^2).</td>
+</tr>
+<tr>
+<td>Loop with <code>i *= 2</code> or <code>i /= 2</code></td>
+<td><code>i = 1</code><br><code>while i &lt; n:</code><br><code>i = i * 2</code></td>
+<td>O(log n)</td>
+<td>i doubles each step; ~log₂n steps.</td>
+</tr>
+<tr>
+<td>Loop with <code>i * i &lt; n</code></td>
+<td><code>i = 1</code><br><code>while i * i &lt; n:</code><br><code>i = i + 1</code></td>
+<td>O(√n)</td>
+<td>Stops when i² ≥ n, so i ~ √n.</td>
+</tr>
+<tr>
+<td>Nested loops, inner constant</td>
+<td><code>for i = 1 to n:</code><br><code>for j = 1 to 5:</code><br><code>x = x + 1</code></td>
+<td>O(n)</td>
+<td>Outer n × inner 5 = 5n; drop constant.</td>
+</tr>
+<tr>
+<td>Loop calling O(n) operation</td>
+<td><code>for i = 1 to n:</code><br><code>sum_array(A, n)</code></td>
+<td>O(n^2)</td>
+<td>n iterations × O(n) each.</td>
+</tr>
+<tr>
+<td>Recursion halving, one call</td>
+<td><code>f(n):</code><br><code>if n &lt;= 1: return</code><br><code>f(n/2)</code></td>
+<td>O(log n)</td>
+<td>n halves each call.</td>
+</tr>
+<tr>
+<td>Recursion halving, two calls</td>
+<td><code>f(n):</code><br><code>if n &lt;= 1: return</code><br><code>f(n/2)</code><br><code>f(n/2)</code></td>
+<td>O(n)</td>
+<td>T(n)=2T(n/2)+O(1) → O(n).</td>
+</tr>
+<tr>
+<td>Recursion decrementing by one, one call</td>
+<td><code>f(n):</code><br><code>if n == 0: return</code><br><code>f(n-1)</code></td>
+<td>O(n)</td>
+<td>n calls.</td>
+</tr>
+<tr>
+<td>Recursion decrementing by one, two calls</td>
+<td><code>f(n):</code><br><code>if n == 0: return</code><br><code>f(n-1)</code><br><code>f(n-1)</code></td>
+<td>O(2^n)</td>
+<td>T(n)=2T(n-1)+O(1) → O(2^n).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="why-sequential-adds-but-nested-multiplies">Why sequential adds but nested multiplies</h3>
+<table>
+<thead>
+<tr>
+<th>Structure</th>
+<th>Operation</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sequential loops</td>
+<td>Add</td>
+<td>O(n) then O(n^2) → O(n + n^2) = O(n^2)</td>
+</tr>
+<tr>
+<td>Nested loops</td>
+<td>Multiply</td>
+<td>Outer n × inner n = n^2</td>
+</tr>
+</tbody>
+</table>
+<p>Sequential loops run one after another, so their counts add. Nested loops run the inner loop fully for every outer iteration, so their counts multiply.</p>
+<h3 id="dropping-constants-and-lower-order-terms">Dropping constants and lower-order terms</h3>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Simplified</th>
+<th>Reason</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O(3n^2 + 5n + 7)</td>
+<td>O(n^2)</td>
+<td>Drop coefficient 3, drop 5n and 7</td>
+</tr>
+<tr>
+<td>O(n/2)</td>
+<td>O(n)</td>
+<td>Drop 1/2</td>
+</tr>
+<tr>
+<td>O(2n + log n)</td>
+<td>O(n)</td>
+<td>n grows faster than log n</td>
+</tr>
+<tr>
+<td>O(n^2 + n log n)</td>
+<td>O(n^2)</td>
+<td>n^2 grows faster than n log n</td>
+</tr>
+<tr>
+<td>O(5)</td>
+<td>O(1)</td>
+<td>Constant</td>
+</tr>
+</tbody>
+</table>
+<h3 id="space-complexity">Space complexity</h3>
+<p>Auxiliary space = extra memory beyond the input.</p>
+<table>
+<thead>
+<tr>
+<th>Structure</th>
+<th>Auxiliary space</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fixed number of variables</td>
+<td>O(1)</td>
+<td><code>sum = 0; for i = 1 to n: sum = sum + A[i]</code></td>
+</tr>
+<tr>
+<td>Array of size n</td>
+<td>O(n)</td>
+<td><code>B = new array of size n</code></td>
+</tr>
+<tr>
+<td>Recursion depth d</td>
+<td>O(d)</td>
+<td><code>f(n): if n == 0 return; f(n-1)</code> → depth n → O(n)</td>
+</tr>
+</tbody>
+</table>
+<p>A loop using only <code>i</code>, <code>j</code>, <code>sum</code>, <code>temp</code> is O(1) space regardless of n. The input array is not auxiliary. Recursion costs O(depth) stack space even with no explicit array. Recursion of depth n is O(n) space. Recursion halving the input has depth log n, so O(log n) space. Two recursive calls do not multiply space; only maximum depth matters.</p>
+<h3 id="worked-examples">Worked examples</h3>
+<p><strong>Snippet A</strong></p>
+<div class="codehilite"><pre><span></span><code>sum = 0
+for i = 1 to n:
+    for j = 1 to n:
+        sum = sum + i * j
+print sum
+</code></pre></div>
+
+<p>Time: O(n^2). Space: O(1).<br />
+Outer loop runs n times; inner loop runs n times per outer iteration, so innermost statement runs n² times. Only <code>sum</code>, <code>i</code>, <code>j</code> are used; no array or recursion.</p>
+<p><strong>Snippet B</strong></p>
+<div class="codehilite"><pre><span></span><code>i = 1
+while i &lt; n:
+    j = 1
+    while j &lt;= n:
+        x = x + 1
+        j = j + 1
+    i = i * 2
+</code></pre></div>
+
+<p>Time: O(n log n). Space: O(1).<br />
+Outer loop doubles <code>i</code>, so it runs log n times. Inner loop runs n times per outer iteration, giving n log n total. Fixed variables only.</p>
+<p><strong>Snippet C</strong></p>
+<div class="codehilite"><pre><span></span><code>function find(A, n, key):
+    if n == 0:
+        return false
+    if A[n-1] == key:
+        return true
+    return find(A, n-1, key)
+</code></pre></div>
+
+<p>Time: O(n). Space: O(n).<br />
+Each call reduces n by 1; worst case n calls. Recursion depth is n, so stack space is O(n). The input array <code>A</code> is not auxiliary, but the stack is.</p>
+<h3 id="exam-shortcut">Exam shortcut</h3>
+<ul>
+<li>Count nesting depth of loops whose bound depends on n. Each level multiplies by n.</li>
+<li>If a loop multiplies or divides its counter (<code>i *= 2</code>, <code>i /= 2</code>), that level contributes log n instead of n.</li>
+<li>If the inner bound is the outer variable, two levels still give O(n^2).</li>
+<li>If the inner loop runs a constant number of times, it does not add a factor of n.</li>
+<li>If a loop calls an O(n) operation, multiply: n × n = n^2.</li>
+<li>Recursion: halving → log n depth; decrementing by 1 → n depth. Two calls multiply time by 2 per level; space is still max depth.</li>
+</ul>
+<h2 id="4-must-memorise-block">4. Must-memorise block</h2>
+<table>
+<thead>
+<tr>
+<th>Shape</th>
+<th>Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Single statement</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Single loop to n</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Two sequential loops to n</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Two nested loops to n</td>
+<td>O(n^2)</td>
+</tr>
+<tr>
+<td>Nested, inner to outer</td>
+<td>O(n^2)</td>
+</tr>
+<tr>
+<td><code>i *= 2</code> or <code>i /= 2</code></td>
+<td>O(log n)</td>
+</tr>
+<tr>
+<td><code>i * i &lt; n</code></td>
+<td>O(√n)</td>
+</tr>
+<tr>
+<td>Nested, inner constant</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Loop with O(n) inside</td>
+<td>O(n^2)</td>
+</tr>
+<tr>
+<td>Recursion halving, 1 call</td>
+<td>O(log n)</td>
+</tr>
+<tr>
+<td>Recursion halving, 2 calls</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Recursion n−1, 1 call</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Recursion n−1, 2 calls</td>
+<td>O(2^n)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Add vs multiply</strong>
+- Sequential: add. Larger term dominates. O(n) + O(n^2) = O(n^2).
+- Nested: multiply. Outer n × inner n = n^2.</p>
+<p><strong>Simplification</strong>
+- Drop constants: O(3n^2) = O(n^2), O(n/2) = O(n).
+- Drop lower-order terms: O(n^2 + 5n + 7) = O(n^2).
+- O(n + log n) = O(n), O(n^2 + n log n) = O(n^2).</p>
+<p><strong>Space rules</strong>
+- Fixed variables → O(1) auxiliary space.
+- Array of size n → O(n).
+- Recursion → O(max depth) stack space.
+- Depth n → O(n) space. Depth log n → O(log n) space.
+- Two recursive calls do not multiply space; only max depth matters.</p>
+<h2 id="5-worked-examples">5. Worked examples</h2>
+<h3 id="example-1-single-loop">Example 1 — Single loop</h3>
+<div class="codehilite"><pre><span></span><code>1. SET sum = 0
+2. FOR i = 1 TO n
+3.    SET sum = sum + i
+4. PRINT sum
+</code></pre></div>
+
+<p>Trace for <code>n = 4</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th style="text-align: right;">i</th>
+<th style="text-align: right;">sum</th>
+<th style="text-align: right;">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Final: Time O(n), Space O(1).</strong></p>
+<h3 id="example-2-two-sequential-loops">Example 2 — Two sequential loops</h3>
+<div class="codehilite"><pre><span></span><code>1. SET count = 0
+2. FOR i = 1 TO n
+3.    SET count = count + 1
+4. FOR j = 1 TO n
+5.    SET count = count + 1
+6. PRINT count
+</code></pre></div>
+
+<p>Trace for <code>n = 3</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th style="text-align: right;">i</th>
+<th style="text-align: right;">j</th>
+<th style="text-align: right;">count</th>
+<th style="text-align: right;">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>6</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Final: Time O(n), Space O(1).</strong></p>
+<h3 id="example-3-nested-loops">Example 3 — Nested loops</h3>
+<div class="codehilite"><pre><span></span><code>1. SET c = 0
+2. FOR i = 1 TO n
+3.    FOR j = 1 TO n
+4.       SET c = c + 1
+5. PRINT c
+</code></pre></div>
+
+<p>Trace for <code>n = 3</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th style="text-align: right;">i</th>
+<th style="text-align: right;">j</th>
+<th style="text-align: right;">c</th>
+<th style="text-align: right;">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">9</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Final: Time O(n²), Space O(1).</strong></p>
+<h3 id="example-4-triangular-nested-loop">Example 4 — Triangular nested loop</h3>
+<div class="codehilite"><pre><span></span><code>1. SET s = 0
+2. FOR i = 1 TO n
+3.    FOR j = i TO n
+4.       SET s = s + 1
+5. PRINT s
+</code></pre></div>
+
+<p>Trace for <code>n = 4</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th style="text-align: right;">i</th>
+<th style="text-align: right;">j</th>
+<th style="text-align: right;">s</th>
+<th style="text-align: right;">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Final: Time O(n²), Space O(1).</strong><br />
+Iterations = <code>4 + 3 + 2 + 1 = 10 = n(n+1)/2</code>.</p>
+<h3 id="example-5-while-loop-with-doubling">Example 5 — While loop with doubling</h3>
+<div class="codehilite"><pre><span></span><code>1. SET i = 1
+2. SET k = 0
+3. WHILE i &lt; n
+4.    SET k = k + 1
+5.    SET i = i * 2
+6. PRINT k
+</code></pre></div>
+
+<p>Trace for <code>n = 16</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th style="text-align: right;">i</th>
+<th style="text-align: right;">k</th>
+<th style="text-align: right;">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>3</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>4</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">—</td>
+</tr>
+<tr>
+<td>5</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-traps-and-gotchas">6. Traps and gotchas</h2>
+<table>
+<thead>
+<tr>
+<th>Trap</th>
+<th>Why it catches people</th>
+<th>How to avoid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Adding nested loops instead of multiplying</strong></td>
+<td>Two loops "feel" like two passes</td>
+<td>Nested loops <strong>multiply</strong> (O(n²)); sequential loops <strong>add</strong> (O(n), larger dominates). Ask: is the second loop <em>inside</em> the first?</td>
+</tr>
+<tr>
+<td><strong>Calling a triangular loop O(n log n)</strong></td>
+<td>The inner loop clearly runs fewer than n times</td>
+<td><code>1+2+…+n = n(n+1)/2</code>, which is <strong>still O(n²)</strong>. Halving a constant never changes the class</td>
+</tr>
+<tr>
+<td><strong>Missing a logarithmic loop</strong></td>
+<td><code>i = i * 2</code> looks like ordinary iteration</td>
+<td>A counter that <strong>multiplies or divides</strong> its own value is O(log n). Ask: how many times can I double before exceeding n?</td>
+</tr>
+<tr>
+<td><strong>Keeping constants and lower-order terms</strong></td>
+<td><code>3n² + 5n + 7</code> looks precise</td>
+<td>Big-O drops constants and lower-order terms: <strong>O(n²)</strong>. The answer options will include the unsimplified form</td>
+</tr>
+<tr>
+<td><strong>Ignoring an O(n) operation inside a loop</strong></td>
+<td>A single line looks like O(1)</td>
+<td>A string concatenation, a list <code>insert(0,…)</code>, or a nested search inside a loop multiplies the cost. Read what the body actually does</td>
+</tr>
+<tr>
+<td><strong>Saying recursion is O(1) space</strong></td>
+<td>There is no array, so it looks free</td>
+<td><strong>A recursion of depth n costs O(n) stack space.</strong> Depth is the space</td>
+</tr>
+<tr>
+<td><strong>Confusing the loop counter's range with n</strong></td>
+<td><code>for i from 1 to 100</code> inside a function looks like a loop over n</td>
+<td>A <strong>fixed</strong> bound is O(1) regardless of how large the constant is</td>
+</tr>
+<tr>
+<td><strong>Assuming worst case is what is asked</strong></td>
+<td>Best/average/worst are often not stated</td>
+<td>If the question says "complexity" without qualifying, give the <strong>worst case</strong> unless the snippet clearly always behaves the same way</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-practice-questions">7. Practice questions</h2>
+<p><strong>1. [Easy]</strong> <em>(B9 — single loop)</em><br />
+What is printed?</p>
+<div class="codehilite"><pre><span></span><code>1 SET n = 5
+2 SET sum = 0
+3 FOR i = 1 TO n
+4     sum = sum + i
+5 END FOR
+6 PRINT sum
+</code></pre></div>
+
+<p>(a) 10
+(b) 15
+(c) 20
+(d) 25</p>
+<hr />
+<p><strong>2. [Easy]</strong> <em>(B9 — single loop time)</em><br />
+What is the time complexity?</p>
+<div class="codehilite"><pre><span></span><code>1 SET sum = 0
+2 FOR i = 1 TO n
+3     sum = sum + i
+4 END FOR
+5 PRINT sum
+</code></pre></div>
+
+<p>(a) O(1)
+(b) O(n)
+(c) O(log n)
+(d) O(n²)</p>
+<hr />
+<p><strong>3. [Easy]</strong> <em>(B9 — loop variable doubling)</em><br />
+What is printed?</p>
+<div class="codehilite"><pre><span></span><code>1 SET n = 100
+2 SET count = 0
+3 SET i = 1
+4 WHILE i &lt; n
+5     count = count + 1
+6     i = i * 2
+7 END WHILE
+8 PRINT count
+</code></pre></div>
+
+<p>(a) 7
+(b) 8
+(c) 6
+(d) 50</p>
+<hr />
+<p><strong>4. [Medium]</strong> <em>(B9 — nested loops)</em><br />
+What is printed?</p>
+<div class="codehilite"><pre><span></span><code>1 SET count = 0
+2 FOR i = 1 TO 4
+3     FOR j = 1 TO 3
+4         count = count + 1
+5     END FOR
+6 END FOR
+7 PRINT count
+</code></pre></div>
+
+<p>(a) 7
+(b) 12
+(c) 16
+(d) 20</p>
+<hr />
+<p><strong>5. [Medium]</strong> <em>(B9 — triangular nested loop)</em><br />
+What is printed?</p>
+<div class="codehilite"><pre><span></span><code>1 SET n = 5
+2 SET count = 0
+3 FOR i = 1 TO n
+4     FOR j = i TO n
+5         count = count + 1
+6     END FOR
+7 END FOR
+8 PRINT count
+</code></pre></div>
+
+<p>(a) 20
+(b) 10
+(c) 15
+(d) 25</p>
+<hr />
+<p><strong>5. Correct: (c) 15</strong><br />
+Variable trace:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">i</th>
+<th>j range</th>
+<th style="text-align: right;">Increments</th>
+<th style="text-align: right;">count after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>1 to 5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>2 to 5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>3 to 5</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>4 to 5</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">14</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>5 to 5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">15</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>(b) 10</strong>: Sums j = i+1 to n, giving 1+2+3+4.</li>
+<li><strong>(a) 20</strong>: Uses n(n−1) or 5 × 4.</li>
+<li><strong>(d) 25</strong>: Treats both loops as 1 to n.</li>
+</ul>
+<hr />
+<hr />
+<p><strong>6. [Medium]</strong> <em>(B9 — sequential loops)</em><br />
+What is the time complexity?</p>
+<div class="codehilite"><pre><span></span><code>1 SET sum = 0
+2 FOR i = 1 TO n
+3     sum = sum + i
+4 END FOR
+5 FOR j = 1 TO n
+6     sum = sum + j
+7 END FOR
+8 PRINT sum
+</code></pre></div>
+
+<p>(a) O(n)
+(b) O(1)
+(c) O(log n)
+(d) O(n²)</p>
+<hr />
+<p><strong>6. Correct: (a) O(n)</strong><br />
+Trace/growth:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">First loop</th>
+<th style="text-align: right;">Second loop</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">10</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>(b) O(1)</strong>: Ignores both loops.</li>
+<li><strong>(c) O(log n)</strong>: Confuses linear increment with halving/doubling.</li>
+<li><strong>(d) O(n²)</strong>: Treats sequential loops as nested.</li>
+</ul>
+<hr />
+<hr />
+<p><strong>7. [Medium]</strong> <em>(B9 — recursion halving)</em><br />
+What is printed?</p>
+<div class="codehilite"><pre><span></span><code>1 FUNCTION f(n)
+2     IF n &lt;= 1
+3         RETURN 0
+4     END IF
+5     RETURN 1 + f(n / 2)   // integer division
+6 END FUNCTION
+7 PRINT f(16)
+</code></pre></div>
+
+<p>(a) 4
+(b) 5
+(c) 3
+(d) 8</p>
+<hr />
+<p><strong>7. Correct: (a) 4</strong><br />
+Variable trace:</p>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th>n check</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f(16)</td>
+<td>16 &gt; 1</td>
+<td>1 + f(8)</td>
+</tr>
+<tr>
+<td>f(8)</td>
+<td>8 &gt; 1</td>
+<td>1 + f(4)</td>
+</tr>
+<tr>
+<td>f(4)</td>
+<td>4 &gt; 1</td>
+<td>1 + f(2)</td>
+</tr>
+<tr>
+<td>f(2)</td>
+<td>2 &gt; 1</td>
+<td>1 + f(1)</td>
+</tr>
+<tr>
+<td>f(1)</td>
+<td>1 ≤ 1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Unwind:</p>
+<table>
+<thead>
+<tr>
+<th>Return</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f(2)</td>
+<td style="text-align: right;">1 + 0 = 1</td>
+</tr>
+<tr>
+<td>f(4)</td>
+<td style="text-align: right;">1 + 1 = 2</td>
+</tr>
+<tr>
+<td>f(8)</td>
+<td style="text-align: right;">1 + 2 = 3</td>
+</tr>
+<tr>
+<td>f(16)</td>
+<td style="text-align: right;">1 + 3 = 4</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>(c) 3</strong>: Returns only log₂(16) − 1 or stops before reaching the base case.</li>
+<li><strong>(b) 5</strong>: Counts total function calls including f(1), but the return value excludes the base contribution.</li>
+<li><strong>(d) 8</strong>: Returns n/2 instead of counting halving steps.</li>
+</ul>
+<hr />
+<hr />
+<p><strong>8. [Medium]</strong> <em>(B9 — recursion two calls)</em><br />
+What is printed?</p>
+<div class="codehilite"><pre><span></span><code>1 FUNCTION g(n)
+2     IF n &lt;= 1
+3         RETURN 1
+4     END IF
+5     RETURN g(n - 1) + g(n - 2)
+6 END FUNCTION
+7 PRINT g(5)
+</code></pre></div>
+
+<p>(a) 5
+(b) 16
+(c) 13
+(d) 8</p>
+<hr />
+<p><strong>8. Correct: (d) 8</strong><br />
+Variable trace:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">n</th>
+<th>Expansion</th>
+<th style="text-align: right;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">0</td>
+<td>base</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td>base</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>g(1) + g(0)</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>g(2) + g(1)</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>g(3) + g(2)</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>g(4) + g(3)</td>
+<td style="text-align: right;">8</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>(a) 5</strong>: Evaluates g(4) instead of g(5).</li>
+<li><strong>(c) 13</strong>: Computes g(6), an off-by-one in the recurrence index.</li>
+<li><strong>(b) 16</strong>: Assumes two calls double every level: 2⁴ = 16, ignoring overlapping subproblem values.</li>
+</ul>
+<hr />
+<hr />
+<p><strong>9. [Hard]</strong> <em>(B9 — nested loop with condition)</em><br />
+What is printed?</p>
+<div class="codehilite"><pre><span></span><code>1 SET n = 5
+2 SET count = 0
+3 FOR i = 1 TO n
+4     FOR j = 1 TO n
+5         IF (i + j) % 3 == 0
+6             count = count + 1
+7         END IF
+8     END FOR
+9 END FOR
+10 PRINT count
+</code></pre></div>
+
+<p>(a) 12
+(b) 8
+(c) 10
+(d) 9</p>
+<hr />
+<p><strong>9. Correct: (d) 9</strong><br />
+Variable trace:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">i</th>
+<th>j with (i+j) % 3 == 0</th>
+<th style="text-align: right;">count after row</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>2, 5</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>1, 4</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>3</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>2, 5</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>1, 4</td>
+<td style="text-align: right;">9</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>(b) 8</strong>: Misses one valid pair, commonly (3, 3).</li>
+<li><strong>(c) 10</strong>: Counts one invalid pair or assumes every row has two valid j values.</li>
+<li><strong>(a) 12</strong>: Treats four rows as having three valid j values, but row counts are 2, 2, 1, 2, 2.</li>
+</ul>
+<hr />
+<hr />
+<p><strong>10. [Hard]</strong> <em>(B9 — recursive time complexity)</em><br />
+What is the time complexity in terms of n?</p>
+<div class="codehilite"><pre><span></span><code>1 FUNCTION h(n)
+2     IF n &lt;= 1
+3         RETURN 1
+4     END IF
+5     RETURN h(n - 1) + h(n - 1)
+6 END FUNCTION
+</code></pre></div>
+
+<p>(a) O(n)
+(b) O(n²)
+(c) O(2ⁿ)
+(d) O(n log n)</p>
+<p><strong>Rule:</strong> Sequential loops add: O(n) + O(n) = O(n). Nested loops multiply: O(n) × O(n) = O(n²). One halving recursive call → O(log n); one decrementing recursive call → O(n); two decrementing recursive calls → O(2ⁿ). Recursion depth n costs O(n) stack space.</p>
+<hr />
+<p><strong>10. Correct: (c) O(2ⁿ)</strong><br />
+Growth trace:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">Number of calls</th>
+<th style="text-align: right;">Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2¹ + 1</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">2² + 3</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">2³ + 7</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">2⁴ + 15</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>(a) O(n)</strong>: Replaces two identical recursive calls with one call.</li>
+<li><strong>(d) O(n log n)</strong>: Confuses this with a halving divide-and-conquer recurrence.</li>
+<li><strong>(b) O(n²)</strong>: Sees two calls and assumes nested-loop quadratic growth.</li>
+</ul>
+<hr />
+<h2 id="8-resources">8. Resources</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Type</th>
+<th>Link</th>
+<th>Free/Paid</th>
+<th>Time</th>
+<th>Why this one</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GfG — Complete guide on complexity analysis</td>
+<td>Article</td>
+<td>https://www.geeksforgeeks.org/dsa/complete-guide-on-complexity-analysis/</td>
+<td>Free</td>
+<td>30 min</td>
+<td>The derivation rules applied directly to loop shapes</td>
+</tr>
+<tr>
+<td>GfG — Time complexities of all sorting algorithms</td>
+<td>Article</td>
+<td>https://www.geeksforgeeks.org/competitive-programming/time-complexities-of-all-sorting-algorithms/</td>
+<td>Free</td>
+<td>15 min</td>
+<td>Pairs with D5</td>
+</tr>
+<tr>
+<td>PrepInsta — Accenture pseudocode</td>
+<td>Practice set</td>
+<td>https://prepinsta.com/accenture/pseudo-code/general-pseudo-code/</td>
+<td>Free</td>
+<td>25 min</td>
+<td>Some items ask for snippet complexity directly</td>
+</tr>
+<tr>
+<td><code>question-banks/QB-T32-B9-snippet-complexity.md</code></td>
+<td>Question bank</td>
+<td>(this library)</td>
+<td>Free</td>
+<td>20 min</td>
+<td>20 original questions, all snippet-based</td>
+</tr>
+</tbody>
+</table>
+<p><em>All external links verified resolving 2026-09-16.</em></p>
+<h2 id="9-self-check">9. Self-check</h2>
+<ul>
+<li>[ ] I can name the complexity of any single, nested, sequential or triangular loop on sight</li>
+<li>[ ] <strong>I recognise a doubling or halving counter as O(log n)</strong></li>
+<li>[ ] I know sequential loops add and nested loops multiply</li>
+<li>[ ] I can simplify O(3n² + 5n + 7) to O(n²) and explain why</li>
+<li>[ ] I can state the space complexity of a loop using a fixed number of variables</li>
+<li>[ ] <strong>I know a recursion of depth n costs O(n) stack space even with no array</strong></li>
+<li>[ ] I scored 8/10 or better on the practice questions</li>
+</ul>
+<h2 id="10-sources">10. Sources</h2>
+<p><strong>Teaching content (§3–§9)</strong> is adapted from <code>accenture-prep-final/accenture-prep-library/topics/T32-B9-snippet-complexity.md</code>, which lists its own sources and was verified in that library's QA. <strong>Infosys evidence</strong> for this file: observed questions none in <code>../data/questions-observed.csv</code>; section structure and marks in <code>../research/03-pattern-synthesis.md</code> §1; weightage, tier and hours in <code>../data/weightage.json</code> (code <code>P8</code>). Confidence <strong>Low</strong>. Nothing in this file is a published Infosys syllabus.</p>
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/pseudocode/P7-functions-scope.html"><span>Previous</span><strong>P7 — Functions — Scope and Pass by Value vs Reference</strong></a><a class="pager next" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html"><span>Next</span><strong>P9 — OOP in pseudocode: inheritance and overriding</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#p8-reading-time-and-space-complexity-off-a-snippet">P8 — Reading Time and Space Complexity off a Snippet</a><a class="toc-l1" href="#1-why-this-topic-matters-here">1. Why this topic matters here</a><a class="toc-l1" href="#2-exactly-what-gets-asked">2. Exactly what gets asked</a><a class="toc-l1" href="#3-concept-notes">3. Concept notes</a><a class="toc-l1" href="#4-must-memorise-block">4. Must-memorise block</a><a class="toc-l1" href="#5-worked-examples">5. Worked examples</a><a class="toc-l1" href="#6-traps-and-gotchas">6. Traps and gotchas</a><a class="toc-l1" href="#7-practice-questions">7. Practice questions</a><a class="toc-l1" href="#8-resources">8. Resources</a><a class="toc-l1" href="#9-self-check">9. Self-check</a><a class="toc-l1" href="#10-sources">10. Sources</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

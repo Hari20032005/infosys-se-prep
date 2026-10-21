@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem current" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Question banks &amp; mock</span></div>
+    <article class="prose">
+<h1 id="qb-iv1-sdlc-agile-vs-waterfall-testing-and-version-control">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</h1>
+<p><strong>Interview</strong> · <strong>Tier 1</strong> · 18 questions</p>
+<p>Topic file: <a href="/Users/hariharansundaramoorthy/Documents/my projects/infosys/infosys-prep-library/interview/IV1-sdlc-agile-testing.md"><code>IV1-sdlc-agile-testing.md</code></a></p>
+<p><em>Adapted from <code>accenture-prep-final/accenture-prep-library/question-banks/QB-T33-D8-sdlc-agile-testing.md</code>; verified in that library's QA. Questions and answer key are unchanged.</em></p>
+<p><strong>How to use this bank.</strong> Attempt every question before opening the key, at the real pace for this section (120 seconds a question). Answer letters are balanced across a–d.</p>
+<hr />
+<p><strong>1.</strong> <strong>[Easy]</strong> <em>(Version control — Git branching)</em></p>
+<p>Which Git command creates a new branch called <code>feature</code> and switches to it in a single step?</p>
+<p>(a) <code>git checkout -b feature</code>
+(b) <code>git branch feature</code>
+(c) <code>git merge feature</code>
+(d) <code>git clone feature</code></p>
+<p><strong>1. (a) <code>git checkout -b feature</code></strong>
+<code>checkout -b</code> creates the branch and switches to it in one command.
+- (b) <code>git branch feature</code> creates the branch but leaves you on the current branch.
+- (c) <code>git merge feature</code> joins an existing branch into the current one; it creates nothing.
+- (d) <code>git clone feature</code> is not valid usage — <code>clone</code> copies a whole remote repository.</p>
+<hr />
+<p><strong>2.</strong> <strong>[Easy]</strong> <em>(Testing — verification vs validation)</em></p>
+<p>Which of the following is a <strong>verification</strong> activity?</p>
+<p>(a) Static code review performed by peers
+(b) Beta testing performed by end users
+(c) Acceptance testing performed by the customer
+(d) System testing performed against user requirements</p>
+<p><strong>2. (a) Static code review performed by peers</strong>
+Verification checks the work products (documents, design, code) without executing them; a peer review does exactly that.
+- (c) Acceptance testing executes the system and checks it against user needs — validation.
+- (b) Beta testing exercises the running product with real users — validation.
+- (d) System testing executes the built system against requirements — validation.</p>
+<hr />
+<p><strong>3.</strong> <strong>[Easy]</strong> <em>(Agile — Scrum artefacts)</em></p>
+<p>Which of the following is <strong>NOT</strong> a Scrum artefact?</p>
+<p>(a) Product Backlog
+(b) Gantt chart
+(c) Increment
+(d) Sprint Backlog</p>
+<p><strong>3. (b) Gantt chart</strong>
+Scrum defines exactly three artefacts: Product Backlog, Sprint Backlog and Increment. A Gantt chart is a traditional plan-driven scheduling tool.
+- (a) Product Backlog is a defined Scrum artefact.
+- (d) Sprint Backlog is a defined Scrum artefact.
+- (c) Increment is a defined Scrum artefact.</p>
+<hr />
+<p><strong>4.</strong> <strong>[Easy]</strong> <em>(SDLC — Waterfall)</em></p>
+<p>Which statement describes the Waterfall model?</p>
+<p>(a) Each phase is completed and signed off before the next begins, and requirements are frozen early.
+(b) Working software is delivered at the end of every two-week iteration.
+(c) Highest-risk features are built first in repeated risk-driven cycles.
+(d) The customer sits with the team and requirements may change at any time.</p>
+<p><strong>4. (a) Each phase is completed and signed off before the next begins, and requirements are frozen early.</strong>
+Waterfall is strictly sequential; each phase's output is the next phase's input, and late requirement changes are expensive.
+- (b) Two-week iterations of working software describe Agile, not Waterfall.
+- (c) Building the highest-risk features first in repeated risk-driven cycles describes Spiral.
+- (d) An on-site customer with continuously changing requirements describes an Agile/XP-style process.</p>
+<hr />
+<p><strong>5.</strong> <strong>[Easy]</strong> <em>(Testing — levels)</em></p>
+<p>Testing the smallest individually testable unit of code, usually one function or method, in isolation from the rest of the system, is called:</p>
+<p>(a) System testing
+(b) Integration testing
+(c) Unit testing
+(d) Acceptance testing</p>
+<p><strong>5. (c) Unit testing</strong>
+Unit testing targets the smallest testable piece — one function, method or class — in isolation.
+- (a) System testing exercises the whole integrated product against requirements.
+- (b) Integration testing checks interfaces between modules that have already been unit tested.
+- (d) Acceptance testing is performed by the customer to decide whether to accept the product.</p>
+<hr />
+<p><strong>6.</strong> <strong>[Easy]</strong> <em>(Version control — Git basics)</em></p>
+<p>What does <code>git commit -m "message"</code> do?</p>
+<p>(a) Uploads the staged changes to the remote repository.
+(b) Creates a new branch and checks it out.
+(c) Records the currently staged snapshot as a new commit in the local repository.
+(d) Reverts the working directory to the last commit.</p>
+<p><strong>6. (c) Records the currently staged snapshot as a new commit in the local repository.</strong>
+<code>commit</code> writes what is in the staging area into the local repository history; nothing leaves the machine until a <code>push</code>.
+- (a) Uploading to the remote is <code>git push</code>, not <code>commit</code>.
+- (b) Creating and checking out a branch is <code>git checkout -b</code> (or <code>git switch -c</code>).
+- (d) Discarding working-directory changes is <code>git checkout -- .</code> / <code>git restore</code>.</p>
+<hr />
+<p><strong>7.</strong> <strong>[Medium]</strong> <em>(SDLC — model selection)</em></p>
+<p>A bank is replacing a legacy batch system. All requirements have been gathered and signed off; the regulator requires a complete, frozen specification and full design documentation before any code is released; the system will be delivered as one release on a fixed date. Which process model fits best?</p>
+<p>(a) Spiral
+(b) Scrum
+(c) Waterfall
+(d) Prototyping</p>
+<p><strong>7. (c) Waterfall</strong>
+Frozen, fully specified requirements, heavy up-front documentation for a regulator, and a single fixed delivery are the conditions Waterfall is designed for.
+- (b) Scrum assumes changing requirements and frequent incremental delivery — neither applies here.
+- (a) Spiral is used when risk is high and requirements emerge progressively; here they are already fixed.
+- (d) Prototyping is used to discover unclear requirements; these are already signed off.</p>
+<hr />
+<p><strong>8.</strong> <strong>[Medium]</strong> <em>(Agile — Scrum roles)</em></p>
+<p>In Scrum, who is accountable for ordering the Product Backlog so that it delivers the most value?</p>
+<p>(a) The Product Owner
+(b) The Developers
+(c) The Scrum Master
+(d) The Project Manager</p>
+<p><strong>8. (a) The Product Owner</strong>
+The Product Owner owns the Product Backlog and is accountable for its ordering and for maximising the value delivered.
+- (c) The Scrum Master coaches the process and removes impediments; the role carries no backlog authority.
+- (b) The Developers estimate and pull work; they do not own the backlog ordering.
+- (d) Scrum has no Project Manager role.</p>
+<hr />
+<p><strong>9.</strong> <strong>[Medium]</strong> <em>(Agile — Scrum ceremonies)</em></p>
+<p>What is the purpose of the Sprint Retrospective?</p>
+<p>(a) Demonstrate the Increment to stakeholders and collect their feedback.
+(b) Inspect how the last Sprint went and identify concrete improvements to the team's way of working.
+(c) Select the Product Backlog items that will be delivered in the next Sprint.
+(d) Give a daily update on progress and blockers.</p>
+<p><strong>9. (b) Inspect how the last Sprint went and identify concrete improvements to the team's way of working.</strong>
+The Retrospective is the process-improvement ceremony at the end of a Sprint.
+- (a) That is the Sprint Review.
+- (c) That is Sprint Planning.
+- (d) That is the Daily Scrum.</p>
+<hr />
+<p><strong>10.</strong> <strong>[Medium]</strong> <em>(Testing — level vs type)</em></p>
+<p>A team runs a test in which 500 virtual users hit the checkout API simultaneously while response times and error rates are recorded. All functional requirements are already known to pass. How should this test be classified?</p>
+<p>(a) Unit level, functional type
+(b) Integration level, functional type
+(c) Unit level, non-functional type
+(d) System level, non-functional type</p>
+<p><strong>10. (d) System level, non-functional type</strong>
+Load/performance testing measures qualities (response time, throughput, error rate) rather than correctness, and is run against the whole integrated system, so it is a non-functional test at system level.
+- (a) It is neither at unit level nor functional.
+- (b) It is not an interface check between modules, and it is not functional.
+- (c) It is not at unit level, and the classification "functional" is wrong.</p>
+<hr />
+<p><strong>11.</strong> <strong>[Medium]</strong> <em>(Version control — remote operations)</em></p>
+<p>Which statement correctly distinguishes <code>git fetch</code> from <code>git pull</code>?</p>
+<p>(a) <code>git fetch</code> merges remote changes into the current branch; <code>git pull</code> only downloads them.
+(b) <code>git fetch</code> deletes local commits that are not on the remote; <code>git pull</code> restores them.
+(c) <code>git fetch</code> downloads new commits and updates remote-tracking branches without touching the working directory; <code>git pull</code> also integrates those commits into the current branch.
+(d) <code>git fetch</code> sends local commits to the remote; <code>git pull</code> retrieves tags only.</p>
+<p><strong>11. (c) <code>git fetch</code> downloads new commits and updates remote-tracking branches without touching the working directory; <code>git pull</code> also integrates those commits into the current branch.</strong>
+<code>git pull</code> is defined as <code>git fetch</code> followed by a merge (or rebase) of the fetched branch into the current branch.
+- (a) Reverses the two commands.
+- (b) Neither command deletes local commits.
+- (d) Pushing is <code>git push</code>; <code>fetch</code> and <code>pull</code> both retrieve.</p>
+<hr />
+<p><strong>12.</strong> <strong>[Medium]</strong> <em>(Testing — verification vs validation)</em></p>
+<p>Which pair correctly matches the two terms?</p>
+<p>(a) Verification — "Does the product meet user needs?"; Validation — "Does the code follow the coding standard?"
+(b) Verification — "Are we building the right product?"; Validation — "Are we building the product right?"
+(c) Verification — "Does the product pass acceptance testing?"; Validation — "Does the code compile?"
+(d) Verification — "Are we building the product right?"; Validation — "Are we building the right product?"</p>
+<p><strong>12. (d) Verification — "Are we building the product right?"; Validation — "Are we building the right product?"</strong>
+Verification confirms that work products conform to their specification; validation confirms that the finished product meets the user's actual needs.
+- (b) Swaps the two standard definitions.
+- (c) Acceptance testing is validation, and compiling is a build step, not verification of requirements.
+- (a) Meeting user needs is validation, and coding standards are internal correctness, not validation of user needs.</p>
+<hr />
+<p><strong>13.</strong> <strong>[Medium]</strong> <em>(SDLC — model selection)</em></p>
+<p>A five-person start-up is building a mobile marketplace. The scope is unclear, the client wants priorities changed weekly, and a demonstrable release is needed every two weeks. Which approach fits best?</p>
+<p>(a) Waterfall
+(b) Big-Bang model
+(c) V-model
+(d) Agile (Scrum)</p>
+<p><strong>13. (d) Agile (Scrum)</strong>
+Unclear scope, weekly priority changes and a two-week demonstrable release are exactly the conditions Scrum's short Sprints and reprioritisable Product Backlog handle.
+- (a) Waterfall requires frozen, up-front requirements and delivers late.
+- (c) The V-model is verification-heavy and sequential, with testing tied to completed design phases.
+- (b) Big-Bang writes the whole system and integrates at the end — the highest-risk option for changing scope.</p>
+<hr />
+<p><strong>14.</strong> <strong>[Medium]</strong> <em>(Testing — integration strategies)</em></p>
+<p>Integration testing is to begin from the lowest modules and work upward. The module tree is shown below.</p>
+<div class="codehilite"><pre><span></span><code>        Top
+       /    \
+      A      B
+     / \      \
+    C   D      E
+</code></pre></div>
+
+<p>Testing starts with C, D and E. Because no higher-level module that calls them has been integrated yet, a temporary piece of code is written to invoke each module under test and feed it test data. What is this temporary code called?</p>
+<p>(a) A smoke test
+(b) A stub
+(c) A regression suite
+(d) A driver</p>
+<p><strong>14. (d) A driver</strong>
+A driver is the temporary calling routine that invokes the module under test and supplies its inputs; it is required in bottom-up integration.
+- (b) A stub is the opposite placeholder: it replaces a lower-level module that the module under test calls, used in top-down integration.
+- (c) A regression suite is a set of existing tests re-run after a change, not a calling routine.
+- (a) A smoke test is a shallow check that a build is stable enough to test further.</p>
+<hr />
+<p><strong>15.</strong> <strong>[Hard]</strong> <em>(Testing — V-model)</em></p>
+<p>In the V-model, each phase on the left has a matching test level on the right.</p>
+<table>
+<thead>
+<tr>
+<th>V-model phase (left)</th>
+<th>Matching test level (right)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Requirements analysis</td>
+<td>Acceptance testing</td>
+</tr>
+<tr>
+<td>System design</td>
+<td>System testing</td>
+</tr>
+<tr>
+<td>Architectural (high-level) design</td>
+<td>?</td>
+</tr>
+<tr>
+<td>Detailed design</td>
+<td>Unit testing</td>
+</tr>
+</tbody>
+</table>
+<p>Which test level fills the blank?</p>
+<p>(a) Integration testing
+(b) Acceptance testing
+(c) Regression testing
+(d) Unit testing</p>
+<p><strong>15. (a) Integration testing</strong>
+In the V-model, the architectural/high-level design is verified by integration testing (interfaces between modules), which is exactly what that design phase specifies.
+- (d) Unit testing maps to detailed design.
+- (b) Acceptance testing maps to requirements analysis.
+- (c) Regression testing is not a V-model level; it is a purpose applied at any level.</p>
+<hr />
+<p><strong>16.</strong> <strong>[Hard]</strong> <em>(Version control — rebase)</em></p>
+<p>The repository has the history below. <code>main</code> is at commit D, and the checked-out branch is <code>feature</code> at commit F.</p>
+<div class="codehilite"><pre><span></span><code>A --- B --- C --- D     main
+       \
+        E --- F         feature
+</code></pre></div>
+
+<p>The command <code>git rebase main</code> is run while <code>feature</code> is checked out. After it completes, what is the parent of the replayed commit E′?</p>
+<p>(a) A
+(b) D
+(c) B
+(d) F</p>
+<p><strong>16. (b) D</strong>
+<code>git rebase main</code> replays feature's own commits (E and F) on top of the current tip of <code>main</code>, which is D, so E′ is created as a child of D; E and F are abandoned and replaced by E′ and F′.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>main</th>
+<th>feature</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Start</td>
+<td>A-B-C-D</td>
+<td>A-B-E-F</td>
+<td>common ancestor is B</td>
+</tr>
+<tr>
+<td><code>git rebase main</code></td>
+<td>A-B-C-D (unchanged)</td>
+<td>A-B-C-D-E′-F′</td>
+<td>E and F replayed on top of D</td>
+</tr>
+<tr>
+<td>Parent of E′</td>
+<td>—</td>
+<td>—</td>
+<td>D</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) A is the root commit, not the rebase base.</li>
+<li>(c) B is the common ancestor (merge base), not the new parent.</li>
+<li>(d) F is the old tip of <code>feature</code>; it is replaced by F′ and is not an ancestor of E′.</li>
+</ul>
+<hr />
+<p><strong>17.</strong> <strong>[Hard]</strong> <em>(SDLC — model selection)</em></p>
+<p>A defence contractor is building a large command-and-control system. The requirements cannot be fully known up front, the technical risks (new hardware, an unfamiliar protocol stack) are high, and management wants each risk analysed and reduced before committing to the next, larger build. Which model fits best?</p>
+<p>(a) Waterfall
+(b) Spiral
+(c) Big-Bang
+(d) V-model</p>
+<p><strong>17. (b) Spiral</strong>
+Spiral is the risk-driven model: each loop begins with risk analysis and ends with a progressively larger build, which matches high technical risk plus emerging requirements.
+- (a) Waterfall assumes requirements can be frozen up front, which they cannot here.
+- (c) Big-Bang has no risk analysis and integrates only at the end — the worst fit for high-risk work.
+- (d) The V-model is a sequential verification model; it does not contain explicit risk-reduction cycles.</p>
+<hr />
+<p><strong>18.</strong> <strong>[Medium]</strong> <em>(Testing — regression)</em></p>
+<p>A developer fixes a bug in the tax-calculation module and merges the change. Which type of testing is specifically intended to confirm that this change has not broken functionality that previously worked?</p>
+<p>(a) Smoke testing
+(b) Regression testing
+(c) Acceptance testing
+(d) Exploratory testing</p>
+<hr />
+<hr />
+<p><strong>18. (b) Regression testing</strong>
+Regression testing re-runs tests over existing functionality to detect side effects introduced by a change.
+- (a) Smoke testing only checks that the build is stable enough for further testing.
+- (c) Acceptance testing decides whether the customer accepts the delivered functionality.
+- (d) Exploratory testing is simultaneous learning and testing without pre-written scripts; it is not aimed at side effects.</p>
+<hr />
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html"><span>Previous</span><strong>QB-G2 — Cloze passages (five blanks each)</strong></a><a class="pager next" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html"><span>Next</span><strong>QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#qb-iv1-sdlc-agile-vs-waterfall-testing-and-version-control">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

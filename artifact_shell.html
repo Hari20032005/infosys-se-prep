@@ -1,0 +1,377 @@
+<title>Infosys SE Prep</title>
+<style>
+/*SITE_CSS*/
+
+/* ---- single-page-app overrides ---------------------------------------- */
+/* The published page is wrapped in a skeleton that pads :root by the phone's
+   safe-area insets, so a sticky bar sits below the inset, not at 0. */
+.topbar { top: env(safe-area-inset-top, 0px); }
+.prose { min-height: 40vh; }
+.loading { color: var(--ink-faint); font-size: 14px; padding: 40px 0; }
+.navlib-h { cursor: pointer; }
+.results .rs { font-size: 12px; color: var(--ink-soft); margin-top: 2px;
+               display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+               overflow: hidden; }
+.results .rs b { color: var(--ink); background: var(--ochre-soft); }
+.srcline { font-size: 12px; color: var(--ink-faint); margin-top: 10px;
+           font-family: var(--mono); }
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+</style>
+
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">&#9776;</button>
+  <a class="brand" href="#/">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search every page&#8230;" autocomplete="off"
+           aria-label="Search all pages">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">&#9689;</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" id="sidenav" aria-label="Library"></nav>
+  <main id="main">
+    <div class="crumb" id="crumb"></div>
+    <article class="prose" id="article"><div class="loading">Loading&#8230;</div></article>
+    <div class="pagers" id="pagers"></div>
+  </main>
+  <aside class="toc" id="toc" hidden></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+
+<script>
+(function () {
+  var NAV  = /*NAV_JSON*/;
+  var LIBS = /*LIBS_JSON*/;
+
+  var BY_URL = {}, IDX = {};
+  NAV.forEach(function (p, i) { BY_URL[p.u] = p; IDX[p.u] = i; });
+
+  var LIBNAME = {}, LIBSHORT = {};
+  LIBS.forEach(function (l) { LIBNAME[l.slug] = l.name; LIBSHORT[l.slug] = l.short; });
+
+  var article = document.getElementById('article');
+  var crumbEl = document.getElementById('crumb');
+  var pagersEl = document.getElementById('pagers');
+  var tocEl = document.getElementById('toc');
+  var navEl = document.getElementById('sidenav');
+  var root = document.documentElement;
+
+  // ---- theme, restored before first paint where storage allows -----------
+  try {
+    var saved = localStorage.getItem('aprep-theme');
+    if (saved) root.setAttribute('data-theme', saved);
+  } catch (e) {}
+  document.getElementById('themeBtn').addEventListener('click', function () {
+    var cur = root.getAttribute('data-theme');
+    if (!cur) {
+      cur = (window.matchMedia &&
+             window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+    }
+    var next = cur === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('aprep-theme', next); } catch (e) {}
+  });
+
+  // ---- content bundles: one file per library, fetched on first use -------
+  var C = {}, WAIT = {};
+  window.APREP_PUT = function (slug, obj) {
+    C[slug] = obj;
+    (WAIT[slug] || []).forEach(function (f) { f(); });
+    WAIT[slug] = null;
+  };
+  function need(slug, cb) {
+    if (C[slug]) { cb(); return; }
+    if (WAIT[slug]) { WAIT[slug].push(cb); return; }
+    WAIT[slug] = [cb];
+    var s = document.createElement('script');
+    s.src = 'content/' + slug + '.js';
+    s.onerror = function () {
+      WAIT[slug] = null;
+      article.innerHTML = '<p>That library did not load. Check the connection and ' +
+                          'reload the page.</p>';
+    };
+    document.head.appendChild(s);
+  }
+
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  // ---- sidebar ----------------------------------------------------------
+  function buildNav(current) {
+    var out = ['<a class="home" href="#/">All ' + NAV.length + ' pages</a>'];
+    LIBS.forEach(function (l) {
+      var mine = NAV.filter(function (p) { return p.l === l.slug; });
+      if (!mine.length) return;
+      var open = current && current.l === l.slug;
+      out.push('<div class="navlib' + (open ? ' open' : '') + '">');
+      out.push('<a class="navlib-h" href="#/' + mine[0].u + '">' +
+               '<span class="navlib-name">' + esc(l.short) + '</span>' +
+               '<span class="navlib-n">' + mine.length + '</span></a>');
+      if (open) {
+        var last = null;
+        mine.forEach(function (p) {
+          if (p.s !== last) {
+            last = p.s;
+            out.push('<div class="navsec">' + esc(p.s) + '</div>');
+          }
+          out.push('<a class="navitem' + (current && p.u === current.u ? ' current' : '') +
+                   (p.k === 'code' ? ' code' : '') + '" href="#/' + p.u + '">' +
+                   esc(p.t) + '</a>');
+        });
+      }
+      out.push('</div>');
+    });
+    navEl.innerHTML = out.join('');
+    var cur = navEl.querySelector('.navitem.current');
+    if (cur && cur.scrollIntoView) cur.scrollIntoView({ block: 'nearest' });
+  }
+
+  // ---- home -------------------------------------------------------------
+  function renderHome() {
+    var md = NAV.filter(function (p) { return p.k === 'md'; }).length;
+    var out = ['<div class="home-hero"><h1>Everything for the Infosys Systems Engineer test, ' +
+      'in one place.</h1><p>' + NAV.length +
+      ' pages, nothing summarised. Every file is here in full, in the same order ' +
+      'as the folders on disk.</p></div>'];
+    out.push('<div class="statbar">' +
+      '<div class="stat"><b>' + NAV.length + '</b><span>pages</span></div>' +
+      '<div class="stat"><b>' + md + '</b><span>markdown files</span></div>' +
+      '<div class="stat"><b>' + (NAV.length - md) + '</b><span>source files</span></div>' +
+      '<div class="stat"><b>60</b><span>mock questions</span></div></div>');
+    out.push('<div class="libgrid">');
+    LIBS.forEach(function (l) {
+      var mine = NAV.filter(function (p) { return p.l === l.slug; });
+      if (!mine.length) return;
+      out.push('<a class="libcard" href="#/' + mine[0].u + '"><h3>' + esc(l.name) +
+        '</h3><p>' + esc(l.blurb) + '</p><div class="meta">' + mine.length +
+        ' pages &middot; starts at ' + esc(mine[0].t) + '</div></a>');
+    });
+    out.push('</div>');
+    out.push('<div class="home-note"><p><strong>Press <code>/</code> to search</strong> ' +
+      'every word on every page &mdash; not just the titles.</p>' +
+      '<p>Evidence tags keep their meaning here: ' +
+      '<span class="tag tag-confirmed">[CONFIRMED]</span> ' +
+      '<span class="tag tag-likely">[LIKELY]</span> ' +
+      '<span class="tag tag-reported">[REPORTED]</span> ' +
+      '<span class="tag tag-inferred">[INFERRED]</span> &mdash; colour follows the ' +
+      'confidence, so you can see at a glance how much weight a claim carries.</p></div>');
+
+    out.push('<div class="allpages">');
+    var lastLib = null, lastSec = null;
+    NAV.forEach(function (p) {
+      if (p.l !== lastLib) {
+        lastLib = p.l; lastSec = null;
+        out.push('<h2>' + esc(LIBNAME[p.l]) + '</h2>');
+      }
+      if (p.s !== lastSec) {
+        lastSec = p.s;
+        out.push('<div class="navsec">' + esc(p.s) + '</div>');
+      }
+      out.push('<div><a href="#/' + p.u + '">' + esc(p.t) + '</a></div>');
+    });
+    out.push('</div>');
+
+    article.innerHTML = out.join('');
+    crumbEl.innerHTML = '';
+    pagersEl.innerHTML = '';
+    tocEl.hidden = true;
+    document.title = 'Infosys SE Prep';
+    buildNav(null);
+    window.scrollTo(0, 0);
+  }
+
+  // ---- one page ---------------------------------------------------------
+  function wrapTables() {
+    article.querySelectorAll('table').forEach(function (t) {
+      if (t.parentElement && t.parentElement.classList.contains('tablewrap')) return;
+      var w = document.createElement('div');
+      w.className = 'tablewrap';
+      t.parentNode.insertBefore(w, t);
+      w.appendChild(t);
+    });
+  }
+
+  function buildToc() {
+    var hs = article.querySelectorAll('h2[id], h3[id]');
+    if (hs.length < 2) { tocEl.hidden = true; return; }
+    var out = ['<div class="toc-h">On this page</div>'];
+    hs.forEach(function (h) {
+      out.push('<a class="toc-l' + (h.tagName === 'H3' ? '1' : '0') +
+               '" href="#/' + CURRENT.u + '#' + h.id + '">' + esc(h.textContent) + '</a>');
+    });
+    tocEl.innerHTML = out.join('');
+    tocEl.hidden = false;
+  }
+
+  var CURRENT = null;
+
+  function renderPage(p, frag) {
+    CURRENT = p;
+    article.innerHTML = C[p.l][p.u];
+    wrapTables();
+    buildToc();
+    crumbEl.innerHTML = '<span>' + esc(LIBSHORT[p.l]) + '</span><span class="sep">/</span>' +
+                        '<span>' + esc(p.s) + '</span>';
+    var i = IDX[p.u], prev = NAV[i - 1], next = NAV[i + 1];
+    var pg = [];
+    if (prev) pg.push('<a class="pager prev" href="#/' + prev.u +
+                      '"><span>Previous</span><strong>' + esc(prev.t) + '</strong></a>');
+    if (next) pg.push('<a class="pager next" href="#/' + next.u +
+                      '"><span>Next</span><strong>' + esc(next.t) + '</strong></a>');
+    pagersEl.innerHTML = pg.join('');
+    document.title = p.t + ' · Infosys SE Prep';
+    buildNav(p);
+    document.body.classList.remove('navopen');
+    if (frag) {
+      var el = document.getElementById(frag);
+      if (el) { el.scrollIntoView(); return; }
+    }
+    window.scrollTo(0, 0);
+  }
+
+  // ---- routing ----------------------------------------------------------
+  function route() {
+    var h = location.hash.replace(/^#/, '');
+    if (!h || h === '/') { renderHome(); return; }
+    var frag = '', i = h.indexOf('#');
+    if (i >= 0) { frag = h.slice(i + 1); h = h.slice(0, i); }
+    var url = h.replace(/^\//, '');
+    var p = BY_URL[url];
+    if (!p) { renderHome(); return; }
+    if (!C[p.l]) {
+      article.innerHTML = '<div class="loading">Loading ' + esc(LIBSHORT[p.l]) + '&#8230;</div>';
+      crumbEl.innerHTML = '';
+      pagersEl.innerHTML = '';
+      tocEl.hidden = true;
+    }
+    need(p.l, function () { renderPage(p, frag); });
+  }
+  window.addEventListener('hashchange', route);
+
+  // ---- navigation drawer -------------------------------------------------
+  var menuBtn = document.getElementById('menuBtn');
+  menuBtn.addEventListener('click', function () {
+    var open = document.body.classList.toggle('navopen');
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.getElementById('scrim').addEventListener('click', function () {
+    document.body.classList.remove('navopen');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  });
+
+  // ---- search: every word of every page, fetched on first use -----------
+  var q = document.getElementById('q');
+  var results = document.getElementById('results');
+  var FT = null, ftLoading = false, ftWait = [], sel = -1;
+
+  function loadFT(cb) {
+    if (window.APREP_FT) { FT = window.APREP_FT; if (cb) cb(); return; }
+    if (cb) ftWait.push(cb);
+    if (ftLoading) return;
+    ftLoading = true;
+    var s = document.createElement('script');
+    s.src = 'assets/fulltext.js';
+    s.onload = function () {
+      ftLoading = false; FT = window.APREP_FT;
+      var w = ftWait; ftWait = [];
+      w.forEach(function (f) { f(); });
+    };
+    s.onerror = function () {
+      ftLoading = false; ftWait = [];
+      results.innerHTML = '<div class="empty">Search did not load. Reload the page.</div>';
+      results.hidden = false;
+    };
+    document.head.appendChild(s);
+  }
+  q.addEventListener('focus', function () { loadFT(null); });
+
+  function snippet(text, term) {
+    var i = text.toLowerCase().indexOf(term);
+    if (i < 0) return '';
+    var a = Math.max(0, i - 60), b = Math.min(text.length, i + term.length + 90);
+    return (a > 0 ? '…' : '') + esc(text.slice(a, i)) + '<b>' +
+           esc(text.slice(i, i + term.length)) + '</b>' +
+           esc(text.slice(i + term.length, b)) + (b < text.length ? '…' : '');
+  }
+
+  function render() {
+    var v = q.value.trim().toLowerCase();
+    if (!v) { results.hidden = true; return; }
+    if (!FT) {
+      results.innerHTML = '<div class="empty">Loading search…</div>';
+      results.hidden = false;
+      loadFT(render);
+      return;
+    }
+    var terms = v.split(/\s+/).filter(Boolean);
+    var out = [];
+    for (var i = 0; i < FT.length; i++) {
+      var rec = FT[i], p = BY_URL[rec.u];
+      if (!p) continue;
+      var title = p.t.toLowerCase(), body = rec.x.toLowerCase(), s = 0, all = true;
+      for (var j = 0; j < terms.length; j++) {
+        var w = terms[j], hit = false;
+        if (title.indexOf(w) !== -1) { s += title.indexOf(w) === 0 ? 60 : 40; hit = true; }
+        var n = body.split(w).length - 1;
+        if (n > 0) { s += Math.min(n, 12) * 3; hit = true; }
+        if (!hit) { all = false; break; }
+      }
+      if (all && s > 0) out.push([s, rec, p]);
+    }
+    out.sort(function (a, b) { return b[0] - a[0]; });
+    out = out.slice(0, 40);
+    sel = -1;
+    if (!out.length) {
+      results.innerHTML = '<div class="empty">Nothing matches “' +
+        esc(q.value) + '”.</div>';
+    } else {
+      results.innerHTML = out.map(function (o) {
+        var rec = o[1], p = o[2];
+        return '<a href="#/' + p.u + '"><div class="rt">' + esc(p.t) + '</div>' +
+               '<div class="rm">' + esc(LIBSHORT[p.l]) + ' · ' + esc(p.s) + '</div>' +
+               '<div class="rs">' + snippet(rec.x, terms[0]) + '</div></a>';
+      }).join('');
+    }
+    results.hidden = false;
+  }
+
+  q.addEventListener('input', render);
+  q.addEventListener('keydown', function (e) {
+    var links = results.querySelectorAll('a');
+    if (e.key === 'Escape') { results.hidden = true; q.blur(); return; }
+    if (!links.length) return;
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      sel += (e.key === 'ArrowDown' ? 1 : -1);
+      if (sel < 0) sel = links.length - 1;
+      if (sel >= links.length) sel = 0;
+      for (var i = 0; i < links.length; i++) links[i].classList.toggle('sel', i === sel);
+      links[sel].scrollIntoView({ block: 'nearest' });
+    } else if (e.key === 'Enter' && sel >= 0) {
+      e.preventDefault();
+      location.hash = links[sel].getAttribute('href').slice(1);
+      results.hidden = true;
+      q.blur();
+    }
+  });
+  results.addEventListener('click', function () { results.hidden = true; q.blur(); });
+  document.addEventListener('click', function (e) {
+    if (!results.contains(e.target) && e.target !== q) results.hidden = true;
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === '/' && document.activeElement !== q &&
+        !/^(INPUT|TEXTAREA)$/.test(document.activeElement.tagName)) {
+      e.preventDefault(); q.focus();
+    }
+  });
+
+  route();
+})();
+</script>

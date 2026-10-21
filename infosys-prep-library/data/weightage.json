@@ -1,0 +1,1496 @@
+{
+  "generated": "2026-09-25",
+  "planning_model": "7 sections, 60 questions, 120 minutes, 75 marks + essay (counts 15;10;20;5;4;5;1)",
+  "planning_model_sources": [
+    "B1",
+    "C1",
+    "C2",
+    "V1",
+    "V5"
+  ],
+  "marks_source": "C1",
+  "total_marks_corroborated_by": [
+    "V5"
+  ],
+  "planning_model_confidence": "Medium \u2014 per-section counts rest on one first-hand account (B1) plus decks and coaches that may share a source",
+  "sections": {
+    "aptitude": {
+      "questions": 25,
+      "marks": 25,
+      "minutes": 60
+    },
+    "verbal": {
+      "questions": 20,
+      "marks": 20,
+      "minutes": 20
+    },
+    "pseudocode": {
+      "questions": 5,
+      "marks": 10,
+      "minutes": 10
+    },
+    "puzzle": {
+      "questions": 4,
+      "marks": 10,
+      "minutes": 10
+    },
+    "grammar": {
+      "questions": 5,
+      "marks": 10,
+      "minutes": 10
+    },
+    "writing": {
+      "questions": 1,
+      "marks": null,
+      "minutes": 10
+    }
+  },
+  "section_note": "aptitude = Reasoning Ability (15 Q, 25 min) + Technical Ability (10 Q, 35 min), pooled because sources disagree on which topics sit in which",
+  "total_questions": 60,
+  "total_marks_excl_essay": 75,
+  "total_minutes": 120,
+  "negative_marking": false,
+  "sectional_cutoffs": true,
+  "cutoff_value": "not discoverable as of 2026-09-25",
+  "mean_roi": 1.8394,
+  "mean_est_marks": 1.8293,
+  "section_floor": 0.6,
+  "section_reconciliation_questions": {
+    "aptitude": 25.0,
+    "verbal": 20.0,
+    "pseudocode": 5.0,
+    "puzzle": 4.0,
+    "grammar": 5.0,
+    "writing": 1.0
+  },
+  "section_reconciliation_marks": {
+    "aptitude": 25.0,
+    "verbal": 20.0,
+    "pseudocode": 10.0,
+    "puzzle": 10.0,
+    "grammar": 10.0
+  },
+  "topics": [
+    {
+      "code": "A1",
+      "section": "aptitude",
+      "label": "Coding and decoding",
+      "est_q": 2.07,
+      "marks_per_q": 1.0,
+      "est_marks": 2.07,
+      "hours": 0.8,
+      "conf": "High",
+      "roi": 2.588,
+      "tier": 1,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 6,
+      "discarded_sightings": 0,
+      "recent": 6,
+      "old": 0,
+      "channels": [
+        "OnlineStudy4u",
+        "Placement Walaa"
+      ],
+      "named_by": [],
+      "listed_by": [
+        "C1",
+        "V1"
+      ],
+      "reuse": "L&T/lt-prep-library/topics/L4-coding-and-decoding.md",
+      "qids": [
+        "R01",
+        "R05",
+        "R06",
+        "R14",
+        "R15"
+      ]
+    },
+    {
+      "code": "A2",
+      "section": "aptitude",
+      "label": "Number and letter series",
+      "est_q": 2.75,
+      "marks_per_q": 1.0,
+      "est_marks": 2.75,
+      "hours": 1.0,
+      "conf": "High",
+      "roi": 2.75,
+      "tier": 1,
+      "tier_basis": "roi",
+      "difficulty": "Easy",
+      "observed": 11,
+      "discarded_sightings": 3,
+      "recent": 7,
+      "old": 7,
+      "channels": [
+        "Infosys (official sample)",
+        "OnlineStudy4u",
+        "Placement Walaa",
+        "Tekno UF"
+      ],
+      "named_by": [],
+      "listed_by": [
+        "C1",
+        "V1"
+      ],
+      "reuse": "L&T/lt-prep-library/topics/L3-number-and-letter-series.md",
+      "qids": [
+        "R02",
+        "R03",
+        "R07",
+        "R08",
+        "R11",
+        "R16",
+        "R17",
+        "R18",
+        "R19",
+        "R20",
+        "O19"
+      ]
+    },
+    {
+      "code": "A3",
+      "section": "aptitude",
+      "label": "Operator logic and equation balancing",
+      "est_q": 1.197,
+      "marks_per_q": 1.0,
+      "est_marks": 1.197,
+      "hours": 0.6,
+      "conf": "High",
+      "roi": 1.996,
+      "tier": 2,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 2,
+      "discarded_sightings": 1,
+      "recent": 3,
+      "old": 0,
+      "channels": [
+        "OnlineStudy4u",
+        "Placement Walaa"
+      ],
+      "named_by": [],
+      "listed_by": [],
+      "reuse": "",
+      "qids": [
+        "R09",
+        "R12"
+      ]
+    },
+    {
+      "code": "A4",
+      "section": "aptitude",
+      "label": "Syllogisms and logical deduction",
+      "est_q": 1.626,
+      "marks_per_q": 1.0,
+      "est_marks": 1.626,
+      "hours": 0.8,
+      "conf": "High",
+      "roi": 2.033,
+      "tier": 2,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 6,
+      "discarded_sightings": 0,
+      "recent": 1,
+      "old": 5,
+      "channels": [
+        "Infosys (official sample)",
+        "Placement Walaa"
+      ],
+      "named_by": [],
+      "listed_by": [
+        "C1",
+        "V1"
+      ],
+      "reuse": "L&T/lt-prep-library/topics/L6-syllogisms-and-logical-deduction.md",
+      "qids": [
+        "R10",
+        "O11",
+        "O12",
+        "O13",
+        "O14",
+        "O15"
+      ]
+    },
+    {
+      "code": "A5",
+      "section": "aptitude",
+      "label": "Blood relations",
+      "est_q": 1.156,
+      "marks_per_q": 1.0,
+      "est_marks": 1.156,
+      "hours": 0.5,
+      "conf": "Medium",
+      "roi": 1.85,
+      "tier": 2,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 1,
+      "discarded_sightings": 0,
+      "recent": 1,
+      "old": 0,
+      "channels": [
+        "OnlineStudy4u"
+      ],
+      "named_by": [],
+      "listed_by": [
+        "C1",
+        "V1"
+      ],
+      "reuse": "",
+      "qids": [
+        "R13"
+      ]
+    },
+    {
+      "code": "A6",
+      "section": "aptitude",
+      "label": "Data sufficiency",
+      "est_q": 1.888,
+      "marks_per_q": 1.0,
+      "est_marks": 1.888,
+      "hours": 0.8,
+      "conf": "High",
+      "roi": 2.359,
+      "tier": 1,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 6,
+      "discarded_sightings": 1,
+      "recent": 2,
+      "old": 5,
+      "channels": [
+        "Infosys (official sample)",
+        "OnlineStudy4u"
+      ],
+      "named_by": [],
+      "listed_by": [
+        "C1",
+        "V1"
+      ],
+      "reuse": "L&T/lt-prep-library/topics/L2-data-sufficiency.md",
+      "qids": [
+        "R04",
+        "O06",
+        "O07",
+        "O08",
+        "O09",
+        "O10"
+      ]
+    },
+    {
+      "code": "A7",
+      "section": "aptitude",
+      "label": "Data interpretation: tables and charts",
+      "est_q": 2.313,
+      "marks_per_q": 1.0,
+      "est_marks": 2.313,
+      "hours": 1.0,
+      "conf": "High",
+      "roi": 2.313,
+      "tier": 1,
+      "tier_basis": "roi",
+      "difficulty": "Easy",
+      "observed": 3,
+      "discarded_sightings": 1,
+      "recent": 4,
+      "old": 0,
+      "channels": [
+        "OnlineStudy4u",
+        "Placement Walaa"
+      ],
+      "named_by": [
+        "B2"
+      ],
+      "listed_by": [
+        "C1",
+        "V1"
+      ],
+      "reuse": "",
+      "qids": [
+        "Q03",
+        "Q07"
+      ]
+    },
+    {
+      "code": "A8",
+      "section": "aptitude",
+      "label": "Linear equations: ages, heads-and-legs, two-variable systems",
+      "est_q": 1.787,
+      "marks_per_q": 1.0,
+      "est_marks": 1.787,
+      "hours": 0.7,
+      "conf": "High",
+      "roi": 2.553,
+      "tier": 1,
+      "tier_basis": "roi",
+      "difficulty": "Easy",
+      "observed": 4,
+      "discarded_sightings": 0,
+      "recent": 4,
+      "old": 0,
+      "channels": [
+        "OnlineStudy4u",
+        "Placement Walaa"
+      ],
+      "named_by": [],
+      "listed_by": [
+        "C1"
+      ],
+      "reuse": "",
+      "qids": [
+        "Q01",
+        "Q02",
+        "Q05"
+      ]
+    },
+    {
+      "code": "A9",
+      "section": "aptitude",
+      "label": "Averages, mixtures and alligation",
+      "est_q": 1.366,
+      "marks_per_q": 1.0,
+      "est_marks": 1.366,
+      "hours": 0.7,
+      "conf": "Medium",
+      "roi": 1.562,
+      "tier": 3,
+      "tier_basis": "roi",
+      "difficulty": "Easy",
+      "observed": 2,
+      "discarded_sightings": 0,
+      "recent": 1,
+      "old": 1,
+      "channels": [
+        "Infosys (official sample)",
+        "Placement Walaa"
+      ],
+      "named_by": [],
+      "listed_by": [
+        "C1"
+      ],
+      "reuse": "L&T/lt-prep-library/topics/Q8-averages-mixtures-and-alligation.md",
+      "qids": [
+        "Q04",
+        "O20"
+      ]
+    },
+    {
+      "code": "A10",
+      "section": "aptitude",
+      "label": "Number system: primes, divisibility, powers and roots",
+      "est_q": 0.736,
+      "marks_per_q": 1.0,
+      "est_marks": 0.736,
+      "hours": 0.8,
+      "conf": "Medium",
+      "roi": 0.736,
+      "tier": 4,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 1,
+      "discarded_sightings": 0,
+      "recent": 1,
+      "old": 0,
+      "channels": [
+        "OnlineStudy4u"
+      ],
+      "named_by": [],
+      "listed_by": [],
+      "reuse": "",
+      "qids": [
+        "Q06"
+      ]
+    },
+    {
+      "code": "A11",
+      "section": "aptitude",
+      "label": "Mensuration: area, surface area, volume",
+      "est_q": 1.156,
+      "marks_per_q": 1.0,
+      "est_marks": 1.156,
+      "hours": 0.7,
+      "conf": "Medium",
+      "roi": 1.321,
+      "tier": 3,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 1,
+      "discarded_sightings": 0,
+      "recent": 1,
+      "old": 0,
+      "channels": [
+        "OnlineStudy4u"
+      ],
+      "named_by": [],
+      "listed_by": [
+        "C1"
+      ],
+      "reuse": "",
+      "qids": [
+        "Q08"
+      ]
+    },
+    {
+      "code": "A12",
+      "section": "aptitude",
+      "label": "Percentages",
+      "est_q": 0.526,
+      "marks_per_q": 1.0,
+      "est_marks": 0.526,
+      "hours": 1.0,
+      "conf": "Low",
+      "roi": 0.315,
+      "tier": 4,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 0,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 0,
+      "channels": [],
+      "named_by": [],
+      "listed_by": [
+        "C1"
+      ],
+      "reuse": "L&T/lt-prep-library/topics/Q1-percentages-and-successive-change.md",
+      "qids": []
+    },
+    {
+      "code": "A13",
+      "section": "aptitude",
+      "label": "Profit, loss and discount",
+      "est_q": 0.526,
+      "marks_per_q": 1.0,
+      "est_marks": 0.526,
+      "hours": 0.8,
+      "conf": "Low",
+      "roi": 0.394,
+      "tier": 4,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 0,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 0,
+      "channels": [],
+      "named_by": [],
+      "listed_by": [
+        "C1",
+        "V1"
+      ],
+      "reuse": "L&T/lt-prep-library/topics/Q5-profit-loss-and-discount.md",
+      "qids": []
+    },
+    {
+      "code": "A14",
+      "section": "aptitude",
+      "label": "Simple and compound interest",
+      "est_q": 0.526,
+      "marks_per_q": 1.0,
+      "est_marks": 0.526,
+      "hours": 0.7,
+      "conf": "Low",
+      "roi": 0.45,
+      "tier": 4,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 0,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 0,
+      "channels": [],
+      "named_by": [],
+      "listed_by": [
+        "C1"
+      ],
+      "reuse": "L&T/lt-prep-library/topics/Q6-simple-and-compound-interest.md",
+      "qids": []
+    },
+    {
+      "code": "A15",
+      "section": "aptitude",
+      "label": "Time, speed and distance",
+      "est_q": 0.526,
+      "marks_per_q": 1.0,
+      "est_marks": 0.526,
+      "hours": 1.0,
+      "conf": "Low",
+      "roi": 0.315,
+      "tier": 4,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 0,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 0,
+      "channels": [],
+      "named_by": [],
+      "listed_by": [
+        "C1",
+        "V1"
+      ],
+      "reuse": "L&T/lt-prep-library/topics/Q2-time-speed-distance-and-trains.md",
+      "qids": []
+    },
+    {
+      "code": "A16",
+      "section": "aptitude",
+      "label": "Time and work",
+      "est_q": 0.526,
+      "marks_per_q": 1.0,
+      "est_marks": 0.526,
+      "hours": 0.8,
+      "conf": "Low",
+      "roi": 0.394,
+      "tier": 4,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 0,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 0,
+      "channels": [],
+      "named_by": [],
+      "listed_by": [
+        "C1"
+      ],
+      "reuse": "",
+      "qids": []
+    },
+    {
+      "code": "A17",
+      "section": "aptitude",
+      "label": "Ratio and proportion",
+      "est_q": 0.526,
+      "marks_per_q": 1.0,
+      "est_marks": 0.526,
+      "hours": 0.6,
+      "conf": "Low",
+      "roi": 0.526,
+      "tier": 4,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 0,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 0,
+      "channels": [],
+      "named_by": [],
+      "listed_by": [
+        "C1",
+        "V1"
+      ],
+      "reuse": "L&T/lt-prep-library/topics/Q4-ratio-proportion-and-cost-models.md",
+      "qids": []
+    },
+    {
+      "code": "A18",
+      "section": "aptitude",
+      "label": "Permutations, combinations and probability",
+      "est_q": 0.823,
+      "marks_per_q": 1.0,
+      "est_marks": 0.823,
+      "hours": 1.2,
+      "conf": "Medium",
+      "roi": 0.549,
+      "tier": 4,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 2,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 2,
+      "channels": [
+        "Infosys (official sample)"
+      ],
+      "named_by": [],
+      "listed_by": [
+        "C1"
+      ],
+      "reuse": "",
+      "qids": [
+        "O17",
+        "O18"
+      ]
+    },
+    {
+      "code": "A19",
+      "section": "aptitude",
+      "label": "Logic puzzle sets: seating, conditional rules, direction sense",
+      "est_q": 1.19,
+      "marks_per_q": 1.0,
+      "est_marks": 1.19,
+      "hours": 1.2,
+      "conf": "Medium",
+      "roi": 0.794,
+      "tier": 4,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 10,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 10,
+      "channels": [
+        "Infosys (official sample)"
+      ],
+      "named_by": [],
+      "listed_by": [
+        "C1"
+      ],
+      "reuse": "L&T/lt-prep-library/topics/L1-analytical-puzzle-sets-on-shared-premises.md",
+      "qids": [
+        "O01",
+        "O02",
+        "O03",
+        "O04",
+        "O05",
+        "O21",
+        "O22",
+        "O23",
+        "O24",
+        "O25"
+      ]
+    },
+    {
+      "code": "A20",
+      "section": "aptitude",
+      "label": "Cryptarithmetic",
+      "est_q": 0.736,
+      "marks_per_q": 1.0,
+      "est_marks": 0.736,
+      "hours": 0.6,
+      "conf": "Medium",
+      "roi": 0.981,
+      "tier": 4,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 1,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 1,
+      "channels": [
+        "Infosys (official sample)"
+      ],
+      "named_by": [],
+      "listed_by": [
+        "C1"
+      ],
+      "reuse": "",
+      "qids": [
+        "O16"
+      ]
+    },
+    {
+      "code": "A21",
+      "section": "aptitude",
+      "label": "Non-verbal reasoning",
+      "est_q": 1.051,
+      "marks_per_q": 1.0,
+      "est_marks": 1.051,
+      "hours": 0.4,
+      "conf": "Medium",
+      "roi": 2.102,
+      "tier": 2,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 0,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 0,
+      "channels": [],
+      "named_by": [
+        "B7"
+      ],
+      "listed_by": [
+        "C1"
+      ],
+      "reuse": "",
+      "qids": []
+    },
+    {
+      "code": "V1",
+      "section": "verbal",
+      "label": "Reading comprehension",
+      "est_q": 5.084,
+      "marks_per_q": 1.0,
+      "est_marks": 5.084,
+      "hours": 1.2,
+      "conf": "Medium",
+      "roi": 3.389,
+      "tier": 1,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 5,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 5,
+      "channels": [
+        "Infosys (official sample)"
+      ],
+      "named_by": [
+        "B4"
+      ],
+      "listed_by": [
+        "C1",
+        "V1"
+      ],
+      "reuse": "L&T/lt-prep-library/topics/V1-reading-comprehension.md",
+      "qids": [
+        "O41",
+        "O42",
+        "O43",
+        "O44",
+        "O45"
+      ]
+    },
+    {
+      "code": "V2",
+      "section": "verbal",
+      "label": "Spotting errors and grammar rules",
+      "est_q": 5.269,
+      "marks_per_q": 1.0,
+      "est_marks": 5.269,
+      "hours": 1.2,
+      "conf": "High",
+      "roi": 4.391,
+      "tier": 1,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 5,
+      "discarded_sightings": 0,
+      "recent": 1,
+      "old": 4,
+      "channels": [
+        "Infosys (official sample)",
+        "OnlineStudy4u"
+      ],
+      "named_by": [],
+      "listed_by": [
+        "C1",
+        "V1"
+      ],
+      "reuse": "L&T/lt-prep-library/topics/V2-spotting-errors-and-grammar-rules.md",
+      "qids": [
+        "V01",
+        "O37",
+        "O38",
+        "O39",
+        "O40"
+      ]
+    },
+    {
+      "code": "V3",
+      "section": "verbal",
+      "label": "Sentence correction and completion",
+      "est_q": 3.161,
+      "marks_per_q": 1.0,
+      "est_marks": 3.161,
+      "hours": 1.0,
+      "conf": "Medium",
+      "roi": 2.529,
+      "tier": 1,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 4,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 4,
+      "channels": [
+        "Infosys (official sample)"
+      ],
+      "named_by": [],
+      "listed_by": [
+        "C1",
+        "V1"
+      ],
+      "reuse": "L&T/lt-prep-library/topics/V3-sentence-correction-and-improvement.md",
+      "qids": [
+        "O33",
+        "O34",
+        "O35",
+        "O36"
+      ]
+    },
+    {
+      "code": "V4",
+      "section": "verbal",
+      "label": "Synonyms, antonyms and vocabulary",
+      "est_q": 1.756,
+      "marks_per_q": 1.0,
+      "est_marks": 1.756,
+      "hours": 1.0,
+      "conf": "Low",
+      "roi": 1.054,
+      "tier": 3,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 0,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 0,
+      "channels": [],
+      "named_by": [],
+      "listed_by": [
+        "V1"
+      ],
+      "reuse": "L&T/lt-prep-library/topics/V4-synonyms-antonyms-and-vocabulary.md",
+      "qids": []
+    },
+    {
+      "code": "V5",
+      "section": "verbal",
+      "label": "Para-jumbles",
+      "est_q": 1.756,
+      "marks_per_q": 1.0,
+      "est_marks": 1.756,
+      "hours": 0.6,
+      "conf": "Low",
+      "roi": 1.756,
+      "tier": 3,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 0,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 0,
+      "channels": [],
+      "named_by": [],
+      "listed_by": [
+        "V1"
+      ],
+      "reuse": "",
+      "qids": []
+    },
+    {
+      "code": "V6",
+      "section": "verbal",
+      "label": "Critical reasoning",
+      "est_q": 2.973,
+      "marks_per_q": 1.0,
+      "est_marks": 2.973,
+      "hours": 0.6,
+      "conf": "Medium",
+      "roi": 3.964,
+      "tier": 1,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 3,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 3,
+      "channels": [
+        "Infosys (official sample)"
+      ],
+      "named_by": [],
+      "listed_by": [
+        "C1"
+      ],
+      "reuse": "",
+      "qids": [
+        "O26",
+        "O27",
+        "O28"
+      ]
+    },
+    {
+      "code": "P1",
+      "section": "pseudocode",
+      "label": "Loops and trace tables",
+      "est_q": 1.341,
+      "marks_per_q": 2.0,
+      "est_marks": 2.681,
+      "hours": 1.0,
+      "conf": "High",
+      "roi": 2.681,
+      "tier": 1,
+      "tier_basis": "roi",
+      "difficulty": "Easy",
+      "observed": 9,
+      "discarded_sightings": 0,
+      "recent": 4,
+      "old": 5,
+      "channels": [
+        "Code Bashers",
+        "Infosys (official sample)",
+        "OnlineStudy4u"
+      ],
+      "named_by": [
+        "B4"
+      ],
+      "listed_by": [
+        "C1",
+        "V1"
+      ],
+      "reuse": "accenture-prep-final/accenture-prep-library/topics/T25-B1-loops-iteration.md",
+      "qids": [
+        "P01",
+        "P02",
+        "P04",
+        "P05",
+        "P06",
+        "P08",
+        "P09",
+        "O48",
+        "O50"
+      ]
+    },
+    {
+      "code": "P2",
+      "section": "pseudocode",
+      "label": "Recursion",
+      "est_q": 0.429,
+      "marks_per_q": 2.0,
+      "est_marks": 0.857,
+      "hours": 1.0,
+      "conf": "Medium",
+      "roi": 0.686,
+      "tier": 4,
+      "tier_basis": "roi",
+      "difficulty": "Easy",
+      "observed": 3,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 3,
+      "channels": [
+        "Code Bashers"
+      ],
+      "named_by": [],
+      "listed_by": [
+        "V1"
+      ],
+      "reuse": "accenture-prep-final/accenture-prep-library/topics/T31-B6-recursion.md",
+      "qids": [
+        "P07",
+        "P10",
+        "P11"
+      ]
+    },
+    {
+      "code": "P3",
+      "section": "pseudocode",
+      "label": "Bitwise operators and precedence",
+      "est_q": 0.557,
+      "marks_per_q": 2.0,
+      "est_marks": 1.114,
+      "hours": 0.8,
+      "conf": "Medium",
+      "roi": 1.114,
+      "tier": 2,
+      "tier_basis": "section floor (was T3): needed to reach 60% of pseudocode marks",
+      "difficulty": "Hard",
+      "observed": 1,
+      "discarded_sightings": 0,
+      "recent": 1,
+      "old": 0,
+      "channels": [
+        "OnlineStudy4u"
+      ],
+      "named_by": [],
+      "listed_by": [
+        "C1"
+      ],
+      "reuse": "accenture-prep-final/accenture-prep-library/topics/T11-B7-bitwise-operators.md",
+      "qids": [
+        "P03"
+      ]
+    },
+    {
+      "code": "P4",
+      "section": "pseudocode",
+      "label": "Pre/post-increment and fill-the-blank",
+      "est_q": 0.48,
+      "marks_per_q": 2.0,
+      "est_marks": 0.961,
+      "hours": 0.6,
+      "conf": "Medium",
+      "roi": 1.281,
+      "tier": 2,
+      "tier_basis": "section floor (was T3): needed to reach 60% of pseudocode marks",
+      "difficulty": "Medium",
+      "observed": 2,
+      "discarded_sightings": 0,
+      "recent": 2,
+      "old": 0,
+      "channels": [
+        "OnlineStudy4u"
+      ],
+      "named_by": [],
+      "listed_by": [],
+      "reuse": "",
+      "qids": [
+        "P13",
+        "P14"
+      ]
+    },
+    {
+      "code": "P5",
+      "section": "pseudocode",
+      "label": "Arrays",
+      "est_q": 0.683,
+      "marks_per_q": 2.0,
+      "est_marks": 1.366,
+      "hours": 0.8,
+      "conf": "Medium",
+      "roi": 1.366,
+      "tier": 2,
+      "tier_basis": "section floor (was T3): needed to reach 60% of pseudocode marks",
+      "difficulty": "Medium",
+      "observed": 2,
+      "discarded_sightings": 0,
+      "recent": 2,
+      "old": 0,
+      "channels": [
+        "OnlineStudy4u"
+      ],
+      "named_by": [],
+      "listed_by": [
+        "C1",
+        "V1"
+      ],
+      "reuse": "accenture-prep-final/accenture-prep-library/topics/T15-B3-arrays-1d-2d.md",
+      "qids": [
+        "P12",
+        "P15"
+      ]
+    },
+    {
+      "code": "P6",
+      "section": "pseudocode",
+      "label": "Conditionals and nested if",
+      "est_q": 0.396,
+      "marks_per_q": 2.0,
+      "est_marks": 0.793,
+      "hours": 0.6,
+      "conf": "Medium",
+      "roi": 1.057,
+      "tier": 3,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 2,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 2,
+      "channels": [
+        "Infosys (official sample)"
+      ],
+      "named_by": [],
+      "listed_by": [
+        "C1",
+        "V1"
+      ],
+      "reuse": "accenture-prep-final/accenture-prep-library/topics/T07-B2-conditionals-nested-if.md",
+      "qids": [
+        "O46",
+        "O47"
+      ]
+    },
+    {
+      "code": "P7",
+      "section": "pseudocode",
+      "label": "Functions and scope",
+      "est_q": 0.354,
+      "marks_per_q": 2.0,
+      "est_marks": 0.709,
+      "hours": 0.6,
+      "conf": "Medium",
+      "roi": 0.945,
+      "tier": 4,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 1,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 1,
+      "channels": [
+        "Infosys (official sample)"
+      ],
+      "named_by": [],
+      "listed_by": [
+        "C1"
+      ],
+      "reuse": "accenture-prep-final/accenture-prep-library/topics/T35-B5-functions-scope.md",
+      "qids": [
+        "O49"
+      ]
+    },
+    {
+      "code": "P8",
+      "section": "pseudocode",
+      "label": "Complexity, sorting and searching",
+      "est_q": 0.253,
+      "marks_per_q": 2.0,
+      "est_marks": 0.506,
+      "hours": 0.8,
+      "conf": "Low",
+      "roi": 0.38,
+      "tier": 4,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 0,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 0,
+      "channels": [],
+      "named_by": [],
+      "listed_by": [
+        "C1"
+      ],
+      "reuse": "accenture-prep-final/accenture-prep-library/topics/T32-B9-snippet-complexity.md",
+      "qids": []
+    },
+    {
+      "code": "P9",
+      "section": "pseudocode",
+      "label": "OOP in pseudocode: inheritance and overriding",
+      "est_q": 0.253,
+      "marks_per_q": 2.0,
+      "est_marks": 0.506,
+      "hours": 0.6,
+      "conf": "Low",
+      "roi": 0.506,
+      "tier": 4,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 0,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 0,
+      "channels": [],
+      "named_by": [],
+      "listed_by": [
+        "C1"
+      ],
+      "reuse": "",
+      "qids": []
+    },
+    {
+      "code": "P10",
+      "section": "pseudocode",
+      "label": "Strings and ASCII",
+      "est_q": 0.253,
+      "marks_per_q": 2.0,
+      "est_marks": 0.506,
+      "hours": 0.6,
+      "conf": "Low",
+      "roi": 0.506,
+      "tier": 4,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 0,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 0,
+      "channels": [],
+      "named_by": [],
+      "listed_by": [
+        "V1"
+      ],
+      "reuse": "accenture-prep-final/accenture-prep-library/topics/T36-B4-strings-ascii.md",
+      "qids": []
+    },
+    {
+      "code": "Z1",
+      "section": "puzzle",
+      "label": "Number grids and matrices",
+      "est_q": 1.712,
+      "marks_per_q": 2.5,
+      "est_marks": 4.281,
+      "hours": 1.2,
+      "conf": "High",
+      "roi": 3.567,
+      "tier": 1,
+      "tier_basis": "roi",
+      "difficulty": "Easy",
+      "observed": 6,
+      "discarded_sightings": 2,
+      "recent": 7,
+      "old": 1,
+      "channels": [
+        "Infosys (official sample)",
+        "OnlineStudy4u"
+      ],
+      "named_by": [
+        "B1",
+        "B4"
+      ],
+      "listed_by": [
+        "C1",
+        "V1"
+      ],
+      "reuse": "",
+      "qids": [
+        "Z01",
+        "Z02",
+        "Z07",
+        "Z09",
+        "Z11",
+        "O51"
+      ]
+    },
+    {
+      "code": "Z2",
+      "section": "puzzle",
+      "label": "Pair and figure rules",
+      "est_q": 2.288,
+      "marks_per_q": 2.5,
+      "est_marks": 5.719,
+      "hours": 1.2,
+      "conf": "High",
+      "roi": 4.766,
+      "tier": 1,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 13,
+      "discarded_sightings": 6,
+      "recent": 15,
+      "old": 4,
+      "channels": [
+        "Infosys (official sample)",
+        "OnlineStudy4u",
+        "Tekno UF"
+      ],
+      "named_by": [
+        "B1",
+        "B4"
+      ],
+      "listed_by": [
+        "C1",
+        "V1"
+      ],
+      "reuse": "",
+      "qids": [
+        "Z03",
+        "Z04",
+        "Z05",
+        "Z06",
+        "Z08",
+        "Z10",
+        "Z12",
+        "Z13",
+        "Z14",
+        "Z15",
+        "O52",
+        "O53",
+        "O54"
+      ]
+    },
+    {
+      "code": "G1",
+      "section": "grammar",
+      "label": "Cloze and fill-in-the-blanks",
+      "est_q": 2.917,
+      "marks_per_q": 2.0,
+      "est_marks": 5.833,
+      "hours": 0.8,
+      "conf": "Medium",
+      "roi": 5.833,
+      "tier": 1,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 4,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 4,
+      "channels": [
+        "Infosys (official sample)"
+      ],
+      "named_by": [
+        "B1",
+        "B2",
+        "B7"
+      ],
+      "listed_by": [
+        "C1"
+      ],
+      "reuse": "L&T/lt-prep-library/topics/V5-fill-in-the-blanks-and-cloze.md",
+      "qids": [
+        "O29",
+        "O30",
+        "O31",
+        "O32"
+      ]
+    },
+    {
+      "code": "G2",
+      "section": "grammar",
+      "label": "Tense, articles, prepositions and voice",
+      "est_q": 2.083,
+      "marks_per_q": 2.0,
+      "est_marks": 4.167,
+      "hours": 0.7,
+      "conf": "Medium",
+      "roi": 4.762,
+      "tier": 1,
+      "tier_basis": "roi",
+      "difficulty": "Medium",
+      "observed": 0,
+      "discarded_sightings": 0,
+      "recent": 0,
+      "old": 0,
+      "channels": [],
+      "named_by": [
+        "B1",
+        "B2",
+        "B7"
+      ],
+      "listed_by": [
+        "V1"
+      ],
+      "reuse": "L&T/lt-prep-library/topics/V7-active-and-passive-voice.md",
+      "qids": []
+    },
+    {
+      "code": "W1",
+      "section": "writing",
+      "label": "English writing: essay and email",
+      "est_q": 1.0,
+      "marks_per_q": null,
+      "est_marks": null,
+      "hours": 1.0,
+      "conf": "Medium",
+      "roi": null,
+      "tier": 1,
+      "tier_basis": "gate: scored section with unpublished marks and its own cut-off; 1 hour clears it",
+      "difficulty": "Medium",
+      "observed": 1,
+      "discarded_sightings": 0,
+      "recent": 1,
+      "old": 0,
+      "channels": [
+        "B1"
+      ],
+      "named_by": [
+        "B1",
+        "B2",
+        "B5",
+        "B7"
+      ],
+      "listed_by": [
+        "C1",
+        "V1"
+      ],
+      "reuse": "",
+      "qids": [
+        "W01"
+      ]
+    }
+  ],
+  "interview_topics": [
+    {
+      "code": "IV1",
+      "section": "interview",
+      "label": "SDLC, Agile and Scrum",
+      "questions": 7,
+      "accounts": [
+        "B1",
+        "B2",
+        "B3",
+        "B4"
+      ],
+      "tier": 1,
+      "hours": 1.0,
+      "reuse": "accenture-prep-final/accenture-prep-library/topics/T33-D8-sdlc-agile-testing.md",
+      "conf": "High",
+      "tier_basis": "interview: T1 if named in >= 3 first-hand accounts, T2 if 2, T3 if 1"
+    },
+    {
+      "code": "IV2",
+      "section": "interview",
+      "label": "OOP and Java basics",
+      "questions": 4,
+      "accounts": [
+        "B1",
+        "B3",
+        "B5"
+      ],
+      "tier": 1,
+      "hours": 1.0,
+      "reuse": "accenture-prep-final/accenture-prep-library/topics/T05-D1-oop-four-pillars.md",
+      "conf": "High",
+      "tier_basis": "interview: T1 if named in >= 3 first-hand accounts, T2 if 2, T3 if 1"
+    },
+    {
+      "code": "IV3",
+      "section": "interview",
+      "label": "DBMS and SQL",
+      "questions": 1,
+      "accounts": [
+        "B4"
+      ],
+      "tier": 3,
+      "hours": 1.0,
+      "reuse": "accenture-prep-final/accenture-prep-library/topics/T08-D6-dbms-sql.md",
+      "conf": "Low",
+      "tier_basis": "interview: T1 if named in >= 3 first-hand accounts, T2 if 2, T3 if 1"
+    },
+    {
+      "code": "IV4",
+      "section": "interview",
+      "label": "Projects and resume",
+      "questions": 2,
+      "accounts": [
+        "B2",
+        "B5"
+      ],
+      "tier": 2,
+      "hours": 1.0,
+      "reuse": "",
+      "conf": "Medium",
+      "tier_basis": "interview: T1 if named in >= 3 first-hand accounts, T2 if 2, T3 if 1"
+    },
+    {
+      "code": "IV5",
+      "section": "interview",
+      "label": "HR and behavioural",
+      "questions": 8,
+      "accounts": [
+        "B2",
+        "B4",
+        "B5"
+      ],
+      "tier": 1,
+      "hours": 1.5,
+      "reuse": "",
+      "conf": "High",
+      "tier_basis": "interview: T1 if named in >= 3 first-hand accounts, T2 if 2, T3 if 1"
+    },
+    {
+      "code": "IV6",
+      "section": "interview",
+      "label": "Generative AI and everyday AI use",
+      "questions": 2,
+      "accounts": [
+        "B5"
+      ],
+      "tier": 3,
+      "hours": 0.5,
+      "reuse": "",
+      "conf": "Low",
+      "tier_basis": "interview: T1 if named in >= 3 first-hand accounts, T2 if 2, T3 if 1"
+    },
+    {
+      "code": "IV7",
+      "section": "interview",
+      "label": "Light coding in Java",
+      "questions": 1,
+      "accounts": [
+        "B5"
+      ],
+      "tier": 3,
+      "hours": 0.7,
+      "reuse": "",
+      "conf": "Low",
+      "tier_basis": "interview: T1 if named in >= 3 first-hand accounts, T2 if 2, T3 if 1"
+    }
+  ],
+  "repeat_rate": {
+    "unique_exam_questions": 60,
+    "independent_second_sightings": 3,
+    "rate": 0.05,
+    "same_channel_reuse": 8,
+    "cross_slot": "not measurable: no source ties one question to two slots"
+  }
+}

@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A1 — Coding and decoding · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem current" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Topic files</span></div>
+    <article class="prose">
+<!-- Drafted by DeepSeek V4.1 Flash via ds.py; reviewed by Claude 2026-09-21. Answer
+     letters rebalanced by data/shuffle.py (correctness-preserving: option text is
+     swapped and the key letter repointed). Numeric keys re-checked by
+     data/verify_keys.py. -->
+
+<h1 id="a1-coding-and-decoding">A1 — Coding and decoding</h1><p class="fm-line" style="color:var(--ink-faint);font-size:13px;margin:-.4em 0 1.2em">Tier 1 · Reasoning Ability · 2.8% of marks · about 0.8 h · confidence High</p>
+<p><em>Adapted from <code>L&amp;T/lt-prep-library/topics/L4-coding-and-decoding.md</code>; verified in that library's QA. §1 and §10 are regenerated for Infosys from <code>data/weightage.json</code>; §2 gains an Infosys evidence table; §3–§9 are the source text unchanged, so "observed" in the worked examples refers to the source paper.</em></p>
+<h2 id="1-why-this-topic-matters-here">1. Why this topic matters here</h2>
+<p>Expect about <strong>2.1 questions and 2.1 marks</strong> on this topic (about 2.8% of the 75 scored marks). It sits in <strong>Reasoning Ability</strong>, part of the 25-question aptitude block (Reasoning Ability 15 Q / 25 min + Technical Ability 10 Q / 35 min, one cut-off each). <strong>Tier 1</strong>, 0.8 hours to reach reliable recall, confidence <strong>High</strong>.</p>
+<p><strong>6 questions on this topic are in the observed Infosys pool</strong> (R01, R05, R06, R14, R15), from 2 sources. They are listed in §2 and solved in <code>../question-banks/QB-99-OBSERVED-POOL.md</code>.</p>
+<p><strong>Why the tier:</strong> expected marks per study hour, weighted by confidence, is 2.59 against a paper average of 1.84 (<code>../data/analysis-tables.md</code> §6). Every section has its own cut-off, so a zero here costs the whole section's chance, not only these marks. There is no calculator. Negative marking: none reported.</p>
+<h2 id="2-exactly-what-gets-asked">2. Exactly what gets asked</h2>
+<h3 id="what-infosys-asked">What Infosys asked</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Source date</th>
+<th>What was asked</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R01</td>
+<td>2026-09-22</td>
+<td>In a certain code LAST is written as 13 and TABLE as 8. How is FRAUD written?</td>
+</tr>
+<tr>
+<td>R05</td>
+<td>2025-09-29</td>
+<td>In a certain code BURST is written as 80 and LAKE as 29. How is VERSATILE written?</td>
+</tr>
+<tr>
+<td>R05b</td>
+<td>2025-09-25</td>
+<td>BURST = 80, LAKE = 29, VERSATILE = ?</td>
+</tr>
+<tr>
+<td>R06</td>
+<td>2025-09-29</td>
+<td>In a certain code CHAIR is written as 301018. How is TABLE written?</td>
+</tr>
+<tr>
+<td>R14</td>
+<td>2025-09-25</td>
+<td>CREATE is written as DSZDQB. How is POLITE written?</td>
+</tr>
+<tr>
+<td>R15</td>
+<td>2025-10-09</td>
+<td>If BREAK is written as RBEKA, how is BRIEF written?</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The pattern notes below come from the library this file was adapted from. Any frequency or "observed paper" remark in them describes that source paper, not Infosys. The Infosys evidence is the table above.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Sub-pattern</th>
+<th>How it appears</th>
+<th>Roughly how often</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Letter-shift (Caesar) coding</td>
+<td>One or two words given in coded form; find the code for a new word</td>
+<td>~30%</td>
+</tr>
+<tr>
+<td>Position-number coding</td>
+<td>Letters replaced by 1-26 values, then concatenated or summed</td>
+<td>~20%</td>
+</tr>
+<tr>
+<td>Substitution / word-code</td>
+<td>Invented words mapped to real words; identify what one word means</td>
+<td>~20%</td>
+</tr>
+<tr>
+<td>Reverse-alphabet (Atbash)</td>
+<td>A↔Z, B↔Y; effectively 27 minus the position</td>
+<td>~10%</td>
+</tr>
+<tr>
+<td>Symbol coding</td>
+<td>Real words mapped to symbols; find the symbol for a word</td>
+<td>~8%</td>
+</tr>
+<tr>
+<td>Conditional coding</td>
+<td>Rule differs by vowel/consonant or by odd/even position</td>
+<td>~7%</td>
+</tr>
+<tr>
+<td>Mixed / two-step</td>
+<td>Reverse then shift, or shift then reverse, or shift by increasing steps</td>
+<td>~5%</td>
+</tr>
+</tbody>
+</table>
+<p>The share column is inferred from the shape of Indian campus placement papers generally, not from an observed L&amp;T paper. The absolute count is small, so any one of these could dominate your three questions.</p>
+<h2 id="3-concept-notes">3. Concept notes</h2>
+<h3 id="31-the-alphabet-grid-and-the-reverse-rule">3.1 The alphabet grid and the reverse rule</h3>
+<p>Every coding question is faster if the alphabet's numeric positions are reflex, not calculation.</p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D</th>
+<th>E</th>
+<th>F</th>
+<th>G</th>
+<th>H</th>
+<th>I</th>
+<th>J</th>
+<th>K</th>
+<th>L</th>
+<th>M</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+<td>10</td>
+<td>11</td>
+<td>12</td>
+<td>13</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>N</th>
+<th>O</th>
+<th>P</th>
+<th>Q</th>
+<th>R</th>
+<th>S</th>
+<th>T</th>
+<th>U</th>
+<th>V</th>
+<th>W</th>
+<th>X</th>
+<th>Y</th>
+<th>Z</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>14</td>
+<td>15</td>
+<td>16</td>
+<td>17</td>
+<td>18</td>
+<td>19</td>
+<td>20</td>
+<td>21</td>
+<td>22</td>
+<td>23</td>
+<td>24</td>
+<td>25</td>
+<td>26</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reverse-alphabet position = 27 − forward position.</strong> Example: R is 18, so its reverse is 27 − 18 = 9 = I. Every pair sums to 27: A↔Z, B↔Y, ..., M↔N.</p>
+<p>Anchor points that remove counting: <strong>EJOTY = 5, 10, 15, 20, 25</strong> and <strong>CFILORUX = 3, 6, 9, 12, 15, 18, 21, 24</strong>. From E=5 you can reach F, G, H, I in two steps; from J=10 the same for the teens.</p>
+<p>Vowels are <strong>A, E, I, O, U</strong> (5). Everything else (21 letters) is a consonant. Y is treated as a consonant in these papers.</p>
+<h3 id="32-shift-coding-the-caesar-pattern">3.2 Shift coding (the Caesar pattern)</h3>
+<p><strong>Rule: every letter moves a fixed number of places, in the same direction.</strong> Word CAT coded as DBU means +1. To decode, reverse the direction.</p>
+<p>Direction vocabulary: "forward/right" = toward Z; "backward/left" = toward A. Wrapping is allowed and normal: Z + 1 = A, A − 1 = Z.</p>
+<p>Verify a shift on <strong>two</strong> letters before you commit. A single letter can be explained by several rules at once - for example, C→G could be +4, or it could be a reverse-alphabet substitution. Two letters in the same word almost never coincide by accident.</p>
+<p>Variable-shift variants exist: +1, +2, +3, ... across successive letters (progressive shift), or +1 for odd positions and −1 for even positions. Both are still positional, so read the position, then apply.</p>
+<h3 id="33-reverse-alphabet-atbash-coding">3.3 Reverse-alphabet (Atbash) coding</h3>
+<p><strong>Rule: replace each letter with the letter equidistant from the other end.</strong> A→Z, B→Y, C→X, ..., M→N, N→M. A word and its code have the same length, and the first letter usually lands far away from the original.</p>
+<p>Because it is exactly 27 minus the position, you can compute it in your head: F is 6, 27 − 6 = 21 = U, so F→U. Atbash never wraps ambiguously - it is a mirror, not a rotation.</p>
+<h3 id="34-position-number-coding">3.4 Position-number coding</h3>
+<p>Three distinct flavours, and you must tell them apart in the first five seconds.</p>
+<table>
+<thead>
+<tr>
+<th>Flavour</th>
+<th>What is done</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Concatenation</td>
+<td>Write each letter's position, no separators</td>
+<td>CAT → 3120</td>
+</tr>
+<tr>
+<td>Sum</td>
+<td>Add all positions into one number</td>
+<td>CAT → 3+1+20 = 24</td>
+</tr>
+<tr>
+<td>Difference</td>
+<td>Subtract consecutive positions</td>
+<td>CAT → 3−1=2, 1−20=−19 (rare)</td>
+</tr>
+</tbody>
+</table>
+<p>For concatenation, the number of digits tells you the word length, because A-I contribute 1 digit and J-Z contribute 2. A 6-digit code is not necessarily a 6-letter word. <strong>Count the digits first.</strong> 3120 = 3, 1, 20 = three letters. 1291514 = 12, 9, 15, 14 = four letters.</p>
+<p>For the sum flavour, you only need the total, so use EJOTY anchors rather than full counting.</p>
+<h3 id="35-substitution-word-code-coding">3.5 Substitution / word-code coding</h3>
+<p>A sentence is given in an invented language, with the English meaning alongside it. The rule set:</p>
+<ol>
+<li><strong>Same word → same code, every time.</strong> If 'ka' appears in two sentences, the real word common to both sentences is 'ka'.</li>
+<li><strong>Different words → different codes.</strong> No two real words share a code.</li>
+<li><strong>Order is usually scrambled</strong> - never match by position, match by co-occurrence.</li>
+</ol>
+<p>Method: find the word that appears in exactly two sentences, note which real word also appears in exactly those two sentences, and pin them together. Delete that pair and repeat. Example: 'pit na ka' = 'you are good' and 'na ta pit' = 'are you smart' → 'na' and 'are' are the only items shared → na = are. Remove, and 'ka pit' = 'you good', so 'ta' = smart.</p>
+<h3 id="36-symbol-coding">3.6 Symbol coding</h3>
+<p>Same logic as substitution coding but with symbols instead of invented words: '@', '#', '%'. Longer sentences give more constraints. If a symbol appears only in one sentence, the word it maps to is one of that sentence's words - look for the shortest sentence that contains it to narrow down.</p>
+<h3 id="37-conditional-coding">3.7 Conditional coding</h3>
+<p>The rule branches on the letter's class or position.</p>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vowel at that position</td>
+<td>Apply rule A</td>
+</tr>
+<tr>
+<td>Consonant at that position</td>
+<td>Apply rule B</td>
+</tr>
+<tr>
+<td>Odd position in the word</td>
+<td>Apply rule A</td>
+</tr>
+<tr>
+<td>Even position in the word</td>
+<td>Apply rule B</td>
+</tr>
+</tbody>
+</table>
+<p>Example: "vowels move one step forward, consonants one step back" applied to BAND gives A E M C (B→A, A→E, N→M, D→C). Read the word left to right, decide each letter's class, then transform. Do not transform first and check later.</p>
+<h3 id="38-two-step-and-mixed-coding">3.8 Two-step and mixed coding</h3>
+<p>The word is manipulated twice. Common orders:</p>
+<ul>
+<li><strong>Reverse then shift:</strong> COLD → DLOC → (shift +2) → FNQE.</li>
+<li><strong>Shift then reverse:</strong> COLD → (shift +2) → EQNF → reverse → FNQE. Note these two often coincide - test with the given example rather than guessing.</li>
+</ul>
+<p>Some papers add a third layer (substitute, then reverse, then shift). Given the one-minute budget, if a question needs three layers, mark and move on.</p>
+<h2 id="4-must-memorise-block">4. Must-memorise block</h2>
+<ul>
+<li><strong>A=1, B=2, ... Z=26.</strong> Reverse value = <strong>27 − forward value</strong>.</li>
+<li><strong>EJOTY = 5, 10, 15, 20, 25.</strong></li>
+<li><strong>CFILORUX = 3, 6, 9, 12, 15, 18, 21, 24.</strong></li>
+<li>Reverse pairs: <strong>AZ, BY, CX, DW, EV, FU, GT, HS, IR, JQ, KP, LO, MN</strong> (all sum to 27).</li>
+<li>Wrap rules: <strong>Z + 1 = A</strong> and <strong>A − 1 = Z</strong>.</li>
+<li>Vowels: <strong>A E I O U</strong> (5). Consonants: 21. Y counts as a consonant.</li>
+<li>Decoding = applying the inverse operation. If coding is +3, decoding is −3.</li>
+<li>Concatenation code: split by position values - 1 digit for A-I, 2 digits for J-Z.</li>
+<li>Sum code: total of the letter positions only.</li>
+<li>Substitution: <strong>shared code = shared word</strong>. Order is never reliable.</li>
+<li>Progressive shift on an n-letter word uses +1, +2, ..., +n.</li>
+<li>Same-length words usually indicate a per-letter rule (shift or Atbash), not a numeric rule.</li>
+</ul>
+<h2 id="5-worked-examples">5. Worked examples</h2>
+<p><strong>Example 1.</strong> If RAIN is coded as SBJO, how is SNOW coded?</p>
+<p>Fast method: R→S is +1, A→B is +1. Fixed shift +1. Apply: S→T, N→O, O→P, W→X. <strong>Answer: TOPX.</strong>
+Slow method: writing out the alphabet and counting from A each time loses 30-40 seconds. Use EJOTY: N is 14, so N+1 is 15 = O.</p>
+<p><strong>Example 2.</strong> If FRIEND is coded as UIRVMW, how is SAFE coded?</p>
+<p>Fast method: F=6, its code is U=21, and 27 − 6 = 21. Confirmed by R=18 → I=9, and 27 − 18 = 9. This is Atbash. Apply: S=19 → 27−19=8 = H; A=1 → 26 = Z; F=6 → 21 = U; E=5 → 22 = V. <strong>Answer: HZUV.</strong>
+Slow method: building the full reverse alphabet A–Z in the margin. You only need the subtraction, which is one step.</p>
+<p><strong>Example 3.</strong> If LION is coded as 1291514, how is TIGER coded?</p>
+<p>Fast method: 1291514 must split as 12, 9, 15, 14 - four values matching L, I, O, N (the 9 must be a single digit because 12 and 15 are already taken and 91 is impossible). So it is concatenated positions. TIGER = T=20, I=9, G=7, E=5, R=18 → <strong>2097518</strong>.
+Slow method: assuming one digit per letter. That fails immediately on L=12. Check the first digit pair first - if it exceeds 26, your split is wrong.</p>
+<p><strong>Example 4.</strong> In a code language, 'ram is good' is written 'pa ta ka'; 'good boy' is written 'ka na'; 'boy is smart' is written 'na ta ha'. What is the code for 'smart'?</p>
+<p>Fast method: find shared items. Sentences 2 and 3 share only the word 'boy', and share only the code 'na'. So na = boy. Sentence 2 then gives ka = good. Sentence 1 then gives ta = is. Sentence 3 becomes na ta ha = boy is smart, so <strong>ha = smart</strong>.
+Slow method: guessing word-by-word from sentence 1. Order is scrambled, so this produces contradictory assignments and wastes a minute.</p>
+<p><strong>Example 5.</strong> In a code, letters are first written in reverse order and then each is moved two places forward. If COLD is coded as FNQE, how is WARM coded?</p>
+<p>Fast method: verify on COLD - reverse gives DLOC, then +2 gives F, N, Q, E. Matches. Apply to WARM: reverse gives MRAW, then +2 gives O, T, C, Y. <strong>Answer: OTCY.</strong>
+Slow method: trying "shift then reverse" first. It happens to give the same result here, but on some words the two orders differ, so verify against the given example rather than assuming.</p>
+<h2 id="6-traps-and-gotchas">6. Traps and gotchas</h2>
+<table>
+<thead>
+<tr>
+<th>Trap</th>
+<th>Why it catches people</th>
+<th>How to avoid it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Locking onto a shift after one letter</td>
+<td>Many rules explain a single letter-to-letter change</td>
+<td>Verify on a second letter in the same word before applying</td>
+</tr>
+<tr>
+<td>Forgetting the wrap</td>
+<td>Z+1 is A, not a number past 26</td>
+<td>Say "wrap" out loud whenever you pass A or Z</td>
+</tr>
+<tr>
+<td>Reading the shift direction backwards</td>
+<td>"Forward" means toward Z, not toward A</td>
+<td>Check the first pair against the given example before solving</td>
+</tr>
+<tr>
+<td>Splitting a concatenated number wrongly</td>
+<td>121 vs 1,2,1 changes everything</td>
+<td>Split greedily: take 2 digits when the pair is 10-26 and the word length demands it</td>
+</tr>
+<tr>
+<td>Matching substitution codes by position</td>
+<td>The invented sentence is deliberately reordered</td>
+<td>Match by co-occurrence only; ignore order entirely</td>
+</tr>
+<tr>
+<td>Trying to decode an unresolvable word</td>
+<td>Some words in substitution sets genuinely cannot be pinned down</td>
+<td>If two words share the same two possible codes and no sentence separates them, the answer is "cannot be determined"</td>
+</tr>
+<tr>
+<td>Using A=0</td>
+<td>Zero-indexing silently shifts every answer by one</td>
+<td>A=1, always</td>
+</tr>
+<tr>
+<td>Applying the rule to the wrong word</td>
+<td>"Code for X" vs "decode Y"</td>
+<td>Circle the target word before you start transforming</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-practice-questions">7. Practice questions</h2>
+<p><strong>1.</strong> If TEACHER is coded as VGCEJGT, how is CHILD coded?
+a) EJKMF b) EJKNF c) EJKMF d) DKJMF</p>
+<p><strong>2.</strong> If MONKEY is coded as NLMPVB, how is TIGER coded?
+a) SRTVI b) GQTVI c) GRTWI d) GRTVI</p>
+<p><strong>3.</strong> If CAT is coded as 3120, how is DOG coded?
+a) 4517 b) 4175 c) 4157 d) 4156</p>
+<p><strong>4.</strong> In a code language, 'pit na ka' means 'you are good', 'na ta pit' means 'are you smart', and 'ka pit' means 'you good'. Which word means 'smart'?
+a) pit b) na c) ta d) ka</p>
+<p><strong>5.</strong> In a code, letters at odd positions move one step forward and letters at even positions move one step backward. How is MIND coded?
+a) MHOC b) NHOC c) NHOB d) NJOC</p>
+<p><strong>6.</strong> If ROSE is coded as 6821 and CHAIR as 73456, how is SEARCH coded?
+a) 214763 b) 214673 c) 216473 d) 124673</p>
+<p><strong>7.</strong> If FRIEND is coded as GTLISJ, how is CANDLE coded?
+a) DCQHQK b) DCQHQJ c) DCQHPK d) ECQHQK</p>
+<p><strong>8.</strong> In a code, 'come home' is written '#@', 'home sweet' is written '@%', and 'sweet lime' is written '%$'. What is the code for 'lime'?
+a) $ b) @ c) % d) #</p>
+<p><strong>9.</strong> Each vowel in a word is replaced by the next letter of the alphabet and each consonant by the previous letter. How is BAND coded?
+a) AEND b) BEMC c) AEMC d) AEMB</p>
+<p><strong>10.</strong> If CAT is coded as 24 by adding letter positions, how is DOG coded by the same rule?
+a) 24 b) 30 c) 28 d) 26</p>
+<p><strong>11.</strong> In a code language, 'ki ma ta' means 'eat healthy food', 'ta ni ba' means 'food is tasty', and 'ba ki' means 'healthy is'. What does 'ta' mean?
+a) is b) food c) healthy d) tasty</p>
+<p><strong>12.</strong> In a code, letters of a word are first written in reverse order and then each letter is moved two places forward. If BEAT is coded as UBFC, how is MICE coded?
+a) FDJM b) EFJN c) FDKN d) FDJN</p>
+<h3 id="answer-key">ANSWER KEY</h3>
+<ol>
+<li><strong>a)</strong> TEACHER → VGCEJGT is +2 on each letter. C+2=E, H+2=J, I+2=K, L+2=N, D+2=F → EJKMF.</li>
+<li><strong>d)</strong> M=13→N=14, 27−13=14, so this is Atbash. T=20→7=G, I=9→18=R, G=7→20=T, E=5→22=V, R=18→9=I → GRTVI.</li>
+<li><strong>c)</strong> CAT = C, A, T = 3, 1, 20 concatenated. DOG = 4, 15, 7 → 4157.</li>
+<li><strong>c)</strong> 'na' and 'are' are the only items common to the first two sentences. Stripping 'na' leaves 'ka pit' = 'you good', so the remaining word in sentence 2, 'ta', is 'smart'.</li>
+<li><strong>b)</strong> M (odd) +1 = N; I (even) −1 = H; N (odd) +1 = O; D (even) −1 = C → NHOC.</li>
+<li><strong>b)</strong> ROSE → R6, O8, S2, E1; CHAIR → C7, H3, A4, I5, R6. R=6 agrees in both. SEARCH = 2, 1, 4, 6, 7, 3 → 214673.</li>
+<li><strong>a)</strong> FRIEND uses progressive shift +1, +2, +3, +4, +5, +6. CANDLE: C+1=D, A+2=C, N+3=Q, D+4=H, L+5=Q, E+6=K → DCQHQK.</li>
+<li><strong>a)</strong> 'sweet' is the only word common to 'home sweet' (@%) and 'sweet lime' (%$), so sweet = %; lime is the other symbol in the second pair, $.</li>
+<li><strong>c)</strong> B (consonant) → A, A (vowel) → E, N (consonant) → M, D (consonant) → C → AEMC.</li>
+<li><strong>d)</strong> D+O+G = 4+15+7 = 26.</li>
+<li><strong>b)</strong> 'ta' appears in sentence 1 ('eat healthy food') and sentence 2 ('food is tasty'); the only real word common to both is 'food'.</li>
+<li><strong>d)</strong> BEAT reversed = TAEB, +2 = UBFC, which confirms the order. MICE reversed = ECIM, +2 = FDJN.</li>
+</ol>
+<h2 id="8-resources">8. Resources</h2>
+<ul>
+<li><strong>Verbal Reasoning Questions and Answers</strong> — https://www.indiabix.com/verbal-reasoning/questions-and-answers/ — index of question sets - open a sub-topic for the actual questions.</li>
+<li><strong>Coding Decoding - Solved Questions and Answers</strong> — https://www.geeksforgeeks.org/coding-decoding/ — index of question sets - open a sub-topic for the actual questions.</li>
+<li><strong>Atbash - Wikipedia</strong> — https://en.wikipedia.org/wiki/Atbash — reference article.</li>
+<li><strong>ASCII Table - ASCII codes, hex, decimal, binary, html</strong> — https://www.rapidtables.com/code/text/ascii-table.html — page content not classified - read it before relying on it.</li>
+</ul>
+<h2 id="9-self-check">9. Self-check</h2>
+<p>Answer yes or no to each. Six yes answers means you can stop.</p>
+<ol>
+<li>Can you state the reverse-alphabet position of any letter R without counting, using 27 − position?</li>
+<li>Can you recall EJOTY and CFILORUX and use them to reach a nearby letter in two steps?</li>
+<li>For a concatenated number code, can you split it correctly on the first try, including two-digit values for J-Z?</li>
+<li>In substitution coding, do you automatically match by shared code rather than by word order?</li>
+<li>Do you verify a proposed shift on a second letter before committing to the answer?</li>
+<li>Can you identify whether a code was produced by a shift, an Atbash mirror, or a numeric rule within five seconds of reading it?</li>
+</ol>
+<h2 id="10-sources">10. Sources</h2>
+<p><strong>Teaching content (§3–§9)</strong> is adapted from <code>L&amp;T/lt-prep-library/topics/L4-coding-and-decoding.md</code>, which lists its own sources and was verified in that library's QA. <strong>Infosys evidence</strong> for this file: observed questions R01, R05, R06, R14, R15 in <code>../data/questions-observed.csv</code>; section structure and marks in <code>../research/03-pattern-synthesis.md</code> §1; weightage, tier and hours in <code>../data/weightage.json</code> (code <code>A1</code>). Confidence <strong>High</strong>. Nothing in this file is a published Infosys syllabus.</p>
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html"><span>Previous</span><strong>Verbal-Ability - From Zero</strong></a><a class="pager next" href="../../infosys-se/topics/A2-number-and-letter-series.html"><span>Next</span><strong>A2 — Number and letter series</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#a1-coding-and-decoding">A1 — Coding and decoding</a><a class="toc-l1" href="#1-why-this-topic-matters-here">1. Why this topic matters here</a><a class="toc-l1" href="#2-exactly-what-gets-asked">2. Exactly what gets asked</a><a class="toc-l1" href="#3-concept-notes">3. Concept notes</a><a class="toc-l1" href="#4-must-memorise-block">4. Must-memorise block</a><a class="toc-l1" href="#5-worked-examples">5. Worked examples</a><a class="toc-l1" href="#6-traps-and-gotchas">6. Traps and gotchas</a><a class="toc-l1" href="#7-practice-questions">7. Practice questions</a><a class="toc-l1" href="#8-resources">8. Resources</a><a class="toc-l1" href="#9-self-check">9. Self-check</a><a class="toc-l1" href="#10-sources">10. Sources</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

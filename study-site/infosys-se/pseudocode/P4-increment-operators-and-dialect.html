@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P4 — Pre/post-increment and fill-the-blank · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem current" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Pseudocode</span></div>
+    <article class="prose">
+<h1 id="p4-prepost-increment-and-fill-the-blank">P4 — Pre/post-increment and fill-the-blank</h1><p class="fm-line" style="color:var(--ink-faint);font-size:13px;margin:-.4em 0 1.2em">Tier 2 · Pseudocode · 1.3% of marks · about 0.6 h · confidence Medium</p>
+<h2 id="1-why-this-topic-matters-here">1. Why this topic matters here</h2>
+<p>Expect about <strong>0.5 questions and 1.0 marks</strong> on this topic (about 1.3% of the 75 scored marks). It sits in <strong>Pseudocode</strong>: 5 questions, 10 marks, 10 minutes. <strong>Tier 2</strong>, 0.6 hours to reach reliable recall, confidence <strong>Medium</strong>.</p>
+<p><strong>2 questions on this topic are in the observed Infosys pool</strong> (P13, P14), from 1 source. They are listed in §2 and solved in <code>../question-banks/QB-99-OBSERVED-POOL.md</code>.</p>
+<p><strong>Why the tier:</strong> its ROI alone would place it lower, but this section has its own cut-off and this topic is needed to reach 60% of the section's marks. Every section has its own cut-off, so a zero here costs the whole section's chance, not only these marks. There is no calculator. Negative marking: none reported.</p>
+<h2 id="2-exactly-what-gets-asked">2. Exactly what gets asked</h2>
+<p>Pre- and post-increment items appear <strong>three times</strong> in the 2025–26 pseudocode pool, all in the 2026-09-18 “PYQ” video (said to be asked in 2025) <code>[REPORTED]</code>: two “fill the blank” items and one <code>do … while</code> using <code>++x</code> and <code>x--</code>. Nothing else in the pool is so easy to lose marks on: the rule takes two minutes to learn and a five-question section is 10 marks.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-pattern</th>
+<th>How it appears</th>
+<th>Observed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Choose the statement so result and i both end at 6</td>
+<td>“i = 5 … which option makes both 6?”</td>
+<td>P13</td>
+</tr>
+<tr>
+<td>Choose the expression so the printed result is 7</td>
+<td>“i = 2 … options use i++ and ++i”</td>
+<td>P14</td>
+</tr>
+<tr>
+<td>Loop body with <code>++x</code>, <code>x--</code> and a stop condition</td>
+<td><code>do { ++x; display x; x--; } while (x &gt;= -1)</code></td>
+<td>P04 (infinite loop)</td>
+</tr>
+<tr>
+<td>Plain reads of <code>i</code> mixed with increments</td>
+<td>authored from the pattern</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-infosys-pseudocode-dialect-as-seen-in-the-pool">The Infosys pseudocode dialect, as seen in the pool</h3>
+<p>Observed wording is C/Java-like, not Python-like, and differs from the Accenture dialect already in <code>pseudocode/P1</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Seen in the Infosys pool</th>
+<th>Accenture dialect in P1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Declaration</td>
+<td>“Integer P and Q. Set value of P as 1” / “Set integer X is equal to 0”</td>
+<td><code>x = 0</code></td>
+</tr>
+<tr>
+<td>Output</td>
+<td><code>Display</code> or <code>Print</code></td>
+<td><code>print</code></td>
+</tr>
+<tr>
+<td>Remainder</td>
+<td><code>mod</code> and <code>%</code> both appear</td>
+<td><code>%</code> or <code>mod</code></td>
+</tr>
+<tr>
+<td>Loops</td>
+<td>“for loop 1 to Y”, <code>for w = 0 to 5</code>, <code>while (n mod 8 not equal to 0) { … }</code>, <code>Do … While</code></td>
+<td><code>for i = 1 to 5:</code>, <code>while cond:</code></td>
+</tr>
+<tr>
+<td>Increment</td>
+<td><code>++X</code>, <code>X--</code>, <code>i++</code></td>
+<td><code>i = i + 1</code></td>
+</tr>
+<tr>
+<td>Integer division</td>
+<td><code>/</code> on integers truncates (<code>n / 10</code>)</td>
+<td>explicit note</td>
+</tr>
+</tbody>
+</table>
+<p>Read the code as if it were Java: integer arithmetic, left-to-right evaluation, <code>++</code> and <code>--</code> as real operators.</p>
+<h3 id="the-dialect-in-infosyss-own-sample-paper-2020-confirmed-official-sample">The dialect in Infosys's own sample paper (2020) <code>[CONFIRMED — official sample]</code></h3>
+<p>The five pseudocode questions in the official sample are printed with <strong>numbered lines</strong> and a small fixed vocabulary. This is the dialect to expect on the page, and the bank <code>QB-P1-infosys-dialect-traces</code> prints its traces the same way:</p>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Written like this in the official sample</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Declaration</td>
+<td><code>Integer i, j, k, n</code></td>
+</tr>
+<tr>
+<td>Assignment</td>
+<td><code>Set j=1, k=1</code> for the first values, then plain <code>j=j+1</code>, <code>k=k+j</code></td>
+</tr>
+<tr>
+<td>Counted loop</td>
+<td><code>For (each i from 1 to 5)</code> … <code>End-for</code>; an inner loop can start from the outer variable: <code>For (each j from the value of i to 1)</code></td>
+</tr>
+<tr>
+<td>Condition loop</td>
+<td><code>While(b)</code> … <code>End-while</code> (the condition is <code>b</code> alone, so the loop runs while <code>b</code> is non-zero; my reading)</td>
+</tr>
+<tr>
+<td>Branch</td>
+<td><code>If (cond) then</code> … <code>Else</code> … <code>End-if</code> (casing is not consistent: <code>if</code>, <code>Else</code>, <code>end-if</code> all appear)</td>
+</tr>
+<tr>
+<td>Logic</td>
+<td><code>and</code>, <code>&amp;&amp;</code>; remainder is written <code>MOD</code></td>
+</tr>
+<tr>
+<td>Output</td>
+<td><code>display "text"</code> or <code>print expression</code></td>
+</tr>
+<tr>
+<td>Function</td>
+<td><code>Integer func (Integer a, Integer b)</code> … <code>return a</code> … <code>End-function func()</code></td>
+</tr>
+</tbody>
+</table>
+<p>Two habits from these five items: two of the five are <code>If</code> questions whose condition turns out <strong>false</strong> (one fails exactly at its boundary, <code>Number&gt;90</code> with <code>Number=90</code>), so check the <code>Else</code> branch first; and a <code>While(b)</code> loop built on <code>a MOD b</code> is Euclid's algorithm. Do not be thrown by the mixed casing; read the structure, not the spelling.</p>
+<h2 id="3-concept-notes">3. Concept notes</h2>
+<h3 id="31-the-one-rule">3.1 The one rule</h3>
+<ul>
+<li><strong><code>++i</code> (pre-increment):</strong> add 1 to i, <strong>then</strong> use i.</li>
+<li><strong><code>i++</code> (post-increment):</strong> use i, <strong>then</strong> add 1 to i.</li>
+<li>Same for <code>--</code>.</li>
+</ul>
+<p>In both cases <strong>i ends one higher (or lower)</strong>; only the value <em>used in the expression</em> differs.</p>
+<h3 id="32-evaluate-left-to-right">3.2 Evaluate left to right</h3>
+<p>Java (and the pseudocode that mirrors it) evaluates operands <strong>from left to right</strong>, updating i as it goes. So each occurrence of <code>i</code>, <code>i++</code>, <code>++i</code> sees the current value.</p>
+<p>Start i = 2:
+- <code>++i + ++i</code> → (3) + (4) = <strong>7</strong> and i = 4.
+- <code>i++ + i++</code> → (2) + (3) = 5 and i = 4.
+- <code>i++ + ++i</code> → (2) + (4) = 6 and i = 4.
+- <code>++i + i++</code> → (3) + (3) = 6 and i = 4.</p>
+<h3 id="33-a-loop-with-x-and-x-">3.3 A loop with <code>++x</code> and <code>x--</code></h3>
+<p><code>do { ++x; display x; x--; } while (x &gt;= -1)</code> with x = 0: <code>++x</code> makes 1; it displays 1; <code>x--</code> returns it to 0; the test <code>0 &gt;= -1</code> is true; so it repeats forever, printing 1 each time.</p>
+<h3 id="34-fill-the-blank-questions">3.4 Fill-the-blank questions</h3>
+<p>Write the start value; try each option in turn; compute result and i after each; pick the option that gives both required values. Do not try to reason about “which operator”; just run all four.</p>
+<h3 id="35-undefined-in-c">3.5 Undefined in C</h3>
+<p>In C, an expression that changes the same variable twice with no sequencing (like <code>i++ + i++</code>) is undefined behaviour. The pseudocode in these tests assumes the Java left-to-right reading, so use that.</p>
+<h2 id="4-must-memorise-block">4. Must-memorise block</h2>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>i before</th>
+<th>Value used</th>
+<th>i after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>i++</code></td>
+<td>5</td>
+<td>5</td>
+<td>6</td>
+</tr>
+<tr>
+<td><code>++i</code></td>
+<td>5</td>
+<td>6</td>
+<td>6</td>
+</tr>
+<tr>
+<td><code>i--</code></td>
+<td>5</td>
+<td>5</td>
+<td>4</td>
+</tr>
+<tr>
+<td><code>--i</code></td>
+<td>5</td>
+<td>4</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Whichever form, <code>i</code> changes by exactly one.</strong> Only the value used differs.</p>
+<h2 id="5-worked-examples">5. Worked examples</h2>
+<p><strong>Example 1 — observed P13.</strong> i = 5. Which statement leaves result = 6 and i = 6?
+- <code>result = ++i</code> → i = 6, result = 6 ✓
+- <code>result = i++</code> → result = 5, i = 6 ✗
+- <code>result = i + 1</code> → result = 6, i = 5 ✗
+- <code>result = --i + 2</code> → i = 4, result = 6 ✗
+Only <strong><code>result = ++i</code></strong>.</p>
+<p><strong>Example 2 — observed P14.</strong> i = 2, result printed must be 7: <code>++i + ++i</code> = 3 + 4 = <strong>7</strong>. The others give 5, 6, 6.</p>
+<p><strong>Example 3 — observed P04.</strong> The <code>do … while</code> above: <strong>infinite loop printing 1</strong>.</p>
+<p><strong>Example 4 — mixed.</strong> i = 7; <code>result = i-- + i</code>. <code>i--</code> uses 7, then i = 6; then <code>i</code> reads 6; result = 13, i = 6. Output <strong>13 6</strong>.</p>
+<p><strong>Example 5 — mixed with a minus.</strong> i = 4; <code>result = ++i - i--</code>. <code>++i</code> → 5; then <code>i--</code> uses 5, then i = 4; result = 5 − 5 = <strong>0</strong>, i = 4.</p>
+<h2 id="6-traps-and-gotchas">6. Traps and gotchas</h2>
+<table>
+<thead>
+<tr>
+<th>Trap</th>
+<th>Why it catches people</th>
+<th>How to avoid it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Forgetting that <code>i</code> changes in a post-increment</td>
+<td><code>i++</code> “does nothing” to the value used</td>
+<td>Track i on a line of its own</td>
+</tr>
+<tr>
+<td>Treating <code>++i + ++i</code> as <code>2 × (i+1)</code></td>
+<td>The second <code>++i</code> sees the updated value</td>
+<td>Evaluate left to right</td>
+</tr>
+<tr>
+<td>Reading the expression right to left</td>
+<td>C habit</td>
+<td>Left to right</td>
+</tr>
+<tr>
+<td>Stopping after the result</td>
+<td>Questions ask for i as well</td>
+<td>Finish both columns</td>
+</tr>
+<tr>
+<td>Assuming a loop terminates</td>
+<td><code>x--</code> after <code>++x</code> can restore the start</td>
+<td>Trace two passes</td>
+</tr>
+<tr>
+<td>Using C's undefined behaviour as an excuse</td>
+<td>The test intends Java order</td>
+<td>Use left to right</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-practice-questions">7. Practice questions</h2>
+<p>More questions: <a href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html"><code>QB-P4-increment-operators-and-dialect.md</code></a>.</p>
+<p><strong>1.</strong> <strong>[Increment operators]</strong> What is the final value of <code>i</code> after this code runs?</p>
+<div class="codehilite"><pre><span></span><code>int i = 2;
+int result = ++i - i++;
+print(result, i);
+</code></pre></div>
+
+<p>a) 4
+b) 3
+c) 5
+d) 2</p>
+<p><strong>2.</strong> <strong>[Increment operators]</strong> What is the final value of <code>i</code> after this code runs?</p>
+<div class="codehilite"><pre><span></span><code>int i = 6;
+int result = i - i++ + i++;
+print(result, i);
+</code></pre></div>
+
+<p>a) 9
+b) 8
+c) 6
+d) 7</p>
+<p><strong>3.</strong> <strong>[Increment operators]</strong> What is the value of <code>result</code> after this code runs? Java-style left-to-right evaluation.</p>
+<div class="codehilite"><pre><span></span><code>int i = 7;
+int result = i++ - ++i;
+print(result, i);
+</code></pre></div>
+
+<p>a) -1
+b) -3
+c) 0
+d) -2</p>
+<p><strong>4.</strong> <strong>[Increment operators]</strong> What is the value of <code>result</code> after this code runs? Java-style left-to-right evaluation.</p>
+<div class="codehilite"><pre><span></span><code>int i = 3;
+int result = --i + i;
+print(result, i);
+</code></pre></div>
+
+<p>a) 6
+b) 4
+c) 5
+d) 3</p>
+<p><strong>5.</strong> <strong>[Increment operators]</strong> What is the value of <code>result</code> after this code runs? Java-style left-to-right evaluation.</p>
+<div class="codehilite"><pre><span></span><code>int i = 5;
+int result = ++i + i--;
+print(result, i);
+</code></pre></div>
+
+<p>a) 11
+b) 13
+c) 12
+d) 10</p>
+<p><strong>6.</strong> <strong>[Increment operators]</strong> What is the value of <code>result</code> after this code runs? Java-style left-to-right evaluation.</p>
+<div class="codehilite"><pre><span></span><code>int i = 7;
+int result = i++ + i-- + i--;
+print(result, i);
+</code></pre></div>
+
+<p>a) 22
+b) 24
+c) 21
+d) 23</p>
+<p><strong>7.</strong> <strong>[Increment operators]</strong> What is the value of <code>result</code> after this code runs? Java-style left-to-right evaluation.</p>
+<div class="codehilite"><pre><span></span><code>int i = 7;
+int result = --i + --i;
+print(result, i);
+</code></pre></div>
+
+<p>a) 14
+b) 13
+c) 11
+d) 12</p>
+<p><strong>8.</strong> <strong>[Increment operators]</strong> What does <code>print(result, i)</code> output?</p>
+<div class="codehilite"><pre><span></span><code>int i = 5;
+int result = --i - i++ - i--;
+print(result, i);
+</code></pre></div>
+
+<p>a) -4 4
+b) -5 4
+c) 4 -5
+d) -5 5</p>
+<p><strong>9.</strong> <strong>[Increment operators]</strong> What does <code>print(result, i)</code> output?</p>
+<div class="codehilite"><pre><span></span><code>int i = 3;
+int result = --i + --i + --i;
+print(result, i);
+</code></pre></div>
+
+<p>a) 9 3
+b) 3 3
+c) 6 0
+d) 3 0</p>
+<p><strong>10.</strong> <strong>[Increment operators]</strong> What is the value of <code>result</code> after this code runs? Java-style left-to-right evaluation.</p>
+<div class="codehilite"><pre><span></span><code>int i = 2;
+int result = i-- + i;
+print(result, i);
+</code></pre></div>
+
+<p>a) 5
+b) 4
+c) 3
+d) 2</p>
+<p><strong>11.</strong> <strong>[Increment operators]</strong> What is the final value of <code>i</code> after this code runs?</p>
+<div class="codehilite"><pre><span></span><code>int i = 4;
+int result = i++ + ++i;
+print(result, i);
+</code></pre></div>
+
+<p>a) 6
+b) 7
+c) 5
+d) 4</p>
+<p><strong>12.</strong> <strong>[Increment operators]</strong> What does <code>print(result, i)</code> output?</p>
+<div class="codehilite"><pre><span></span><code>int i = 6;
+int result = ++i + i--;
+print(result, i);
+</code></pre></div>
+
+<p>a) 15 6
+b) 13 6
+c) 12 6
+d) 14 6</p>
+<h3 id="answer-key">ANSWER KEY</h3>
+<ol>
+<li><strong>a</strong> — Each <code>++</code>/<code>--</code> changes <code>i</code> once, wherever it sits: +2 in total, so <code>i</code> ends at 2 +2 = <strong>4</strong>. (result is 0.)</li>
+<li><strong>b</strong> — Each <code>++</code>/<code>--</code> changes <code>i</code> once, wherever it sits: +2 in total, so <code>i</code> ends at 6 +2 = <strong>8</strong>. (result is 7.)</li>
+<li><strong>d</strong> — <code>i</code> starts at 7. Evaluate left to right: <code>i++</code> reads 7 then i becomes 8; <code>++i</code> makes i 9 then reads 9 → result = <strong>-2</strong>, and <code>i</code> ends at 9.</li>
+<li><strong>b</strong> — <code>i</code> starts at 3. Evaluate left to right: <code>--i</code> makes i 2 then reads 2; <code>i</code> reads 2 → result = <strong>4</strong>, and <code>i</code> ends at 2.</li>
+<li><strong>c</strong> — <code>i</code> starts at 5. Evaluate left to right: <code>++i</code> makes i 6 then reads 6; <code>i--</code> reads 6 then i becomes 5 → result = <strong>12</strong>, and <code>i</code> ends at 5.</li>
+<li><strong>a</strong> — <code>i</code> starts at 7. Evaluate left to right: <code>i++</code> reads 7 then i becomes 8; <code>i--</code> reads 8 then i becomes 7; <code>i--</code> reads 7 then i becomes 6 → result = <strong>22</strong>, and <code>i</code> ends at 6.</li>
+<li><strong>c</strong> — <code>i</code> starts at 7. Evaluate left to right: <code>--i</code> makes i 6 then reads 6; <code>--i</code> makes i 5 then reads 5 → result = <strong>11</strong>, and <code>i</code> ends at 5.</li>
+<li><strong>b</strong> — Left to right: <code>--i</code> makes i 4 then reads 4; <code>i++</code> reads 4 then i becomes 5; <code>i--</code> reads 5 then i becomes 4. result = -5, i = 4 → <strong>-5 4</strong>.</li>
+<li><strong>d</strong> — Left to right: <code>--i</code> makes i 2 then reads 2; <code>--i</code> makes i 1 then reads 1; <code>--i</code> makes i 0 then reads 0. result = 3, i = 0 → <strong>3 0</strong>.</li>
+<li><strong>c</strong> — <code>i</code> starts at 2. Evaluate left to right: <code>i--</code> reads 2 then i becomes 1; <code>i</code> reads 1 → result = <strong>3</strong>, and <code>i</code> ends at 1.</li>
+<li><strong>a</strong> — Each <code>++</code>/<code>--</code> changes <code>i</code> once, wherever it sits: +2 in total, so <code>i</code> ends at 4 +2 = <strong>6</strong>. (result is 10.)</li>
+<li><strong>d</strong> — Left to right: <code>++i</code> makes i 7 then reads 7; <code>i--</code> reads 7 then i becomes 6. result = 14, i = 6 → <strong>14 6</strong>.</li>
+</ol>
+<h2 id="8-resources">8. Resources</h2>
+<ul>
+<li><strong>https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html</strong> — the Java tutorial page on the increment and decrement operators.</li>
+<li><strong>https://www.geeksforgeeks.org/java/operators-in-java/</strong> — Java operators, including the increment and decrement operators.</li>
+</ul>
+<h2 id="9-self-check">9. Self-check</h2>
+<ol>
+<li>Can you say what <code>x = i++</code> leaves in x and in i, starting from i = 5?</li>
+<li>Can you evaluate <code>++i + ++i</code> from i = 2 in five seconds?</li>
+<li>Why does <code>do { ++x; display x; x--; } while (x &gt;= -1)</code> never stop?</li>
+<li>What is different about increments in C and in Java?</li>
+<li>List the Infosys dialect differences from the Accenture dialect.</li>
+</ol>
+<h2 id="10-sources">10. Sources</h2>
+<p>This file was written for this library. <strong>Infosys evidence:</strong> observed questions P13, P14 in <code>../data/questions-observed.csv</code>; section structure and marks in <code>../research/03-pattern-synthesis.md</code> §1; weightage, tier and hours in <code>../data/weightage.json</code> (code <code>P4</code>). Confidence <strong>Medium</strong>. Practice questions in §7 and the bank were generated and checked by execution (brute force, simulation or inverse); see <code>../research/04-qa-report.md</code>. Nothing here is a published Infosys syllabus.</p>
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/pseudocode/P3-bitwise-operators.html"><span>Previous</span><strong>P3 — Bitwise Operators and Operator Precedence</strong></a><a class="pager next" href="../../infosys-se/pseudocode/P5-arrays.html"><span>Next</span><strong>P5 — Arrays — 1D and 2D Traversal and Indexing</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#p4-prepost-increment-and-fill-the-blank">P4 — Pre/post-increment and fill-the-blank</a><a class="toc-l1" href="#1-why-this-topic-matters-here">1. Why this topic matters here</a><a class="toc-l1" href="#2-exactly-what-gets-asked">2. Exactly what gets asked</a><a class="toc-l1" href="#3-concept-notes">3. Concept notes</a><a class="toc-l1" href="#4-must-memorise-block">4. Must-memorise block</a><a class="toc-l1" href="#5-worked-examples">5. Worked examples</a><a class="toc-l1" href="#6-traps-and-gotchas">6. Traps and gotchas</a><a class="toc-l1" href="#7-practice-questions">7. Practice questions</a><a class="toc-l1" href="#8-resources">8. Resources</a><a class="toc-l1" href="#9-self-check">9. Self-check</a><a class="toc-l1" href="#10-sources">10. Sources</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

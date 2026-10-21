@@ -1,0 +1,1919 @@
+[
+ {
+  "url": "infosys-se/00-MASTER-INDEX.html",
+  "src": "infosys-se/00-MASTER-INDEX.md",
+  "disk": "infosys-prep-library/00-MASTER-INDEX.md",
+  "title": "00 \u2014 Master Index: Infosys Systems Engineer (Trainee), campus 2026-27",
+  "kind": "md",
+  "src_chars": 3892,
+  "text_chars": 2829
+ },
+ {
+  "url": "infosys-se/01-APPLICATION-CHECKLIST.html",
+  "src": "infosys-se/01-APPLICATION-CHECKLIST.md",
+  "disk": "infosys-prep-library/01-APPLICATION-CHECKLIST.md",
+  "title": "01 \u2014 Application Checklist",
+  "kind": "md",
+  "src_chars": 3669,
+  "text_chars": 3391
+ },
+ {
+  "url": "infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html",
+  "src": "infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.md",
+  "disk": "infosys-prep-library/02-TOPIC-WEIGHTAGE-ANALYSIS.md",
+  "title": "02 \u2014 Topic Weightage Analysis",
+  "kind": "md",
+  "src_chars": 11327,
+  "text_chars": 6473
+ },
+ {
+  "url": "infosys-se/03-TEST-STRATEGY.html",
+  "src": "infosys-se/03-TEST-STRATEGY.md",
+  "disk": "infosys-prep-library/03-TEST-STRATEGY.md",
+  "title": "03 \u2014 Test Strategy",
+  "kind": "md",
+  "src_chars": 6288,
+  "text_chars": 5836
+ },
+ {
+  "url": "infosys-se/90-RESOURCE-LIBRARY.html",
+  "src": "infosys-se/90-RESOURCE-LIBRARY.md",
+  "disk": "infosys-prep-library/90-RESOURCE-LIBRARY.md",
+  "title": "90 \u2014 Resource Library",
+  "kind": "md",
+  "src_chars": 8059,
+  "text_chars": 7411
+ },
+ {
+  "url": "infosys-se/91-CHEATSHEET.html",
+  "src": "infosys-se/91-CHEATSHEET.md",
+  "disk": "infosys-prep-library/91-CHEATSHEET.md",
+  "title": "91 \u2014 Cheat Sheet",
+  "kind": "md",
+  "src_chars": 5162,
+  "text_chars": 4836
+ },
+ {
+  "url": "infosys-se/99-STUDY-PLAN.html",
+  "src": "infosys-se/99-STUDY-PLAN.md",
+  "disk": "infosys-prep-library/99-STUDY-PLAN.md",
+  "title": "99 \u2014 Study Plan",
+  "kind": "md",
+  "src_chars": 16785,
+  "text_chars": 9757
+ },
+ {
+  "url": "infosys-se/PROGRESS.html",
+  "src": "infosys-se/PROGRESS.md",
+  "disk": "infosys-prep-library/PROGRESS.md",
+  "title": "PROGRESS",
+  "kind": "md",
+  "src_chars": 10262,
+  "text_chars": 9841
+ },
+ {
+  "url": "infosys-se/core-course/00-START-HERE.html",
+  "src": "infosys-se/core-course/00-START-HERE.md",
+  "disk": "infosys-prep-library/core-course/00-START-HERE.md",
+  "title": "Core Course: start here",
+  "kind": "md",
+  "src_chars": 6956,
+  "text_chars": 5062
+ },
+ {
+  "url": "infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html",
+  "src": "infosys-se/core-course/01-Z2-pair-and-figure-puzzles.md",
+  "disk": "infosys-prep-library/core-course/01-Z2-pair-and-figure-puzzles.md",
+  "title": "Lesson 01. Pair and figure puzzles",
+  "kind": "md",
+  "src_chars": 15976,
+  "text_chars": 14662
+ },
+ {
+  "url": "infosys-se/core-course/02-Z1-number-grids.html",
+  "src": "infosys-se/core-course/02-Z1-number-grids.md",
+  "disk": "infosys-prep-library/core-course/02-Z1-number-grids.md",
+  "title": "Lesson 02. Number grids and matrices",
+  "kind": "md",
+  "src_chars": 12695,
+  "text_chars": 11126
+ },
+ {
+  "url": "infosys-se/core-course/03-A2-number-and-letter-series.html",
+  "src": "infosys-se/core-course/03-A2-number-and-letter-series.md",
+  "disk": "infosys-prep-library/core-course/03-A2-number-and-letter-series.md",
+  "title": "Lesson 03. Number and letter series",
+  "kind": "md",
+  "src_chars": 11321,
+  "text_chars": 10324
+ },
+ {
+  "url": "infosys-se/core-course/04-A1-coding-and-decoding.html",
+  "src": "infosys-se/core-course/04-A1-coding-and-decoding.md",
+  "disk": "infosys-prep-library/core-course/04-A1-coding-and-decoding.md",
+  "title": "Lesson 04. Coding and decoding",
+  "kind": "md",
+  "src_chars": 11846,
+  "text_chars": 10877
+ },
+ {
+  "url": "infosys-se/core-course/05-A6-data-sufficiency.html",
+  "src": "infosys-se/core-course/05-A6-data-sufficiency.md",
+  "disk": "infosys-prep-library/core-course/05-A6-data-sufficiency.md",
+  "title": "Lesson 05. Data sufficiency",
+  "kind": "md",
+  "src_chars": 16712,
+  "text_chars": 15367
+ },
+ {
+  "url": "infosys-se/core-course/06-A4-syllogisms-and-deduction.html",
+  "src": "infosys-se/core-course/06-A4-syllogisms-and-deduction.md",
+  "disk": "infosys-prep-library/core-course/06-A4-syllogisms-and-deduction.md",
+  "title": "Lesson 06. Syllogisms and logical deduction",
+  "kind": "md",
+  "src_chars": 17385,
+  "text_chars": 16341
+ },
+ {
+  "url": "infosys-se/core-course/07-A3-operator-logic.html",
+  "src": "infosys-se/core-course/07-A3-operator-logic.md",
+  "disk": "infosys-prep-library/core-course/07-A3-operator-logic.md",
+  "title": "Lesson 07. Operator logic and equation balancing",
+  "kind": "md",
+  "src_chars": 11447,
+  "text_chars": 10496
+ },
+ {
+  "url": "infosys-se/core-course/08-A5-blood-relations.html",
+  "src": "infosys-se/core-course/08-A5-blood-relations.md",
+  "disk": "infosys-prep-library/core-course/08-A5-blood-relations.md",
+  "title": "Lesson 08. Blood relations",
+  "kind": "md",
+  "src_chars": 13106,
+  "text_chars": 12187
+ },
+ {
+  "url": "infosys-se/core-course/09-A21-non-verbal-reasoning.html",
+  "src": "infosys-se/core-course/09-A21-non-verbal-reasoning.md",
+  "disk": "infosys-prep-library/core-course/09-A21-non-verbal-reasoning.md",
+  "title": "Lesson 09. Non-verbal reasoning",
+  "kind": "md",
+  "src_chars": 10449,
+  "text_chars": 9516
+ },
+ {
+  "url": "infosys-se/core-course/10-A7-data-interpretation.html",
+  "src": "infosys-se/core-course/10-A7-data-interpretation.md",
+  "disk": "infosys-prep-library/core-course/10-A7-data-interpretation.md",
+  "title": "Lesson 10. Data interpretation",
+  "kind": "md",
+  "src_chars": 14896,
+  "text_chars": 12917
+ },
+ {
+  "url": "infosys-se/core-course/11-A8-linear-equations-and-ages.html",
+  "src": "infosys-se/core-course/11-A8-linear-equations-and-ages.md",
+  "disk": "infosys-prep-library/core-course/11-A8-linear-equations-and-ages.md",
+  "title": "Lesson 11. Linear equations, ages and heads-and-legs",
+  "kind": "md",
+  "src_chars": 10982,
+  "text_chars": 10004
+ },
+ {
+  "url": "infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html",
+  "src": "infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.md",
+  "disk": "infosys-prep-library/core-course/12-G1-cloze-and-fill-in-the-blanks.md",
+  "title": "Lesson 12. Cloze and fill in the blanks",
+  "kind": "md",
+  "src_chars": 13478,
+  "text_chars": 11806
+ },
+ {
+  "url": "infosys-se/core-course/13-G2-tenses-articles-prepositions.html",
+  "src": "infosys-se/core-course/13-G2-tenses-articles-prepositions.md",
+  "disk": "infosys-prep-library/core-course/13-G2-tenses-articles-prepositions.md",
+  "title": "Lesson 13. Tenses, articles and prepositions",
+  "kind": "md",
+  "src_chars": 13666,
+  "text_chars": 11719
+ },
+ {
+  "url": "infosys-se/core-course/14-V2-spotting-errors.html",
+  "src": "infosys-se/core-course/14-V2-spotting-errors.md",
+  "disk": "infosys-prep-library/core-course/14-V2-spotting-errors.md",
+  "title": "Lesson 14. Spotting errors and grammar rules",
+  "kind": "md",
+  "src_chars": 15887,
+  "text_chars": 13745
+ },
+ {
+  "url": "infosys-se/core-course/15-V3-sentence-correction.html",
+  "src": "infosys-se/core-course/15-V3-sentence-correction.md",
+  "disk": "infosys-prep-library/core-course/15-V3-sentence-correction.md",
+  "title": "Lesson 15. Sentence correction and completion",
+  "kind": "md",
+  "src_chars": 15266,
+  "text_chars": 13265
+ },
+ {
+  "url": "infosys-se/core-course/16-V1-reading-comprehension.html",
+  "src": "infosys-se/core-course/16-V1-reading-comprehension.md",
+  "disk": "infosys-prep-library/core-course/16-V1-reading-comprehension.md",
+  "title": "Lesson 16. Reading comprehension",
+  "kind": "md",
+  "src_chars": 15137,
+  "text_chars": 14101
+ },
+ {
+  "url": "infosys-se/core-course/17-V6-critical-reasoning.html",
+  "src": "infosys-se/core-course/17-V6-critical-reasoning.md",
+  "disk": "infosys-prep-library/core-course/17-V6-critical-reasoning.md",
+  "title": "Lesson 17. Critical reasoning",
+  "kind": "md",
+  "src_chars": 15125,
+  "text_chars": 14151
+ },
+ {
+  "url": "infosys-se/core-course/18-W1-essay-and-email.html",
+  "src": "infosys-se/core-course/18-W1-essay-and-email.md",
+  "disk": "infosys-prep-library/core-course/18-W1-essay-and-email.md",
+  "title": "Lesson 18. The essay and the email",
+  "kind": "md",
+  "src_chars": 15521,
+  "text_chars": 13999
+ },
+ {
+  "url": "infosys-se/core-course/19-P1-loops-and-traces.html",
+  "src": "infosys-se/core-course/19-P1-loops-and-traces.md",
+  "disk": "infosys-prep-library/core-course/19-P1-loops-and-traces.md",
+  "title": "Lesson 19. Loops and trace tables",
+  "kind": "md",
+  "src_chars": 17083,
+  "text_chars": 14126
+ },
+ {
+  "url": "infosys-se/core-course/20-P4-increment-operators.html",
+  "src": "infosys-se/core-course/20-P4-increment-operators.md",
+  "disk": "infosys-prep-library/core-course/20-P4-increment-operators.md",
+  "title": "Lesson 20. Pre- and post-increment",
+  "kind": "md",
+  "src_chars": 13045,
+  "text_chars": 11224
+ },
+ {
+  "url": "infosys-se/core-course/21-P3-bitwise-operators.html",
+  "src": "infosys-se/core-course/21-P3-bitwise-operators.md",
+  "disk": "infosys-prep-library/core-course/21-P3-bitwise-operators.md",
+  "title": "Lesson 21. Bitwise operators",
+  "kind": "md",
+  "src_chars": 15295,
+  "text_chars": 14380
+ },
+ {
+  "url": "infosys-se/core-course/22-P5-arrays.html",
+  "src": "infosys-se/core-course/22-P5-arrays.md",
+  "disk": "infosys-prep-library/core-course/22-P5-arrays.md",
+  "title": "Lesson 22. Arrays",
+  "kind": "md",
+  "src_chars": 16214,
+  "text_chars": 14689
+ },
+ {
+  "url": "infosys-se/core-course/99-LAST-48-HOURS.html",
+  "src": "infosys-se/core-course/99-LAST-48-HOURS.md",
+  "disk": "infosys-prep-library/core-course/99-LAST-48-HOURS.md",
+  "title": "The last 48 hours",
+  "kind": "md",
+  "src_chars": 11920,
+  "text_chars": 10429
+ },
+ {
+  "url": "infosys-se/aptitude/00-INDEX.html",
+  "src": "infosys-se/aptitude/00-INDEX.md",
+  "disk": "infosys-prep-library/aptitude/00-INDEX.md",
+  "title": "Aptitude \u2014 what to study and in what order",
+  "kind": "md",
+  "src_chars": 4478,
+  "text_chars": 2263
+ },
+ {
+  "url": "infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html",
+  "src": "infosys-se/aptitude/00-LOGICAL-FROM-ZERO.md",
+  "disk": "infosys-prep-library/aptitude/00-LOGICAL-FROM-ZERO.md",
+  "title": "Logical-and-Analytical-Reasoning \u2014 From Zero",
+  "kind": "md",
+  "src_chars": 11625,
+  "text_chars": 10985
+ },
+ {
+  "url": "infosys-se/aptitude/00-QUANT-FROM-ZERO.html",
+  "src": "infosys-se/aptitude/00-QUANT-FROM-ZERO.md",
+  "disk": "infosys-prep-library/aptitude/00-QUANT-FROM-ZERO.md",
+  "title": "Quantitative \u2013 From Zero",
+  "kind": "md",
+  "src_chars": 12046,
+  "text_chars": 11295
+ },
+ {
+  "url": "infosys-se/aptitude/00-VERBAL-FROM-ZERO.html",
+  "src": "infosys-se/aptitude/00-VERBAL-FROM-ZERO.md",
+  "disk": "infosys-prep-library/aptitude/00-VERBAL-FROM-ZERO.md",
+  "title": "Verbal-Ability - From Zero",
+  "kind": "md",
+  "src_chars": 11821,
+  "text_chars": 11117
+ },
+ {
+  "url": "infosys-se/topics/A1-coding-and-decoding.html",
+  "src": "infosys-se/topics/A1-coding-and-decoding.md",
+  "disk": "infosys-prep-library/topics/A1-coding-and-decoding.md",
+  "title": "A1 \u2014 Coding and decoding",
+  "kind": "md",
+  "src_chars": 17670,
+  "text_chars": 16129
+ },
+ {
+  "url": "infosys-se/topics/A2-number-and-letter-series.html",
+  "src": "infosys-se/topics/A2-number-and-letter-series.md",
+  "disk": "infosys-prep-library/topics/A2-number-and-letter-series.md",
+  "title": "A2 \u2014 Number and letter series",
+  "kind": "md",
+  "src_chars": 15047,
+  "text_chars": 13617
+ },
+ {
+  "url": "infosys-se/topics/A3-operator-logic.html",
+  "src": "infosys-se/topics/A3-operator-logic.md",
+  "disk": "infosys-prep-library/topics/A3-operator-logic.md",
+  "title": "A3 \u2014 Operator logic and equation balancing",
+  "kind": "md",
+  "src_chars": 9965,
+  "text_chars": 9103
+ },
+ {
+  "url": "infosys-se/topics/A4-syllogisms-and-logical-deduction.html",
+  "src": "infosys-se/topics/A4-syllogisms-and-logical-deduction.md",
+  "disk": "infosys-prep-library/topics/A4-syllogisms-and-logical-deduction.md",
+  "title": "A4 \u2014 Syllogisms and logical deduction",
+  "kind": "md",
+  "src_chars": 15719,
+  "text_chars": 14285
+ },
+ {
+  "url": "infosys-se/topics/A5-blood-relations.html",
+  "src": "infosys-se/topics/A5-blood-relations.md",
+  "disk": "infosys-prep-library/topics/A5-blood-relations.md",
+  "title": "A5 \u2014 Blood relations",
+  "kind": "md",
+  "src_chars": 10820,
+  "text_chars": 9910
+ },
+ {
+  "url": "infosys-se/topics/A6-data-sufficiency.html",
+  "src": "infosys-se/topics/A6-data-sufficiency.md",
+  "disk": "infosys-prep-library/topics/A6-data-sufficiency.md",
+  "title": "A6 \u2014 Data sufficiency",
+  "kind": "md",
+  "src_chars": 21565,
+  "text_chars": 19999
+ },
+ {
+  "url": "infosys-se/topics/A7-data-interpretation.html",
+  "src": "infosys-se/topics/A7-data-interpretation.md",
+  "disk": "infosys-prep-library/topics/A7-data-interpretation.md",
+  "title": "A7 \u2014 Data interpretation: tables and charts",
+  "kind": "md",
+  "src_chars": 11637,
+  "text_chars": 10065
+ },
+ {
+  "url": "infosys-se/topics/A8-linear-equations-and-ages.html",
+  "src": "infosys-se/topics/A8-linear-equations-and-ages.md",
+  "disk": "infosys-prep-library/topics/A8-linear-equations-and-ages.md",
+  "title": "A8 \u2014 Linear equations: ages, heads-and-legs, two-variable systems",
+  "kind": "md",
+  "src_chars": 9837,
+  "text_chars": 8983
+ },
+ {
+  "url": "infosys-se/topics/A9-averages-mixtures-and-alligation.html",
+  "src": "infosys-se/topics/A9-averages-mixtures-and-alligation.md",
+  "disk": "infosys-prep-library/topics/A9-averages-mixtures-and-alligation.md",
+  "title": "A9 \u2014 Averages, mixtures and alligation",
+  "kind": "md",
+  "src_chars": 18005,
+  "text_chars": 16521
+ },
+ {
+  "url": "infosys-se/topics/A10-number-system.html",
+  "src": "infosys-se/topics/A10-number-system.md",
+  "disk": "infosys-prep-library/topics/A10-number-system.md",
+  "title": "A10 \u2014 Number system: primes, divisibility, powers and roots",
+  "kind": "md",
+  "src_chars": 6241,
+  "text_chars": 5511
+ },
+ {
+  "url": "infosys-se/topics/A11-mensuration.html",
+  "src": "infosys-se/topics/A11-mensuration.md",
+  "disk": "infosys-prep-library/topics/A11-mensuration.md",
+  "title": "A11 \u2014 Mensuration: area, surface area, volume",
+  "kind": "md",
+  "src_chars": 8347,
+  "text_chars": 7461
+ },
+ {
+  "url": "infosys-se/topics/A12-percentages.html",
+  "src": "infosys-se/topics/A12-percentages.md",
+  "disk": "infosys-prep-library/topics/A12-percentages.md",
+  "title": "A12 \u2014 Percentages and successive change",
+  "kind": "md",
+  "src_chars": 16118,
+  "text_chars": 14573
+ },
+ {
+  "url": "infosys-se/topics/A13-profit-loss-and-discount.html",
+  "src": "infosys-se/topics/A13-profit-loss-and-discount.md",
+  "disk": "infosys-prep-library/topics/A13-profit-loss-and-discount.md",
+  "title": "A13 \u2014 Profit, loss and discount",
+  "kind": "md",
+  "src_chars": 15953,
+  "text_chars": 14524
+ },
+ {
+  "url": "infosys-se/topics/A14-simple-and-compound-interest.html",
+  "src": "infosys-se/topics/A14-simple-and-compound-interest.md",
+  "disk": "infosys-prep-library/topics/A14-simple-and-compound-interest.md",
+  "title": "A14 \u2014 Simple and compound interest",
+  "kind": "md",
+  "src_chars": 14883,
+  "text_chars": 13424
+ },
+ {
+  "url": "infosys-se/topics/A15-time-speed-distance.html",
+  "src": "infosys-se/topics/A15-time-speed-distance.md",
+  "disk": "infosys-prep-library/topics/A15-time-speed-distance.md",
+  "title": "A15 \u2014 Time, speed, distance and trains",
+  "kind": "md",
+  "src_chars": 15020,
+  "text_chars": 13581
+ },
+ {
+  "url": "infosys-se/topics/A16-time-and-work.html",
+  "src": "infosys-se/topics/A16-time-and-work.md",
+  "disk": "infosys-prep-library/topics/A16-time-and-work.md",
+  "title": "A16 \u2014 Time and work",
+  "kind": "md",
+  "src_chars": 6167,
+  "text_chars": 5520
+ },
+ {
+  "url": "infosys-se/topics/A17-ratio-and-proportion.html",
+  "src": "infosys-se/topics/A17-ratio-and-proportion.md",
+  "disk": "infosys-prep-library/topics/A17-ratio-and-proportion.md",
+  "title": "A17 \u2014 Ratio, proportion and cost models",
+  "kind": "md",
+  "src_chars": 16280,
+  "text_chars": 14709
+ },
+ {
+  "url": "infosys-se/topics/A18-permutations-combinations-probability.html",
+  "src": "infosys-se/topics/A18-permutations-combinations-probability.md",
+  "disk": "infosys-prep-library/topics/A18-permutations-combinations-probability.md",
+  "title": "A18 \u2014 Permutations, combinations and probability",
+  "kind": "md",
+  "src_chars": 6316,
+  "text_chars": 5586
+ },
+ {
+  "url": "infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html",
+  "src": "infosys-se/topics/A19-seating-and-analytical-puzzle-sets.md",
+  "disk": "infosys-prep-library/topics/A19-seating-and-analytical-puzzle-sets.md",
+  "title": "A19 \u2014 Analytical puzzle SETS on shared premises",
+  "kind": "md",
+  "src_chars": 16705,
+  "text_chars": 15116
+ },
+ {
+  "url": "infosys-se/topics/A20-cryptarithmetic.html",
+  "src": "infosys-se/topics/A20-cryptarithmetic.md",
+  "disk": "infosys-prep-library/topics/A20-cryptarithmetic.md",
+  "title": "A20 \u2014 Cryptarithmetic",
+  "kind": "md",
+  "src_chars": 7602,
+  "text_chars": 6826
+ },
+ {
+  "url": "infosys-se/topics/A21-non-verbal-reasoning.html",
+  "src": "infosys-se/topics/A21-non-verbal-reasoning.md",
+  "disk": "infosys-prep-library/topics/A21-non-verbal-reasoning.md",
+  "title": "A21 \u2014 Non-verbal reasoning",
+  "kind": "md",
+  "src_chars": 5948,
+  "text_chars": 5239
+ },
+ {
+  "url": "infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html",
+  "src": "infosys-se/topics/G1-fill-in-the-blanks-and-cloze.md",
+  "disk": "infosys-prep-library/topics/G1-fill-in-the-blanks-and-cloze.md",
+  "title": "G1 \u2014 Fill in the blanks and cloze",
+  "kind": "md",
+  "src_chars": 20485,
+  "text_chars": 18636
+ },
+ {
+  "url": "infosys-se/topics/G2-grammar-tense-articles-prepositions.html",
+  "src": "infosys-se/topics/G2-grammar-tense-articles-prepositions.md",
+  "disk": "infosys-prep-library/topics/G2-grammar-tense-articles-prepositions.md",
+  "title": "G2 \u2014 Tense, articles, prepositions and voice",
+  "kind": "md",
+  "src_chars": 10739,
+  "text_chars": 9575
+ },
+ {
+  "url": "infosys-se/topics/G2a-active-and-passive-voice.html",
+  "src": "infosys-se/topics/G2a-active-and-passive-voice.md",
+  "disk": "infosys-prep-library/topics/G2a-active-and-passive-voice.md",
+  "title": "G2 \u2014 Active and passive voice",
+  "kind": "md",
+  "src_chars": 18730,
+  "text_chars": 16981
+ },
+ {
+  "url": "infosys-se/topics/V1-reading-comprehension.html",
+  "src": "infosys-se/topics/V1-reading-comprehension.md",
+  "disk": "infosys-prep-library/topics/V1-reading-comprehension.md",
+  "title": "V1 \u2014 Reading comprehension",
+  "kind": "md",
+  "src_chars": 21920,
+  "text_chars": 20360
+ },
+ {
+  "url": "infosys-se/topics/V2-spotting-errors-and-grammar-rules.html",
+  "src": "infosys-se/topics/V2-spotting-errors-and-grammar-rules.md",
+  "disk": "infosys-prep-library/topics/V2-spotting-errors-and-grammar-rules.md",
+  "title": "V2 \u2014 Spotting errors and grammar rules",
+  "kind": "md",
+  "src_chars": 16481,
+  "text_chars": 14596
+ },
+ {
+  "url": "infosys-se/topics/V3-sentence-correction.html",
+  "src": "infosys-se/topics/V3-sentence-correction.md",
+  "disk": "infosys-prep-library/topics/V3-sentence-correction.md",
+  "title": "V3 \u2014 Sentence correction and improvement",
+  "kind": "md",
+  "src_chars": 18025,
+  "text_chars": 16044
+ },
+ {
+  "url": "infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html",
+  "src": "infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.md",
+  "disk": "infosys-prep-library/topics/V4-synonyms-antonyms-and-vocabulary.md",
+  "title": "V4 \u2014 Synonyms, antonyms and vocabulary",
+  "kind": "md",
+  "src_chars": 19315,
+  "text_chars": 16788
+ },
+ {
+  "url": "infosys-se/topics/V5-para-jumbles.html",
+  "src": "infosys-se/topics/V5-para-jumbles.md",
+  "disk": "infosys-prep-library/topics/V5-para-jumbles.md",
+  "title": "V5 \u2014 Para-jumbles",
+  "kind": "md",
+  "src_chars": 11681,
+  "text_chars": 10830
+ },
+ {
+  "url": "infosys-se/topics/V6-critical-reasoning.html",
+  "src": "infosys-se/topics/V6-critical-reasoning.md",
+  "disk": "infosys-prep-library/topics/V6-critical-reasoning.md",
+  "title": "V6 \u2014 Critical reasoning",
+  "kind": "md",
+  "src_chars": 9617,
+  "text_chars": 8930
+ },
+ {
+  "url": "infosys-se/topics/W1-english-writing.html",
+  "src": "infosys-se/topics/W1-english-writing.md",
+  "disk": "infosys-prep-library/topics/W1-english-writing.md",
+  "title": "W1 \u2014 English writing: essay and email",
+  "kind": "md",
+  "src_chars": 11017,
+  "text_chars": 10199
+ },
+ {
+  "url": "infosys-se/puzzles/00-INDEX.html",
+  "src": "infosys-se/puzzles/00-INDEX.md",
+  "disk": "infosys-prep-library/puzzles/00-INDEX.md",
+  "title": "Numerical Puzzle \u2014 index",
+  "kind": "md",
+  "src_chars": 780,
+  "text_chars": 542
+ },
+ {
+  "url": "infosys-se/puzzles/Z1-number-grids-and-matrices.html",
+  "src": "infosys-se/puzzles/Z1-number-grids-and-matrices.md",
+  "disk": "infosys-prep-library/puzzles/Z1-number-grids-and-matrices.md",
+  "title": "Z1 \u2014 Number grids and matrices",
+  "kind": "md",
+  "src_chars": 13930,
+  "text_chars": 12236
+ },
+ {
+  "url": "infosys-se/puzzles/Z2-pair-and-figure-rules.html",
+  "src": "infosys-se/puzzles/Z2-pair-and-figure-rules.md",
+  "disk": "infosys-prep-library/puzzles/Z2-pair-and-figure-rules.md",
+  "title": "Z2 \u2014 Pair and figure rules",
+  "kind": "md",
+  "src_chars": 14979,
+  "text_chars": 13454
+ },
+ {
+  "url": "infosys-se/pseudocode/00-INDEX.html",
+  "src": "infosys-se/pseudocode/00-INDEX.md",
+  "disk": "infosys-prep-library/pseudocode/00-INDEX.md",
+  "title": "Pseudocode \u2014 index",
+  "kind": "md",
+  "src_chars": 1776,
+  "text_chars": 840
+ },
+ {
+  "url": "infosys-se/pseudocode/P1-loops-iteration.html",
+  "src": "infosys-se/pseudocode/P1-loops-iteration.md",
+  "disk": "infosys-prep-library/pseudocode/P1-loops-iteration.md",
+  "title": "P1 \u2014 Loops and Iteration Counting",
+  "kind": "md",
+  "src_chars": 31445,
+  "text_chars": 25662
+ },
+ {
+  "url": "infosys-se/pseudocode/P2-recursion.html",
+  "src": "infosys-se/pseudocode/P2-recursion.md",
+  "disk": "infosys-prep-library/pseudocode/P2-recursion.md",
+  "title": "P2 \u2014 Recursion \u2014 Trace, Base Case, Accumulation",
+  "kind": "md",
+  "src_chars": 34008,
+  "text_chars": 27556
+ },
+ {
+  "url": "infosys-se/pseudocode/P3-bitwise-operators.html",
+  "src": "infosys-se/pseudocode/P3-bitwise-operators.md",
+  "disk": "infosys-prep-library/pseudocode/P3-bitwise-operators.md",
+  "title": "P3 \u2014 Bitwise Operators and Operator Precedence",
+  "kind": "md",
+  "src_chars": 27726,
+  "text_chars": 24123
+ },
+ {
+  "url": "infosys-se/pseudocode/P4-increment-operators-and-dialect.html",
+  "src": "infosys-se/pseudocode/P4-increment-operators-and-dialect.md",
+  "disk": "infosys-prep-library/pseudocode/P4-increment-operators-and-dialect.md",
+  "title": "P4 \u2014 Pre/post-increment and fill-the-blank",
+  "kind": "md",
+  "src_chars": 12464,
+  "text_chars": 10983
+ },
+ {
+  "url": "infosys-se/pseudocode/P5-arrays.html",
+  "src": "infosys-se/pseudocode/P5-arrays.md",
+  "disk": "infosys-prep-library/pseudocode/P5-arrays.md",
+  "title": "P5 \u2014 Arrays \u2014 1D and 2D Traversal and Indexing",
+  "kind": "md",
+  "src_chars": 37355,
+  "text_chars": 31155
+ },
+ {
+  "url": "infosys-se/pseudocode/P6-conditionals-nested-if.html",
+  "src": "infosys-se/pseudocode/P6-conditionals-nested-if.md",
+  "disk": "infosys-prep-library/pseudocode/P6-conditionals-nested-if.md",
+  "title": "P6 \u2014 Conditionals and Branch Selection in Pseudocode",
+  "kind": "md",
+  "src_chars": 31944,
+  "text_chars": 26632
+ },
+ {
+  "url": "infosys-se/pseudocode/P7-functions-scope.html",
+  "src": "infosys-se/pseudocode/P7-functions-scope.md",
+  "disk": "infosys-prep-library/pseudocode/P7-functions-scope.md",
+  "title": "P7 \u2014 Functions \u2014 Scope and Pass by Value vs Reference",
+  "kind": "md",
+  "src_chars": 30994,
+  "text_chars": 26869
+ },
+ {
+  "url": "infosys-se/pseudocode/P8-snippet-complexity.html",
+  "src": "infosys-se/pseudocode/P8-snippet-complexity.md",
+  "disk": "infosys-prep-library/pseudocode/P8-snippet-complexity.md",
+  "title": "P8 \u2014 Reading Time and Space Complexity off a Snippet",
+  "kind": "md",
+  "src_chars": 22362,
+  "text_chars": 17895
+ },
+ {
+  "url": "infosys-se/pseudocode/P9-oop-in-pseudocode.html",
+  "src": "infosys-se/pseudocode/P9-oop-in-pseudocode.md",
+  "disk": "infosys-prep-library/pseudocode/P9-oop-in-pseudocode.md",
+  "title": "P9 \u2014 OOP in pseudocode: inheritance and overriding",
+  "kind": "md",
+  "src_chars": 7040,
+  "text_chars": 6447
+ },
+ {
+  "url": "infosys-se/pseudocode/P10-strings-ascii.html",
+  "src": "infosys-se/pseudocode/P10-strings-ascii.md",
+  "disk": "infosys-prep-library/pseudocode/P10-strings-ascii.md",
+  "title": "P10 \u2014 Strings \u2014 Traversal, Reversal and ASCII Arithmetic",
+  "kind": "md",
+  "src_chars": 30099,
+  "text_chars": 25999
+ },
+ {
+  "url": "infosys-se/question-banks/MOCK-01-ANSWERS.html",
+  "src": "infosys-se/question-banks/MOCK-01-ANSWERS.md",
+  "disk": "infosys-prep-library/question-banks/MOCK-01-ANSWERS.md",
+  "title": "MOCK-01 \u2014 Answers and working",
+  "kind": "md",
+  "src_chars": 8601,
+  "text_chars": 7671
+ },
+ {
+  "url": "infosys-se/question-banks/MOCK-01.html",
+  "src": "infosys-se/question-banks/MOCK-01.md",
+  "disk": "infosys-prep-library/question-banks/MOCK-01.md",
+  "title": "MOCK-01 \u2014 Full-length Systems Engineer mock test",
+  "kind": "md",
+  "src_chars": 15024,
+  "text_chars": 13852
+ },
+ {
+  "url": "infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html",
+  "src": "infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.md",
+  "disk": "infosys-prep-library/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.md",
+  "title": "QB-98 \u2014 The official sample paper, solved",
+  "kind": "md",
+  "src_chars": 21205,
+  "text_chars": 19102
+ },
+ {
+  "url": "infosys-se/question-banks/QB-99-OBSERVED-POOL.html",
+  "src": "infosys-se/question-banks/QB-99-OBSERVED-POOL.md",
+  "disk": "infosys-prep-library/question-banks/QB-99-OBSERVED-POOL.md",
+  "title": "QB-99 \u2014 Observed Question Pool",
+  "kind": "md",
+  "src_chars": 37283,
+  "text_chars": 32294
+ },
+ {
+  "url": "infosys-se/question-banks/QB-A1-coding-decoding.html",
+  "src": "infosys-se/question-banks/QB-A1-coding-decoding.md",
+  "disk": "infosys-prep-library/question-banks/QB-A1-coding-decoding.md",
+  "title": "QB-A1 \u2014 Coding and decoding",
+  "kind": "md",
+  "src_chars": 9998,
+  "text_chars": 9298
+ },
+ {
+  "url": "infosys-se/question-banks/QB-A2-number-and-letter-series.html",
+  "src": "infosys-se/question-banks/QB-A2-number-and-letter-series.md",
+  "disk": "infosys-prep-library/question-banks/QB-A2-number-and-letter-series.md",
+  "title": "QB-A2 \u2014 Number and letter series",
+  "kind": "md",
+  "src_chars": 8132,
+  "text_chars": 7470
+ },
+ {
+  "url": "infosys-se/question-banks/QB-A3-operator-logic.html",
+  "src": "infosys-se/question-banks/QB-A3-operator-logic.md",
+  "disk": "infosys-prep-library/question-banks/QB-A3-operator-logic.md",
+  "title": "QB-A3 \u2014 Operator logic",
+  "kind": "md",
+  "src_chars": 6563,
+  "text_chars": 6110
+ },
+ {
+  "url": "infosys-se/question-banks/QB-A4-ordered-deduction.html",
+  "src": "infosys-se/question-banks/QB-A4-ordered-deduction.md",
+  "disk": "infosys-prep-library/question-banks/QB-A4-ordered-deduction.md",
+  "title": "QB-A4 \u2014 Deductive reasoning: which statements entail which",
+  "kind": "md",
+  "src_chars": 9951,
+  "text_chars": 9551
+ },
+ {
+  "url": "infosys-se/question-banks/QB-A5-blood-relations.html",
+  "src": "infosys-se/question-banks/QB-A5-blood-relations.md",
+  "disk": "infosys-prep-library/question-banks/QB-A5-blood-relations.md",
+  "title": "QB-A5 \u2014 Blood relations",
+  "kind": "md",
+  "src_chars": 7082,
+  "text_chars": 6709
+ },
+ {
+  "url": "infosys-se/question-banks/QB-A6-data-sufficiency-1234.html",
+  "src": "infosys-se/question-banks/QB-A6-data-sufficiency-1234.md",
+  "disk": "infosys-prep-library/question-banks/QB-A6-data-sufficiency-1234.md",
+  "title": "QB-A6 \u2014 Data sufficiency in the official 1-2-3-4 format",
+  "kind": "md",
+  "src_chars": 14402,
+  "text_chars": 13488
+ },
+ {
+  "url": "infosys-se/question-banks/QB-A7-data-interpretation.html",
+  "src": "infosys-se/question-banks/QB-A7-data-interpretation.md",
+  "disk": "infosys-prep-library/question-banks/QB-A7-data-interpretation.md",
+  "title": "QB-A7 \u2014 Data interpretation",
+  "kind": "md",
+  "src_chars": 10977,
+  "text_chars": 9212
+ },
+ {
+  "url": "infosys-se/question-banks/QB-A8-linear-equations-and-ages.html",
+  "src": "infosys-se/question-banks/QB-A8-linear-equations-and-ages.md",
+  "disk": "infosys-prep-library/question-banks/QB-A8-linear-equations-and-ages.md",
+  "title": "QB-A8 \u2014 Linear equations and ages",
+  "kind": "md",
+  "src_chars": 8710,
+  "text_chars": 8131
+ },
+ {
+  "url": "infosys-se/question-banks/QB-A9-replacement-mixtures.html",
+  "src": "infosys-se/question-banks/QB-A9-replacement-mixtures.md",
+  "disk": "infosys-prep-library/question-banks/QB-A9-replacement-mixtures.md",
+  "title": "QB-A9 \u2014 Replacement mixtures (milk and water)",
+  "kind": "md",
+  "src_chars": 6284,
+  "text_chars": 5932
+ },
+ {
+  "url": "infosys-se/question-banks/QB-A10-number-system.html",
+  "src": "infosys-se/question-banks/QB-A10-number-system.md",
+  "disk": "infosys-prep-library/question-banks/QB-A10-number-system.md",
+  "title": "QB-A10 \u2014 Number system",
+  "kind": "md",
+  "src_chars": 2969,
+  "text_chars": 2705
+ },
+ {
+  "url": "infosys-se/question-banks/QB-A11-mensuration.html",
+  "src": "infosys-se/question-banks/QB-A11-mensuration.md",
+  "disk": "infosys-prep-library/question-banks/QB-A11-mensuration.md",
+  "title": "QB-A11 \u2014 Mensuration",
+  "kind": "md",
+  "src_chars": 5274,
+  "text_chars": 4821
+ },
+ {
+  "url": "infosys-se/question-banks/QB-A16-time-and-work.html",
+  "src": "infosys-se/question-banks/QB-A16-time-and-work.md",
+  "disk": "infosys-prep-library/question-banks/QB-A16-time-and-work.md",
+  "title": "QB-A16 \u2014 Time and work",
+  "kind": "md",
+  "src_chars": 3905,
+  "text_chars": 3632
+ },
+ {
+  "url": "infosys-se/question-banks/QB-A18-permutations-combinations-probability.html",
+  "src": "infosys-se/question-banks/QB-A18-permutations-combinations-probability.md",
+  "disk": "infosys-prep-library/question-banks/QB-A18-permutations-combinations-probability.md",
+  "title": "QB-A18 \u2014 Permutations, combinations and probability",
+  "kind": "md",
+  "src_chars": 3515,
+  "text_chars": 3238
+ },
+ {
+  "url": "infosys-se/question-banks/QB-A19-if-then-rules.html",
+  "src": "infosys-se/question-banks/QB-A19-if-then-rules.md",
+  "disk": "infosys-prep-library/question-banks/QB-A19-if-then-rules.md",
+  "title": "QB-A19 \u2014 If-then attendance puzzles",
+  "kind": "md",
+  "src_chars": 11209,
+  "text_chars": 10577
+ },
+ {
+  "url": "infosys-se/question-banks/QB-A20-cryptarithmetic.html",
+  "src": "infosys-se/question-banks/QB-A20-cryptarithmetic.md",
+  "disk": "infosys-prep-library/question-banks/QB-A20-cryptarithmetic.md",
+  "title": "QB-A20 \u2014 Cryptarithmetic",
+  "kind": "md",
+  "src_chars": 4108,
+  "text_chars": 3762
+ },
+ {
+  "url": "infosys-se/question-banks/QB-A21-non-verbal-reasoning.html",
+  "src": "infosys-se/question-banks/QB-A21-non-verbal-reasoning.md",
+  "disk": "infosys-prep-library/question-banks/QB-A21-non-verbal-reasoning.md",
+  "title": "QB-A21 \u2014 Non-verbal reasoning (text forms)",
+  "kind": "md",
+  "src_chars": 3121,
+  "text_chars": 2858
+ },
+ {
+  "url": "infosys-se/question-banks/QB-G2-cloze-passages.html",
+  "src": "infosys-se/question-banks/QB-G2-cloze-passages.md",
+  "disk": "infosys-prep-library/question-banks/QB-G2-cloze-passages.md",
+  "title": "QB-G2 \u2014 Cloze passages (five blanks each)",
+  "kind": "md",
+  "src_chars": 6331,
+  "text_chars": 5733
+ },
+ {
+  "url": "infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html",
+  "src": "infosys-se/question-banks/QB-IV1-sdlc-agile-testing.md",
+  "disk": "infosys-prep-library/question-banks/QB-IV1-sdlc-agile-testing.md",
+  "title": "QB-IV1 \u2014 SDLC, Agile vs Waterfall, Testing and Version Control",
+  "kind": "md",
+  "src_chars": 15498,
+  "text_chars": 14630
+ },
+ {
+  "url": "infosys-se/question-banks/QB-IV2-oop-four-pillars.html",
+  "src": "infosys-se/question-banks/QB-IV2-oop-four-pillars.md",
+  "disk": "infosys-prep-library/question-banks/QB-IV2-oop-four-pillars.md",
+  "title": "QB-IV2 \u2014 OOP \u2014 The Four Pillars, Overloading vs Overriding",
+  "kind": "md",
+  "src_chars": 43871,
+  "text_chars": 41694
+ },
+ {
+  "url": "infosys-se/question-banks/QB-IV3-dbms-sql.html",
+  "src": "infosys-se/question-banks/QB-IV3-dbms-sql.md",
+  "disk": "infosys-prep-library/question-banks/QB-IV3-dbms-sql.md",
+  "title": "QB-IV3 \u2014 DBMS and SQL \u2014 Joins, GROUP BY, Keys, Indexes, NULLs",
+  "kind": "md",
+  "src_chars": 32463,
+  "text_chars": 29027
+ },
+ {
+  "url": "infosys-se/question-banks/QB-P1-infosys-dialect-traces.html",
+  "src": "infosys-se/question-banks/QB-P1-infosys-dialect-traces.md",
+  "disk": "infosys-prep-library/question-banks/QB-P1-infosys-dialect-traces.md",
+  "title": "QB-P1 \u2014 Loop and trace questions in the Infosys dialect",
+  "kind": "md",
+  "src_chars": 14272,
+  "text_chars": 11525
+ },
+ {
+  "url": "infosys-se/question-banks/QB-P1-loops-iteration.html",
+  "src": "infosys-se/question-banks/QB-P1-loops-iteration.md",
+  "disk": "infosys-prep-library/question-banks/QB-P1-loops-iteration.md",
+  "title": "QB-P1 \u2014 Loops and Iteration Counting",
+  "kind": "md",
+  "src_chars": 12752,
+  "text_chars": 10581
+ },
+ {
+  "url": "infosys-se/question-banks/QB-P2-recursion.html",
+  "src": "infosys-se/question-banks/QB-P2-recursion.md",
+  "disk": "infosys-prep-library/question-banks/QB-P2-recursion.md",
+  "title": "QB-P2 \u2014 Recursion \u2014 Trace, Base Case, Accumulation",
+  "kind": "md",
+  "src_chars": 12728,
+  "text_chars": 11265
+ },
+ {
+  "url": "infosys-se/question-banks/QB-P3-bitwise-operators.html",
+  "src": "infosys-se/question-banks/QB-P3-bitwise-operators.md",
+  "disk": "infosys-prep-library/question-banks/QB-P3-bitwise-operators.md",
+  "title": "QB-P3 \u2014 Bitwise Operators and Operator Precedence",
+  "kind": "md",
+  "src_chars": 20737,
+  "text_chars": 19811
+ },
+ {
+  "url": "infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html",
+  "src": "infosys-se/question-banks/QB-P4-increment-operators-and-dialect.md",
+  "disk": "infosys-prep-library/question-banks/QB-P4-increment-operators-and-dialect.md",
+  "title": "QB-P4 \u2014 Increment operators",
+  "kind": "md",
+  "src_chars": 8135,
+  "text_chars": 7096
+ },
+ {
+  "url": "infosys-se/question-banks/QB-P5-arrays.html",
+  "src": "infosys-se/question-banks/QB-P5-arrays.md",
+  "disk": "infosys-prep-library/question-banks/QB-P5-arrays.md",
+  "title": "QB-P5 \u2014 Arrays \u2014 1D and 2D Traversal and Indexing",
+  "kind": "md",
+  "src_chars": 26777,
+  "text_chars": 22405
+ },
+ {
+  "url": "infosys-se/question-banks/QB-P6-conditionals-nested-if.html",
+  "src": "infosys-se/question-banks/QB-P6-conditionals-nested-if.md",
+  "disk": "infosys-prep-library/question-banks/QB-P6-conditionals-nested-if.md",
+  "title": "QB-P6 \u2014 Conditionals and Branch Selection in Pseudocode",
+  "kind": "md",
+  "src_chars": 29904,
+  "text_chars": 25328
+ },
+ {
+  "url": "infosys-se/question-banks/QB-P7-functions-scope.html",
+  "src": "infosys-se/question-banks/QB-P7-functions-scope.md",
+  "disk": "infosys-prep-library/question-banks/QB-P7-functions-scope.md",
+  "title": "QB-P7 \u2014 Functions \u2014 Scope and Pass by Value vs Reference",
+  "kind": "md",
+  "src_chars": 11833,
+  "text_chars": 9748
+ },
+ {
+  "url": "infosys-se/question-banks/QB-P8-snippet-complexity.html",
+  "src": "infosys-se/question-banks/QB-P8-snippet-complexity.md",
+  "disk": "infosys-prep-library/question-banks/QB-P8-snippet-complexity.md",
+  "title": "QB-P8 \u2014 Reading Time and Space Complexity off a Snippet",
+  "kind": "md",
+  "src_chars": 12712,
+  "text_chars": 11741
+ },
+ {
+  "url": "infosys-se/question-banks/QB-P9-oop-in-pseudocode.html",
+  "src": "infosys-se/question-banks/QB-P9-oop-in-pseudocode.md",
+  "disk": "infosys-prep-library/question-banks/QB-P9-oop-in-pseudocode.md",
+  "title": "QB-P9 \u2014 OOP tracing",
+  "kind": "md",
+  "src_chars": 3003,
+  "text_chars": 3007
+ },
+ {
+  "url": "infosys-se/question-banks/QB-P10-strings-ascii.html",
+  "src": "infosys-se/question-banks/QB-P10-strings-ascii.md",
+  "disk": "infosys-prep-library/question-banks/QB-P10-strings-ascii.md",
+  "title": "QB-P10 \u2014 Strings \u2014 Traversal, Reversal and ASCII Arithmetic",
+  "kind": "md",
+  "src_chars": 10196,
+  "text_chars": 8735
+ },
+ {
+  "url": "infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html",
+  "src": "infosys-se/question-banks/QB-V2-identify-the-correct-sentence.md",
+  "disk": "infosys-prep-library/question-banks/QB-V2-identify-the-correct-sentence.md",
+  "title": "QB-V2 \u2014 Identify the correct sentence",
+  "kind": "md",
+  "src_chars": 3034,
+  "text_chars": 2842
+ },
+ {
+  "url": "infosys-se/question-banks/QB-V5-para-jumbles.html",
+  "src": "infosys-se/question-banks/QB-V5-para-jumbles.md",
+  "disk": "infosys-prep-library/question-banks/QB-V5-para-jumbles.md",
+  "title": "QB-V5 \u2014 Para-jumbles",
+  "kind": "md",
+  "src_chars": 4608,
+  "text_chars": 4356
+ },
+ {
+  "url": "infosys-se/question-banks/QB-V6-critical-reasoning.html",
+  "src": "infosys-se/question-banks/QB-V6-critical-reasoning.md",
+  "disk": "infosys-prep-library/question-banks/QB-V6-critical-reasoning.md",
+  "title": "QB-V6 \u2014 Critical reasoning",
+  "kind": "md",
+  "src_chars": 3375,
+  "text_chars": 3232
+ },
+ {
+  "url": "infosys-se/question-banks/QB-W1-writing-prompts.html",
+  "src": "infosys-se/question-banks/QB-W1-writing-prompts.md",
+  "disk": "infosys-prep-library/question-banks/QB-W1-writing-prompts.md",
+  "title": "QB-W1 \u2014 Writing prompts",
+  "kind": "md",
+  "src_chars": 2915,
+  "text_chars": 2710
+ },
+ {
+  "url": "infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html",
+  "src": "infosys-se/question-banks/QB-Z1-number-grids-and-matrices.md",
+  "disk": "infosys-prep-library/question-banks/QB-Z1-number-grids-and-matrices.md",
+  "title": "QB-Z1 \u2014 Number grids and matrices",
+  "kind": "md",
+  "src_chars": 10177,
+  "text_chars": 8486
+ },
+ {
+  "url": "infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html",
+  "src": "infosys-se/question-banks/QB-Z2-pair-and-figure-rules.md",
+  "disk": "infosys-prep-library/question-banks/QB-Z2-pair-and-figure-rules.md",
+  "title": "QB-Z2 \u2014 Pair and figure rules",
+  "kind": "md",
+  "src_chars": 13191,
+  "text_chars": 11557
+ },
+ {
+  "url": "infosys-se/interview/00-AFTER-SELECTION.html",
+  "src": "infosys-se/interview/00-AFTER-SELECTION.md",
+  "disk": "infosys-prep-library/interview/00-AFTER-SELECTION.md",
+  "title": "After You Are Selected \u2014 what candidates report",
+  "kind": "md",
+  "src_chars": 6620,
+  "text_chars": 6298
+ },
+ {
+  "url": "infosys-se/interview/00-INDEX.html",
+  "src": "infosys-se/interview/00-INDEX.md",
+  "disk": "infosys-prep-library/interview/00-INDEX.md",
+  "title": "Interview \u2014 index",
+  "kind": "md",
+  "src_chars": 1286,
+  "text_chars": 698
+ },
+ {
+  "url": "infosys-se/interview/00-INFOSYS-SPECIFIC.html",
+  "src": "infosys-se/interview/00-INFOSYS-SPECIFIC.md",
+  "disk": "infosys-prep-library/interview/00-INFOSYS-SPECIFIC.md",
+  "title": "Infosys-specific Items \u2014 verified, not asserted",
+  "kind": "md",
+  "src_chars": 3923,
+  "text_chars": 3648
+ },
+ {
+  "url": "infosys-se/interview/00-INTERVIEW-FORMAT.html",
+  "src": "infosys-se/interview/00-INTERVIEW-FORMAT.md",
+  "disk": "infosys-prep-library/interview/00-INTERVIEW-FORMAT.md",
+  "title": "Interview Format \u2014 what is known",
+  "kind": "md",
+  "src_chars": 8133,
+  "text_chars": 7579
+ },
+ {
+  "url": "infosys-se/interview/00-UPGRADE-TRACK.html",
+  "src": "infosys-se/interview/00-UPGRADE-TRACK.md",
+  "disk": "infosys-prep-library/interview/00-UPGRADE-TRACK.md",
+  "title": "The Upgrade Track (DSE and SP) \u2014 what candidates report",
+  "kind": "md",
+  "src_chars": 7013,
+  "text_chars": 6666
+ },
+ {
+  "url": "infosys-se/interview/IV1-sdlc-agile-testing.html",
+  "src": "infosys-se/interview/IV1-sdlc-agile-testing.md",
+  "disk": "infosys-prep-library/interview/IV1-sdlc-agile-testing.md",
+  "title": "IV1 \u2014 SDLC, Agile vs Waterfall, Testing and Version Control",
+  "kind": "md",
+  "src_chars": 25897,
+  "text_chars": 23666
+ },
+ {
+  "url": "infosys-se/interview/IV2-oop-four-pillars.html",
+  "src": "infosys-se/interview/IV2-oop-four-pillars.md",
+  "disk": "infosys-prep-library/interview/IV2-oop-four-pillars.md",
+  "title": "IV2 \u2014 OOP \u2014 The Four Pillars, Overloading vs Overriding",
+  "kind": "md",
+  "src_chars": 41644,
+  "text_chars": 38047
+ },
+ {
+  "url": "infosys-se/interview/IV3-dbms-sql.html",
+  "src": "infosys-se/interview/IV3-dbms-sql.md",
+  "disk": "infosys-prep-library/interview/IV3-dbms-sql.md",
+  "title": "IV3 \u2014 DBMS and SQL \u2014 Joins, GROUP BY, Keys, Indexes, NULLs",
+  "kind": "md",
+  "src_chars": 54959,
+  "text_chars": 48941
+ },
+ {
+  "url": "infosys-se/interview/IV4-projects-and-resume.html",
+  "src": "infosys-se/interview/IV4-projects-and-resume.md",
+  "disk": "infosys-prep-library/interview/IV4-projects-and-resume.md",
+  "title": "IV4 \u2014 Projects and resume",
+  "kind": "md",
+  "src_chars": 10849,
+  "text_chars": 10076
+ },
+ {
+  "url": "infosys-se/interview/IV5-hr-and-behavioural.html",
+  "src": "infosys-se/interview/IV5-hr-and-behavioural.md",
+  "disk": "infosys-prep-library/interview/IV5-hr-and-behavioural.md",
+  "title": "IV5 \u2014 HR and behavioural",
+  "kind": "md",
+  "src_chars": 8795,
+  "text_chars": 8081
+ },
+ {
+  "url": "infosys-se/interview/IV5a-star-stories.html",
+  "src": "infosys-se/interview/IV5a-star-stories.md",
+  "disk": "infosys-prep-library/interview/IV5a-star-stories.md",
+  "title": "IV5 \u2014 STAR stories from your own work",
+  "kind": "md",
+  "src_chars": 14451,
+  "text_chars": 13325
+ },
+ {
+  "url": "infosys-se/interview/IV5b-technology-flexibility.html",
+  "src": "infosys-se/interview/IV5b-technology-flexibility.md",
+  "disk": "infosys-prep-library/interview/IV5b-technology-flexibility.md",
+  "title": "IV5 \u2014 Are you willing to work in any technology?",
+  "kind": "md",
+  "src_chars": 6798,
+  "text_chars": 6168
+ },
+ {
+  "url": "infosys-se/interview/IV6-generative-ai.html",
+  "src": "infosys-se/interview/IV6-generative-ai.md",
+  "disk": "infosys-prep-library/interview/IV6-generative-ai.md",
+  "title": "IV6 \u2014 Generative AI and everyday AI use",
+  "kind": "md",
+  "src_chars": 6805,
+  "text_chars": 6173
+ },
+ {
+  "url": "infosys-se/interview/IV7-light-coding-in-java.html",
+  "src": "infosys-se/interview/IV7-light-coding-in-java.md",
+  "disk": "infosys-prep-library/interview/IV7-light-coding-in-java.md",
+  "title": "IV7 \u2014 Light coding in Java",
+  "kind": "md",
+  "src_chars": 16205,
+  "text_chars": 14957
+ },
+ {
+  "url": "infosys-se/research/00-official-terms.html",
+  "src": "infosys-se/research/00-official-terms.md",
+  "disk": "infosys-prep-library/research/00-official-terms.md",
+  "title": "00 \u2014 Official Terms",
+  "kind": "md",
+  "src_chars": 2495,
+  "text_chars": 2259
+ },
+ {
+  "url": "infosys-se/research/02-online-research-log.html",
+  "src": "infosys-se/research/02-online-research-log.md",
+  "disk": "infosys-prep-library/research/02-online-research-log.md",
+  "title": "02 \u2014 Online Research Log",
+  "kind": "md",
+  "src_chars": 14979,
+  "text_chars": 13685
+ },
+ {
+  "url": "infosys-se/research/03-pattern-synthesis.html",
+  "src": "infosys-se/research/03-pattern-synthesis.md",
+  "disk": "infosys-prep-library/research/03-pattern-synthesis.md",
+  "title": "03 \u2014 Pattern Synthesis",
+  "kind": "md",
+  "src_chars": 16717,
+  "text_chars": 15437
+ },
+ {
+  "url": "infosys-se/research/04-qa-report.html",
+  "src": "infosys-se/research/04-qa-report.md",
+  "disk": "infosys-prep-library/research/04-qa-report.md",
+  "title": "04 \u2014 QA Report",
+  "kind": "md",
+  "src_chars": 23490,
+  "text_chars": 22106
+ },
+ {
+  "url": "infosys-se/research/05-source-credibility.html",
+  "src": "infosys-se/research/05-source-credibility.md",
+  "disk": "infosys-prep-library/research/05-source-credibility.md",
+  "title": "05 \u2014 Source Credibility: previous-year questions",
+  "kind": "md",
+  "src_chars": 12011,
+  "text_chars": 11345
+ },
+ {
+  "url": "infosys-se/research/06-method-sources.html",
+  "src": "infosys-se/research/06-method-sources.md",
+  "disk": "infosys-prep-library/research/06-method-sources.md",
+  "title": "06 \u2014 Method Sources for the Core Course",
+  "kind": "md",
+  "src_chars": 19015,
+  "text_chars": 15235
+ },
+ {
+  "url": "infosys-se/research/07-reddit-arctic-shift.html",
+  "src": "infosys-se/research/07-reddit-arctic-shift.md",
+  "disk": "infosys-prep-library/research/07-reddit-arctic-shift.md",
+  "title": "Reddit research through Arctic Shift",
+  "kind": "md",
+  "src_chars": 14500,
+  "text_chars": 13748
+ },
+ {
+  "url": "infosys-se/data/analysis-tables.html",
+  "src": "infosys-se/data/analysis-tables.md",
+  "disk": "infosys-prep-library/data/analysis-tables.md",
+  "title": "Analysis Tables",
+  "kind": "md",
+  "src_chars": 21829,
+  "text_chars": 17516
+ },
+ {
+  "url": "infosys-se/data/analyze.html",
+  "src": "infosys-se/data/analyze.py",
+  "disk": "infosys-prep-library/data/analyze.py",
+  "title": "analyze.py",
+  "kind": "code",
+  "src_chars": 26919,
+  "text_chars": 36328
+ },
+ {
+  "url": "infosys-se/data/bank_mock.html",
+  "src": "infosys-se/data/bank_mock.py",
+  "disk": "infosys-prep-library/data/bank_mock.py",
+  "title": "bank_mock.py",
+  "kind": "code",
+  "src_chars": 14700,
+  "text_chars": 17112
+ },
+ {
+  "url": "infosys-se/data/bank_verbal.html",
+  "src": "infosys-se/data/bank_verbal.py",
+  "disk": "infosys-prep-library/data/bank_verbal.py",
+  "title": "bank_verbal.py",
+  "kind": "code",
+  "src_chars": 28819,
+  "text_chars": 33385
+ },
+ {
+  "url": "infosys-se/data/build_cheatsheet.html",
+  "src": "infosys-se/data/build_cheatsheet.py",
+  "disk": "infosys-prep-library/data/build_cheatsheet.py",
+  "title": "build_cheatsheet.py",
+  "kind": "code",
+  "src_chars": 12764,
+  "text_chars": 14916
+ },
+ {
+  "url": "infosys-se/data/build_core_course.html",
+  "src": "infosys-se/data/build_core_course.py",
+  "disk": "infosys-prep-library/data/build_core_course.py",
+  "title": "build_core_course.py",
+  "kind": "code",
+  "src_chars": 13343,
+  "text_chars": 15452
+ },
+ {
+  "url": "infosys-se/data/build_docs.html",
+  "src": "infosys-se/data/build_docs.py",
+  "disk": "infosys-prep-library/data/build_docs.py",
+  "title": "build_docs.py",
+  "kind": "code",
+  "src_chars": 14364,
+  "text_chars": 16087
+ },
+ {
+  "url": "infosys-se/data/build_interview.html",
+  "src": "infosys-se/data/build_interview.py",
+  "disk": "infosys-prep-library/data/build_interview.py",
+  "title": "build_interview.py",
+  "kind": "code",
+  "src_chars": 9211,
+  "text_chars": 10928
+ },
+ {
+  "url": "infosys-se/data/build_mock.html",
+  "src": "infosys-se/data/build_mock.py",
+  "disk": "infosys-prep-library/data/build_mock.py",
+  "title": "build_mock.py",
+  "kind": "code",
+  "src_chars": 7712,
+  "text_chars": 8669
+ },
+ {
+  "url": "infosys-se/data/build_observed.html",
+  "src": "infosys-se/data/build_observed.py",
+  "disk": "infosys-prep-library/data/build_observed.py",
+  "title": "build_observed.py",
+  "kind": "code",
+  "src_chars": 24489,
+  "text_chars": 35815
+ },
+ {
+  "url": "infosys-se/data/build_plan.html",
+  "src": "infosys-se/data/build_plan.py",
+  "disk": "infosys-prep-library/data/build_plan.py",
+  "title": "build_plan.py",
+  "kind": "code",
+  "src_chars": 9651,
+  "text_chars": 12349
+ },
+ {
+  "url": "infosys-se/data/build_qb98.html",
+  "src": "infosys-se/data/build_qb98.py",
+  "disk": "infosys-prep-library/data/build_qb98.py",
+  "title": "build_qb98.py",
+  "kind": "code",
+  "src_chars": 6125,
+  "text_chars": 7141
+ },
+ {
+  "url": "infosys-se/data/build_qb99.html",
+  "src": "infosys-se/data/build_qb99.py",
+  "disk": "infosys-prep-library/data/build_qb99.py",
+  "title": "build_qb99.py",
+  "kind": "code",
+  "src_chars": 17095,
+  "text_chars": 20063
+ },
+ {
+  "url": "infosys-se/data/build_resources.html",
+  "src": "infosys-se/data/build_resources.py",
+  "disk": "infosys-prep-library/data/build_resources.py",
+  "title": "build_resources.py",
+  "kind": "code",
+  "src_chars": 5300,
+  "text_chars": 6170
+ },
+ {
+  "url": "infosys-se/data/build_reviews.html",
+  "src": "infosys-se/data/build_reviews.py",
+  "disk": "infosys-prep-library/data/build_reviews.py",
+  "title": "build_reviews.py",
+  "kind": "code",
+  "src_chars": 15056,
+  "text_chars": 20873
+ },
+ {
+  "url": "infosys-se/data/build_topics.html",
+  "src": "infosys-se/data/build_topics.py",
+  "disk": "infosys-prep-library/data/build_topics.py",
+  "title": "build_topics.py",
+  "kind": "code",
+  "src_chars": 15576,
+  "text_chars": 18893
+ },
+ {
+  "url": "infosys-se/data/cc_examples.html",
+  "src": "infosys-se/data/cc_examples.py",
+  "disk": "infosys-prep-library/data/cc_examples.py",
+  "title": "cc_examples.py",
+  "kind": "code",
+  "src_chars": 29391,
+  "text_chars": 35705
+ },
+ {
+  "url": "infosys-se/data/cc_practice.html",
+  "src": "infosys-se/data/cc_practice.py",
+  "disk": "infosys-prep-library/data/cc_practice.py",
+  "title": "cc_practice.py",
+  "kind": "code",
+  "src_chars": 76899,
+  "text_chars": 89333
+ },
+ {
+  "url": "infosys-se/data/cc_readability.html",
+  "src": "infosys-se/data/cc_readability.py",
+  "disk": "infosys-prep-library/data/cc_readability.py",
+  "title": "cc_readability.py",
+  "kind": "code",
+  "src_chars": 1566,
+  "text_chars": 1854
+ },
+ {
+  "url": "infosys-se/data/check_links.html",
+  "src": "infosys-se/data/check_links.py",
+  "disk": "infosys-prep-library/data/check_links.py",
+  "title": "check_links.py",
+  "kind": "code",
+  "src_chars": 1913,
+  "text_chars": 2536
+ },
+ {
+  "url": "infosys-se/data/copy_reused.html",
+  "src": "infosys-se/data/copy_reused.py",
+  "disk": "infosys-prep-library/data/copy_reused.py",
+  "title": "copy_reused.py",
+  "kind": "code",
+  "src_chars": 22423,
+  "text_chars": 26053
+ },
+ {
+  "url": "infosys-se/data/filemap.html",
+  "src": "infosys-se/data/filemap.json",
+  "disk": "infosys-prep-library/data/filemap.json",
+  "title": "filemap.json",
+  "kind": "code",
+  "src_chars": 5079,
+  "text_chars": 6648
+ },
+ {
+  "url": "infosys-se/data/gen_cc_code.html",
+  "src": "infosys-se/data/gen_cc_code.py",
+  "disk": "infosys-prep-library/data/gen_cc_code.py",
+  "title": "gen_cc_code.py",
+  "kind": "code",
+  "src_chars": 10285,
+  "text_chars": 12541
+ },
+ {
+  "url": "infosys-se/data/gen_code.html",
+  "src": "infosys-se/data/gen_code.py",
+  "disk": "infosys-prep-library/data/gen_code.py",
+  "title": "gen_code.py",
+  "kind": "code",
+  "src_chars": 26657,
+  "text_chars": 32520
+ },
+ {
+  "url": "infosys-se/data/gen_core.html",
+  "src": "infosys-se/data/gen_core.py",
+  "disk": "infosys-prep-library/data/gen_core.py",
+  "title": "gen_core.py",
+  "kind": "code",
+  "src_chars": 2235,
+  "text_chars": 2507
+ },
+ {
+  "url": "infosys-se/data/gen_iv7.html",
+  "src": "infosys-se/data/gen_iv7.py",
+  "disk": "infosys-prep-library/data/gen_iv7.py",
+  "title": "gen_iv7.py",
+  "kind": "code",
+  "src_chars": 11226,
+  "text_chars": 12649
+ },
+ {
+  "url": "infosys-se/data/gen_oop.html",
+  "src": "infosys-se/data/gen_oop.py",
+  "disk": "infosys-prep-library/data/gen_oop.py",
+  "title": "gen_oop.py",
+  "kind": "code",
+  "src_chars": 5227,
+  "text_chars": 6398
+ },
+ {
+  "url": "infosys-se/data/gen_puzzles.html",
+  "src": "infosys-se/data/gen_puzzles.py",
+  "disk": "infosys-prep-library/data/gen_puzzles.py",
+  "title": "gen_puzzles.py",
+  "kind": "code",
+  "src_chars": 22380,
+  "text_chars": 25861
+ },
+ {
+  "url": "infosys-se/data/gen_quant.html",
+  "src": "infosys-se/data/gen_quant.py",
+  "disk": "infosys-prep-library/data/gen_quant.py",
+  "title": "gen_quant.py",
+  "kind": "code",
+  "src_chars": 40866,
+  "text_chars": 46918
+ },
+ {
+  "url": "infosys-se/data/gen_reasoning.html",
+  "src": "infosys-se/data/gen_reasoning.py",
+  "disk": "infosys-prep-library/data/gen_reasoning.py",
+  "title": "gen_reasoning.py",
+  "kind": "code",
+  "src_chars": 42560,
+  "text_chars": 51256
+ },
+ {
+  "url": "infosys-se/data/gen_syllogism.html",
+  "src": "infosys-se/data/gen_syllogism.py",
+  "disk": "infosys-prep-library/data/gen_syllogism.py",
+  "title": "gen_syllogism.py",
+  "kind": "code",
+  "src_chars": 6575,
+  "text_chars": 7858
+ },
+ {
+  "url": "infosys-se/data/lib_common.html",
+  "src": "infosys-se/data/lib_common.py",
+  "disk": "infosys-prep-library/data/lib_common.py",
+  "title": "lib_common.py",
+  "kind": "code",
+  "src_chars": 5611,
+  "text_chars": 6836
+ },
+ {
+  "url": "infosys-se/data/links-checked.html",
+  "src": "infosys-se/data/links-checked.json",
+  "disk": "infosys-prep-library/data/links-checked.json",
+  "title": "links-checked.json",
+  "kind": "code",
+  "src_chars": 30008,
+  "text_chars": 38381
+ },
+ {
+  "url": "infosys-se/data/official_sample.html",
+  "src": "infosys-se/data/official_sample.py",
+  "disk": "infosys-prep-library/data/official_sample.py",
+  "title": "official_sample.py",
+  "kind": "code",
+  "src_chars": 25101,
+  "text_chars": 32144
+ },
+ {
+  "url": "infosys-se/data/questions-discarded.html",
+  "src": "infosys-se/data/questions-discarded.csv",
+  "disk": "infosys-prep-library/data/questions-discarded.csv",
+  "title": "questions-discarded.csv",
+  "kind": "code",
+  "src_chars": 1425,
+  "text_chars": 1535
+ },
+ {
+  "url": "infosys-se/data/questions-observed.html",
+  "src": "infosys-se/data/questions-observed.csv",
+  "disk": "infosys-prep-library/data/questions-observed.csv",
+  "title": "questions-observed.csv",
+  "kind": "code",
+  "src_chars": 44421,
+  "text_chars": 44303
+ },
+ {
+  "url": "infosys-se/data/reviews-online.html",
+  "src": "infosys-se/data/reviews-online.csv",
+  "disk": "infosys-prep-library/data/reviews-online.csv",
+  "title": "reviews-online.csv",
+  "kind": "code",
+  "src_chars": 7582,
+  "text_chars": 7432
+ },
+ {
+  "url": "infosys-se/data/shuffle.html",
+  "src": "infosys-se/data/shuffle.py",
+  "disk": "infosys-prep-library/data/shuffle.py",
+  "title": "shuffle.py",
+  "kind": "code",
+  "src_chars": 9530,
+  "text_chars": 9973
+ },
+ {
+  "url": "infosys-se/data/syllabus-claims.html",
+  "src": "infosys-se/data/syllabus-claims.csv",
+  "disk": "infosys-prep-library/data/syllabus-claims.csv",
+  "title": "syllabus-claims.csv",
+  "kind": "code",
+  "src_chars": 2475,
+  "text_chars": 2537
+ },
+ {
+  "url": "infosys-se/data/test_core_course.html",
+  "src": "infosys-se/data/test_core_course.py",
+  "disk": "infosys-prep-library/data/test_core_course.py",
+  "title": "test_core_course.py",
+  "kind": "code",
+  "src_chars": 1329,
+  "text_chars": 1578
+ },
+ {
+  "url": "infosys-se/data/verify_copied.html",
+  "src": "infosys-se/data/verify_copied.py",
+  "disk": "infosys-prep-library/data/verify_copied.py",
+  "title": "verify_copied.py",
+  "kind": "code",
+  "src_chars": 8549,
+  "text_chars": 10306
+ },
+ {
+  "url": "infosys-se/data/verify_core_course.html",
+  "src": "infosys-se/data/verify_core_course.py",
+  "disk": "infosys-prep-library/data/verify_core_course.py",
+  "title": "verify_core_course.py",
+  "kind": "code",
+  "src_chars": 9597,
+  "text_chars": 11055
+ },
+ {
+  "url": "infosys-se/data/verify_generated.html",
+  "src": "infosys-se/data/verify_generated.py",
+  "disk": "infosys-prep-library/data/verify_generated.py",
+  "title": "verify_generated.py",
+  "kind": "code",
+  "src_chars": 7949,
+  "text_chars": 9987
+ },
+ {
+  "url": "infosys-se/data/verify_keys.html",
+  "src": "infosys-se/data/verify_keys.py",
+  "disk": "infosys-prep-library/data/verify_keys.py",
+  "title": "verify_keys.py",
+  "kind": "code",
+  "src_chars": 8028,
+  "text_chars": 8381
+ },
+ {
+  "url": "infosys-se/data/verify_mock.html",
+  "src": "infosys-se/data/verify_mock.py",
+  "disk": "infosys-prep-library/data/verify_mock.py",
+  "title": "verify_mock.py",
+  "kind": "code",
+  "src_chars": 3161,
+  "text_chars": 3912
+ },
+ {
+  "url": "infosys-se/data/verify_observed.html",
+  "src": "infosys-se/data/verify_observed.py",
+  "disk": "infosys-prep-library/data/verify_observed.py",
+  "title": "verify_observed.py",
+  "kind": "code",
+  "src_chars": 10474,
+  "text_chars": 12000
+ },
+ {
+  "url": "infosys-se/data/verify_structure.html",
+  "src": "infosys-se/data/verify_structure.py",
+  "disk": "infosys-prep-library/data/verify_structure.py",
+  "title": "verify_structure.py",
+  "kind": "code",
+  "src_chars": 6915,
+  "text_chars": 8822
+ },
+ {
+  "url": "infosys-se/data/weightage.html",
+  "src": "infosys-se/data/weightage.json",
+  "disk": "infosys-prep-library/data/weightage.json",
+  "title": "weightage.json",
+  "kind": "code",
+  "src_chars": 32739,
+  "text_chars": 41897
+ },
+ {
+  "url": "infosys-se/data/cc_src/A1.html",
+  "src": "infosys-se/data/cc_src/A1.md",
+  "disk": "infosys-prep-library/data/cc_src/A1.md",
+  "title": "A1",
+  "kind": "md",
+  "src_chars": 6209,
+  "text_chars": 5697
+ },
+ {
+  "url": "infosys-se/data/cc_src/A2.html",
+  "src": "infosys-se/data/cc_src/A2.md",
+  "disk": "infosys-prep-library/data/cc_src/A2.md",
+  "title": "A2",
+  "kind": "md",
+  "src_chars": 6761,
+  "text_chars": 6148
+ },
+ {
+  "url": "infosys-se/data/cc_src/A3.html",
+  "src": "infosys-se/data/cc_src/A3.md",
+  "disk": "infosys-prep-library/data/cc_src/A3.md",
+  "title": "A3",
+  "kind": "md",
+  "src_chars": 6199,
+  "text_chars": 5574
+ },
+ {
+  "url": "infosys-se/data/cc_src/A4.html",
+  "src": "infosys-se/data/cc_src/A4.md",
+  "disk": "infosys-prep-library/data/cc_src/A4.md",
+  "title": "A4",
+  "kind": "md",
+  "src_chars": 7495,
+  "text_chars": 6877
+ },
+ {
+  "url": "infosys-se/data/cc_src/A5.html",
+  "src": "infosys-se/data/cc_src/A5.md",
+  "disk": "infosys-prep-library/data/cc_src/A5.md",
+  "title": "A5",
+  "kind": "md",
+  "src_chars": 6817,
+  "text_chars": 6302
+ },
+ {
+  "url": "infosys-se/data/cc_src/A6.html",
+  "src": "infosys-se/data/cc_src/A6.md",
+  "disk": "infosys-prep-library/data/cc_src/A6.md",
+  "title": "A6",
+  "kind": "md",
+  "src_chars": 7210,
+  "text_chars": 6534
+ },
+ {
+  "url": "infosys-se/data/cc_src/A7.html",
+  "src": "infosys-se/data/cc_src/A7.md",
+  "disk": "infosys-prep-library/data/cc_src/A7.md",
+  "title": "A7",
+  "kind": "md",
+  "src_chars": 6704,
+  "text_chars": 6000
+ },
+ {
+  "url": "infosys-se/data/cc_src/A8.html",
+  "src": "infosys-se/data/cc_src/A8.md",
+  "disk": "infosys-prep-library/data/cc_src/A8.md",
+  "title": "A8",
+  "kind": "md",
+  "src_chars": 5943,
+  "text_chars": 5319
+ },
+ {
+  "url": "infosys-se/data/cc_src/A21.html",
+  "src": "infosys-se/data/cc_src/A21.md",
+  "disk": "infosys-prep-library/data/cc_src/A21.md",
+  "title": "A21",
+  "kind": "md",
+  "src_chars": 5975,
+  "text_chars": 5488
+ },
+ {
+  "url": "infosys-se/data/cc_src/G1.html",
+  "src": "infosys-se/data/cc_src/G1.md",
+  "disk": "infosys-prep-library/data/cc_src/G1.md",
+  "title": "G1",
+  "kind": "md",
+  "src_chars": 8434,
+  "text_chars": 7114
+ },
+ {
+  "url": "infosys-se/data/cc_src/G2.html",
+  "src": "infosys-se/data/cc_src/G2.md",
+  "disk": "infosys-prep-library/data/cc_src/G2.md",
+  "title": "G2",
+  "kind": "md",
+  "src_chars": 7771,
+  "text_chars": 6331
+ },
+ {
+  "url": "infosys-se/data/cc_src/P1.html",
+  "src": "infosys-se/data/cc_src/P1.md",
+  "disk": "infosys-prep-library/data/cc_src/P1.md",
+  "title": "P1",
+  "kind": "md",
+  "src_chars": 7337,
+  "text_chars": 6278
+ },
+ {
+  "url": "infosys-se/data/cc_src/P3.html",
+  "src": "infosys-se/data/cc_src/P3.md",
+  "disk": "infosys-prep-library/data/cc_src/P3.md",
+  "title": "P3",
+  "kind": "md",
+  "src_chars": 5911,
+  "text_chars": 5277
+ },
+ {
+  "url": "infosys-se/data/cc_src/P4.html",
+  "src": "infosys-se/data/cc_src/P4.md",
+  "disk": "infosys-prep-library/data/cc_src/P4.md",
+  "title": "P4",
+  "kind": "md",
+  "src_chars": 7028,
+  "text_chars": 6073
+ },
+ {
+  "url": "infosys-se/data/cc_src/P5.html",
+  "src": "infosys-se/data/cc_src/P5.md",
+  "disk": "infosys-prep-library/data/cc_src/P5.md",
+  "title": "P5",
+  "kind": "md",
+  "src_chars": 7209,
+  "text_chars": 6430
+ },
+ {
+  "url": "infosys-se/data/cc_src/V1.html",
+  "src": "infosys-se/data/cc_src/V1.md",
+  "disk": "infosys-prep-library/data/cc_src/V1.md",
+  "title": "V1",
+  "kind": "md",
+  "src_chars": 6622,
+  "text_chars": 5980
+ },
+ {
+  "url": "infosys-se/data/cc_src/V2.html",
+  "src": "infosys-se/data/cc_src/V2.md",
+  "disk": "infosys-prep-library/data/cc_src/V2.md",
+  "title": "V2",
+  "kind": "md",
+  "src_chars": 8563,
+  "text_chars": 6879
+ },
+ {
+  "url": "infosys-se/data/cc_src/V3.html",
+  "src": "infosys-se/data/cc_src/V3.md",
+  "disk": "infosys-prep-library/data/cc_src/V3.md",
+  "title": "V3",
+  "kind": "md",
+  "src_chars": 7277,
+  "text_chars": 5762
+ },
+ {
+  "url": "infosys-se/data/cc_src/V6.html",
+  "src": "infosys-se/data/cc_src/V6.md",
+  "disk": "infosys-prep-library/data/cc_src/V6.md",
+  "title": "V6",
+  "kind": "md",
+  "src_chars": 6480,
+  "text_chars": 5738
+ },
+ {
+  "url": "infosys-se/data/cc_src/W1.html",
+  "src": "infosys-se/data/cc_src/W1.md",
+  "disk": "infosys-prep-library/data/cc_src/W1.md",
+  "title": "W1",
+  "kind": "md",
+  "src_chars": 8763,
+  "text_chars": 7613
+ },
+ {
+  "url": "infosys-se/data/cc_src/Z1.html",
+  "src": "infosys-se/data/cc_src/Z1.md",
+  "disk": "infosys-prep-library/data/cc_src/Z1.md",
+  "title": "Z1",
+  "kind": "md",
+  "src_chars": 6876,
+  "text_chars": 6239
+ },
+ {
+  "url": "infosys-se/data/cc_src/Z2.html",
+  "src": "infosys-se/data/cc_src/Z2.md",
+  "disk": "infosys-prep-library/data/cc_src/Z2.md",
+  "title": "Z2",
+  "kind": "md",
+  "src_chars": 8670,
+  "text_chars": 8081
+ }
+]

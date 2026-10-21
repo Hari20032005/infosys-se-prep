@@ -1,0 +1,148 @@
+{
+  "A1": "topics/A1-coding-and-decoding.md",
+  "A2": "topics/A2-number-and-letter-series.md",
+  "A4": "topics/A4-syllogisms-and-logical-deduction.md",
+  "A6": "topics/A6-data-sufficiency.md",
+  "A9": "topics/A9-averages-mixtures-and-alligation.md",
+  "A12": "topics/A12-percentages.md",
+  "A13": "topics/A13-profit-loss-and-discount.md",
+  "A14": "topics/A14-simple-and-compound-interest.md",
+  "A15": "topics/A15-time-speed-distance.md",
+  "A17": "topics/A17-ratio-and-proportion.md",
+  "A19": "topics/A19-seating-and-analytical-puzzle-sets.md",
+  "V1": "topics/V1-reading-comprehension.md",
+  "V2": "topics/V2-spotting-errors-and-grammar-rules.md",
+  "V3": "topics/V3-sentence-correction.md",
+  "V4": "topics/V4-synonyms-antonyms-and-vocabulary.md",
+  "G1": "topics/G1-fill-in-the-blanks-and-cloze.md",
+  "G2a": "topics/G2a-active-and-passive-voice.md",
+  "P1": "pseudocode/P1-loops-iteration.md",
+  "QB-P1": "question-banks/QB-P1-loops-iteration.md",
+  "P2": "pseudocode/P2-recursion.md",
+  "QB-P2": "question-banks/QB-P2-recursion.md",
+  "P3": "pseudocode/P3-bitwise-operators.md",
+  "QB-P3": "question-banks/QB-P3-bitwise-operators.md",
+  "P5": "pseudocode/P5-arrays.md",
+  "QB-P5": "question-banks/QB-P5-arrays.md",
+  "P6": "pseudocode/P6-conditionals-nested-if.md",
+  "QB-P6": "question-banks/QB-P6-conditionals-nested-if.md",
+  "P7": "pseudocode/P7-functions-scope.md",
+  "QB-P7": "question-banks/QB-P7-functions-scope.md",
+  "P8": "pseudocode/P8-snippet-complexity.md",
+  "QB-P8": "question-banks/QB-P8-snippet-complexity.md",
+  "P10": "pseudocode/P10-strings-ascii.md",
+  "QB-P10": "question-banks/QB-P10-strings-ascii.md",
+  "IV1": "interview/IV1-sdlc-agile-testing.md",
+  "QB-IV1": "question-banks/QB-IV1-sdlc-agile-testing.md",
+  "IV2": "interview/IV2-oop-four-pillars.md",
+  "QB-IV2": "question-banks/QB-IV2-oop-four-pillars.md",
+  "IV3": "interview/IV3-dbms-sql.md",
+  "QB-IV3": "question-banks/QB-IV3-dbms-sql.md",
+  "FZ-quant": "aptitude/00-QUANT-FROM-ZERO.md",
+  "FZ-logical": "aptitude/00-LOGICAL-FROM-ZERO.md",
+  "FZ-verbal": "aptitude/00-VERBAL-FROM-ZERO.md",
+  "Z1": "puzzles/Z1-number-grids-and-matrices.md",
+  "Z2": "puzzles/Z2-pair-and-figure-rules.md",
+  "A3": "topics/A3-operator-logic.md",
+  "A5": "topics/A5-blood-relations.md",
+  "A7": "topics/A7-data-interpretation.md",
+  "A8": "topics/A8-linear-equations-and-ages.md",
+  "A10": "topics/A10-number-system.md",
+  "A11": "topics/A11-mensuration.md",
+  "A16": "topics/A16-time-and-work.md",
+  "A18": "topics/A18-permutations-combinations-probability.md",
+  "A20": "topics/A20-cryptarithmetic.md",
+  "A21": "topics/A21-non-verbal-reasoning.md",
+  "P4": "pseudocode/P4-increment-operators-and-dialect.md",
+  "V5": "topics/V5-para-jumbles.md",
+  "V6": "topics/V6-critical-reasoning.md",
+  "G2": "topics/G2-grammar-tense-articles-prepositions.md",
+  "P9": "pseudocode/P9-oop-in-pseudocode.md",
+  "W1": "topics/W1-english-writing.md",
+  "_banks": {
+    "Z1": [
+      "question-banks/QB-Z1-number-grids-and-matrices.md"
+    ],
+    "Z2": [
+      "question-banks/QB-Z2-pair-and-figure-rules.md"
+    ],
+    "A3": [
+      "question-banks/QB-A3-operator-logic.md"
+    ],
+    "A5": [
+      "question-banks/QB-A5-blood-relations.md"
+    ],
+    "A7": [
+      "question-banks/QB-A7-data-interpretation.md"
+    ],
+    "A8": [
+      "question-banks/QB-A8-linear-equations-and-ages.md"
+    ],
+    "A10": [
+      "question-banks/QB-A10-number-system.md"
+    ],
+    "A11": [
+      "question-banks/QB-A11-mensuration.md"
+    ],
+    "A16": [
+      "question-banks/QB-A16-time-and-work.md"
+    ],
+    "A18": [
+      "question-banks/QB-A18-permutations-combinations-probability.md"
+    ],
+    "A20": [
+      "question-banks/QB-A20-cryptarithmetic.md"
+    ],
+    "A21": [
+      "question-banks/QB-A21-non-verbal-reasoning.md"
+    ],
+    "P4": [
+      "question-banks/QB-P4-increment-operators-and-dialect.md"
+    ],
+    "A1": [
+      "question-banks/QB-A1-coding-decoding.md"
+    ],
+    "A2": [
+      "question-banks/QB-A2-number-and-letter-series.md"
+    ],
+    "P1": [
+      "question-banks/QB-P1-infosys-dialect-traces.md"
+    ],
+    "A6": [
+      "question-banks/QB-A6-data-sufficiency-1234.md"
+    ],
+    "A19": [
+      "question-banks/QB-A19-if-then-rules.md"
+    ],
+    "A4": [
+      "question-banks/QB-A4-ordered-deduction.md"
+    ],
+    "A9": [
+      "question-banks/QB-A9-replacement-mixtures.md"
+    ],
+    "V5": [
+      "question-banks/QB-V5-para-jumbles.md"
+    ],
+    "V2": [
+      "question-banks/QB-V2-identify-the-correct-sentence.md"
+    ],
+    "V6": [
+      "question-banks/QB-V6-critical-reasoning.md"
+    ],
+    "G2": [
+      "question-banks/QB-G2-cloze-passages.md"
+    ],
+    "P9": [
+      "question-banks/QB-P9-oop-in-pseudocode.md"
+    ],
+    "W1": [
+      "question-banks/QB-W1-writing-prompts.md"
+    ]
+  },
+  "IV4": "interview/IV4-projects-and-resume.md",
+  "IV5": "interview/IV5-hr-and-behavioural.md",
+  "IV6": "interview/IV6-generative-ai.md",
+  "IV7": "interview/IV7-light-coding-in-java.md",
+  "IV5a": "interview/IV5a-star-stories.md",
+  "IV5b": "interview/IV5b-technology-flexibility.md"
+}

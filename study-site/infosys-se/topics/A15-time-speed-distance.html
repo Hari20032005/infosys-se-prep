@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A15 — Time, speed, distance and trains · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem current" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Topic files</span></div>
+    <article class="prose">
+<!-- Drafted by DeepSeek V4.1 Flash via ds.py; reviewed by Claude 2026-09-21. Answer
+     letters rebalanced by data/shuffle.py (correctness-preserving: option text is
+     swapped and the key letter repointed). Numeric keys re-checked by
+     data/verify_keys.py. -->
+
+<h1 id="a15-time-speed-distance-and-trains">A15 — Time, speed, distance and trains</h1><p class="fm-line" style="color:var(--ink-faint);font-size:13px;margin:-.4em 0 1.2em">Tier 4 · Technical Ability · 0.7% of marks · about 1.0 h · confidence Low</p>
+<p><em>Adapted from <code>L&amp;T/lt-prep-library/topics/Q2-time-speed-distance-and-trains.md</code>; verified in that library's QA. §1 and §10 are regenerated for Infosys from <code>data/weightage.json</code>; §2 gains an Infosys evidence table; §3–§9 are the source text unchanged, so "observed" in the worked examples refers to the source paper.</em></p>
+<h2 id="1-why-this-topic-matters-here">1. Why this topic matters here</h2>
+<p>Expect about <strong>0.5 questions and 0.5 marks</strong> on this topic (about 0.7% of the 75 scored marks). It sits in <strong>Technical Ability</strong>, part of the 25-question aptitude block (Reasoning Ability 15 Q / 25 min + Technical Ability 10 Q / 35 min, one cut-off each). <strong>Tier 4</strong>, 1.0 hours to reach reliable recall, confidence <strong>Low</strong>.</p>
+<p><strong>No Infosys question on this topic was recovered.</strong> It rests on syllabus lists or first-hand naming only (C1, V1), so its share is an allocation, not an observation.</p>
+<p><strong>Why the tier:</strong> expected marks per study hour, weighted by confidence, is 0.32 against a paper average of 1.84 (<code>../data/analysis-tables.md</code> §6). Every section has its own cut-off, so a zero here costs the whole section's chance, not only these marks. There is no calculator. Negative marking: none reported.</p>
+<h2 id="2-exactly-what-gets-asked">2. Exactly what gets asked</h2>
+<h3 id="what-infosys-asked">What Infosys asked</h3>
+<p>No question on this topic was recovered. Listed by: C1, V1.</p>
+<blockquote>
+<p>The pattern notes below come from the library this file was adapted from. Any frequency or "observed paper" remark in them describes that source paper, not Infosys. The Infosys evidence is the table above.</p>
+</blockquote>
+<p><strong>Observed on an old (probably 2007-08) IndiaBIX paper:</strong> <em>"Distance between two poles is 50 m, train at 48 kmph, how many poles crossed in one minute?"</em> The source publishes <strong>no answer key</strong>, and the question is ambiguous: the train covers 800 m, which is <strong>16 gaps</strong>. That is 16 poles if the train starts between poles, or <strong>17 if the pole at the starting instant is counted</strong>. The skill being tested is noticing the fencepost, then reading the wording or the options to decide which count is meant.</p>
+<table>
+<thead>
+<tr>
+<th>Sub-pattern</th>
+<th>How it appears</th>
+<th>Roughly how often</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Unit conversion</td>
+<td>kmph ↔ m/s as a stand-alone step, or the first half of any train question</td>
+<td>1 of every 2 train questions</td>
+</tr>
+<tr>
+<td>Train crossing a pole / man</td>
+<td>Given length + speed, find time (or reverse)</td>
+<td>~1 question</td>
+</tr>
+<tr>
+<td>Train crossing a platform / bridge</td>
+<td>(train + platform) length over speed</td>
+<td>~1 question</td>
+</tr>
+<tr>
+<td>Two trains crossing each other</td>
+<td>Opposite direction: sum speeds; same direction: difference</td>
+<td>~1 question</td>
+</tr>
+<tr>
+<td>Poles / trees / posts at fixed gaps</td>
+<td>Fencepost: gaps + 1</td>
+<td>1 observed question</td>
+</tr>
+<tr>
+<td>Boats and streams</td>
+<td>Downstream/upstream pair, find boat or stream speed</td>
+<td>occasionally</td>
+</tr>
+<tr>
+<td>Average speed over two legs</td>
+<td>Harmonic mean, equal distances</td>
+<td>occasionally</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-concept-notes">3. Concept notes</h2>
+<h3 id="31-the-conversion-that-solves-half-the-paper">3.1 The conversion that solves half the paper</h3>
+<p>Speed in kmph → multiply by <strong>5/18</strong> to get m/s.
+Speed in m/s → multiply by <strong>18/5</strong> to get kmph.</p>
+<p>Example: 72 kmph = 72 × 5/18 = <strong>20 m/s</strong>. Example: 25 m/s = 25 × 18/5 = <strong>90 kmph</strong>.</p>
+<p>Reason: 1 km = 1000 m, 1 hour = 3600 s, so 1 kmph = 1000/3600 = 5/18 m/s.</p>
+<p>Do this in your head, not on paper: divide by 18 then multiply by 5 (or the reverse). 90 ÷ 18 = 5, × 5 = 25. That is a two-second operation.</p>
+<h3 id="32-distance-speed-time">3.2 Distance, speed, time</h3>
+<p><strong>Distance = Speed × Time</strong>. <strong>Speed = Distance / Time</strong>. <strong>Time = Distance / Speed</strong>.</p>
+<p>Keep units consistent. If speed is kmph, time must be in hours; if speed is m/s, time must be in seconds. Most train questions are m/s and seconds; most car/travel questions are kmph and hours.</p>
+<h3 id="33-relative-speed">3.3 Relative speed</h3>
+<ul>
+<li><strong>Same direction:</strong> relative speed = <strong>difference</strong> of the two speeds.</li>
+<li><strong>Opposite direction:</strong> relative speed = <strong>sum</strong> of the two speeds.</li>
+</ul>
+<p>Example: 60 kmph and 40 kmph in the same direction → a gap closes at 20 kmph. In opposite directions → it closes at 100 kmph.</p>
+<p>The classic use: closing time = initial gap ÷ relative speed.</p>
+<h3 id="34-trains">3.4 Trains</h3>
+<table>
+<thead>
+<tr>
+<th>Situation</th>
+<th>Distance to cover</th>
+<th>Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Crossing a pole, tree, or a standing man</td>
+<td>Train length only</td>
+<td>Time = L / v</td>
+</tr>
+<tr>
+<td>Crossing a platform the same length as a person walking</td>
+<td>Train length + platform length</td>
+<td>Time = (L + P) / v</td>
+</tr>
+<tr>
+<td>Two trains, opposite directions</td>
+<td>L₁ + L₂</td>
+<td>Time = (L₁ + L₂) / (v₁ + v₂)</td>
+</tr>
+<tr>
+<td>Two trains, same direction</td>
+<td>L₁ + L₂</td>
+<td>Time = (L₁ + L₂) / (v₁ − v₂)</td>
+</tr>
+</tbody>
+</table>
+<p>The rule behind all four: a train has <em>cleared</em> an object only when its <strong>last point</strong> has passed the <strong>far end</strong> of that object. That is why a pole needs only the train's own length, but a platform needs both lengths.</p>
+<h3 id="35-boats-and-streams">3.5 Boats and streams</h3>
+<p>Let <strong>b</strong> = speed of boat in still water, <strong>s</strong> = speed of stream.</p>
+<ul>
+<li>Downstream (with the current): <strong>d = b + s</strong></li>
+<li>Upstream (against the current): <strong>u = b − s</strong></li>
+<li><strong>b = (d + u) / 2</strong></li>
+<li><strong>s = (d − u) / 2</strong></li>
+</ul>
+<p>Example: downstream 12 kmph, upstream 8 kmph → boat = 10 kmph, stream = 2 kmph.</p>
+<h3 id="36-average-speed">3.6 Average speed</h3>
+<p>Average speed is <strong>total distance ÷ total time</strong>, never the plain average of the two speeds.</p>
+<p>For <strong>two equal distances</strong> covered at x and y, the average speed is the harmonic mean:</p>
+<p><strong>Average speed = 2xy / (x + y)</strong></p>
+<p>Example: 40 kmph out, 60 kmph back → 2(40)(60)/100 = <strong>48 kmph</strong>, not 50.</p>
+<h3 id="37-poles-gaps-and-the-fencepost">3.7 Poles, gaps and the fencepost</h3>
+<p>If poles are <strong>G</strong> metres apart and a train covers <strong>D</strong> metres, then:</p>
+<ul>
+<li>Number of <strong>gaps</strong> = D / G</li>
+<li>Number of <strong>poles passed</strong> = <strong>D / G + 1</strong></li>
+</ul>
+<p>The train passes a pole at the start of the first gap and another at the end of the last one. That extra pole is the whole trap.</p>
+<p>Example: 50 m gaps, 800 m covered → 16 gaps → <strong>17 poles if the starting pole is counted</strong>, otherwise 16.</p>
+<h2 id="4-must-memorise-block">4. Must-memorise block</h2>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>kmph → m/s</strong></td>
+<td><strong>× 5/18</strong></td>
+</tr>
+<tr>
+<td><strong>m/s → kmph</strong></td>
+<td><strong>× 18/5</strong></td>
+</tr>
+<tr>
+<td>Distance / Speed / Time</td>
+<td><strong>D = S × T</strong></td>
+</tr>
+<tr>
+<td>Same-direction relative speed</td>
+<td><strong>v₁ − v₂</strong></td>
+</tr>
+<tr>
+<td>Opposite-direction relative speed</td>
+<td><strong>v₁ + v₂</strong></td>
+</tr>
+<tr>
+<td>Train past a pole</td>
+<td><strong>T = L / v</strong></td>
+</tr>
+<tr>
+<td>Train past a platform</td>
+<td><strong>T = (L + P) / v</strong></td>
+</tr>
+<tr>
+<td>Two trains crossing</td>
+<td><strong>T = (L₁ + L₂) / relative speed</strong></td>
+</tr>
+<tr>
+<td>Downstream</td>
+<td><strong>b + s</strong></td>
+</tr>
+<tr>
+<td>Upstream</td>
+<td><strong>b − s</strong></td>
+</tr>
+<tr>
+<td>Boat in still water</td>
+<td><strong>(d + u) / 2</strong></td>
+</tr>
+<tr>
+<td>Stream speed</td>
+<td><strong>(d − u) / 2</strong></td>
+</tr>
+<tr>
+<td>Average speed, equal distances</td>
+<td><strong>2xy / (x + y)</strong></td>
+</tr>
+<tr>
+<td><strong>Poles at gap G, distance D</strong></td>
+<td><strong>poles = D/G + 1</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Instant conversions worth having cold: 18 kmph = 5 m/s · 36 = 10 · 54 = 15 · 72 = 20 · 90 = 25 · 108 = 30.</p>
+<h2 id="5-worked-examples">5. Worked examples</h2>
+<p><strong>Example 1 (the observed question).</strong> Poles are 50 m apart. A train runs at 48 kmph. How many poles does it cross in one minute?</p>
+<p>Step 1: 48 kmph = 48 × 5/18 = 40/3 m/s.
+Step 2: distance in 60 s = (40/3) × 60 = 800 m.
+Step 3: gaps = 800 / 50 = 16.
+Step 4: poles = 16 gaps, or <strong>16 + 1 = 17 if the pole at the starting instant is counted</strong>. Decide from the wording; if both 16 and 17 are offered, look for "including the first" or "starting at a pole".</p>
+<p>The slow method — sketching poles on a timeline — takes three minutes. The fast method is the formula plus one addition.</p>
+<p><strong>Example 2.</strong> A train 240 m long crosses a pole in 12 s. Find its speed and its time to cross a 360 m platform.</p>
+<p>Speed = 240 / 12 = 20 m/s = 20 × 18/5 = <strong>72 kmph</strong>.
+Platform: distance = 240 + 360 = 600 m; time = 600 / 20 = <strong>30 s</strong>.</p>
+<p>Note the trap: people answer 360/20 = 18 s. The train must also clear its own 240 m.</p>
+<p><strong>Example 3.</strong> Two trains, 120 m and 180 m, run in opposite directions at 42 kmph and 30 kmph. How long until they have fully crossed each other?</p>
+<p>Relative speed = 42 + 30 = 72 kmph = 72 × 5/18 = 20 m/s.
+Total distance = 120 + 180 = 300 m.
+Time = 300 / 20 = <strong>15 s</strong>.</p>
+<p><strong>Example 4.</strong> A boat covers 24 km downstream in 3 hours and the same 24 km upstream in 4 hours. Find the stream speed.</p>
+<p>Downstream = 24/3 = 8 kmph. Upstream = 24/4 = 6 kmph.
+Stream = (8 − 6) / 2 = <strong>1 kmph</strong>. (Boat in still water = (8+6)/2 = 7 kmph.)</p>
+<p><strong>Example 5.</strong> A car covers the first half of a journey at 40 kmph and the second half at 60 kmph. Find the average speed.</p>
+<p>Fast method: 2xy/(x+y) = (2 × 40 × 60) / 100 = 4800/100 = <strong>48 kmph</strong>.</p>
+<p>The slow method works but wastes time: take total 120 km, so 60 km each way. Times are 1.5 h and 1 h, total 2.5 h; 120/2.5 = 48 kmph. The losing move is answering "50 kmph" by averaging the speeds — that is the trap, and it is always wrong.</p>
+<h2 id="6-traps-and-gotchas">6. Traps and gotchas</h2>
+<table>
+<thead>
+<tr>
+<th>Trap</th>
+<th>Why it catches people</th>
+<th>How to avoid it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Averaging two speeds arithmetically</td>
+<td>Feels intuitive; 40 and 60 "obviously" give 50</td>
+<td>Always use <strong>2xy/(x+y)</strong> for equal distances, or actual total distance ÷ total time</td>
+</tr>
+<tr>
+<td>Forgetting the train's own length on a platform</td>
+<td>You see "platform 360 m" and use only that</td>
+<td>Distance is always <strong>L + P</strong></td>
+</tr>
+<tr>
+<td>Using the wrong relative speed</td>
+<td>Sum and difference are easy to swap</td>
+<td>Same direction = subtract (slower train falls behind); opposite = add</td>
+</tr>
+<tr>
+<td>Mixing kmph with seconds</td>
+<td>Numbers are given in different units in the same question</td>
+<td>Convert to m/s and seconds the moment a train length appears</td>
+</tr>
+<tr>
+<td>Fencepost: reporting gaps as poles</td>
+<td>800/50 = 16 gaps feels like a complete answer</td>
+<td><strong>Poles = gaps + 1 only if the starting pole is counted.</strong> Read the wording</td>
+</tr>
+<tr>
+<td>Reading "crosses a man walking" as a pole</td>
+<td>A walking man moves, so relative speed applies</td>
+<td>If the man moves, use relative speed; if he stands, use train speed</td>
+</tr>
+<tr>
+<td>Boat: confusing boat-with-current and boat-in-still-water</td>
+<td>The question asks for the wrong one of the two</td>
+<td>Label b and s; compute b = (d+u)/2 and s = (d−u)/2 separately</td>
+</tr>
+<tr>
+<td>Time lost on arithmetic</td>
+<td>48 × 5/18 done long-hand eats 40 seconds</td>
+<td>Memorise the 18→5 table: 36=10, 54=15, 72=20, 90=25</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-practice-questions">7. Practice questions</h2>
+<ol>
+<li>
+<p>A train 180 m long runs at 54 kmph. How long does it take to pass a pole?
+a) 10 s b) 11 s c) 12 s d) 15 s</p>
+</li>
+<li>
+<p>Convert 90 kmph into metres per second.
+a) 27 m/s b) 25 m/s c) 22.5 m/s d) 32.4 m/s</p>
+</li>
+<li>
+<p>A train 300 m long crosses a platform 200 m long in 25 seconds. Its speed is:
+a) 72 kmph b) 60 kmph c) 75 kmph d) 80 kmph</p>
+</li>
+<li>
+<p>Two trains, 100 m and 150 m long, move in the same direction at 60 kmph and 48 kmph. How long until the faster has completely passed the slower?
+a) 50 s b) 60 s c) 70 s d) 75 s</p>
+</li>
+<li>
+<p>A boat covers 24 km downstream in 3 hours and returns the same distance in 4 hours. The speed of the stream is:
+a) 0.5 kmph b) 2 kmph c) 3 kmph d) 1 kmph</p>
+</li>
+<li>
+<p>A man walks 6 km at 5 kmph and a further 6 km at 8 kmph. His average speed for the whole journey is:
+a) 6.0 kmph b) 6.5 kmph c) 6.15 kmph d) 7.0 kmph</p>
+</li>
+<li>
+<p>A train running at 72 kmph crosses a bridge 400 m long in 30 seconds. The length of the train is:
+a) 120 m b) 160 m c) 240 m d) 200 m</p>
+</li>
+<li>
+<p>Poles are fixed 50 m apart along a track. A train runs at 48 kmph. The timer starts at the instant its front is level with one pole, and that pole is counted. How many poles has the front passed after one minute?
+a) 15 b) 17 c) 16.5 d) 16</p>
+</li>
+<li>
+<p>Two trains, 120 m and 180 m long, approach each other at 42 kmph and 30 kmph. How long until they have completely crossed?
+a) 15 s b) 12 s c) 18 s d) 20 s</p>
+</li>
+<li>
+<p>A train leaves a station at 8 am at 60 kmph. A second train leaves the same station on the same track at 9 am at 80 kmph. At what time does the second train catch the first?
+a) 11 am b) 11:30 am c) 12 noon d) 12:30 pm</p>
+</li>
+<li>
+<p>Two stations are 300 km apart. Trains leave both stations at the same time towards each other at 40 kmph and 60 kmph. They meet after:
+a) 3 h b) 2.5 h c) 3.5 h d) 4 h</p>
+</li>
+<li>
+<p>A train 110 m long passes a man standing on a platform in 3 seconds and completely clears the same platform in 12 seconds. The length of the platform is:
+a) 110 m b) 330 m c) 275 m d) 220 m</p>
+</li>
+</ol>
+<h3 id="answer-key">ANSWER KEY</h3>
+<ol>
+<li><strong>c)</strong> 54 × 5/18 = 15 m/s; 180 / 15 = 12 s.</li>
+<li><strong>b)</strong> 90 × 5/18 = 25 m/s.</li>
+<li><strong>a)</strong> (300 + 200) / 25 = 20 m/s; 20 × 18/5 = 72 kmph.</li>
+<li><strong>d)</strong> Relative = 12 kmph = 10/3 m/s; (100 + 150) / (10/3) = 75 s.</li>
+<li><strong>d)</strong> Down = 8 kmph, up = 6 kmph; stream = (8 − 6) / 2 = 1 kmph.</li>
+<li><strong>c)</strong> Harmonic mean = (2 × 5 × 8) / 13 = 80/13 ≈ 6.15 kmph.</li>
+<li><strong>d)</strong> 72 kmph = 20 m/s; 30 × 20 = 600 m total; 600 − 400 = 200 m.</li>
+<li><strong>b)</strong> 48 kmph = 40/3 m/s; 60 s → 800 m; 800/50 = 16 gaps; the starting pole is counted, so 16 + 1 = 17.</li>
+<li><strong>a)</strong> Relative = 72 kmph = 20 m/s; (120 + 180) / 20 = 15 s.</li>
+<li><strong>c)</strong> At 9 am the lead is 60 km; closing speed 20 kmph; 60/20 = 3 h after 9 am = 12 noon.</li>
+<li><strong>a)</strong> Relative = 40 + 60 = 100 kmph; 300 / 100 = 3 h.</li>
+<li><strong>b)</strong> Speed = 110/3 m/s; 12 s gives (110/3) × 12 = 440 m; platform = 440 − 110 = 330 m.</li>
+</ol>
+<h2 id="8-resources">8. Resources</h2>
+<ul>
+<li><strong>Time and Distance - Aptitude Questions and Answers</strong> — https://www.indiabix.com/aptitude/time-and-distance/ — MCQ set with options, answers and explanations (verified).</li>
+<li><strong>Problems on Trains - Aptitude Questions and Answers</strong> — https://www.indiabix.com/aptitude/problems-on-trains/ — MCQ set with options, answers and explanations (verified).</li>
+<li><strong>Boats and Streams - Aptitude Questions and Answers</strong> — https://www.indiabix.com/aptitude/boats-and-streams/ — MCQ set with options, answers and explanations (verified).</li>
+<li><strong>Speed, Time and Distance – Solved Questions and Answers</strong> — https://www.geeksforgeeks.org/aptitude/time-speed-distance/ — index of question sets - open a sub-topic for the actual questions.</li>
+<li><strong>Harmonic mean - Wikipedia</strong> — https://en.wikipedia.org/wiki/Harmonic_mean — reference article.</li>
+</ul>
+<h2 id="9-self-check">9. Self-check</h2>
+<ol>
+<li>Can you convert 54, 72 and 90 kmph to m/s in under three seconds each, without writing anything?</li>
+<li>Can you state the four train-crossing formulas (pole, platform, opposite, same direction) from memory?</li>
+<li>Do you stop and decide whether the pole at the start counts before you add 1 to the number of gaps?</li>
+<li>Can you derive boat and stream speeds from a downstream/upstream pair without hesitating?</li>
+<li>Do you reach for 2xy/(x+y) the moment a question mentions two speeds over the same distance?</li>
+<li>Can you finish any of the twelve practice questions above in under 60 seconds, on paper, without checking the key?</li>
+</ol>
+<p>If you answered no to any of these, re-read sections 3 and 4 before moving on.</p>
+<h2 id="10-sources">10. Sources</h2>
+<p><strong>Teaching content (§3–§9)</strong> is adapted from <code>L&amp;T/lt-prep-library/topics/Q2-time-speed-distance-and-trains.md</code>, which lists its own sources and was verified in that library's QA. <strong>Infosys evidence</strong> for this file: observed questions none in <code>../data/questions-observed.csv</code>; section structure and marks in <code>../research/03-pattern-synthesis.md</code> §1; weightage, tier and hours in <code>../data/weightage.json</code> (code <code>A15</code>). Confidence <strong>Low</strong>. Nothing in this file is a published Infosys syllabus.</p>
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/topics/A14-simple-and-compound-interest.html"><span>Previous</span><strong>A14 — Simple and compound interest</strong></a><a class="pager next" href="../../infosys-se/topics/A16-time-and-work.html"><span>Next</span><strong>A16 — Time and work</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#a15-time-speed-distance-and-trains">A15 — Time, speed, distance and trains</a><a class="toc-l1" href="#1-why-this-topic-matters-here">1. Why this topic matters here</a><a class="toc-l1" href="#2-exactly-what-gets-asked">2. Exactly what gets asked</a><a class="toc-l1" href="#3-concept-notes">3. Concept notes</a><a class="toc-l1" href="#4-must-memorise-block">4. Must-memorise block</a><a class="toc-l1" href="#5-worked-examples">5. Worked examples</a><a class="toc-l1" href="#6-traps-and-gotchas">6. Traps and gotchas</a><a class="toc-l1" href="#7-practice-questions">7. Practice questions</a><a class="toc-l1" href="#8-resources">8. Resources</a><a class="toc-l1" href="#9-self-check">9. Self-check</a><a class="toc-l1" href="#10-sources">10. Sources</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

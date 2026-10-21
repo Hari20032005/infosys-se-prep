@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QB-P8 — Reading Time and Space Complexity off a Snippet · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem current" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Question banks &amp; mock</span></div>
+    <article class="prose">
+<h1 id="qb-p8-reading-time-and-space-complexity-off-a-snippet">QB-P8 — Reading Time and Space Complexity off a Snippet</h1>
+<p><strong>Pseudocode</strong> · <strong>Tier 4</strong> · 18 questions</p>
+<p>Topic file: <a href="/Users/hariharansundaramoorthy/Documents/my projects/infosys/infosys-prep-library/pseudocode/P8-snippet-complexity.md"><code>P8-snippet-complexity.md</code></a></p>
+<p><em>Adapted from <code>accenture-prep-final/accenture-prep-library/question-banks/QB-T32-B9-snippet-complexity.md</code>; verified in that library's QA. Questions and answer key are unchanged.</em></p>
+<p><strong>How to use this bank.</strong> Attempt every question before opening the key, at the real pace for this section (120 seconds a question). Answer letters are balanced across a–d.</p>
+<hr />
+<p><strong>1.</strong> <strong>[Easy]</strong> <em>(B9 — sequential loops)</em></p>
+<div class="codehilite"><pre><span></span><code>sum = 0
+for i = 1 to n:
+    sum = sum + i
+for j = 1 to n:
+    sum = sum + j
+</code></pre></div>
+
+<p>What is the time complexity?
+(a) O(1)
+(b) O(log n)
+(c) O(n^2)
+(d) O(n)</p>
+<p><strong>1. (d) O(n)</strong>
+The two loops are sequential, so their costs add: O(n) + O(n) = O(n).
+- (b) O(log n): wrong because each loop increments by 1, not by doubling or halving.
+- (c) O(n^2): wrong because the loops are not nested.
+- (a) O(1): wrong because the work depends linearly on n.</p>
+<p>Trace:
+| n | first loop iterations | second loop iterations | total |
+|---|---:|---:|---:|
+| 4 | 4 | 4 | 8 |
+| 8 | 8 | 8 | 16 |</p>
+<hr />
+<p><strong>2.</strong> <strong>[Easy]</strong> <em>(B9 — nested vs sequential loops)</em></p>
+<div class="codehilite"><pre><span></span><code>for i = 1 to n:
+    for j = 1 to m:
+        x = x + 1
+</code></pre></div>
+
+<p>What is the time complexity?
+(a) O(n × m)
+(b) O(n + m)
+(c) O(n^2)
+(d) O(m^2)</p>
+<p><strong>2. (a) O(n × m)</strong>
+The outer loop runs n times, and for each outer iteration the inner loop runs m times, giving n × m operations.
+- (b) O(n + m): wrong because nested loops multiply, not add.
+- (c) O(n^2): wrong because the inner bound is m, not necessarily n.
+- (d) O(m^2): wrong because the outer loop contributes n repetitions.</p>
+<p>Trace:
+| n | m | inner increments |
+|---:|---:|---:|
+| 3 | 4 | 12 |
+| 5 | 2 | 10 |</p>
+<hr />
+<p><strong>3.</strong> <strong>[Easy]</strong> <em>(B9 — constant time)</em></p>
+<div class="codehilite"><pre><span></span><code>a = 5
+b = a * 2
+c = a + b
+</code></pre></div>
+
+<p>n is an input variable not used by this block. What is the time complexity?
+(a) O(log n)
+(b) O(n)
+(c) O(n^2)
+(d) O(1)</p>
+<p><strong>3. (d) O(1)</strong>
+The block has a fixed number of assignments and arithmetic operations, independent of n.
+- (a) O(log n): wrong because n is not used at all.
+- (b) O(n): wrong because there is no loop over n.
+- (c) O(n^2): wrong because there is no nested loop.</p>
+<p>Trace:
+| n | operations |
+|---:|---:|
+| any | 3 assignments |
+| any | constant |</p>
+<hr />
+<p><strong>4.</strong> <strong>[Easy]</strong> <em>(B9 — single loop count)</em></p>
+<div class="codehilite"><pre><span></span><code>count = 0
+for i = 1 to n:
+    count = count + 1
+</code></pre></div>
+
+<p>What is the time complexity?
+(a) O(n)
+(b) O(log n)
+(c) O(n^2)
+(d) O(1)</p>
+<p><strong>4. (a) O(n)</strong>
+The for loop runs n times and each iteration does constant work.
+- (d) O(1): wrong because the loop count grows with n.
+- (b) O(log n): wrong because i increments by 1, not by doubling.
+- (c) O(n^2): wrong because there is only one loop.</p>
+<p>Trace:
+| n | iterations | count after |
+|---:|---:|---:|
+| 4 | 4 | 4 |
+| 8 | 8 | 8 |</p>
+<hr />
+<p><strong>5.</strong> <strong>[Medium]</strong> <em>(B9 — halving counter)</em></p>
+<div class="codehilite"><pre><span></span><code>i = n
+while i &gt; 1:
+    i = i // 2
+</code></pre></div>
+
+<p>How many iterations does the while loop perform in Big-O terms?
+(a) O(n)
+(b) O(1)
+(c) O(log n)
+(d) O(n log n)</p>
+<p><strong>5. (c) O(log n)</strong>
+Each iteration halves i, so the number of iterations is about log₂ n.
+- (b) O(1): wrong because i changes and the loop can run many times.
+- (a) O(n): wrong because halving skips most values.
+- (d) O(n log n): wrong because there is no outer O(n) loop.</p>
+<p>Trace:
+| n | i values | iterations |
+|---:|---|---:|
+| 16 | 16, 8, 4, 2, 1 | 4 |
+| 8 | 8, 4, 2, 1 | 3 |</p>
+<hr />
+<p><strong>6.</strong> <strong>[Medium]</strong> <em>(B9 — doubling counter)</em></p>
+<div class="codehilite"><pre><span></span><code>i = 1
+while i &lt; n:
+    i = i * 2
+</code></pre></div>
+
+<p>What is the time complexity?
+(a) O(n)
+(b) O(log n)
+(c) O(n log n)
+(d) O(sqrt n)</p>
+<p><strong>6. (b) O(log n)</strong>
+i doubles each iteration, so it reaches n in about log₂ n steps.
+- (a) O(n): wrong because doubling is faster than incrementing by 1.
+- (c) O(n log n): wrong because there is no extra linear loop.
+- (d) O(sqrt n): wrong because doubling, not squaring, controls the loop.</p>
+<p>Trace:
+| n | i values before exit | iterations |
+|---:|---|---:|
+| 16 | 1, 2, 4, 8, 16 | 4 |
+| 8 | 1, 2, 4, 8 | 3 |</p>
+<hr />
+<p><strong>7.</strong> <strong>[Medium]</strong> <em>(B9 — triangular loop)</em></p>
+<div class="codehilite"><pre><span></span><code>for i = 1 to n:
+    for j = 1 to i:
+        x = x + 1
+</code></pre></div>
+
+<p>What is the total time complexity?
+(a) O(n)
+(b) O(n log n)
+(c) O(n^3)
+(d) O(n^2)</p>
+<p><strong>7. (d) O(n^2)</strong>
+Inner loop runs i times for each i, so total work is 1 + 2 + … + n = n(n+1)/2 = O(n^2).
+- (a) O(n): wrong because the inner loop grows with i.
+- (b) O(n log n): wrong because the inner loop is linear in i.
+- (c) O(n^3): wrong because there are only two nested loops.</p>
+<p>Trace:
+| n | inner iterations by i | total |
+|---:|---|---:|
+| 4 | 1 + 2 + 3 + 4 | 10 |
+| 5 | 1 + 2 + 3 + 4 + 5 | 15 |</p>
+<hr />
+<p><strong>8.</strong> <strong>[Medium]</strong> <em>(B9 — sequential loops with different orders)</em></p>
+<div class="codehilite"><pre><span></span><code>for i = 1 to n:
+    a = a + i
+
+for j = 1 to n:
+    for k = 1 to n:
+        b = b + j + k
+</code></pre></div>
+
+<p>What is the overall time complexity?
+(a) O(n)
+(b) O(n^2)
+(c) O(n log n)
+(d) O(n^3)</p>
+<p><strong>8. (b) O(n^2)</strong>
+The first block is O(n); the second block is O(n^2). The larger term dominates, so the total is O(n^2).
+- (a) O(n): wrong because the double nested loop is quadratic.
+- (d) O(n^3): wrong because the second block has only two nested loops.
+- (c) O(n log n): wrong because neither block has logarithmic behavior.</p>
+<p>Trace:
+| n | first block | second block | total |
+|---:|---:|---:|---:|
+| 4 | 4 | 16 | 20 |
+| 5 | 5 | 25 | 30 |</p>
+<hr />
+<p><strong>9.</strong> <strong>[Medium]</strong> <em>(B9 — nested loop with changing start)</em></p>
+<div class="codehilite"><pre><span></span><code>for i = 1 to n:
+    for j = i to n:
+        x = x + 1
+</code></pre></div>
+
+<p>How many times is x incremented?
+(a) O(n^3)
+(b) O(n)
+(c) O(n log n)
+(d) O(n^2)</p>
+<p><strong>9. (d) O(n^2)</strong>
+For i = 1, inner runs n times; for i = 2, n−1 times; …; for i = n, 1 time. Total is n(n+1)/2 = O(n^2).
+- (b) O(n): wrong because the inner loop contributes many iterations.
+- (c) O(n log n): wrong because j increments by 1, not by doubling.
+- (a) O(n^3): wrong because there are only two nested loops.</p>
+<p>Trace:
+| n | inner counts by i | total |
+|---:|---|---:|
+| 4 | 4 + 3 + 2 + 1 | 10 |
+| 5 | 5 + 4 + 3 + 2 + 1 | 15 |</p>
+<hr />
+<p><strong>10.</strong> <strong>[Medium]</strong> <em>(B9 — recursion stack depth)</em></p>
+<div class="codehilite"><pre><span></span><code>F(n) {
+    if n &lt;= 1:
+        return 1
+    return F(n - 1) + 1
+}
+</code></pre></div>
+
+<p>What is the space complexity due to the recursion stack?
+(a) O(1)
+(b) O(log n)
+(c) O(n)
+(d) O(2^n)</p>
+<p><strong>10. (c) O(n)</strong>
+The recursion calls F(n−1), then F(n−2), …, so the maximum stack depth is n.
+- (a) O(1): wrong because recursive calls remain on the stack.
+- (b) O(log n): wrong because n decreases by 1, not by halving.
+- (d) O(2^n): wrong because each call makes only one recursive call.</p>
+<p>Trace:
+| n | stack depth |
+|---:|---:|
+| 4 | F(4), F(3), F(2), F(1) = 4 |
+| 5 | F(5), F(4), F(3), F(2), F(1) = 5 |</p>
+<hr />
+<p><strong>11.</strong> <strong>[Hard]</strong> <em>(B9 — outer linear, inner logarithmic)</em></p>
+<div class="codehilite"><pre><span></span><code>for i = 1 to n:
+    j = 1
+    while j &lt; n:
+        j = j * 2
+</code></pre></div>
+
+<p>What is the time complexity?
+(a) O(n log n)
+(b) O(log n)
+(c) O(n)
+(d) O(n^2)</p>
+<p><strong>11. (a) O(n log n)</strong>
+The outer loop runs n times. For each i, the inner while doubles j until it reaches n, so it runs O(log n) times. Total is O(n log n).
+- (c) O(n): wrong because the inner while adds a logarithmic factor per i.
+- (b) O(log n): wrong because the outer loop is linear.
+- (d) O(n^2): wrong because the inner loop is logarithmic, not linear.</p>
+<p>Trace:
+| n | outer iterations | inner j values | total |
+|---:|---:|---|---:|
+| 8 | 8 | 1, 2, 4 | 24 |
+| 16 | 16 | 1, 2, 4, 8 | 64 |</p>
+<hr />
+<p><strong>12.</strong> <strong>[Hard]</strong> <em>(B9 — nested halving and logarithmic inner)</em></p>
+<div class="codehilite"><pre><span></span><code>i = n
+while i &gt; 0:
+    j = 1
+    while j &lt; i:
+        j = j * 2
+    i = i // 2
+</code></pre></div>
+
+<p>What is the time complexity?
+(a) O(n)
+(b) O(log n)
+(c) O((log n)^2)
+(d) O(n log n)</p>
+<p><strong>12. (c) O((log n)^2)</strong>
+Outer i halves: n, n/2, n/4, …. For each i, the inner while doubles j up to i, taking O(log i). Summed over O(log n) outer levels, this is O((log n)^2).
+- (a) O(n): wrong because i shrinks logarithmically.
+- (b) O(log n): wrong because there is an inner logarithmic loop for each outer level.
+- (d) O(n log n): wrong because there is no linear n-sized loop.</p>
+<p>Trace:
+| n | outer i values | inner iterations for each i | total |
+|---:|---|---:|---:|
+| 16 | 16, 8, 4, 2, 1 | 4 + 3 + 2 + 1 + 0 | 10 |
+| 32 | 32, 16, 8, 4, 2, 1 | 5 + 4 + 3 + 2 + 1 + 0 | 15 |</p>
+<hr />
+<p><strong>13.</strong> <strong>[Hard]</strong> <em>(B9 — break inside nested loop)</em></p>
+<div class="codehilite"><pre><span></span><code>for i = 1 to n:
+    for j = 1 to n:
+        if j == i:
+            break
+        x = x + 1
+</code></pre></div>
+
+<p>What is the total time complexity in the worst case?
+(a) O(n)
+(b) O(n^2)
+(c) O(n log n)
+(d) O(n^3)</p>
+<p><strong>13. (b) O(n^2)</strong>
+For each i, the inner loop runs until j == i. That is about i iterations per outer iteration, so total is 1 + 2 + … + n = O(n^2).
+- (a) O(n): wrong because the break does not make the inner loop constant-time for every i.
+- (c) O(n log n): wrong because j increments by 1, not by doubling.
+- (d) O(n^3): wrong because there are only two nested loops.</p>
+<p>Trace:
+| n | x increments by i | total |
+|---:|---|---:|
+| 4 | 0 + 1 + 2 + 3 | 6 |
+| 5 | 0 + 1 + 2 + 3 + 4 | 10 |</p>
+<hr />
+<p><strong>14.</strong> <strong>[Hard]</strong> <em>(B9 — branching recursion time)</em></p>
+<div class="codehilite"><pre><span></span><code>G(n) {
+    if n &lt;= 1:
+        return 1
+    return G(n - 1) + G(n - 1)
+}
+</code></pre></div>
+
+<p>What is the time complexity of G(n)?
+(a) O(n)
+(b) O(n^2)
+(c) O(2^n)
+(d) O(n log n)</p>
+<p><strong>14. (c) O(2^n)</strong>
+Each call makes two recursive calls of size n−1, producing a binary recursion tree of depth n. Total calls are about 2^n.
+- (a) O(n): wrong because it ignores the second recursive call at each level.
+- (b) O(n^2): wrong because this is not a two-nested-loop pattern.
+- (d) O(n log n): wrong because n decreases by 1 and branching doubles the work.</p>
+<p>Trace:
+| n | calls T(n) = 2T(n−1) + 1 |
+|---:|---:|
+| 1 | 1 |
+| 2 | 3 |
+| 3 | 7 |
+| 4 | 15 |</p>
+<hr />
+<p><strong>15.</strong> <strong>[Hard]</strong> <em>(B9 — outer linear, inner doubling from 1 to n)</em></p>
+<div class="codehilite"><pre><span></span><code>for i = 1 to n:
+    for j = 1; j &lt; n; j = j * 2:
+        x = x + 1
+</code></pre></div>
+
+<p>What is the time complexity?
+(a) O(log n)
+(b) O(n log n)
+(c) O(n)
+(d) O(n^2)</p>
+<p><strong>15. (b) O(n log n)</strong>
+The outer loop runs n times. The inner loop doubles j from 1 until it reaches n, so it runs O(log n) times per outer iteration.
+- (a) O(log n): wrong because it ignores the outer n loop.
+- (c) O(n): wrong because it ignores the inner logarithmic loop.
+- (d) O(n^2): wrong because j doubles, so the inner loop does not run n times.</p>
+<p>Trace:
+| n | outer iterations | inner j values | total |
+|---:|---:|---|---:|
+| 8 | 8 | 1, 2, 4 | 24 |
+| 16 | 16 | 1, 2, 4, 8 | 64 |</p>
+<hr />
+<p><strong>16.</strong> <strong>[Hard]</strong> <em>(B9 — geometric inner bound)</em></p>
+<div class="codehilite"><pre><span></span><code>for i = 1; i &lt;= n; i = i * 2:
+    for j = 1; j &lt;= i; j = j + 1:
+        x = x + 1
+</code></pre></div>
+
+<p>What is the time complexity?
+(a) O(log n)
+(b) O(n)
+(c) O(n^2)
+(d) O(n log n)</p>
+<p><strong>16. (b) O(n)</strong>
+i takes values 1, 2, 4, 8, …, up to n. The inner loop runs i times, so total work is 1 + 2 + 4 + … ≤ 2n, which is O(n).
+- (a) O(log n): wrong because it counts only the outer loop.
+- (d) O(n log n): wrong because the inner loop is not n for every i.
+- (c) O(n^2): wrong because the sum of powers of 2 up to n is linear, not quadratic.</p>
+<p>Trace:
+| n | i values | inner iterations | total |
+|---:|---|---:|---:|
+| 8 | 1, 2, 4, 8 | 1 + 2 + 4 + 8 | 15 |
+| 16 | 1, 2, 4, 8, 16 | 1 + 2 + 4 + 8 + 16 | 31 |</p>
+<hr />
+<p><strong>17.</strong> <strong>[Hard]</strong> <em>(B9 — recursion space for factorial)</em></p>
+<div class="codehilite"><pre><span></span><code>fact(n) {
+    if n == 0:
+        return 1
+    return n * fact(n - 1)
+}
+</code></pre></div>
+
+<p>What is the space complexity of this recursive function, including the recursion stack?
+(a) O(n)
+(b) O(1)
+(c) O(log n)
+(d) O(n^2)</p>
+<p><strong>17. (a) O(n)</strong>
+The recursive calls are fact(n), fact(n−1), …, fact(0). The maximum stack depth is about n + 1, so space is O(n).
+- (b) O(1): wrong because recursive stack frames are not constant in number.
+- (c) O(log n): wrong because n decreases by 1, not by halving.
+- (d) O(n^2): wrong because the stack depth is linear, not quadratic.</p>
+<p>Trace:
+| n | stack frames |
+|---:|---:|
+| 4 | fact(4), fact(3), fact(2), fact(1), fact(0) = 5 |
+| 5 | fact(5), fact(4), fact(3), fact(2), fact(1), fact(0) = 6 |</p>
+<hr />
+<p><strong>18.</strong> <strong>[Hard]</strong> <em>(B9 — recursion stack vs call tree)</em></p>
+<div class="codehilite"><pre><span></span><code>A(n) {
+    if n == 0:
+        return 1
+    return A(n - 1) + A(n - 1)
+}
+</code></pre></div>
+
+<p>What is the space complexity of A(n) including the recursion stack?
+(a) O(n)
+(b) O(1)
+(c) O(2^n)
+(d) O(log n)</p>
+<hr />
+<hr />
+<p><strong>18. (a) O(n)</strong>
+The time complexity is exponential, but the space complexity is determined by the maximum recursion depth, which is n + 1. So space is O(n).
+- (b) O(1): wrong because recursion stack frames are stored.
+- (c) O(2^n): wrong because this confuses the number of calls with the maximum stack depth.
+- (d) O(log n): wrong because n decreases by 1, not by halving.</p>
+<p>Trace:
+| n | maximum simultaneous stack frames |
+|---:|---:|
+| 4 | A(4), A(3), A(2), A(1), A(0) = 5 |
+| 5 | A(5), A(4), A(3), A(2), A(1), A(0) = 6 |</p>
+<hr />
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/question-banks/QB-P7-functions-scope.html"><span>Previous</span><strong>QB-P7 — Functions — Scope and Pass by Value vs Reference</strong></a><a class="pager next" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html"><span>Next</span><strong>QB-P9 — OOP tracing</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#qb-p8-reading-time-and-space-complexity-off-a-snippet">QB-P8 — Reading Time and Space Complexity off a Snippet</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

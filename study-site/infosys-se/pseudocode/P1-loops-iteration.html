@@ -1,0 +1,2488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P1 — Loops and Iteration Counting · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem current" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Pseudocode</span></div>
+    <article class="prose">
+<h1 id="p1-loops-and-iteration-counting">P1 — Loops and Iteration Counting</h1><p class="fm-line" style="color:var(--ink-faint);font-size:13px;margin:-.4em 0 1.2em">Tier 1 · Pseudocode · 3.6% of marks · about 1.0 h · confidence High</p>
+<p><em>Adapted from <code>accenture-prep-final/accenture-prep-library/topics/T25-B1-loops-iteration.md</code>; verified in that library's QA. §1 and §10 are regenerated for Infosys from <code>data/weightage.json</code>; §2 gains an Infosys evidence table; §3–§9 are the source text unchanged, so "observed" in the worked examples refers to the source paper.</em></p>
+<h2 id="1-why-this-topic-matters-here">1. Why this topic matters here</h2>
+<p>Expect about <strong>1.3 questions and 2.7 marks</strong> on this topic (about 3.6% of the 75 scored marks). It sits in <strong>Pseudocode</strong>: 5 questions, 10 marks, 10 minutes. <strong>Tier 1</strong>, 1.0 hours to reach reliable recall, confidence <strong>High</strong>.</p>
+<p><strong>9 questions on this topic are in the observed Infosys pool</strong> (P01, P02, P04, P05, P06, P08, P09, O48, O50), from 3 sources. They are listed in §2 and solved in <code>../question-banks/QB-99-OBSERVED-POOL.md</code>.</p>
+<p><strong>Why the tier:</strong> expected marks per study hour, weighted by confidence, is 2.68 against a paper average of 1.84 (<code>../data/analysis-tables.md</code> §6). Every section has its own cut-off, so a zero here costs the whole section's chance, not only these marks. There is no calculator. Negative marking: none reported.</p>
+<h2 id="2-exactly-what-gets-asked">2. Exactly what gets asked</h2>
+<h3 id="what-infosys-asked">What Infosys asked</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Source date</th>
+<th>What was asked</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O48</td>
+<td>2020-09-22</td>
+<td>Loop i = 1..5 printing k, then j = j+1, k = k+j: which series?</td>
+</tr>
+<tr>
+<td>O50</td>
+<td>2020-09-22</td>
+<td>For i from 1 to 1, for j from i to 1: print k+1 with k = 6</td>
+</tr>
+<tr>
+<td>P01</td>
+<td>2026-09-22</td>
+<td>for w = 0 to 5: if (w mod 2 == 0 and w / 2 == 0) display w</td>
+</tr>
+<tr>
+<td>P02</td>
+<td>2026-09-22</td>
+<td>x = 27 mod 7; for i = 0 to x: display i</td>
+</tr>
+<tr>
+<td>P04</td>
+<td>2025-09-25</td>
+<td>Integer x = 0. do { ++x; display x; x--; } while (x &gt;= -1)</td>
+</tr>
+<tr>
+<td>P05</td>
+<td>2025-09-25</td>
+<td>n = 26, i = 0. while (n mod 8 != 0) { n = n + 5; i = i + 1 }. n = n + i. print n</td>
+</tr>
+<tr>
+<td>P06</td>
+<td>2024-12-18</td>
+<td>x = 3, y = 2, result = 0. for i = 1 to y: result = result + x * i. print result</td>
+</tr>
+<tr>
+<td>P08</td>
+<td>2024-12-18</td>
+<td>n = 123, sum = 0. while n &gt; 0: sum = sum + n mod 10; n = n / 10. print sum</td>
+</tr>
+<tr>
+<td>P09</td>
+<td>2024-12-18</td>
+<td>n = 6, sum = 0. for i = 1 to n: if i mod 2 == 0 then sum = sum + i*i else sum = sum + i. print sum</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The pattern notes below come from the library this file was adapted from. Any frequency or "observed paper" remark in them describes that source paper, not Infosys. The Infosys evidence is the table above.</p>
+</blockquote>
+<ol>
+<li><strong>Iteration counting.</strong> Whether <code>from a to b</code> is inclusive. Confirmed: it is, so <code>from 3 to 4</code> is 2 passes.</li>
+</ol>
+<p><strong>1. Correct: (a) 7</strong><br />
+Trace table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Iteration</th>
+<th style="text-align: right;">c</th>
+<th style="text-align: right;">x before</th>
+<th style="text-align: right;">x = x XOR c</th>
+<th style="text-align: right;">x after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0 XOR 3</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3 XOR 4</td>
+<td style="text-align: right;">7</td>
+</tr>
+</tbody>
+</table>
+<p>The loop <code>for(each c from 3 to 4)</code> is inclusive, so it runs exactly 2 times. Output is 7.</p>
+<ul>
+<li>(c) 1: Mistaking <code>XOR</code> for <code>AND</code>, or computing only <code>3 AND 4</code>.</li>
+<li>(b) 3: Stopping after the first iteration.</li>
+<li>(d) 12: Multiplying <code>3 * 4</code> instead of applying bitwise XOR.</li>
+</ul>
+<hr />
+<ol start="2">
+<li><strong>Accumulation across passes.</strong> A variable built up over iterations, where you must carry the value forward.</li>
+</ol>
+<p><strong>2. Correct: (b) 14</strong><br />
+Trace table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">i</th>
+<th style="text-align: right;">count before</th>
+<th style="text-align: right;">count after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">14</td>
+</tr>
+</tbody>
+</table>
+<p>Inclusive range <code>2 to 5</code> runs <code>5 - 2 + 1 = 4</code> times. Output is 14.</p>
+<ul>
+<li>(a) 9: Using exclusive upper bound <code>2 to 4</code>, giving <code>2 + 3 + 4 = 9</code>.</li>
+<li>(c) 15: Using <code>1 to 5</code>, giving <code>1 + 2 + 3 + 4 + 5 = 15</code>.</li>
+<li>(d) 20: Using wrong bounds or extra terms.</li>
+</ul>
+<hr />
+<ol start="3">
+<li><strong>An expression that changes per pass.</strong> Confirmed: a bitwise mask whose result is not constant.</li>
+</ol>
+<p><strong>3. Correct: (b) 3</strong><br />
+Trace table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">k</th>
+<th>body runs?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">7</td>
+<td>yes</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>yes</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<p>Inclusive range <code>7 to 9</code> runs <code>9 - 7 + 1 = 3</code> times.</p>
+<ul>
+<li>(a) 2: Treating the upper bound as exclusive, counting only 7 and 8.</li>
+<li>(c) 4: Counting an extra value, such as 6 through 9.</li>
+<li>(d) 0: Assuming the loop is empty.</li>
+</ul>
+<hr />
+<ol start="4">
+<li><strong>Nested loops.</strong> Total iterations as a product, or a triangular inner bound.</li>
+</ol>
+<p><strong>4. Correct: (d) 30</strong><br />
+Trace table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">i</th>
+<th style="text-align: right;">j</th>
+<th style="text-align: right;">i * j</th>
+<th style="text-align: right;">s before</th>
+<th style="text-align: right;">s after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">15</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">21</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">30</td>
+</tr>
+</tbody>
+</table>
+<p>Output is 30.</p>
+<ul>
+<li>(a) 18: Omitting one outer or inner iteration, producing a partial sum.</li>
+<li>(b) 24: Dropping a <code>6</code> term from the sum.</li>
+<li>(c) 36: Adding an extra <code>6</code> term or including <code>j = 4</code>.</li>
+</ul>
+<hr />
+<ol start="5">
+<li><strong><code>do-while</code> minimum execution.</strong> That it always runs at least once.</li>
+</ol>
+<h2 id="3-concept-notes">3. Concept notes</h2>
+<h3 id="31-the-three-loop-forms">3.1 The three loop forms</h3>
+<p><strong><code>for</code> loop</strong> — counter-driven, bounds fixed in the header.</p>
+<div class="codehilite"><pre><span></span><code>for i from a to b step s
+    statements
+end for
+</code></pre></div>
+
+<p><strong><code>while</code> loop</strong> — condition-driven, tested before the body.</p>
+<div class="codehilite"><pre><span></span><code>while condition
+    statements
+end while
+</code></pre></div>
+
+<p><strong><code>do-while</code> loop</strong> — condition tested after the body.</p>
+<div class="codehilite"><pre><span></span><code>do
+    statements
+while condition
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Form</th>
+<th>Condition tested</th>
+<th>Minimum executions</th>
+<th>Counter updated by</th>
+<th>Runs zero times?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>for</code></td>
+<td>Before each iteration (top)</td>
+<td>0</td>
+<td>The loop header</td>
+<td>Yes, if the start is already past the end</td>
+</tr>
+<tr>
+<td><code>while</code></td>
+<td>Before each iteration (top)</td>
+<td>0</td>
+<td>You, inside the body</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td><code>do-while</code></td>
+<td>After each iteration (bottom)</td>
+<td><strong>1</strong></td>
+<td>You, inside the body</td>
+<td><strong>Never</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The do-while trap: the body executes once <strong>before</strong> the condition is ever evaluated. A <code>do-while</code> whose condition is false from the start still runs one time. Reading it as "same as while" loses every such question.</p>
+<h3 id="32-counting-iterations-the-highest-value-skill">3.2 Counting iterations — the highest-value skill</h3>
+<p>Three rules, applied mechanically:</p>
+<table>
+<thead>
+<tr>
+<th>Form written as</th>
+<th>Iterations</th>
+<th>Values taken</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>for i from a to b</code> (inclusive)</td>
+<td><code>b - a + 1</code></td>
+<td>a, a+1, …, b</td>
+</tr>
+<tr>
+<td><code>for i = a; i &lt; b; i++</code> (exclusive)</td>
+<td><code>b - a</code></td>
+<td>a, a+1, …, b-1</td>
+</tr>
+<tr>
+<td><code>for i from a to b step s</code>, <code>s &gt; 0</code></td>
+<td><code>floor((b - a) / s) + 1</code></td>
+<td>a, a+s, a+2s, … ≤ b</td>
+</tr>
+<tr>
+<td><code>while i &lt;= b</code> … <code>i = i + s</code>, starting at a</td>
+<td><code>floor((b - a) / s) + 1</code></td>
+<td>same as above</td>
+</tr>
+<tr>
+<td><code>while i &lt; b</code> … <code>i = i + s</code>, starting at a</td>
+<td><code>ceil((b - a) / s)</code></td>
+<td>same as above</td>
+</tr>
+</tbody>
+</table>
+<p>Guard: if <code>b &lt; a</code> with a positive step, the count is <strong>0</strong> — the formula does not apply. For a descending <code>step -s</code>, use <code>floor((a - b) / s) + 1</code>.</p>
+<p><strong>Worked examples</strong></p>
+<table>
+<thead>
+<tr>
+<th>Loop</th>
+<th>Iterations</th>
+<th>Values</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>for i from 3 to 4</code></td>
+<td><code>4-3+1 = 2</code></td>
+<td>3, 4</td>
+</tr>
+<tr>
+<td><code>for i from 0 to 4</code></td>
+<td><code>4-0+1 = 5</code></td>
+<td>0, 1, 2, 3, 4</td>
+</tr>
+<tr>
+<td><code>for i from 1 to 10 step 2</code></td>
+<td><code>floor(9/2)+1 = 4+1 = 5</code></td>
+<td>1, 3, 5, 7, 9</td>
+</tr>
+<tr>
+<td><code>for i from 2 to 10 step 3</code></td>
+<td><code>floor(8/3)+1 = 2+1 = 3</code></td>
+<td>2, 5, 8</td>
+</tr>
+<tr>
+<td><code>for i = 0; i &lt; 5; i++</code></td>
+<td><code>5-0 = 5</code></td>
+<td>0, 1, 2, 3, 4</td>
+</tr>
+<tr>
+<td><code>for i = 1; i &lt;= 5; i++</code></td>
+<td><code>5-1+1 = 5</code></td>
+<td>1, 2, 3, 4, 5</td>
+</tr>
+<tr>
+<td><code>for i = 1; i &lt; 5; i++</code></td>
+<td><code>5-1 = 4</code></td>
+<td>1, 2, 3, 4</td>
+</tr>
+<tr>
+<td><code>for i from 1 to n</code></td>
+<td><code>n</code></td>
+<td>1 … n</td>
+</tr>
+<tr>
+<td><code>for i from 0 to n-1</code></td>
+<td><code>n</code></td>
+<td>0 … n-1</td>
+</tr>
+<tr>
+<td><code>for i from 0 to n</code></td>
+<td><code>n+1</code></td>
+<td>0 … n</td>
+</tr>
+<tr>
+<td><code>for i from 10 to 1 step 1</code></td>
+<td><code>0</code></td>
+<td>none</td>
+</tr>
+<tr>
+<td><code>for i from 10 to 1 step -1</code></td>
+<td><code>10</code></td>
+<td>10 … 1</td>
+</tr>
+</tbody>
+</table>
+<p>Compare <code>for i from 1 to n</code> with <code>for i from 0 to n-1</code> — both run exactly <code>n</code> times. Compare <code>for i from 1 to n</code> with <code>for i from 0 to n</code> — the second runs <code>n+1</code> times. This single shift is the most common wrong answer.</p>
+<h3 id="33-off-by-one-and-the-fencepost-problem">3.3 Off-by-one and the fencepost problem</h3>
+<p>Fencepost rule: <strong>n posts need n−1 gaps.</strong> Wherever a loop counts the <em>boundaries</em> between items, it runs one fewer time than the number of items; wherever it counts the <em>items</em>, it runs one time per item.</p>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>Wrong answer</th>
+<th>Correct answer</th>
+<th>Why</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>for i from 1 to 10</code> — how many times?</td>
+<td>9</td>
+<td>10</td>
+<td>Inclusive both ends</td>
+</tr>
+<tr>
+<td>Last index of an n-element array indexed from 0</td>
+<td>n</td>
+<td>n-1</td>
+<td>Fencepost</td>
+</tr>
+<tr>
+<td><code>for i = 0; i &lt;= n; i++</code> — how many times?</td>
+<td>n</td>
+<td>n+1</td>
+<td><code>&lt;=</code> adds one</td>
+</tr>
+<tr>
+<td>Pairs among n items</td>
+<td>n</td>
+<td>n-1</td>
+<td>Pairs = gaps</td>
+</tr>
+<tr>
+<td><code>while i &lt; n</code> starting at <code>i = 0</code></td>
+<td>n+1</td>
+<td>n</td>
+<td><code>&lt;</code> drops the last value</td>
+</tr>
+</tbody>
+</table>
+<h3 id="34-nested-loops">3.4 Nested loops</h3>
+<p><strong>Independent bounds → multiply.</strong> <code>for i from 1 to 3</code> containing <code>for j from 1 to 5</code> = <code>3 × 5 = 15</code> total inner-body executions.</p>
+<p><strong>Inner bound depends on the outer variable → add, do not multiply.</strong> Sum the inner counts over each outer value.</p>
+<div class="codehilite"><pre><span></span><code>count = 0
+for i from 1 to 4
+    for j from 1 to i
+        count = count + 1
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Outer <code>i</code></th>
+<th>Inner <code>j</code> values</th>
+<th>Inner iterations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1, 2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1, 2, 3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1, 2, 3, 4</td>
+<td>4</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td></td>
+<td><strong>10</strong></td>
+</tr>
+</tbody>
+</table>
+<p><code>1 + 2 + 3 + 4 = 10 = 4×5/2</code>. General case: <code>for i from 1 to n / for j from 1 to i</code> runs <code>n(n+1)/2</code> times. The mirror form <code>for j from i to n</code> also gives <code>n(n+1)/2</code> (4+3+2+1 = 10).</p>
+<h3 id="35-break-and-continue">3.5 <code>break</code> and <code>continue</code></h3>
+<table>
+<thead>
+<tr>
+<th>Statement</th>
+<th>Effect</th>
+<th>Effect on the iteration count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>break</code></td>
+<td>Leaves the <strong>innermost</strong> loop immediately</td>
+<td>Remaining iterations never happen — count is truncated</td>
+</tr>
+<tr>
+<td><code>continue</code></td>
+<td>Skips the rest of the body, jumps to the next iteration</td>
+<td>The iteration still <strong>counts</strong>; only body work is skipped</td>
+</tr>
+</tbody>
+</table>
+<p>Two traps:
+1. In a <code>for</code> loop, <code>continue</code> still executes the header's increment. In a <code>while</code> loop, if the <code>continue</code> sits <strong>above</strong> the counter update, the counter never advances → infinite loop.
+2. <code>break</code> inside nested loops exits one level only; the outer loop resumes normally.</p>
+<p>Worked <code>break</code>:</p>
+<div class="codehilite"><pre><span></span><code>sum = 0
+for i from 1 to 100
+    sum = sum + i
+    if sum &gt; 20 then break
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>sum after adding</th>
+<th><code>sum &gt; 20</code>?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>no</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>no</td>
+</tr>
+<tr>
+<td>3</td>
+<td>6</td>
+<td>no</td>
+</tr>
+<tr>
+<td>4</td>
+<td>10</td>
+<td>no</td>
+</tr>
+<tr>
+<td>5</td>
+<td>15</td>
+<td>no</td>
+</tr>
+<tr>
+<td>6</td>
+<td>21</td>
+<td><strong>yes → break</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Body executed 6 times, output 21 — not 100 iterations and not 5050.</p>
+<h3 id="36-infinite-loops">3.6 Infinite loops</h3>
+<table>
+<thead>
+<tr>
+<th>Cause</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Counter never updated</td>
+<td><code>i = 0</code> / <code>while i &lt; 5</code> / <code>print i</code> — no <code>i = i + 1</code></td>
+</tr>
+<tr>
+<td>Update in the wrong direction</td>
+<td><code>while i &lt; 5</code> … <code>i = i - 1</code></td>
+</tr>
+<tr>
+<td>Update outside the loop body</td>
+<td>Increment written after <code>end while</code></td>
+</tr>
+<tr>
+<td>Condition can never be hit</td>
+<td><code>while i != 10</code> … <code>i = i + 2</code>, starting <code>i = 1</code> (takes odd values forever)</td>
+</tr>
+<tr>
+<td>Condition is literally true</td>
+<td><code>while true</code> with no reachable <code>break</code></td>
+</tr>
+<tr>
+<td>Counter reset inside the body</td>
+<td><code>while i &lt; 5</code> … <code>i = 0</code> at the top of each pass</td>
+</tr>
+</tbody>
+</table>
+<p>An infinite loop is not always a <code>while true</code>: any loop whose exit condition the updates cannot reach is infinite.</p>
+<h3 id="37-loop-invariants-informal">3.7 Loop invariants (informal)</h3>
+<p>A loop invariant is a statement that is <strong>true before the loop starts and stays true after every iteration</strong>. It is the standard way to reason about what a loop has computed when it stops.</p>
+<p>Example — the sum loop below has the invariant: <em>"at the top of each pass, <code>sum</code> equals the total of all integers from 1 to <code>i - 1</code>."</em> Check it before pass 1 (<code>sum = 0</code>, <code>i = 1</code>, nothing added — true), check it after each pass, and the invariant plus the exit condition <code>i &gt; 5</code> proves the final <code>sum</code> is <code>1+2+3+4+5</code>.</p>
+<p>In MCQs you rarely write invariants down, but recognising one tells you quickly whether a loop computes <code>n(n+1)/2</code>, <code>n²</code>, or a running product.</p>
+<h3 id="38-fully-worked-trace-table">3.8 Fully worked trace table</h3>
+<div class="codehilite"><pre><span></span><code>sum = 0
+i = 1
+while i &lt;= 5
+    sum = sum + i
+    i = i + 1
+end while
+print sum
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Pass</th>
+<th><code>i</code> before check</th>
+<th><code>i &lt;= 5</code>?</th>
+<th><code>sum</code> before</th>
+<th><code>sum = sum + i</code></th>
+<th><code>i = i + 1</code></th>
+<th><code>sum</code> after</th>
+<th><code>i</code> after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>true</td>
+<td>0</td>
+<td>0 + 1 = 1</td>
+<td>1 + 1 = 2</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>true</td>
+<td>1</td>
+<td>1 + 2 = 3</td>
+<td>2 + 1 = 3</td>
+<td>3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>true</td>
+<td>3</td>
+<td>3 + 3 = 6</td>
+<td>3 + 1 = 4</td>
+<td>6</td>
+<td>4</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4</td>
+<td>true</td>
+<td>6</td>
+<td>6 + 4 = 10</td>
+<td>4 + 1 = 5</td>
+<td>10</td>
+<td>5</td>
+</tr>
+<tr>
+<td>5</td>
+<td>5</td>
+<td>true</td>
+<td>10</td>
+<td>10 + 5 = 15</td>
+<td>5 + 1 = 6</td>
+<td>15</td>
+<td>6</td>
+</tr>
+<tr>
+<td>—</td>
+<td>6</td>
+<td><strong>false</strong></td>
+<td>15</td>
+<td>—</td>
+<td>—</td>
+<td>15</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Output: 15.</strong> Iterations: 5. Cross-check with the formula: <code>sum 1..5 = 5×6/2 = 15</code>. ✔</p>
+<p>Note the exit row: the condition is evaluated a 6th time, is false, and <strong>nothing inside the body runs</strong>. The final value of <code>i</code> is 6, not 5 — exam options frequently offer both.</p>
+<h3 id="39-exam-pattern-a-variable-modified-inside-the-loop">3.9 Exam pattern: a variable modified inside the loop</h3>
+<p>When the loop counter or the tested variable is changed inside the body, the arithmetic progression is broken. Always trace value by value.</p>
+<p><strong>Example A — counter jumped by 3.</strong></p>
+<div class="codehilite"><pre><span></span><code>i = 1
+total = 0
+while i &lt;= 20
+    total = total + i
+    i = i + 3
+</code></pre></div>
+
+<p>Values added: 1, 4, 7, 10, 13, 16, 19 (next would be 22 &gt; 20, stop). Count = 7, total = 1+4+7+10+13+16+19 = <strong>70</strong>. Cross-check: <code>floor((19-1)/3)+1 = 7</code>; arithmetic series sum <code>= 7 × (1+19)/2 = 70</code>. ✔</p>
+<p><strong>Example B — the tested variable doubles (not a fixed step).</strong></p>
+<div class="codehilite"><pre><span></span><code>x = 1
+count = 0
+while x &lt; 50
+    x = x * 2
+    count = count + 1
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Pass</th>
+<th><code>x</code> before</th>
+<th><code>x &lt; 50</code>?</th>
+<th><code>x</code> after</th>
+<th><code>count</code> after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>true</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>true</td>
+<td>4</td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+<td>true</td>
+<td>8</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>8</td>
+<td>true</td>
+<td>16</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>16</td>
+<td>true</td>
+<td>32</td>
+<td>5</td>
+</tr>
+<tr>
+<td>6</td>
+<td>32</td>
+<td>true</td>
+<td>64</td>
+<td>6</td>
+</tr>
+<tr>
+<td>—</td>
+<td>64</td>
+<td><strong>false</strong></td>
+<td>64</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Output: 6.</strong> The step size is not constant, so <code>b - a + 1</code> and the step formula do <strong>not</strong> apply — only a trace, or the log rule below.</p>
+<p><strong>Example C — the tested variable is overwritten mid-loop.</strong></p>
+<div class="codehilite"><pre><span></span><code>i = 1
+while i &lt;= 10
+    print i
+    if i = 3 then i = 8
+    i = i + 1
+</code></pre></div>
+
+<p>Prints 1, 2, 3, then jumps to 8, prints 8, 9, 10 → <strong>6 values printed</strong> (1, 2, 3, 8, 9, 10), not 10. The jump skips 4, 5, 6, 7 entirely.</p>
+<h3 id="310-summation-shortcuts">3.10 Summation shortcuts</h3>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Formula</th>
+<th>Check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1 + 2 + … + n</code></td>
+<td><code>n(n+1)/2</code></td>
+<td>n=5 → 15</td>
+</tr>
+<tr>
+<td><code>1 + 2 + … + n</code> (triangular nested loop count)</td>
+<td><code>n(n+1)/2</code></td>
+<td>n=4 → 10</td>
+</tr>
+<tr>
+<td>First n even numbers <code>2+4+…+2n</code></td>
+<td><code>n(n+1)</code></td>
+<td>n=4 → 20</td>
+</tr>
+<tr>
+<td>First n odd numbers <code>1+3+…+(2n-1)</code></td>
+<td><code>n²</code></td>
+<td>n=5 → 25</td>
+</tr>
+<tr>
+<td><code>1 + 2 + … + (n-1)</code></td>
+<td><code>n(n-1)/2</code></td>
+<td>n=5 → 10, i.e. pairs among n items</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Halving / doubling loops (log base 2).</strong></p>
+<table>
+<thead>
+<tr>
+<th>Form</th>
+<th>Iterations</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>while n &gt; 1</code> … <code>n = floor(n / 2)</code></td>
+<td><code>floor(log2 n)</code></td>
+</tr>
+<tr>
+<td><code>while n &gt; 0</code> … <code>n = floor(n / 2)</code></td>
+<td><code>floor(log2 n) + 1</code></td>
+</tr>
+<tr>
+<td><code>x = 1; while x &lt; n</code> … <code>x = x * 2</code> (n &gt; 1)</td>
+<td><code>floor(log2 n) + 1</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>n</th>
+<th><code>while n &gt; 1: n = n/2</code></th>
+<th><code>while n &gt; 0: n = n/2</code></th>
+<th><code>x = 1; while x &lt; n: x = x*2</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8</td>
+<td>3 (8→4→2→1)</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>10</td>
+<td>3 (10→5→2→1)</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>50</td>
+<td>—</td>
+<td>—</td>
+<td>6</td>
+</tr>
+<tr>
+<td>100</td>
+<td>6 (100→50→25→12→6→3→1)</td>
+<td>7</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<p>Use these to answer in seconds what a trace would take a minute to do — but only after confirming the loop is a pure halving/doubling pattern with no extra modification.</p>
+<hr />
+<h2 id="4-must-memorise-block">4. Must-memorise block</h2>
+<p><strong>Three loop forms — minimum executions</strong></p>
+<table>
+<thead>
+<tr>
+<th>Form</th>
+<th>Syntax</th>
+<th>Tested</th>
+<th>Min runs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>for</code></td>
+<td><code>for i from a to b step s … end for</code></td>
+<td>top</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>while</code></td>
+<td><code>while cond … end while</code></td>
+<td>top</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>do-while</code></td>
+<td><code>do … while cond</code></td>
+<td>bottom</td>
+<td><strong>1 — always at least once</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Do-while trap:</strong> the body runs <em>before</em> the first condition test. A <code>do-while</code> with an already-false condition still executes exactly once. <code>while</code> with the same condition executes zero times.</p>
+<p><strong>Three iteration-count formulas</strong></p>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>Formula</th>
+<th>Worked number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Inclusive <code>for i from a to b</code></td>
+<td><code>b - a + 1</code></td>
+<td><code>from 3 to 4</code> → <code>4-3+1 = 2</code></td>
+</tr>
+<tr>
+<td>Exclusive <code>for i = a; i &lt; b; i++</code></td>
+<td><code>b - a</code></td>
+<td><code>i = 1; i &lt; 5</code> → <code>5-1 = 4</code></td>
+</tr>
+<tr>
+<td>Stepped <code>for i from a to b step s</code></td>
+<td><code>floor((b-a)/s) + 1</code></td>
+<td><code>from 1 to 10 step 2</code> → <code>floor(9/2)+1 = 5</code></td>
+</tr>
+</tbody>
+</table>
+<p>Anchors: <code>from 3 to 4</code> = 2 · <code>from 0 to 4</code> = 5 · <code>from 1 to 10 step 2</code> = 5 · <code>from 1 to n</code> = n · <code>from 0 to n-1</code> = n · <code>from 0 to n</code> = n+1.
+If <code>b &lt; a</code> with a positive step → <strong>0 iterations</strong>.</p>
+<p><strong>Summation shortcuts</strong></p>
+<table>
+<thead>
+<tr>
+<th>Quantity</th>
+<th>Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1 + 2 + … + n</code></td>
+<td><code>n(n+1)/2</code></td>
+</tr>
+<tr>
+<td><code>1 + 2 + … + (n-1)</code></td>
+<td><code>n(n-1)/2</code></td>
+</tr>
+<tr>
+<td>First n even numbers</td>
+<td><code>n(n+1)</code></td>
+</tr>
+<tr>
+<td>First n odd numbers</td>
+<td><code>n²</code></td>
+</tr>
+<tr>
+<td>Halving <code>while n &gt; 1: n = n/2</code></td>
+<td><code>floor(log2 n)</code></td>
+</tr>
+<tr>
+<td>Halving <code>while n &gt; 0: n = n/2</code></td>
+<td><code>floor(log2 n) + 1</code></td>
+</tr>
+<tr>
+<td>Doubling <code>x = 1; while x &lt; n: x = x*2</code> (n &gt; 1)</td>
+<td><code>floor(log2 n) + 1</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nested loops:</strong> independent bounds → <strong>multiply</strong> (<code>3 × 5 = 15</code>). Inner bound depends on the outer variable → <strong>add the inner counts</strong> (<code>1+2+3+4 = 10 = n(n+1)/2</code> for n=4).</p>
+<p><strong><code>break</code> vs <code>continue</code>:</strong> <code>break</code> ends the innermost loop and cuts the remaining iterations. <code>continue</code> skips only the rest of the body — the iteration still counts. In a <code>while</code> loop, <code>continue</code> placed above the counter update causes an infinite loop.</p>
+<p><strong>Infinite loop causes:</strong> no update · wrong-direction update · update outside the body · an unreachable exit value (<code>while i != 10</code> with <code>i = i + 2</code> from 1) · <code>while true</code> with no reachable <code>break</code> · counter reset inside the body.</p>
+<p><strong>Off-by-one checklist:</strong> inclusive <code>to b</code> adds 1 · <code>&lt;=</code> adds 1 versus <code>&lt;</code> · n-element array indexed from 0 ends at <code>n-1</code> · n posts have <code>n-1</code> gaps · <code>for i from 1 to n</code> and <code>for i from 0 to n-1</code> are both n iterations, but <code>for i from 0 to n</code> is n+1.</p>
+<p><strong>Trace discipline:</strong> on exit, the condition is evaluated one final time and fails — record the final counter value, which is usually one past the last value used in the body.</p>
+<h2 id="5-worked-examples">5. Worked examples</h2>
+<h3 id="example-1-inclusive-foreach-with-bitwise-xor">Example 1 — Inclusive <code>for(each)</code> with bitwise XOR</h3>
+<ol>
+<li><code>total ← 0</code></li>
+<li><code>for(each c from 3 to 4)</code></li>
+<li><code>total ← total + (c BITXOR 1)</code></li>
+<li><code>end for</code></li>
+<li><code>print total</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Line</th>
+<th style="text-align: right;">c</th>
+<th style="text-align: right;">total</th>
+<th>Output/Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">0</td>
+<td>total initialized</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td>enter iteration 1</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td><code>3 BITXOR 1 = 2</code>; total = 0 + 2</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td>end iteration 1; next c = 4</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td>enter iteration 2</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td><code>4 BITXOR 1 = 5</code>; total = 2 + 5</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td>end iteration 2; loop ends</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td>print 7</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Final answer: 7</strong></p>
+<h3 id="example-2-exclusive-upper-bound-with-while-i-5">Example 2 — Exclusive upper bound with <code>while i &lt; 5</code></h3>
+<ol>
+<li><code>sum ← 0</code></li>
+<li><code>i ← 1</code></li>
+<li><code>while i &lt; 5</code></li>
+<li><code>sum ← sum + i</code></li>
+<li><code>i ← i + 1</code></li>
+</ol>
+<p><strong>5. Correct: (a) 3</strong><br />
+Trace table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">c</th>
+<th style="text-align: right;">c AND 3</th>
+<th style="text-align: right;">x before</th>
+<th style="text-align: right;">x after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+<p><code>for(each c from 3 to 4)</code> is inclusive and runs 2 times. Output is 3.</p>
+<ul>
+<li>(b) 0: Treating both <code>c AND 3</code> values as 0.</li>
+<li>(c) 4: Using <code>c AND 4</code> instead of <code>c AND 3</code>.</li>
+<li>(d) 7: Adding <code>3 + 4</code> instead of applying bitwise AND.</li>
+</ul>
+<hr />
+<ol start="6">
+<li><code>end while</code></li>
+</ol>
+<p><strong>6. Correct: (b) 9</strong><br />
+Trace table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">i</th>
+<th style="text-align: right;">s before</th>
+<th style="text-align: right;">s after</th>
+<th style="text-align: right;">i after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">7</td>
+</tr>
+</tbody>
+</table>
+<p>Loop stops when <code>i = 7</code>, because <code>7 &lt;= 5</code> is false. Output is 9.</p>
+<ul>
+<li>(a) 6: Incrementing <code>i</code> by 1, giving <code>1 + 2 + 3 = 6</code>.</li>
+<li>(c) 12: Running an extra iteration or adding a term twice.</li>
+<li>(d) 15: Adding <code>1 + 2 + 3 + 4 + 5</code>.</li>
+</ul>
+<hr />
+<ol start="7">
+<li><code>print sum</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Line</th>
+<th style="text-align: right;">sum</th>
+<th style="text-align: right;">i</th>
+<th>Output/Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">—</td>
+<td>sum initialized</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td>i initialized</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td><code>1 &lt; 5</code> true</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td>sum = 0 + 1</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td>i = 1 + 1</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td>end iteration 1</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td><code>2 &lt; 5</code> true</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td>sum = 1 + 2</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td>i = 2 + 1</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td>end iteration 2</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td><code>3 &lt; 5</code> true</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">3</td>
+<td>sum = 3 + 3</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">4</td>
+<td>i = 3 + 1</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">4</td>
+<td>end iteration 3</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">4</td>
+<td><code>4 &lt; 5</code> true</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">4</td>
+<td>sum = 6 + 4</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">5</td>
+<td>i = 4 + 1</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">5</td>
+<td>end iteration 4</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">5</td>
+<td><code>5 &lt; 5</code> false</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">5</td>
+<td>print 10</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Final answer: 10</strong></p>
+<h3 id="example-3-nested-inclusive-loops">Example 3 — Nested inclusive loops</h3>
+<ol>
+<li><code>count ← 0</code></li>
+<li><code>for(each i from 1 to 2)</code></li>
+<li><code>for(each j from 1 to 2)</code></li>
+<li><code>count ← count + (i * j)</code></li>
+<li><code>end for</code></li>
+<li><code>end for</code></li>
+<li><code>print count</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Line</th>
+<th style="text-align: right;">i</th>
+<th style="text-align: right;">j</th>
+<th style="text-align: right;">count</th>
+<th>Output/Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">0</td>
+<td>count initialized</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">0</td>
+<td>enter outer iteration 1</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td>enter inner iteration 1</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td><code>i * j = 1</code>; count = 0 + 1</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td>end inner iteration 1; next j = 2</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td>enter inner iteration 2</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td><code>i * j = 2</code>; count = 1 + 2</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td>end inner iteration 2; inner loop ends</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td>end outer iteration 1; next i = 2</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td>enter outer iteration 2</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td>enter inner iteration 1</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5</td>
+<td><code>i * j = 2</code>; count = 3 + 2</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5</td>
+<td>end inner iteration 1; next j = 2</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+<td>enter inner iteration 2</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">9</td>
+<td><code>i * j = 4</code>; count = 5 + 4</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">9</td>
+<td>end inner iteration 2; inner loop ends</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">9</td>
+<td>end outer iteration 2; outer loop ends</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">9</td>
+<td>print 9</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Final answer: 9</strong></p>
+<h3 id="example-4-variable-modified-inside-changes-later-iterations">Example 4 — Variable modified inside changes later iterations</h3>
+<ol>
+<li><code>x ← 0</code></li>
+<li><code>i ← 1</code></li>
+<li><code>while i &lt;= 5</code></li>
+<li><code>x ← x + i</code></li>
+<li><code>i ← i + 2</code></li>
+<li><code>end while</code></li>
+<li><code>print x</code></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Line</th>
+<th style="text-align: right;">x</th>
+<th style="text-align: right;">i</th>
+<th>Output/Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">—</td>
+<td>x initialized</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td>i initialized</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td><code>1 &lt;= 5</code> true</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td>x = 0 + 1</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td>i = 1 + 2</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td>end iteration 1</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td><code>3 &lt;= 5</code> true</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td>x = 1 + 3</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td>i = 3 + 2</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td>end iteration 2</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td><code>5 &lt;= 5</code> true</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">5</td>
+<td>x = 4 + 5</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">7</td>
+<td>i = 5 + 2</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">7</td>
+<td>end iteration 3</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">7</td>
+<td><code>7 &lt;= 5</code> false</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">7</td>
+<td>print 9</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Final answer: 9</strong></p>
+<h2 id="6-traps-and-gotchas">6. Traps and gotchas</h2>
+<table>
+<thead>
+<tr>
+<th>Trap</th>
+<th>Why it catches people</th>
+<th>How to avoid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Assuming <code>for(each c from 3 to 4)</code> excludes 4.</td>
+<td>People import the C-style habit <code>for(i=0; i&lt;n; i++)</code>, where the upper bound is not executed.</td>
+<td>Treat <code>from A to B</code> as inclusive unless the pseudocode explicitly writes <code>&lt; B</code> or <code>exclusive</code>. For <code>3 to 4</code>, values are 3 and 4.</td>
+</tr>
+<tr>
+<td>Counting iterations by the final loop variable instead of distinct values.</td>
+<td>For <code>3 to 4</code>, final <code>c</code> is 4, but iterations = 2.</td>
+<td>For step 1 inclusive, iterations = end − start + 1. Verify by listing values.</td>
+</tr>
+<tr>
+<td>Modifying a <code>for(each)</code> loop variable inside the body.</td>
+<td>In many for-each loops, the next iteration resets the loop variable to the next range value, so the body change is overwritten.</td>
+<td>If modification must affect later iterations, use a <code>while</code> loop or confirm the exact for-loop semantics. Do not assume the change carries forward.</td>
+</tr>
+<tr>
+<td>Forgetting that <code>while</code> re-tests the condition after every body update.</td>
+<td>The variable updated at the bottom changes whether the next iteration runs.</td>
+<td>Trace the condition line every time. Update the variable in the table before the next condition row.</td>
+</tr>
+<tr>
+<td>Using multiplication for nested loop body count when the inner bound depends on the outer variable.</td>
+<td>Total inner executions are the sum of inner counts, not necessarily outer_count × inner_count.</td>
+<td>Compute inner iterations per outer value and add them.</td>
+</tr>
+<tr>
+<td>Mixing <code>&lt;</code> and <code>&lt;=</code> in the loop condition.</td>
+<td><code>i &lt; 5</code> stops at 4; <code>i &lt;= 5</code> includes 5. One character changes the output.</td>
+<td>Write actual values before tracing: <code>1,2,3,4</code> versus <code>1,2,3,4,5</code>.</td>
+</tr>
+<tr>
+<td>Treating <code>BITXOR</code> or <code>BITAND</code> as decimal arithmetic or using wrong precedence.</td>
+<td>Bitwise operations work on binary bits; e.g. <code>3 BITXOR 1 = 2</code>, not 4.</td>
+<td>Parenthesize bitwise expressions and compute in binary before substituting.</td>
+</tr>
+<tr>
+<td>Relying on a loop variable after the loop ends.</td>
+<td>A for-loop variable may be one past the last value, or undefined, depending on the pseudocode definition.</td>
+<td>Only use variables after the loop if the pseudocode explicitly shows the final assignment.</td>
+</tr>
+<tr>
+<td>Skipping trace rows for <code>end for</code>, <code>end while</code>, and condition retests.</td>
+<td>Those rows are where the next value or termination decision is set, so skipped rows cause wrong iteration counts.</td>
+<td>Include one row per executed line, especially condition and end-of-loop lines.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-practice-questions">7. Practice questions</h2>
+<ol>
+<li><strong>[Easy]</strong> <em>(B1 — loops and iteration counting)</em><br />
+   What is the output?
+   ```pseudocode</li>
+<li>Set x = 0</li>
+<li>for(each c from 3 to 4)</li>
+<li>x = x XOR c</li>
+<li>end for</li>
+<li>
+<p>print x
+   ```
+   (a) 3
+   (b) 7
+   (c) 1
+   (d) 12</p>
+</li>
+<li>
+<p><strong>[Easy]</strong> <em>(B1 — loops and iteration counting)</em><br />
+   What is the output?
+   ```pseudocode</p>
+</li>
+<li>Set count = 0</li>
+<li>for(i from 2 to 5)</li>
+<li>count = count + i</li>
+<li>end for</li>
+<li>
+<p>print count
+   ```
+   (a) 15
+   (b) 14
+   (c) 9
+   (d) 20</p>
+</li>
+<li>
+<p><strong>[Easy]</strong> <em>(B1 — loops and iteration counting)</em><br />
+   How many times does the loop body execute?
+   <code>pseudocode
+   for(each k from 7 to 9)
+       print k
+   end for</code>
+   (a) 2
+   (b) 3
+   (c) 4
+   (d) 0</p>
+</li>
+<li>
+<p><strong>[Medium]</strong> <em>(B1 — loops and iteration counting)</em><br />
+   What is the output?
+   ```pseudocode</p>
+</li>
+<li>Set s = 0</li>
+<li>for(i from 1 to 3)</li>
+<li>for(j from 2 to 3)</li>
+<li>s = s + (i * j)</li>
+<li>end for</li>
+<li>end for</li>
+<li>
+<p>print s
+   ```
+   (a) 18
+   (b) 24
+   (c) 30
+   (d) 36</p>
+</li>
+<li>
+<p><strong>[Medium]</strong> <em>(B1 — loops and iteration counting)</em><br />
+   What is the output?
+   ```pseudocode</p>
+</li>
+<li>Set x = 0</li>
+<li>for(each c from 3 to 4)</li>
+<li>x = x + (c AND 3)</li>
+<li>end for</li>
+<li>
+<p>print x
+   ```
+   (a) 7
+   (b) 0
+   (c) 4
+   (d) 3</p>
+</li>
+<li>
+<p><strong>[Medium]</strong> <em>(B1 — loops and iteration counting)</em><br />
+   What is the output?
+   ```pseudocode</p>
+</li>
+<li>Set i = 1</li>
+<li>Set s = 0</li>
+<li>while i &lt;= 5</li>
+<li>s = s + i</li>
+<li>i = i + 2</li>
+<li>end while</li>
+<li>
+<p>print s
+   ```
+   (a) 6<br />
+   (b) 9<br />
+   (c) 12<br />
+   (d) 15</p>
+</li>
+<li>
+<p><strong>[Medium]</strong> <em>(B1 — loops and iteration counting)</em><br />
+   What is the output?
+   ```pseudocode</p>
+</li>
+<li>Set t = 0</li>
+<li>for(i from 1 to 3)</li>
+<li>for(j from 1 to i - 1)</li>
+<li>t = t + j</li>
+<li>end for</li>
+<li>end for</li>
+<li>print t
+   ```
+   (a) 3
+   (b) 6
+   (c) 4
+   (d) 10</li>
+</ol>
+<p><strong>7. Correct: (c) 4</strong><br />
+Trace table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">i</th>
+<th>j range</th>
+<th style="text-align: right;">j</th>
+<th style="text-align: right;">t before</th>
+<th style="text-align: right;">t after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>1 to 0</td>
+<td style="text-align: right;">none</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>1 to 1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>1 to 2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>1 to 2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+</tr>
+</tbody>
+</table>
+<p>Output is 4.</p>
+<ul>
+<li>(a) 3: Using an exclusive lower bound or missing the <code>j = 2</code> addition.</li>
+<li>(b) 6: Using <code>j from 1 to i</code>, which adds <code>1 + 2 + 3</code> for <code>i = 3</code>.</li>
+<li>(d) 10: Using a fixed inner range and miscalculating the total.</li>
+</ul>
+<hr />
+<ol start="8">
+<li><strong>[Medium]</strong> <em>(B1 — loops and iteration counting)</em><br />
+   A loop is:
+   <code>pseudocode
+   for(i from 4 to 10)
+       for(j from 1 to 3)
+           print i, j
+       end for
+   end for</code>
+   How many times is <code>print i, j</code> executed?
+   (a) 18
+   (b) 30
+   (c) 21
+   (d) 24</li>
+</ol>
+<p><strong>8. Correct: (c) 21</strong><br />
+Trace/count table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">i</th>
+<th>inner j values</th>
+<th style="text-align: right;">inner executions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">4</td>
+<td>1, 2, 3</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>1, 2, 3</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>1, 2, 3</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>1, 2, 3</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>1, 2, 3</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td>1, 2, 3</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td>1, 2, 3</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+<p>Outer loop runs <code>10 - 4 + 1 = 7</code> times. Inner loop runs 3 times each. Total = <code>7 * 3 = 21</code>.</p>
+<ul>
+<li>(a) 18: Using outer range <code>4 to 9</code>, giving <code>6 * 3</code>.</li>
+<li>(d) 24: Using outer range <code>4 to 11</code>, giving <code>8 * 3</code>.</li>
+<li>(b) 30: Using 10 outer iterations and 3 inner iterations.</li>
+</ul>
+<hr />
+<ol start="9">
+<li><strong>[Medium]</strong> <em>(B1 — loops and iteration counting)</em><br />
+   What is the output?
+   ```pseudocode</li>
+<li>Set r = 1</li>
+<li>for(c from 2 to 4)</li>
+<li>r = r XOR c</li>
+<li>end for</li>
+<li>print r
+   ```
+   (a) 4
+   (b) 3
+   (c) 0
+   (d) 7</li>
+</ol>
+<p><strong>9. Correct: (a) 4</strong><br />
+Trace table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">c</th>
+<th style="text-align: right;">r before</th>
+<th style="text-align: right;">r XOR c</th>
+<th style="text-align: right;">r after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1 XOR 2 = 3</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3 XOR 3 = 0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0 XOR 4 = 4</td>
+<td style="text-align: right;">4</td>
+</tr>
+</tbody>
+</table>
+<p>Output is 4.</p>
+<ul>
+<li>(c) 0: Stopping at <code>c = 3</code>, where <code>3 XOR 3 = 0</code>.</li>
+<li>(b) 3: Computing only the first iteration.</li>
+<li>(d) 7: Adding XOR results as <code>3 + 0 + 4</code>.</li>
+</ul>
+<hr />
+<ol start="10">
+<li><strong>[Hard]</strong> <em>(B1 — loops and iteration counting)</em><br />
+    What is the output?
+    ```pseudocode<ol>
+<li>Set n = 0</li>
+<li>Set i = 1</li>
+<li>while i &lt;= 4</li>
+<li>Set j = i</li>
+<li>while j &lt;= 4</li>
+<li>n = n + (i XOR j)</li>
+<li>j = j + 1</li>
+<li>end while</li>
+<li>i = i + 1</li>
+<li>end while</li>
+<li>print n
+```
+(a) 20
+(b) 24
+(c) 32
+(d) 28</li>
+</ol>
+</li>
+</ol>
+<p><strong>10. Correct: (b) 24</strong><br />
+Trace table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">i</th>
+<th style="text-align: right;">j</th>
+<th style="text-align: right;">i XOR j</th>
+<th style="text-align: right;">n after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">17</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">17</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">24</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">24</td>
+</tr>
+</tbody>
+</table>
+<p>Output is 24.</p>
+<ul>
+<li>(a) 20: Omitting one XOR term or stopping before <code>i = 4</code>.</li>
+<li>(d) 28: Adding an extra term, such as an additional 4.</li>
+<li>(c) 32: Including extra iterations or miscalculating XOR.</li>
+</ul>
+<hr />
+<ol start="11">
+<li><strong>[Hard]</strong> <em>(B1 — loops and iteration counting)</em><br />
+    What is the output?
+    ```pseudocode<ol>
+<li>Set a = 5</li>
+<li>Set b = 0</li>
+<li>while a &gt; 0</li>
+<li>b = b + (a AND 3)</li>
+<li>a = a - 2</li>
+<li>end while</li>
+<li>print b
+```
+(a) 3
+(b) 5
+(c) 4
+(d) 7</li>
+</ol>
+</li>
+</ol>
+<p><strong>11. Correct: (b) 5</strong><br />
+Trace table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">a</th>
+<th style="text-align: right;">a AND 3</th>
+<th style="text-align: right;">b before</th>
+<th style="text-align: right;">b after</th>
+<th style="text-align: right;">a after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">-1</td>
+</tr>
+</tbody>
+</table>
+<p>Loop stops when <code>a = -1</code>, because <code>-1 &gt; 0</code> is false. Output is 5.</p>
+<ul>
+<li>(a) 3: Missing the iteration for <code>a = 1</code> or <code>a = 5</code>.</li>
+<li>(c) 4: Miscomputing one bitwise AND value.</li>
+<li>(d) 7: Treating AND as addition or using OR instead of AND.</li>
+</ul>
+<hr />
+<ol start="12">
+<li><strong>[Hard]</strong> <em>(B1 — loops and iteration counting)</em><br />
+    What is the output?
+    ```pseudocode<ol>
+<li>Set total = 0</li>
+<li>for(i from 1 to 3)</li>
+<li>Set k = 0</li>
+<li>while k &lt; i</li>
+<li>total = total + (i OR k)</li>
+<li>k = k + 1</li>
+<li>end while</li>
+<li>end for</li>
+<li>print total
+```
+(a) 12
+(b) 9
+(c) 18
+(d) 15</li>
+</ol>
+</li>
+</ol>
+<p><strong>Rule:</strong> In pseudocode, <code>for i from A to B</code> is inclusive: it executes <code>B - A + 1</code> times if <code>B &gt;= A</code>, and 0 times if <code>B &lt; A</code>. <code>for i from A to B - 1</code> and <code>while i &lt; B</code> exclude <code>B</code>. In a counted <code>for</code>, the loop variable is assigned the next value from the range each iteration; changing it inside the body does not change the iteration count. In a <code>while</code>/<code>repeat</code>, assignments inside the body can change later iterations. Bitwise <code>AND</code>, <code>OR</code>, and <code>XOR</code> operate on binary representations.</p>
+<p><strong>12. Correct: (d) 15</strong><br />
+Trace table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">i</th>
+<th style="text-align: right;">k</th>
+<th style="text-align: right;">i OR k</th>
+<th style="text-align: right;">total after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">15</td>
+</tr>
+</tbody>
+</table>
+<p>Output is 15.</p>
+<ul>
+<li>(b) 9: Stopping after <code>i = 2</code>.</li>
+<li>(a) 12: Missing the final <code>k = 2</code> addition for <code>i = 3</code>.</li>
+<li>(c) 18: Adding an extra inner iteration or miscalculating OR.</li>
+</ul>
+<hr />
+<h2 id="8-resources">8. Resources</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Type</th>
+<th>Link</th>
+<th>Free/Paid</th>
+<th>Time</th>
+<th>Why this one</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PrepInsta — Accenture pseudocode</td>
+<td>Practice set</td>
+<td>https://prepinsta.com/accenture/pseudo-code/general-pseudo-code/</td>
+<td>Free</td>
+<td>40 min</td>
+<td>Loop-based output prediction in the observed style</td>
+</tr>
+<tr>
+<td>CodeChef — Accenture interview questions</td>
+<td>Practice set</td>
+<td>https://www.codechef.com/practice/accenture-interview-questions</td>
+<td>Free</td>
+<td>40 min</td>
+<td>Company-tagged practice</td>
+</tr>
+<tr>
+<td>GfG — Complexity analysis guide</td>
+<td>Article</td>
+<td>https://www.geeksforgeeks.org/dsa/complete-guide-on-complexity-analysis/</td>
+<td>Free</td>
+<td>20 min</td>
+<td>Iteration counting is the foundation of B9; read them together</td>
+</tr>
+<tr>
+<td><code>question-banks/QB-T25-B1-loops-iteration.md</code></td>
+<td>Question bank</td>
+<td>(this library)</td>
+<td>Free</td>
+<td>30 min</td>
+<td>20 original questions</td>
+</tr>
+</tbody>
+</table>
+<p><em>All external links verified resolving 2026-09-16.</em></p>
+<h2 id="9-self-check">9. Self-check</h2>
+<ul>
+<li>[ ] <strong>I know <code>for i from a to b</code> is inclusive and runs b−a+1 times</strong></li>
+<li>[ ] I know <code>for i = a; i &lt; b; i++</code> runs b−a times</li>
+<li>[ ] I can compute iterations for a loop with a step other than 1</li>
+<li>[ ] I can compute total iterations for a nested and for a triangular loop</li>
+<li>[ ] I know a <code>do-while</code> always executes at least once</li>
+<li>[ ] I recompute every expression inside the body on each pass rather than assuming it is constant</li>
+<li>[ ] I can apply the sum shortcuts n(n+1)/2 and n² for the first n odd numbers</li>
+<li>[ ] I scored 9/12 or better on the practice questions</li>
+</ul>
+<h2 id="10-sources">10. Sources</h2>
+<p><strong>Teaching content (§3–§9)</strong> is adapted from <code>accenture-prep-final/accenture-prep-library/topics/T25-B1-loops-iteration.md</code>, which lists its own sources and was verified in that library's QA. <strong>Infosys evidence</strong> for this file: observed questions P01, P02, P04, P05, P06, P08, P09, O48, O50 in <code>../data/questions-observed.csv</code>; section structure and marks in <code>../research/03-pattern-synthesis.md</code> §1; weightage, tier and hours in <code>../data/weightage.json</code> (code <code>P1</code>). Confidence <strong>High</strong>. Nothing in this file is a published Infosys syllabus.</p>
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/pseudocode/00-INDEX.html"><span>Previous</span><strong>Pseudocode — index</strong></a><a class="pager next" href="../../infosys-se/pseudocode/P2-recursion.html"><span>Next</span><strong>P2 — Recursion — Trace, Base Case, Accumulation</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#p1-loops-and-iteration-counting">P1 — Loops and Iteration Counting</a><a class="toc-l1" href="#1-why-this-topic-matters-here">1. Why this topic matters here</a><a class="toc-l1" href="#2-exactly-what-gets-asked">2. Exactly what gets asked</a><a class="toc-l1" href="#3-concept-notes">3. Concept notes</a><a class="toc-l1" href="#4-must-memorise-block">4. Must-memorise block</a><a class="toc-l1" href="#5-worked-examples">5. Worked examples</a><a class="toc-l1" href="#6-traps-and-gotchas">6. Traps and gotchas</a><a class="toc-l1" href="#7-practice-questions">7. Practice questions</a><a class="toc-l1" href="#8-resources">8. Resources</a><a class="toc-l1" href="#9-self-check">9. Self-check</a><a class="toc-l1" href="#10-sources">10. Sources</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

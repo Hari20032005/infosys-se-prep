@@ -1,0 +1,1145 @@
+{
+ "https://artofproblemsolving.com/wiki/index.php/Ratio": {
+  "status": "403",
+  "files": [
+   "topics/A17-ratio-and-proportion.md"
+  ]
+ },
+ "https://claude.ai/artifact/WDiiHkYG2c4g4kPXD818kq": {
+  "status": "403",
+  "files": [
+   "PROGRESS.md"
+  ]
+ },
+ "https://dictionary.cambridge.org/": {
+  "status": "403",
+  "files": [
+   "topics/V1-reading-comprehension.md"
+  ]
+ },
+ "https://dictionary.cambridge.org/grammar/british-grammar/": {
+  "status": "403",
+  "files": [
+   "topics/G1-fill-in-the-blanks-and-cloze.md",
+   "topics/V2-spotting-errors-and-grammar-rules.md",
+   "topics/V3-sentence-correction.md"
+  ]
+ },
+ "https://docs.github.com/en/get-started/using-git/about-git": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "interview/IV4-projects-and-resume.md"
+  ]
+ },
+ "https://docs.oracle.com/javase/specs/jls/se21/html/jls-15.html": {
+  "status": "200",
+  "files": [
+   "core-course/20-P4-increment-operators.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://docs.oracle.com/javase/tutorial/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "interview/IV7-light-coding-in-java.md"
+  ]
+ },
+ "https://docs.oracle.com/javase/tutorial/java/IandI/override.html": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "pseudocode/P9-oop-in-pseudocode.md"
+  ]
+ },
+ "https://docs.oracle.com/javase/tutorial/java/IandI/polymorphism.html": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "pseudocode/P9-oop-in-pseudocode.md"
+  ]
+ },
+ "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html": {
+  "status": "200",
+  "files": [
+   "core-course/22-P5-arrays.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/branch.html": {
+  "status": "200",
+  "files": [
+   "core-course/19-P1-loops-and-traces.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html": {
+  "status": "200",
+  "files": [
+   "core-course/19-P1-loops-and-traces.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "core-course/20-P4-increment-operators.md",
+   "pseudocode/P4-increment-operators-and-dialect.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op3.html": {
+  "status": "200",
+  "files": [
+   "core-course/21-P3-bitwise-operators.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html": {
+  "status": "200",
+  "files": [
+   "core-course/21-P3-bitwise-operators.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html": {
+  "status": "200",
+  "files": [
+   "core-course/19-P1-loops-and-traces.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://en.wikipedia.org/wiki/Atbash": {
+  "status": "200",
+  "files": [
+   "topics/A1-coding-and-decoding.md"
+  ]
+ },
+ "https://en.wikipedia.org/wiki/Fibonacci_sequence": {
+  "status": "200",
+  "files": [
+   "topics/A2-number-and-letter-series.md"
+  ]
+ },
+ "https://en.wikipedia.org/wiki/Harmonic_mean": {
+  "status": "200",
+  "files": [
+   "topics/A15-time-speed-distance.md"
+  ]
+ },
+ "https://en.wikipedia.org/wiki/Kakuro": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "puzzles/Z1-number-grids-and-matrices.md"
+  ]
+ },
+ "https://en.wikipedia.org/wiki/Kinship": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/A5-blood-relations.md"
+  ]
+ },
+ "https://en.wikipedia.org/wiki/Percentage": {
+  "status": "200",
+  "files": [
+   "topics/A12-percentages.md"
+  ]
+ },
+ "https://en.wikipedia.org/wiki/Situation,_task,_action,_result": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "interview/IV5-hr-and-behavioural.md"
+  ]
+ },
+ "https://en.wikipedia.org/wiki/Syllogism": {
+  "status": "200",
+  "files": [
+   "topics/A19-seating-and-analytical-puzzle-sets.md",
+   "topics/A4-syllogisms-and-logical-deduction.md"
+  ]
+ },
+ "https://en.wikipedia.org/wiki/Verbal_arithmetic": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/A20-cryptarithmetic.md"
+  ]
+ },
+ "https://fastapi.tiangolo.com/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "interview/IV4-projects-and-resume.md"
+  ]
+ },
+ "https://hechingerreport.org/why-indias-infosys-has-a-university-of-its-own/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md"
+  ]
+ },
+ "https://infytq.onwingspan.com/public-assets/InfosysCampusRecruitmentSampleTest-SystemsEngineer.pdf": {
+  "status": "200 (incomplete certificate chain)",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "99-STUDY-PLAN.md",
+   "question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.md"
+  ]
+ },
+ "https://learn.microsoft.com/en-us/credentials/certifications/azure-ai-fundamentals/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "interview/IV6-generative-ai.md"
+  ]
+ },
+ "https://learnenglish.britishcouncil.org/free-resources/business/english-emails/unit-4-starting-finishing-emails": {
+  "status": "000",
+  "files": [
+   "core-course/18-W1-essay-and-email.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://learnenglish.britishcouncil.org/free-resources/grammar/b1-b2/present-perfect": {
+  "status": "000",
+  "files": [
+   "core-course/12-G1-cloze-and-fill-in-the-blanks.md",
+   "core-course/13-G2-tenses-articles-prepositions.md",
+   "core-course/14-V2-spotting-errors.md",
+   "core-course/15-V3-sentence-correction.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://openstax.org/books/prealgebra-2e/pages/5-6-ratios-and-rate": {
+  "status": "200",
+  "files": [
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://openstax.org/books/prealgebra-2e/pages/6-2-solve-general-applications-of-percent": {
+  "status": "200",
+  "files": [
+   "core-course/10-A7-data-interpretation.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://openstax.org/books/prealgebra-2e/pages/6-5-solve-proportions-and-their-applications": {
+  "status": "200",
+  "files": [
+   "core-course/11-A8-linear-equations-and-ages.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://owl.purdue.edu/owl/general_writing/academic_writing/conciseness/eliminating_words.html": {
+  "status": "200",
+  "files": [
+   "core-course/15-V3-sentence-correction.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://owl.purdue.edu/owl/general_writing/academic_writing/conciseness/index.html": {
+  "status": "200",
+  "files": [
+   "core-course/15-V3-sentence-correction.md",
+   "core-course/18-W1-essay-and-email.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://owl.purdue.edu/owl/general_writing/academic_writing/email_etiquette.html": {
+  "status": "200",
+  "files": [
+   "core-course/18-W1-essay-and-email.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://owl.purdue.edu/owl/general_writing/common_writing_assignments/essays_for_exams.html": {
+  "status": "200",
+  "files": [
+   "core-course/18-W1-essay-and-email.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://owl.purdue.edu/owl/general_writing/grammar/": {
+  "status": "200",
+  "files": [
+   "topics/V3-sentence-correction.md"
+  ]
+ },
+ "https://owl.purdue.edu/owl/general_writing/grammar/articles_a_versus_an.html": {
+  "status": "200",
+  "files": [
+   "core-course/12-G1-cloze-and-fill-in-the-blanks.md",
+   "core-course/13-G2-tenses-articles-prepositions.md",
+   "core-course/14-V2-spotting-errors.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://owl.purdue.edu/owl/general_writing/grammar/count_and_noncount_nouns/count_noncount_nouns_with_articles_adjectives.html": {
+  "status": "200",
+  "files": [
+   "core-course/12-G1-cloze-and-fill-in-the-blanks.md",
+   "core-course/13-G2-tenses-articles-prepositions.md",
+   "core-course/14-V2-spotting-errors.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://owl.purdue.edu/owl/general_writing/grammar/index.html": {
+  "status": "200",
+  "files": [
+   "topics/V2-spotting-errors-and-grammar-rules.md"
+  ]
+ },
+ "https://owl.purdue.edu/owl/general_writing/grammar/pronouns/index.html": {
+  "status": "200",
+  "files": [
+   "core-course/14-V2-spotting-errors.md",
+   "core-course/15-V3-sentence-correction.md",
+   "core-course/18-W1-essay-and-email.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://owl.purdue.edu/owl/general_writing/grammar/subject_verb_agreement.html": {
+  "status": "200",
+  "files": [
+   "core-course/12-G1-cloze-and-fill-in-the-blanks.md",
+   "core-course/14-V2-spotting-errors.md",
+   "core-course/15-V3-sentence-correction.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://owl.purdue.edu/owl/general_writing/grammar/using_articles.html": {
+  "status": "200",
+  "files": [
+   "core-course/13-G2-tenses-articles-prepositions.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://owl.purdue.edu/owl/general_writing/grammar/verb_tenses/active_verb_tenses.html": {
+  "status": "200",
+  "files": [
+   "core-course/12-G1-cloze-and-fill-in-the-blanks.md",
+   "core-course/13-G2-tenses-articles-prepositions.md",
+   "core-course/14-V2-spotting-errors.md",
+   "core-course/15-V3-sentence-correction.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://owl.purdue.edu/owl/general_writing/grammar/verb_tenses/passive_verbs.html": {
+  "status": "200",
+  "files": [
+   "core-course/13-G2-tenses-articles-prepositions.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://owl.purdue.edu/owl/general_writing/grammar/verb_tenses/verb_tense_consistency.html": {
+  "status": "200",
+  "files": [
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://owl.purdue.edu/owl/general_writing/mechanics/dangling_modifiers_and_how_to_correct_them.html": {
+  "status": "200",
+  "files": [
+   "core-course/14-V2-spotting-errors.md",
+   "core-course/15-V3-sentence-correction.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://owl.purdue.edu/owl/general_writing/mechanics/gerunds_participles_and_infinitives/index.html": {
+  "status": "200",
+  "files": [
+   "core-course/14-V2-spotting-errors.md",
+   "core-course/15-V3-sentence-correction.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://owl.purdue.edu/owl/general_writing/mechanics/parallel_structure.html": {
+  "status": "200",
+  "files": [
+   "core-course/14-V2-spotting-errors.md",
+   "core-course/15-V3-sentence-correction.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://owl.purdue.edu/owl/multilingual/multilingual_students/prepositions/prepositions_of_time_place_and_introducing_objects.html": {
+  "status": "200",
+  "files": [
+   "core-course/12-G1-cloze-and-fill-in-the-blanks.md",
+   "core-course/13-G2-tenses-articles-prepositions.md",
+   "core-course/14-V2-spotting-errors.md",
+   "core-course/15-V3-sentence-correction.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://ozone.unep.org/treaties/montreal-protocol": {
+  "status": "200",
+  "files": [
+   "core-course/18-W1-essay-and-email.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://prepdrive.in/infosys/puzzle/infosys-puzzle": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "puzzles/Z1-number-grids-and-matrices.md",
+   "puzzles/Z2-pair-and-figure-rules.md"
+  ]
+ },
+ "https://prepinsta.com/accenture/pseudo-code/general-pseudo-code/": {
+  "status": "200",
+  "files": [
+   "pseudocode/P1-loops-iteration.md",
+   "pseudocode/P10-strings-ascii.md",
+   "pseudocode/P2-recursion.md",
+   "pseudocode/P3-bitwise-operators.md",
+   "pseudocode/P5-arrays.md",
+   "pseudocode/P6-conditionals-nested-if.md",
+   "pseudocode/P7-functions-scope.md",
+   "pseudocode/P8-snippet-complexity.md"
+  ]
+ },
+ "https://prepinsta.com/accenture/technical-assessment/": {
+  "status": "200",
+  "files": [
+   "interview/IV2-oop-four-pillars.md"
+  ]
+ },
+ "https://prepinsta.com/infosys/puzzle-questions-and-answers-pdf/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "puzzles/Z1-number-grids-and-matrices.md",
+   "puzzles/Z2-pair-and-figure-rules.md"
+  ]
+ },
+ "https://roadmap.sh/devops": {
+  "status": "200",
+  "files": [
+   "interview/IV1-sdlc-agile-testing.md"
+  ]
+ },
+ "https://www.bbc.co.uk/learningenglish/": {
+  "status": "200",
+  "files": [
+   "topics/V2-spotting-errors-and-grammar-rules.md"
+  ]
+ },
+ "https://www.codechef.com/practice/accenture-interview-questions": {
+  "status": "200",
+  "files": [
+   "pseudocode/P1-loops-iteration.md",
+   "pseudocode/P2-recursion.md",
+   "pseudocode/P3-bitwise-operators.md",
+   "pseudocode/P5-arrays.md",
+   "pseudocode/P6-conditionals-nested-if.md"
+  ]
+ },
+ "https://www.codechef.com/practice/sql-case-studies-topic-wise": {
+  "status": "200",
+  "files": [
+   "interview/IV3-dbms-sql.md"
+  ]
+ },
+ "https://www.cuemath.com/commercial-math/profit-and-loss/": {
+  "status": "200",
+  "files": [
+   "topics/A13-profit-loss-and-discount.md"
+  ]
+ },
+ "https://www.epa.gov/ozone-layer-protection/basic-ozone-layer-science": {
+  "status": "200",
+  "files": [
+   "core-course/18-W1-essay-and-email.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://www.ets.org/gre/test-takers/general-test/prepare/content/verbal-reasoning.html": {
+  "status": "200",
+  "files": [
+   "core-course/16-V1-reading-comprehension.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/aptitude-questions-and-answers/": {
+  "status": "200",
+  "files": [
+   "topics/A17-ratio-and-proportion.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/aptitude/average/": {
+  "status": "200",
+  "files": [
+   "topics/A9-averages-mixtures-and-alligation.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/aptitude/data-sufficiency/": {
+  "status": "200",
+  "files": [
+   "topics/A6-data-sufficiency.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/aptitude/mixture-and-alligation/": {
+  "status": "200",
+  "files": [
+   "topics/A9-averages-mixtures-and-alligation.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/aptitude/profit-and-loss/": {
+  "status": "200",
+  "files": [
+   "topics/A13-profit-loss-and-discount.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/aptitude/syllogism/": {
+  "status": "200",
+  "files": [
+   "topics/A4-syllogisms-and-logical-deduction.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/aptitude/time-speed-distance/": {
+  "status": "200",
+  "files": [
+   "topics/A15-time-speed-distance.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/bodmas-rule/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/A3-operator-logic.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/cloze-test/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/G2-grammar-tense-articles-prepositions.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/coding-decoding/": {
+  "status": "200",
+  "files": [
+   "topics/A1-coding-and-decoding.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/competitive-programming/time-complexities-of-all-sorting-algorithms/": {
+  "status": "200",
+  "files": [
+   "pseudocode/P8-snippet-complexity.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/compound-interest/": {
+  "status": "200",
+  "files": [
+   "topics/A14-simple-and-compound-interest.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/cpp/bitwise-operators-in-c-cpp/": {
+  "status": "200",
+  "files": [
+   "pseudocode/P3-bitwise-operators.md",
+   "pseudocode/P5-arrays.md",
+   "pseudocode/P6-conditionals-nested-if.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/critical-reasoning/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/V6-critical-reasoning.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/dbms/normal-forms-in-dbms/": {
+  "status": "200",
+  "files": [
+   "interview/IV3-dbms-sql.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/dbms/sql-join-set-1-inner-left-right-and-full-joins/": {
+  "status": "200",
+  "files": [
+   "interview/IV3-dbms-sql.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/dbms/sql-tutorial/": {
+  "status": "200",
+  "files": [
+   "interview/IV3-dbms-sql.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/dsa/ascii-table/": {
+  "status": "200",
+  "files": [
+   "pseudocode/P10-strings-ascii.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/dsa/complete-guide-on-complexity-analysis/": {
+  "status": "200",
+  "files": [
+   "pseudocode/P1-loops-iteration.md",
+   "pseudocode/P2-recursion.md",
+   "pseudocode/P8-snippet-complexity.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/dsa/functions-in-programming/": {
+  "status": "200",
+  "files": [
+   "pseudocode/P7-functions-scope.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/english-grammar/": {
+  "status": "200",
+  "files": [
+   "topics/G1-fill-in-the-blanks-and-cloze.md",
+   "topics/V3-sentence-correction.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-for-system-engineer-10/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/interview-experiences/infosys-interview-experience-for-system-engineer-2025/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/java-programming-examples/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "interview/IV7-light-coding-in-java.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/java/object-oriented-programming-oops-concept-in-java/": {
+  "status": "200",
+  "files": [
+   "interview/IV2-oop-four-pillars.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/java/operators-in-java/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "pseudocode/P4-increment-operators-and-dialect.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/java/parameter-passing-techniques-in-java-with-examples/": {
+  "status": "200",
+  "files": [
+   "pseudocode/P7-functions-scope.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/mensuration-formulas/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/A11-mensuration.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/puzzles/": {
+  "status": "200",
+  "files": [
+   "topics/A19-seating-and-analytical-puzzle-sets.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/quantitative-aptitude/": {
+  "status": "200",
+  "files": [
+   "topics/A2-number-and-letter-series.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/quizzes/": {
+  "status": "200",
+  "files": [
+   "topics/V1-reading-comprehension.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/simple-interest/": {
+  "status": "200",
+  "files": [
+   "topics/A14-simple-and-compound-interest.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/software-engineering/software-engineering-sdlc-v-model/": {
+  "status": "200",
+  "files": [
+   "interview/IV1-sdlc-agile-testing.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/subject-verb-agreement/": {
+  "status": "200",
+  "files": [
+   "topics/G1-fill-in-the-blanks-and-cloze.md"
+  ]
+ },
+ "https://www.geeksforgeeks.org/system-linear-equations/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/A8-linear-equations-and-ages.md"
+  ]
+ },
+ "https://www.gmac.com/resources/learners/how-to-apply/exams-preparation/gmat-data-insights": {
+  "status": "200",
+  "files": [
+   "core-course/05-A6-data-sufficiency.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://www.grammarly.com/blog/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/W1-english-writing.md"
+  ]
+ },
+ "https://www.indiabix.com/aptitude/alligation-or-mixture/": {
+  "status": "200",
+  "files": [
+   "topics/A9-averages-mixtures-and-alligation.md"
+  ]
+ },
+ "https://www.indiabix.com/aptitude/average/": {
+  "status": "200",
+  "files": [
+   "topics/A9-averages-mixtures-and-alligation.md"
+  ]
+ },
+ "https://www.indiabix.com/aptitude/boats-and-streams/": {
+  "status": "200",
+  "files": [
+   "topics/A15-time-speed-distance.md"
+  ]
+ },
+ "https://www.indiabix.com/aptitude/compound-interest/": {
+  "status": "200",
+  "files": [
+   "topics/A14-simple-and-compound-interest.md"
+  ]
+ },
+ "https://www.indiabix.com/aptitude/numbers/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/A10-number-system.md"
+  ]
+ },
+ "https://www.indiabix.com/aptitude/partnership/": {
+  "status": "200",
+  "files": [
+   "topics/A17-ratio-and-proportion.md"
+  ]
+ },
+ "https://www.indiabix.com/aptitude/percentage/": {
+  "status": "200",
+  "files": [
+   "topics/A12-percentages.md"
+  ]
+ },
+ "https://www.indiabix.com/aptitude/permutation-and-combination/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/A18-permutations-combinations-probability.md"
+  ]
+ },
+ "https://www.indiabix.com/aptitude/pipes-and-cistern/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/A16-time-and-work.md"
+  ]
+ },
+ "https://www.indiabix.com/aptitude/probability/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/A18-permutations-combinations-probability.md"
+  ]
+ },
+ "https://www.indiabix.com/aptitude/problems-on-ages/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/A8-linear-equations-and-ages.md"
+  ]
+ },
+ "https://www.indiabix.com/aptitude/problems-on-hcf-and-lcm/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/A10-number-system.md"
+  ]
+ },
+ "https://www.indiabix.com/aptitude/problems-on-numbers/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/A8-linear-equations-and-ages.md"
+  ]
+ },
+ "https://www.indiabix.com/aptitude/problems-on-trains/": {
+  "status": "200",
+  "files": [
+   "topics/A15-time-speed-distance.md"
+  ]
+ },
+ "https://www.indiabix.com/aptitude/profit-and-loss/": {
+  "status": "200",
+  "files": [
+   "topics/A13-profit-loss-and-discount.md"
+  ]
+ },
+ "https://www.indiabix.com/aptitude/profit-and-loss/formulas": {
+  "status": "200",
+  "files": [
+   "topics/A13-profit-loss-and-discount.md"
+  ]
+ },
+ "https://www.indiabix.com/aptitude/ratio-and-proportion/": {
+  "status": "200",
+  "files": [
+   "topics/A17-ratio-and-proportion.md"
+  ]
+ },
+ "https://www.indiabix.com/aptitude/simple-interest/": {
+  "status": "200",
+  "files": [
+   "topics/A14-simple-and-compound-interest.md"
+  ]
+ },
+ "https://www.indiabix.com/aptitude/time-and-distance/": {
+  "status": "200",
+  "files": [
+   "topics/A15-time-speed-distance.md"
+  ]
+ },
+ "https://www.indiabix.com/aptitude/time-and-work/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/A16-time-and-work.md"
+  ]
+ },
+ "https://www.indiabix.com/aptitude/volume-and-surface-area/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/A11-mensuration.md"
+  ]
+ },
+ "https://www.indiabix.com/computer-science/questions-and-answers/": {
+  "status": "200",
+  "files": [
+   "interview/IV1-sdlc-agile-testing.md",
+   "interview/IV2-oop-four-pillars.md"
+  ]
+ },
+ "https://www.indiabix.com/data-interpretation/pie-charts/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/A7-data-interpretation.md"
+  ]
+ },
+ "https://www.indiabix.com/data-interpretation/table-charts/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/A7-data-interpretation.md"
+  ]
+ },
+ "https://www.indiabix.com/logical-reasoning/": {
+  "status": "200",
+  "files": [
+   "topics/A6-data-sufficiency.md"
+  ]
+ },
+ "https://www.indiabix.com/logical-reasoning/letter-and-symbol-series/": {
+  "status": "200",
+  "files": [
+   "topics/A2-number-and-letter-series.md"
+  ]
+ },
+ "https://www.indiabix.com/logical-reasoning/logical-deduction/": {
+  "status": "200",
+  "files": [
+   "topics/A19-seating-and-analytical-puzzle-sets.md",
+   "topics/A4-syllogisms-and-logical-deduction.md"
+  ]
+ },
+ "https://www.indiabix.com/logical-reasoning/logical-problems/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/A20-cryptarithmetic.md",
+   "topics/A5-blood-relations.md"
+  ]
+ },
+ "https://www.indiabix.com/logical-reasoning/number-series/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "puzzles/Z2-pair-and-figure-rules.md",
+   "topics/A2-number-and-letter-series.md"
+  ]
+ },
+ "https://www.indiabix.com/logical-reasoning/statement-and-assumption/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/A4-syllogisms-and-logical-deduction.md",
+   "topics/V6-critical-reasoning.md"
+  ]
+ },
+ "https://www.indiabix.com/non-verbal-reasoning/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/A21-non-verbal-reasoning.md"
+  ]
+ },
+ "https://www.indiabix.com/non-verbal-reasoning/questions-and-answers/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/A21-non-verbal-reasoning.md"
+  ]
+ },
+ "https://www.indiabix.com/puzzles/number-puzzles/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/A3-operator-logic.md"
+  ]
+ },
+ "https://www.indiabix.com/verbal-ability/": {
+  "status": "200",
+  "files": [
+   "topics/V1-reading-comprehension.md"
+  ]
+ },
+ "https://www.indiabix.com/verbal-ability/antonyms/": {
+  "status": "200",
+  "files": [
+   "topics/V4-synonyms-antonyms-and-vocabulary.md"
+  ]
+ },
+ "https://www.indiabix.com/verbal-ability/closet-test/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/G1-fill-in-the-blanks-and-cloze.md",
+   "topics/G2-grammar-tense-articles-prepositions.md"
+  ]
+ },
+ "https://www.indiabix.com/verbal-ability/comprehension/": {
+  "status": "200",
+  "files": [
+   "topics/V1-reading-comprehension.md"
+  ]
+ },
+ "https://www.indiabix.com/verbal-ability/idioms-and-phrases/": {
+  "status": "200",
+  "files": [
+   "topics/V4-synonyms-antonyms-and-vocabulary.md"
+  ]
+ },
+ "https://www.indiabix.com/verbal-ability/ordering-of-sentences/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/V5-para-jumbles.md"
+  ]
+ },
+ "https://www.indiabix.com/verbal-ability/paragraph-formation/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/V5-para-jumbles.md"
+  ]
+ },
+ "https://www.indiabix.com/verbal-ability/selecting-words/": {
+  "status": "200",
+  "files": [
+   "topics/G1-fill-in-the-blanks-and-cloze.md"
+  ]
+ },
+ "https://www.indiabix.com/verbal-ability/sentence-correction/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/G2-grammar-tense-articles-prepositions.md",
+   "topics/V3-sentence-correction.md"
+  ]
+ },
+ "https://www.indiabix.com/verbal-ability/spotting-errors/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/G2-grammar-tense-articles-prepositions.md",
+   "topics/V2-spotting-errors-and-grammar-rules.md",
+   "topics/V3-sentence-correction.md"
+  ]
+ },
+ "https://www.indiabix.com/verbal-ability/synonyms/": {
+  "status": "200",
+  "files": [
+   "topics/V4-synonyms-antonyms-and-vocabulary.md"
+  ]
+ },
+ "https://www.indiabix.com/verbal-reasoning/questions-and-answers/": {
+  "status": "200",
+  "files": [
+   "topics/A1-coding-and-decoding.md"
+  ]
+ },
+ "https://www.indiabix.com/verbal-reasoning/seating-arrangement/": {
+  "status": "200",
+  "files": [
+   "topics/A19-seating-and-analytical-puzzle-sets.md"
+  ]
+ },
+ "https://www.indiabix.com/verbal-reasoning/syllogism/": {
+  "status": "200",
+  "files": [
+   "topics/A4-syllogisms-and-logical-deduction.md"
+  ]
+ },
+ "https://www.infosys.com/services/data-ai-topaz.html": {
+  "status": "403",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "interview/00-INFOSYS-SPECIFIC.md",
+   "interview/IV6-generative-ai.md"
+  ]
+ },
+ "https://www.khanacademy.org/economics-finance-domain/core-finance/interest-tutorial": {
+  "status": "200",
+  "files": [
+   "topics/A14-simple-and-compound-interest.md"
+  ]
+ },
+ "https://www.khanacademy.org/math/pre-algebra/pre-algebra-ratios-rates": {
+  "status": "200",
+  "files": [
+   "topics/A17-ratio-and-proportion.md"
+  ]
+ },
+ "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data": {
+  "status": "200",
+  "files": [
+   "topics/A9-averages-mixtures-and-alligation.md"
+  ]
+ },
+ "https://www.lsac.org/lsat/taking-lsat/test-format/logical-reasoning/logical-reasoning-sample-questions": {
+  "status": "200",
+  "files": [
+   "core-course/17-V6-critical-reasoning.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://www.math-only-math.com/profit-and-loss.html": {
+  "status": "200",
+  "files": [
+   "topics/A13-profit-loss-and-discount.md"
+  ]
+ },
+ "https://www.mathsisfun.com/percentage.html": {
+  "status": "200",
+  "files": [
+   "topics/A12-percentages.md"
+  ]
+ },
+ "https://www.merriam-webster.com/thesaurus": {
+  "status": "403",
+  "files": [
+   "topics/V4-synonyms-antonyms-and-vocabulary.md"
+  ]
+ },
+ "https://www.mindtools.com/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "interview/IV5-hr-and-behavioural.md"
+  ]
+ },
+ "https://www.oxfordlearnersdictionaries.com/definition/english/number_1": {
+  "status": "200",
+  "files": [
+   "core-course/14-V2-spotting-errors.md",
+   "research/06-method-sources.md"
+  ]
+ },
+ "https://www.perfect-english-grammar.com/": {
+  "status": "200",
+  "files": [
+   "topics/V2-spotting-errors-and-grammar-rules.md"
+  ]
+ },
+ "https://www.rapidtables.com/code/text/ascii-table.html": {
+  "status": "200",
+  "files": [
+   "topics/A1-coding-and-decoding.md"
+  ]
+ },
+ "https://www.vocabulary.com/": {
+  "status": "200",
+  "files": [
+   "topics/V1-reading-comprehension.md"
+  ]
+ },
+ "https://www.vocabulary.com/dictionary/": {
+  "status": "200",
+  "files": [
+   "topics/V4-synonyms-antonyms-and-vocabulary.md"
+  ]
+ },
+ "https://www.w3schools.com/sql/": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "interview/IV7-light-coding-in-java.md"
+  ]
+ },
+ "https://www.youtube.com/watch?v=5XTGOVtBkiw": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md"
+  ]
+ },
+ "https://www.youtube.com/watch?v=6uftMFrZdzc": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md"
+  ]
+ },
+ "https://www.youtube.com/watch?v=U7hkPOKo69o": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md"
+  ]
+ },
+ "https://www.youtube.com/watch?v=XFVY7XXJqBo": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md",
+   "topics/W1-english-writing.md"
+  ]
+ },
+ "https://www.youtube.com/watch?v=r1m-dYWM8l4": {
+  "status": "200",
+  "files": [
+   "90-RESOURCE-LIBRARY.md"
+  ]
+ }
+}

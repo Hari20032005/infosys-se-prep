@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QB-P7 — Functions — Scope and Pass by Value vs Reference · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem current" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Question banks &amp; mock</span></div>
+    <article class="prose">
+<h1 id="qb-p7-functions-scope-and-pass-by-value-vs-reference">QB-P7 — Functions — Scope and Pass by Value vs Reference</h1>
+<p><strong>Pseudocode</strong> · <strong>Tier 4</strong> · 18 questions</p>
+<p>Topic file: <a href="/Users/hariharansundaramoorthy/Documents/my projects/infosys/infosys-prep-library/pseudocode/P7-functions-scope.md"><code>P7-functions-scope.md</code></a></p>
+<p><em>Adapted from <code>accenture-prep-final/accenture-prep-library/question-banks/QB-T35-B5-functions-scope.md</code>; verified in that library's QA. Questions and answer key are unchanged.</em></p>
+<p><strong>How to use this bank.</strong> Attempt every question before opening the key, at the real pace for this section (120 seconds a question). Answer letters are balanced across a–d.</p>
+<hr />
+<p><strong>1.</strong> <strong>[Easy]</strong> <em>(B5 — function definition and return)</em></p>
+<div class="codehilite"><pre><span></span><code>FUNCTION ADD(a, b)
+    RETURN a + b
+END FUNCTION
+PRINT ADD(3, 4) * 2
+</code></pre></div>
+
+<p>(a) 12
+(b) 7
+(c) 24
+(d) 14</p>
+<p><strong>1. (d) 14</strong> — <code>ADD(3, 4)</code> returns 7, and <code>7 * 2 = 14</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th>a</th>
+<th>b</th>
+<th>RETURN</th>
+<th>Printed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ADD(3, 4)</td>
+<td>3</td>
+<td>4</td>
+<td>7</td>
+<td>7 * 2 = 14</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) 7 is the return value before the multiplication.</li>
+<li>(c) 24 wrongly applies the multiply inside the function.</li>
+<li>(a) 12 wrongly uses <code>3 * 4</code> in place of addition.</li>
+</ul>
+<hr />
+<p><strong>2.</strong> <strong>[Easy]</strong> <em>(B5 — local vs global scope)</em></p>
+<div class="codehilite"><pre><span></span><code>x = 10
+FUNCTION SHOW()
+    LOCAL x
+    x = 5
+    PRINT x
+END FUNCTION
+CALL SHOW()
+PRINT x
+</code></pre></div>
+
+<p>(a) 5 10
+(b) 5 5
+(c) 10 10
+(d) 10 5</p>
+<p><strong>2. (a) 5 10</strong> — <code>LOCAL x</code> creates a separate variable inside <code>SHOW()</code>, so the top-level <code>x</code> keeps 10.</p>
+<table>
+<thead>
+<tr>
+<th>Statement</th>
+<th>x inside SHOW</th>
+<th>x at top level</th>
+<th>Printed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x = 10</td>
+<td>—</td>
+<td>10</td>
+<td>—</td>
+</tr>
+<tr>
+<td>LOCAL x; x = 5</td>
+<td>5</td>
+<td>10</td>
+<td>5</td>
+</tr>
+<tr>
+<td>PRINT x (after CALL)</td>
+<td>—</td>
+<td>10</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) assumes the inner assignment overwrites the global.</li>
+<li>(c) ignores the <code>LOCAL x</code> declaration entirely.</li>
+<li>(d) reverses the execution order of the two <code>PRINT</code> statements.</li>
+</ul>
+<hr />
+<p><strong>3.</strong> <strong>[Easy]</strong> <em>(B5 — pass by value)</em></p>
+<div class="codehilite"><pre><span></span><code>FUNCTION CHANGE(n)
+    n = n + 10
+    RETURN n
+END FUNCTION
+a = 3
+b = CHANGE(a)
+PRINT a, b
+</code></pre></div>
+
+<p>(a) 13 3
+(b) 13 13
+(c) 3 13
+(d) 3 3</p>
+<p><strong>3. (c) 3 13</strong> — <code>n</code> is a value copy, so <code>a</code> stays 3 while the function returns 13.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>n (local)</th>
+<th>a</th>
+<th>b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a = 3</td>
+<td>—</td>
+<td>3</td>
+<td>—</td>
+</tr>
+<tr>
+<td>CALL CHANGE(3)</td>
+<td>3 → 13</td>
+<td>3</td>
+<td>—</td>
+</tr>
+<tr>
+<td>b = 13</td>
+<td>—</td>
+<td>3</td>
+<td>13</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) reverses the printed order of <code>a</code> and <code>b</code>.</li>
+<li>(b) assumes by-value assignment modified <code>a</code>.</li>
+<li>(d) ignores the return value assigned to <code>b</code>.</li>
+</ul>
+<hr />
+<p><strong>4.</strong> <strong>[Easy]</strong> <em>(B5 — return values in expressions)</em></p>
+<div class="codehilite"><pre><span></span><code>FUNCTION SQUARE(n)
+    RETURN n * n
+END FUNCTION
+PRINT SQUARE(2) + SQUARE(3)
+</code></pre></div>
+
+<p>(a) 25
+(b) 13
+(c) 10
+(d) 36</p>
+<p><strong>4. (b) 13</strong> — <code>SQUARE(2) = 4</code> and <code>SQUARE(3) = 9</code>; the sum is 13.</p>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th>n</th>
+<th>n * n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SQUARE(2)</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>SQUARE(3)</td>
+<td>3</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 25 is <code>SQUARE(5)</code>, not a sum of two calls.</li>
+<li>(d) 36 is <code>SQUARE(2 + 3)</code> evaluated as a single squared argument.</li>
+<li>(c) 10 is <code>4 + 6</code>, an arithmetic slip.</li>
+</ul>
+<hr />
+<p><strong>5.</strong> <strong>[Easy]</strong> <em>(B5 — parameter passing modes)</em></p>
+<p>In pseudocode, when a parameter is passed <strong>by value</strong>, which statement is true?</p>
+<p>(a) The function receives the caller's variable, so changes are visible to the caller.
+(b) The function receives a copy, so changes to the parameter do not affect the caller's variable.
+(c) The parameter can be used only as an output, never as an input.
+(d) The parameter name inside the function must match the caller's variable name.</p>
+<p><strong>5. (b) The function receives a copy, so changes to the parameter do not affect the caller's variable.</strong> — By-value passing copies the argument into the parameter slot; the caller's original is isolated.</p>
+<ul>
+<li>(a) describes by-reference passing, not by-value.</li>
+<li>(c) is false: by-value parameters can be read as inputs normally.</li>
+<li>(d) is false: parameter names are independent of caller variable names.</li>
+</ul>
+<hr />
+<p><strong>6.</strong> <strong>[Medium]</strong> <em>(B5 — REF parameters)</em></p>
+<div class="codehilite"><pre><span></span><code>FUNCTION DOUBLE(REF x)
+    x = x * 2
+    RETURN x
+END FUNCTION
+a = 7
+b = DOUBLE(a)
+PRINT a, b
+</code></pre></div>
+
+<p>(a) 7 14
+(b) 14 14
+(c) 14 7
+(d) 7 7</p>
+<p><strong>6. (b) 14 14</strong> — <code>x</code> is <code>REF</code>, so it aliases <code>a</code>; doubling it changes <code>a</code> to 14 and returns 14.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>x (alias of a)</th>
+<th>a</th>
+<th>b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a = 7</td>
+<td>—</td>
+<td>7</td>
+<td>—</td>
+</tr>
+<tr>
+<td>x = x * 2</td>
+<td>14</td>
+<td>14</td>
+<td>—</td>
+</tr>
+<tr>
+<td>b = RETURN x</td>
+<td>—</td>
+<td>14</td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) treats <code>REF</code> as by-value, leaving <code>a</code> at 7.</li>
+<li>(c) reverses the printed order of <code>a</code> and <code>b</code>.</li>
+<li>(d) assumes neither variable is updated.</li>
+</ul>
+<hr />
+<p><strong>7.</strong> <strong>[Medium]</strong> <em>(B5 — swap with by-value parameters)</em></p>
+<div class="codehilite"><pre><span></span><code>FUNCTION SWAP(a, b)
+    temp = a
+    a = b
+    b = temp
+END FUNCTION
+x = 1
+y = 2
+CALL SWAP(x, y)
+PRINT x, y
+</code></pre></div>
+
+<p>(a) 2 1
+(b) 1 2
+(c) 1 1
+(d) 2 2</p>
+<p><strong>7. (b) 1 2</strong> — both parameters are by value, so the swap happens on copies and <code>x</code>, <code>y</code> are unchanged.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>a</th>
+<th>b</th>
+<th>temp</th>
+<th>x</th>
+<th>y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x = 1, y = 2</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>temp = a</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>a = b</td>
+<td>2</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>b = temp</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) is the result only if both parameters were <code>REF</code>.</li>
+<li>(c) assumes <code>x</code> was changed but not <code>y</code>.</li>
+<li>(d) assigns the swapped copy values back to the caller.</li>
+</ul>
+<hr />
+<p><strong>8.</strong> <strong>[Medium]</strong> <em>(B5 — arrays and reference passing)</em></p>
+<div class="codehilite"><pre><span></span><code>// Arrays are passed by reference
+FUNCTION MODIFY(arr)
+    arr[2] = arr[2] + 100
+END FUNCTION
+nums = [5, 10, 15]
+CALL MODIFY(nums)
+PRINT nums[2]
+</code></pre></div>
+
+<p>(a) 5
+(b) 10
+(c) 105
+(d) 110</p>
+<p><strong>8. (d) 110</strong> — arrays are passed by reference, so <code>arr[2]</code> (value 10) becomes 110 in the caller.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>arr</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>initial</td>
+<td>[5, 10, 15]</td>
+</tr>
+<tr>
+<td>arr[2] = arr[2] + 100</td>
+<td>[5, 110, 15]</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 5 is <code>arr[1]</code>, an index-offset error.</li>
+<li>(b) 10 is the pre-modification value.</li>
+<li>(c) 105 wrongly adds 100 to <code>arr[1]</code> (5).</li>
+</ul>
+<hr />
+<p><strong>9.</strong> <strong>[Medium]</strong> <em>(B5 — loops inside functions)</em></p>
+<div class="codehilite"><pre><span></span><code>FUNCTION COUNT(n)
+    total = 0
+    FOR i = 1 TO n
+        total = total + i
+    NEXT i
+    RETURN total
+END FUNCTION
+PRINT COUNT(4) + COUNT(2)
+</code></pre></div>
+
+<p>(a) 13
+(b) 10
+(c) 7
+(d) 16</p>
+<p><strong>9. (a) 13</strong> — <code>COUNT(4) = 10</code> and <code>COUNT(2) = 3</code>; the sum is 13.</p>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th>n</th>
+<th>total after loop</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>COUNT(4)</td>
+<td>4</td>
+<td>1 + 2 + 3 + 4 = 10</td>
+</tr>
+<tr>
+<td>COUNT(2)</td>
+<td>2</td>
+<td>1 + 2 = 3</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) 10 is only the first call's value.</li>
+<li>(c) 7 is <code>4 + 3</code>, summing <code>n</code> rather than the series.</li>
+<li>(d) 16 wrongly uses <code>4 * 4</code> for the first call.</li>
+</ul>
+<hr />
+<p><strong>10.</strong> <strong>[Medium]</strong> <em>(B5 — GLOBAL declaration)</em></p>
+<div class="codehilite"><pre><span></span><code>g = 100
+FUNCTION F()
+    GLOBAL g
+    g = 50
+    RETURN g + 1
+END FUNCTION
+PRINT F()
+PRINT g
+</code></pre></div>
+
+<p>(a) 50 50
+(b) 51 50
+(c) 51 100
+(d) 101 50</p>
+<p><strong>10. (b) 51 50</strong> — <code>GLOBAL g</code> lets <code>F()</code> write 50 to the global, and the function returns <code>50 + 1 = 51</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Statement</th>
+<th>g (global)</th>
+<th>Value printed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>g = 100</td>
+<td>100</td>
+<td>—</td>
+</tr>
+<tr>
+<td>GLOBAL g; g = 50</td>
+<td>50</td>
+<td>—</td>
+</tr>
+<tr>
+<td>PRINT F()</td>
+<td>50</td>
+<td>51</td>
+</tr>
+<tr>
+<td>PRINT g</td>
+<td>50</td>
+<td>50</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) ignores the returned <code>g + 1</code>.</li>
+<li>(c) treats <code>g</code> as a local copy, leaving the global at 100.</li>
+<li>(d) adds 1 to 100 instead of to the updated value.</li>
+</ul>
+<hr />
+<p><strong>11.</strong> <strong>[Medium]</strong> <em>(B5 — order of evaluation in nested calls)</em></p>
+<div class="codehilite"><pre><span></span><code>FUNCTION INC(x)
+    PRINT &quot;A&quot;
+    RETURN x + 1
+END FUNCTION
+FUNCTION DEC(x)
+    PRINT &quot;B&quot;
+    RETURN x - 1
+END FUNCTION
+PRINT INC(DEC(5))
+</code></pre></div>
+
+<p>(a) A B 5
+(b) A B 6
+(c) B A 6
+(d) B A 5</p>
+<p><strong>11. (d) B A 5</strong> — <code>DEC(5)</code> runs first, printing B and returning 4; then <code>INC(4)</code> prints A and returns 5.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Output</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DEC(5)</td>
+<td>B</td>
+<td>4</td>
+</tr>
+<tr>
+<td>INC(4)</td>
+<td>A</td>
+<td>5</td>
+</tr>
+<tr>
+<td>PRINT INC(DEC(5))</td>
+<td>—</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) reverses the nesting order of the two calls.</li>
+<li>(b) reverses the order and miscomputes <code>5 - 1 + 1</code>.</li>
+<li>(c) gives the right order but returns 6.</li>
+</ul>
+<hr />
+<p><strong>12.</strong> <strong>[Medium]</strong> <em>(B5 — recursion and return values)</em></p>
+<div class="codehilite"><pre><span></span><code>FUNCTION FACT(n)
+    IF n &lt;= 1 THEN
+        RETURN 1
+    END IF
+    RETURN n * FACT(n - 1)
+END FUNCTION
+PRINT FACT(4)
+</code></pre></div>
+
+<p>(a) 10
+(b) 12
+(c) 4
+(d) 24</p>
+<p><strong>12. (d) 24</strong> — 4 × 3 × 2 × 1 = 24, with the base case <code>n &lt;= 1</code> returning 1.</p>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th>n</th>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FACT(1)</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>FACT(2)</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>FACT(3)</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr>
+<td>FACT(4)</td>
+<td>4</td>
+<td>24</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 10 is the sum 1 + 2 + 3 + 4, not the product.</li>
+<li>(b) 12 stops the recursion one level early.</li>
+<li>(c) 4 is the argument, not the result.</li>
+</ul>
+<hr />
+<p><strong>13.</strong> <strong>[Hard]</strong> <em>(B5 — mixing by-value and by-reference parameters)</em></p>
+<div class="codehilite"><pre><span></span><code>FUNCTION TEST(REF a, b)
+    a = a + 1
+    b = b + 1
+    RETURN a + b
+END FUNCTION
+x = 5
+y = 5
+z = TEST(x, y)
+PRINT x, y, z
+</code></pre></div>
+
+<p>(a) 6 5 12
+(b) 5 5 10
+(c) 6 6 12
+(d) 5 6 11</p>
+<p><strong>13. (a) 6 5 12</strong> — <code>a</code> is <code>REF</code> so <code>x</code> becomes 6; <code>b</code> is by value so <code>y</code> stays 5, and the function returns <code>6 + 6 = 12</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>a (alias of x)</th>
+<th>b (copy)</th>
+<th>x</th>
+<th>y</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x = 5, y = 5</td>
+<td>—</td>
+<td>—</td>
+<td>5</td>
+<td>5</td>
+<td>—</td>
+</tr>
+<tr>
+<td>a = a + 1</td>
+<td>6</td>
+<td>5</td>
+<td>6</td>
+<td>5</td>
+<td>—</td>
+</tr>
+<tr>
+<td>b = b + 1</td>
+<td>6</td>
+<td>6</td>
+<td>6</td>
+<td>5</td>
+<td>—</td>
+</tr>
+<tr>
+<td>RETURN a + b</td>
+<td>—</td>
+<td>—</td>
+<td>6</td>
+<td>5</td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) treats both parameters as by value.</li>
+<li>(c) treats both parameters as by reference, changing <code>y</code> to 6.</li>
+<li>(d) swaps the passing modes between the two parameters.</li>
+</ul>
+<hr />
+<p><strong>14.</strong> <strong>[Hard]</strong> <em>(B5 — repeated reference swaps)</em></p>
+<div class="codehilite"><pre><span></span><code>FUNCTION SWAP(REF a, REF b)
+    t = a
+    a = b
+    b = t
+END FUNCTION
+x = 10
+y = 20
+CALL SWAP(x, y)
+CALL SWAP(x, y)
+PRINT x - y
+</code></pre></div>
+
+<p>(a) 10
+(b) 0
+(c) -10
+(d) 30</p>
+<p><strong>14. (c) -10</strong> — two reference swaps restore the originals, so <code>x = 10</code>, <code>y = 20</code>, and <code>10 - 20 = -10</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>x</th>
+<th>y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>initial</td>
+<td>10</td>
+<td>20</td>
+</tr>
+<tr>
+<td>SWAP 1</td>
+<td>20</td>
+<td>10</td>
+</tr>
+<tr>
+<td>SWAP 2</td>
+<td>10</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 10 is <code>x</code> alone, ignoring the subtraction.</li>
+<li>(b) 0 assumes the swaps left <code>x</code> equal to <code>y</code>.</li>
+<li>(d) 30 is <code>x + y</code> instead of the difference.</li>
+</ul>
+<hr />
+<p><strong>15.</strong> <strong>[Hard]</strong> <em>(B5 — recursion with a non-unit step)</em></p>
+<div class="codehilite"><pre><span></span><code>FUNCTION MYST(n)
+    IF n = 0 THEN
+        RETURN 0
+    END IF
+    RETURN n + MYST(n - 2)
+END FUNCTION
+PRINT MYST(6)
+</code></pre></div>
+
+<p>(a) 12
+(b) 6
+(c) 21
+(d) 20</p>
+<p><strong>15. (a) 12</strong> — the recursion adds 6 + 4 + 2 and stops at <code>MYST(0) = 0</code>, giving 12.</p>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th>n</th>
+<th>Returns</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MYST(0)</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>MYST(2)</td>
+<td>2</td>
+<td>2 + 0 = 2</td>
+</tr>
+<tr>
+<td>MYST(4)</td>
+<td>4</td>
+<td>4 + 2 = 6</td>
+</tr>
+<tr>
+<td>MYST(6)</td>
+<td>6</td>
+<td>6 + 6 = 12</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(c) 21 is the sum 1 + 2 + … + 6, ignoring the step of 2.</li>
+<li>(b) 6 is only the first addend.</li>
+<li>(d) 20 is 6 + 4 + 2 with an extra 8 accumulated.</li>
+</ul>
+<hr />
+<p><strong>16.</strong> <strong>[Hard]</strong> <em>(B5 — parameter shadowing names)</em></p>
+<div class="codehilite"><pre><span></span><code>FUNCTION CALC(base, REF extra)
+    base = base + extra
+    extra = extra + 1
+    RETURN base
+END FUNCTION
+a = 2
+b = 3
+PRINT CALC(a, b)
+PRINT a, b
+</code></pre></div>
+
+<p>(a) 5 then 2 3
+(b) 8 then 3 4
+(c) 5 then 2 4
+(d) 5 then 3 4</p>
+<p><strong>16. (c) 5 then 2 4</strong> — <code>base</code> is a copy (<code>a</code> stays 2) while <code>extra</code> aliases <code>b</code>, which becomes 4; the function returns 5.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>base</th>
+<th>extra (alias of b)</th>
+<th>a</th>
+<th>b</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a = 2, b = 3</td>
+<td>—</td>
+<td>—</td>
+<td>2</td>
+<td>3</td>
+<td>—</td>
+</tr>
+<tr>
+<td>base = base + extra</td>
+<td>5</td>
+<td>3</td>
+<td>2</td>
+<td>3</td>
+<td>—</td>
+</tr>
+<tr>
+<td>extra = extra + 1</td>
+<td>5</td>
+<td>4</td>
+<td>2</td>
+<td>4</td>
+<td>—</td>
+</tr>
+<tr>
+<td>RETURN base</td>
+<td>—</td>
+<td>—</td>
+<td>2</td>
+<td>4</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) ignores the <code>extra = extra + 1</code> update to <code>b</code>.</li>
+<li>(b) treats <code>base</code> as a reference and adds 3 twice.</li>
+<li>(d) treats <code>base</code> as a reference, changing <code>a</code> to 5.</li>
+</ul>
+<hr />
+<p><strong>17.</strong> <strong>[Hard]</strong> <em>(B5 — passing an array element by reference)</em></p>
+<div class="codehilite"><pre><span></span><code>FUNCTION ADDONE(REF v)
+    v = v + 1
+END FUNCTION
+arr = [1, 2, 3]
+CALL ADDONE(arr[2])
+PRINT arr
+</code></pre></div>
+
+<p>(a) [1, 2, 3]
+(b) [2, 3, 4]
+(c) [1, 3, 3]
+(d) [1, 2, 4]</p>
+<p><strong>17. (c) [1, 3, 3]</strong> — <code>arr[2]</code> is passed by reference, so the second element 2 becomes 3 in place.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>arr</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>initial</td>
+<td>[1, 2, 3]</td>
+</tr>
+<tr>
+<td>ADDONE(arr[2]) → arr[2] = 3</td>
+<td>[1, 3, 3]</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) increments every element instead of just <code>arr[2]</code>.</li>
+<li>(a) assumes the array is passed by value.</li>
+<li>(d) targets <code>arr[3]</code> (value 3) instead of <code>arr[2]</code>.</li>
+</ul>
+<hr />
+<p><strong>18.</strong> <strong>[Hard]</strong> <em>(B5 — print order inside recursion)</em></p>
+<div class="codehilite"><pre><span></span><code>FUNCTION F(n)
+    IF n &lt;= 0 THEN
+        RETURN 1
+    END IF
+    PRINT n
+    RETURN F(n - 1) + n
+END FUNCTION
+PRINT F(3)
+</code></pre></div>
+
+<p>(a) 3 2 1 7
+(b) 1 2 3 7
+(c) 3 2 1 6
+(d) 7 3 2 1</p>
+<hr />
+<p><strong>18. (a) 3 2 1 7</strong> — each call prints <code>n</code> before recursing, so 3, 2, 1 are printed in that order, and the final result is 7.</p>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th>Prints</th>
+<th>Return</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F(0)</td>
+<td>—</td>
+<td>1</td>
+</tr>
+<tr>
+<td>F(1)</td>
+<td>1</td>
+<td>1 + 1 = 2</td>
+</tr>
+<tr>
+<td>F(2)</td>
+<td>2</td>
+<td>2 + 2 = 4</td>
+</tr>
+<tr>
+<td>F(3)</td>
+<td>3</td>
+<td>4 + 3 = 7</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) prints in ascending order, which would need the <code>PRINT</code> after the recursive call.</li>
+<li>(c) returns 6, dropping the base-case 1.</li>
+<li>(d) prints the result before the descending values.</li>
+</ul>
+<hr />
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html"><span>Previous</span><strong>QB-P6 — Conditionals and Branch Selection in Pseudocode</strong></a><a class="pager next" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html"><span>Next</span><strong>QB-P8 — Reading Time and Space Complexity off a Snippet</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#qb-p7-functions-scope-and-pass-by-value-vs-reference">QB-P7 — Functions — Scope and Pass by Value vs Reference</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

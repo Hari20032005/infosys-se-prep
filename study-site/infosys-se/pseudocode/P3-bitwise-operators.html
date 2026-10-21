@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P3 — Bitwise Operators and Operator Precedence · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem current" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Pseudocode</span></div>
+    <article class="prose">
+<h1 id="p3-bitwise-operators-and-operator-precedence">P3 — Bitwise Operators and Operator Precedence</h1><p class="fm-line" style="color:var(--ink-faint);font-size:13px;margin:-.4em 0 1.2em">Tier 2 · Pseudocode · 1.5% of marks · about 0.8 h · confidence Medium</p>
+<p><em>Adapted from <code>accenture-prep-final/accenture-prep-library/topics/T11-B7-bitwise-operators.md</code>; verified in that library's QA. §1 and §10 are regenerated for Infosys from <code>data/weightage.json</code>; §2 gains an Infosys evidence table; §3–§9 are the source text unchanged, so "observed" in the worked examples refers to the source paper.</em></p>
+<h2 id="1-why-this-topic-matters-here">1. Why this topic matters here</h2>
+<p>Expect about <strong>0.6 questions and 1.1 marks</strong> on this topic (about 1.5% of the 75 scored marks). It sits in <strong>Pseudocode</strong>: 5 questions, 10 marks, 10 minutes. <strong>Tier 2</strong>, 0.8 hours to reach reliable recall, confidence <strong>Medium</strong>.</p>
+<p><strong>1 question on this topic are in the observed Infosys pool</strong> (P03), from 1 source. They are listed in §2 and solved in <code>../question-banks/QB-99-OBSERVED-POOL.md</code>.</p>
+<p><strong>Why the tier:</strong> its ROI alone would place it lower, but this section has its own cut-off and this topic is needed to reach 60% of the section's marks. Every section has its own cut-off, so a zero here costs the whole section's chance, not only these marks. There is no calculator. Negative marking: none reported.</p>
+<h2 id="2-exactly-what-gets-asked">2. Exactly what gets asked</h2>
+<h3 id="what-infosys-asked">What Infosys asked</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Source date</th>
+<th>What was asked</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P03</td>
+<td>2025-09-25</td>
+<td>Integer p = 1, q = 1. p = p ^ 1 &amp; 1 + q ^ 1 &amp; 1. Print p + q.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The pattern notes below come from the library this file was adapted from. Any frequency or "observed paper" remark in them describes that source paper, not Infosys. The Infosys evidence is the table above.</p>
+</blockquote>
+<p>Five shapes, all observed:</p>
+<ol>
+<li><strong>Trace a 10–12 line snippet where a bitwise op decides a branch.</strong> The dominant shape. You are given three integers, a condition containing <code>&amp;</code> or <code>^</code>, and asked to print a sum at the end. The arithmetic is trivial; the bitwise evaluation is the whole question.</li>
+</ol>
+<p><strong>1. (a) 8.</strong> <code>12 = 1100</code>, <code>10 = 1010</code>. AND keeps only bits set in both → <code>1000</code> = 8.
+- <em>(b) 22</em> is <code>12 + 10</code> — the add-instead-of-AND trap.
+- <em>(c) 2</em> is <code>12 - 10</code>.
+- <em>(d) 14</em> is <code>12 | 10</code> (OR), a deliberate near-miss.</p>
+<hr />
+<ol start="2">
+<li><strong>Bitwise inside a 2D array expression.</strong> <code>arr[1][0] = (4 + 1) &amp; arr[1][1]</code> — combines B3 and B7. Four local items do this.</li>
+</ol>
+<p><strong>2. (d) 5.</strong> <code>6 = 110</code>, <code>3 = 011</code>. XOR sets a bit where they <strong>differ</strong> → <code>101</code> = 5.
+- <em>(a) 9</em> is <code>6 + 3</code>.
+- <em>(b) 2</em> is <code>6 &amp; 3</code>.
+- <em>(c) 7</em> is <code>6 | 3</code>.</p>
+<hr />
+<ol start="3">
+<li><strong>Precedence discrimination.</strong> <code>(8 &amp; r+q)</code> — you must know <code>+</code> binds tighter than <code>&amp;</code>. Getting this backwards flips the branch and gives a plausible wrong answer that is always among the options.</li>
+</ol>
+<p><strong>3. (c) 20.</strong> Left shift by 2 multiplies by 2² = 4, so <code>5 × 4 = 20</code>. In binary <code>101</code> → <code>10100</code>.
+- <em>(a) 7</em> is <code>5 + 2</code>, <em>(b) 10</em> is one shift only, <em>(d) 25</em> is <code>5²</code>.</p>
+<hr />
+<ol start="4">
+<li><strong><code>&amp;</code> versus <code>&amp;&amp;</code>.</strong> A condition mixes bitwise AND with logical AND in the same expression, e.g. <code>if((7 &amp;&amp; b) &gt; (a &amp;&amp; 7))</code>.</li>
+</ol>
+<p><strong>4. (d) 13.</strong> <code>5 = 0101</code>, <code>12 = 1100</code>. AND → <code>0100</code> = 4. XOR → <code>1001</code> = 9. <code>4 + 9 = 13</code>.
+- <em>(a) 17</em> is <code>5 + 12</code> — worth noting that <code>(a &amp; d) + (a ^ d)</code> always equals <code>a + b</code> when there are no carries, which is a useful sanity check.
+- <em>(c) 4</em> and <em>(b) 9</em> are each only half the expression.</p>
+<hr />
+<ol start="5">
+<li><strong>XOR chains.</strong> <code>(q^p^9)</code> evaluated left to right.</li>
+</ol>
+<blockquote>
+<p><strong>No pen and paper is allowed.</strong> You must do <code>3 &amp; 4 → 011 &amp; 100 → 000 → 0</code> in your head, in under ten seconds. That is the actual skill being tested.</p>
+</blockquote>
+<h2 id="3-concept-notes">3. Concept notes</h2>
+<h3 id="31-binary-basics">3.1 Binary basics</h3>
+<p>Place values (8-bit):</p>
+<table>
+<thead>
+<tr>
+<th>Position</th>
+<th>7</th>
+<th>6</th>
+<th>5</th>
+<th>4</th>
+<th>3</th>
+<th>2</th>
+<th>1</th>
+<th>0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Value</td>
+<td>128</td>
+<td>64</td>
+<td>32</td>
+<td>16</td>
+<td>8</td>
+<td>4</td>
+<td>2</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Doubling trick</strong> — memorise the sequence, it is every power of two in order:</p>
+<div class="codehilite"><pre><span></span><code>1, 2, 4, 8, 16, 32, 64, 128
+</code></pre></div>
+
+<p><strong>Fast decimal → binary (0–255), method A: subtract largest fit</strong>
+Take 29. Largest place value ≤ 29 is 16 → remainder 13. Largest ≤ 13 is 8 → remainder 5. Largest ≤ 5 is 4 → remainder 1. Largest ≤ 1 is 1 → remainder 0. Record a 1 in the 16, 8, 4, 1 positions and 0 elsewhere: <code>00011101</code>. Check: 16 + 8 + 4 + 1 = 29.</p>
+<p>Take 57. 32 → 25, 16 → 9, 8 → 1, 1 → 0. Bits at 32, 16, 8, 1: <code>00111001</code>. Check: 32 + 16 + 8 + 1 = 57.</p>
+<p><strong>Method B: halve and record remainders, read bottom-up</strong>
+29 ÷ 2 = 14 r <strong>1</strong>; 14 ÷ 2 = 7 r <strong>0</strong>; 7 ÷ 2 = 3 r <strong>1</strong>; 3 ÷ 2 = 1 r <strong>1</strong>; 1 ÷ 2 = 0 r <strong>1</strong>. Read the remainders upward: <code>11101</code>.</p>
+<p><strong>Lookup table, decimal 0–16</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dec</th>
+<th>Bin</th>
+<th>Dec</th>
+<th>Bin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0000</td>
+<td>8</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0001</td>
+<td>9</td>
+<td>1001</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0010</td>
+<td>10</td>
+<td>1010</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0011</td>
+<td>11</td>
+<td>1011</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0100</td>
+<td>12</td>
+<td>1100</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0101</td>
+<td>13</td>
+<td>1101</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0110</td>
+<td>14</td>
+<td>1110</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0111</td>
+<td>15</td>
+<td>1111</td>
+</tr>
+<tr>
+<td>16</td>
+<td>10000</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-the-six-bitwise-operators">3.2 The six bitwise operators</h3>
+<div class="codehilite"><pre><span></span><code>&amp;   bitwise AND
+|   bitwise OR
+^   bitwise XOR
+~   bitwise NOT (complement)
+&lt;&lt;  left shift
+&gt;&gt;  right shift
+</code></pre></div>
+
+<p><strong>1-bit truth tables</strong> (a and b are single bits):</p>
+<table>
+<thead>
+<tr>
+<th>a</th>
+<th>b</th>
+<th>a AND b</th>
+<th>a OR b</th>
+<th>a XOR b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>a</th>
+<th>NOT a</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p><code>~x</code> flips every bit. For a signed integer, <code>~x = -(x + 1)</code>: <code>~0 = -1</code>, <code>~1 = -2</code>, <code>~5 = -6</code>, <code>~10 = -11</code>.</p>
+<h3 id="33-and-worked-binary-columns">3.3 AND — worked binary columns</h3>
+<p>Line the bits up to the same width. Write 1 only where <strong>both</strong> rows have 1.</p>
+<div class="codehilite"><pre><span></span><code>  3 = 0 1 1
+  4 = 1 0 0
+      -----
+&amp;     0 0 0   = 0
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>   8 = 1 0 0 0
+  10 = 1 0 1 0
+       -------
+&amp;      1 0 0 0  = 8
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>  10 = 1 0 1 0
+   1 = 0 0 0 1
+       -------
+&amp;      0 0 0 0   = 0
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>  29 = 1 1 1 0 1
+   4 = 0 0 1 0 0
+       ---------
+&amp;      0 0 1 0 0  = 4
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>  57 = 1 1 1 0 0 1
+   4 = 0 0 0 1 0 0
+       -----------
+&amp;      0 0 0 0 0 0  = 0
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>   5 = 1 0 1
+   1 = 0 0 1
+       -----
+&amp;      0 0 1   = 1
+</code></pre></div>
+
+<p><strong>Key intuition:</strong> AND keeps only bits set in <strong>both</strong> operands. If the two operands share no set bit position, the answer is 0. That is why 3 AND 4 = 0, 10 AND 1 = 0, and 57 AND 4 = 0 — in each pair the set bits never overlap.</p>
+<h3 id="34-or">3.4 OR</h3>
+<p>Write 1 where <strong>either</strong> row has 1.</p>
+<div class="codehilite"><pre><span></span><code>   5 = 1 0 1
+   2 = 0 1 0
+       -----
+|      1 1 1   = 7
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>  10 = 1 0 1 0
+   1 = 0 0 0 1
+       -------
+|      1 0 1 1   = 11
+</code></pre></div>
+
+<h3 id="35-xor">3.5 XOR</h3>
+<p>Write 1 where the bits <strong>differ</strong>, 0 where they are the same.</p>
+<div class="codehilite"><pre><span></span><code>   3 = 0 1 1
+   4 = 1 0 0
+       -----
+^      1 1 1   = 7
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>   7 = 0 1 1 1
+   9 = 1 0 0 1
+       -------
+^      1 1 1 0  = 14
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>  23 = 1 0 1 1 1
+   4 = 0 0 1 0 0
+       ---------
+^      1 0 0 1 1  = 19
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code>   8 = 1 0 0 0
+   4 = 0 1 0 0
+       -------
+^      1 1 0 0   = 12
+</code></pre></div>
+
+<p><strong>Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Statement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Self-inverse</td>
+<td>x XOR x = 0</td>
+</tr>
+<tr>
+<td>Identity</td>
+<td>x XOR 0 = x</td>
+</tr>
+<tr>
+<td>Own inverse</td>
+<td>(x XOR y) XOR y = x</td>
+</tr>
+<tr>
+<td>Commutative</td>
+<td>x XOR y = y XOR x</td>
+</tr>
+<tr>
+<td>Associative</td>
+<td>(x XOR y) XOR z = x XOR (y XOR z)</td>
+</tr>
+<tr>
+<td>Bit toggle</td>
+<td>x XOR 1 flips the lowest bit</td>
+</tr>
+</tbody>
+</table>
+<h3 id="36-left-and-right-shift">3.6 Left and right shift</h3>
+<ul>
+<li><code>a &lt;&lt; k</code> appends k zeros on the right → multiply by 2^k.</li>
+<li><code>a &gt;&gt; k</code> drops the k rightmost bits → divide by 2^k and <strong>truncate</strong> (floor for non-negative values).</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Bit change</th>
+<th>Decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5 &lt;&lt; 1</td>
+<td>101 → 1010</td>
+<td>10</td>
+</tr>
+<tr>
+<td>5 &lt;&lt; 2</td>
+<td>101 → 10100</td>
+<td>20</td>
+</tr>
+<tr>
+<td>3 &lt;&lt; 3</td>
+<td>011 → 011000</td>
+<td>24</td>
+</tr>
+<tr>
+<td>20 &gt;&gt; 1</td>
+<td>10100 → 1010</td>
+<td>10</td>
+</tr>
+<tr>
+<td>20 &gt;&gt; 2</td>
+<td>10100 → 101</td>
+<td>5</td>
+</tr>
+<tr>
+<td>7 &gt;&gt; 1</td>
+<td>111 → 11</td>
+<td>3 (not 3.5)</td>
+</tr>
+<tr>
+<td>1 &gt;&gt; 1</td>
+<td>1 → 0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>Right shift truncates: <code>7 &gt;&gt; 1 = 3</code>, discarding the remainder.</p>
+<h3 id="37-useful-bit-tricks">3.7 Useful bit tricks</h3>
+<table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>Expression</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>n is odd</td>
+<td>n AND 1 = 1</td>
+<td>7 AND 1 = 1</td>
+</tr>
+<tr>
+<td>n is even</td>
+<td>n AND 1 = 0</td>
+<td>8 AND 1 = 0</td>
+</tr>
+<tr>
+<td>n is a power of 2 (n &gt; 0)</td>
+<td>(n AND (n−1)) = 0</td>
+<td>8 AND 7 = 0; 10 AND 9 = 8 (not a power of 2)</td>
+</tr>
+<tr>
+<td>Multiply by 2</td>
+<td>n &lt;&lt; 1</td>
+<td>5 &lt;&lt; 1 = 10</td>
+</tr>
+<tr>
+<td>Multiply by 2^k</td>
+<td>n &lt;&lt; k</td>
+<td>3 &lt;&lt; 3 = 24</td>
+</tr>
+<tr>
+<td>Divide by 2 (floor)</td>
+<td>n &gt;&gt; 1</td>
+<td>7 &gt;&gt; 1 = 3</td>
+</tr>
+<tr>
+<td>Divide by 2^k (floor)</td>
+<td>n &gt;&gt; k</td>
+<td>20 &gt;&gt; 2 = 5</td>
+</tr>
+<tr>
+<td>Swap a and b</td>
+<td>a=a XOR b; b=a XOR b; a=a XOR b</td>
+<td>5,3 → 3,5</td>
+</tr>
+<tr>
+<td>Toggle bit k</td>
+<td>n XOR (1 &lt;&lt; k)</td>
+<td>5 XOR (1&lt;&lt;1) = 7</td>
+</tr>
+<tr>
+<td>Clear bit k</td>
+<td>n AND NOT(1 &lt;&lt; k)</td>
+<td>7 AND NOT 2 = 5</td>
+</tr>
+<tr>
+<td>Set bit k</td>
+<td>n OR (1 &lt;&lt; k)</td>
+<td>4 OR 2 = 6</td>
+</tr>
+<tr>
+<td>Test bit k</td>
+<td>(n &gt;&gt; k) AND 1</td>
+<td>(5 &gt;&gt; 2) AND 1 = 1</td>
+</tr>
+</tbody>
+</table>
+<p>Caveat on the power-of-two test: it must be <code>n &gt; 0</code>. <code>0 AND (−1) = 0</code>, but 0 is not a power of two.</p>
+<h3 id="38-bitwise-and-versus-logical-and">3.8 Bitwise AND (<code>&amp;</code>) versus logical AND (<code>&amp;&amp;</code>)</h3>
+<p>This is the single most examined confusion.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><code>&amp;</code> (bitwise AND)</th>
+<th><code>&amp;&amp;</code> (logical AND)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Works on</td>
+<td>each bit position separately</td>
+<td>the whole operand's truth value</td>
+</tr>
+<tr>
+<td>Operand type</td>
+<td>integers</td>
+<td>truth values</td>
+</tr>
+<tr>
+<td>Rule</td>
+<td>1 only where both bits are 1</td>
+<td>true only if both operands are true</td>
+</tr>
+<tr>
+<td>Returns</td>
+<td>an integer</td>
+<td>a boolean</td>
+</tr>
+<tr>
+<td>Evaluation</td>
+<td>both sides always evaluated</td>
+<td>short-circuits: right side skipped if left is false</td>
+</tr>
+<tr>
+<td>3 &amp; 4</td>
+<td>0</td>
+<td>—</td>
+</tr>
+<tr>
+<td>3 &amp;&amp; 4</td>
+<td>—</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Truthiness rule in these papers:</strong> any non-zero integer is true, 0 is false.</p>
+<p>So <code>3 &amp;&amp; 4</code> = true &amp;&amp; true = <strong>true</strong>, while <code>3 &amp; 4</code> = 011 AND 100 = 000 = <strong>0</strong>. The integer 0 that comes out of <code>3 &amp; 4</code> is itself falsy, which is exactly why candidates mix the two up.</p>
+<p>Same split for OR: <code>|</code> is bitwise, <code>||</code> is logical. There is no <code>^^</code>; <code>^</code> is always bitwise XOR. <code>!</code> is logical NOT (<code>!5</code> = false, <code>!0</code> = true); <code>~</code> is bitwise NOT (<code>~5</code> = −6).</p>
+<p>Precedence between them: <code>&amp;</code> binds tighter than <code>&amp;&amp;</code>, so <code>a &amp; b &amp;&amp; c</code> means <code>(a &amp; b) &amp;&amp; c</code>.</p>
+<h3 id="39-operator-precedence">3.9 Operator precedence</h3>
+<p>Highest to lowest, C/C++/Java-style (the convention used in these papers):</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Operators</th>
+<th>Associativity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 (highest)</td>
+<td>( )</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2</td>
+<td>unary <code>!</code> <code>~</code> <code>+</code> <code>-</code> <code>++</code> <code>--</code> (prefix)</td>
+<td>right to left</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>*</code> <code>/</code> <code>%</code></td>
+<td>left to right</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>+</code> <code>-</code> (binary)</td>
+<td>left to right</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>&lt;&lt;</code> <code>&gt;&gt;</code></td>
+<td>left to right</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>&lt;</code> <code>&lt;=</code> <code>&gt;</code> <code>&gt;=</code></td>
+<td>left to right</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>==</code> <code>!=</code></td>
+<td>left to right</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>&amp;</code> (bitwise AND)</td>
+<td>left to right</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>^</code> (bitwise XOR)</td>
+<td>left to right</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>\|</code> (bitwise OR)</td>
+<td>left to right</td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>&amp;&amp;</code> (logical AND)</td>
+<td>left to right</td>
+</tr>
+<tr>
+<td>12</td>
+<td><code>\|\|</code> (logical OR)</td>
+<td>left to right</td>
+</tr>
+<tr>
+<td>13 (lowest)</td>
+<td><code>=</code> <code>+=</code> <code>-=</code> <code>*=</code> <code>/=</code> <code>%=</code></td>
+<td>right to left</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rules to repeat until automatic:</strong></p>
+<ul>
+<li>Arithmetic <code>*</code> <code>/</code> <code>%</code> bind tighter than <code>+</code> <code>-</code>, which bind tighter than shifts.</li>
+<li><strong>Arithmetic <code>+</code> and <code>-</code> bind TIGHTER than bitwise <code>&amp;</code> <code>^</code> <code>|</code>.</strong></li>
+<li><strong>Bitwise <code>&amp;</code> <code>^</code> <code>|</code> bind TIGHTER than logical <code>&amp;&amp;</code> <code>||</code>.</strong></li>
+<li><strong>Bitwise <code>&amp;</code> <code>^</code> <code>|</code> bind LOOSER than the relational and equality operators <code>&lt;</code> <code>&lt;=</code> <code>&gt;</code> <code>&gt;=</code> <code>==</code> <code>!=</code>.</strong></li>
+<li>Same precedence level → evaluate left to right (except unary and assignment, right to left).</li>
+</ul>
+<p><strong>Worked examples</strong></p>
+<p><code>8 &amp; 7 + 3</code>
+<code>+</code> binds tighter than <code>&amp;</code> → <code>7 + 3 = 10</code> → <code>8 &amp; 10</code> = 1000 AND 1010 = 1000 = <strong>8</strong>.
+It is NOT <code>(8 &amp; 7) + 3 = 0 + 3 = 3</code>.</p>
+<p><code>1 &lt;&lt; 2 + 3</code>
+<code>+</code> binds tighter than <code>&lt;&lt;</code> → <code>2 + 3 = 5</code> → <code>1 &lt;&lt; 5 = 1 × 2^5 = 32</code>.
+It is NOT <code>(1 &lt;&lt; 2) + 3 = 4 + 3 = 7</code>.</p>
+<p><code>3 ^ 4 ^ 9</code>
+<code>^</code> is left-associative → <code>3 ^ 4 = 7</code>, then <code>7 ^ 9 = 14</code>. Result <strong>14</strong>. (XOR is also associative, so the grouping does not change the answer here.)</p>
+<p><code>x &amp; 3 == 1</code> — the classic trap
+<code>==</code> binds tighter than <code>&amp;</code> → <code>3 == 1</code> gives 0 → <code>x &amp; 0 = 0</code> for every x. If you meant "the low two bits of x equal 1", write <code>(x &amp; 3) == 1</code>.</p>
+<p><code>5 | 2 * 3</code>
+<code>*</code> first → <code>2 * 3 = 6</code> → <code>5 | 6</code> = 101 OR 110 = 111 = <strong>7</strong>.</p>
+<p><code>10 - 2 &lt;&lt; 1</code>
+<code>-</code> binds tighter than <code>&lt;&lt;</code> → <code>10 - 2 = 8</code> → <code>8 &lt;&lt; 1 = 16</code>. Not <code>10 - (2 &lt;&lt; 1) = 6</code>.</p>
+<p><code>3 + 4 == 7 &amp;&amp; 2 &lt; 5</code>
+<code>+</code> → 7; <code>==</code> → true; <code>&lt;</code> → true; <code>&amp;&amp;</code> → <strong>true</strong>.</p>
+<p>In all of these, parentheses would override everything — <code>( )</code> sits at level 1.</p>
+<h3 id="310-integer-division-and-modulo">3.10 Integer division and modulo</h3>
+<ul>
+<li><code>/</code> between two integers drops the fractional part; it does not round.</li>
+<li><code>%</code> returns the remainder.</li>
+</ul>
+<p>Non-negative operands:</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>7 / 2</td>
+<td>3</td>
+</tr>
+<tr>
+<td>7 % 2</td>
+<td>1</td>
+</tr>
+<tr>
+<td>10 / 3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>10 % 3</td>
+<td>1</td>
+</tr>
+<tr>
+<td>9 / 3</td>
+<td>3</td>
+</tr>
+<tr>
+<td>9 % 3</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2 / 5</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2 % 5</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>Negative operands, C/Java/C++ style:</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Result</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>−7 / 2</td>
+<td>−3</td>
+<td>division truncates toward zero</td>
+</tr>
+<tr>
+<td>7 / −2</td>
+<td>−3</td>
+<td>division truncates toward zero</td>
+</tr>
+<tr>
+<td>−7 / −2</td>
+<td>3</td>
+<td>division truncates toward zero</td>
+</tr>
+<tr>
+<td>−7 % 2</td>
+<td>−1</td>
+<td>remainder takes the sign of the left operand</td>
+</tr>
+<tr>
+<td>7 % −2</td>
+<td>1</td>
+<td>remainder takes the sign of the left operand</td>
+</tr>
+<tr>
+<td>−7 % −2</td>
+<td>−1</td>
+<td>remainder takes the sign of the left operand</td>
+</tr>
+</tbody>
+</table>
+<p>Identity that always holds (b ≠ 0): <code>(a / b) * b + (a % b) = a</code>.
+Check: (−7 / 2) × 2 + (−7 % 2) = (−3) × 2 + (−1) = −7.</p>
+<p>Caution: Python-flavoured pseudocode floors instead of truncating and gives the remainder the sign of the divisor: <code>−7 // 2 = −4</code>, <code>−7 % 2 = 1</code>. If the paper supplies a sample question, match its convention. C-style is the norm in these exams.</p>
+<h3 id="311-pre-increment-versus-post-increment">3.11 Pre-increment versus post-increment</h3>
+<table>
+<thead>
+<tr>
+<th>Form</th>
+<th>Name</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>++x</code></td>
+<td>pre-increment</td>
+<td>increment x first, then use the new value</td>
+</tr>
+<tr>
+<td><code>x++</code></td>
+<td>post-increment</td>
+<td>use the current value, then increment x</td>
+</tr>
+<tr>
+<td><code>--x</code></td>
+<td>pre-decrement</td>
+<td>decrement x first, then use the new value</td>
+</tr>
+<tr>
+<td><code>x--</code></td>
+<td>post-decrement</td>
+<td>use the current value, then decrement x</td>
+</tr>
+</tbody>
+</table>
+<p>Worked example:</p>
+<div class="codehilite"><pre><span></span><code>a = 5
+b = a++     // b gets 5, then a becomes 6
+c = ++a     // a becomes 7, then c gets 7
+</code></pre></div>
+
+<p>Final: a = 7, b = 5, c = 7.</p>
+<div class="codehilite"><pre><span></span><code>x = 10
+y = x--     // y gets 10, then x becomes 9
+z = --x     // x becomes 8, then z gets 8
+</code></pre></div>
+
+<p>Final: x = 8, y = 10, z = 8.</p>
+<p>Notes:
+- When the increment is a standalone statement (<code>x++;</code>), pre and post leave x with the same final value.
+- Avoid <code>x++ + ++x</code> in one expression. In C/C++ it is undefined (two unsequenced writes to x). Java evaluates left to right: x = 5 gives 5 + 7 = 12.</p>
+<h2 id="4-must-memorise-block">4. Must-memorise block</h2>
+<p><strong>Truth tables</strong></p>
+<table>
+<thead>
+<tr>
+<th>a</th>
+<th>b</th>
+<th>a AND b</th>
+<th>a OR b</th>
+<th>a XOR b</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>NOT: 0 → 1, 1 → 0. <code>~x = −(x + 1)</code>.</p>
+<p><strong>Decimal → binary, 0–16</strong></p>
+<table>
+<thead>
+<tr>
+<th>Dec</th>
+<th>Bin</th>
+<th>Dec</th>
+<th>Bin</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>0000</td>
+<td>8</td>
+<td>1000</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0001</td>
+<td>9</td>
+<td>1001</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0010</td>
+<td>10</td>
+<td>1010</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0011</td>
+<td>11</td>
+<td>1011</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0100</td>
+<td>12</td>
+<td>1100</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0101</td>
+<td>13</td>
+<td>1101</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0110</td>
+<td>14</td>
+<td>1110</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0111</td>
+<td>15</td>
+<td>1111</td>
+</tr>
+<tr>
+<td>16</td>
+<td>10000</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Place values: 1, 2, 4, 8, 16, 32, 64, 128.</p>
+<p><strong>Precedence ladder, high → low</strong></p>
+<div class="codehilite"><pre><span></span><code>1  ( )
+2  unary  !  ~  +  -  ++  --
+3  *  /  %
+4  +  -
+5  &lt;&lt;  &gt;&gt;
+6  &lt;  &lt;=  &gt;  &gt;=
+7  ==  !=
+8  &amp;        bitwise AND
+9  ^        bitwise XOR
+10 |        bitwise OR
+11 &amp;&amp;
+12 ||
+13 =  +=  -=  *=  /=  %=
+</code></pre></div>
+
+<p>Arithmetic <code>+ -</code> bind TIGHTER than <code>&amp; ^ |</code>. Bitwise <code>&amp; ^ |</code> bind TIGHTER than <code>&amp;&amp; ||</code>. Bitwise <code>&amp; ^ |</code> bind LOOSER than <code>&lt; &lt;= &gt; &gt;= == !=</code>. Same level → left to right.</p>
+<p><strong><code>&amp;</code> versus <code>&amp;&amp;</code></strong></p>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th><code>&amp;</code> result</th>
+<th><code>&amp;&amp;</code> result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3, 4</td>
+<td>0 (integer)</td>
+<td>true</td>
+</tr>
+<tr>
+<td>1, 0</td>
+<td>0</td>
+<td>false</td>
+</tr>
+<tr>
+<td>0, 0</td>
+<td>0</td>
+<td>false</td>
+</tr>
+<tr>
+<td>5, 2</td>
+<td>0</td>
+<td>true</td>
+</tr>
+</tbody>
+</table>
+<p>Rule: <code>&amp;</code> works bit by bit and returns an integer; <code>&amp;&amp;</code> works on truth values and returns true/false. Non-zero is true, 0 is false.</p>
+<p><strong>Bit tricks</strong></p>
+<table>
+<thead>
+<tr>
+<th>Goal</th>
+<th>Expression</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Odd</td>
+<td>n AND 1 = 1</td>
+</tr>
+<tr>
+<td>Even</td>
+<td>n AND 1 = 0</td>
+</tr>
+<tr>
+<td>Power of two (n &gt; 0)</td>
+<td>(n AND (n−1)) = 0</td>
+</tr>
+<tr>
+<td>× 2</td>
+<td>n &lt;&lt; 1</td>
+</tr>
+<tr>
+<td>× 2^k</td>
+<td>n &lt;&lt; k</td>
+</tr>
+<tr>
+<td>÷ 2 (floor)</td>
+<td>n &gt;&gt; 1</td>
+</tr>
+<tr>
+<td>÷ 2^k (floor)</td>
+<td>n &gt;&gt; k</td>
+</tr>
+<tr>
+<td>Swap a, b</td>
+<td>a=a XOR b; b=a XOR b; a=a XOR b</td>
+</tr>
+<tr>
+<td>Toggle bit k</td>
+<td>n XOR (1 &lt;&lt; k)</td>
+</tr>
+<tr>
+<td>Set bit k</td>
+<td>n OR (1 &lt;&lt; k)</td>
+</tr>
+<tr>
+<td>Clear bit k</td>
+<td>n AND NOT(1 &lt;&lt; k)</td>
+</tr>
+<tr>
+<td>Test bit k</td>
+<td>(n &gt;&gt; k) AND 1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Six verified AND results</strong></p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Binary</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3 AND 4</td>
+<td>011 AND 100</td>
+<td>0</td>
+</tr>
+<tr>
+<td>8 AND 10</td>
+<td>1000 AND 1010</td>
+<td>8</td>
+</tr>
+<tr>
+<td>10 AND 1</td>
+<td>1010 AND 0001</td>
+<td>0</td>
+</tr>
+<tr>
+<td>29 AND 4</td>
+<td>11101 AND 00100</td>
+<td>4</td>
+</tr>
+<tr>
+<td>57 AND 4</td>
+<td>111001 AND 000100</td>
+<td>0</td>
+</tr>
+<tr>
+<td>5 AND 1</td>
+<td>101 AND 001</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verified XOR results</strong></p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Binary</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3 XOR 4</td>
+<td>011 XOR 100</td>
+<td>7</td>
+</tr>
+<tr>
+<td>7 XOR 9</td>
+<td>0111 XOR 1001</td>
+<td>14</td>
+</tr>
+<tr>
+<td>23 XOR 4</td>
+<td>10111 XOR 00100</td>
+<td>19</td>
+</tr>
+<tr>
+<td>8 XOR 4</td>
+<td>1000 XOR 0100</td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verified precedence results</strong></p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Parses as</th>
+<th>Answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8 &amp; 7 + 3</td>
+<td>8 &amp; 10</td>
+<td>8</td>
+</tr>
+<tr>
+<td>1 &lt;&lt; 2 + 3</td>
+<td>1 &lt;&lt; 5</td>
+<td>32</td>
+</tr>
+<tr>
+<td>3 ^ 4 ^ 9</td>
+<td>(3 ^ 4) ^ 9</td>
+<td>14</td>
+</tr>
+<tr>
+<td>5 | 2 * 3</td>
+<td>5 | 6</td>
+<td>7</td>
+</tr>
+<tr>
+<td>10 - 2 &lt;&lt; 1</td>
+<td>(10 - 2) &lt;&lt; 1</td>
+<td>16</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Verified shift results:</strong> 5 &lt;&lt; 1 = 10, 5 &lt;&lt; 2 = 20, 3 &lt;&lt; 3 = 24, 20 &gt;&gt; 1 = 10, 20 &gt;&gt; 2 = 5, 7 &gt;&gt; 1 = 3, 1 &gt;&gt; 1 = 0.</p>
+<h2 id="5-worked-examples">5. Worked examples</h2>
+<p>Every result below was verified by execution.</p>
+<h3 id="example-1-the-core-move-and-with-no-shared-bits">Example 1 — The core move: AND with no shared bits</h3>
+<div class="codehilite"><pre><span></span><code>1. Integer p, q, r
+2. Set p = 1, q = 8, r = 9
+3. q = (11 + 9) &amp; q
+4. p = q + q
+5. Print p + q + r
+</code></pre></div>
+
+<p><strong>Trace.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>Working</th>
+<th>p</th>
+<th>q</th>
+<th>r</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>initial</td>
+<td>1</td>
+<td>8</td>
+<td>9</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>11+9 = 20</code>. <strong><code>+</code> before <code>&amp;</code>.</strong> <code>20 &amp; 8</code> → <code>10100 &amp; 01000</code> → <code>00000</code></td>
+<td>1</td>
+<td><strong>0</strong></td>
+<td>9</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>0 + 0</code></td>
+<td><strong>0</strong></td>
+<td>0</td>
+<td>9</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>0 + 0 + 9</code></td>
+<td></td>
+<td></td>
+<td><strong>9</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Answer: 9.</strong></p>
+<p>The intuition to internalise: <strong>20 is <code>10100</code> and 8 is <code>01000</code>. They share no set bit, so the AND is 0.</strong> Once <code>q</code> collapses to 0, <code>p</code> follows and only <code>r</code> survives.</p>
+<h3 id="example-2-precedence-decides-the-branch">Example 2 — Precedence decides the branch</h3>
+<div class="codehilite"><pre><span></span><code>1. Integer p, q, r
+2. Set p = 4, q = 3, r = 7
+3. if((q ^ p ^ 9) &lt; (8 &amp; r + q))
+4.     r = (7 ^ 7) + q
+5.     q = (q + r) + p
+6. End if
+7. r = q + p
+8. Print p + q + r
+</code></pre></div>
+
+<p><strong>Left side:</strong> <code>3 ^ 4</code> → <code>011 ^ 100</code> → <code>111</code> = 7. Then <code>7 ^ 9</code> → <code>0111 ^ 1001</code> → <code>1110</code> = <strong>14</strong>.</p>
+<p><strong>Right side:</strong> this is where the question is won or lost. <code>+</code> binds tighter than <code>&amp;</code>, so it is <code>8 &amp; (7+3)</code> = <code>8 &amp; 10</code> → <code>1000 &amp; 1010</code> → <code>1000</code> = <strong>8</strong>. (Reading it as <code>(8 &amp; 7) + 3</code> gives <code>0 + 3</code> = 3 — a different number, and the wrong branch.)</p>
+<p><code>14 &lt; 8</code> is <strong>false</strong>, so lines 4–5 never run.</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>p</th>
+<th>q</th>
+<th>r</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>4</td>
+<td>3</td>
+<td>7</td>
+</tr>
+<tr>
+<td>3</td>
+<td>condition false — skip body</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>r = 3 + 4</code></td>
+<td></td>
+<td><strong>7</strong></td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>4 + 3 + 7</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Answer: 14.</strong></p>
+<h3 id="example-3-the-value-must-be-re-read-after-reassignment">Example 3 — The value must be re-read after reassignment</h3>
+<div class="codehilite"><pre><span></span><code>1. Integer p, q, r
+2. Set p = 4, q = 8, r = 6
+3. if((p + r) &gt; (q - p))
+4.     q = (q + 7) + q
+5.     if((4 + q ^ p) &lt; (7 + p + r))
+6.         p = (q ^ p) ^ r
+7.     Else
+8.         r = 5 + q
+9.     End if
+10. End if
+11. Print p + q + r
+</code></pre></div>
+
+<p><strong>Trace.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>Working</th>
+<th>p</th>
+<th>q</th>
+<th>r</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>initial</td>
+<td>4</td>
+<td>8</td>
+<td>6</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>(4+6)=10 &gt; (8-4)=4</code> → <strong>true</strong>, enter</td>
+<td>4</td>
+<td>8</td>
+<td>6</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>(8+7)+8 = 23</code></td>
+<td>4</td>
+<td><strong>23</strong></td>
+<td>6</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong><code>q</code> is now 23, not 8.</strong> <code>23 ^ 4</code> → <code>10111 ^ 00100</code> → <code>10011</code> = 19. Left = <code>4+19</code> = 23. Right = <code>7+4+6</code> = 17. <code>23 &lt; 17</code> → <strong>false</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td>Else: <code>r = 5 + 23</code></td>
+<td>4</td>
+<td>23</td>
+<td><strong>28</strong></td>
+</tr>
+<tr>
+<td>11</td>
+<td><code>4 + 23 + 28</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Answer: 55.</strong></p>
+<p>Using the original <code>q = 8</code> gives <code>8 ^ 4 = 12</code>, left <code>= 16</code>, <code>16 &lt; 17</code> true, and you take the wrong branch. <strong>Always re-read the current value at the line you are on.</strong></p>
+<h3 id="example-4-inside-a-loop-changing-each-pass">Example 4 — <code>&amp;</code> inside a loop, changing each pass</h3>
+<div class="codehilite"><pre><span></span><code>1. Integer a, b, c
+2. Set a = 8, b = 5, c = 6
+3. for(each c from 3 to 4)
+4.     b = 9 + b
+5.     b = (b + 7) + a
+6.     b = (b &amp; 4) + b
+7. End for
+8. Print a + b
+</code></pre></div>
+
+<p><code>for c from 3 to 4</code> is <strong>inclusive</strong> — exactly 2 iterations.</p>
+<table>
+<thead>
+<tr>
+<th>Pass</th>
+<th>Line 4</th>
+<th>Line 5</th>
+<th>Line 6 working</th>
+<th>b after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>9+5 = 14</code></td>
+<td><code>(14+7)+8 = 29</code></td>
+<td><code>29 &amp; 4</code> → <code>11101 &amp; 00100</code> → <code>00100</code> = 4; <code>4+29</code></td>
+<td><strong>33</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>9+33 = 42</code></td>
+<td><code>(42+7)+8 = 57</code></td>
+<td><code>57 &amp; 4</code> → <code>111001 &amp; 000100</code> → <code>000000</code> = 0; <code>0+57</code></td>
+<td><strong>57</strong></td>
+</tr>
+</tbody>
+</table>
+<p><code>Print a + b</code> = <code>8 + 57</code>. <strong>Answer: 65.</strong></p>
+<p>Note <code>b &amp; 4</code> gives <strong>4</strong> on the first pass and <strong>0</strong> on the second. Assuming it is constant is the trap.</p>
+<h3 id="example-5-versus">Example 5 — <code>&amp;</code> versus <code>&amp;&amp;</code></h3>
+<div class="codehilite"><pre><span></span><code>Integer a = 2, b = 1
+Print (a &amp; b)
+Print (a &amp;&amp; b)
+</code></pre></div>
+
+<ul>
+<li><code>a &amp; b</code> = <code>10 &amp; 01</code> = <code>00</code> = <strong>0</strong></li>
+<li><code>a &amp;&amp; b</code> — both operands are non-zero, therefore both truthy — = <strong>true</strong></li>
+</ul>
+<p>Same operands, opposite answers. <code>&amp;</code> works bit by bit and returns a number; <code>&amp;&amp;</code> asks "are both non-zero?" and returns a boolean.</p>
+<h2 id="6-traps-and-gotchas">6. Traps and gotchas</h2>
+<table>
+<thead>
+<tr>
+<th>Trap</th>
+<th>Why it catches people</th>
+<th>How to avoid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Reading <code>&amp;</code> as <code>+</code></strong></td>
+<td>Under time pressure <code>3 &amp; 4</code> looks like it should be 7</td>
+<td><code>&amp;</code> <strong>never</strong> produces a bit neither operand has. <code>3 &amp; 4 = 0</code>, not 7</td>
+</tr>
+<tr>
+<td><strong><code>8 &amp; 7 + 3</code> evaluated left to right</strong></td>
+<td>We read left to right, so we compute <code>8 &amp; 7</code> first</td>
+<td><strong><code>+</code> and <code>-</code> bind tighter than <code>&amp;</code>, <code>^</code>, <code>\|</code>.</strong> Do the arithmetic, then the bitwise op</td>
+</tr>
+<tr>
+<td><strong>Confusing <code>&amp;</code> with <code>&amp;&amp;</code></strong></td>
+<td>One character apart, and both are called "and"</td>
+<td><code>&amp;</code> = bitwise, returns an integer. <code>&amp;&amp;</code> = logical, returns true/false. Non-zero is truthy</td>
+</tr>
+<tr>
+<td><strong>Using a variable's pre-update value</strong></td>
+<td>The condition sits below the assignment and you remember the initial value</td>
+<td>Re-state all three variables after every assignment line</td>
+</tr>
+<tr>
+<td><strong>Assuming <code>x &amp; k</code> is constant in a loop</strong></td>
+<td>It looks like a fixed mask</td>
+<td><code>x</code> changes each pass, so the AND result changes. Recompute every iteration</td>
+</tr>
+<tr>
+<td><strong>Forgetting XOR is self-inverse</strong></td>
+<td><code>3 ^ 5 ^ 3</code> looks like it needs three steps</td>
+<td><code>x ^ x = 0</code> and <code>x ^ 0 = x</code>, so <code>3 ^ 5 ^ 3 = 5</code>. XOR is commutative and associative</td>
+</tr>
+<tr>
+<td><strong>Right shift on an odd number</strong></td>
+<td><code>7 &gt;&gt; 1</code> feels like it should be 3.5</td>
+<td>Integer shift truncates: <code>7 &gt;&gt; 1 = 3</code></td>
+</tr>
+<tr>
+<td><strong>Not converting to binary at all</strong></td>
+<td>Trying to reason about <code>&amp;</code> decimally</td>
+<td>Convert both operands to binary <strong>first, every time</strong>. It takes 3 seconds and removes all guesswork</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-practice-questions">7. Practice questions</h2>
+<p>Attempt all 12 before opening the key. Target: 40 seconds each.</p>
+<ol>
+<li>
+<p><strong>[Easy]</strong> <em>(B7 — AND)</em> What is <code>12 &amp; 10</code>?
+   (a) 8 (b) 22 (c) 2 (d) 14</p>
+</li>
+<li>
+<p><strong>[Easy]</strong> <em>(B7 — XOR)</em> What is <code>6 ^ 3</code>?
+   (a) 9 (b) 2 (c) 7 (d) 5</p>
+</li>
+<li>
+<p><strong>[Easy]</strong> <em>(B7 — shift)</em> What is <code>5 &lt;&lt; 2</code>?
+   (a) 7 (b) 10 (c) 20 (d) 25</p>
+</li>
+<li>
+<p><strong>[Medium]</strong> <em>(B7 — combined)</em> <code>Integer a = 5, b = 12</code>. What does <code>Print (a &amp; b) + (a ^ b)</code> output?
+   (a) 17 (b) 9 (c) 4 (d) 13</p>
+</li>
+<li>
+<p><strong>[Medium]</strong> <em>(B7 — precedence)</em> What does <code>Print 12 &amp; 5 + 3</code> output?
+   (a) 8 (b) 4 (c) 3 (d) 15</p>
+</li>
+</ol>
+<p><strong>5. (a) 8.</strong> <code>+</code> binds tighter than <code>&amp;</code>, so this is <code>12 &amp; (5 + 3)</code> = <code>12 &amp; 8</code> = <code>1100 &amp; 1000</code> = <code>1000</code> = 8.
+- <em>(c) 3</em> is the precedence trap: <code>(12 &amp; 5) + 3</code> = <code>4 + 3</code> = 7 — and note even that is not 3, so anyone picking (c) has made two errors.
+- <em>(b) 4</em> is <code>12 &amp; 5</code> alone.
+- <em>(d) 15</em> is <code>12 | 3</code>.</p>
+<hr />
+<ol start="6">
+<li><strong>[Medium]</strong> <em>(B7 — bit trick)</em> <code>Integer x = 7</code>. What does <code>Print x &amp; (x - 1)</code> output?
+   (a) 7 (b) 6 (c) 1 (d) 0</li>
+</ol>
+<p><strong>6. (b) 6.</strong> <code>x = 7 = 0111</code>, <code>x - 1 = 6 = 0110</code>. AND → <code>0110</code> = 6.
+- <em>(d) 0</em> is the trap: <code>n &amp; (n-1) == 0</code> is the <strong>power-of-two test</strong>, and 7 is not a power of two, so it does not give 0. It gives 0 only for 1, 2, 4, 8, 16…</p>
+<hr />
+<ol start="7">
+<li><strong>[Medium]</strong> <em>(B7 — XOR properties)</em> What is <code>3 ^ 5 ^ 3</code>?
+   (a) 0 (b) 3 (c) 6 (d) 5</li>
+</ol>
+<p><strong>7. (d) 5.</strong> XOR is its own inverse: <code>3 ^ 3 = 0</code>, and XOR is commutative and associative, so <code>3 ^ 5 ^ 3 = 5 ^ (3 ^ 3) = 5 ^ 0 = 5</code>.
+- <em>(a) 0</em> would be right for <code>3 ^ 3</code> alone.
+- <em>(c) 6</em> is <code>3 ^ 5</code> with the third operand ignored.</p>
+<hr />
+<ol start="8">
+<li><strong>[Hard]</strong> <em>(B7 + B2 — branch selection)</em> Trace and print.
+   ```</li>
+<li>Integer a, b, c</li>
+<li>Set a = 6, b = 9, c = 4</li>
+<li>if((a &amp; b) &gt; (c - 2))</li>
+<li>b = (a ^ c) + b</li>
+<li>Else</li>
+<li>b = (a &amp; c) + b</li>
+<li>End if</li>
+<li>Print a + b + c
+   ```
+   (a) 19 (b) 25 (c) 23 (d) 21</li>
+</ol>
+<p><strong>8. (c) 23.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>Working</th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>initial</td>
+<td>6</td>
+<td>9</td>
+<td>4</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>a &amp; b</code> = <code>0110 &amp; 1001</code> = <code>0000</code> = <strong>0</strong>. <code>c - 2</code> = 2. <code>0 &gt; 2</code> → <strong>false</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>Else branch: <code>a &amp; c</code> = <code>0110 &amp; 0100</code> = <code>0100</code> = <strong>4</strong>. <code>b = 4 + 9</code></td>
+<td>6</td>
+<td><strong>13</strong></td>
+<td>4</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>6 + 13 + 4</code></td>
+<td></td>
+<td></td>
+<td><strong>23</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><em>(d) 21</em> comes from taking the <strong>if</strong> branch: <code>a ^ c</code> = <code>0010</code> = 2, <code>b = 2 + 9 = 11</code>, total 21. That is the answer if you wrongly evaluate <code>6 &amp; 9</code> as non-zero.</li>
+<li><em>(a) 19</em> is the untouched total <code>6 + 9 + 4</code>.</li>
+<li><em>(b) 25</em> is arithmetic noise.</li>
+</ul>
+<hr />
+<ol start="9">
+<li><strong>[Hard]</strong> <em>(B7 + B2 — dead branch)</em> Trace and print.
+   ```</li>
+<li>Integer p, q, r</li>
+<li>Set p = 5, q = 3, r = 8</li>
+<li>if((p ^ q) &lt; (r &amp; 6))</li>
+<li>q = (p &amp; r) + q</li>
+<li>r = q + p</li>
+<li>End if</li>
+<li>Print p + q + r
+   ```
+   (a) 13 (b) 16 (c) 21 (d) 11</li>
+</ol>
+<p><strong>9. (b) 16.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>Working</th>
+<th>p</th>
+<th>q</th>
+<th>r</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>initial</td>
+<td>5</td>
+<td>3</td>
+<td>8</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>p ^ q</code> = <code>101 ^ 011</code> = <code>110</code> = <strong>6</strong>. <code>r &amp; 6</code> = <code>1000 &amp; 0110</code> = <code>0000</code> = <strong>0</strong>. <code>6 &lt; 0</code> → <strong>false</strong></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6</td>
+<td>body skipped entirely</td>
+<td>5</td>
+<td>3</td>
+<td>8</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>5 + 3 + 8</code></td>
+<td></td>
+<td></td>
+<td><strong>16</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The whole body is dead code. Evaluating the guard first answers this in about fifteen seconds.
+- <em>(a) 13</em> assumes line 4 ran: <code>p &amp; r</code> = <code>0101 &amp; 1000</code> = 0, so <code>q</code> would still be 3 — meaning even people who wrongly enter the branch should get 16 unless they also miscompute <code>p &amp; r</code>.
+- <em>(c) 21</em> and <em>(d) 11</em> are distractor arithmetic.</p>
+<hr />
+<ol start="10">
+<li><strong>[Medium]</strong> <em>(B7 — <code>&amp;</code> vs <code>&amp;&amp;</code>)</em> <code>Integer a = 2, b = 1</code>. Which statement is correct?
+    (a) <code>a &amp; b</code> is 0 and <code>a &amp;&amp; b</code> is true (b) both are 0 (c) <code>a &amp; b</code> is 1 and <code>a &amp;&amp; b</code> is true (d) both are true</li>
+</ol>
+<p><strong>10. (a) <code>a &amp; b</code> is 0 and <code>a &amp;&amp; b</code> is true.</strong> <code>2 &amp; 1</code> = <code>10 &amp; 01</code> = <code>00</code> = 0. But both 2 and 1 are non-zero, so both are truthy and <code>a &amp;&amp; b</code> is true.
+- <em>(c)</em> gets the bitwise result wrong.
+- <em>(b)</em> and <em>(d)</em> assume the two operators agree, which is exactly the misconception this tests.</p>
+<hr />
+<ol start="11">
+<li><strong>[Medium]</strong> <em>(B7 — odd check)</em> Which expression is true exactly when integer <code>n</code> is odd?
+    (a) <code>n &amp; 2</code> (b) <code>n ^ 1</code> (c) <code>n &gt;&gt; 1</code> (d) <code>n &amp; 1</code></li>
+</ol>
+<p><strong>11. (d) <code>n &amp; 1</code>.</strong> The least significant bit is 1 for every odd number and 0 for every even number, so <code>n &amp; 1</code> isolates it.
+- <em>(a) <code>n &amp; 2</code></em> tests the <strong>second</strong> bit — true for 2, 3, 6, 7… which is not oddness.
+- <em>(b) <code>n ^ 1</code></em> flips the last bit rather than testing it; it is non-zero for almost every n.
+- <em>(c) <code>n &gt;&gt; 1</code></em> is integer division by 2 and discards the very bit you need.</p>
+<hr />
+<ol start="12">
+<li><strong>[Hard]</strong> <em>(B7 — mixed operators)</em> What does <code>Print (8 &amp; 12) ^ (8 | 12)</code> output?
+    (a) 4 (b) 8 (c) 12 (d) 0</li>
+</ol>
+<hr />
+<p><strong>12. (a) 4.</strong> <code>8 = 1000</code>, <code>12 = 1100</code>. AND → <code>1000</code> = 8. OR → <code>1100</code> = 12. Then <code>8 ^ 12</code> = <code>1000 ^ 1100</code> = <code>0100</code> = <strong>4</strong>.
+- <em>(d) 0</em> would require the two results to be equal.
+- <em>(c) 12</em> is the OR alone; <em>(b) 8</em> is the AND alone.</p>
+<hr />
+<h2 id="8-resources">8. Resources</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Type</th>
+<th>Link</th>
+<th>Free/Paid</th>
+<th>Time</th>
+<th>Why this one</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GfG — Bitwise operators</td>
+<td>Article</td>
+<td>https://www.geeksforgeeks.org/cpp/bitwise-operators-in-c-cpp/</td>
+<td>Free</td>
+<td>25 min</td>
+<td>Truth tables and worked examples in exactly the notation the paper uses</td>
+</tr>
+<tr>
+<td>CodeChef — Accenture interview questions</td>
+<td>Practice set</td>
+<td>https://www.codechef.com/practice/accenture-interview-questions</td>
+<td>Free</td>
+<td>60 min</td>
+<td>Company-tagged practice including bitwise output prediction</td>
+</tr>
+<tr>
+<td>PrepInsta — Accenture pseudocode</td>
+<td>Practice set</td>
+<td>https://prepinsta.com/accenture/pseudo-code/general-pseudo-code/</td>
+<td>Free</td>
+<td>45 min</td>
+<td>Large volume of output-prediction items in the observed style</td>
+</tr>
+<tr>
+<td><code>question-banks/QB-T11-B7-bitwise-operators.md</code></td>
+<td>Question bank</td>
+<td>(this library)</td>
+<td>Free</td>
+<td>40 min</td>
+<td>35 original questions mirroring the observed difficulty mix</td>
+</tr>
+</tbody>
+</table>
+<p><em>All external links verified resolving 2026-09-16.</em></p>
+<h2 id="9-self-check">9. Self-check</h2>
+<ul>
+<li>[ ] I can convert any decimal 0–63 to binary in under 5 seconds</li>
+<li>[ ] I can state the AND, OR and XOR truth tables without hesitating</li>
+<li>[ ] I can compute <code>3 &amp; 4</code>, <code>8 &amp; 10</code>, <code>29 &amp; 4</code> and <code>57 &amp; 4</code> mentally and correctly</li>
+<li>[ ] I know that <code>+</code> binds tighter than <code>&amp;</code>, and I apply it without being reminded</li>
+<li>[ ] I can explain the difference between <code>&amp;</code> and <code>&amp;&amp;</code> with a concrete example where they disagree</li>
+<li>[ ] I know <code>x ^ x = 0</code>, <code>x ^ 0 = x</code>, and that XOR is commutative and associative</li>
+<li>[ ] I know <code>n &amp; 1</code> tests oddness and <code>n &amp; (n-1) == 0</code> tests powers of two</li>
+<li>[ ] Given a 10-line snippet, I evaluate the <strong>guard</strong> before tracing the body</li>
+<li>[ ] I scored 10/12 or better on the practice questions in under 8 minutes</li>
+</ul>
+<h2 id="10-sources">10. Sources</h2>
+<p><strong>Teaching content (§3–§9)</strong> is adapted from <code>accenture-prep-final/accenture-prep-library/topics/T11-B7-bitwise-operators.md</code>, which lists its own sources and was verified in that library's QA. <strong>Infosys evidence</strong> for this file: observed questions P03 in <code>../data/questions-observed.csv</code>; section structure and marks in <code>../research/03-pattern-synthesis.md</code> §1; weightage, tier and hours in <code>../data/weightage.json</code> (code <code>P3</code>). Confidence <strong>Medium</strong>. Nothing in this file is a published Infosys syllabus.</p>
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/pseudocode/P2-recursion.html"><span>Previous</span><strong>P2 — Recursion — Trace, Base Case, Accumulation</strong></a><a class="pager next" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html"><span>Next</span><strong>P4 — Pre/post-increment and fill-the-blank</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#p3-bitwise-operators-and-operator-precedence">P3 — Bitwise Operators and Operator Precedence</a><a class="toc-l1" href="#1-why-this-topic-matters-here">1. Why this topic matters here</a><a class="toc-l1" href="#2-exactly-what-gets-asked">2. Exactly what gets asked</a><a class="toc-l1" href="#3-concept-notes">3. Concept notes</a><a class="toc-l1" href="#4-must-memorise-block">4. Must-memorise block</a><a class="toc-l1" href="#5-worked-examples">5. Worked examples</a><a class="toc-l1" href="#6-traps-and-gotchas">6. Traps and gotchas</a><a class="toc-l1" href="#7-practice-questions">7. Practice questions</a><a class="toc-l1" href="#8-resources">8. Resources</a><a class="toc-l1" href="#9-self-check">9. Self-check</a><a class="toc-l1" href="#10-sources">10. Sources</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

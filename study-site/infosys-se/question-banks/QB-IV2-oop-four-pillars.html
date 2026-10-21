@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem current" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Question banks &amp; mock</span></div>
+    <article class="prose">
+<h1 id="qb-iv2-oop-the-four-pillars-overloading-vs-overriding">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</h1>
+<p><strong>Interview</strong> · <strong>Tier 1</strong> · 54 questions</p>
+<p>Topic file: <a href="/Users/hariharansundaramoorthy/Documents/my projects/infosys/infosys-prep-library/interview/IV2-oop-four-pillars.md"><code>IV2-oop-four-pillars.md</code></a></p>
+<p><em>Adapted from <code>accenture-prep-final/accenture-prep-library/question-banks/QB-T05-D1-oop-four-pillars.md</code>; verified in that library's QA. Questions and answer key are unchanged.</em></p>
+<p><strong>How to use this bank.</strong> Attempt every question before opening the key, at the real pace for this section (120 seconds a question). Answer letters are balanced across a–d.</p>
+<hr />
+<p><strong>1.</strong> <strong>[Easy]</strong> <em>(D1 — runtime polymorphism)</em></p>
+<p>What is the output of the following Java program?</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">class</span> <span class="nc">Animal</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;generic &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<span class="kd">class</span> <span class="nc">Dog</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Animal</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sound</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;bark &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Animal</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Dog</span><span class="p">();</span>
+<span class="w">        </span><span class="n">x</span><span class="p">.</span><span class="na">sound</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Animal</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Animal</span><span class="p">();</span>
+<span class="w">        </span><span class="n">y</span><span class="p">.</span><span class="na">sound</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>(a) bark generic
+(b) generic bark
+(c) bark bark
+(d) generic generic</p>
+<p><strong>1. (a) bark generic</strong>
+<code>x</code> is declared <code>Animal</code> but refers to a <code>Dog</code>, so the overridden <code>Dog.sound()</code> runs; <code>y</code> refers to a plain <code>Animal</code>, so its own version runs.
+- (d) Assumes the declared (reference) type decides which override runs — that is field/static behaviour, not instance method dispatch.
+- (b) Swaps the two calls; the first object is a <code>Dog</code>, not an <code>Animal</code>.
+- (c) Assumes both variables share the same dynamic type; <code>y</code> was created with <code>new Animal()</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Statement</th>
+<th>Reference type</th>
+<th>Object type</th>
+<th>Method executed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x.sound()</code></td>
+<td>Animal</td>
+<td>Dog</td>
+<td><code>Dog.sound()</code> → "bark "</td>
+</tr>
+<tr>
+<td><code>y.sound()</code></td>
+<td>Animal</td>
+<td>Animal</td>
+<td><code>Animal.sound()</code> → "generic "</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>2.</strong> <strong>[Easy]</strong> <em>(D1 — overloading vs overriding)</em></p>
+<p>Which statement correctly distinguishes overloading from overriding?</p>
+<p>(a) Overloading requires an inheritance relationship; overriding does not.
+(b) Overloading is resolved at runtime; overriding is resolved at compile time.
+(c) Overloading uses the same method name with different parameter lists in the same class or class hierarchy; overriding redefines an inherited method with the same signature.
+(d) Overloading can differ from the original method only in return type.</p>
+<p><strong>2. (c) Overloading uses the same method name with different parameter lists in the same class or class hierarchy; overriding redefines an inherited method with the same signature.</strong>
+Overloading is compile-time (static) polymorphism keyed on the parameter list; overriding is runtime (dynamic) polymorphism requiring the same signature in a subtype.
+- (b) Reverses the binding times: overloading is resolved at compile time, overriding at runtime.
+- (a) Reverses the requirement: overriding needs inheritance, overloading does not.
+- (d) A return type alone cannot distinguish overloads; Java rejects two methods differing only in return type.</p>
+<hr />
+<p><strong>3.</strong> <strong>[Easy]</strong> <em>(D1 — encapsulation)</em></p>
+<p>A class declares all its fields <code>private</code> and exposes only public methods that read or modify them with validation. Which OOP pillar does this primarily demonstrate?</p>
+<p>(a) Inheritance
+(b) Polymorphism
+(c) Encapsulation
+(d) Composition</p>
+<p><strong>3. (c) Encapsulation</strong>
+Private fields plus controlled public accessors bundle state with the behaviour that guards it, which is encapsulation.
+- (a) No superclass/subclass relationship is involved.
+- (b) No method is redefined or resolved dynamically by object type.
+- (d) Composition is a whole-part object relationship, which this snippet does not show.</p>
+<hr />
+<p><strong>4.</strong> <strong>[Easy]</strong> <em>(D2 — constructor chaining order)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">class</span> <span class="nc">A</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">A</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;A &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">class</span> <span class="nc">B</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">B</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;B &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="n">B</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">();</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">B</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>(a) B5 B A
+(b) A B B5
+(c) A B5 B
+(d) B A B5</p>
+<p><strong>4. (b) A B B5</strong>
+<code>new B(5)</code> enters <code>B(int)</code>, which immediately calls <code>this()</code> → <code>B()</code>, whose implicit <code>super()</code> runs <code>A()</code> printing <code>"A "</code>; then <code>B()</code> prints <code>"B "</code>, control returns to <code>B(int)</code> which prints <code>"B5 "</code>.
+- (a) Prints the subclass constructor body before the superclass constructor.
+- (d) Assumes <code>this()</code> runs after the body of <code>B(int)</code>.
+- (c) Reverses the order of the two <code>B</code> prints.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Call</th>
+<th>Prints</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>new B(5)</code> → <code>B(int)</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>this()</code> → <code>B()</code></td>
+<td>—</td>
+</tr>
+<tr>
+<td>3</td>
+<td>implicit <code>super()</code> → <code>A()</code></td>
+<td><code>A</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>rest of <code>B()</code></td>
+<td><code>B</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>rest of <code>B(int)</code></td>
+<td><code>B5</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>5.</strong> <strong>[Easy]</strong> <em>(D3 — abstract class vs interface)</em></p>
+<p>Which statement about Java abstract classes and interfaces is correct?</p>
+<p>(a) A class may extend multiple abstract classes but implement only one interface.
+(b) An interface may declare constructors; an abstract class may not.
+(c) An abstract class may not contain any concrete (fully implemented) methods.
+(d) An abstract class may have instance fields and constructors; an interface's fields are implicitly <code>public static final</code>.</p>
+<p><strong>5. (d) An abstract class may have instance fields and constructors; an interface's fields are implicitly <code>public static final</code>.</strong>
+An abstract class is a real class and can hold state and constructors; interface fields are constants by definition.
+- (a) Reverses the rule: a class can implement many interfaces but extend only one class.
+- (b) Interfaces cannot declare constructors; abstract classes can.
+- (c) Abstract classes may contain any number of concrete methods.</p>
+<hr />
+<p><strong>6.</strong> <strong>[Easy]</strong> <em>(D3 — access modifiers)</em></p>
+<p>Which sequence lists Java access modifiers from MOST restrictive to LEAST restrictive?</p>
+<p>(a) private, protected, default (package-private), public
+(b) default (package-private), private, protected, public
+(c) protected, private, default (package-private), public
+(d) private, default (package-private), protected, public</p>
+<p><strong>6. (d) private, default (package-private), protected, public</strong>
+<code>private</code> is class-only; package-private adds the package; <code>protected</code> adds subclasses (and same-package access); <code>public</code> is unrestricted. This is strictly increasing visibility.
+- (a) Places <code>protected</code> below package-private, but <code>protected</code> grants everything package-private grants plus subclass access.
+- (c) Starts with <code>protected</code>, which is not the most restrictive.
+- (b) Starts with package-private, which is not the most restrictive.</p>
+<hr />
+<p><strong>7.</strong> <strong>[Medium]</strong> <em>(D2 — static method hiding vs overriding)</em></p>
+<p>What is the output?</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">class</span> <span class="nc">Parent</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">show</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Parent &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Pprint &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">class</span> <span class="nc">Child</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Parent</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">show</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Child &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Cprint &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Parent</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Child</span><span class="p">();</span>
+<span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<span class="w">        </span><span class="n">p</span><span class="p">.</span><span class="na">print</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Child</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Child</span><span class="p">();</span>
+<span class="w">        </span><span class="n">c</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>(a) Parent Pprint Child
+(b) Child Cprint Child
+(c) Parent Cprint Child
+(d) Child Pprint Parent</p>
+<p><strong>7. (c) Parent Cprint Child</strong>
+<code>static</code> methods are hidden, not overridden, so <code>p.show()</code> is bound by the reference type (<code>Parent</code>) → <code>"Parent "</code>. <code>print()</code> is a normal instance method, so <code>p.print()</code> dispatches to <code>Child</code> → <code>"Cprint "</code>. The second <code>show()</code> call is on a <code>Child</code> reference → <code>"Child "</code>.
+- (a) Assumes <code>print()</code> also dispatches by reference type.
+- (b) Assumes static methods are dispatched by object type.
+- (d) Swaps the two rules: reference type for <code>show()</code>, object type for <code>print()</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th>Resolution rule</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p.show()</code></td>
+<td>static, by reference type <code>Parent</code></td>
+<td><code>Parent</code></td>
+</tr>
+<tr>
+<td><code>p.print()</code></td>
+<td>instance, by object type <code>Child</code></td>
+<td><code>Cprint</code></td>
+</tr>
+<tr>
+<td><code>c.show()</code></td>
+<td>static, by reference type <code>Child</code></td>
+<td><code>Child</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>8.</strong> <strong>[Medium]</strong> <em>(D2 — super() and method resolution)</em></p>
+<p>What is printed by this Python program?</p>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;A&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">B</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot;B&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">B</span><span class="p">()</span><span class="o">.</span><span class="n">show</span><span class="p">())</span>
+</code></pre></div>
+
+<p>(a) A1B
+(b) A2B
+(c) B2
+(d) A2</p>
+<p><strong>8. (b) A2B</strong>
+<code>B.__init__</code> calls <code>super().__init__()</code> (sets <code>x = 1</code>) and then overwrites <code>self.x = 2</code>. <code>B.show()</code> calls <code>A.show()</code>, which reads the current <code>self.x</code>, i.e. 2, giving <code>"A2"</code>, then appends <code>"B"</code>.
+- (a) Assumes <code>A.show()</code> sees the value <code>1</code> set before the assignment in <code>B.__init__</code>.
+- (c) Ignores the <code>super().show()</code> call entirely.
+- (d) Omits the <code>"B"</code> appended by <code>B.show()</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value after <code>B()</code></th>
+<th>Read by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>self.x</code></td>
+<td>1, then overwritten to 2</td>
+<td><code>A.show()</code> via <code>self.x</code></td>
+</tr>
+<tr>
+<td><code>A.show()</code> result</td>
+<td><code>"A2"</code></td>
+<td><code>B.show()</code></td>
+</tr>
+<tr>
+<td><code>B.show()</code> result</td>
+<td><code>"A2B"</code></td>
+<td><code>print</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>9.</strong> <strong>[Medium]</strong> <em>(D2 — virtual vs non-virtual in C++)</em></p>
+<p>What is the output?</p>
+<div class="codehilite"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+
+<span class="k">class</span><span class="w"> </span><span class="nc">Base</span><span class="w"> </span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">show</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Base &quot;</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">tell</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;BaseTell &quot;</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">};</span>
+<span class="k">class</span><span class="w"> </span><span class="nc">Derived</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">Base</span><span class="w"> </span><span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">show</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Derived &quot;</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">tell</span><span class="p">()</span><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;DerivedTell &quot;</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">};</span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Base</span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Derived</span><span class="p">();</span>
+<span class="w">    </span><span class="n">b</span><span class="o">-&gt;</span><span class="n">show</span><span class="p">();</span>
+<span class="w">    </span><span class="n">b</span><span class="o">-&gt;</span><span class="n">tell</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>(a) Derived DerivedTell
+(b) Base BaseTell
+(c) Base DerivedTell
+(d) Derived BaseTell</p>
+<p><strong>9. (c) Base DerivedTell</strong>
+<code>show()</code> is non-virtual, so <code>b-&gt;show()</code> is bound statically to <code>Base::show</code> → <code>"Base "</code>. <code>tell()</code> is <code>virtual</code>, so <code>b-&gt;tell()</code> dispatches to <code>Derived::tell</code> → <code>"DerivedTell "</code>.
+- (a) Assumes <code>show()</code> is also virtual.
+- (b) Assumes <code>tell()</code> is not virtual, so no dynamic dispatch occurs.
+- (d) Reverses the two members: virtual <code>show()</code>, non-virtual <code>tell()</code>.</p>
+<hr />
+<p><strong>10.</strong> <strong>[Medium]</strong> <em>(D4 — overload resolution phases)</em></p>
+<p>What is the output?</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w">     </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;int &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;long &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">Integer</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Integer &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">byte</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">        </span><span class="n">f</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+<span class="w">        </span><span class="n">f</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="w">        </span><span class="n">f</span><span class="p">(</span><span class="n">Integer</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>(a) int long Integer
+(b) Integer int Integer
+(c) int int Integer
+(d) long int Integer</p>
+<p><strong>10. (c) int int Integer</strong>
+<code>f(c)</code> matches <code>f(int)</code> by widening (byte → int) in phase 1, which is preferred over any boxing; <code>f(5)</code> matches <code>f(int)</code> exactly; <code>f(Integer.valueOf(5))</code> matches <code>f(Integer)</code> exactly by reference identity.
+- (a) Assumes <code>f(c)</code> widens to <code>long</code>; <code>int</code> is the more specific applicable widening target.
+- (b) Assumes <code>byte</code> is boxed to <code>Integer</code>; primitive widening is applied before boxing.
+- (d) Assumes <code>f(5)</code> widens to <code>long</code>; <code>int</code> is already an exact match.</p>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th>Argument type</th>
+<th>Applicable in phase 1?</th>
+<th>Chosen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>f(c)</code></td>
+<td>byte</td>
+<td><code>f(int)</code>, <code>f(long)</code></td>
+<td><code>int</code> (most specific)</td>
+</tr>
+<tr>
+<td><code>f(5)</code></td>
+<td>int</td>
+<td><code>f(int)</code> exact</td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td><code>f(Integer.valueOf(5))</code></td>
+<td>Integer</td>
+<td><code>f(Integer)</code> exact</td>
+<td><code>Integer</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>11.</strong> <strong>[Medium]</strong> <em>(D5 — association, aggregation, composition)</em></p>
+<p>Which statement about aggregation and composition is correct?</p>
+<p>(a) In composition the part's lifetime is bound to the whole; in aggregation the part can outlive the whole.
+(b) Association implies ownership; aggregation implies no relationship at all.
+(c) Composition allows one part to be shared by several wholes simultaneously; aggregation does not.
+(d) Aggregation is a stronger whole-part relationship than composition because the part is destroyed with the whole.</p>
+<p><strong>11. (a) In composition the part's lifetime is bound to the whole; in aggregation the part can outlive the whole.</strong>
+Composition is strong ownership (part destroyed with the whole); aggregation is weak ownership (part exists independently and can be shared).
+- (d) Inverts the strength of the two relationships.
+- (b) Both aggregation and association are relationships; aggregation is a specialised association, not the absence of one.
+- (c) Inverts the sharing property: aggregation permits sharing, composition normally does not.</p>
+<hr />
+<p><strong>12.</strong> <strong>[Medium]</strong> <em>(D3 — interface default methods)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">interface</span> <span class="nc">A</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">who</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<span class="kd">interface</span> <span class="nc">B</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">who</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<span class="kd">class</span> <span class="nc">C</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="w"> </span><span class="n">B</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">who</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">A</span><span class="p">.</span><span class="na">super</span><span class="p">.</span><span class="na">who</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">B</span><span class="p">.</span><span class="na">super</span><span class="p">.</span><span class="na">who</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">C</span><span class="p">().</span><span class="na">who</span><span class="p">());</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>(a) BA
+(b) Runtime exception (<code>ClassCastException</code>)
+(c) Compile-time error, because <code>C</code> inherits two conflicting default methods
+(d) AB</p>
+<p><strong>12. (d) AB</strong>
+Both <code>A</code> and <code>B</code> declare a default <code>who()</code>, but <code>C</code> explicitly overrides it, resolving the conflict. <code>A.super.who()</code> yields <code>"A"</code> and <code>B.super.who()</code> yields <code>"B"</code>, concatenated in that order.
+- (a) Reverses the concatenation order written in <code>C.who()</code>.
+- (c) The conflict rule only forces an override when a class inherits two defaults without overriding; <code>C</code> does override.
+- (b) No cast or runtime failure occurs here.</p>
+<hr />
+<p><strong>13.</strong> <strong>[Medium]</strong> <em>(D2 — static block, instance initializer, constructor order)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">class</span> <span class="nc">Demo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;S &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;I &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="n">Demo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;C &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;M &quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">Demo</span><span class="p">();</span>
+<span class="w">        </span><span class="k">new</span><span class="w"> </span><span class="n">Demo</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>(a) S M I C I C
+(b) M S I C I C
+(c) M I C S I C
+(d) M S I C C I</p>
+<p><strong>13. (b) M S I C I C</strong>
+<code>main</code> prints <code>"M "</code> first. The static initializer runs on the first class initialisation of <code>Demo</code>, i.e. at the first <code>new Demo()</code>. Every <code>new</code> then runs instance initializers (<code>"I "</code>) before the constructor body (<code>"C "</code>).
+- (a) Places <code>"S "</code> before <code>"M "</code>, implying class initialisation happens before <code>main</code> starts.
+- (c) Places the instance initializer before the static initializer.
+- (d) Swaps the constructor body and the instance initializer for the second object (also for the first).</p>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>System.out.print("M ")</code></td>
+<td><code>M</code></td>
+</tr>
+<tr>
+<td>first <code>new Demo()</code> → static init</td>
+<td><code>S</code></td>
+</tr>
+<tr>
+<td>first <code>new Demo()</code> → instance init</td>
+<td><code>I</code></td>
+</tr>
+<tr>
+<td>first <code>new Demo()</code> → ctor body</td>
+<td><code>C</code></td>
+</tr>
+<tr>
+<td>second <code>new Demo()</code> → instance init</td>
+<td><code>I</code></td>
+</tr>
+<tr>
+<td>second <code>new Demo()</code> → ctor body</td>
+<td><code>C</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>14.</strong> <strong>[Medium]</strong> <em>(D2 — class attribute vs instance attribute)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">Counter</span><span class="p">:</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">Counter</span><span class="o">.</span><span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">Counter</span><span class="p">()</span>
+<span class="n">a</span><span class="o">.</span><span class="n">count</span> <span class="o">+=</span> <span class="mi">10</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Counter</span><span class="o">.</span><span class="n">count</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">count</span><span class="p">,</span> <span class="n">b</span><span class="o">.</span><span class="n">count</span><span class="p">)</span>
+</code></pre></div>
+
+<p>(a) 2 12 2
+(b) 12 12 2
+(c) 2 12 12
+(d) 2 2 2</p>
+<p><strong>14. (a) 2 12 2</strong>
+<code>Counter.count</code> is incremented twice in <code>__init__</code>, so it is 2. <code>a.count += 10</code> reads the class attribute (2) and creates an instance attribute <code>a.count = 12</code>. <code>b</code> never gets an instance attribute, so <code>b.count</code> still reads the class attribute, 2.
+- (b) Assumes <code>a.count += 10</code> updates <code>Counter.count</code>.
+- (c) Assumes <code>b.count</code> also sees the instance attribute created on <code>a</code>.
+- (d) Assumes the class-level increments are lost.</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Value</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Counter.count</code></td>
+<td>2</td>
+<td>class attribute after two <code>__init__</code> calls</td>
+</tr>
+<tr>
+<td><code>a.count</code></td>
+<td>12</td>
+<td>new instance attribute on <code>a</code></td>
+</tr>
+<tr>
+<td><code>b.count</code></td>
+<td>2</td>
+<td>class attribute (no instance attribute)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>15.</strong> <strong>[Medium]</strong> <em>(D3 — abstract class with constructor)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Shape</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Shape</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">area</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;:&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">area</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">class</span> <span class="nc">Sq</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Shape</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">s</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Sq</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kd">super</span><span class="p">(</span><span class="s">&quot;Square&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">area</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Shape</span><span class="w"> </span><span class="n">sh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Sq</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">sh</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>(a) Square:9
+(b) Sq:9.0
+(c) Compile-time error — an abstract class cannot declare a constructor
+(d) Square:9.0</p>
+<p><strong>15. (d) Square:9.0</strong>
+<code>Sq(3)</code> chains to <code>Shape("Square")</code>, so <code>name</code> is <code>"Square"</code>. <code>area()</code> returns <code>3.0 * 3.0 = 9.0</code> as a <code>double</code>, and string concatenation via <code>toString()</code> prints <code>9.0</code>.
+- (a) Assumes <code>double</code> would be printed without a decimal part.
+- (b) Assumes <code>name</code> holds the subclass name; it holds the string passed to <code>super("Square")</code>.
+- (c) Abstract classes may declare constructors; they are invoked by subclass constructors.</p>
+<hr />
+<p><strong>16.</strong> <strong>[Hard]</strong> <em>(D2 — field hiding vs method dispatch)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">class</span> <span class="nc">Parent</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">getV</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">call</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">getV</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">class</span> <span class="nc">Child</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Parent</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">getV</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">v</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Parent</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Child</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="na">v</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="na">getV</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="na">call</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>(a) 2 2 3
+(b) 1 2 3
+(c) 1 1 3
+(d) 1 2 2</p>
+<p><strong>16. (b) 1 2 3</strong>
+Fields are not polymorphic: <code>p.v</code> resolves by reference type → <code>Parent.v = 1</code>. <code>p.getV()</code> is an overridden instance method → <code>Child.getV()</code> returns <code>Child.v = 2</code>. <code>Parent.call()</code> is not overridden, so it runs in <code>Parent</code>; inside it, <code>getV()</code> dispatches virtually to <code>Child.getV()</code> (2) while <code>v</code> is resolved lexically to <code>Parent.v</code> (1) → 3.
+- (a) Assumes <code>p.v</code> also uses dynamic dispatch and returns <code>Child.v</code>.
+- (c) Assumes <code>p.getV()</code> is bound to <code>Parent.getV()</code> by reference type.
+- (d) Assumes <code>call()</code> resolves <code>getV()</code> to <code>Parent.getV()</code>, which would give 1 + 1 = 2.</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Resolution</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>p.v</code></td>
+<td>field, by reference type <code>Parent</code></td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>p.getV()</code></td>
+<td>virtual method, object type <code>Child</code></td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>p.call()</code></td>
+<td><code>Parent.call</code>: <code>getV()</code> → 2, <code>v</code> → 1</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>17.</strong> <strong>[Hard]</strong> <em>(D2 — C3 linearisation / super() in multiple inheritance)</em></p>
+<p>What does this Python program print?</p>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">tag</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="s2">&quot;A&quot;</span>
+<span class="k">class</span> <span class="nc">B</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">tag</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="s2">&quot;B&quot;</span> <span class="o">+</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">tag</span><span class="p">()</span>
+<span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">tag</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="s2">&quot;C&quot;</span> <span class="o">+</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">tag</span><span class="p">()</span>
+<span class="k">class</span> <span class="nc">D</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">D</span><span class="p">()</span><span class="o">.</span><span class="n">tag</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">([</span><span class="n">c</span><span class="o">.</span><span class="vm">__name__</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">D</span><span class="o">.</span><span class="vm">__mro__</span><span class="p">])</span>
+</code></pre></div>
+
+<p>(a) BAC then <code>['D', 'B', 'A', 'C', 'object']</code>
+(b) BCA then <code>['D', 'B', 'C', 'A', 'object']</code>
+(c) BCA then <code>['D', 'C', 'B', 'A', 'object']</code>
+(d) ABC then <code>['D', 'B', 'C', 'A', 'object']</code></p>
+<p><strong>17. (b) BCA then <code>['D', 'B', 'C', 'A', 'object']</code></strong>
+With <code>class D(B, C)</code>, the C3 linearisation is <code>D, B, C, A, object</code>. <code>super()</code> inside <code>B.tag</code> therefore moves to <code>C</code>, not to <code>A</code>, giving <code>"B" + ("C" + "A")</code> = <code>"BCA"</code>.
+- (a) Assumes <code>super()</code> in <code>B</code> jumps straight to <code>A</code>, which would happen only with <code>class D(B)</code>.
+- (d) Assumes <code>super()</code> in <code>B</code> reaches <code>A</code> first and <code>C</code> never runs, producing <code>"ABC"</code>.
+- (c) Reverses the base order in the MRO; Python uses the declared order <code>(B, C)</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Value after <code>B.__init__</code> for <code>B()</code></th>
+<th>Read by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>self.x</code> (B)</td>
+<td>1, then set to 2</td>
+<td><code>A.show()</code></td>
+</tr>
+<tr>
+<td>superclass call</td>
+<td><code>A.__init__()</code></td>
+<td>sets <code>x = 1</code></td>
+</tr>
+<tr>
+<td><code>show()</code> result</td>
+<td><code>"A" + "2" + "B"</code></td>
+<td><code>print</code></td>
+</tr>
+</tbody>
+</table>
+<p>Corrected table for Q17:</p>
+<table>
+<thead>
+<tr>
+<th>MRO position</th>
+<th>Class</th>
+<th><code>super()</code> step in <code>B.tag</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>D</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2</td>
+<td>B</td>
+<td>next → C</td>
+</tr>
+<tr>
+<td>3</td>
+<td>C</td>
+<td>next → A</td>
+</tr>
+<tr>
+<td>4</td>
+<td>A</td>
+<td>returns <code>"A"</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>object</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>Result string: <code>"B" + "C" + "A"</code> = <code>"BCA"</code>.</p>
+<hr />
+<p><strong>18.</strong> <strong>[Hard]</strong> <em>(D4 — widening vs boxing vs varargs priority)</em></p>
+<p>What is the output?</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">g</span><span class="p">(</span><span class="kt">long</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;long &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">g</span><span class="p">(</span><span class="n">Integer</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Integer &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">g</span><span class="p">(</span><span class="kt">int</span><span class="p">...</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;varargs &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">g</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span>
+<span class="w">        </span><span class="n">g</span><span class="p">(</span><span class="n">Integer</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="mi">5</span><span class="p">));</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>(a) long Integer
+(b) varargs Integer
+(c) Integer Integer
+(d) long varargs</p>
+<hr />
+<p><strong>18. (a) long Integer</strong>
+For <code>g(5)</code> the literal is <code>int</code>; phase 1 (no boxing, no varargs) finds <code>g(long)</code> by widening, which beats any phase-3 varargs match. For <code>g(Integer.valueOf(5))</code>, phase 1 finds the exact <code>g(Integer)</code> match by reference subtyping, so it wins over the unboxing route to <code>g(long)</code>.
+- (b) Varargs is considered only in phase 3, after widening and boxing have failed.
+- (c) Assumes <code>int</code> is boxed; primitive widening to <code>long</code> is preferred over boxing.
+- (d) Assumes <code>g(Integer.valueOf(5))</code> unboxes and widens to <code>long</code> instead of matching <code>g(Integer)</code> exactly.</p>
+<table>
+<thead>
+<tr>
+<th>Call</th>
+<th>Argument type</th>
+<th>Phase 1 candidates</th>
+<th>Chosen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>g(5)</code></td>
+<td>int</td>
+<td><code>g(long)</code> by widening</td>
+<td><code>long</code></td>
+</tr>
+<tr>
+<td><code>g(Integer.valueOf(5))</code></td>
+<td>Integer</td>
+<td><code>g(Integer)</code> by identity</td>
+<td><code>Integer</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>19.</strong> <strong>[Easy]</strong> <em>(D1 — abstract class vs interface)</em></p>
+<p>Which statement is correct?</p>
+<p>(a) A class may extend only one class but may implement several interfaces.</p>
+<p>(b) An interface may declare instance fields, and each implementing class gets its own copy of them.</p>
+<p>(c) An abstract class cannot declare a constructor.</p>
+<p>(d) An interface can declare a constructor that implementers invoke with <code>super()</code>.</p>
+<hr />
+<p><strong>19. (d) A class may extend only one class but may implement several interfaces.</strong>
+Class inheritance is single in Java/C#, while interface implementation is multiple.</p>
+<ul>
+<li>(b) Interface fields are implicitly <code>public static final</code> constants shared by all implementers; C# interfaces cannot declare instance fields at all.</li>
+<li>(c) Abstract classes can declare constructors; they run when a subclass instance is created.</li>
+<li>(a) Interfaces cannot declare constructors in either Java or C#.</li>
+</ul>
+<hr />
+<p><strong>20.</strong> <strong>[Easy]</strong> <em>(D1 — access modifiers and visibility)</em></p>
+<div class="codehilite"><pre><span></span><code><span class="c1">// p1/A.java</span>
+<span class="kn">package</span><span class="w"> </span><span class="nn">p1</span><span class="p">;</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">A</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">show</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// p2/B.java</span>
+<span class="kn">package</span><span class="w"> </span><span class="nn">p2</span><span class="p">;</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">B</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+
+<span class="c1">// p2/Main.java</span>
+<span class="kn">package</span><span class="w"> </span><span class="nn">p2</span><span class="p">;</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">B</span><span class="p">().</span><span class="na">show</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>What happens when <code>Main</code> is compiled?</p>
+<p>(a) It prints <code>A</code>.</p>
+<p>(b) It throws a runtime exception because <code>show()</code> is not accessible.</p>
+<p>(c) It compiles and prints nothing, because the inherited method is suppressed.</p>
+<p>(d) Compile-time error in <code>Main</code>: <code>show()</code> is not public in <code>A</code>; cannot be accessed from outside package.</p>
+<hr />
+<p><strong>20. (b) Compile-time error in <code>Main</code>: <code>show()</code> is not public in <code>A</code>; cannot be accessed from outside package.</strong>
+<code>show()</code> has default access, so it is visible only inside <code>p1</code>; <code>Main</code> in <code>p2</code> cannot call it.</p>
+<ul>
+<li>(a) The program never reaches runtime; the call is rejected while compiling <code>Main</code>.</li>
+<li>(c) Access failure is a compile-time error, not a runtime exception.</li>
+<li>(d) Compilation fails outright, so nothing is printed.</li>
+</ul>
+<hr />
+<p><strong>21.</strong> <strong>[Easy]</strong> <em>(D1 — static vs instance members)</em></p>
+<p>Which statement about a <code>static</code> method is true?</p>
+<p>(a) It can access instance variables of its own class directly.</p>
+<p>(b) It is overridden by a subclass method with a different return type.</p>
+<p>(c) It cannot be overloaded.</p>
+<p>(d) It can be called using the class name without creating an instance of the class.</p>
+<hr />
+<p><strong>21. (c) It can be called using the class name without creating an instance of the class.</strong>
+Static methods belong to the class, not to an object, so no instance is required.</p>
+<ul>
+<li>(a) A static method has no <code>this</code>, so it cannot touch instance variables directly.</li>
+<li>(b) Overloading depends only on the parameter signature and applies to static methods too.</li>
+<li>(d) Static methods are hidden, not overridden, and hiding requires a compatible return type.</li>
+</ul>
+<hr />
+<p><strong>22.</strong> <strong>[Medium]</strong> <em>(D1 — method hiding)</em></p>
+<div class="codehilite"><pre><span></span><code><span class="kd">class</span> <span class="nc">P</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;P&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<span class="kd">class</span> <span class="nc">C</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+
+<span class="n">P</span><span class="w"> </span><span class="n">ref</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">C</span><span class="p">();</span>
+<span class="n">ref</span><span class="p">.</span><span class="na">f</span><span class="p">();</span>
+</code></pre></div>
+
+<p>What is printed?</p>
+<p>(a) <code>C</code></p>
+<p>(b) Compile-time error: a static method cannot be inherited</p>
+<p>(c) <code>C</code> followed by a runtime exception</p>
+<p>(d) <code>P</code></p>
+<hr />
+<p><strong>22. (a) <code>P</code></strong>
+Static methods are resolved at compile time from the reference type, and <code>ref</code> is declared as <code>P</code>.</p>
+<ul>
+<li>(d) Dynamic dispatch applies only to instance methods, not to static methods.</li>
+<li>(b) It compiles; calling a static method through an instance reference is legal in Java.</li>
+<li>(c) No exception occurs; the static call is bound to <code>P.f()</code> at compile time.</li>
+</ul>
+<hr />
+<p><strong>23.</strong> <strong>[Medium]</strong> <em>(D1 — association vs aggregation vs composition)</em></p>
+<p>An <code>Order</code> object creates its own <code>OrderLine</code> objects inside its constructor, and no other object ever holds a reference to those <code>OrderLine</code> objects. When the <code>Order</code> is discarded, its lines are gone with it. Which relationship is modelled?</p>
+<p>(a) Association</p>
+<p>(b) Aggregation</p>
+<p>(c) Composition</p>
+<p>(d) Inheritance</p>
+<hr />
+<p><strong>23. (c) Composition</strong>
+The whole creates the parts, owns them, and their lifetime ends with it — the defining traits of composition.</p>
+<ul>
+<li>(b) Aggregation parts are separate objects referenced from outside and can outlive the whole.</li>
+<li>(a) Association is a general link with no ownership or lifetime control.</li>
+<li>(d) Inheritance is an "is-a" relationship, not a whole–part one.</li>
+</ul>
+<hr />
+<p><strong>24.</strong> <strong>[Medium]</strong> <em>(D1 — abstract class vs interface)</em></p>
+<div class="codehilite"><pre><span></span><code><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Shape</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">area</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">describe</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;area=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">area</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Which statement is true?</p>
+<p>(a) <code>Shape</code> can be instantiated because it contains the concrete method <code>describe()</code>.</p>
+<p>(b) <code>Shape</code> cannot be instantiated, and a class extending <code>Shape</code> that does not implement <code>area()</code> must itself be declared abstract.</p>
+<p>(c) Every subclass of <code>Shape</code> must implement <code>area()</code>, whether or not it is declared abstract.</p>
+<p>(d) An anonymous subclass of <code>Shape</code> must override both <code>area()</code> and <code>describe()</code>.</p>
+<hr />
+<p><strong>24. (d) <code>Shape</code> cannot be instantiated, and a class extending <code>Shape</code> that does not implement <code>area()</code> must itself be declared abstract.</strong>
+An abstract class cannot be instantiated, and any concrete subclass must implement all inherited abstract methods.</p>
+<ul>
+<li>(a) Concrete methods do not make an abstract class instantiable.</li>
+<li>(b) A subclass that does not implement <code>area()</code> compiles fine if it is declared abstract.</li>
+<li>(c) <code>describe()</code> is concrete and inherited; only <code>area()</code> must be implemented.</li>
+</ul>
+<hr />
+<p><strong>25.</strong> <strong>[Medium]</strong> <em>(D1 — access modifiers and visibility)</em></p>
+<p>In Java, which statement about access modifiers is true?</p>
+<p>(a) A <code>private</code> member is visible to every class in the same package.</p>
+<p>(b) A <code>protected</code> member of a class in package <code>p1</code> can be accessed by any unrelated class in package <code>p2</code>.</p>
+<p>(c) A <code>protected</code> member is visible in the same package and, from a subclass in another package, only through a reference whose type is that subclass or a subtype of it.</p>
+<p>(d) The default (package-private) modifier is more restrictive than <code>private</code>.</p>
+<hr />
+<p><strong>25. (d) A <code>protected</code> member is visible in the same package and, from a subclass in another package, only through a reference whose type is that subclass or a subtype of it.</strong>
+This matches the JLS rule for protected access from a subclass in a different package.</p>
+<ul>
+<li>(a) <code>private</code> is visible only within the declaring class (and its nested classes).</li>
+<li>(c) Unrelated classes in another package cannot access a <code>protected</code> member at all.</li>
+<li>(b) Default is less restrictive than <code>private</code>, not more.</li>
+</ul>
+<hr />
+<p><strong>26.</strong> <strong>[Medium]</strong> <em>(D1 — association vs aggregation vs composition)</em></p>
+<p>Which statement about whole–part relationships is true?</p>
+<p>(a) In aggregation, the part is automatically destroyed when the whole is destroyed.</p>
+<p>(b) In aggregation the part can outlive the whole and is usually supplied from outside; in composition the whole creates, owns and controls the lifetime of the part.</p>
+<p>(c) Aggregation and composition both require the part class to inherit from the whole class.</p>
+<p>(d) Composition is a weak "has-a" relationship and aggregation is a strong "has-a" relationship.</p>
+<hr />
+<p><strong>26. (b) In aggregation the part can outlive the whole and is usually supplied from outside; in composition the whole creates, owns and controls the lifetime of the part.</strong>
+Aggregation is a weak whole–part link; composition is the strong, owner-controlled form.</p>
+<ul>
+<li>(a) Destroying parts with the whole is a property of composition, not aggregation.</li>
+<li>(d) The definitions are reversed: composition is the strong form.</li>
+<li>(c) Both are "has-a" relationships and neither requires inheritance.</li>
+</ul>
+<hr />
+<p><strong>27.</strong> <strong>[Hard]</strong> <em>(D1 — static vs instance members, constructor dispatch)</em></p>
+<div class="codehilite"><pre><span></span><code><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">A</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">A</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">print</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="kd">class</span> <span class="nc">B</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">v</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">B</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>What is the output?</p>
+<p>(a) <code>0</code></p>
+<p>(b) <code>5</code></p>
+<p>(c) Compile-time error: an abstract method cannot be called from a constructor</p>
+<p>(d) <code>NullPointerException</code> at runtime</p>
+<hr />
+<p><strong>27. (b) <code>0</code></strong>
+<code>A</code>'s constructor calls the overridden <code>print()</code> before <code>B</code>'s field initializer runs, so <code>v</code> still holds its default value.</p>
+<ul>
+<li>(a) <code>v = 5</code> is assigned only after the superclass constructor finishes.</li>
+<li>(c) It compiles; calling an overridable method from a constructor is legal, though risky.</li>
+<li>(d) No exception is thrown — <code>v</code> simply prints its default int value.</li>
+</ul>
+<hr />
+<p><strong>28.</strong> <strong>[Easy]</strong> <em>(D1 — constructor chaining order)</em></p>
+<p>What does this program print?</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">class</span> <span class="nc">A</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">A</span><span class="p">()</span><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="n">A</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">();</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">class</span> <span class="nc">B</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">B</span><span class="p">()</span><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="kd">super</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">B</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>(a) A5AB
+(b) ABA5
+(c) AA5B
+(d) A5B</p>
+<hr />
+<p><strong>28. (d) AA5B</strong> — <code>B()</code> calls <code>super(5)</code>, which calls <code>this()</code> → <code>A()</code> prints <code>A</code>, then <code>A(5)</code> prints <code>A5</code>, then <code>B()</code> prints <code>B</code>.
+- (a) reverses the order of the two <code>A</code> prints.
+- (b) misplaces <code>B</code> before <code>A5</code>; <code>super(5)</code> must finish first.
+- (c) drops the <code>A()</code> call triggered by <code>this()</code>.</p>
+<hr />
+<p><strong>29.</strong> <strong>[Easy]</strong> <em>(D1 — overriding and dynamic dispatch)</em></p>
+<p>What is the output?</p>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">B</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="p">(</span><span class="n">B</span><span class="p">(),</span> <span class="n">C</span><span class="p">(),</span> <span class="n">A</span><span class="p">()):</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<p>(a) BAA
+(b) ABA
+(c) BBB
+(d) AAA</p>
+<hr />
+<p><strong>29. (c) BAA</strong> — <code>B</code> overrides <code>show</code>, <code>C</code> inherits <code>A.show</code>, so the loop resolves to <code>B</code>, <code>A</code>, <code>A</code>.
+- (a) reverses the last two objects.
+- (b) assumes <code>C</code> also overrides — it does not.
+- (d) ignores the override in <code>B</code>.</p>
+<hr />
+<p><strong>30.</strong> <strong>[Medium]</strong> <em>(D1 — multi-level constructor chaining)</em></p>
+<p>What does this print?</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">class</span> <span class="nc">P</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">P</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;P&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Q</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Q</span><span class="p">()</span><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Q&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="n">Q</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">();</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">R</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">R</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kd">super</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;R&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">R</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>(a) PQ7R
+(b) Q7PR
+(c) P7QR
+(d) PQR7</p>
+<hr />
+<p><strong>30. (b) PQ7R</strong> — <code>super(7)</code> → <code>Q(7)</code> → <code>this()</code> → <code>Q()</code> → <code>super()</code> → <code>P()</code>, giving <code>P Q 7 R</code>.
+- (a) prints <code>R</code> before the argument passed to <code>super(7)</code>.
+- (d) starts with <code>Q</code>, but <code>P()</code> always runs first.
+- (c) prints <code>7</code> before <code>Q()</code>'s body, which runs earlier.</p>
+<hr />
+<p><strong>31.</strong> <strong>[Hard]</strong> <em>(D1 — static overload resolution vs dynamic dispatch)</em></p>
+<p>What is the output of <code>main</code>?</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">class</span> <span class="nc">Base</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">show</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">o</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;B-obj &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">show</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;B-str &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">class</span> <span class="nc">Derived</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Base</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">show</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">o</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;D-obj &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">show</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;D-str &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Base</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Derived</span><span class="p">();</span>
+<span class="w">        </span><span class="n">b</span><span class="p">.</span><span class="na">show</span><span class="p">(</span><span class="s">&quot;hi&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">b</span><span class="p">.</span><span class="na">show</span><span class="p">((</span><span class="n">Object</span><span class="p">)</span><span class="w"> </span><span class="s">&quot;hi&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>(a) D-str B-obj
+(b) D-str D-obj
+(c) B-str B-obj
+(d) B-str D-obj</p>
+<hr />
+<p><strong>31. (b) B-str D-obj</strong> — Overload choice uses the static type (<code>Base</code>) → <code>B-str</code>; the call dispatches to the override in <code>Derived</code> for the <code>Object</code> version → <code>D-obj</code>.
+- (a) wrongly treats overload selection as dynamic.
+- (c) wrongly treats the second call as non-virtual.
+- (d) gets both mechanisms backwards.</p>
+<hr />
+<p><strong>32.</strong> <strong>[Medium]</strong> <em>(D1 — Python MRO and <code>super()</code> chaining)</em></p>
+<p>What does this print?</p>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">B</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">D</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+<span class="n">D</span><span class="p">()</span>
+</code></pre></div>
+
+<p>(a) DBCA
+(b) ABCD
+(c) DBAC
+(d) DCBA</p>
+<hr />
+<p><strong>32. (c) DBCA</strong> — MRO is <code>D, B, C, A</code>; each <code>super().__init__()</code> moves to the next class in that chain.
+- (a) puts <code>A</code> before <code>C</code>, breaking the MRO.
+- (b) reverses the entire order.
+- (d) reverses the order of <code>B</code> and <code>C</code>.</p>
+<hr />
+<p><strong>33.</strong> <strong>[Medium]</strong> <em>(D1 — field hiding vs method overriding)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">class</span> <span class="nc">Parent</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">getX</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">class</span> <span class="nc">Child</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Parent</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">getX</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Parent</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Child</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="na">getX</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>(a) 20 20
+(b) 10 10
+(c) 20 10
+(d) 10 20</p>
+<hr />
+<p><strong>33. (b) 10 20</strong> — Field access <code>p.x</code> is resolved by the reference type <code>Parent</code> (10); <code>p.getX()</code> is virtual and runs <code>Child.getX()</code> (20).
+- (a) treats fields as polymorphic.
+- (c) applies virtual dispatch to the field and static binding to the method.
+- (d) ignores the override in <code>Child</code>.</p>
+<hr />
+<p><strong>34.</strong> <strong>[Easy]</strong> <em>(D1 — inheritance with <code>super().__init__</code>)</em></p>
+<p>What is the output?</p>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">Animal</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;...&quot;</span>
+
+<span class="k">class</span> <span class="nc">Cat</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot; says meow&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Cat</span><span class="p">(</span><span class="s2">&quot;Tom&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">speak</span><span class="p">())</span>
+</code></pre></div>
+
+<p>(a) Tom says meow
+(b) Cat says meow
+(c) ...
+(d) ... says meow</p>
+<hr />
+<p><strong>34. (a) Tom says meow</strong> — <code>Cat.__init__</code> passes <code>name</code> to <code>Animal.__init__</code>, and <code>Cat.speak</code> returns <code>self.name</code> + <code>" says meow"</code>.
+- (d) assumes <code>speak</code> was not overridden.
+- (b) uses the class name instead of the argument.
+- (c) calls the base class version of <code>speak</code>.</p>
+<hr />
+<p><strong>35.</strong> <strong>[Hard]</strong> <em>(D1 — overridable method called from a constructor)</em></p>
+<p>What does this program print?</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">class</span> <span class="nc">Base</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Base</span><span class="p">()</span><span class="w">       </span><span class="p">{</span><span class="w"> </span><span class="n">print</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Base &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">class</span> <span class="nc">Derived</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Base</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Derived</span><span class="p">()</span><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="kd">super</span><span class="p">();</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;D&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;v&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Derived</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>(a) Base D5
+(b) v5 D5
+(c) v0 D5
+(d) v0 D0</p>
+<hr />
+<p><strong>35. (a) v0 D5</strong> — <code>Base()</code> calls the overridden <code>print()</code> before <code>Derived</code>'s field initialiser runs, so <code>v</code> is still 0; then <code>D</code> + <code>5</code> is printed.
+- (b) assumes fields are initialised before <code>super()</code> returns.
+- (c) assumes the call is statically bound to <code>Base.print</code>.
+- (d) assumes <code>v</code> stays 0 inside the constructor body.</p>
+<hr />
+<p><strong>36.</strong> <strong>[Medium]</strong> <em>(D1 — dynamic dispatch inside an inherited method)</em></p>
+<p>What is the output?</p>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">Base</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Base:&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;base&quot;</span>
+
+<span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;child&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Base</span><span class="p">()</span><span class="o">.</span><span class="n">greet</span><span class="p">(),</span> <span class="n">Child</span><span class="p">()</span><span class="o">.</span><span class="n">greet</span><span class="p">())</span>
+</code></pre></div>
+
+<p>(a) Base:base Base:base
+(b) Base:base Base:child
+(c) child base
+(d) Base:child Base:child</p>
+<hr />
+<hr />
+<p><strong>19.</strong> <strong>[Easy]</strong> <em>(D1 — abstract class vs interface)</em></p>
+<p>Which statement is correct?</p>
+<p>(a) An interface can declare a constructor that implementers invoke with <code>super()</code>.</p>
+<p>(b) An interface may declare instance fields, and each implementing class gets its own copy of them.</p>
+<p>(c) An abstract class cannot declare a constructor.</p>
+<p>(d) A class may extend only one class but may implement several interfaces.</p>
+<hr />
+<p><strong>20.</strong> <strong>[Easy]</strong> <em>(D1 — access modifiers and visibility)</em></p>
+<div class="codehilite"><pre><span></span><code><span class="c1">// p1/A.java</span>
+<span class="kn">package</span><span class="w"> </span><span class="nn">p1</span><span class="p">;</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">A</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">show</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// p2/B.java</span>
+<span class="kn">package</span><span class="w"> </span><span class="nn">p2</span><span class="p">;</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">B</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span>
+
+<span class="c1">// p2/Main.java</span>
+<span class="kn">package</span><span class="w"> </span><span class="nn">p2</span><span class="p">;</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">B</span><span class="p">().</span><span class="na">show</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>What happens when <code>Main</code> is compiled?</p>
+<p>(a) It prints <code>A</code>.</p>
+<p>(b) Compile-time error in <code>Main</code>: <code>show()</code> is not public in <code>A</code>; cannot be accessed from outside package.</p>
+<p>(c) It throws a runtime exception because <code>show()</code> is not accessible.</p>
+<p>(d) It compiles and prints nothing, because the inherited method is suppressed.</p>
+<hr />
+<p><strong>21.</strong> <strong>[Easy]</strong> <em>(D1 — static vs instance members)</em></p>
+<p>Which statement about a <code>static</code> method is true?</p>
+<p>(a) It can access instance variables of its own class directly.</p>
+<p>(b) It cannot be overloaded.</p>
+<p>(c) It can be called using the class name without creating an instance of the class.</p>
+<p>(d) It is overridden by a subclass method with a different return type.</p>
+<hr />
+<p><strong>22.</strong> <strong>[Medium]</strong> <em>(D1 — method hiding)</em></p>
+<div class="codehilite"><pre><span></span><code><span class="kd">class</span> <span class="nc">P</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;P&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+<span class="kd">class</span> <span class="nc">C</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;C&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+
+<span class="n">P</span><span class="w"> </span><span class="n">ref</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">C</span><span class="p">();</span>
+<span class="n">ref</span><span class="p">.</span><span class="na">f</span><span class="p">();</span>
+</code></pre></div>
+
+<p>What is printed?</p>
+<p>(a) <code>P</code></p>
+<p>(b) Compile-time error: a static method cannot be inherited</p>
+<p>(c) <code>C</code> followed by a runtime exception</p>
+<p>(d) <code>C</code></p>
+<hr />
+<p><strong>23.</strong> <strong>[Medium]</strong> <em>(D1 — association vs aggregation vs composition)</em></p>
+<p>An <code>Order</code> object creates its own <code>OrderLine</code> objects inside its constructor, and no other object ever holds a reference to those <code>OrderLine</code> objects. When the <code>Order</code> is discarded, its lines are gone with it. Which relationship is modelled?</p>
+<p>(a) Association</p>
+<p>(b) Aggregation</p>
+<p>(c) Composition</p>
+<p>(d) Inheritance</p>
+<hr />
+<p><strong>24.</strong> <strong>[Medium]</strong> <em>(D1 — abstract class vs interface)</em></p>
+<div class="codehilite"><pre><span></span><code><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Shape</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">area</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="nf">describe</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;area=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">area</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Which statement is true?</p>
+<p>(a) <code>Shape</code> can be instantiated because it contains the concrete method <code>describe()</code>.</p>
+<p>(b) Every subclass of <code>Shape</code> must implement <code>area()</code>, whether or not it is declared abstract.</p>
+<p>(c) An anonymous subclass of <code>Shape</code> must override both <code>area()</code> and <code>describe()</code>.</p>
+<p>(d) <code>Shape</code> cannot be instantiated, and a class extending <code>Shape</code> that does not implement <code>area()</code> must itself be declared abstract.</p>
+<hr />
+<p><strong>25.</strong> <strong>[Medium]</strong> <em>(D1 — access modifiers and visibility)</em></p>
+<p>In Java, which statement about access modifiers is true?</p>
+<p>(a) A <code>private</code> member is visible to every class in the same package.</p>
+<p>(b) The default (package-private) modifier is more restrictive than <code>private</code>.</p>
+<p>(c) A <code>protected</code> member of a class in package <code>p1</code> can be accessed by any unrelated class in package <code>p2</code>.</p>
+<p>(d) A <code>protected</code> member is visible in the same package and, from a subclass in another package, only through a reference whose type is that subclass or a subtype of it.</p>
+<hr />
+<p><strong>26.</strong> <strong>[Medium]</strong> <em>(D1 — association vs aggregation vs composition)</em></p>
+<p>Which statement about whole–part relationships is true?</p>
+<p>(a) In aggregation, the part is automatically destroyed when the whole is destroyed.</p>
+<p>(b) In aggregation the part can outlive the whole and is usually supplied from outside; in composition the whole creates, owns and controls the lifetime of the part.</p>
+<p>(c) Aggregation and composition both require the part class to inherit from the whole class.</p>
+<p>(d) Composition is a weak "has-a" relationship and aggregation is a strong "has-a" relationship.</p>
+<hr />
+<p><strong>27.</strong> <strong>[Hard]</strong> <em>(D1 — static vs instance members, constructor dispatch)</em></p>
+<div class="codehilite"><pre><span></span><code><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">A</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">A</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">print</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">();</span>
+<span class="p">}</span>
+<span class="kd">class</span> <span class="nc">B</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">v</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">B</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>What is the output?</p>
+<p>(a) <code>5</code></p>
+<p>(b) <code>0</code></p>
+<p>(c) Compile-time error: an abstract method cannot be called from a constructor</p>
+<p>(d) <code>NullPointerException</code> at runtime</p>
+<hr />
+<p><strong>28.</strong> <strong>[Easy]</strong> <em>(D1 — constructor chaining order)</em></p>
+<p>What does this program print?</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">class</span> <span class="nc">A</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">A</span><span class="p">()</span><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="n">A</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">();</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">class</span> <span class="nc">B</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">A</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">B</span><span class="p">()</span><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="kd">super</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">B</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>(a) A5AB
+(b) ABA5
+(c) A5B
+(d) AA5B</p>
+<hr />
+<p><strong>29.</strong> <strong>[Easy]</strong> <em>(D1 — overriding and dynamic dispatch)</em></p>
+<p>What is the output?</p>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">B</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">show</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+    <span class="k">pass</span>
+
+<span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="p">(</span><span class="n">B</span><span class="p">(),</span> <span class="n">C</span><span class="p">(),</span> <span class="n">A</span><span class="p">()):</span>
+    <span class="n">obj</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+
+<p>(a) ABA
+(b) BBB
+(c) BAA
+(d) AAA</p>
+<hr />
+<p><strong>30.</strong> <strong>[Medium]</strong> <em>(D1 — multi-level constructor chaining)</em></p>
+<p>What does this print?</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">class</span> <span class="nc">P</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">P</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;P&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Q</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">P</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Q</span><span class="p">()</span><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Q&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="n">Q</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">();</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">n</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">R</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Q</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">R</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kd">super</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;R&quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">R</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>(a) PQR7
+(b) PQ7R
+(c) P7QR
+(d) Q7PR</p>
+<hr />
+<p><strong>31.</strong> <strong>[Hard]</strong> <em>(D1 — static overload resolution vs dynamic dispatch)</em></p>
+<p>What is the output of <code>main</code>?</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">class</span> <span class="nc">Base</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">show</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">o</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;B-obj &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">show</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;B-str &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">class</span> <span class="nc">Derived</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Base</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">show</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">o</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;D-obj &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">show</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;D-str &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Base</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Derived</span><span class="p">();</span>
+<span class="w">        </span><span class="n">b</span><span class="p">.</span><span class="na">show</span><span class="p">(</span><span class="s">&quot;hi&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">b</span><span class="p">.</span><span class="na">show</span><span class="p">((</span><span class="n">Object</span><span class="p">)</span><span class="w"> </span><span class="s">&quot;hi&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>(a) D-str D-obj
+(b) B-str D-obj
+(c) B-str B-obj
+(d) D-str B-obj</p>
+<hr />
+<p><strong>32.</strong> <strong>[Medium]</strong> <em>(D1 — Python MRO and <code>super()</code> chaining)</em></p>
+<p>What does this print?</p>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">B</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;B&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">C</span><span class="p">(</span><span class="n">A</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;C&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+<span class="k">class</span> <span class="nc">D</span><span class="p">(</span><span class="n">B</span><span class="p">,</span> <span class="n">C</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">);</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+
+<span class="n">D</span><span class="p">()</span>
+</code></pre></div>
+
+<p>(a) DBAC
+(b) ABCD
+(c) DBCA
+(d) DCBA</p>
+<hr />
+<p><strong>33.</strong> <strong>[Medium]</strong> <em>(D1 — field hiding vs method overriding)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">class</span> <span class="nc">Parent</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">getX</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">class</span> <span class="nc">Child</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Parent</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="nf">getX</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Parent</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Child</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="na">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">p</span><span class="p">.</span><span class="na">getX</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>(a) 20 20
+(b) 10 20
+(c) 20 10
+(d) 10 10</p>
+<hr />
+<p><strong>34.</strong> <strong>[Easy]</strong> <em>(D1 — inheritance with <code>super().__init__</code>)</em></p>
+<p>What is the output?</p>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">Animal</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+    <span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;...&quot;</span>
+
+<span class="k">class</span> <span class="nc">Cat</span><span class="p">(</span><span class="n">Animal</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">speak</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">+</span> <span class="s2">&quot; says meow&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Cat</span><span class="p">(</span><span class="s2">&quot;Tom&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">speak</span><span class="p">())</span>
+</code></pre></div>
+
+<p>(a) Tom says meow
+(b) Cat says meow
+(c) ...
+(d) ... says meow</p>
+<hr />
+<p><strong>35.</strong> <strong>[Hard]</strong> <em>(D1 — overridable method called from a constructor)</em></p>
+<p>What does this program print?</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">class</span> <span class="nc">Base</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">Base</span><span class="p">()</span><span class="w">       </span><span class="p">{</span><span class="w"> </span><span class="n">print</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Base &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">class</span> <span class="nc">Derived</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Base</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span><span class="n">Derived</span><span class="p">()</span><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="kd">super</span><span class="p">();</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;D&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">print</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;v&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">v</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="p">);</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Derived</span><span class="p">();</span><span class="w"> </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>(a) v0 D5
+(b) v5 D5
+(c) Base D5
+(d) v0 D0</p>
+<hr />
+<p><strong>36.</strong> <strong>[Medium]</strong> <em>(D1 — dynamic dispatch inside an inherited method)</em></p>
+<p>What is the output?</p>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">Base</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;Base:&quot;</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;base&quot;</span>
+
+<span class="k">class</span> <span class="nc">Child</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s2">&quot;child&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Base</span><span class="p">()</span><span class="o">.</span><span class="n">greet</span><span class="p">(),</span> <span class="n">Child</span><span class="p">()</span><span class="o">.</span><span class="n">greet</span><span class="p">())</span>
+</code></pre></div>
+
+<p>(a) Base:base Base:child
+(b) child base
+(c) Base:base Base:base
+(d) Base:child Base:child</p>
+<hr />
+<hr />
+<p><strong>36. (a) Base:base Base:child</strong> — <code>greet</code> is inherited unchanged and calls <code>self.name()</code>, which resolves to each object's own class.
+- (c) ignores the override of <code>name</code> in <code>Child</code>.
+- (b) treats the return of <code>greet</code> as just the name.
+- (d) uses <code>child</code> for the <code>Base</code> instance as well.</p>
+<hr />
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html"><span>Previous</span><strong>QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</strong></a><a class="pager next" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html"><span>Next</span><strong>QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#qb-iv2-oop-the-four-pillars-overloading-vs-overriding">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

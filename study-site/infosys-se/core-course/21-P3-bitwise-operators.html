@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 21. Bitwise operators · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem current" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Core Course: start here</span></div>
+    <article class="prose">
+<h1 id="lesson-21-bitwise-operators">Lesson 21. Bitwise operators</h1><p class="fm-line" style="color:var(--ink-faint);font-size:13px;margin:-.4em 0 1.2em">Tier 2 · Pseudocode · 1.5% of marks · about 0.8 h · confidence Medium</p>
+<p><em>Topic <code>P3</code> · about 1.1 of the 75 marks · plan about 0.8 hours.</em></p>
+<h2 id="1-the-idea">1. The idea</h2>
+<p>A computer stores a whole number as a row of bits, which are 0s and 1s. Bitwise operators work on those bits, one position at a time. They are easy once you write the numbers in binary, and they are risky if you try to do them in your head.</p>
+<p>There are only a few operators:</p>
+<ul>
+<li><strong><code>&amp;</code> (AND):</strong> a bit is 1 only if both bits are 1.</li>
+<li><strong><code>|</code> (OR):</strong> a bit is 1 if at least one bit is 1.</li>
+<li><strong><code>^</code> (XOR):</strong> a bit is 1 if the two bits are different.</li>
+<li><strong><code>&lt;&lt;</code> (shift left):</strong> moves the bits left. Shifting left by k multiplies by 2 to the power k.</li>
+<li><strong><code>&gt;&gt;</code> (shift right):</strong> moves the bits right. Shifting right by k divides by 2 to the power k and drops the fraction.</li>
+</ul>
+<p>The other thing to know is <strong>precedence</strong>: which operator is done first when several appear in one line.</p>
+<h2 id="2-what-infosys-actually-asks">2. What Infosys actually asks</h2>
+<p>One question of this kind was reported from the 2025 exams: a line using <code>^</code> and <code>&amp;</code> and <code>+</code> together with two variables, asking for the value printed. The answer was 1 <code>[REPORTED]</code>. The official 2020 sample had no bitwise question.</p>
+<p>Pseudocode is 5 questions worth 10 marks in 10 minutes, so each question is worth about 2 marks and two minutes. Bitwise questions are rare, so this lesson is short. The one skill that pays off is the <strong>order of operations</strong>, because that is where the reported question tricked people.</p>
+<h2 id="3-the-method">3. The method</h2>
+<ol>
+<li><strong>Fill in the values.</strong> Replace each variable with its number.</li>
+<li><strong>Put the operators in order.</strong> Highest first:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Order</th>
+<th>Operators</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 (first)</td>
+<td><code>*</code>, then <code>+</code> and <code>-</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>&lt;&lt;</code> and <code>&gt;&gt;</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>&amp;</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>^</code></td>
+</tr>
+<tr>
+<td>5 (last)</td>
+<td><code>|</code></td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li><strong>Add brackets in your head</strong> around the operator that goes first, then the next.</li>
+<li><strong>For <code>&amp;</code>, <code>|</code> and <code>^</code>, write the numbers in binary</strong>, one under the other, and work column by column.</li>
+<li><strong>For a shift, use multiplying and dividing:</strong> <code>x &lt;&lt; k</code> is x times 2 to the k, and <code>x &gt;&gt; k</code> is x divided by 2 to the k with the fraction dropped.</li>
+<li><strong>Convert back</strong> to an ordinary number.</li>
+</ol>
+<p>A quick way to remember the order: arithmetic first, then shifts, then AND, then XOR, then OR. Arithmetic operators are done before bitwise ones.</p>
+<h2 id="4-shortcuts-and-when-they-fail">4. Shortcuts and when they fail</h2>
+<p><strong>Powers of 2.</strong> <code>1 &lt;&lt; k</code> is 2 to the k: 2, 4, 8, 16, 32. A number and <code>x &amp; 1</code> tell you whether x is odd (the answer is 1) or even (0). <em>It fails if you forget that <code>&amp;</code> works on every bit, not only the last.</em></p>
+<p><strong>XOR with itself is 0.</strong> <code>x ^ x</code> is 0, and <code>x ^ 0</code> is x. <em>It fails for numbers that are not equal.</em></p>
+<p><strong>AND can only lower or keep a number.</strong> <code>x &amp; y</code> is never bigger than the smaller of the two. OR can only raise or keep it. <em>These help you reject options that are too big or too small.</em></p>
+<p><strong>Always write the binary.</strong> Eight bits are enough for numbers below 256. <em>It fails only when you make a slip in converting</em>, so convert back and check.</p>
+<h2 id="5-worked-examples">5. Worked examples</h2>
+<p>Every output was checked by running the printed program as Java.</p>
+<p><strong>Example 1 (the three operators on 12 and 10).</strong></p>
+<div class="codehilite"><pre><span></span><code>1) Print 12 &amp; 10
+2) Print 12 | 10
+3) Print 12 ^ 10
+</code></pre></div>
+
+<p>In binary 12 is 1100 and 10 is 1010. Column by column: AND gives 1000, which is 8. OR gives 1110, which is 14. XOR gives 0110, which is 6. Output: <strong>8 14 6</strong>.</p>
+<p><strong>Example 2 (shifts).</strong></p>
+<div class="codehilite"><pre><span></span><code>1) Print 5 &lt;&lt; 2
+2) Print 20 &gt;&gt; 1
+</code></pre></div>
+
+<p>Shifting left by 2 multiplies by 4: 5 becomes 20. Shifting right by 1 divides by 2: 20 becomes 10. Output: <strong>20 10</strong>.</p>
+<p><strong>Example 3 (arithmetic before AND).</strong></p>
+<div class="codehilite"><pre><span></span><code>1) Print 3 + 4 &amp; 5
+</code></pre></div>
+
+<p>The plus goes first: 3 + 4 = 7. Then 7 &amp; 5: 111 and 101 give 101, which is 5. Output: <strong>5</strong>. (If you did the AND first you would get 4 &amp; 5 = 4, then 3 + 4 = 7. That is wrong.)</p>
+<p><strong>Example 4 (AND before OR).</strong></p>
+<div class="codehilite"><pre><span></span><code>1) Print 6 | 3 &amp; 5
+</code></pre></div>
+
+<p>The AND goes first: 3 &amp; 5 is 011 and 101, which gives 001, which is 1. Then 6 | 1 is 110 and 001, which is 111, which is 7. Output: <strong>7</strong>.</p>
+<p><strong>Example 5 (an assignment with three operators).</strong></p>
+<div class="codehilite"><pre><span></span><code>1) Integer x, y
+2) Set x = 5, y = 3
+3) Set x = x ^ 6 &amp; y + 1
+4) Print x
+</code></pre></div>
+
+<p>Put in the values: 5 ^ 6 &amp; 3 + 1. The plus goes first: 3 + 1 = 4. Then AND: 6 &amp; 4 = 4. Then XOR: 5 ^ 4 = 1. Output: <strong>1</strong>. Reading left to right would give (5 ^ 6) &amp; 3 + 1 = 3 &amp; 4 = 0, which is wrong.</p>
+<h2 id="6-traps">6. Traps</h2>
+<ul>
+<li><strong>Reading left to right.</strong> The bitwise operators have their own order.</li>
+<li><strong>Doing <code>&amp;</code> before <code>+</code>.</strong> The plus goes first, which surprises many people.</li>
+<li><strong>Comparing with <code>==</code> in the same line.</strong> In Java, <code>n &amp; 3 == 0</code> does not compile, because <code>==</code> binds tighter than <code>&amp;</code>. If you see it in an exam, work out which way the question means it.</li>
+<li><strong>Shifting a negative number.</strong> The questions here use positive numbers only.</li>
+<li><strong>Forgetting that <code>&gt;&gt;</code> drops the fraction.</strong> 7 &gt;&gt; 1 is 3.</li>
+</ul>
+<h2 id="7-practice-questions">7. Practice questions</h2>
+<p>Attempt each level before opening the key. Level 3 is harder than anything in the 2020 official sample, on purpose: if you can do Level 3, the real paper will feel easy.</p>
+<h3 id="level-1-warm-up">Level 1: warm-up</h3>
+<p><em>One operator on two numbers.</em></p>
+<p><strong>1.</strong> <strong>[Bitwise operators]</strong> What does this program print? (<code>&amp;</code> is bitwise AND, <code>|</code> is bitwise OR, <code>^</code> is bitwise XOR, <code>&lt;&lt;</code> and <code>&gt;&gt;</code> shift the bits left and right. Arithmetic is done before shifts, shifts before <code>&amp;</code>, <code>&amp;</code> before <code>^</code>, and <code>^</code> before <code>|</code>.)  </p>
+<div class="codehilite"><pre><span></span><code>1) Integer a, b, c
+2) Set a = 23, b = 27, c = 20
+3) Print c &amp; a
+</code></pre></div>
+
+<p>a) 21<br />
+b) 18<br />
+c) 20<br />
+d) 22  </p>
+<p><strong>2.</strong> <strong>[Bitwise operators]</strong> What does this program print? (<code>&amp;</code> is bitwise AND, <code>|</code> is bitwise OR, <code>^</code> is bitwise XOR, <code>&lt;&lt;</code> and <code>&gt;&gt;</code> shift the bits left and right. Arithmetic is done before shifts, shifts before <code>&amp;</code>, <code>&amp;</code> before <code>^</code>, and <code>^</code> before <code>|</code>.)  </p>
+<div class="codehilite"><pre><span></span><code>1) Integer a, b, c
+2) Set a = 27, b = 11, c = 19
+3) Print a &lt;&lt; 1
+</code></pre></div>
+
+<p>a) 55<br />
+b) 52<br />
+c) 54<br />
+d) 56  </p>
+<p><strong>3.</strong> <strong>[Bitwise operators]</strong> What does this program print? (<code>&amp;</code> is bitwise AND, <code>|</code> is bitwise OR, <code>^</code> is bitwise XOR, <code>&lt;&lt;</code> and <code>&gt;&gt;</code> shift the bits left and right. Arithmetic is done before shifts, shifts before <code>&amp;</code>, <code>&amp;</code> before <code>^</code>, and <code>^</code> before <code>|</code>.)  </p>
+<div class="codehilite"><pre><span></span><code>1) Integer a, b, c
+2) Set a = 6, b = 17, c = 29
+3) Print c &gt;&gt; 2
+</code></pre></div>
+
+<p>a) 6<br />
+b) 7<br />
+c) 9<br />
+d) 5  </p>
+<p><strong>4.</strong> <strong>[Bitwise operators]</strong> What does this program print? (<code>&amp;</code> is bitwise AND, <code>|</code> is bitwise OR, <code>^</code> is bitwise XOR, <code>&lt;&lt;</code> and <code>&gt;&gt;</code> shift the bits left and right. Arithmetic is done before shifts, shifts before <code>&amp;</code>, <code>&amp;</code> before <code>^</code>, and <code>^</code> before <code>|</code>.)  </p>
+<div class="codehilite"><pre><span></span><code>1) Integer a, b, c
+2) Set a = 4, b = 15, c = 4
+3) Print 12 ^ c
+</code></pre></div>
+
+<p>a) 6<br />
+b) 9<br />
+c) 8<br />
+d) 10  </p>
+<p><strong>5.</strong> <strong>[Bitwise operators]</strong> What does this program print? (<code>&amp;</code> is bitwise AND, <code>|</code> is bitwise OR, <code>^</code> is bitwise XOR, <code>&lt;&lt;</code> and <code>&gt;&gt;</code> shift the bits left and right. Arithmetic is done before shifts, shifts before <code>&amp;</code>, <code>&amp;</code> before <code>^</code>, and <code>^</code> before <code>|</code>.)  </p>
+<div class="codehilite"><pre><span></span><code>1) Integer a, b, c
+2) Set a = 21, b = 15, c = 24
+3) Print 3 &lt;&lt; 1
+</code></pre></div>
+
+<p>a) 8<br />
+b) 6<br />
+c) 4<br />
+d) 7  </p>
+<h3 id="level-2-exam-level">Level 2: exam level</h3>
+<p><em>Two operators, and arithmetic mixed with a shift or an AND.</em></p>
+<p><strong>6.</strong> <strong>[Bitwise operators]</strong> What does this program print? (<code>&amp;</code> is bitwise AND, <code>|</code> is bitwise OR, <code>^</code> is bitwise XOR, <code>&lt;&lt;</code> and <code>&gt;&gt;</code> shift the bits left and right. Arithmetic is done before shifts, shifts before <code>&amp;</code>, <code>&amp;</code> before <code>^</code>, and <code>^</code> before <code>|</code>.)  </p>
+<div class="codehilite"><pre><span></span><code>1) Integer a, b, c
+2) Set a = 31, b = 10, c = 17
+3) Print 3 ^ a + 11
+</code></pre></div>
+
+<p>a) 39<br />
+b) 43<br />
+c) 40<br />
+d) 41  </p>
+<p><strong>7.</strong> <strong>[Bitwise operators]</strong> What does this program print? (<code>&amp;</code> is bitwise AND, <code>|</code> is bitwise OR, <code>^</code> is bitwise XOR, <code>&lt;&lt;</code> and <code>&gt;&gt;</code> shift the bits left and right. Arithmetic is done before shifts, shifts before <code>&amp;</code>, <code>&amp;</code> before <code>^</code>, and <code>^</code> before <code>|</code>.)  </p>
+<div class="codehilite"><pre><span></span><code>1) Integer a, b, c
+2) Set a = 18, b = 30, c = 11
+3) Print a ^ c &amp; c
+</code></pre></div>
+
+<p>a) 25<br />
+b) 24<br />
+c) 9<br />
+d) 27  </p>
+<p><strong>8.</strong> <strong>[Bitwise operators]</strong> What does this program print? (<code>&amp;</code> is bitwise AND, <code>|</code> is bitwise OR, <code>^</code> is bitwise XOR, <code>&lt;&lt;</code> and <code>&gt;&gt;</code> shift the bits left and right. Arithmetic is done before shifts, shifts before <code>&amp;</code>, <code>&amp;</code> before <code>^</code>, and <code>^</code> before <code>|</code>.)  </p>
+<div class="codehilite"><pre><span></span><code>1) Integer a, b, c
+2) Set a = 5, b = 7, c = 20
+3) Print 11 &amp; b &lt;&lt; 2
+</code></pre></div>
+
+<p>a) 12<br />
+b) 8<br />
+c) 10<br />
+d) 9  </p>
+<p><strong>9.</strong> <strong>[Bitwise operators]</strong> What does this program print? (<code>&amp;</code> is bitwise AND, <code>|</code> is bitwise OR, <code>^</code> is bitwise XOR, <code>&lt;&lt;</code> and <code>&gt;&gt;</code> shift the bits left and right. Arithmetic is done before shifts, shifts before <code>&amp;</code>, <code>&amp;</code> before <code>^</code>, and <code>^</code> before <code>|</code>.)  </p>
+<div class="codehilite"><pre><span></span><code>1) Integer a, b, c
+2) Set a = 25, b = 22, c = 29
+3) Print a | a &lt;&lt; 1
+</code></pre></div>
+
+<p>a) 59<br />
+b) 50<br />
+c) 58<br />
+d) 61  </p>
+<p><strong>10.</strong> <strong>[Bitwise operators]</strong> What does this program print? (<code>&amp;</code> is bitwise AND, <code>|</code> is bitwise OR, <code>^</code> is bitwise XOR, <code>&lt;&lt;</code> and <code>&gt;&gt;</code> shift the bits left and right. Arithmetic is done before shifts, shifts before <code>&amp;</code>, <code>&amp;</code> before <code>^</code>, and <code>^</code> before <code>|</code>.)  </p>
+<div class="codehilite"><pre><span></span><code>1) Integer a, b, c
+2) Set a = 10, b = 30, c = 16
+3) Print c ^ b &lt;&lt; 1
+</code></pre></div>
+
+<p>a) 45<br />
+b) 44<br />
+c) 28<br />
+d) 46  </p>
+<h3 id="level-3-beyond-the-exam">Level 3: beyond the exam</h3>
+<p><em>Three or four operators in one assignment, where reading left to right gives a different answer.</em></p>
+<p><strong>11.</strong> <strong>[Bitwise operators]</strong> What does this program print? (<code>&amp;</code> is bitwise AND, <code>|</code> is bitwise OR, <code>^</code> is bitwise XOR, <code>&lt;&lt;</code> and <code>&gt;&gt;</code> shift the bits left and right. Arithmetic is done before shifts, shifts before <code>&amp;</code>, <code>&amp;</code> before <code>^</code>, and <code>^</code> before <code>|</code>.)  </p>
+<div class="codehilite"><pre><span></span><code>1) Integer a, b, c
+2) Set a = 4, b = 5, c = 19
+3) Set a = 12 | c * c &amp; 4
+4) Print a
+</code></pre></div>
+
+<p>a) 12<br />
+b) 14<br />
+c) 4<br />
+d) 13  </p>
+<p><strong>12.</strong> <strong>[Bitwise operators]</strong> What does this program print? (<code>&amp;</code> is bitwise AND, <code>|</code> is bitwise OR, <code>^</code> is bitwise XOR, <code>&lt;&lt;</code> and <code>&gt;&gt;</code> shift the bits left and right. Arithmetic is done before shifts, shifts before <code>&amp;</code>, <code>&amp;</code> before <code>^</code>, and <code>^</code> before <code>|</code>.)  </p>
+<div class="codehilite"><pre><span></span><code>1) Integer a, b, c
+2) Set a = 10, b = 27, c = 7
+3) Set a = b ^ b + 9 &amp; b
+4) Print a
+</code></pre></div>
+
+<p>a) 27<br />
+b) 29<br />
+c) 9<br />
+d) 26  </p>
+<p><strong>13.</strong> <strong>[Bitwise operators]</strong> What does this program print? (<code>&amp;</code> is bitwise AND, <code>|</code> is bitwise OR, <code>^</code> is bitwise XOR, <code>&lt;&lt;</code> and <code>&gt;&gt;</code> shift the bits left and right. Arithmetic is done before shifts, shifts before <code>&amp;</code>, <code>&amp;</code> before <code>^</code>, and <code>^</code> before <code>|</code>.)  </p>
+<div class="codehilite"><pre><span></span><code>1) Integer a, b, c
+2) Set a = 18, b = 4, c = 8
+3) Set a = 11 * a ^ b * b
+4) Print a
+</code></pre></div>
+
+<p>a) 216<br />
+b) 215<br />
+c) 776<br />
+d) 214  </p>
+<p><strong>14.</strong> <strong>[Bitwise operators]</strong> What does this program print? (<code>&amp;</code> is bitwise AND, <code>|</code> is bitwise OR, <code>^</code> is bitwise XOR, <code>&lt;&lt;</code> and <code>&gt;&gt;</code> shift the bits left and right. Arithmetic is done before shifts, shifts before <code>&amp;</code>, <code>&amp;</code> before <code>^</code>, and <code>^</code> before <code>|</code>.)  </p>
+<div class="codehilite"><pre><span></span><code>1) Integer a, b, c
+2) Set a = 15, b = 29, c = 8
+3) Set a = b | 7 &gt;&gt; 3 &lt;&lt; 3
+4) Print a
+</code></pre></div>
+
+<p>a) 24<br />
+b) 31<br />
+c) 29<br />
+d) 28  </p>
+<p><strong>15.</strong> <strong>[Bitwise operators]</strong> What does this program print? (<code>&amp;</code> is bitwise AND, <code>|</code> is bitwise OR, <code>^</code> is bitwise XOR, <code>&lt;&lt;</code> and <code>&gt;&gt;</code> shift the bits left and right. Arithmetic is done before shifts, shifts before <code>&amp;</code>, <code>&amp;</code> before <code>^</code>, and <code>^</code> before <code>|</code>.)  </p>
+<div class="codehilite"><pre><span></span><code>1) Integer a, b, c
+2) Set a = 13, b = 22, c = 25
+3) Set a = 9 ^ 14 &amp; 12 &amp; b &lt;&lt; 2
+4) Print a
+</code></pre></div>
+
+<p>a) 3<br />
+b) 16<br />
+c) 0<br />
+d) 1  </p>
+<h3 id="answer-key">ANSWER KEY</h3>
+<ol>
+<li><strong>c</strong> — 20 is 10100 in binary and 23 is 10111. Applying &amp; bit by bit gives 10100, which is <strong>20</strong>.</li>
+<li><strong>c</strong> — 27 is 11011 in binary and 1 is 1. Applying &lt;&lt; bit by bit gives 110110, which is <strong>54</strong>.</li>
+<li><strong>b</strong> — 29 is 11101 in binary and 2 is 10. Applying &gt;&gt; bit by bit gives 111, which is <strong>7</strong>.</li>
+<li><strong>c</strong> — 12 is 1100 in binary and 4 is 100. Applying ^ bit by bit gives 1000, which is <strong>8</strong>.</li>
+<li><strong>b</strong> — 3 is 11 in binary and 1 is 1. Applying &lt;&lt; bit by bit gives 110, which is <strong>6</strong>.</li>
+<li><strong>d</strong> — Work out the operator that binds tightest first (order: <code>*</code> and <code>+</code>, then <code>&lt;&lt;</code> <code>&gt;&gt;</code>, then <code>&amp;</code>, then <code>^</code>, then <code>|</code>). With the values filled in the expression is <code>3 ^ 31 + 11</code>, and the result is <strong>41</strong>. (Reading it left to right would wrongly give 39.)</li>
+<li><strong>a</strong> — Work out the operator that binds tightest first (order: <code>*</code> and <code>+</code>, then <code>&lt;&lt;</code> <code>&gt;&gt;</code>, then <code>&amp;</code>, then <code>^</code>, then <code>|</code>). With the values filled in the expression is <code>18 ^ 11 &amp; 11</code>, and the result is <strong>25</strong>. (Reading it left to right would wrongly give 9.)</li>
+<li><strong>b</strong> — Work out the operator that binds tightest first (order: <code>*</code> and <code>+</code>, then <code>&lt;&lt;</code> <code>&gt;&gt;</code>, then <code>&amp;</code>, then <code>^</code>, then <code>|</code>). With the values filled in the expression is <code>11 &amp; 7 &lt;&lt; 2</code>, and the result is <strong>8</strong>. (Reading it left to right would wrongly give 12.)</li>
+<li><strong>a</strong> — Work out the operator that binds tightest first (order: <code>*</code> and <code>+</code>, then <code>&lt;&lt;</code> <code>&gt;&gt;</code>, then <code>&amp;</code>, then <code>^</code>, then <code>|</code>). With the values filled in the expression is <code>25 | 25 &lt;&lt; 1</code>, and the result is <strong>59</strong>. (Reading it left to right would wrongly give 50.)</li>
+<li><strong>b</strong> — Work out the operator that binds tightest first (order: <code>*</code> and <code>+</code>, then <code>&lt;&lt;</code> <code>&gt;&gt;</code>, then <code>&amp;</code>, then <code>^</code>, then <code>|</code>). With the values filled in the expression is <code>16 ^ 30 &lt;&lt; 1</code>, and the result is <strong>44</strong>. (Reading it left to right would wrongly give 28.)</li>
+<li><strong>a</strong> — Work out the operator that binds tightest first (order: <code>*</code> and <code>+</code>, then <code>&lt;&lt;</code> <code>&gt;&gt;</code>, then <code>&amp;</code>, then <code>^</code>, then <code>|</code>). With the values filled in the expression is <code>12 | 19 * 19 &amp; 4</code>, and the result is <strong>12</strong>. (Reading it left to right would wrongly give 4.)</li>
+<li><strong>a</strong> — Work out the operator that binds tightest first (order: <code>*</code> and <code>+</code>, then <code>&lt;&lt;</code> <code>&gt;&gt;</code>, then <code>&amp;</code>, then <code>^</code>, then <code>|</code>). With the values filled in the expression is <code>27 ^ 27 + 9 &amp; 27</code>, and the result is <strong>27</strong>. (Reading it left to right would wrongly give 9.)</li>
+<li><strong>d</strong> — Work out the operator that binds tightest first (order: <code>*</code> and <code>+</code>, then <code>&lt;&lt;</code> <code>&gt;&gt;</code>, then <code>&amp;</code>, then <code>^</code>, then <code>|</code>). With the values filled in the expression is <code>11 * 18 ^ 4 * 4</code>, and the result is <strong>214</strong>. (Reading it left to right would wrongly give 776.)</li>
+<li><strong>c</strong> — Work out the operator that binds tightest first (order: <code>*</code> and <code>+</code>, then <code>&lt;&lt;</code> <code>&gt;&gt;</code>, then <code>&amp;</code>, then <code>^</code>, then <code>|</code>). With the values filled in the expression is <code>29 | 7 &gt;&gt; 3 &lt;&lt; 3</code>, and the result is <strong>29</strong>. (Reading it left to right would wrongly give 24.)</li>
+<li><strong>d</strong> — Work out the operator that binds tightest first (order: <code>*</code> and <code>+</code>, then <code>&lt;&lt;</code> <code>&gt;&gt;</code>, then <code>&amp;</code>, then <code>^</code>, then <code>|</code>). With the values filled in the expression is <code>9 ^ 14 &amp; 12 &amp; 22 &lt;&lt; 2</code>, and the result is <strong>1</strong>. (Reading it left to right would wrongly give 16.)</li>
+</ol>
+<h2 id="8-recap-in-60-seconds">8. Recap in 60 seconds</h2>
+<ul>
+<li><code>&amp;</code> both 1, <code>|</code> at least one 1, <code>^</code> different bits.</li>
+<li><code>&lt;&lt;</code> multiplies by 2 each step. <code>&gt;&gt;</code> divides by 2 each step and drops the fraction.</li>
+<li>Order: arithmetic, then shifts, then <code>&amp;</code>, then <code>^</code>, then <code>|</code>.</li>
+<li>Write the binary. Work column by column. Convert back.</li>
+<li>Add brackets in your head for the operator that goes first.</li>
+<li>Do not read left to right.</li>
+</ul>
+<h2 id="9-sources">9. Sources</h2>
+<ul>
+<li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op3.html">The Java Tutorials: Bitwise and Bit Shift Operators</a>: <code>&amp;</code> is bitwise AND, <code>^</code> bitwise exclusive OR, <code>|</code> bitwise inclusive OR, and the shift operators (S2 in <code>../research/06-method-sources.md</code>).</li>
+<li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html">The Java Tutorials: Operators</a>: the precedence table, with multiplicative and additive operators above shifts, and shifts above relational, equality, <code>&amp;</code>, <code>^</code> and <code>|</code>.</li>
+<li>Every output above comes from translating the printed program to Java and running it (<code>data/cc_examples.py</code>).</li>
+</ul>
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/core-course/20-P4-increment-operators.html"><span>Previous</span><strong>Lesson 20. Pre- and post-increment</strong></a><a class="pager next" href="../../infosys-se/core-course/22-P5-arrays.html"><span>Next</span><strong>Lesson 22. Arrays</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#lesson-21-bitwise-operators">Lesson 21. Bitwise operators</a><a class="toc-l1" href="#1-the-idea">1. The idea</a><a class="toc-l1" href="#2-what-infosys-actually-asks">2. What Infosys actually asks</a><a class="toc-l1" href="#3-the-method">3. The method</a><a class="toc-l1" href="#4-shortcuts-and-when-they-fail">4. Shortcuts and when they fail</a><a class="toc-l1" href="#5-worked-examples">5. Worked examples</a><a class="toc-l1" href="#6-traps">6. Traps</a><a class="toc-l1" href="#7-practice-questions">7. Practice questions</a><a class="toc-l1" href="#8-recap-in-60-seconds">8. Recap in 60 seconds</a><a class="toc-l1" href="#9-sources">9. Sources</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

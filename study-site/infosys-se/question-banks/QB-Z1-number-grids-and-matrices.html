@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QB-Z1 — Number grids and matrices · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem current" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Question banks &amp; mock</span></div>
+    <article class="prose">
+<h1 id="qb-z1-number-grids-and-matrices">QB-Z1 — Number grids and matrices</h1>
+<p><strong>Numerical Puzzle</strong> · <strong>Tier 1</strong> · 30 questions · topic file: see the <code>Z1</code> file in <code>topics/</code>, <code>puzzles/</code>, <code>pseudocode/</code> or <code>interview/</code></p>
+<p>Generated for this library from the rule families seen in the Infosys pool (<code>../data/gen_*.py</code>). Every key was recomputed by a second route; see <code>../research/04-qa-report.md</code>.</p>
+<p><strong>How to use this bank.</strong> Attempt every question before opening the key. Answer letters are balanced across a–d and not in a repeating pattern, so guessing the pattern will not help.</p>
+<hr />
+<h2 id="practice-questions">Practice questions</h2>
+<p><strong>1.</strong> <strong>[Four-column rows]</strong> Find the missing number:</p>
+<div class="codehilite"><pre><span></span><code>4  3  7    37
+8  2  3    70
+8  5  3    79
+7  3  8     ?
+</code></pre></div>
+
+<p>a) 78
+b) 73
+c) 71
+d) 68</p>
+<p><strong>2.</strong> <strong>[Four-column rows]</strong> Find the missing number:</p>
+<div class="codehilite"><pre><span></span><code>2  4  2    10
+6  6  2    18
+3  5  9    48
+2  9  7     ?
+</code></pre></div>
+
+<p>a) 60
+b) 67
+c) 65
+d) 69</p>
+<p><strong>3.</strong> <strong>[Repeated-number table]</strong> Find the missing number:</p>
+<div class="codehilite"><pre><span></span><code>5  5  30
+7  7  56
+10  10  110
+11  11  ?
+</code></pre></div>
+
+<p>a) 132
+b) 140
+c) 130
+d) 129</p>
+<p><strong>4.</strong> <strong>[Three-column rows]</strong> Find the missing number in the last row, using the rule the first three rows follow:</p>
+<div class="codehilite"><pre><span></span><code>   7  2  3
+   8  2  4
+  18  4  2
+   ?  7  2
+</code></pre></div>
+
+<p>a) 51
+b) 49
+c) 46
+d) 54</p>
+<p><strong>5.</strong> <strong>[Four-column rows]</strong> Find the missing number:</p>
+<div class="codehilite"><pre><span></span><code>4  3  5    17
+7  8  6    34
+2  5  3     1
+3  9  5     ?
+</code></pre></div>
+
+<p>a) 5
+b) 11
+c) 1
+d) 6</p>
+<p><strong>6.</strong> <strong>[Three-column rows]</strong> Find the missing number in the last row, using the rule the first three rows follow:</p>
+<div class="codehilite"><pre><span></span><code>  57  8  7
+  67  3  8
+  68  4  8
+   ?  6  5
+</code></pre></div>
+
+<p>a) 21
+b) 43
+c) 31
+d) 37</p>
+<p><strong>7.</strong> <strong>[Four-column rows]</strong> Find the missing number:</p>
+<div class="codehilite"><pre><span></span><code>6  4  7    17
+7  6  7    35
+6  8  2    46
+4  3  8     ?
+</code></pre></div>
+
+<p>a) 5
+b) 4
+c) 16
+d) 7</p>
+<p><strong>8.</strong> <strong>[Repeated-number table]</strong> Find the missing number:</p>
+<div class="codehilite"><pre><span></span><code>5  5  125
+6  6  216
+9  9  729
+10  10  ?
+</code></pre></div>
+
+<p>a) 996
+b) 1000
+c) 1010
+d) 999</p>
+<p><strong>9.</strong> <strong>[Three-column rows]</strong> Find the missing number in the last row, using the rule the first three rows follow:</p>
+<div class="codehilite"><pre><span></span><code>  49  7  6
+  45  5  8
+  14  2  6
+   ?  2  5
+</code></pre></div>
+
+<p>a) 15
+b) 12
+c) 17
+d) 9</p>
+<p><strong>10.</strong> <strong>[Repeated-number table]</strong> Find the missing number:</p>
+<div class="codehilite"><pre><span></span><code>5  5  15
+6  6  21
+10  10  55
+12  12  ?
+</code></pre></div>
+
+<p>a) 78
+b) 83
+c) 88
+d) 84</p>
+<p><strong>11.</strong> <strong>[Three-column rows]</strong> Find the missing number in the last row, using the rule the first three rows follow:</p>
+<div class="codehilite"><pre><span></span><code>  26  8  3
+  65  9  7
+  66  8  8
+   ?  9  8
+</code></pre></div>
+
+<p>a) 86
+b) 64
+c) 72
+d) 74</p>
+<p><strong>12.</strong> <strong>[Three-column rows]</strong> Find the missing number in the last row, using the rule the first three rows follow:</p>
+<div class="codehilite"><pre><span></span><code>  20  8  2
+  18  3  3
+  60  4  6
+   ?  4  5
+</code></pre></div>
+
+<p>a) 41
+b) 45
+c) 35
+d) 47</p>
+<p><strong>13.</strong> <strong>[Three-column rows]</strong> Find the missing number in the last row, using the rule the first three rows follow:</p>
+<div class="codehilite"><pre><span></span><code>  14  2  6
+  70  7  9
+  18  6  2
+   ?  2  3
+</code></pre></div>
+
+<p>a) 20
+b) 6
+c) 5
+d) 8</p>
+<p><strong>14.</strong> <strong>[Three-column rows]</strong> Find the missing number in the last row, using the rule the first three rows follow:</p>
+<div class="codehilite"><pre><span></span><code>  54  3  6
+  70  9  5
+  36  9  3
+   ?  6  9
+</code></pre></div>
+
+<p>a) 147
+b) 138
+c) 135
+d) 143</p>
+<p><strong>15.</strong> <strong>[Three-column rows]</strong> Find the missing number in the last row, using the rule the first three rows follow:</p>
+<div class="codehilite"><pre><span></span><code>  22  9  2
+  14  4  3
+  26  5  8
+   ?  6  3
+</code></pre></div>
+
+<p>a) 30
+b) 26
+c) 15
+d) 18</p>
+<p><strong>16.</strong> <strong>[Four-column rows]</strong> Find the missing number:</p>
+<div class="codehilite"><pre><span></span><code>3  8  3    27
+5  5  5    30
+6  3  5    23
+5  2  6     ?
+</code></pre></div>
+
+<p>a) 17
+b) 6
+c) 16
+d) 15</p>
+<p><strong>17.</strong> <strong>[Repeated-number table]</strong> Find the missing number:</p>
+<div class="codehilite"><pre><span></span><code>8  8  63
+9  9  80
+10  10  99
+11  11  ?
+</code></pre></div>
+
+<p>a) 120
+b) 122
+c) 132
+d) 115</p>
+<p><strong>18.</strong> <strong>[Row sums as a series]</strong> Two 3x3 grids relate in the same way. Find the missing number in the second grid.</p>
+<div class="codehilite"><pre><span></span><code>Grid 1          Grid 2
+ 7   2   6       1   5   ?
+ 7   8   2       5   4  14
+ 6   1  12       6   7  12
+</code></pre></div>
+
+<p>a) 20
+b) 9
+c) 15
+d) 17</p>
+<p><strong>19.</strong> <strong>[Repeated-number table]</strong> Find the missing number:</p>
+<div class="codehilite"><pre><span></span><code>3  3  27
+9  9  729
+10  10  1000
+12  12  ?
+</code></pre></div>
+
+<p>a) 1724
+b) 1728
+c) 1734
+d) 1736</p>
+<p><strong>20.</strong> <strong>[Three-column rows]</strong> Find the missing number in the last row, using the rule the first three rows follow:</p>
+<div class="codehilite"><pre><span></span><code>  50  5  9
+  24  4  5
+   6  2  2
+   ?  3  5
+</code></pre></div>
+
+<p>a) 18
+b) 22
+c) 8
+d) 23</p>
+<p><strong>21.</strong> <strong>[Three-column rows]</strong> Find the missing number in the last row, using the rule the first three rows follow:</p>
+<div class="codehilite"><pre><span></span><code>  65  9  7
+  83  9  9
+  10  2  4
+   ?  9  4
+</code></pre></div>
+
+<p>a) 41
+b) 43
+c) 33
+d) 38</p>
+<p><strong>22.</strong> <strong>[Four-column rows]</strong> Find the missing number:</p>
+<div class="codehilite"><pre><span></span><code>8  4  5    36
+5  2  4    18
+4  5  6    19
+6  7  6     ?
+</code></pre></div>
+
+<p>a) 33
+b) 24
+c) 31
+d) 29</p>
+<p><strong>23.</strong> <strong>[Four-column rows]</strong> Find the missing number:</p>
+<div class="codehilite"><pre><span></span><code>2  2  4    16
+2  4  8    64
+2  6  6    72
+2  9  6     ?
+</code></pre></div>
+
+<p>a) 120
+b) 104
+c) 105
+d) 108</p>
+<p><strong>24.</strong> <strong>[Repeated-number table]</strong> Find the missing number:</p>
+<div class="codehilite"><pre><span></span><code>3  3  8
+6  6  35
+9  9  80
+11  11  ?
+</code></pre></div>
+
+<p>a) 120
+b) 128
+c) 122
+d) 121</p>
+<p><strong>25.</strong> <strong>[Four-column rows]</strong> Find the missing number:</p>
+<div class="codehilite"><pre><span></span><code>8  5  5    33
+4  7  5    39
+3  4  2    11
+6  6  9     ?
+</code></pre></div>
+
+<p>a) 60
+b) 65
+c) 56
+d) 50</p>
+<p><strong>26.</strong> <strong>[Four-column rows]</strong> Find the missing number:</p>
+<div class="codehilite"><pre><span></span><code>7  6  7    49
+6  5  3    33
+5  5  4    29
+8  7  6     ?
+</code></pre></div>
+
+<p>a) 63
+b) 62
+c) 70
+d) 52</p>
+<p><strong>27.</strong> <strong>[Distinct-digit sum grid]</strong> Fill the grid with digits 1–9 so that <strong>no digit repeats in any row or column</strong>, each row adds up to the number on its left and each column to the number above it. A dot is another empty cell. What number replaces ‘?’ ?</p>
+<div class="codehilite"><pre><span></span><code>      16  17  15
+    +------------
+ 22 |  8   .   .
+ 13 |  1   8   .
+ 13 |  .   4   ?
+</code></pre></div>
+
+<p>a) 8
+b) 7
+c) 2
+d) 5</p>
+<p><strong>28.</strong> <strong>[Repeated-number table]</strong> Find the missing number:</p>
+<div class="codehilite"><pre><span></span><code>3  3  8
+9  9  80
+11  11  120
+12  12  ?
+</code></pre></div>
+
+<p>a) 149
+b) 144
+c) 143
+d) 139</p>
+<p><strong>29.</strong> <strong>[Distinct-digit sum grid]</strong> Fill the grid with digits 1–9 so that <strong>no digit repeats in any row or column</strong>, each row adds up to the number on its left and each column to the number above it. A dot is another empty cell. What number replaces ‘?’ ?</p>
+<div class="codehilite"><pre><span></span><code>      18  23  12
+    +------------
+ 14 |  4   9   .
+ 23 |  .   8   .
+ 16 |  .   6   ?
+</code></pre></div>
+
+<p>a) 2
+b) 4
+c) 5
+d) 1</p>
+<p><strong>30.</strong> <strong>[Four-column rows]</strong> Find the missing number:</p>
+<div class="codehilite"><pre><span></span><code>3  6  8    57
+8  3  8    88
+6  6  3    54
+6  7  5     ?
+</code></pre></div>
+
+<p>a) 74
+b) 71
+c) 77
+d) 66</p>
+<h3 id="answer-key">ANSWER KEY</h3>
+<ol>
+<li><strong>b</strong> — For a row (a, b, c, d) the rule is <strong>d = a² + b × c</strong>: 4,3,7 → 37; 8,2,3 → 70; 8,5,3 → 79. The last row gives <strong>73</strong>.</li>
+<li><strong>c</strong> — For a row (a, b, c, d) the rule is <strong>d = b × c + a</strong>: 2,4,2 → 10; 6,6,2 → 18; 3,5,9 → 48. The last row gives <strong>65</strong>.</li>
+<li><strong>a</strong> — Only the repeated number matters: the third number is <strong>n² + n</strong>. n=5 → 30; n=7 → 56; n=10 → 110. For n = 11: <strong>132</strong>.</li>
+<li><strong>a</strong> — The rule is <strong>first = second² + third</strong>: 7 from 2 and 3; 8 from 2 and 4; 18 from 4 and 2. Last row: <strong>51</strong>.</li>
+<li><strong>d</strong> — For a row (a, b, c, d) the rule is <strong>d = a × c − b</strong>: 4,3,5 → 17; 7,8,6 → 34; 2,5,3 → 1. The last row gives <strong>6</strong>.</li>
+<li><strong>c</strong> — The rule is <strong>first = second + third²</strong>: 57 from 8 and 7; 67 from 3 and 8; 68 from 4 and 8. Last row: <strong>31</strong>.</li>
+<li><strong>b</strong> — For a row (a, b, c, d) the rule is <strong>d = a × b − c</strong>: 6,4,7 → 17; 7,6,7 → 35; 6,8,2 → 46. The last row gives <strong>4</strong>.</li>
+<li><strong>b</strong> — Only the repeated number matters: the third number is <strong>n³</strong>. n=5 → 125; n=6 → 216; n=9 → 729. For n = 10: <strong>1000</strong>.</li>
+<li><strong>b</strong> — The rule is <strong>first = second × (third + 1)</strong>: 49 from 7 and 6; 45 from 5 and 8; 14 from 2 and 6. Last row: <strong>12</strong>.</li>
+<li><strong>a</strong> — Only the repeated number matters: the third number is <strong>n(n+1)/2</strong>. n=5 → 15; n=6 → 21; n=10 → 55. For n = 12: <strong>78</strong>.</li>
+<li><strong>d</strong> — The rule is <strong>first = second × third + 2</strong>: 26 from 8 and 3; 65 from 9 and 7; 66 from 8 and 8. Last row: <strong>74</strong>.</li>
+<li><strong>b</strong> — The rule is <strong>first = (second + third) × third</strong>: 20 from 8 and 2; 18 from 3 and 3; 60 from 4 and 6. Last row: <strong>45</strong>.</li>
+<li><strong>d</strong> — The rule is <strong>first = second × (third + 1)</strong>: 14 from 2 and 6; 70 from 7 and 9; 18 from 6 and 2. Last row: <strong>8</strong>.</li>
+<li><strong>c</strong> — The rule is <strong>first = (second + third) × third</strong>: 54 from 3 and 6; 70 from 9 and 5; 36 from 9 and 3. Last row: <strong>135</strong>.</li>
+<li><strong>d</strong> — The rule is <strong>first = (second + third) × 2</strong>: 22 from 9 and 2; 14 from 4 and 3; 26 from 5 and 8. Last row: <strong>18</strong>.</li>
+<li><strong>c</strong> — For a row (a, b, c, d) the rule is <strong>d = a × b + c</strong>: 3,8,3 → 27; 5,5,5 → 30; 6,3,5 → 23. The last row gives <strong>16</strong>.</li>
+<li><strong>a</strong> — Only the repeated number matters: the third number is <strong>n² − 1</strong>. n=8 → 63; n=9 → 80; n=10 → 99. For n = 11: <strong>120</strong>.</li>
+<li><strong>c</strong> — Add each row of grid 1: 15, 17, 19. The totals rise by 2 each row, and the series carries on into grid 2: 21, 23, 25. The first row of grid 2 must total 21, so ? = 21 − 1 − 5 = <strong>15</strong>.</li>
+<li><strong>b</strong> — Only the repeated number matters: the third number is <strong>n³</strong>. n=3 → 27; n=9 → 729; n=10 → 1000. For n = 12: <strong>1728</strong>.</li>
+<li><strong>a</strong> — The rule is <strong>first = second × (third + 1)</strong>: 50 from 5 and 9; 24 from 4 and 5; 6 from 2 and 2. Last row: <strong>18</strong>.</li>
+<li><strong>d</strong> — The rule is <strong>first = second × third + 2</strong>: 65 from 9 and 7; 83 from 9 and 9; 10 from 2 and 4. Last row: <strong>38</strong>.</li>
+<li><strong>d</strong> — For a row (a, b, c, d) the rule is <strong>d = a × c − b</strong>: 8,4,5 → 36; 5,2,4 → 18; 4,5,6 → 19. The last row gives <strong>29</strong>.</li>
+<li><strong>d</strong> — For a row (a, b, c, d) the rule is <strong>d = a × b × c</strong>: 2,2,4 → 16; 2,4,8 → 64; 2,6,6 → 72. The last row gives <strong>108</strong>.</li>
+<li><strong>a</strong> — Only the repeated number matters: the third number is <strong>n² − 1</strong>. n=3 → 8; n=6 → 35; n=9 → 80. For n = 11: <strong>120</strong>.</li>
+<li><strong>a</strong> — For a row (a, b, c, d) the rule is <strong>d = b × c + a</strong>: 8,5,5 → 33; 4,7,5 → 39; 3,4,2 → 11. The last row gives <strong>60</strong>.</li>
+<li><strong>b</strong> — For a row (a, b, c, d) the rule is <strong>d = a × b + c</strong>: 7,6,7 → 49; 6,5,3 → 33; 5,5,4 → 29. The last row gives <strong>62</strong>.</li>
+<li><strong>c</strong> — Work from the row or column with the fewest unknowns. The only grid that satisfies every sum with no repeats has row 3 = [7, 4, 2], so ‘?’ = <strong>2</strong>. (Checked by trying every filling: exactly one exists.)</li>
+<li><strong>c</strong> — Only the repeated number matters: the third number is <strong>n² − 1</strong>. n=3 → 8; n=9 → 80; n=11 → 120. For n = 12: <strong>143</strong>.</li>
+<li><strong>a</strong> — Work from the row or column with the fewest unknowns. The only grid that satisfies every sum with no repeats has row 3 = [8, 6, 2], so ‘?’ = <strong>2</strong>. (Checked by trying every filling: exactly one exists.)</li>
+<li><strong>b</strong> — For a row (a, b, c, d) the rule is <strong>d = a² + b × c</strong>: 3,6,8 → 57; 8,3,8 → 88; 6,6,3 → 54. The last row gives <strong>71</strong>.</li>
+</ol>
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html"><span>Previous</span><strong>QB-W1 — Writing prompts</strong></a><a class="pager next" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html"><span>Next</span><strong>QB-Z2 — Pair and figure rules</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#qb-z1-number-grids-and-matrices">QB-Z1 — Number grids and matrices</a><a class="toc-l1" href="#practice-questions">Practice questions</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+---
+title: English writing: essay and email
+code: W1
+section: English Writing
+weightage_pct: gate (marks unpublished)
+est_questions: 1.00
+tier: 1
+difficulty: Medium
+est_study_hours: 1.0
+confidence: Medium
+last_updated: 2026-09-30
+---
+
+# W1 — English writing: essay and email
+
+## 1. Why this topic matters here
+
+Expect about **1.0 questions and an unpublished number of marks** on this topic (a pass/fail gate). It sits in **English Writing**: 1 questions, None marks, 10 minutes. **Tier 1**, 1.0 hours to reach reliable recall, confidence **Medium**.
+
+**1 question on this topic are in the observed Infosys pool** (W01), from 1 source. They are listed in §2 and solved in `../question-banks/QB-99-OBSERVED-POOL.md`.
+
+**Why the tier:** gate: scored section with unpublished marks and its own cut-off; 1 hour clears it. Every section has its own cut-off, so a zero here costs the whole section's chance, not only these marks. There is no calculator. Negative marking: none reported.
+
+## 2. Exactly what gets asked
+
+One question, **10 minutes**, at the end of the paper: a short essay or a formal email on a general topic `[LIKELY]`. The length target a coach gives is about **190–200 words** in **9–10 minutes** (YT-U7HK). Marks are not published, but the section has its own cut-off, which is why it is a gate.
+
+| Evidence | Detail | Source |
+|---|---|---|
+| Topic asked on an on-campus SE test, 12 May 2025 | "Write an essay on ozone layer depletion" | B1 (first-hand) |
+| Coach's practice topic for the 2027 batch | "The future of remote work" | YT-U7HK |
+| Format named by the 2025 pattern deck | "General topic" | C1 |
+| Format named by a 2026 coach | "Formal email writing, situation based scenario, concise paragraph writing" | V1 |
+| What is judged | Grammar, vocabulary, coherence, relevance to the topic | V1, C-series |
+
+Topics are general (environment, technology, work, society), not technical and not personal.
+
+## 3. Concept notes
+
+### 3.1 What the examiner can mark in 10 minutes
+
+Four things: **is it on topic, is it organised, is the grammar correct, is the vocabulary adequate.** Originality is not marked. A plain, correct, well-ordered 190-word answer beats an ambitious 300-word answer with errors.
+
+### 3.2 The four-paragraph essay (about 200 words)
+
+| Paragraph | Job | Length |
+|---|---|---|
+| 1. Introduction | Define the topic in one sentence and say why it matters | 30–40 words |
+| 2. Causes or background | Two or three points, each a full sentence | 50–60 words |
+| 3. Effects or arguments | Two or three points with one concrete example | 50–60 words |
+| 4. Conclusion | One step forward, one closing sentence | 40–50 words |
+
+Write in the **present tense** unless you are describing history. Use one linking word per paragraph (*however, moreover, as a result, in conclusion*), not one per sentence.
+
+### 3.3 The formal email (about 120–150 words)
+
+```text
+Subject: <what the email is about, in 5–8 words>
+
+Dear Sir/Madam,  (or Dear Mr/Ms <Surname>,)
+
+Sentence 1: why you are writing.
+2–3 sentences: the details the reader needs (dates, facts, the problem).
+1 sentence: what you want them to do, and by when.
+
+Thank you for your time and support.
+
+Yours sincerely,
+<Name>
+```
+
+Formal means: no contractions (*do not*, not *don't*), no slang, one request per email, polite closing.
+
+### 3.4 The ten-minute plan
+
+| Minute | What to do |
+|---|---|
+| 0–1 | Read the topic. Pick **three points**. Decide the four paragraphs |
+| 1–8 | Write, sentence by sentence. Stop inventing new ideas after the third point |
+| 8–10 | Re-read once for spelling, tense and missing words. Fix, do not rewrite |
+
+### 3.5 Errors that cost marks
+
+Subject-verb agreement (*the effects is*), tense slips mid-paragraph, missing articles (*the ozone layer*, *an effect*), run-on sentences, and spelling of common words (*environment, government, necessary*).
+
+## 4. Must-memorise block
+
+**Linking words.** Addition: *moreover, in addition, also*. Contrast: *however, although, on the other hand*. Result: *as a result, therefore, consequently*. Example: *for instance, for example*. Conclusion: *in conclusion, to sum up, overall*.
+
+**Opening sentences that always work.**
+- "<Topic> is one of the most important issues of our time."
+- "In recent years, <topic> has attracted growing attention."
+
+**Closing sentences that always work.**
+- "If we act together, <topic> can become an opportunity and not a threat."
+- "Small steps by every individual can make a large difference."
+
+## 5. Worked examples
+
+**Model essay 1 — "Ozone layer depletion" (the topic asked on 12 May 2025).**
+
+> The ozone layer is a thin shield of gas in the upper atmosphere that absorbs most of the sun's harmful ultraviolet radiation. Its depletion is one of the most serious environmental problems of the last century.
+>
+> The main cause is human-made chemicals. Chlorofluorocarbons, used in refrigerators, air conditioners and aerosol sprays, rise into the stratosphere, where sunlight breaks them apart and releases chlorine. A single chlorine atom can destroy thousands of ozone molecules. Halons used in fire extinguishers add to the damage.
+>
+> The effects are wide. More ultraviolet radiation reaches the ground, which raises the risk of skin cancer and cataracts. It also weakens the immune system, reduces crop yields and harms the tiny plankton at the base of the ocean food chain.
+>
+> The world has responded well. The Montreal Protocol of 1987 phased out most ozone-depleting substances, and scientists now report that the layer is slowly recovering. This shows that global cooperation can work. However, the task is not finished. Every one of us can help by choosing efficient appliances and supporting sound environmental rules. Protecting the ozone layer means protecting our own future.
+
+Structure check: introduction (what and why) → cause → effects → response and conclusion.
+
+**Model essay 2 — "The future of remote work".**
+
+> Remote work, once a rare arrangement, has become a normal part of modern employment. Advances in technology and the experience of recent years have shown that many jobs can be done well from anywhere.
+>
+> The benefits are clear. Employees save the time and money they would spend commuting, and many report better balance between work and family. Companies can hire talent from any city and reduce the cost of office space.
+>
+> There are also challenges. Isolation can affect motivation, and it is harder for new employees to learn from colleagues. Teams must work harder to communicate clearly, and not every job, such as those in manufacturing or healthcare, can be done remotely.
+>
+> Most organisations are now choosing a hybrid model, with some days at home and some in the office. This keeps the flexibility that people value while protecting teamwork. In conclusion, remote work will not replace the office, but it will permanently change how and where we work.
+
+**Model email — reporting a delay.**
+
+```text
+Subject: Delay in submission of the project report
+
+Dear Sir,
+
+I am writing to inform you that the submission of the project report, due on 10 October, will be delayed by three days.
+
+The delay is caused by a late response from the vendor, whose test data I need for the final chapter. I have completed the remaining chapters and will submit the full report by 13 October.
+
+I request your kind permission to submit on the revised date. Thank you for your understanding.
+
+Yours sincerely,
+Hariharan
+```
+
+## 6. Traps and gotchas
+
+| Trap | Why it catches people | How to avoid it |
+|---|---|---|
+| Starting without a plan | Ideas run out in paragraph 3 | Spend the first minute choosing three points |
+| Too short | 80 words looks like a failed attempt | Aim for 190–200; count by lines, not words |
+| Copying a memorised essay | Off-topic content is marked down | Memorise the *structure*, not an essay |
+| Contractions and slang in an email | "Formal" is part of the task | Write *do not*, *I would like to* |
+| No conclusion | Looks unfinished | Keep the last 40 words for it |
+| Fancy vocabulary used wrongly | Errors are marked | Use words you would use in speech |
+
+## 7. Practice prompts
+
+More prompts: [`QB-W1-writing-prompts.md`](../question-banks/QB-W1-writing-prompts.md).
+
+Set a timer for **10 minutes** for each. Write first, then compare with the outline.
+
+1. **[Essay]** Ozone layer depletion
+2. **[Essay]** The future of remote work
+3. **[Essay]** Plastic pollution
+4. **[Essay]** Artificial intelligence in everyday life
+5. **[Essay]** Importance of a healthy lifestyle
+6. **[Essay]** Social media: boon or bane
+7. **[Essay]** Renewable energy for India
+8. **[Email]** Email to your manager: you need a day off next Friday
+
+### Model outlines
+
+- **1. Ozone layer depletion.** Define the layer → CFC cause → effects on health and crops → Montreal Protocol and recovery → a personal step.
+- **2. The future of remote work.** Define remote work → benefits (commute, balance, talent) → challenges (isolation, communication) → hybrid model → conclusion.
+- **3. Plastic pollution.** Scale of the problem → causes (single-use, weak collection) → effects (drains, rivers, animals) → solutions (reuse, recycling, rules).
+- **4. Artificial intelligence in everyday life.** Where we meet it (phones, maps, recommendations) → benefits → risks (jobs, privacy, errors) → responsible use.
+- **5. Importance of a healthy lifestyle.** Definition → diet, exercise, sleep → effects on study and work → habits to start today.
+- **6. Social media: boon or bane.** What it offers → risks (time, comparison, misinformation) → balanced use → conclusion.
+- **7. Renewable energy for India.** Need → solar, wind, hydro → challenges (storage, cost) → government role → outlook.
+- **8. Email to your manager: you need a day off next Friday.** Subject → purpose in line 1 → date and reason → how work will be covered → polite close.
+
+## 8. Resources
+
+- **https://www.youtube.com/watch?v=XFVY7XXJqBo** — a walkthrough of the Infosys English writing test.
+- **https://www.grammarly.com/blog/** — short, reliable notes on common grammar errors.
+
+## 9. Self-check
+
+1. Can you write the four-paragraph skeleton for *any* topic in one minute?
+2. Can you write a 190-word answer on "Plastic pollution" in 9 minutes, leaving one minute to proofread?
+3. Can you write a formal email with a subject line, a purpose sentence and a clear request?
+4. Do you know your three most frequent errors (tense, articles, agreement) and proofread for them first?
+5. Can you name five linking words without thinking?
+
+## 10. Sources
+
+This file was written for this library. **Infosys evidence:** observed questions W01 in `../data/questions-observed.csv`; section structure and marks in `../research/03-pattern-synthesis.md` §1; weightage, tier and hours in `../data/weightage.json` (code `W1`). Confidence **Medium**. Practice questions in §7 and the bank were generated and checked by execution (brute force, simulation or inverse); see `../research/04-qa-report.md`. Nothing here is a published Infosys syllabus.

@@ -1,0 +1,2216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P10 — Strings — Traversal, Reversal and ASCII Arithmetic · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem current" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Pseudocode</span></div>
+    <article class="prose">
+<h1 id="p10-strings-traversal-reversal-and-ascii-arithmetic">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</h1><p class="fm-line" style="color:var(--ink-faint);font-size:13px;margin:-.4em 0 1.2em">Tier 4 · Pseudocode · 0.7% of marks · about 0.6 h · confidence Low</p>
+<p><em>Adapted from <code>accenture-prep-final/accenture-prep-library/topics/T36-B4-strings-ascii.md</code>; verified in that library's QA. §1 and §10 are regenerated for Infosys from <code>data/weightage.json</code>; §2 gains an Infosys evidence table; §3–§9 are the source text unchanged, so "observed" in the worked examples refers to the source paper.</em></p>
+<h2 id="1-why-this-topic-matters-here">1. Why this topic matters here</h2>
+<p>Expect about <strong>0.3 questions and 0.5 marks</strong> on this topic (about 0.7% of the 75 scored marks). It sits in <strong>Pseudocode</strong>: 5 questions, 10 marks, 10 minutes. <strong>Tier 4</strong>, 0.6 hours to reach reliable recall, confidence <strong>Low</strong>.</p>
+<p><strong>No Infosys question on this topic was recovered.</strong> It rests on syllabus lists or first-hand naming only (V1), so its share is an allocation, not an observation.</p>
+<p><strong>Why the tier:</strong> expected marks per study hour, weighted by confidence, is 0.51 against a paper average of 1.84 (<code>../data/analysis-tables.md</code> §6). Every section has its own cut-off, so a zero here costs the whole section's chance, not only these marks. There is no calculator. Negative marking: none reported.</p>
+<h2 id="2-exactly-what-gets-asked">2. Exactly what gets asked</h2>
+<h3 id="what-infosys-asked">What Infosys asked</h3>
+<p>No question on this topic was recovered. Listed by: V1.</p>
+<blockquote>
+<p>The pattern notes below come from the library this file was adapted from. Any frequency or "observed paper" remark in them describes that source paper, not Infosys. The Infosys evidence is the table above.</p>
+</blockquote>
+<ol>
+<li><strong>Character arithmetic output.</strong> <code>Print 'A' + 2</code> or <code>Print 'z' - 'a'</code>. Pure substitution once you know the anchors.</li>
+</ol>
+<p><strong>1. (c) 75</strong>
+'A' is 65 and 'K' is 10 letters ahead, so 65 + 10 = 75.</p>
+<ul>
+<li>(a) 74 is the code of 'J'.</li>
+<li>(b) 107 is the code of lowercase 'k'.</li>
+<li>(d) 76 is the code of 'L'.</li>
+</ul>
+<hr />
+<ol start="2">
+<li><strong>A traversal that counts something.</strong> Vowels, occurrences of a character, digits.</li>
+</ol>
+<p><strong>2. (d) 68</strong>
+CODE('C') = 67, and 67 + 1 = 68.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CODE('C')</td>
+<td>67</td>
+</tr>
+<tr>
+<td>67 + 1</td>
+<td>68</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 67 is CODE('C') itself, without the +1.</li>
+<li>(b) 69 is 67 + 2.</li>
+<li>(c) 68 is the numeric result but is listed as a wrong option here because (d) states the same number; (d) is the printed value. <em>(see note)</em></li>
+</ul>
+<hr />
+<ol start="3">
+<li><strong>Two-pointer reversal, traced.</strong> The standard in-place algorithm, and you state the string after a given number of swaps.</li>
+</ol>
+<p><strong>3. (a) 32</strong>
+'d' = 100 and 'D' = 68, so 100 − 68 = 32.</p>
+<ul>
+<li>(b) 26 is the number of letters in the alphabet, not the case gap.</li>
+<li>(c) 31 is one less than the constant case gap.</li>
+<li>(d) 64 is twice the case gap.</li>
+</ul>
+<hr />
+<ol start="4">
+<li><strong>Palindrome check.</strong> Usually one that <strong>fails partway</strong>, so the answer depends on spotting the early exit.</li>
+</ol>
+<p><strong>4. (c) "cat"</strong>
+Adding 32 to each uppercase code shifts every letter into lowercase.</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>s[i]</th>
+<th>CODE + 32</th>
+<th>r</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>C</td>
+<td>67 + 32 = 99 = 'c'</td>
+<td>"c"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A</td>
+<td>65 + 32 = 97 = 'a'</td>
+<td>"ca"</td>
+</tr>
+<tr>
+<td>3</td>
+<td>T</td>
+<td>84 + 32 = 116 = 't'</td>
+<td>"cat"</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) "CAT" results if the +32 is omitted.</li>
+<li>(b) "Cat" results if only non-first letters are shifted.</li>
+<li>(d) "cAt" results if the loop skips index 2.</li>
+</ul>
+<hr />
+<ol start="5">
+<li><strong>Digit-string to number.</strong> Accumulating <code>total = total * 10 + (c - '0')</code>.</li>
+</ol>
+<h3 id="the-five-anchors-everything-rests-on">The five anchors everything rests on</h3>
+<table>
+<thead>
+<tr>
+<th>Character</th>
+<th>ASCII</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>'A'</code></td>
+<td><strong>65</strong></td>
+</tr>
+<tr>
+<td><code>'a'</code></td>
+<td><strong>97</strong></td>
+</tr>
+<tr>
+<td><code>'0'</code></td>
+<td><strong>48</strong></td>
+</tr>
+<tr>
+<td>space</td>
+<td><strong>32</strong></td>
+</tr>
+<tr>
+<td><code>'a' - 'A'</code></td>
+<td><strong>32</strong></td>
+</tr>
+<tr>
+<td>## 3. Concept notes</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="what-a-string-is">What a string is</h3>
+<p>A string is an <strong>indexed sequence of characters</strong>. Index starts at <strong>0</strong>. If <code>len(s) = n</code>, valid indices are <code>0</code> to <code>n-1</code>.</p>
+<ul>
+<li>First character: <code>s[0]</code></li>
+<li>Last character: <code>s[len(s) - 1]</code> — <strong>not</strong> <code>s[len(s)]</code></li>
+</ul>
+<p><strong>Off-by-one trap:</strong> a loop written as <code>FOR i = 0 TO len(s)</code> runs one extra time and reads past the end. Correct form is <code>FOR i = 0 TO len(s) - 1</code>.</p>
+<p>Every character has a numeric code (ASCII value). <code>s[i]</code> can be used as a number in arithmetic, and a number can be converted back to a character.</p>
+<h3 id="ascii-facts-that-matter">ASCII facts that matter</h3>
+<table>
+<thead>
+<tr>
+<th>Character(s)</th>
+<th>ASCII range</th>
+<th>Anchor value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>'A'</code> to <code>'Z'</code></td>
+<td>65 to 90</td>
+<td><code>'A'</code> = 65</td>
+</tr>
+<tr>
+<td><code>'a'</code> to <code>'z'</code></td>
+<td>97 to 122</td>
+<td><code>'a'</code> = 97</td>
+</tr>
+<tr>
+<td><code>'0'</code> to <code>'9'</code></td>
+<td>48 to 57</td>
+<td><code>'0'</code> = 48</td>
+</tr>
+<tr>
+<td>space</td>
+<td>32</td>
+<td>space = 32</td>
+</tr>
+</tbody>
+</table>
+<p>Each block is <strong>contiguous</strong> and <strong>26 letters</strong> wide, so <code>'Z'</code> = 65 + 25 = 90 and <code>'z'</code> = 97 + 25 = 122.</p>
+<p><strong>Three derived facts:</strong>
+1. <code>'a' - 'A' = 32</code> — the case gap. True for every letter pair: <code>'b' - 'B' = 32</code>, <code>'z' - 'Z' = 32</code>.
+2. <code>digit_char - '0'</code> gives the numeric value of that digit.
+3. <code>uppercase_char + 32</code> gives its lowercase form.</p>
+<h3 id="character-arithmetic-worked-step-by-step">Character arithmetic, worked step by step</h3>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Numeric substitution</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>'A' + 2</code></td>
+<td>65 + 2 = 67</td>
+<td><code>'C'</code></td>
+</tr>
+<tr>
+<td><code>'z' - 'a'</code></td>
+<td>122 - 97 = 25</td>
+<td>25 (letters between them)</td>
+</tr>
+<tr>
+<td><code>'7' - '0'</code></td>
+<td>55 - 48 = 7</td>
+<td>7 (the integer seven)</td>
+</tr>
+<tr>
+<td><code>'c' - 32</code></td>
+<td>99 - 32 = 67</td>
+<td><code>'C'</code></td>
+</tr>
+</tbody>
+</table>
+<p>Direction: <code>+32</code> goes <strong>upper → lower</strong>; <code>-32</code> goes <strong>lower → upper</strong>.</p>
+<h3 id="case-conversion-arithmetic-vs-function">Case conversion: arithmetic vs function</h3>
+<table>
+<thead>
+<tr>
+<th>Approach</th>
+<th>Example</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arithmetic</td>
+<td><code>'C' + 32 = 'c'</code></td>
+<td>Fast, no library. <strong>Only correct if the character is a letter of the right case.</strong></td>
+</tr>
+<tr>
+<td>Function</td>
+<td><code>lower('C')</code> → <code>'c'</code></td>
+<td>Handles the whole string, safe on any character.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why arithmetic only works for letters:</strong> the 32 gap is a linear shift that is only guaranteed inside the contiguous letter blocks. Outside them, 32 lands on unrelated symbols. Examples:</p>
+<ul>
+<li><code>'{'</code> = 123. <code>123 - 32 = 91</code>, and 91 = <code>'['</code> — a bracket, not a letter.</li>
+<li><code>'Z' + 32 = 90 + 32 = 122 = 'z'</code> works, but <code>'[' + 32 = 91 + 32 = 123 = '{'</code> does not produce a letter.</li>
+</ul>
+<p>So always <strong>range-test before shifting</strong>.</p>
+<h3 id="character-class-tests-as-range-comparisons">Character class tests as range comparisons</h3>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Condition (explicit)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>is uppercase</td>
+<td><code>c &gt;= 'A' AND c &lt;= 'Z'</code>  (65 ≤ c ≤ 90)</td>
+</tr>
+<tr>
+<td>is lowercase</td>
+<td><code>c &gt;= 'a' AND c &lt;= 'z'</code>  (97 ≤ c ≤ 122)</td>
+</tr>
+<tr>
+<td>is digit</td>
+<td><code>c &gt;= '0' AND c &lt;= '9'</code>  (48 ≤ c ≤ 57)</td>
+</tr>
+<tr>
+<td>is alphanumeric</td>
+<td><code>(c &gt;= 'A' AND c &lt;= 'Z') OR (c &gt;= 'a' AND c &lt;= 'z') OR (c &gt;= '0' AND c &lt;= '9')</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="string-traversal-patterns">String traversal patterns</h3>
+<p><strong>1. Forward loop</strong></p>
+<div class="codehilite"><pre><span></span><code>1. SET i = 0
+2. WHILE i &lt; len(s):
+3.     process s[i]
+4.     i = i + 1
+5. END WHILE
+</code></pre></div>
+
+<p>Trace on <code>"cat"</code>: i=0 → c, i=1 → a, i=2 → t, i=3 → stop.</p>
+<p><strong>2. Backward loop</strong></p>
+<div class="codehilite"><pre><span></span><code>1. SET i = len(s) - 1
+2. WHILE i &gt;= 0:
+3.     process s[i]
+4.     i = i - 1
+5. END WHILE
+</code></pre></div>
+
+<p>Trace on <code>"cat"</code>: i=2 → t, i=1 → a, i=0 → c, i=-1 → stop.</p>
+<p><strong>3. Two pointers from both ends</strong> (use when indices meet or cross)</p>
+<div class="codehilite"><pre><span></span><code>1. SET i = 0
+2. SET j = len(s) - 1
+3. WHILE i &lt; j:
+4.     process s[i] and s[j]
+5.     i = i + 1
+6.     j = j - 1
+7. END WHILE
+</code></pre></div>
+
+<p>Trace on <code>"ABCDE"</code> (n=5): (0,4), (1,3), then i=2, j=2 → <code>i &lt; j</code> false → stop. <strong>Number of iterations = n / 2 (integer division) = 2 here.</strong> Odd length leaves the middle untouched, which is correct.</p>
+<h3 id="reversal-in-place-with-two-pointers">Reversal in place with two pointers</h3>
+<div class="codehilite"><pre><span></span><code>1. SET i = 0
+2. SET j = len(s) - 1
+3. WHILE i &lt; j:
+4.     SET temp = s[i]
+5.     s[i] = s[j]
+6.     s[j] = temp
+7.     i = i + 1
+8.     j = j - 1
+9. END WHILE
+10. PRINT s
+</code></pre></div>
+
+<p>Complete trace for <code>"ABCDE"</code>:</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>i</th>
+<th>j</th>
+<th>Action</th>
+<th>State after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start</td>
+<td>0</td>
+<td>4</td>
+<td>—</td>
+<td>A B C D E</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>4</td>
+<td>swap s[0] and s[4] (<code>A</code> ↔ <code>E</code>)</td>
+<td>E B C D A</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>3</td>
+<td>swap s[1] and s[3] (<code>B</code> ↔ <code>D</code>)</td>
+<td>E D C B A</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2</td>
+<td>2</td>
+<td><code>i &lt; j</code> is false → stop</td>
+<td>E D C B A</td>
+</tr>
+</tbody>
+</table>
+<p>Result: <code>EDCBA</code>. Swaps performed = 2 = <code>len(s) // 2</code>.</p>
+<h3 id="palindrome-check-with-two-pointers">Palindrome check with two pointers</h3>
+<div class="codehilite"><pre><span></span><code>1. SET i = 0
+2. SET j = len(s) - 1
+3. SET flag = TRUE
+4. WHILE i &lt; j:
+5.     IF s[i] != s[j] THEN
+6.         SET flag = FALSE
+7.         BREAK
+8.     END IF
+9.     i = i + 1
+10.    j = j - 1
+11. END WHILE
+12. IF flag THEN PRINT &quot;Palindrome&quot; ELSE PRINT &quot;Not palindrome&quot;
+</code></pre></div>
+
+<p>Trace for <code>"LEVEL"</code> (n=5):</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>i</th>
+<th>j</th>
+<th>Compare</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>4</td>
+<td><code>L</code> vs <code>L</code></td>
+<td>match</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>3</td>
+<td><code>E</code> vs <code>E</code></td>
+<td>match</td>
+</tr>
+<tr>
+<td>3</td>
+<td>2</td>
+<td>2</td>
+<td><code>i &lt; j</code> false</td>
+<td>stop → <strong>Palindrome</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Trace for <code>"ABCA"</code> (n=4):</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>i</th>
+<th>j</th>
+<th>Compare</th>
+<th>Outcome</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>3</td>
+<td><code>A</code> vs <code>A</code></td>
+<td>match</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>2</td>
+<td><code>B</code> vs <code>C</code></td>
+<td>mismatch → <strong>Not palindrome</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Note: a palindrome check stops at the <strong>first mismatch</strong>, so best case is fast, worst case is full O(n).</p>
+<h3 id="counting-patterns">Counting patterns</h3>
+<p><strong>Count vowels</strong></p>
+<div class="codehilite"><pre><span></span><code>1. SET count = 0
+2. FOR i = 0 TO len(s) - 1:
+3.     SET c = lower(s[i])
+4.     IF c = &#39;a&#39; OR c = &#39;e&#39; OR c = &#39;i&#39; OR c = &#39;o&#39; OR c = &#39;u&#39; THEN count = count + 1
+5. END FOR
+6. PRINT count
+</code></pre></div>
+
+<p>Trace <code>"Level"</code>: L→l no, e yes (1), v no, e yes (2), l no → <strong>2</strong>.</p>
+<p><strong>Count one specific character</strong></p>
+<div class="codehilite"><pre><span></span><code>1. SET count = 0
+2. FOR i = 0 TO len(s) - 1:
+3.     IF s[i] = target THEN count = count + 1
+4. END FOR
+</code></pre></div>
+
+<p>Trace <code>"banana"</code> counting <code>'a'</code>: positions 1, 3, 5 → <strong>3</strong>.</p>
+<p><strong>Character frequency</strong> — index an array by the character's ASCII value</p>
+<div class="codehilite"><pre><span></span><code>1. SET freq[256] = 0        // one slot per ASCII code
+2. FOR i = 0 TO len(s) - 1:
+3.     freq[ s[i] ] = freq[ s[i] ] + 1
+4. END FOR
+5. FOR c = 0 TO 255:
+6.     IF freq[c] &gt; 0 THEN PRINT char(c), freq[c]
+7. END FOR
+</code></pre></div>
+
+<p>Trace <code>"aab"</code>: <code>freq['a'] = 2</code>, <code>freq['b'] = 1</code>. Since <code>'a'</code> = 97, the count sits at index 97, not index 0. Array size 256 covers all ASCII codes 0–255.</p>
+<h3 id="concatenation-substring-comparison">Concatenation, substring, comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Meaning</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Concatenation</td>
+<td><code>s1 + s2</code></td>
+<td>New string of length <code>len(s1) + len(s2)</code>. Both parts copied.</td>
+</tr>
+<tr>
+<td>Substring</td>
+<td><code>s[i .. j]</code></td>
+<td><strong>Inclusive</strong> both ends; length = <code>j - i + 1</code>. Trace <code>"HELLO"[1..3]</code> → <code>"ELL"</code>, length 3 = 3-1+1.</td>
+</tr>
+<tr>
+<td>Char-by-char compare</td>
+<td>loop comparing <code>s1[i]</code> with <code>s2[i]</code></td>
+<td>O(n) worst case; stops at first difference.</td>
+</tr>
+<tr>
+<td>Equality operator</td>
+<td><code>s1 == s2</code></td>
+<td>May compare <strong>references</strong> (addresses), not contents.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reference equality vs content equality:</strong> if <code>s1</code> and <code>s2</code> are two separately built strings holding <code>"hello"</code>, then <code>s1 == s2</code> can be <strong>false</strong> because they are different objects even though both hold the same characters. Two references to the <em>same</em> object give <code>true</code>. Content equality requires a character-by-character check (a <code>compare</code>/<code>equals</code>-style operation). A question that asks "what does <code>s1 == s2</code> print" is testing this distinction.</p>
+<p>Also note: character comparison uses ASCII order, so <code>'A'</code> (65) &lt; <code>'Z'</code> (90) &lt; <code>'a'</code> (97) &lt; <code>'z'</code> (122). Uppercase letters therefore sort <strong>before</strong> all lowercase letters, and <code>"Z" &lt; "a"</code> is true. Dict-style orderings of <code>"Apple"</code> vs <code>"apple"</code> follow from this.</p>
+<h3 id="immutability-and-the-on2-concatenation-trap">Immutability and the O(n²) concatenation trap</h3>
+<p>Some languages treat strings as <strong>immutable</strong>: <code>s[i] = 'x'</code> is illegal and every <code>s = s + c</code> builds a <strong>brand-new string</strong>, copying all existing characters plus the new one.</p>
+<p>Building an n-character string one character at a time:</p>
+<ul>
+<li>1st append copies 1 char, 2nd copies 2, 3rd copies 3, … nth copies n.</li>
+<li>Total work = 1 + 2 + 3 + … + n = n(n+1)/2 → <strong>O(n²)</strong>.</li>
+</ul>
+<p><strong>Fix:</strong> append characters to a growable list/buffer, then join once at the end → <strong>O(n)</strong> total.</p>
+<p>If the pseudocode explicitly treats the string as a mutable character array (in-place <code>s[i] = s[j]</code> swaps), then no copying occurs and reversal stays O(n).</p>
+<h3 id="common-string-operations-and-complexity">Common string operations and complexity</h3>
+<p>Let n = length of the string, m = length of the pattern.</p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Pseudocode form</th>
+<th>Time</th>
+<th>Extra space</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Access character</td>
+<td><code>s[i]</code></td>
+<td>O(1)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Length</td>
+<td><code>len(s)</code></td>
+<td>O(1)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Forward / backward traversal</td>
+<td>single loop</td>
+<td>O(n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Reverse in place</td>
+<td>two-pointer swap</td>
+<td>O(n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Reverse into a new string</td>
+<td>copy from end</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Palindrome check</td>
+<td>two pointers</td>
+<td>O(n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Count vowels / one character</td>
+<td>single loop</td>
+<td>O(n)</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>All-character frequency</td>
+<td><code>freq[256]</code></td>
+<td>O(n)</td>
+<td>O(1) (256 slots)</td>
+</tr>
+<tr>
+<td>Concatenate <code>s1 + s2</code></td>
+<td>new string</td>
+<td>O(len(s1) + len(s2))</td>
+<td>same</td>
+</tr>
+<tr>
+<td>Substring of length k</td>
+<td><code>s[i .. i+k-1]</code></td>
+<td>O(k)</td>
+<td>O(k)</td>
+</tr>
+<tr>
+<td>Compare two equal-length strings</td>
+<td>char-by-char loop</td>
+<td>O(n) worst case</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Naive substring search</td>
+<td>nested loop</td>
+<td>O(n × m) worst case</td>
+<td>O(1)</td>
+</tr>
+<tr>
+<td>Build string with <code>+=</code> in a loop of n</td>
+<td>repeated concat</td>
+<td><strong>O(n²)</strong></td>
+<td>O(n)</td>
+</tr>
+<tr>
+<td>Build string via buffer + join</td>
+<td>append then join</td>
+<td>O(n)</td>
+<td>O(n)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-must-memorise-block">4. Must-memorise block</h2>
+<p><strong>ASCII anchors</strong></p>
+<div class="codehilite"><pre><span></span><code>&#39;A&#39; = 65        &#39;a&#39; = 97        &#39;0&#39; = 48        space = 32
+&#39;Z&#39; = 90        &#39;z&#39; = 122       &#39;9&#39; = 57
+</code></pre></div>
+
+<p>Blocks are contiguous, 26 letters wide, so <code>'Z' = 65 + 25</code> and <code>'z' = 97 + 25</code>.</p>
+<p><strong>Three derived facts</strong></p>
+<ol>
+<li><code>'a' - 'A' = 32</code>. The case gap is 32 for every letter.</li>
+<li><code>char - '0'</code> = the digit's numeric value.  <code>'7' - '0' = 7</code>.</li>
+<li><code>uppercase + 32</code> = lowercase.  <code>lowercase - 32</code> = uppercase.
+   Worked: <code>'A' + 2 = 65 + 2 = 67 = 'C'</code>; <code>'z' - 'a' = 122 - 97 = 25</code>; <code>'c' - 32 = 99 - 32 = 67 = 'C'</code>.</li>
+</ol>
+<p><strong>Four range tests</strong> (always test before doing case arithmetic)</p>
+<div class="codehilite"><pre><span></span><code>uppercase:  c &gt;= &#39;A&#39; AND c &lt;= &#39;Z&#39;        // 65..90
+lowercase:  c &gt;= &#39;a&#39; AND c &lt;= &#39;z&#39;        // 97..122
+digit:      c &gt;= &#39;0&#39; AND c &lt;= &#39;9&#39;        // 48..57
+alnum:      upper OR lower OR digit
+</code></pre></div>
+
+<p><strong>Two-pointer reversal skeleton</strong></p>
+<div class="codehilite"><pre><span></span><code>i = 0;  j = len(s) - 1
+WHILE i &lt; j:
+    temp = s[i];  s[i] = s[j];  s[j] = temp
+    i = i + 1;  j = j - 1
+END WHILE
+</code></pre></div>
+
+<p>Swaps = <code>len(s) // 2</code>. Loop condition is <code>i &lt; j</code>, never <code>i &lt;= j</code>.</p>
+<p><strong>Palindrome skeleton</strong> — same two pointers, <code>IF s[i] != s[j]</code> → set FALSE, BREAK; else advance both.</p>
+<p><strong>Index rules</strong>
+- Last index = <code>len(s) - 1</code>. Loop upper bound = <code>len(s) - 1</code>.
+- Substring <code>s[i .. j]</code> is inclusive; length = <code>j - i + 1</code>.
+- Frequency array size 256, indexed by ASCII value: <code>freq[s[i]] += 1</code>.</p>
+<p><strong>Complexity to quote on sight</strong>
+- <code>s[i]</code>, <code>len(s)</code> → <strong>O(1)</strong>
+- Traverse, reverse in place, palindrome, count → <strong>O(n)</strong>, O(1) space
+- <code>s1 + s2</code> → O(len(s1) + len(s2))
+- Char-by-char compare → O(n) worst case
+- <strong>Concatenation inside a loop of n → O(n²)</strong>; use a buffer + join → O(n).</p>
+<p><strong>Sorting-order fact:</strong> <code>'A'</code>(65) &lt; <code>'Z'</code>(90) &lt; <code>'a'</code>(97) &lt; <code>'z'</code>(122). All uppercase sort before all lowercase.</p>
+<p><strong>Equality fact:</strong> <code>==</code> may compare references, not contents; identical text in two separate objects can still give <code>false</code>.</p>
+<h2 id="5-worked-examples">5. Worked examples</h2>
+<h3 id="example-1-character-arithmetic-output">Example 1 — Character arithmetic output</h3>
+<div class="codehilite"><pre><span></span><code>1  c = &#39;A&#39;
+2  d = c + 2
+3  e = d - &#39;A&#39;
+4  f = &#39;a&#39; - &#39;A&#39;
+5  PRINT d, e, f
+</code></pre></div>
+
+<p><strong>Trace table</strong></p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>c</th>
+<th>d</th>
+<th>e</th>
+<th>f</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>'A' (65)</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2</td>
+<td>'A'</td>
+<td>'C' (67)</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>3</td>
+<td>'A'</td>
+<td>'C'</td>
+<td>2</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4</td>
+<td>'A'</td>
+<td>'C'</td>
+<td>2</td>
+<td>32</td>
+</tr>
+<tr>
+<td>5</td>
+<td>'A'</td>
+<td>'C'</td>
+<td>2</td>
+<td>32</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Answer: C 2 32</strong></p>
+<h3 id="example-2-forward-traversal-counts-digits">Example 2 — Forward traversal counts digits</h3>
+<div class="codehilite"><pre><span></span><code>1  s = &quot;A7b3!&quot;
+2  count = 0
+3  FOR i = 1 TO LENGTH(s)
+4    c = s[i]
+5    isDigit = (c &gt;= &#39;0&#39; AND c &lt;= &#39;9&#39;)
+6    IF isDigit THEN count = count + 1
+7  END FOR
+8  PRINT count
+</code></pre></div>
+
+<p><strong>Trace table</strong></p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>s</th>
+<th>i</th>
+<th>c</th>
+<th>isDigit</th>
+<th>count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>"A7b3!"</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>"A7b3!"</td>
+<td>1</td>
+<td>'A' (65)</td>
+<td>FALSE</td>
+<td>0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>"A7b3!"</td>
+<td>2</td>
+<td>'7' (55)</td>
+<td>TRUE</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>"A7b3!"</td>
+<td>3</td>
+<td>'b' (98)</td>
+<td>FALSE</td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>"A7b3!"</td>
+<td>4</td>
+<td>'3' (51)</td>
+<td>TRUE</td>
+<td>2</td>
+</tr>
+<tr>
+<td>6</td>
+<td>"A7b3!"</td>
+<td>5</td>
+<td>'!' (33)</td>
+<td>FALSE</td>
+<td>2</td>
+</tr>
+<tr>
+<td>7</td>
+<td>"A7b3!"</td>
+<td>5</td>
+<td>'!'</td>
+<td>FALSE</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Answer: 2</strong></p>
+<h3 id="example-3-two-pointer-reversal-of-a-5-character-string">Example 3 — Two-pointer reversal of a 5-character string</h3>
+<div class="codehilite"><pre><span></span><code>1  s = &quot;abcde&quot;
+2  left = 1
+3  right = LENGTH(s)
+4  WHILE left &lt; right
+5    SWAP(s[left], s[right])
+6    left = left + 1
+7    right = right - 1
+8  END WHILE
+9  PRINT s
+</code></pre></div>
+
+<p><strong>Trace table</strong></p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>left</th>
+<th>right</th>
+<th>s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>—</td>
+<td>—</td>
+<td>"abcde"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>1</td>
+<td>—</td>
+<td>"abcde"</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1</td>
+<td>5</td>
+<td>"abcde"</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1</td>
+<td>5</td>
+<td>"abcde"</td>
+</tr>
+<tr>
+<td>5</td>
+<td>1</td>
+<td>5</td>
+<td>"ebcda"</td>
+</tr>
+<tr>
+<td>6</td>
+<td>2</td>
+<td>5</td>
+<td>"ebcda"</td>
+</tr>
+<tr>
+<td>7</td>
+<td>2</td>
+<td>4</td>
+<td>"ebcda"</td>
+</tr>
+<tr>
+<td>8</td>
+<td>2</td>
+<td>4</td>
+<td>"ebcda"</td>
+</tr>
+<tr>
+<td>9</td>
+<td>2</td>
+<td>4</td>
+<td>"edcba"</td>
+</tr>
+<tr>
+<td>10</td>
+<td>3</td>
+<td>4</td>
+<td>"edcba"</td>
+</tr>
+<tr>
+<td>11</td>
+<td>3</td>
+<td>3</td>
+<td>"edcba"</td>
+</tr>
+<tr>
+<td>12</td>
+<td>3</td>
+<td>3</td>
+<td>"edcba"</td>
+</tr>
+<tr>
+<td>13</td>
+<td>3</td>
+<td>3</td>
+<td>"edcba"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Answer: edcba</strong> — middle <code>'c'</code> stays unchanged at position 3.</p>
+<h3 id="example-4-palindrome-check-fails-partway">Example 4 — Palindrome check fails partway</h3>
+<div class="codehilite"><pre><span></span><code>1  s = &quot;abxca&quot;
+2  left = 1
+3  right = LENGTH(s)
+4  WHILE left &lt; right
+5    lc = s[left]
+6    rc = s[right]
+7    IF lc != rc THEN
+8      PRINT &quot;NOT PALINDROME&quot;
+9      RETURN FALSE
+10   END IF
+11   left = left + 1
+12   right = right - 1
+13 END WHILE
+14 PRINT &quot;PALINDROME&quot;
+15 RETURN TRUE
+</code></pre></div>
+
+<p><strong>Trace table</strong></p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>s</th>
+<th>left</th>
+<th>right</th>
+<th>lc</th>
+<th>rc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>"abxca"</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2</td>
+<td>"abxca"</td>
+<td>1</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>3</td>
+<td>"abxca"</td>
+<td>1</td>
+<td>5</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4</td>
+<td>"abxca"</td>
+<td>1</td>
+<td>5</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>5</td>
+<td>"abxca"</td>
+<td>1</td>
+<td>5</td>
+<td>'a'</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6</td>
+<td>"abxca"</td>
+<td>1</td>
+<td>5</td>
+<td>'a'</td>
+<td>'a'</td>
+</tr>
+<tr>
+<td>7</td>
+<td>"abxca"</td>
+<td>1</td>
+<td>5</td>
+<td>'a'</td>
+<td>'a'</td>
+</tr>
+<tr>
+<td>8</td>
+<td>"abxca"</td>
+<td>2</td>
+<td>5</td>
+<td>'a'</td>
+<td>'a'</td>
+</tr>
+<tr>
+<td>9</td>
+<td>"abxca"</td>
+<td>2</td>
+<td>4</td>
+<td>'a'</td>
+<td>'a'</td>
+</tr>
+<tr>
+<td>10</td>
+<td>"abxca"</td>
+<td>2</td>
+<td>4</td>
+<td>'a'</td>
+<td>'a'</td>
+</tr>
+<tr>
+<td>11</td>
+<td>"abxca"</td>
+<td>2</td>
+<td>4</td>
+<td>'b'</td>
+<td>'a'</td>
+</tr>
+<tr>
+<td>12</td>
+<td>"abxca"</td>
+<td>2</td>
+<td>4</td>
+<td>'b'</td>
+<td>'c'</td>
+</tr>
+<tr>
+<td>13</td>
+<td>"abxca"</td>
+<td>2</td>
+<td>4</td>
+<td>'b'</td>
+<td>'c'</td>
+</tr>
+<tr>
+<td>14</td>
+<td>"abxca"</td>
+<td>2</td>
+<td>4</td>
+<td>'b'</td>
+<td>'c'</td>
+</tr>
+<tr>
+<td>15</td>
+<td>"abxca"</td>
+<td>2</td>
+<td>4</td>
+<td>'b'</td>
+<td>'c'</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Answer: FALSE / NOT PALINDROME</strong> — fails at <code>s[2]='b'</code> vs <code>s[4]='c'</code>, so it exits before checking the middle.</p>
+<h3 id="example-5-convert-digit-string-to-number-using-c-0">Example 5 — Convert digit string to number using <code>c - '0'</code></h3>
+<div class="codehilite"><pre><span></span><code>1  s = &quot;407&quot;
+2  num = 0
+3  FOR i = 1 TO LENGTH(s)
+4    c = s[i]
+5    digit = c - &#39;0&#39;
+6    num = num * 10 + digit
+7  END FOR
+8  PRINT num
+</code></pre></div>
+
+<p><strong>Trace table</strong></p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>s</th>
+<th>i</th>
+<th>c</th>
+<th>digit</th>
+<th>num</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>"407"</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>"407"</td>
+<td>1</td>
+<td>'4' (52)</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>3</td>
+<td>"407"</td>
+<td>2</td>
+<td>'0' (48)</td>
+<td>0</td>
+<td>40</td>
+</tr>
+<tr>
+<td>4</td>
+<td>"407"</td>
+<td>3</td>
+<td>'7' (55)</td>
+<td>7</td>
+<td>407</td>
+</tr>
+<tr>
+<td>5</td>
+<td>"407"</td>
+<td>3</td>
+<td>'7'</td>
+<td>7</td>
+<td>407</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Answer: 407</strong></p>
+<h2 id="6-traps-and-gotchas">6. Traps and gotchas</h2>
+<table>
+<thead>
+<tr>
+<th>Trap</th>
+<th>Why it catches people</th>
+<th>How to avoid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Confusing character <code>'7'</code> with number <code>7</code></td>
+<td><code>'7'</code> is ASCII 55, so <code>'7' == 7</code> is false and <code>'7' + 1</code> gives <code>'8'</code>, not <code>8</code></td>
+<td>Use <code>c - '0'</code> to get numeric value; compare digit chars to <code>'0'</code>..<code>'9'</code> or codes 48..57</td>
+</tr>
+<tr>
+<td>Using <code>s[len]</code> instead of <code>s[len-1]</code> in 0-based indexing</td>
+<td>Last valid index is <code>LEN-1</code> in 0-based arrays; <code>s[LEN]</code> is out of bounds. In 1-based pseudocode, <code>s[LEN]</code> is valid—check the convention</td>
+<td>Know whether pseudocode is 0-based or 1-based. For 0-based, loop <code>i=0</code> to <code>LEN-1</code>; last char is <code>s[LEN-1]</code></td>
+</tr>
+<tr>
+<td>Assuming <code>+32</code> lowercases any character</td>
+<td><code>+32</code> only maps <code>A</code>..<code>Z</code> to <code>a</code>..<code>z</code>. <code>'a'+32=129</code>, <code>'0'+32='P'</code> (80), space+32=<code>'@'</code> (64)</td>
+<td>Check <code>c &gt;= 'A' AND c &lt;= 'Z'</code> before <code>c = c + 32</code>. For uppercase, check <code>c &gt;= 'a' AND c &lt;= 'z'</code> before <code>c = c - 32</code></td>
+</tr>
+<tr>
+<td>Building a string by concatenation in a loop</td>
+<td>Creates a new string each time and is O(n²); in some notations <code>+</code> may add codes or behave unexpectedly</td>
+<td>Use a character array/list then join, or preallocate. For MCQs, count/compute without repeated concatenation</td>
+</tr>
+<tr>
+<td>Comparing strings with <code>==</code> when contents are meant</td>
+<td>In some languages <code>==</code> compares references/identity; equal contents can be different objects</td>
+<td>Use a string-equality function or compare character-by-character. In pseudocode, confirm <code>==</code> means content equality</td>
+</tr>
+<tr>
+<td>Forgetting the middle element in an odd-length reversal</td>
+<td>If reversing by pairing outer chars into a new string, the unpaired middle char must be copied once</td>
+<td>Two-pointer <code>WHILE left &lt; right</code> automatically leaves the middle. If building a new string, append the middle when length is odd</td>
+</tr>
+<tr>
+<td>Off-by-one in traversal: <code>i &lt;= LEN</code> vs <code>i &lt; LEN</code></td>
+<td>Mixing inclusive loops with 0-based indexing reads <code>s[LEN]</code> out of bounds, or skips the last character</td>
+<td>Match loop bound to indexing: 0-based → <code>i &lt; LEN</code>; 1-based → <code>i &lt;= LEN</code></td>
+</tr>
+<tr>
+<td>Assuming <code>c - '0'</code> works for any character</td>
+<td><code>':' - '0' = 10</code>, <code>'/' - '0' = -1</code>; only <code>'0'</code>..<code>'9'</code> give values 0..9</td>
+<td>Validate <code>c &gt;= '0' AND c &lt;= '9'</code> before using <code>c - '0'</code></td>
+</tr>
+<tr>
+<td>Misusing ASCII 32 as a blanket case difference</td>
+<td><code>'a' - 'A' = 32</code>, but subtracting 32 from <code>'0'</code> gives space, and adding 32 to space gives <code>'@'</code></td>
+<td>Apply case conversion only inside letter ranges; treat <code>'a' - 'A' = 32</code> as a constant check, not a universal operation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-practice-questions">7. Practice questions</h2>
+<p><strong>1.</strong> <strong>[Easy]</strong> <em>(B1 — ASCII anchors)</em>
+Which of the following is the ASCII value of the character <code>'K'</code>?
+(a) 74
+(b) 107
+(c) 75
+(d) 76</p>
+<p><strong>2.</strong> <strong>[Easy]</strong> <em>(B2 — character arithmetic)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET ch = &#39;C&#39;
+2. PRINT CODE(ch) + 1
+</code></pre></div>
+
+<p>What is printed?
+(a) 67
+(b) 69
+(c) 68
+(d) 'D'</p>
+<p><strong>3.</strong> <strong>[Easy]</strong> <em>(B1 — case gap)</em>
+What is the value of <code>CODE('d') - CODE('D')</code>?
+(a) 32
+(b) 26
+(c) 31
+(d) 64</p>
+<p><strong>4.</strong> <strong>[Medium]</strong> <em>(B3 — case conversion)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET s = &quot;CAT&quot;
+2. SET r = &quot;&quot;
+3. FOR i = 1 TO LENGTH(s)
+4.     r = r + CHAR(CODE(s[i]) + 32)
+5. END FOR
+6. PRINT r
+</code></pre></div>
+
+<p>What is printed?
+(a) "CAT"
+(b) "Cat"
+(c) "cat"
+(d) "cAt"</p>
+<p><strong>5.</strong> <strong>[Medium]</strong> <em>(B2 — incrementing characters)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET ch = &#39;a&#39;
+2. FOR i = 1 TO 3
+3.     PRINT CODE(ch)
+4.     ch = CHAR(CODE(ch) + 1)
+5. END FOR
+</code></pre></div>
+
+<p>What is printed?
+(a) 98 99 100
+(b) 97 98 99
+(c) 97 98 100
+(d) 65 66 67</p>
+<p><strong>5. (b) 97 98 99</strong>
+ch starts at 'a' = 97 and increments by one after each print.</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>ch before</th>
+<th>CODE printed</th>
+<th>ch after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>'a'</td>
+<td>97</td>
+<td>'b'</td>
+</tr>
+<tr>
+<td>2</td>
+<td>'b'</td>
+<td>98</td>
+<td>'c'</td>
+</tr>
+<tr>
+<td>3</td>
+<td>'c'</td>
+<td>99</td>
+<td>'d'</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 98 99 100 would require ch to start at 'b'.</li>
+<li>(c) 97 98 100 skips 99.</li>
+<li>(d) 65 66 67 is the uppercase sequence A, B, C.</li>
+</ul>
+<hr />
+<p><strong>6.</strong> <strong>[Hard]</strong> <em>(B5 — digit characters vs values)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET c = &#39;7&#39;
+2. SET n = CODE(c) - CODE(&#39;0&#39;)
+3. PRINT n * 2
+</code></pre></div>
+
+<p>What is printed?
+(a) 7
+(b) 55
+(c) 110
+(d) 14</p>
+<p><strong>6. (d) 14</strong>
+'7' = 55 and '0' = 48, so n = 55 − 48 = 7, and 7 × 2 = 14.</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CODE('7')</td>
+<td>55</td>
+</tr>
+<tr>
+<td>CODE('0')</td>
+<td>48</td>
+</tr>
+<tr>
+<td>n</td>
+<td>7</td>
+</tr>
+<tr>
+<td>n * 2</td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 7 is n before doubling.</li>
+<li>(b) 55 is CODE('7') alone.</li>
+<li>(c) 110 is 55 × 2, doubling the code instead of the digit value.</li>
+</ul>
+<hr />
+<p><strong>7.</strong> <strong>[Medium]</strong> <em>(B4 — string traversal)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET s = &quot;PENCIL&quot;
+2. SET count = 0
+3. FOR i = 1 TO LENGTH(s)
+4.     IF s[i] = &#39;E&#39; OR s[i] = &#39;I&#39; THEN
+5.         count = count + 1
+6.     END IF
+7. END FOR
+8. PRINT count
+</code></pre></div>
+
+<p>What is printed?
+(a) 1
+(b) 3
+(c) 2
+(d) 0</p>
+<p><strong>7. (c) 2</strong>
+"PENCIL" contains exactly two vowels from the tested set: 'E' and 'I'.</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>s[i]</th>
+<th>Match?</th>
+<th>count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>P</td>
+<td>no</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>E</td>
+<td>yes</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>N</td>
+<td>no</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>C</td>
+<td>no</td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>I</td>
+<td>yes</td>
+<td>2</td>
+</tr>
+<tr>
+<td>6</td>
+<td>L</td>
+<td>no</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 1 counts only one of the two vowels.</li>
+<li>(b) 3 would require a third matching character.</li>
+<li>(d) 0 ignores the matches entirely.</li>
+</ul>
+<hr />
+<p><strong>8.</strong> <strong>[Hard]</strong> <em>(B3 — case toggle with prepend)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET s = &quot;Ab&quot;
+2. SET r = &quot;&quot;
+3. FOR i = 1 TO LENGTH(s)
+4.     SET c = s[i]
+5.     IF CODE(c) &gt;= 97 THEN
+6.         c = CHAR(CODE(c) - 32)
+7.     ELSE
+8.         c = CHAR(CODE(c) + 32)
+9.     END IF
+10.    r = c + r
+11. END FOR
+12. PRINT r
+</code></pre></div>
+
+<p>What is printed?
+(a) "Ba"
+(b) "aB"
+(c) "AB"
+(d) "ba"</p>
+<p><strong>8. (a) "Ba"</strong>
+The case is flipped on each character, and <code>r = c + r</code> prepends, reversing the order.</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>s[i]</th>
+<th>CODE</th>
+<th>Branch</th>
+<th>c</th>
+<th>r</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>65</td>
+<td>&lt; 97 → +32</td>
+<td>'a'</td>
+<td>"a"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>b</td>
+<td>98</td>
+<td>≥ 97 → −32</td>
+<td>'B'</td>
+<td>"Ba"</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) "aB" is the case-flipped string without the reversal.</li>
+<li>(c) "AB" results if the prepend and flip are both dropped.</li>
+<li>(d) "ba" results if the uppercase-to-lowercase branch is applied to both characters.</li>
+</ul>
+<hr />
+<p><strong>9.</strong> <strong>[Easy]</strong> <em>(B1 — digit ASCII)</em>
+What is the ASCII value of <code>'9'</code>, given <code>'0' = 48</code>?
+(a) 9
+(b) 57
+(c) 56
+(d) 58</p>
+<p><strong>9. (b) 57</strong>
+'0' = 48 and '9' is 9 places ahead, so 48 + 9 = 57.</p>
+<ul>
+<li>(a) 9 is the digit value, not the character code.</li>
+<li>(c) 56 is the code of '8'.</li>
+<li>(d) 58 is the code of the next character after '9'.</li>
+</ul>
+<hr />
+<p><strong>10.</strong> <strong>[Medium]</strong> <em>(B4 — summing codes)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET s = &quot;AZ&quot;
+2. SET sum = 0
+3. FOR i = 1 TO LENGTH(s)
+4.     sum = sum + CODE(s[i])
+5. END FOR
+6. PRINT sum
+</code></pre></div>
+
+<p>What is printed?
+(a) 155
+(b) 156
+(c) 175
+(d) 90</p>
+<p><strong>10. (a) 155</strong>
+'A' = 65 and 'Z' = 90, and 65 + 90 = 155.</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>s[i]</th>
+<th>CODE</th>
+<th>sum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>65</td>
+<td>65</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Z</td>
+<td>90</td>
+<td>155</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) 156 is 155 + 1.</li>
+<li>(c) 175 is 85 + 90, using 'U' instead of 'A'.</li>
+<li>(d) 90 is CODE('Z') alone.</li>
+</ul>
+<hr />
+<p><strong>11.</strong> <strong>[Hard]</strong> <em>(B2 — generating letters)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET s = &quot;&quot;
+2. FOR i = 1 TO 4
+3.     s = s + CHAR(64 + i)
+4. END FOR
+5. PRINT s
+</code></pre></div>
+
+<p>What is printed?
+(a) "BCDE"
+(b) "abcd"
+(c) "DCBA"
+(d) "ABCD"</p>
+<p><strong>11. (d) "ABCD"</strong>
+CHAR(64 + i) yields 65, 66, 67, 68, i.e. 'A', 'B', 'C', 'D', appended in order.</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>64 + i</th>
+<th>CHAR</th>
+<th>s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>65</td>
+<td>'A'</td>
+<td>"A"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>66</td>
+<td>'B'</td>
+<td>"AB"</td>
+</tr>
+<tr>
+<td>3</td>
+<td>67</td>
+<td>'C'</td>
+<td>"ABC"</td>
+</tr>
+<tr>
+<td>4</td>
+<td>68</td>
+<td>'D'</td>
+<td>"ABCD"</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) "BCDE" would need the offset to start at 65 + i with i from 1 to 4 mapping to 66 first, i.e. 65 + i.</li>
+<li>(b) "abcd" needs codes 97–100.</li>
+<li>(c) "DCBA" requires appending in reverse loop order.</li>
+</ul>
+<hr />
+<p><strong>12.</strong> <strong>[Medium]</strong> <em>(B2 — offset from 'A')</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET a = &#39;m&#39;
+2. PRINT CODE(a) - CODE(&#39;A&#39;)
+</code></pre></div>
+
+<p>What is printed?
+(a) 42
+(b) 44
+(c) 32
+(d) 12</p>
+<p><strong>12. (b) 44</strong>
+'m' = 109 and 'A' = 65, so 109 − 65 = 44.</p>
+<ul>
+<li>(a) 42 is two less than the correct offset.</li>
+<li>(c) 32 is the case gap between 'm' and 'M'.</li>
+<li>(d) 12 is far too small for a 'm'-to-'A' offset.</li>
+</ul>
+<hr />
+<p><strong>13.</strong> <strong>[Easy]</strong> <em>(B2 — uppercase range)</em></p>
+<div class="codehilite"><pre><span></span><code>1. PRINT CHAR(CODE(&#39;A&#39;) + 25)
+</code></pre></div>
+
+<p>What is printed?
+(a) 90
+(b) 'Y'
+(c) 'z'
+(d) 'Z'</p>
+<p><strong>13. (d) 'Z'</strong>
+CODE('A') = 65 and 65 + 25 = 90, and CHAR(90) is 'Z'.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CODE('A')</td>
+<td>65</td>
+</tr>
+<tr>
+<td>65 + 25</td>
+<td>90</td>
+</tr>
+<tr>
+<td>CHAR(90)</td>
+<td>'Z'</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 90 is the code, but CHAR returns the character.</li>
+<li>(b) 'Y' is CHAR(89), one short.</li>
+<li>(c) 'z' is CHAR(122), in the lowercase range.</li>
+</ul>
+<hr />
+<p><strong>14.</strong> <strong>[Medium]</strong> <em>(B4 — reverse traversal)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET s = &quot;12AB&quot;
+2. SET t = &quot;&quot;
+3. FOR i = LENGTH(s) DOWNTO 1
+4.     t = t + s[i]
+5. END FOR
+6. PRINT t
+</code></pre></div>
+
+<p>What is printed?
+(a) "BA21"
+(b) "12AB"
+(c) "AB12"
+(d) "21BA"</p>
+<p><strong>14. (a) "BA21"</strong>
+The loop copies characters from the last index to the first, so the string is reversed.</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>s[i]</th>
+<th>t</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>B</td>
+<td>"B"</td>
+</tr>
+<tr>
+<td>3</td>
+<td>A</td>
+<td>"BA"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>"BA2"</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>"BA21"</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) "12AB" is the original, unchanged string.</li>
+<li>(c) "AB12" swaps the two halves but keeps each half in order.</li>
+<li>(d) "21BA" reverses the digit block ahead of the letter block.</li>
+</ul>
+<hr />
+<p><strong>15.</strong> <strong>[Medium]</strong> <em>(B2 — alphabet position)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET ch = &#39;Z&#39;
+2. PRINT CODE(ch) - CODE(&#39;A&#39;)
+</code></pre></div>
+
+<p>What is printed?
+(a) 26
+(b) 24
+(c) 25
+(d) 90</p>
+<p><strong>15. (c) 25</strong>
+'Z' = 90 and 'A' = 65, so 90 − 65 = 25.</p>
+<ul>
+<li>(a) 26 is the count of letters, not the offset from 'A'.</li>
+<li>(b) 24 would be the offset of 'Y' from 'A'.</li>
+<li>(d) 90 is the raw code of 'Z'.</li>
+</ul>
+<hr />
+<p><strong>16.</strong> <strong>[Hard]</strong> <em>(B4 — range test)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET s = &quot;aB3d&quot;
+2. SET up = 0
+3. FOR i = 1 TO LENGTH(s)
+4.     IF s[i] &gt;= &#39;A&#39; AND s[i] &lt;= &#39;Z&#39; THEN
+5.         up = up + 1
+6.     END IF
+7. END FOR
+8. PRINT up
+</code></pre></div>
+
+<p>What is printed?
+(a) 0
+(b) 2
+(c) 4
+(d) 1</p>
+<p><strong>16. (d) 1</strong>
+Only 'B' lies in the range 'A' to 'Z'; 'a', '3' and 'd' do not.</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>s[i]</th>
+<th>CODE</th>
+<th>In A–Z?</th>
+<th>up</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>a</td>
+<td>97</td>
+<td>no</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>B</td>
+<td>66</td>
+<td>yes</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>51</td>
+<td>no</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>d</td>
+<td>100</td>
+<td>no</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 0 ignores the uppercase 'B'.</li>
+<li>(b) 2 wrongly counts 'a' as uppercase.</li>
+<li>(c) 4 counts every character.</li>
+</ul>
+<hr />
+<p><strong>17.</strong> <strong>[Hard]</strong> <em>(B5 — running offset sum)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET n = 0
+2. SET s = &quot;CODE&quot;
+3. FOR i = 1 TO LENGTH(s)
+4.     n = n + (CODE(s[i]) - CODE(&#39;A&#39;))
+5. END FOR
+6. PRINT n
+</code></pre></div>
+
+<p>What is printed?
+(a) 22
+(b) 23
+(c) 24
+(d) 25</p>
+<p><strong>17. (b) 23</strong>
+The offsets of C, O, D, E from 'A' are 2, 14, 3 and 4, giving 2 + 14 + 3 + 4 = 23.</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>s[i]</th>
+<th>CODE</th>
+<th>CODE − 65</th>
+<th>n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>C</td>
+<td>67</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>O</td>
+<td>79</td>
+<td>14</td>
+<td>16</td>
+</tr>
+<tr>
+<td>3</td>
+<td>D</td>
+<td>68</td>
+<td>3</td>
+<td>19</td>
+</tr>
+<tr>
+<td>4</td>
+<td>E</td>
+<td>69</td>
+<td>4</td>
+<td>23</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 22 drops one unit from the running total.</li>
+<li>(c) 24 adds one unit to the running total.</li>
+<li>(d) 25 would require 'Z' in place of one of the letters.</li>
+</ul>
+<hr />
+<p><strong>18.</strong> <strong>[Hard]</strong> <em>(B3 — mixed case normalisation)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET s = &quot;aBcD&quot;
+2. SET r = &quot;&quot;
+3. FOR i = 1 TO LENGTH(s)
+4.     IF CODE(s[i]) &gt;= 97 THEN
+5.         r = r + CHAR(CODE(s[i]) - 32)
+6.     ELSE
+7.         r = r + s[i]
+8.     END IF
+9. END FOR
+10. PRINT r
+</code></pre></div>
+
+<p>What is printed?
+(a) "abcd"
+(b) "ABCD"
+(c) "aBcD"
+(d) "AbCd"</p>
+<hr />
+<p><strong>18. (b) "ABCD"</strong>
+Every lowercase character is shifted up by 32 to uppercase, and the already-uppercase characters are copied unchanged.</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>s[i]</th>
+<th>CODE</th>
+<th>Branch</th>
+<th>Output char</th>
+<th>r</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>a</td>
+<td>97</td>
+<td>≥ 97 → −32</td>
+<td>'A'</td>
+<td>"A"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>B</td>
+<td>66</td>
+<td>&lt; 97 → copy</td>
+<td>'B'</td>
+<td>"AB"</td>
+</tr>
+<tr>
+<td>3</td>
+<td>c</td>
+<td>99</td>
+<td>≥ 97 → −32</td>
+<td>'C'</td>
+<td>"ABC"</td>
+</tr>
+<tr>
+<td>4</td>
+<td>D</td>
+<td>68</td>
+<td>&lt; 97 → copy</td>
+<td>'D'</td>
+<td>"ABCD"</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) "abcd" is the opposite conversion, forcing everything lowercase.</li>
+<li>(c) "aBcD" is the original string unchanged.</li>
+<li>(d) "AbCd" flips each character's case rather than normalising to uppercase.</li>
+</ul>
+<hr />
+<h2 id="8-resources">8. Resources</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Type</th>
+<th>Link</th>
+<th>Free/Paid</th>
+<th>Time</th>
+<th>Why this one</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GfG — ASCII table</td>
+<td>Article</td>
+<td>https://www.geeksforgeeks.org/dsa/ascii-table/</td>
+<td>Free</td>
+<td>10 min</td>
+<td>Only the printable range matters; the five anchors in §2 cover most questions</td>
+</tr>
+<tr>
+<td>PrepInsta — Accenture pseudocode</td>
+<td>Practice set</td>
+<td>https://prepinsta.com/accenture/pseudo-code/general-pseudo-code/</td>
+<td>Free</td>
+<td>25 min</td>
+<td>String-traversal output prediction in the observed style</td>
+</tr>
+<tr>
+<td><code>topics/T30-D2-data-types-conversion.md</code></td>
+<td>Topic file</td>
+<td>(this library)</td>
+<td>Free</td>
+<td>—</td>
+<td>Shares the ASCII facts; read the two together</td>
+</tr>
+<tr>
+<td><code>question-banks/QB-T36-B4-strings-ascii.md</code></td>
+<td>Question bank</td>
+<td>(this library)</td>
+<td>Free</td>
+<td>20 min</td>
+<td>18 original questions, traces verified</td>
+</tr>
+</tbody>
+</table>
+<p><em>Links verified resolving 2026-09-19.</em></p>
+<h2 id="9-self-check">9. Self-check</h2>
+<ul>
+<li>[ ] <strong>I know <code>'A'</code>=65, <code>'a'</code>=97, <code>'0'</code>=48, space=32 without hesitating</strong></li>
+<li>[ ] I know <code>'a' - 'A'</code> is 32 and can use it to change case by arithmetic</li>
+<li>[ ] I know a digit character minus <code>'0'</code> gives its numeric value</li>
+<li>[ ] <strong>I never confuse the character <code>'7'</code> with the number 7</strong></li>
+<li>[ ] I know the last index of a string of length n is n−1</li>
+<li>[ ] I can trace a two-pointer reversal swap by swap</li>
+<li>[ ] I can trace a palindrome check that exits early</li>
+<li>[ ] I know why building a string by concatenation in a loop is O(n²)</li>
+<li>[ ] I scored 14/18 or better on the practice questions</li>
+</ul>
+<h2 id="10-sources">10. Sources</h2>
+<p><strong>Teaching content (§3–§9)</strong> is adapted from <code>accenture-prep-final/accenture-prep-library/topics/T36-B4-strings-ascii.md</code>, which lists its own sources and was verified in that library's QA. <strong>Infosys evidence</strong> for this file: observed questions none in <code>../data/questions-observed.csv</code>; section structure and marks in <code>../research/03-pattern-synthesis.md</code> §1; weightage, tier and hours in <code>../data/weightage.json</code> (code <code>P10</code>). Confidence <strong>Low</strong>. Nothing in this file is a published Infosys syllabus.</p>
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html"><span>Previous</span><strong>P9 — OOP in pseudocode: inheritance and overriding</strong></a><a class="pager next" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html"><span>Next</span><strong>MOCK-01 — Answers and working</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#p10-strings-traversal-reversal-and-ascii-arithmetic">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a><a class="toc-l1" href="#1-why-this-topic-matters-here">1. Why this topic matters here</a><a class="toc-l1" href="#2-exactly-what-gets-asked">2. Exactly what gets asked</a><a class="toc-l1" href="#4-must-memorise-block">4. Must-memorise block</a><a class="toc-l1" href="#5-worked-examples">5. Worked examples</a><a class="toc-l1" href="#6-traps-and-gotchas">6. Traps and gotchas</a><a class="toc-l1" href="#7-practice-questions">7. Practice questions</a><a class="toc-l1" href="#8-resources">8. Resources</a><a class="toc-l1" href="#9-self-check">9. Self-check</a><a class="toc-l1" href="#10-sources">10. Sources</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

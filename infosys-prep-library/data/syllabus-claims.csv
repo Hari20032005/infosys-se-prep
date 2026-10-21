@@ -1,0 +1,67 @@
+review_id,source_date,section,topic_as_stated
+C1,2025,reasoning,data sufficiency
+C1,2025,reasoning,data interpretation
+C1,2025,reasoning,syllogisms and logical deductions
+C1,2025,technical,series and sequences
+C1,2025,technical,coding and decoding
+C1,2025,technical,blood relations
+C1,2025,technical,directions
+C1,2025,technical,cryptarithmetic
+C1,2025,technical,seating arrangements
+C1,2025,technical,ratio and proportion
+C1,2025,technical,averages
+C1,2025,technical,percentages
+C1,2025,technical,si ci profit loss discount
+C1,2025,technical,time and work
+C1,2025,technical,time and distance
+C1,2025,technical,mensuration
+C1,2025,technical,permutations combinations probability
+C1,2025,technical,non-verbal reasoning
+C1,2025,verbal,sentence completion
+C1,2025,verbal,error corrections
+C1,2025,verbal,identification of correct sentence
+C1,2025,verbal,reading comprehension
+C1,2025,verbal,critical reasoning
+C1,2025,pseudocode,arrays
+C1,2025,pseudocode,loops
+C1,2025,pseudocode,nested loops
+C1,2025,pseudocode,conditional statements
+C1,2025,pseudocode,functions
+C1,2025,pseudocode,inheritance
+C1,2025,pseudocode,method overriding
+C1,2025,pseudocode,bitwise operations
+C1,2025,pseudocode,sorting
+C1,2025,pseudocode,complexity analysis
+C1,2025,puzzle,grid number based puzzles
+C1,2025,grammar,cloze test
+C1,2025,writing,general topic essay
+V1,2026-09-20,reasoning,data sufficiency
+V1,2026-09-20,reasoning,data interpretation
+V1,2026-09-20,reasoning,syllogism
+V1,2026-09-20,reasoning,blood relation
+V1,2026-09-20,reasoning,coding decoding
+V1,2026-09-20,technical,number series
+V1,2026-09-20,technical,ratio
+V1,2026-09-20,technical,proportion
+V1,2026-09-20,technical,time speed distance
+V1,2026-09-20,technical,profit loss
+V1,2026-09-20,verbal,reading comprehension
+V1,2026-09-20,verbal,corrective usage
+V1,2026-09-20,verbal,error correction
+V1,2026-09-20,verbal,error identification
+V1,2026-09-20,verbal,para jumbles
+V1,2026-09-20,verbal,synonyms antonyms
+V1,2026-09-20,pseudocode,loop tracing
+V1,2026-09-20,pseudocode,conditional logic
+V1,2026-09-20,pseudocode,recursion
+V1,2026-09-20,pseudocode,arrays
+V1,2026-09-20,pseudocode,string manipulation
+V1,2026-09-20,puzzle,numerical puzzles
+V1,2026-09-20,grammar,tense
+V1,2026-09-20,grammar,articles
+V1,2026-09-20,grammar,prepositions
+V1,2026-09-20,grammar,parts of speech
+V1,2026-09-20,grammar,active passive voice
+V1,2026-09-20,grammar,punctuation
+V1,2026-09-20,writing,formal email writing
+V1,2026-09-20,writing,essay on a topic

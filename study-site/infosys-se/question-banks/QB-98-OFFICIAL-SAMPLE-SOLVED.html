@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QB-98 — The official sample paper, solved · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem current" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Question banks &amp; mock</span></div>
+    <article class="prose">
+<h1 id="qb-98-the-official-sample-paper-solved">QB-98 — The official sample paper, solved</h1>
+<p><strong>Source:</strong> Infosys's own sample test for Systems Engineer, a PDF made by Infosys Ltd in September 2020: <a href="https://infytq.onwingspan.com/public-assets/InfosysCampusRecruitmentSampleTest-SystemsEngineer.pdf">open the PDF</a>. Open it beside this file; the question numbers below are the PDF's own.</p>
+<p><strong>What this is.</strong> 54 questions in five timed sections (Reasoning 25 min, Technical 35 min, Verbal 20 min, Pseudocode 10 min, Puzzle 10 min). It is the only first-party sample question paper I could find for this exam, which is why it ranks above every video and blog in this library (see <code>../research/05-source-credibility.md</code>).</p>
+<p><strong>What this is not.</strong>
+- It is a <strong>2020</strong> sample with five sections. The 2027-batch test is reported to have seven. Treat it as the best evidence of <em>question style</em>, not of the current section counts.
+- The PDF has a CONFIDENTIAL watermark although it sits at a public address. So this file links to it and gives only a <strong>paraphrased gist</strong> of each question plus my own answer and working. Nothing is copied.
+- The PDF <strong>has no answer key</strong>. Every answer here was worked out for this library, not copied from anywhere.</p>
+<p><strong>How each answer was decided</strong> (31 by running code · 21 by judgement · 2 not solved):
+- <em>decided by running code</em>: brute force over the real constraints, a simulation, or a model search. Re-run it with <code>python3 data/official_sample.py</code>; it exits non-zero if any check fails.
+- <em>judgement</em>: verbal and unit-reasoning items. These are the least certain answers in the library, so read the reason, not just the letter.
+- <em>NOT SOLVED</em>: the two multi-select deduction items. They never say which triples count as "related", and the key is not published, so no answer is invented.</p>
+<p>Two answers deserve a warning. Deductive items 3 to 5 (O13 to O15 here) are answered on the reading that <em>the first two statements must entail the third</em>; on a looser reading the answer to O15 changes. The code states both readings.</p>
+<hr />
+<h2 id="section-1-reasoning-ability-logic-set-a-thief-three-computers-data-interpretation">Section 1: Reasoning Ability · logic set: a thief, three computers (data interpretation)</h2>
+<h3 id="o01-logic-set-a-thief-three-computers-data-interpretation-question-1">O01 · logic set: a thief, three computers (data interpretation) · question 1</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Thief, three computers, three tools: which tool was used on Tejas?</li>
+<li><strong>Answer:</strong> wire cutter</li>
+<li><strong>Why:</strong> Enumerate all assignments; exactly one satisfies every clue</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>A19</code></li>
+</ul>
+<h3 id="o02-logic-set-a-thief-three-computers-data-interpretation-question-2">O02 · logic set: a thief, three computers (data interpretation) · question 2</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Same set: in which month was the keyboard taken?</li>
+<li><strong>Answer:</strong> February</li>
+<li><strong>Why:</strong> Same unique assignment</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>A19</code></li>
+</ul>
+<h3 id="o03-logic-set-a-thief-three-computers-data-interpretation-question-3">O03 · logic set: a thief, three computers (data interpretation) · question 3</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Same set: which peripheral did Prithvi lose?</li>
+<li><strong>Answer:</strong> printer</li>
+<li><strong>Why:</strong> Same unique assignment</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>A19</code></li>
+</ul>
+<h3 id="o04-logic-set-a-thief-three-computers-data-interpretation-question-4">O04 · logic set: a thief, three computers (data interpretation) · question 4</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Same set: in which month was the wire cutter used? (fill in)</li>
+<li><strong>Answer:</strong> March</li>
+<li><strong>Why:</strong> Same unique assignment</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>A19</code></li>
+</ul>
+<h3 id="o05-logic-set-a-thief-three-computers-data-interpretation-question-5">O05 · logic set: a thief, three computers (data interpretation) · question 5</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Same set: which computer lost its monitor?</li>
+<li><strong>Answer:</strong> Tejas</li>
+<li><strong>Why:</strong> Same unique assignment</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>A19</code></li>
+</ul>
+<h2 id="section-1-reasoning-ability-data-sufficiency">Section 1: Reasoning Ability · data sufficiency</h2>
+<h3 id="o06-data-sufficiency-question-1">O06 · data sufficiency · question 1</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> How many litres of juice can 375 trees give (oranges per tree; one cup per orange)?</li>
+<li><strong>Answer:</strong> 4 (cannot be determined)</li>
+<li><strong>Why:</strong> A cup is not a volume in litres, so no statement fixes the answer</li>
+<li><strong>How decided:</strong> judgement (no machine check possible) · topic <code>A6</code></li>
+</ul>
+<h3 id="o07-data-sufficiency-question-2">O07 · data sufficiency · question 2</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Three consecutive integers X, Y, Z in no fixed order: which is highest?</li>
+<li><strong>Answer:</strong> 3 (both together)</li>
+<li><strong>Why:</strong> Enumerated every assignment of three consecutive integers: I alone and II alone each leave two candidates; together only X</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>A6</code></li>
+</ul>
+<h3 id="o08-data-sufficiency-question-3">O08 · data sufficiency · question 3</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Rs 4 in 50-paisa and one-rupee coins: how many 50-paisa coins?</li>
+<li><strong>Answer:</strong> 1 (one statement alone: the second)</li>
+<li><strong>Why:</strong> Enumerated (a, b): "fewer 50p than Re 1 coins" leaves two cases; "five coins in total" leaves one</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>A6</code></li>
+</ul>
+<h3 id="o09-data-sufficiency-question-4">O09 · data sufficiency · question 4</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Alloy in ratio 8:6:3:1, zinc Rs 30/kg: cost of copper per kg?</li>
+<li><strong>Answer:</strong> 4 (neither, even together)</li>
+<li><strong>Why:</strong> Two different cost vectors satisfy both statements but give copper at Rs 250 and Rs 260</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>A6</code></li>
+</ul>
+<h3 id="o10-data-sufficiency-question-5">O10 · data sufficiency · question 5</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Is 2000 the average GRE score? (range given; half above, half below 2000)</li>
+<li><strong>Answer:</strong> 4 (neither, even together)</li>
+<li><strong>Why:</strong> Two data sets fit both statements, one with mean 2000 and one without; "half above" describes the median, not the mean</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>A6</code></li>
+</ul>
+<h2 id="section-1-reasoning-ability-deductive-reasoning">Section 1: Reasoning Ability · deductive reasoning</h2>
+<h3 id="o11-deductive-reasoning-question-1">O11 · deductive reasoning · question 1</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Nurses, demand, efficient: choose the three related statements (multi-select)</li>
+<li><strong>Answer:</strong> not solved</li>
+<li><strong>Why:</strong> Multi-select with no stated rule for which triple counts; the official key is not published, so no answer is asserted</li>
+<li><strong>How decided:</strong> NOT SOLVED · topic <code>A4</code></li>
+</ul>
+<h3 id="o12-deductive-reasoning-question-2">O12 · deductive reasoning · question 2</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Rohan, jesters, magicians, criminals: choose the three related statements (multi-select)</li>
+<li><strong>Answer:</strong> not solved</li>
+<li><strong>Why:</strong> Same: multi-select, key not published</li>
+<li><strong>How decided:</strong> NOT SOLVED · topic <code>A4</code></li>
+</ul>
+<h3 id="o13-deductive-reasoning-question-3">O13 · deductive reasoning · question 3</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Books, novels, fiction: which triple is logically related?</li>
+<li><strong>Answer:</strong> a (ADE)</li>
+<li><strong>Why:</strong> "Only novels are fiction" plus "some books are not novels" give "some books are not fiction" (first two entail the third); only ADE passes</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>A4</code></li>
+</ul>
+<h3 id="o14-deductive-reasoning-question-4">O14 · deductive reasoning · question 4</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Painters, farmers, choreographers: which triple is logically related?</li>
+<li><strong>Answer:</strong> c (ACE)</li>
+<li><strong>Why:</strong> "All painters are choreographers" plus "some painters are farmers" give "some farmers are choreographers"; only ACE</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>A4</code></li>
+</ul>
+<h3 id="o15-deductive-reasoning-question-5">O15 · deductive reasoning · question 5</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Fishes, swimmers, carnivorous: which triple is logically related?</li>
+<li><strong>Answer:</strong> d (none of the above)</li>
+<li><strong>Why:</strong> On the reading that the first two statements must entail the third, none of DCB, EDA, BEC works (B and C entail E, but BEC puts E second). On an unordered reading BEC would be the answer; the official key is not published</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>A4</code></li>
+</ul>
+<h2 id="section-2-technical-ability-mathematical-questions">Section 2: Technical Ability · mathematical questions</h2>
+<h3 id="o16-mathematical-questions-question-1">O16 · mathematical questions · question 1</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> LET + LEE = ALL with E = 5: find A + L + L</li>
+<li><strong>Answer:</strong> c (value 5; L=1, T=6, A=3)</li>
+<li><strong>Why:</strong> Brute force over all digit assignments: exactly one solution</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>A20</code></li>
+</ul>
+<h3 id="o17-mathematical-questions-question-2">O17 · mathematical questions · question 2</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> 5 distinct chocolates into 3 distinct containers, none empty: ways?</li>
+<li><strong>Answer:</strong> b (150)</li>
+<li><strong>Why:</strong> 3^5 - 3·2^5 + 3 = 150, confirmed by listing all 243 assignments</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>A18</code></li>
+</ul>
+<h3 id="o18-mathematical-questions-question-3">O18 · mathematical questions · question 3</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Arrangements of KEYBOARD with the vowels only in odd places?</li>
+<li><strong>Answer:</strong> a (2880)</li>
+<li><strong>Why:</strong> P(4,3) × 5! = 24 × 120, confirmed by listing all 40,320 arrangements</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>A18</code></li>
+</ul>
+<h3 id="o19-mathematical-questions-question-4">O19 · mathematical questions · question 4</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Missing term in 0, 2, 5, 10, 17, _, 41</li>
+<li><strong>Answer:</strong> 28</li>
+<li><strong>Why:</strong> Gaps are the consecutive primes 2, 3, 5, 7, 11, 13</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>A2</code></li>
+</ul>
+<h3 id="o20-mathematical-questions-question-5">O20 · mathematical questions · question 5</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> 8 L drawn from a can of milk and replaced by water, four times in all; milk : total = 16 : 81. Original quantity?</li>
+<li><strong>Answer:</strong> c (24 litres)</li>
+<li><strong>Why:</strong> (1 - 8/x)^4 = 16/81 gives 1 - 8/x = 2/3, so x = 24</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>A9</code></li>
+</ul>
+<h2 id="section-2-technical-ability-logic-set-who-attends-the-wedding">Section 2: Technical Ability · logic set: who attends the wedding</h2>
+<h3 id="o21-logic-set-who-attends-the-wedding-question-1">O21 · logic set: who attends the wedding · question 1</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Wedding guests with if-then rules: if Qhorin comes, who must stay away?</li>
+<li><strong>Answer:</strong> e (nobody is forced to stay away)</li>
+<li><strong>Why:</strong> Checked all 128 attendance patterns against the four rules</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>A19</code></li>
+</ul>
+<h3 id="o22-logic-set-who-attends-the-wedding-question-2">O22 · logic set: who attends the wedding · question 2</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> If Ramsay does not come, what must be true?</li>
+<li><strong>Answer:</strong> b (Umar does not come)</li>
+<li><strong>Why:</strong> No Ramsay forces Petyr and Qhorin to come, and Petyr coming rules Umar out; checked all 128 patterns</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>A19</code></li>
+</ul>
+<h3 id="o23-logic-set-who-attends-the-wedding-question-3">O23 · logic set: who attends the wedding · question 3</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> If Umar comes, which statement must NOT be true?</li>
+<li><strong>Answer:</strong> c (Ramsay does not come)</li>
+<li><strong>Why:</strong> If Umar comes, Petyr cannot, so Ramsay must come; checked all 128 patterns</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>A19</code></li>
+</ul>
+<h3 id="o24-logic-set-who-attends-the-wedding-question-4">O24 · logic set: who attends the wedding · question 4</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Which listed group could be exactly the attendees?</li>
+<li><strong>Answer:</strong> e (none of the listed groups works)</li>
+<li><strong>Why:</strong> Each listed group breaks at least one rule</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>A19</code></li>
+</ul>
+<h3 id="o25-logic-set-who-attends-the-wedding-question-5">O25 · logic set: who attends the wedding · question 5</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Who can attend regardless of who else attends?</li>
+<li><strong>Answer:</strong> Varys (and also Qhorin)</li>
+<li><strong>Why:</strong> Adding them never breaks a rule, because neither appears on the "if" side of any rule</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>A19</code></li>
+</ul>
+<h2 id="section-3-verbal-ability-critical-reasoning-strengthen-weaken-inference">Section 3: Verbal Ability · critical reasoning (strengthen, weaken, inference)</h2>
+<h3 id="o26-critical-reasoning-strengthen-weaken-inference-question-1">O26 · critical reasoning (strengthen, weaken, inference) · question 1</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Computer chips from Japan and US missile accuracy: which statement strengthens the argument?</li>
+<li><strong>Answer:</strong> a</li>
+<li><strong>Why:</strong> It ties missile accuracy to computer quality, the link the argument needs</li>
+<li><strong>How decided:</strong> judgement (no machine check possible) · topic <code>V6</code></li>
+</ul>
+<h3 id="o27-critical-reasoning-strengthen-weaken-inference-question-2">O27 · critical reasoning (strengthen, weaken, inference) · question 2</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Ethanol blending and "Jetrol": which statement weakens the argument?</li>
+<li><strong>Answer:</strong> a</li>
+<li><strong>Why:</strong> A fuel that pollutes three times more removes the claimed benefit</li>
+<li><strong>How decided:</strong> judgement (no machine check possible) · topic <code>V6</code></li>
+</ul>
+<h3 id="o28-critical-reasoning-strengthen-weaken-inference-question-3">O28 · critical reasoning (strengthen, weaken, inference) · question 3</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Health of income groups (heights, infant deaths): what can be inferred?</li>
+<li><strong>Answer:</strong> c</li>
+<li><strong>Why:</strong> Nutrition is one factor and is not without significance; the others overreach</li>
+<li><strong>How decided:</strong> judgement (no machine check possible) · topic <code>V6</code></li>
+</ul>
+<h2 id="section-3-verbal-ability-english-corrective-usage-fill-in-the-blank">Section 3: Verbal Ability · English Corrective Usage (fill in the blank)</h2>
+<h3 id="o29-english-corrective-usage-fill-in-the-blank-question-1">O29 · English Corrective Usage (fill in the blank) · question 1</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Fill the blank after "raises transaction costs and ___ in the economy"</li>
+<li><strong>Answer:</strong> a (inefficiencies)</li>
+<li><strong>Why:</strong> The only noun that fits "transaction costs and ..."</li>
+<li><strong>How decided:</strong> judgement (no machine check possible) · topic <code>G1</code></li>
+</ul>
+<h3 id="o30-english-corrective-usage-fill-in-the-blank-question-2">O30 · English Corrective Usage (fill in the blank) · question 2</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Fill the blank: majority of emotional and physical problems ___ the stresses of life</li>
+<li><strong>Answer:</strong> c (have their origins in)</li>
+<li><strong>Why:</strong> Plural subject, "origins in"</li>
+<li><strong>How decided:</strong> judgement (no machine check possible) · topic <code>G1</code></li>
+</ul>
+<h3 id="o31-english-corrective-usage-fill-in-the-blank-question-3">O31 · English Corrective Usage (fill in the blank) · question 3</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Fill the blank: music retailing relies on walk-ins and ___</li>
+<li><strong>Answer:</strong> a (impulse purchase)</li>
+<li><strong>Why:</strong> Walk-in customers buy on impulse</li>
+<li><strong>How decided:</strong> judgement (no machine check possible) · topic <code>G1</code></li>
+</ul>
+<h3 id="o32-english-corrective-usage-fill-in-the-blank-question-4">O32 · English Corrective Usage (fill in the blank) · question 4</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Fill the blank: what has happened since is a ___ of fortune</li>
+<li><strong>Answer:</strong> b (startling reversal)</li>
+<li><strong>Why:</strong> "Reversal of fortune" is the fixed phrase</li>
+<li><strong>How decided:</strong> judgement (no machine check possible) · topic <code>G1</code></li>
+</ul>
+<h2 id="section-3-verbal-ability-english-error-correction-best-phrasing-of-the-underlined-part">Section 3: Verbal Ability · English Error Correction (best phrasing of the underlined part)</h2>
+<h3 id="o33-english-error-correction-best-phrasing-of-the-underlined-part-question-1">O33 · English Error Correction (best phrasing of the underlined part) · question 1</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Skeptics emphasise conditions that fluctuate "and also has ..." : best replacement</li>
+<li><strong>Answer:</strong> b (and have a significant psychological component)</li>
+<li><strong>Why:</strong> Plural subject "conditions" needs "have"</li>
+<li><strong>How decided:</strong> judgement (no machine check possible) · topic <code>V3</code></li>
+</ul>
+<h3 id="o34-english-error-correction-best-phrasing-of-the-underlined-part-question-2">O34 · English Error Correction (best phrasing of the underlined part) · question 2</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Dutch Health Council found "none of the evidence ... were harmful": best replacement</li>
+<li><strong>Answer:</strong> c (no evidence ... was harmful)</li>
+<li><strong>Why:</strong> Singular uncountable "evidence" takes "was"</li>
+<li><strong>How decided:</strong> judgement (no machine check possible) · topic <code>V3</code></li>
+</ul>
+<h3 id="o35-english-error-correction-best-phrasing-of-the-underlined-part-question-3">O35 · English Error Correction (best phrasing of the underlined part) · question 3</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Fear of an enemy "is definitely to be an instinctive quality": best replacement</li>
+<li><strong>Answer:</strong> c (is certainly an instinctive quality)</li>
+<li><strong>Why:</strong> Removes the awkward "definitely to be"</li>
+<li><strong>How decided:</strong> judgement (no machine check possible) · topic <code>V3</code></li>
+</ul>
+<h3 id="o36-english-error-correction-best-phrasing-of-the-underlined-part-question-4">O36 · English Error Correction (best phrasing of the underlined part) · question 4</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Globalization "too uses ... relationships as well for creating": best replacement</li>
+<li><strong>Answer:</strong> b (social and political relationships to create)</li>
+<li><strong>Why:</strong> Plural noun and "to create"; removes the redundancy</li>
+<li><strong>How decided:</strong> judgement (no machine check possible) · topic <code>V3</code></li>
+</ul>
+<h2 id="section-3-verbal-ability-english-error-identification-identify-the-correct-sentence">Section 3: Verbal Ability · English Error Identification (identify the correct sentence)</h2>
+<h3 id="o37-english-error-identification-identify-the-correct-sentence-question-1">O37 · English Error Identification (identify the correct sentence) · question 1</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Passionate efforts "on their own have the ability ...": which sentence is correct?</li>
+<li><strong>Answer:</strong> 1</li>
+<li><strong>Why:</strong> Plural subject, plural pronoun, plural verb, "legendary"</li>
+<li><strong>How decided:</strong> judgement (no machine check possible) · topic <code>V2</code></li>
+</ul>
+<h3 id="o38-english-error-identification-identify-the-correct-sentence-question-2">O38 · English Error Identification (identify the correct sentence) · question 2</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Another relief for airlines and shipping: which sentence is correct?</li>
+<li><strong>Answer:</strong> 3</li>
+<li><strong>Why:</strong> "in relation to" and "hospitality" are right; the others have "An other", "have", "hospitability"</li>
+<li><strong>How decided:</strong> judgement (no machine check possible) · topic <code>V2</code></li>
+</ul>
+<h3 id="o39-english-error-identification-identify-the-correct-sentence-question-3">O39 · English Error Identification (identify the correct sentence) · question 3</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Power sector gains if the coal scheme works: which sentence is correct?</li>
+<li><strong>Answer:</strong> 2</li>
+<li><strong>Why:</strong> "can gain ... scheme ... works" agrees in number and tense</li>
+<li><strong>How decided:</strong> judgement (no machine check possible) · topic <code>V2</code></li>
+</ul>
+<h3 id="o40-english-error-identification-identify-the-correct-sentence-question-4">O40 · English Error Identification (identify the correct sentence) · question 4</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Earning endorsements is a primary challenge: which sentence is correct?</li>
+<li><strong>Answer:</strong> 3</li>
+<li><strong>Why:</strong> "is one of the primary challenges that we face every day"</li>
+<li><strong>How decided:</strong> judgement (no machine check possible) · topic <code>V2</code></li>
+</ul>
+<h2 id="section-3-verbal-ability-reading-comprehension">Section 3: Verbal Ability · reading comprehension</h2>
+<h3 id="o41-reading-comprehension-question-1">O41 · reading comprehension · question 1</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Shakespeare's comedies: what is noted about the techniques?</li>
+<li><strong>Answer:</strong> b (consistently employed in his comedies)</li>
+<li><strong>Why:</strong> The passage says they stay consistent across the comedies</li>
+<li><strong>How decided:</strong> judgement (no machine check possible) · topic <code>V1</code></li>
+</ul>
+<h3 id="o42-reading-comprehension-question-2">O42 · reading comprehension · question 2</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> What is the content of Shakespeare's comedies?</li>
+<li><strong>Answer:</strong> a (love and marriage)</li>
+<li><strong>Why:</strong> Stated directly</li>
+<li><strong>How decided:</strong> judgement (no machine check possible) · topic <code>V1</code></li>
+</ul>
+<h3 id="o43-reading-comprehension-question-3">O43 · reading comprehension · question 3</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Which statement is understood from the passage?</li>
+<li><strong>Answer:</strong> b (techniques consistently evident in all his comedies)</li>
+<li><strong>Why:</strong> Matches the passage; the others misstate it</li>
+<li><strong>How decided:</strong> judgement (no machine check possible) · topic <code>V1</code></li>
+</ul>
+<h3 id="o44-reading-comprehension-question-4">O44 · reading comprehension · question 4</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Where is the lower class made fun of (Dogberry and Verges)?</li>
+<li><strong>Answer:</strong> d (Much Ado About Nothing)</li>
+<li><strong>Why:</strong> Named in the passage</li>
+<li><strong>How decided:</strong> judgement (no machine check possible) · topic <code>V1</code></li>
+</ul>
+<h3 id="o45-reading-comprehension-question-5">O45 · reading comprehension · question 5</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Why are the comedies treasured?</li>
+<li><strong>Answer:</strong> d (the intuitive use of the techniques)</li>
+<li><strong>Why:</strong> The closing sentence</li>
+<li><strong>How decided:</strong> judgement (no machine check possible) · topic <code>V1</code></li>
+</ul>
+<h2 id="section-4-pseudocode-2-marks-each-pseudocode">Section 4: Pseudocode (2 marks each) · pseudocode</h2>
+<h3 id="o46-pseudocode-question-1">O46 · pseudocode · question 1</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Number = 90 tested against 90 &lt; Number &lt; 95: what is displayed?</li>
+<li><strong>Answer:</strong> b (not within the range)</li>
+<li><strong>Why:</strong> The condition 90 &gt; 90 is false, so the else branch runs</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>P6</code></li>
+</ul>
+<h3 id="o47-pseudocode-question-2">O47 · pseudocode · question 2</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> a=6, b=3, c=2 with a three-way condition, else a=b+1: print a+b+c</li>
+<li><strong>Answer:</strong> 9</li>
+<li><strong>Why:</strong> Condition is false, so a = 4; 4 + 3 + 2 = 9</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>P6</code></li>
+</ul>
+<h3 id="o48-pseudocode-question-3">O48 · pseudocode · question 3</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Loop i = 1..5 printing k, then j = j+1, k = k+j: which series?</li>
+<li><strong>Answer:</strong> a (1 3 6 10 15)</li>
+<li><strong>Why:</strong> Trace j and k each pass: triangular numbers</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>P1</code></li>
+</ul>
+<h3 id="o49-pseudocode-question-4">O49 · pseudocode · question 4</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Function with while(b): temp = a MOD b ... called with a=10, b=6</li>
+<li><strong>Answer:</strong> a (2)</li>
+<li><strong>Why:</strong> This is Euclid's algorithm: gcd(10, 6) = 2</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>P7</code></li>
+</ul>
+<h3 id="o50-pseudocode-question-5">O50 · pseudocode · question 5</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> For i from 1 to 1, for j from i to 1: print k+1 with k = 6</li>
+<li><strong>Answer:</strong> c (7)</li>
+<li><strong>Why:</strong> The body runs once: 6 + 1 = 7</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>P1</code></li>
+</ul>
+<h2 id="section-5-puzzle-number-puzzles">Section 5: Puzzle · number puzzles</h2>
+<h3 id="o51-number-puzzles-question-1">O51 · number puzzles · question 1</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> 3x3 grids: first grid's row sums are 12, 15, 18; fill the missing cell of the second (3 marks)</li>
+<li><strong>Answer:</strong> c (9)</li>
+<li><strong>Why:</strong> Row sums rise by 3 and carry on into the second grid: 21, 24, 27, so 7 + 5 + ? = 21</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>Z1</code></li>
+</ul>
+<h3 id="o52-number-puzzles-question-2">O52 · number puzzles · question 2</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Plus figures: arms 7,4,6,8 give 50 and 1,12,20,7 give 80; find the centre for 13,11,9,14 (2 marks)</li>
+<li><strong>Answer:</strong> b (94)</li>
+<li><strong>Why:</strong> Centre = 2 × (sum of the four arms)</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>Z2</code></li>
+</ul>
+<h3 id="o53-number-puzzles-question-3">O53 · number puzzles · question 3</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Circles 4→64 and 3→27 give 98; 6→216 and 2→8 give 232; third pair 9→729 and A→125 (2 marks)</li>
+<li><strong>Answer:</strong> A = 5 (a) and B = 868 (c)</li>
+<li><strong>Why:</strong> Each box = cube + cube + sum of the two small numbers: 64+27+7 = 98; 216+8+8 = 232; so A = 5 and B = 729+125+14</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>Z2</code></li>
+</ul>
+<h3 id="o54-number-puzzles-question-4">O54 · number puzzles · question 4</h3>
+<ul>
+<li><strong>Asks (paraphrased):</strong> Rows 16,25,36,49,64 → 14,16,22,23 → 12,X,9: find X (3 marks)</li>
+<li><strong>Answer:</strong> 11</li>
+<li><strong>Why:</strong> Each number is the digit-sum of its upper-left neighbour plus the digit-sum of its upper-right neighbour</li>
+<li><strong>How decided:</strong> decided by running code · topic <code>Z2</code></li>
+</ul>
+<h2 id="what-this-paper-tells-you">What this paper tells you</h2>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Items in this paper</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>A19</code></td>
+<td>10 (O01, O02, O03, O04, O05, O21, O22, O23, O24, O25)</td>
+</tr>
+<tr>
+<td><code>A4</code></td>
+<td>5 (O11, O12, O13, O14, O15)</td>
+</tr>
+<tr>
+<td><code>A6</code></td>
+<td>5 (O06, O07, O08, O09, O10)</td>
+</tr>
+<tr>
+<td><code>V1</code></td>
+<td>5 (O41, O42, O43, O44, O45)</td>
+</tr>
+<tr>
+<td><code>G1</code></td>
+<td>4 (O29, O30, O31, O32)</td>
+</tr>
+<tr>
+<td><code>V2</code></td>
+<td>4 (O37, O38, O39, O40)</td>
+</tr>
+<tr>
+<td><code>V3</code></td>
+<td>4 (O33, O34, O35, O36)</td>
+</tr>
+<tr>
+<td><code>V6</code></td>
+<td>3 (O26, O27, O28)</td>
+</tr>
+<tr>
+<td><code>Z2</code></td>
+<td>3 (O52, O53, O54)</td>
+</tr>
+<tr>
+<td><code>A18</code></td>
+<td>2 (O17, O18)</td>
+</tr>
+<tr>
+<td><code>P1</code></td>
+<td>2 (O48, O50)</td>
+</tr>
+<tr>
+<td><code>P6</code></td>
+<td>2 (O46, O47)</td>
+</tr>
+<tr>
+<td><code>A2</code></td>
+<td>1 (O19)</td>
+</tr>
+<tr>
+<td><code>A20</code></td>
+<td>1 (O16)</td>
+</tr>
+<tr>
+<td><code>A9</code></td>
+<td>1 (O20)</td>
+</tr>
+<tr>
+<td><code>P7</code></td>
+<td>1 (O49)</td>
+</tr>
+<tr>
+<td><code>Z1</code></td>
+<td>1 (O51)</td>
+</tr>
+</tbody>
+</table>
+<p>Logic sets (<code>A19</code>, <code>A6</code>, <code>A4</code>) are 20 of the 25 questions in the Reasoning and Technical sections of this paper, so they are worth more practice than a plain topic-count suggests. Practise data sufficiency on the <strong>1 / 2 / 3 / 4</strong> scale used here (the banks <code>QB-A6-…</code>, <code>QB-A19-…</code>, <code>QB-A4-…</code> do). Pseudocode uses a numbered-line dialect with <code>Set</code>, <code>For (each i from a to b)</code>, <code>End-for</code> and <code>MOD</code>; the bank <code>QB-P1-…</code> prints its traces in exactly that dialect.</p>
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/question-banks/MOCK-01.html"><span>Previous</span><strong>MOCK-01 — Full-length Systems Engineer mock test</strong></a><a class="pager next" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html"><span>Next</span><strong>QB-99 — Observed Question Pool</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#qb-98-the-official-sample-paper-solved">QB-98 — The official sample paper, solved</a><a class="toc-l1" href="#section-1-reasoning-ability-logic-set-a-thief-three-computers-data-interpretation">Section 1: Reasoning Ability · logic set: a thief, three computers (data interpretation)</a><a class="toc-l1" href="#section-1-reasoning-ability-data-sufficiency">Section 1: Reasoning Ability · data sufficiency</a><a class="toc-l1" href="#section-1-reasoning-ability-deductive-reasoning">Section 1: Reasoning Ability · deductive reasoning</a><a class="toc-l1" href="#section-2-technical-ability-mathematical-questions">Section 2: Technical Ability · mathematical questions</a><a class="toc-l1" href="#section-2-technical-ability-logic-set-who-attends-the-wedding">Section 2: Technical Ability · logic set: who attends the wedding</a><a class="toc-l1" href="#section-3-verbal-ability-critical-reasoning-strengthen-weaken-inference">Section 3: Verbal Ability · critical reasoning (strengthen, weaken, inference)</a><a class="toc-l1" href="#section-3-verbal-ability-english-corrective-usage-fill-in-the-blank">Section 3: Verbal Ability · English Corrective Usage (fill in the blank)</a><a class="toc-l1" href="#section-3-verbal-ability-english-error-correction-best-phrasing-of-the-underlined-part">Section 3: Verbal Ability · English Error Correction (best phrasing of the underlined part)</a><a class="toc-l1" href="#section-3-verbal-ability-english-error-identification-identify-the-correct-sentence">Section 3: Verbal Ability · English Error Identification (identify the correct sentence)</a><a class="toc-l1" href="#section-3-verbal-ability-reading-comprehension">Section 3: Verbal Ability · reading comprehension</a><a class="toc-l1" href="#section-4-pseudocode-2-marks-each-pseudocode">Section 4: Pseudocode (2 marks each) · pseudocode</a><a class="toc-l1" href="#section-5-puzzle-number-puzzles">Section 5: Puzzle · number puzzles</a><a class="toc-l1" href="#what-this-paper-tells-you">What this paper tells you</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem current" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Question banks &amp; mock</span></div>
+    <article class="prose">
+<h1 id="qb-p10-strings-traversal-reversal-and-ascii-arithmetic">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</h1>
+<p><strong>Pseudocode</strong> · <strong>Tier 4</strong> · 18 questions</p>
+<p>Topic file: <a href="/Users/hariharansundaramoorthy/Documents/my projects/infosys/infosys-prep-library/pseudocode/P10-strings-ascii.md"><code>P10-strings-ascii.md</code></a></p>
+<p><em>Adapted from <code>accenture-prep-final/accenture-prep-library/question-banks/QB-T36-B4-strings-ascii.md</code>; verified in that library's QA. Questions and answer key are unchanged.</em></p>
+<p><strong>How to use this bank.</strong> Attempt every question before opening the key, at the real pace for this section (120 seconds a question). Answer letters are balanced across a–d.</p>
+<hr />
+<p><strong>1.</strong> <strong>[Easy]</strong> <em>(B1 — ASCII anchors)</em>
+Which of the following is the ASCII value of the character <code>'K'</code>?
+(a) 74
+(b) 107
+(c) 75
+(d) 76</p>
+<p><strong>1. (c) 75</strong>
+'A' is 65 and 'K' is 10 letters ahead, so 65 + 10 = 75.</p>
+<ul>
+<li>(a) 74 is the code of 'J'.</li>
+<li>(b) 107 is the code of lowercase 'k'.</li>
+<li>(d) 76 is the code of 'L'.</li>
+</ul>
+<hr />
+<p><strong>2.</strong> <strong>[Easy]</strong> <em>(B2 — character arithmetic)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET ch = &#39;C&#39;
+2. PRINT CODE(ch) + 1
+</code></pre></div>
+
+<p>What is printed?
+(a) 67
+(b) 69
+(c) 68
+(d) 'D'</p>
+<p><strong>2. (c) 68</strong>
+CODE('C') = 67, and 67 + 1 = 68.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CODE('C')</td>
+<td>67</td>
+</tr>
+<tr>
+<td>67 + 1</td>
+<td>68</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 67 is CODE('C') itself, without the +1.</li>
+<li>(b) 69 is 67 + 2.</li>
+<li>(d) <code>'D'</code> is the character whose code is 68, but the statement prints <code>CODE(ch) + 1</code>, which is the number itself, not the character it stands for.</li>
+</ul>
+<hr />
+<p><strong>3.</strong> <strong>[Easy]</strong> <em>(B1 — case gap)</em>
+What is the value of <code>CODE('d') - CODE('D')</code>?
+(a) 32
+(b) 26
+(c) 31
+(d) 64</p>
+<p><strong>3. (a) 32</strong>
+'d' = 100 and 'D' = 68, so 100 − 68 = 32.</p>
+<ul>
+<li>(b) 26 is the number of letters in the alphabet, not the case gap.</li>
+<li>(c) 31 is one less than the constant case gap.</li>
+<li>(d) 64 is twice the case gap.</li>
+</ul>
+<hr />
+<p><strong>4.</strong> <strong>[Medium]</strong> <em>(B3 — case conversion)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET s = &quot;CAT&quot;
+2. SET r = &quot;&quot;
+3. FOR i = 1 TO LENGTH(s)
+4.     r = r + CHAR(CODE(s[i]) + 32)
+5. END FOR
+6. PRINT r
+</code></pre></div>
+
+<p>What is printed?
+(a) "CAT"
+(b) "Cat"
+(c) "cat"
+(d) "cAt"</p>
+<p><strong>4. (c) "cat"</strong>
+Adding 32 to each uppercase code shifts every letter into lowercase.</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>s[i]</th>
+<th>CODE + 32</th>
+<th>r</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>C</td>
+<td>67 + 32 = 99 = 'c'</td>
+<td>"c"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A</td>
+<td>65 + 32 = 97 = 'a'</td>
+<td>"ca"</td>
+</tr>
+<tr>
+<td>3</td>
+<td>T</td>
+<td>84 + 32 = 116 = 't'</td>
+<td>"cat"</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) "CAT" results if the +32 is omitted.</li>
+<li>(b) "Cat" results if only non-first letters are shifted.</li>
+<li>(d) "cAt" results if the loop skips index 2.</li>
+</ul>
+<hr />
+<p><strong>5.</strong> <strong>[Medium]</strong> <em>(B2 — incrementing characters)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET ch = &#39;a&#39;
+2. FOR i = 1 TO 3
+3.     PRINT CODE(ch)
+4.     ch = CHAR(CODE(ch) + 1)
+5. END FOR
+</code></pre></div>
+
+<p>What is printed?
+(a) 98 99 100
+(b) 97 98 99
+(c) 97 98 100
+(d) 65 66 67</p>
+<p><strong>5. (b) 97 98 99</strong>
+ch starts at 'a' = 97 and increments by one after each print.</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>ch before</th>
+<th>CODE printed</th>
+<th>ch after</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>'a'</td>
+<td>97</td>
+<td>'b'</td>
+</tr>
+<tr>
+<td>2</td>
+<td>'b'</td>
+<td>98</td>
+<td>'c'</td>
+</tr>
+<tr>
+<td>3</td>
+<td>'c'</td>
+<td>99</td>
+<td>'d'</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 98 99 100 would require ch to start at 'b'.</li>
+<li>(c) 97 98 100 skips 99.</li>
+<li>(d) 65 66 67 is the uppercase sequence A, B, C.</li>
+</ul>
+<hr />
+<p><strong>6.</strong> <strong>[Hard]</strong> <em>(B5 — digit characters vs values)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET c = &#39;7&#39;
+2. SET n = CODE(c) - CODE(&#39;0&#39;)
+3. PRINT n * 2
+</code></pre></div>
+
+<p>What is printed?
+(a) 7
+(b) 55
+(c) 110
+(d) 14</p>
+<p><strong>6. (d) 14</strong>
+'7' = 55 and '0' = 48, so n = 55 − 48 = 7, and 7 × 2 = 14.</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CODE('7')</td>
+<td>55</td>
+</tr>
+<tr>
+<td>CODE('0')</td>
+<td>48</td>
+</tr>
+<tr>
+<td>n</td>
+<td>7</td>
+</tr>
+<tr>
+<td>n * 2</td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 7 is n before doubling.</li>
+<li>(b) 55 is CODE('7') alone.</li>
+<li>(c) 110 is 55 × 2, doubling the code instead of the digit value.</li>
+</ul>
+<hr />
+<p><strong>7.</strong> <strong>[Medium]</strong> <em>(B4 — string traversal)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET s = &quot;PENCIL&quot;
+2. SET count = 0
+3. FOR i = 1 TO LENGTH(s)
+4.     IF s[i] = &#39;E&#39; OR s[i] = &#39;I&#39; THEN
+5.         count = count + 1
+6.     END IF
+7. END FOR
+8. PRINT count
+</code></pre></div>
+
+<p>What is printed?
+(a) 1
+(b) 3
+(c) 2
+(d) 0</p>
+<p><strong>7. (c) 2</strong>
+"PENCIL" contains exactly two vowels from the tested set: 'E' and 'I'.</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>s[i]</th>
+<th>Match?</th>
+<th>count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>P</td>
+<td>no</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>E</td>
+<td>yes</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>N</td>
+<td>no</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>C</td>
+<td>no</td>
+<td>1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>I</td>
+<td>yes</td>
+<td>2</td>
+</tr>
+<tr>
+<td>6</td>
+<td>L</td>
+<td>no</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 1 counts only one of the two vowels.</li>
+<li>(b) 3 would require a third matching character.</li>
+<li>(d) 0 ignores the matches entirely.</li>
+</ul>
+<hr />
+<p><strong>8.</strong> <strong>[Hard]</strong> <em>(B3 — case toggle with prepend)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET s = &quot;Ab&quot;
+2. SET r = &quot;&quot;
+3. FOR i = 1 TO LENGTH(s)
+4.     SET c = s[i]
+5.     IF CODE(c) &gt;= 97 THEN
+6.         c = CHAR(CODE(c) - 32)
+7.     ELSE
+8.         c = CHAR(CODE(c) + 32)
+9.     END IF
+10.    r = c + r
+11. END FOR
+12. PRINT r
+</code></pre></div>
+
+<p>What is printed?
+(a) "Ba"
+(b) "aB"
+(c) "AB"
+(d) "ba"</p>
+<p><strong>8. (a) "Ba"</strong>
+The case is flipped on each character, and <code>r = c + r</code> prepends, reversing the order.</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>s[i]</th>
+<th>CODE</th>
+<th>Branch</th>
+<th>c</th>
+<th>r</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>65</td>
+<td>&lt; 97 → +32</td>
+<td>'a'</td>
+<td>"a"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>b</td>
+<td>98</td>
+<td>≥ 97 → −32</td>
+<td>'B'</td>
+<td>"Ba"</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) "aB" is the case-flipped string without the reversal.</li>
+<li>(c) "AB" results if the prepend and flip are both dropped.</li>
+<li>(d) "ba" results if the uppercase-to-lowercase branch is applied to both characters.</li>
+</ul>
+<hr />
+<p><strong>9.</strong> <strong>[Easy]</strong> <em>(B1 — digit ASCII)</em>
+What is the ASCII value of <code>'9'</code>, given <code>'0' = 48</code>?
+(a) 9
+(b) 57
+(c) 56
+(d) 58</p>
+<p><strong>9. (b) 57</strong>
+'0' = 48 and '9' is 9 places ahead, so 48 + 9 = 57.</p>
+<ul>
+<li>(a) 9 is the digit value, not the character code.</li>
+<li>(c) 56 is the code of '8'.</li>
+<li>(d) 58 is the code of the next character after '9'.</li>
+</ul>
+<hr />
+<p><strong>10.</strong> <strong>[Medium]</strong> <em>(B4 — summing codes)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET s = &quot;AZ&quot;
+2. SET sum = 0
+3. FOR i = 1 TO LENGTH(s)
+4.     sum = sum + CODE(s[i])
+5. END FOR
+6. PRINT sum
+</code></pre></div>
+
+<p>What is printed?
+(a) 155
+(b) 156
+(c) 175
+(d) 90</p>
+<p><strong>10. (a) 155</strong>
+'A' = 65 and 'Z' = 90, and 65 + 90 = 155.</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>s[i]</th>
+<th>CODE</th>
+<th>sum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>65</td>
+<td>65</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Z</td>
+<td>90</td>
+<td>155</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) 156 is 155 + 1.</li>
+<li>(c) 175 is 85 + 90, using 'U' instead of 'A'.</li>
+<li>(d) 90 is CODE('Z') alone.</li>
+</ul>
+<hr />
+<p><strong>11.</strong> <strong>[Hard]</strong> <em>(B2 — generating letters)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET s = &quot;&quot;
+2. FOR i = 1 TO 4
+3.     s = s + CHAR(64 + i)
+4. END FOR
+5. PRINT s
+</code></pre></div>
+
+<p>What is printed?
+(a) "BCDE"
+(b) "abcd"
+(c) "DCBA"
+(d) "ABCD"</p>
+<p><strong>11. (d) "ABCD"</strong>
+CHAR(64 + i) yields 65, 66, 67, 68, i.e. 'A', 'B', 'C', 'D', appended in order.</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>64 + i</th>
+<th>CHAR</th>
+<th>s</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>65</td>
+<td>'A'</td>
+<td>"A"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>66</td>
+<td>'B'</td>
+<td>"AB"</td>
+</tr>
+<tr>
+<td>3</td>
+<td>67</td>
+<td>'C'</td>
+<td>"ABC"</td>
+</tr>
+<tr>
+<td>4</td>
+<td>68</td>
+<td>'D'</td>
+<td>"ABCD"</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) "BCDE" would need the offset to start at 65 + i with i from 1 to 4 mapping to 66 first, i.e. 65 + i.</li>
+<li>(b) "abcd" needs codes 97–100.</li>
+<li>(c) "DCBA" requires appending in reverse loop order.</li>
+</ul>
+<hr />
+<p><strong>12.</strong> <strong>[Medium]</strong> <em>(B2 — offset from 'A')</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET a = &#39;m&#39;
+2. PRINT CODE(a) - CODE(&#39;A&#39;)
+</code></pre></div>
+
+<p>What is printed?
+(a) 42
+(b) 44
+(c) 32
+(d) 12</p>
+<p><strong>12. (b) 44</strong>
+'m' = 109 and 'A' = 65, so 109 − 65 = 44.</p>
+<ul>
+<li>(a) 42 is two less than the correct offset.</li>
+<li>(c) 32 is the case gap between 'm' and 'M'.</li>
+<li>(d) 12 is far too small for a 'm'-to-'A' offset.</li>
+</ul>
+<hr />
+<p><strong>13.</strong> <strong>[Easy]</strong> <em>(B2 — uppercase range)</em></p>
+<div class="codehilite"><pre><span></span><code>1. PRINT CHAR(CODE(&#39;A&#39;) + 25)
+</code></pre></div>
+
+<p>What is printed?
+(a) 90
+(b) 'Y'
+(c) 'z'
+(d) 'Z'</p>
+<p><strong>13. (d) 'Z'</strong>
+CODE('A') = 65 and 65 + 25 = 90, and CHAR(90) is 'Z'.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CODE('A')</td>
+<td>65</td>
+</tr>
+<tr>
+<td>65 + 25</td>
+<td>90</td>
+</tr>
+<tr>
+<td>CHAR(90)</td>
+<td>'Z'</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 90 is the code, but CHAR returns the character.</li>
+<li>(b) 'Y' is CHAR(89), one short.</li>
+<li>(c) 'z' is CHAR(122), in the lowercase range.</li>
+</ul>
+<hr />
+<p><strong>14.</strong> <strong>[Medium]</strong> <em>(B4 — reverse traversal)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET s = &quot;12AB&quot;
+2. SET t = &quot;&quot;
+3. FOR i = LENGTH(s) DOWNTO 1
+4.     t = t + s[i]
+5. END FOR
+6. PRINT t
+</code></pre></div>
+
+<p>What is printed?
+(a) "BA21"
+(b) "12AB"
+(c) "AB12"
+(d) "21BA"</p>
+<p><strong>14. (a) "BA21"</strong>
+The loop copies characters from the last index to the first, so the string is reversed.</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>s[i]</th>
+<th>t</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>B</td>
+<td>"B"</td>
+</tr>
+<tr>
+<td>3</td>
+<td>A</td>
+<td>"BA"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>"BA2"</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>"BA21"</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) "12AB" is the original, unchanged string.</li>
+<li>(c) "AB12" swaps the two halves but keeps each half in order.</li>
+<li>(d) "21BA" reverses the digit block ahead of the letter block.</li>
+</ul>
+<hr />
+<p><strong>15.</strong> <strong>[Medium]</strong> <em>(B2 — alphabet position)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET ch = &#39;Z&#39;
+2. PRINT CODE(ch) - CODE(&#39;A&#39;)
+</code></pre></div>
+
+<p>What is printed?
+(a) 26
+(b) 24
+(c) 25
+(d) 90</p>
+<p><strong>15. (c) 25</strong>
+'Z' = 90 and 'A' = 65, so 90 − 65 = 25.</p>
+<ul>
+<li>(a) 26 is the count of letters, not the offset from 'A'.</li>
+<li>(b) 24 would be the offset of 'Y' from 'A'.</li>
+<li>(d) 90 is the raw code of 'Z'.</li>
+</ul>
+<hr />
+<p><strong>16.</strong> <strong>[Hard]</strong> <em>(B4 — range test)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET s = &quot;aB3d&quot;
+2. SET up = 0
+3. FOR i = 1 TO LENGTH(s)
+4.     IF s[i] &gt;= &#39;A&#39; AND s[i] &lt;= &#39;Z&#39; THEN
+5.         up = up + 1
+6.     END IF
+7. END FOR
+8. PRINT up
+</code></pre></div>
+
+<p>What is printed?
+(a) 0
+(b) 2
+(c) 4
+(d) 1</p>
+<p><strong>16. (d) 1</strong>
+Only 'B' lies in the range 'A' to 'Z'; 'a', '3' and 'd' do not.</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>s[i]</th>
+<th>CODE</th>
+<th>In A–Z?</th>
+<th>up</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>a</td>
+<td>97</td>
+<td>no</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>B</td>
+<td>66</td>
+<td>yes</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td>51</td>
+<td>no</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>d</td>
+<td>100</td>
+<td>no</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 0 ignores the uppercase 'B'.</li>
+<li>(b) 2 wrongly counts 'a' as uppercase.</li>
+<li>(c) 4 counts every character.</li>
+</ul>
+<hr />
+<p><strong>17.</strong> <strong>[Hard]</strong> <em>(B5 — running offset sum)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET n = 0
+2. SET s = &quot;CODE&quot;
+3. FOR i = 1 TO LENGTH(s)
+4.     n = n + (CODE(s[i]) - CODE(&#39;A&#39;))
+5. END FOR
+6. PRINT n
+</code></pre></div>
+
+<p>What is printed?
+(a) 22
+(b) 23
+(c) 24
+(d) 25</p>
+<p><strong>17. (b) 23</strong>
+The offsets of C, O, D, E from 'A' are 2, 14, 3 and 4, giving 2 + 14 + 3 + 4 = 23.</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>s[i]</th>
+<th>CODE</th>
+<th>CODE − 65</th>
+<th>n</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>C</td>
+<td>67</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>O</td>
+<td>79</td>
+<td>14</td>
+<td>16</td>
+</tr>
+<tr>
+<td>3</td>
+<td>D</td>
+<td>68</td>
+<td>3</td>
+<td>19</td>
+</tr>
+<tr>
+<td>4</td>
+<td>E</td>
+<td>69</td>
+<td>4</td>
+<td>23</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 22 drops one unit from the running total.</li>
+<li>(c) 24 adds one unit to the running total.</li>
+<li>(d) 25 would require 'Z' in place of one of the letters.</li>
+</ul>
+<hr />
+<p><strong>18.</strong> <strong>[Hard]</strong> <em>(B3 — mixed case normalisation)</em></p>
+<div class="codehilite"><pre><span></span><code>1. SET s = &quot;aBcD&quot;
+2. SET r = &quot;&quot;
+3. FOR i = 1 TO LENGTH(s)
+4.     IF CODE(s[i]) &gt;= 97 THEN
+5.         r = r + CHAR(CODE(s[i]) - 32)
+6.     ELSE
+7.         r = r + s[i]
+8.     END IF
+9. END FOR
+10. PRINT r
+</code></pre></div>
+
+<p>What is printed?
+(a) "abcd"
+(b) "ABCD"
+(c) "aBcD"
+(d) "AbCd"</p>
+<hr />
+<p><strong>18. (b) "ABCD"</strong>
+Every lowercase character is shifted up by 32 to uppercase, and the already-uppercase characters are copied unchanged.</p>
+<table>
+<thead>
+<tr>
+<th>i</th>
+<th>s[i]</th>
+<th>CODE</th>
+<th>Branch</th>
+<th>Output char</th>
+<th>r</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>a</td>
+<td>97</td>
+<td>≥ 97 → −32</td>
+<td>'A'</td>
+<td>"A"</td>
+</tr>
+<tr>
+<td>2</td>
+<td>B</td>
+<td>66</td>
+<td>&lt; 97 → copy</td>
+<td>'B'</td>
+<td>"AB"</td>
+</tr>
+<tr>
+<td>3</td>
+<td>c</td>
+<td>99</td>
+<td>≥ 97 → −32</td>
+<td>'C'</td>
+<td>"ABC"</td>
+</tr>
+<tr>
+<td>4</td>
+<td>D</td>
+<td>68</td>
+<td>&lt; 97 → copy</td>
+<td>'D'</td>
+<td>"ABCD"</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) "abcd" is the opposite conversion, forcing everything lowercase.</li>
+<li>(c) "aBcD" is the original string unchanged.</li>
+<li>(d) "AbCd" flips each character's case rather than normalising to uppercase.</li>
+</ul>
+<hr />
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html"><span>Previous</span><strong>QB-P9 — OOP tracing</strong></a><a class="pager next" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html"><span>Next</span><strong>QB-V2 — Identify the correct sentence</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#qb-p10-strings-traversal-reversal-and-ascii-arithmetic">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

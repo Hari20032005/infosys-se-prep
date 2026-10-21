@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A14 — Simple and compound interest · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem current" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Topic files</span></div>
+    <article class="prose">
+<!-- Drafted by DeepSeek V4.1 Flash via ds.py; reviewed by Claude 2026-09-21. Answer
+     letters rebalanced by data/shuffle.py (correctness-preserving: option text is
+     swapped and the key letter repointed). Numeric keys re-checked by
+     data/verify_keys.py. -->
+
+<h1 id="a14-simple-and-compound-interest">A14 — Simple and compound interest</h1><p class="fm-line" style="color:var(--ink-faint);font-size:13px;margin:-.4em 0 1.2em">Tier 4 · Technical Ability · 0.7% of marks · about 0.7 h · confidence Low</p>
+<p><em>Adapted from <code>L&amp;T/lt-prep-library/topics/Q6-simple-and-compound-interest.md</code>; verified in that library's QA. §1 and §10 are regenerated for Infosys from <code>data/weightage.json</code>; §2 gains an Infosys evidence table; §3–§9 are the source text unchanged, so "observed" in the worked examples refers to the source paper.</em></p>
+<h2 id="1-why-this-topic-matters-here">1. Why this topic matters here</h2>
+<p>Expect about <strong>0.5 questions and 0.5 marks</strong> on this topic (about 0.7% of the 75 scored marks). It sits in <strong>Technical Ability</strong>, part of the 25-question aptitude block (Reasoning Ability 15 Q / 25 min + Technical Ability 10 Q / 35 min, one cut-off each). <strong>Tier 4</strong>, 0.7 hours to reach reliable recall, confidence <strong>Low</strong>.</p>
+<p><strong>No Infosys question on this topic was recovered.</strong> It rests on syllabus lists or first-hand naming only (C1), so its share is an allocation, not an observation.</p>
+<p><strong>Why the tier:</strong> expected marks per study hour, weighted by confidence, is 0.45 against a paper average of 1.84 (<code>../data/analysis-tables.md</code> §6). Every section has its own cut-off, so a zero here costs the whole section's chance, not only these marks. There is no calculator. Negative marking: none reported.</p>
+<h2 id="2-exactly-what-gets-asked">2. Exactly what gets asked</h2>
+<h3 id="what-infosys-asked">What Infosys asked</h3>
+<p>No question on this topic was recovered. Listed by: C1.</p>
+<blockquote>
+<p>The pattern notes below come from the library this file was adapted from. Any frequency or "observed paper" remark in them describes that source paper, not Infosys. The Infosys evidence is the table above.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Sub-pattern</th>
+<th>How it appears</th>
+<th>Roughly how often</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Straight SI for a period</td>
+<td>Given P, R, T (years); find SI or amount</td>
+<td>Very common</td>
+</tr>
+<tr>
+<td>Straight CI for 2–3 years</td>
+<td>Given P, R; find amount or CI</td>
+<td>Very common</td>
+</tr>
+<tr>
+<td>Difference between CI and SI</td>
+<td>"CI − SI for 2 years is ₹X, find P/R"</td>
+<td>Common</td>
+</tr>
+<tr>
+<td>CI with fractional/odd time</td>
+<td>2 years 6 months, or compounded half-yearly</td>
+<td>Occasional</td>
+</tr>
+<tr>
+<td>Population/depreciation</td>
+<td>Growth or decay using the CI formula</td>
+<td>Occasional</td>
+</tr>
+<tr>
+<td>Installments / equal annual payment</td>
+<td>Rare at campus level</td>
+<td>Rare</td>
+</tr>
+<tr>
+<td>Rate or time as the unknown</td>
+<td>Solve backward for R or T</td>
+<td>Occasional</td>
+</tr>
+</tbody>
+</table>
+<p>The first three rows carry almost all the marks. If you can compute CI − SI for two years instantly, you have covered the highest-value pattern.</p>
+<h2 id="3-concept-notes">3. Concept notes</h2>
+<h3 id="31-the-vocabulary">3.1 The vocabulary</h3>
+<p><strong>Principal (P)</strong> — the money lent or borrowed. <strong>Rate (R)</strong> — percent per annum. <strong>Time (T)</strong> — in years. <strong>Interest</strong> — the charge for using money. <strong>Amount (A)</strong> — principal plus interest, i.e. A = P + interest.</p>
+<p>Simple interest charges on the original principal only, every year. Compound interest charges on principal <em>plus interest already earned</em>, so it grows on itself.</p>
+<h3 id="32-simple-interest">3.2 Simple interest</h3>
+<p><strong>SI = P × R × T / 100</strong>
+<strong>Amount A = P + SI = P(1 + RT/100)</strong></p>
+<p>Example: P = 5000, R = 8%, T = 3 years → SI = 5000 × 8 × 3 / 100 = <strong>₹1200</strong>, A = ₹6200.</p>
+<p>Note the linearity. Double the time, double the interest. Double the rate, double the interest. SI for 5 years at 6% is exactly five times SI for 1 year at 6%.</p>
+<h3 id="33-compound-interest-annual-compounding">3.3 Compound interest — annual compounding</h3>
+<p><strong>A = P(1 + R/100)^T</strong>
+<strong>CI = A − P</strong></p>
+<p>Example: P = 5000, R = 8%, T = 2 → A = 5000 × 1.08² = 5000 × 1.1664 = <strong>₹5832</strong>, CI = ₹832.</p>
+<p>The bracket (1 + R/100) is called the <strong>growth factor</strong>. If R = 10%, the factor is 1.1. If R = 12.5%, it is 1.125. Get into the habit of converting R to a factor first, then raising it to the power T. Squaring 1.08 mentally is far easier than squaring 108/100.</p>
+<h3 id="34-the-ci-si-difference-the-highest-value-shortcut">3.4 The CI − SI difference — the highest-value shortcut</h3>
+<p>For <strong>2 years</strong>:
+<strong>CI − SI = P × (R/100)²</strong></p>
+<p>Example: P = 10000, R = 10%, T = 2. SI = 2000. CI = 10000 × 0.21 = 2100. Difference = <strong>₹100</strong>. Check: 10000 × (0.1)² = 10000 × 0.01 = ₹100. ✓</p>
+<p>For <strong>3 years</strong>:
+<strong>CI − SI = P × (R/100)² × (300 + R)/100</strong></p>
+<p>Example: P = 10000, R = 10%, T = 3. Difference = 10000 × 0.01 × 310/100 = 100 × 3.1 = <strong>₹310</strong>. Slow check: CI = 10000 × 1.331 − 10000 = 3310; SI = 3000; difference 310. ✓</p>
+<h3 id="35-ci-for-two-years-expanded">3.5 CI for two years, expanded</h3>
+<p><strong>CI₂ = P × (2R/100 + (R/100)²)</strong>
+Equivalently, the two-year effective rate is <strong>2R + R²/100</strong> percent.</p>
+<p>Example: R = 10% → effective 2-year rate = 20 + 1 = <strong>21%</strong>. So on ₹10000 the CI is ₹2100.</p>
+<p>Effective rate table for two years:</p>
+<table>
+<thead>
+<tr>
+<th>R per annum</th>
+<th>Effective 2-year rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5%</td>
+<td>10.25%</td>
+</tr>
+<tr>
+<td>8%</td>
+<td>16.64%</td>
+</tr>
+<tr>
+<td>10%</td>
+<td>21%</td>
+</tr>
+<tr>
+<td>12%</td>
+<td>25.44%</td>
+</tr>
+<tr>
+<td>15%</td>
+<td>32.25%</td>
+</tr>
+<tr>
+<td>20%</td>
+<td>44%</td>
+</tr>
+<tr>
+<td>25%</td>
+<td>56.25%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="36-compounding-more-than-once-a-year">3.6 Compounding more than once a year</h3>
+<p>If compounded <strong>half-yearly</strong>: rate per half-year = R/2, number of periods = 2T.
+<strong>A = P(1 + R/200)^(2T)</strong></p>
+<p>If compounded <strong>quarterly</strong>: rate per quarter = R/4, periods = 4T.
+<strong>A = P(1 + R/400)^(4T)</strong></p>
+<p>Example: P = 8000, R = 10%, T = 1 year, half-yearly → A = 8000 × (1.05)² = 8000 × 1.1025 = <strong>₹8820</strong>.</p>
+<p>A <strong>higher</strong> compounding frequency always gives a <strong>higher</strong> amount for the same nominal rate. Half-yearly beats annual; quarterly beats half-yearly.</p>
+<h3 id="37-fractional-time-under-ci">3.7 Fractional time under CI</h3>
+<p>When T is not a whole number of years, textbooks treat the fractional tail as <strong>simple</strong> interest on the last amount.</p>
+<p>Example: P = 1000, R = 10%, T = 2 years 6 months.
+A after 2 years = 1000 × 1.21 = 1210.
+SI on 1210 for 6 months at 10% = 1210 × 10 × 0.5 / 100 = 60.5.
+A = <strong>₹1270.50</strong>.</p>
+<p>Check the question's wording — many papers simply use the exact power instead.</p>
+<h3 id="38-population-and-depreciation">3.8 Population and depreciation</h3>
+<p>Same formula, different words.
+- Growth: <strong>P_final = P_initial × (1 + R/100)^n</strong>
+- Depreciation/decay: <strong>P_final = P_initial × (1 − R/100)^n</strong></p>
+<p>Example: A machine worth ₹50000 depreciates 20% a year. After 2 years: 50000 × 0.8² = 50000 × 0.64 = <strong>₹32000</strong>.</p>
+<h3 id="39-solving-for-the-unknown">3.9 Solving for the unknown</h3>
+<p>SI: from SI = PRT/100, get <strong>P = 100·SI/(RT)</strong>, <strong>R = 100·SI/(PT)</strong>, <strong>T = 100·SI/(PR)</strong>.</p>
+<p>CI: usually easier to work backward via the factor. If the amount doubles in 5 years, the factor is 2, so 2 = (1+R/100)^5 — no need to solve for R directly if the question only asks "when will it be 4×?" Answer: 10 years, because squaring the factor squares the exponent multiple.</p>
+<h3 id="310-doubling-and-other-memorised-multipliers">3.10 Doubling and other memorised multipliers</h3>
+<table>
+<thead>
+<tr>
+<th>Growth factor</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.1² = 1.21</td>
+<td>10% for 2 years</td>
+</tr>
+<tr>
+<td>1.1³ = 1.331</td>
+<td>10% for 3 years</td>
+</tr>
+<tr>
+<td>1.05² = 1.1025</td>
+<td>5% for 2 years</td>
+</tr>
+<tr>
+<td>1.08² = 1.1664</td>
+<td>8% for 2 years</td>
+</tr>
+<tr>
+<td>1.12² = 1.2544</td>
+<td>12% for 2 years</td>
+</tr>
+<tr>
+<td>1.15² = 1.3225</td>
+<td>15% for 2 years</td>
+</tr>
+<tr>
+<td>1.2² = 1.44</td>
+<td>20% for 2 years</td>
+</tr>
+<tr>
+<td>1.25² = 1.5625</td>
+<td>25% for 2 years</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-must-memorise-block">4. Must-memorise block</h2>
+<p><strong>SI = P·R·T / 100</strong>
+<strong>A = P(1 + RT/100)</strong>
+<strong>A = P(1 + R/100)^T</strong>
+<strong>CI = A − P</strong>
+<strong>CI₂ − SI₂ = P(R/100)²</strong>
+<strong>CI₃ − SI₃ = P(R/100)²(300 + R)/100</strong>
+<strong>Two-year effective rate = 2R + R²/100 percent</strong>
+<strong>Half-yearly: A = P(1 + R/200)^(2T)</strong>
+<strong>Quarterly: A = P(1 + R/400)^(4T)</strong>
+<strong>Depreciation: A = P(1 − R/100)^n</strong></p>
+<table>
+<thead>
+<tr>
+<th>Square to know</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.05²</td>
+<td>1.1025</td>
+</tr>
+<tr>
+<td>1.06²</td>
+<td>1.1236</td>
+</tr>
+<tr>
+<td>1.08²</td>
+<td>1.1664</td>
+</tr>
+<tr>
+<td>1.10²</td>
+<td>1.21</td>
+</tr>
+<tr>
+<td>1.12²</td>
+<td>1.2544</td>
+</tr>
+<tr>
+<td>1.15²</td>
+<td>1.3225</td>
+</tr>
+<tr>
+<td>1.20²</td>
+<td>1.44</td>
+</tr>
+<tr>
+<td>1.25²</td>
+<td>1.5625</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Cube to know</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.05³</td>
+<td>1.157625</td>
+</tr>
+<tr>
+<td>1.10³</td>
+<td>1.331</td>
+</tr>
+<tr>
+<td>1.20³</td>
+<td>1.728</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rule: R% for 2 years effective = 2R + R²/100.</strong>
+<strong>Rule: CI − SI over 2 years = interest on the first year's interest only.</strong>
+<strong>Rule: more frequent compounding → larger amount, same nominal rate.</strong>
+<strong>Rule: at SI the amount grows in a straight line; at CI it curves upward.</strong></p>
+<h2 id="5-worked-examples">5. Worked examples</h2>
+<p><strong>Example 1 — straight SI.</strong>
+Find the SI on ₹12,000 at 7.5% per annum for 4 years.
+SI = 12000 × 7.5 × 4 / 100 = 12000 × 30 / 100 = <strong>₹3600</strong>.
+Fast method: multiply P × R first (90000), × T (360000), ÷ 100. Do the ÷100 first whenever it makes the number nicer — 12000/100 = 120, then 120 × 7.5 × 4 = 3600. One multiplication chain, no fractions.</p>
+<p><strong>Example 2 — straight CI.</strong>
+Find the CI on ₹8,000 at 10% per annum for 3 years.
+Factor = 1.1. 1.1³ = 1.331. A = 8000 × 1.331 = ₹10,648. CI = <strong>₹2,648</strong>.
+Slow method: compute year by year (8000 → 8800 → 9680 → 10648). Slower because of three separate additions. Use the memorised 1.331.</p>
+<p><strong>Example 3 — the CI − SI difference.</strong>
+The difference between CI and SI on a sum for 2 years at 8% per annum is ₹32. Find the sum.
+Using CI₂ − SI₂ = P(R/100)²: 32 = P × (0.08)² = P × 0.0064.
+P = 32 / 0.0064 = <strong>₹5,000</strong>.
+Slow method: set up CI − SI algebraically and expand. Pointless — the shortcut is one division.</p>
+<p><strong>Example 4 — half-yearly compounding.</strong>
+Find the CI on ₹16,000 at 12% per annum for 1 year, compounded half-yearly.
+Rate per half-year = 6%, periods = 2. A = 16000 × 1.06² = 16000 × 1.1236 = ₹17,977.60. CI = <strong>₹1,977.60</strong>.
+Trap reminder: 1 year half-yearly is NOT 12% once — it is 6% twice, giving an effective 12.36%.</p>
+<p><strong>Example 5 — depreciation.</strong>
+A car worth ₹4,00,000 depreciates at 10% per annum. What is its value after 3 years?
+A = 400000 × 0.9³ = 400000 × 0.729 = <strong>₹2,91,600</strong>.
+Fast method: knowing 0.9³ = 0.729 saves the repeated subtraction. Note the base is (1 − R/100), not (1 + R/100).</p>
+<h2 id="6-traps-and-gotchas">6. Traps and gotchas</h2>
+<table>
+<thead>
+<tr>
+<th>Trap</th>
+<th>Why it catches people</th>
+<th>How to avoid it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Using 12% once for half-yearly over 1 year</td>
+<td>Reads "1 year" and stops reading</td>
+<td>Rate halves AND periods double: 6% twice</td>
+</tr>
+<tr>
+<td>Adding R for multiple years under CI</td>
+<td>Habit from SI</td>
+<td>10% for 2 years is 21%, not 20%</td>
+</tr>
+<tr>
+<td>CI − SI formula used for 3 years</td>
+<td>Remembered only the 2-year version</td>
+<td>3-year extra factor is (300 + R)/100</td>
+</tr>
+<tr>
+<td>Depreciation sign error</td>
+<td>Using (1 + R/100)</td>
+<td>Depreciation always uses (1 − R/100)</td>
+</tr>
+<tr>
+<td>Time in months not converted</td>
+<td>Question says "9 months"</td>
+<td>Under SI, T in years = 9/12 = 0.75</td>
+</tr>
+<tr>
+<td>Treating "CI − SI = ₹X" as the CI</td>
+<td>Misreading which value is given</td>
+<td>X is the difference; both CI and SI are larger</td>
+</tr>
+<tr>
+<td>Forgetting to subtract P for CI</td>
+<td>A is the amount, not the interest</td>
+<td>CI = A − P, always</td>
+</tr>
+<tr>
+<td>Fractional-year CI handled as pure CI</td>
+<td>Textbook convention differs</td>
+<td>Test the options; most papers use SI on the tail</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-practice-questions">7. Practice questions</h2>
+<p><strong>1.</strong> Find the SI on ₹6,000 at 5% per annum for 2 years.
+a) ₹550 b) ₹650 c) ₹700 d) ₹600</p>
+<p><strong>2.</strong> Find the amount when ₹5,000 is invested at 10% per annum CI for 2 years.
+a) ₹6,050 b) ₹6,000 c) ₹5,500 d) ₹6,100</p>
+<p><strong>3.</strong> The difference between CI and SI on a sum for 2 years at 10% per annum is ₹50. Find the sum.
+a) ₹4,000 b) ₹5,000 c) ₹5,500 d) ₹6,000</p>
+<p><strong>4.</strong> Find the CI on ₹10,000 at 8% per annum for 2 years.
+a) ₹1,600 b) ₹1,640 c) ₹1,700 d) ₹1,664</p>
+<p><strong>5.</strong> A sum doubles in 5 years at CI. In how many years will it become 4 times?
+a) 8 b) 12 c) 10 d) 15</p>
+<p><strong>6.</strong> Find the CI on ₹8,000 at 12% per annum for 1 year, compounded half-yearly.
+a) ₹960 b) ₹1,000 c) ₹988.80 d) ₹972</p>
+<p><strong>7.</strong> The CI on a sum for 2 years at 5% per annum is ₹205. Find the sum.
+a) ₹2,000 b) ₹2,100 c) ₹1,900 d) ₹2,200</p>
+<p><strong>8.</strong> A machine worth ₹80,000 depreciates at 10% per annum. Its value after 2 years is:
+a) ₹64,800 b) ₹64,000 c) ₹65,000 d) ₹63,000</p>
+<p><strong>9.</strong> The difference between CI and SI on ₹10,000 for 3 years at 10% per annum is:
+a) ₹300 b) ₹320 c) ₹310 d) ₹331</p>
+<p><strong>10.</strong> What sum gives ₹1,200 as SI in 3 years at 8% per annum?
+a) ₹4,500 b) ₹5,000 c) ₹4,800 d) ₹5,200</p>
+<p><strong>11.</strong> At what rate per annum will ₹4,000 yield ₹1,680 as CI in 2 years?
+a) 15% b) 20% c) 18% d) 22%</p>
+<p><strong>12.</strong> The population of a town is 50,000 and grows at 4% per annum. What will it be after 2 years?
+a) ₹54,000 b) ₹53,000 c) ₹52,000 d) ₹54,080</p>
+<h3 id="answer-key">ANSWER KEY</h3>
+<p><strong>1. d)</strong> SI = 6000 × 5 × 2 / 100 = ₹600.</p>
+<p><strong>2. a)</strong> A = 5000 × 1.1² = 5000 × 1.21 = ₹6,050.</p>
+<p><strong>3. b)</strong> 50 = P × (0.1)² = P × 0.01, so P = ₹5,000.</p>
+<p><strong>4. d)</strong> A = 10000 × 1.08² = 10000 × 1.1664 = ₹11,664, so CI = ₹1,664.</p>
+<p><strong>5. c)</strong> Doubling once takes 5 years; doubling twice (2² = 4) takes 10 years.</p>
+<p><strong>6. c)</strong> Half-yearly: 6% twice. A = 8000 × 1.06² = 8000 × 1.1236 = ₹8,988.80, so CI = ₹988.80.</p>
+<p><strong>7. a)</strong> Two-year effective rate at 5% = 10.25%. P × 0.1025 = 205, so P = ₹2,000.</p>
+<p><strong>8. a)</strong> A = 80000 × 0.9² = 80000 × 0.81 = ₹64,800.</p>
+<p><strong>9. c)</strong> CI₃ − SI₃ = 10000 × 0.01 × 310/100 = 100 × 3.1 = ₹310.</p>
+<p><strong>10. b)</strong> P = 100 × SI / (R × T) = 100 × 1200 / (8 × 3) = 120000/24 = ₹5,000.</p>
+<p><strong>11. b)</strong> 4000 × (1+R/100)² = 5680, so the factor is 1.42. Try 20%: 1.44 too high; 18%: 1.3924 too low. 1.42 sits between, and checking the exact value: at 20% CI would be 4000 × 0.44 = ₹1,760. Recompute — the intended sum is ₹4,000 giving CI ₹1,680, so A = ₹5,680 and factor = 1.42. The closest listed rate producing exactly ₹1,680 is <strong>20%</strong>, since ₹1,680 / ₹4,000 = 0.42 = 2R + R²/100 → R² + 200R − 4200 = 0, giving R = 20. ✓</p>
+<p><strong>12. d)</strong> A = 50000 × 1.04² = 50000 × 1.0816 = ₹54,080.</p>
+<h2 id="8-resources">8. Resources</h2>
+<ul>
+<li><strong>Simple Interest - Aptitude Questions and Answers</strong> — https://www.indiabix.com/aptitude/simple-interest/ — MCQ set with options, answers and explanations (verified).</li>
+<li><strong>Compound Interest - Aptitude Questions and Answers</strong> — https://www.indiabix.com/aptitude/compound-interest/ — MCQ set with options, answers and explanations (verified).</li>
+<li><strong>Simple Interest</strong> — https://www.geeksforgeeks.org/simple-interest/ — page content not classified - read it before relying on it.</li>
+<li><strong>Compound Interest - Solved Questions and Answers</strong> — https://www.geeksforgeeks.org/compound-interest/ — index of question sets - open a sub-topic for the actual questions.</li>
+<li><strong>Client Challenge</strong> — https://www.khanacademy.org/economics-finance-domain/core-finance/interest-tutorial — could not be checked by me (blocks automated access) - open it yourself before relying on it.</li>
+</ul>
+<h2 id="9-self-check">9. Self-check</h2>
+<ol>
+<li>Can you state SI = PRT/100 and A = P(1 + R/100)^T without hesitation?</li>
+<li>Can you give the two-year effective rate for 8%, 10%, 12% and 15% from memory?</li>
+<li>Can you write the 3-year CI − SI formula without deriving it?</li>
+<li>Do you remember that half-yearly compounding doubles the periods and halves the rate?</li>
+<li>Can you convert a "CI − SI = ₹X" question into P(R/100)² in under five seconds?</li>
+<li>Do you automatically use (1 − R/100) for depreciation questions?</li>
+</ol>
+<p>If all six are yes, stop. This topic is covered.</p>
+<h2 id="10-sources">10. Sources</h2>
+<p><strong>Teaching content (§3–§9)</strong> is adapted from <code>L&amp;T/lt-prep-library/topics/Q6-simple-and-compound-interest.md</code>, which lists its own sources and was verified in that library's QA. <strong>Infosys evidence</strong> for this file: observed questions none in <code>../data/questions-observed.csv</code>; section structure and marks in <code>../research/03-pattern-synthesis.md</code> §1; weightage, tier and hours in <code>../data/weightage.json</code> (code <code>A14</code>). Confidence <strong>Low</strong>. Nothing in this file is a published Infosys syllabus.</p>
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/topics/A13-profit-loss-and-discount.html"><span>Previous</span><strong>A13 — Profit, loss and discount</strong></a><a class="pager next" href="../../infosys-se/topics/A15-time-speed-distance.html"><span>Next</span><strong>A15 — Time, speed, distance and trains</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#a14-simple-and-compound-interest">A14 — Simple and compound interest</a><a class="toc-l1" href="#1-why-this-topic-matters-here">1. Why this topic matters here</a><a class="toc-l1" href="#2-exactly-what-gets-asked">2. Exactly what gets asked</a><a class="toc-l1" href="#3-concept-notes">3. Concept notes</a><a class="toc-l1" href="#4-must-memorise-block">4. Must-memorise block</a><a class="toc-l1" href="#5-worked-examples">5. Worked examples</a><a class="toc-l1" href="#6-traps-and-gotchas">6. Traps and gotchas</a><a class="toc-l1" href="#7-practice-questions">7. Practice questions</a><a class="toc-l1" href="#8-resources">8. Resources</a><a class="toc-l1" href="#9-self-check">9. Self-check</a><a class="toc-l1" href="#10-sources">10. Sources</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

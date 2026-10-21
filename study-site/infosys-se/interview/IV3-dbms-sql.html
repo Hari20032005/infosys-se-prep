@@ -1,0 +1,2536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem current" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Interview</span></div>
+    <article class="prose">
+<h1 id="iv3-dbms-and-sql-joins-group-by-keys-indexes-nulls">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</h1><p class="fm-line" style="color:var(--ink-faint);font-size:13px;margin:-.4em 0 1.2em">Tier 3 · Interview · interview stage · about 1.0 h · confidence Low</p>
+<p><em>Adapted from <code>accenture-prep-final/accenture-prep-library/topics/T08-D6-dbms-sql.md</code>; verified in that library's QA. §1 and §10 are regenerated for Infosys from <code>data/weightage.json</code>; §2 gains an Infosys evidence table; §3–§9 are the source text unchanged, so "observed" in the worked examples refers to the source paper.</em></p>
+<h2 id="1-why-this-topic-matters-here">1. Why this topic matters here</h2>
+<p>This is interview material, not test material. <strong>1 question on this theme</strong> were reported across <strong>1 first-hand interview account</strong> (B4), so it is <strong>Tier 3</strong> for the interview stage, 1.0 hours to prepare. Interviews are face to face on campus, 15–40 minutes, technical and HR usually in one conversation (<code>../research/03-pattern-synthesis.md</code> §6). The questions are at textbook level; the teaching body below is sized to answer them aloud, not to pass a written exam.</p>
+<h2 id="2-exactly-what-gets-asked">2. Exactly what gets asked</h2>
+<h3 id="what-infosys-interviewers-asked">What Infosys interviewers asked</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Account</th>
+<th>Date</th>
+<th>Question</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>I16</td>
+<td>B4</td>
+<td>2025-01-20</td>
+<td>What are joins and what are their types?</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The pattern notes below come from the library this file was adapted from; their frequency remarks describe that source, not Infosys.</p>
+</blockquote>
+<ol>
+<li>
+<p><strong>Small-table join with a row count.</strong> Two tiny tables are shown and you state how many rows the join returns. LEFT JOIN with NULL filling is the confirmed local pattern.</p>
+</li>
+<li>
+<p><strong>(c) <code>UPDATE employees SET salary = salary * 1.10 WHERE dept_id = 10;</code></strong> — Correct: <code>SET</code> changes values and <code>WHERE</code> restricts which rows are updated.<br />
+   - (b) <code>HAVING</code> is not valid in an <code>UPDATE</code> statement.<br />
+   - (a) <code>UPDATE</code> syntax requires <code>SET</code> before <code>WHERE</code>.<br />
+   - (d) <code>10%</code> is not a valid numeric salary expression.</p>
+</li>
+</ol>
+<hr />
+<ol start="2">
+<li>
+<p><strong>WHERE versus HAVING.</strong> The most examined SQL distinction anywhere.</p>
+</li>
+<li>
+<p><strong>(a) <code>WHERE email IS NULL</code></strong> — Correct: <code>NULL</code> must be tested with <code>IS NULL</code>, not equality.<br />
+   - (b) <code>= NULL</code> evaluates to unknown, so no rows match.<br />
+   - (c) <code>&lt;&gt; NULL</code> also evaluates to unknown.<br />
+   - (d) <code>''</code> is an empty string, not a <code>NULL</code> value.</p>
+</li>
+</ol>
+<hr />
+<ol start="3">
+<li>
+<p><strong>Index optimisation.</strong> Confirmed asked twice. Which column to index for a given query, and when an index will <em>not</em> help — notably a leading-wildcard <code>LIKE '%x'</code>.</p>
+</li>
+<li>
+<p><strong>(c) <code>student_id</code> generated unique and not changing</strong> — Correct: a primary key should be unique, non-null, and stable.<br />
+   - (a) Names can duplicate.<br />
+   - (b) Email can change or be missing.<br />
+   - (d) Phone numbers can change and duplicate.</p>
+</li>
+</ol>
+<hr />
+<ol start="4">
+<li>
+<p><strong>NULL behaviour.</strong> Confirmed local item. Why <code>= NULL</code> never matches, and how aggregates treat NULLs.</p>
+</li>
+<li>
+<p><strong>(c) <code>WHERE name LIKE 'A%'</code></strong> — Correct: <code>A%</code> means starts with <code>A</code>, followed by any characters.<br />
+   - (b) <code>%A</code> means ends with <code>A</code>.<br />
+   - (d) <code>_A%</code> means second character is <code>A</code>.<br />
+   - (a) <code>= 'A*'</code> matches the literal string <code>A*</code>.</p>
+</li>
+</ol>
+<hr />
+<ol start="5">
+<li>
+<p><strong>Key selection.</strong> Confirmed local item. Which column is the appropriate primary key, and primary key versus unique.</p>
+</li>
+<li>
+<p><strong>(b) 6</strong> — Correct: 3 matching mark rows plus 1 row each for students 3, 4, and 5.<br />
+   - (c) Counts only the matching mark rows.<br />
+   - (a) Counts only the student rows.<br />
+   - (d) Counts nonexistent extra rows.</p>
+</li>
+</ol>
+<hr />
+<ol start="6">
+<li>
+<p><strong>Trigger purpose.</strong> Confirmed local item: automatically logging a deletion.</p>
+</li>
+<li>
+<p><strong>(d) <code>WHERE</code> filters rows before grouping; <code>HAVING</code> filters groups after grouping.</strong> — Correct: this is the standard logical order.<br />
+   - (a) Reverses the two clauses.<br />
+   - (c) <code>HAVING</code> appears after <code>GROUP BY</code>.<br />
+   - (b) <code>HAVING</code> can be used with <code>GROUP BY</code>.</p>
+</li>
+</ol>
+<hr />
+<ol start="7">
+<li>
+<p><strong>Concurrency and ACID.</strong> Confirmed local item on SQL concurrency — dirty reads, lost updates, isolation levels.</p>
+</li>
+<li>
+<p><strong>(a) A B-tree index on <code>email</code></strong> — Correct: B-tree supports fast equality searches on high-cardinality columns.<br />
+   - (b) <code>gender</code> has low selectivity and does not help find email.<br />
+   - (c) A primary-key index helps only if <code>email</code> is the primary key.<br />
+   - (d) <code>@</code> has no effect on whether an index works.</p>
+</li>
+</ol>
+<hr />
+<ol start="8">
+<li><strong>Aggregate and GROUP BY rules</strong>, including <code>COUNT(*)</code> versus <code>COUNT(column)</code>.</li>
+</ol>
+<h2 id="3-concept-notes">3. Concept notes</h2>
+<p><strong>DBMS</strong>: Software layer between users/applications and stored data. Stores, retrieves, updates data; enforces schema, constraints, concurrency control, recovery, security.</p>
+<p><strong>DBMS vs RDBMS</strong>: RDBMS is a DBMS that organizes data as relations (tables) with rows/columns and supports relational operators, SQL, keys, and referential integrity. Every RDBMS is a DBMS; not every DBMS is an RDBMS (e.g., hierarchical, network, XML, key-value stores).</p>
+<p><strong>File system limitations fixed by DBMS</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>File system</th>
+<th>DBMS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Concurrent access</td>
+<td>No locking/atomicity; lost updates, inconsistent reads</td>
+<td>Transactions, locks, isolation levels</td>
+</tr>
+<tr>
+<td>Redundancy</td>
+<td>Duplicate data across files; wasted space, inconsistency</td>
+<td>Normalized schema, centralized data, constraints</td>
+</tr>
+<tr>
+<td>Integrity</td>
+<td>Application-enforced; weak</td>
+<td>Domain, entity, referential integrity; triggers</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>OS file permissions only</td>
+<td>Users, roles, privileges at table/column/row level, views, auditing</td>
+</tr>
+<tr>
+<td>Backup/recovery</td>
+<td>Manual; no point-in-time recovery</td>
+<td>Automated backup, transaction log, rollback/roll-forward</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Vocabulary</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+<th>Synonym</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Table</td>
+<td>Set of rows with same columns</td>
+<td>Relation</td>
+</tr>
+<tr>
+<td>Row</td>
+<td>Single record in a table</td>
+<td>Tuple</td>
+</tr>
+<tr>
+<td>Column</td>
+<td>Attribute/field of a table</td>
+<td>Attribute</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>Set of permitted atomic values for a column</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Cardinality</td>
+<td>Number of rows in a relation</td>
+<td>-</td>
+</tr>
+<tr>
+<td>Degree</td>
+<td>Number of columns in a relation</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Keys</strong>:</p>
+<p>Super key: any attribute set that uniquely identifies each row. Example: <code>Student(StudentID, Email, Name)</code>. <code>{StudentID}</code>, <code>{Email}</code>, <code>{StudentID, Email}</code>, <code>{StudentID, Name}</code> are super keys.</p>
+<p>Candidate key: minimal super key; no proper subset is a super key. Example: <code>{StudentID}</code>, <code>{Email}</code>.</p>
+<p>Primary key: candidate key chosen to identify rows; cannot be NULL; only one per table. Example: <code>StudentID</code>.</p>
+<p>Alternate key: candidate key not chosen as primary. Example: <code>Email</code>.</p>
+<p>Composite key: key with two or more attributes. Example: <code>Enrollment(StudentID, CourseID)</code> primary key <code>{StudentID, CourseID}</code>.</p>
+<p>Foreign key: column(s) in one table referencing primary/unique key of another. Example: <code>Enrollment.StudentID -&gt; Student.StudentID</code>. Allows NULL if column nullable.</p>
+<p>Unique key: constraint enforcing distinct values in column(s). Example: <code>UNIQUE(Email)</code>. Allows NULL (multiple in most DBMS; SQL Server allows one).</p>
+<p>Surrogate key: system-generated artificial identifier with no business meaning. Example: <code>id INT AUTO_INCREMENT</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Rule</th>
+<th>NULL allowed</th>
+<th>Max per table</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Super key</td>
+<td>Uniquely identifies each row</td>
+<td>Yes (if a subset is unique)</td>
+<td>Many</td>
+<td><code>{StudentID}</code>, <code>{Email}</code>, <code>{StudentID,Name}</code></td>
+</tr>
+<tr>
+<td>Candidate key</td>
+<td>Minimal super key</td>
+<td>No (as enforced key)</td>
+<td>Many</td>
+<td><code>{StudentID}</code>, <code>{Email}</code></td>
+</tr>
+<tr>
+<td>Primary key</td>
+<td>Chosen candidate key</td>
+<td>No</td>
+<td>1</td>
+<td><code>StudentID</code></td>
+</tr>
+<tr>
+<td>Alternate key</td>
+<td>Candidate key not primary</td>
+<td>No</td>
+<td>Many</td>
+<td><code>Email</code></td>
+</tr>
+<tr>
+<td>Composite key</td>
+<td>&gt;=2 attributes</td>
+<td>No if primary</td>
+<td>Many</td>
+<td><code>{StudentID, CourseID}</code></td>
+</tr>
+<tr>
+<td>Foreign key</td>
+<td>References PK/unique of another table</td>
+<td>Yes if nullable</td>
+<td>Many</td>
+<td><code>Enrollment.StudentID -&gt; Student.StudentID</code></td>
+</tr>
+<tr>
+<td>Unique key</td>
+<td>Enforces distinct values</td>
+<td>Yes (multiple NULLs in most DBMS; one in SQL Server)</td>
+<td>Many</td>
+<td><code>Email</code></td>
+</tr>
+<tr>
+<td>Surrogate key</td>
+<td>System-generated artificial id</td>
+<td>No</td>
+<td>Usually 1</td>
+<td><code>id INT AUTO_INCREMENT</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>PRIMARY KEY vs UNIQUE</strong>:
+- PRIMARY KEY: one per table; NOT NULL; creates unique index; can be composite.
+- UNIQUE: multiple per table; allows NULL (except SQL Server permits only one NULL); creates unique index; can be composite.
+- Both enforce uniqueness.</p>
+<p><strong>Referential integrity</strong>: Every non-NULL foreign key value must match an existing primary/unique key value in the referenced table. Prevents orphan rows.</p>
+<p><strong>ON DELETE actions</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Behavior</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CASCADE</td>
+<td>Delete child rows when parent row is deleted.</td>
+</tr>
+<tr>
+<td>SET NULL</td>
+<td>Set foreign key in child rows to NULL (FK column must be nullable).</td>
+</tr>
+<tr>
+<td>RESTRICT</td>
+<td>Block parent deletion if any child row references it. (NO ACTION similar; timing may differ by DBMS.)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Normalisation</strong>:</p>
+<p>Partial dependency: A non-prime attribute A is partially dependent on candidate key K if a proper subset X ⊂ K exists such that X → A.</p>
+<p>Transitive dependency: A non-prime attribute A is transitively dependent on key K if K → Y and Y → A, where Y is not a superkey.</p>
+<table>
+<thead>
+<tr>
+<th>NF</th>
+<th>Rule (one sentence)</th>
+<th>Anomaly removed</th>
+<th>Before → After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1NF</td>
+<td>Every column holds only atomic values; no repeating groups or arrays.</td>
+<td>Multi-valued attribute redundancy/ambiguity.</td>
+<td><code>Student(SID, Name, Phones='9876,5432')</code> → <code>Student(SID, Name)</code>, <code>StudentPhone(SID, Phone)</code></td>
+</tr>
+<tr>
+<td>2NF</td>
+<td>In 1NF and no non-prime attribute is partially dependent on any candidate key (no proper subset of a composite key determines a non-prime attribute).</td>
+<td>Partial dependency redundancy and update anomaly.</td>
+<td><code>Enrollment(SID, CID, SName, CName)</code> PK<code>{SID,CID}</code>; <code>SName</code> depends on <code>SID</code> → <code>Student(SID,SName)</code>, <code>Course(CID,CName)</code>, <code>Enrollment(SID,CID)</code></td>
+</tr>
+<tr>
+<td>3NF</td>
+<td>In 2NF and no non-prime attribute is transitively dependent on any candidate key (for every FD X→A, X is a superkey or A is prime).</td>
+<td>Transitive dependency redundancy and update anomaly.</td>
+<td><code>Student(SID, DeptID, DeptName)</code> with <code>SID→DeptID→DeptName</code> → <code>Student(SID,DeptID)</code>, <code>Department(DeptID,DeptName)</code></td>
+</tr>
+<tr>
+<td>BCNF</td>
+<td>In 3NF and for every non-trivial FD X→Y, X is a superkey.</td>
+<td>Anomaly from a non-superkey determining a prime attribute.</td>
+<td><code>TeacherCourse(StudentID, Course, Teacher)</code> with <code>{StudentID,Course}→Teacher</code> and <code>Teacher→Course</code> → <code>TeacherCourse(Teacher,Course)</code>, <code>StudentTeacher(StudentID,Teacher)</code></td>
+</tr>
+</tbody>
+</table>
+<p>Denormalisation: Intentionally reintroducing redundancy by merging tables or duplicating columns. Purpose: reduce joins and improve read performance in reporting/OLAP or read-heavy systems. Cost: update anomalies, more storage, more complex integrity enforcement.</p>
+<p><strong>ACID</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Definition</th>
+<th>Violation example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Atomicity</td>
+<td>Transaction executes all operations or none.</td>
+<td>Bank transfer debits account A but crash occurs before crediting B; money vanishes.</td>
+</tr>
+<tr>
+<td>Consistency</td>
+<td>Transaction moves DB from one valid state to another, preserving all constraints.</td>
+<td>Insert child row with non-existent foreign key; orphan record remains.</td>
+</tr>
+<tr>
+<td>Isolation</td>
+<td>Concurrent transactions do not see each other's intermediate states.</td>
+<td>Dirty read: T2 reads T1's uncommitted update; T1 rolls back; T2 used invalid data.</td>
+</tr>
+<tr>
+<td>Durability</td>
+<td>Committed changes survive system failure.</td>
+<td>Power failure immediately after COMMIT; update lost because log not flushed.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Transactions</strong>:
+A transaction is a sequence of operations treated as one logical unit.
+COMMIT: makes all changes since last COMMIT/ROLLBACK permanent.
+ROLLBACK: undoes all changes since last COMMIT (or to a SAVEPOINT).
+SAVEPOINT: names an intermediate point within a transaction; ROLLBACK TO SAVEPOINT undoes only changes after that point.</p>
+<p><strong>Concurrency problems</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dirty read</td>
+<td>T1 modifies a row; T2 reads uncommitted value; T1 rolls back. T2 has invalid data.</td>
+</tr>
+<tr>
+<td>Non-repeatable read</td>
+<td>T1 reads a row; T2 updates/deletes and commits; T1 re-reads same row and sees different/missing value.</td>
+</tr>
+<tr>
+<td>Phantom read</td>
+<td>T1 runs a query; T2 inserts/deletes rows satisfying the query and commits; T1 re-runs query and sees new/missing rows.</td>
+</tr>
+<tr>
+<td>Lost update</td>
+<td>T1 and T2 read same value; both write based on it; one write overwrites the other.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Isolation levels</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Isolation level</th>
+<th>Dirty read</th>
+<th>Non-repeatable read</th>
+<th>Phantom read</th>
+<th>Lost update</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>READ UNCOMMITTED</td>
+<td>Possible</td>
+<td>Possible</td>
+<td>Possible</td>
+<td>Possible</td>
+</tr>
+<tr>
+<td>READ COMMITTED</td>
+<td>Prevented</td>
+<td>Possible</td>
+<td>Possible</td>
+<td>Possible</td>
+</tr>
+<tr>
+<td>REPEATABLE READ</td>
+<td>Prevented</td>
+<td>Prevented</td>
+<td>Possible (prevented in MySQL InnoDB via next-key locks)</td>
+<td>Prevented (in most locking DBMS)</td>
+</tr>
+<tr>
+<td>SERIALIZABLE</td>
+<td>Prevented</td>
+<td>Prevented</td>
+<td>Prevented</td>
+<td>Prevented</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sub-language</th>
+<th>Purpose</th>
+<th>Statements</th>
+<th>Transaction behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>DDL</strong> (Data Definition)</td>
+<td>Define/alter structure</td>
+<td><code>CREATE</code>, <code>ALTER</code>, <code>DROP</code>, <code>TRUNCATE</code>, <code>RENAME</code>, <code>COMMENT</code></td>
+<td>Auto-commit in MySQL/Oracle; <code>TRUNCATE</code>/<code>DROP</code> are rollback-able in PostgreSQL and SQL Server</td>
+</tr>
+<tr>
+<td><strong>DML</strong> (Data Manipulation)</td>
+<td>Change/read data</td>
+<td><code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>, <code>MERGE</code> (upsert), <code>SELECT</code>*</td>
+<td>Transactional; needs <code>COMMIT</code></td>
+</tr>
+<tr>
+<td><strong>DCL</strong> (Data Control)</td>
+<td>Permissions</td>
+<td><code>GRANT</code>, <code>REVOKE</code></td>
+<td>Auto-commit in most engines</td>
+</tr>
+<tr>
+<td><strong>TCL</strong> (Transaction Control)</td>
+<td>Transaction boundaries</td>
+<td><code>COMMIT</code>, <code>ROLLBACK</code>, <code>SAVEPOINT</code>, <code>RELEASE SAVEPOINT</code>, <code>SET TRANSACTION</code></td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>*<code>SELECT</code> is often split out as <strong>DQL</strong>. <code>TRUNCATE</code> is DDL (drops and recreates the segment, resets identity, cannot take a <code>WHERE</code>), <code>DELETE</code> is DML (row-by-row, <code>WHERE</code>, fires triggers, rollback-able).</p>
+<h3 id="joins">JOINs</h3>
+<p>Base tables used in every example below.</p>
+<p><strong>students</strong></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Asha</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bhanu</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Chetan</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Divya</td>
+</tr>
+</tbody>
+</table>
+<p><strong>enrolments</strong></p>
+<table>
+<thead>
+<tr>
+<th>student_id</th>
+<th>course</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>SQL</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Java</td>
+</tr>
+<tr>
+<td>3</td>
+<td>SQL</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Python</td>
+</tr>
+</tbody>
+</table>
+<p>All queries join on <code>students.id = enrolments.student_id</code>. Row order is never guaranteed unless <code>ORDER BY</code> is used.</p>
+<h4 id="inner-join">INNER JOIN</h4>
+<p>Returns only row pairs where the join predicate is TRUE. Non-matching rows on <strong>both</strong> sides are dropped.</p>
+<p><code>SELECT name, course FROM students INNER JOIN enrolments ON students.id = enrolments.student_id;</code></p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>course</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Asha</td>
+<td>SQL</td>
+</tr>
+<tr>
+<td>Asha</td>
+<td>Java</td>
+</tr>
+<tr>
+<td>Chetan</td>
+<td>SQL</td>
+</tr>
+</tbody>
+</table>
+<p>3 rows. Bhanu (id 2) and Divya (id 4) have no enrolment; enrolment row <code>(5, Python)</code> has no student.</p>
+<h4 id="left-join-left-outer-join">LEFT JOIN / LEFT OUTER JOIN</h4>
+<p>Keeps <strong>every</strong> row of the left table. If no right row matches, the right columns are filled with <strong>NULL</strong> — one output row per unmatched left row (not zero, not a blank string, not 0).</p>
+<p><code>SELECT name, course FROM students LEFT JOIN enrolments ON students.id = enrolments.student_id;</code></p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>course</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Asha</td>
+<td>SQL</td>
+</tr>
+<tr>
+<td>Asha</td>
+<td>Java</td>
+</tr>
+<tr>
+<td>Bhanu</td>
+<td><strong>NULL</strong></td>
+</tr>
+<tr>
+<td>Chetan</td>
+<td>SQL</td>
+</tr>
+<tr>
+<td>Divya</td>
+<td><strong>NULL</strong></td>
+</tr>
+</tbody>
+</table>
+<p>5 rows. <code>OUTER</code> is optional noise — <code>LEFT JOIN</code> = <code>LEFT OUTER JOIN</code>.</p>
+<p>Trap: a filter on the right table in <code>WHERE</code> silently converts a LEFT JOIN into an INNER JOIN, because <code>NULL = 'SQL'</code> is UNKNOWN, not TRUE.</p>
+<ul>
+<li><code>ON students.id = enrolments.student_id AND course = 'SQL'</code> → keeps Bhanu and Divya with NULL course (5 rows: Asha/SQL, Bhanu/NULL, Chetan/SQL, Divya/NULL — 4 rows, since Asha only has one SQL row).</li>
+<li><code>ON students.id = enrolments.student_id WHERE course = 'SQL'</code> → returns only Asha and Chetan; Bhanu and Divya are eliminated.</li>
+</ul>
+<h4 id="right-join-right-outer-join">RIGHT JOIN / RIGHT OUTER JOIN</h4>
+<p>Mirror of LEFT JOIN: keeps every row of the right table, NULL-fills the left columns.</p>
+<p><code>SELECT name, course FROM students RIGHT JOIN enrolments ON students.id = enrolments.student_id;</code></p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>course</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Asha</td>
+<td>SQL</td>
+</tr>
+<tr>
+<td>Asha</td>
+<td>Java</td>
+</tr>
+<tr>
+<td>Chetan</td>
+<td>SQL</td>
+</tr>
+<tr>
+<td><strong>NULL</strong></td>
+<td>Python</td>
+</tr>
+</tbody>
+</table>
+<p>4 rows.</p>
+<h4 id="full-outer-join">FULL OUTER JOIN</h4>
+<p>Union of LEFT and RIGHT: all matched rows, plus unmatched rows from both sides, each NULL-filled on the missing side.</p>
+<p><code>SELECT name, course FROM students FULL OUTER JOIN enrolments ON students.id = enrolments.student_id;</code></p>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>course</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Asha</td>
+<td>SQL</td>
+</tr>
+<tr>
+<td>Asha</td>
+<td>Java</td>
+</tr>
+<tr>
+<td>Bhanu</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>Chetan</td>
+<td>SQL</td>
+</tr>
+<tr>
+<td>Divya</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>NULL</td>
+<td>Python</td>
+</tr>
+</tbody>
+</table>
+<p>6 rows = 3 matched + 2 left-only + 1 right-only. MySQL has no <code>FULL OUTER JOIN</code> — emulate with <code>LEFT JOIN UNION RIGHT JOIN</code>.</p>
+<h4 id="cross-join">CROSS JOIN</h4>
+<p>Cartesian product: every row of the left table paired with every row of the right table. <strong>No <code>ON</code> clause.</strong> Result size = rows(left) × rows(right) = 4 × 4 = <strong>16 rows</strong>.</p>
+<p><code>SELECT students.id, name, student_id, course FROM students CROSS JOIN enrolments;</code></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>student_id</th>
+<th>course</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Asha</td>
+<td>1</td>
+<td>SQL</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Asha</td>
+<td>1</td>
+<td>Java</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Asha</td>
+<td>3</td>
+<td>SQL</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Asha</td>
+<td>5</td>
+<td>Python</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bhanu</td>
+<td>1</td>
+<td>SQL</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bhanu</td>
+<td>1</td>
+<td>Java</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bhanu</td>
+<td>3</td>
+<td>SQL</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bhanu</td>
+<td>5</td>
+<td>Python</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Chetan</td>
+<td>1</td>
+<td>SQL</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Chetan</td>
+<td>1</td>
+<td>Java</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Chetan</td>
+<td>3</td>
+<td>SQL</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Chetan</td>
+<td>5</td>
+<td>Python</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Divya</td>
+<td>1</td>
+<td>SQL</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Divya</td>
+<td>1</td>
+<td>Java</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Divya</td>
+<td>3</td>
+<td>SQL</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Divya</td>
+<td>5</td>
+<td>Python</td>
+</tr>
+</tbody>
+</table>
+<p>An accidental <code>FROM a, b</code> with no <code>WHERE</code> is a CROSS JOIN — a classic cause of row explosion.</p>
+<h4 id="self-join">SELF JOIN</h4>
+<p>A table joined to itself, using two different aliases. Needed whenever a row references another row of the same table (hierarchy, "same city as", comparison).</p>
+<p><strong>employees</strong></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>mgr_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Asha</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bhanu</td>
+<td>1</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Chetan</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Divya</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><code>SELECT e.name AS emp, m.name AS mgr FROM employees e LEFT JOIN employees m ON e.mgr_id = m.id;</code></p>
+<table>
+<thead>
+<tr>
+<th>emp</th>
+<th>mgr</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Asha</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>Bhanu</td>
+<td>Asha</td>
+</tr>
+<tr>
+<td>Chetan</td>
+<td>Asha</td>
+</tr>
+<tr>
+<td>Divya</td>
+<td>Bhanu</td>
+</tr>
+</tbody>
+</table>
+<p>A self JOIN is an ordinary INNER/LEFT/RIGHT/CROSS join whose two inputs happen to be the same table; the aliases are mandatory.</p>
+<h3 id="where-vs-having">WHERE vs HAVING</h3>
+<p><code>WHERE</code> filters <strong>rows before grouping</strong>. <code>HAVING</code> filters <strong>groups after aggregation</strong>. <code>WHERE</code> runs on raw table rows, so it cannot contain an aggregate. <code>HAVING</code> runs after <code>GROUP BY</code>, so it can.</p>
+<p><strong>sales</strong></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>dept</th>
+<th>amount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>100</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A</td>
+<td>200</td>
+</tr>
+<tr>
+<td>3</td>
+<td>B</td>
+<td>50</td>
+</tr>
+<tr>
+<td>4</td>
+<td>B</td>
+<td>60</td>
+</tr>
+<tr>
+<td>5</td>
+<td>B</td>
+<td>70</td>
+</tr>
+<tr>
+<td>6</td>
+<td>C</td>
+<td>500</td>
+</tr>
+</tbody>
+</table>
+<p><code>SELECT dept, COUNT(*) FROM sales WHERE amount &gt;= 60 GROUP BY dept HAVING COUNT(*) &gt;= 2;</code></p>
+<table>
+<thead>
+<tr>
+<th>dept</th>
+<th>COUNT(*)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>2</td>
+</tr>
+<tr>
+<td>B</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>Row 3 (amount 50) is removed by <code>WHERE</code> first, so B has only 2 rows left; C survives <code>WHERE</code> but is dropped by <code>HAVING</code> (count 1).</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>WHERE</th>
+<th>HAVING</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Runs</td>
+<td>Before <code>GROUP BY</code></td>
+<td>After <code>GROUP BY</code></td>
+</tr>
+<tr>
+<td>Operates on</td>
+<td>Individual rows</td>
+<td>Groups</td>
+</tr>
+<tr>
+<td>Aggregates allowed</td>
+<td>No (<code>WHERE COUNT(*) &gt; 2</code> is an error)</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Column aliases</td>
+<td>Not allowed</td>
+<td>Standard SQL: not allowed; MySQL allows it</td>
+</tr>
+<tr>
+<td>Needs GROUP BY</td>
+<td>No</td>
+<td>No (turns the whole result into one group)</td>
+</tr>
+<tr>
+<td>Filters on</td>
+<td>Base columns</td>
+<td>Base columns, aggregates, grouped expressions</td>
+</tr>
+</tbody>
+</table>
+<h3 id="logical-order-of-execution-of-a-select-statement">Logical order of execution of a SELECT statement</h3>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Clause</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>FROM</code></td>
+<td>Load source tables</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>ON</code></td>
+<td>Evaluate join predicate</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>JOIN</code></td>
+<td>Build the joined row set (INNER/LEFT/…/CROSS)</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>WHERE</code></td>
+<td>Discard rows whose predicate is not TRUE</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>GROUP BY</code></td>
+<td>Collapse rows into groups</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>HAVING</code></td>
+<td>Discard groups whose predicate is not TRUE</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>SELECT</code></td>
+<td>Compute the output expressions <strong>and their aliases</strong></td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>DISTINCT</code></td>
+<td>Remove duplicate output rows</td>
+</tr>
+<tr>
+<td>9</td>
+<td><code>ORDER BY</code></td>
+<td>Sort the final rows</td>
+</tr>
+<tr>
+<td>10</td>
+<td><code>LIMIT</code> / <code>OFFSET</code></td>
+<td>Truncate the result</td>
+</tr>
+</tbody>
+</table>
+<p>Consequences:</p>
+<ul>
+<li><strong>A SELECT alias cannot be used in <code>WHERE</code>.</strong> <code>WHERE</code> (step 4) executes before <code>SELECT</code> (step 7) — the alias does not exist yet. <code>SELECT price * qty AS total FROM items WHERE total &gt; 100;</code> fails; write <code>WHERE price * qty &gt; 100</code>.</li>
+<li><strong>A SELECT alias <em>can</em> be used in <code>ORDER BY</code></strong>, because <code>ORDER BY</code> (step 9) runs after <code>SELECT</code> (step 7). This is the only clause where the SQL standard guarantees alias visibility.</li>
+<li>A SELECT alias cannot be used in <code>HAVING</code> in standard SQL (step 6 precedes step 7). MySQL permits it; PostgreSQL permits it in <code>GROUP BY</code> and <code>ORDER BY</code> only; Oracle and SQL Server permit it only in <code>ORDER BY</code>.</li>
+<li><code>WHERE</code> also runs before <code>GROUP BY</code>, so <code>WHERE</code> can never reference an aggregate — use <code>HAVING</code>.</li>
+<li><code>LIMIT</code> runs last, so it can reference an <code>ORDER BY</code> column but nothing else is recomputed after truncation.</li>
+</ul>
+<h3 id="group-by-and-aggregate-functions">GROUP BY and aggregate functions</h3>
+<p>Rules:</p>
+<ol>
+<li>Every expression in the <code>SELECT</code> list that is <strong>not</strong> inside an aggregate must appear in <code>GROUP BY</code> (standard SQL; MySQL enforces this only with <code>ONLY_FULL_GROUP_BY</code> enabled).</li>
+<li><code>GROUP BY</code> may take multiple columns or expressions — grouping is by the combination.</li>
+<li>All NULLs in the grouping column form <strong>one</strong> group (NULLs are treated as equal for grouping and for <code>DISTINCT</code>).</li>
+<li><code>WHERE</code> cannot contain aggregates; <code>HAVING</code> can, and may reference aggregates not present in <code>SELECT</code>.</li>
+<li>Without <code>GROUP BY</code>, an aggregate query returns exactly one row — even if the table is empty (<code>COUNT</code> → 0, everything else → NULL).</li>
+</ol>
+<p>Aggregates: <code>COUNT</code>, <code>SUM</code>, <code>AVG</code>, <code>MIN</code>, <code>MAX</code> (plus <code>COUNT(DISTINCT …)</code>, <code>STRING_AGG</code>/<code>GROUP_CONCAT</code> for text).</p>
+<p><strong>t</strong></p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>dept</th>
+<th>bonus</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>A</td>
+<td>100</td>
+</tr>
+<tr>
+<td>2</td>
+<td>A</td>
+<td>NULL</td>
+</tr>
+<tr>
+<td>3</td>
+<td>B</td>
+<td>200</td>
+</tr>
+<tr>
+<td>4</td>
+<td>B</td>
+<td>200</td>
+</tr>
+<tr>
+<td>5</td>
+<td>NULL</td>
+<td>NULL</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Result</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>COUNT(*)</code></td>
+<td>5</td>
+<td>Counts <strong>rows</strong>, NULLs included</td>
+</tr>
+<tr>
+<td><code>COUNT(bonus)</code></td>
+<td>3</td>
+<td>Counts <strong>non-NULL values</strong> only</td>
+</tr>
+<tr>
+<td><code>COUNT(DISTINCT bonus)</code></td>
+<td>2</td>
+<td>Counts distinct non-NULL values (100, 200)</td>
+</tr>
+<tr>
+<td><code>COUNT(dept)</code></td>
+<td>4</td>
+<td>Excludes the NULL dept</td>
+</tr>
+<tr>
+<td><code>COUNT(DISTINCT dept)</code></td>
+<td>2</td>
+<td>A, B — NULL excluded</td>
+</tr>
+<tr>
+<td><code>SUM(bonus)</code></td>
+<td>500</td>
+<td>NULLs ignored</td>
+</tr>
+<tr>
+<td><code>AVG(bonus)</code></td>
+<td>166.67</td>
+<td>500 / 3, <strong>not</strong> 500 / 5 — the denominator is the non-NULL count</td>
+</tr>
+<tr>
+<td><code>MIN(bonus)</code> / <code>MAX(bonus)</code></td>
+<td>100 / 200</td>
+<td>NULLs ignored</td>
+</tr>
+</tbody>
+</table>
+<p><code>SELECT dept, COUNT(*) FROM t GROUP BY dept;</code> → <code>A:2</code>, <code>B:2</code>, <code>NULL:1</code>.</p>
+<p>If a column is entirely NULL: <code>SUM</code>/<code>AVG</code>/<code>MIN</code>/<code>MAX</code> return NULL, <code>COUNT(col)</code> returns 0. <code>COUNT(*)</code> never returns NULL.</p>
+<p><code>COUNT(*)</code> is not "slower than COUNT(1)" in modern optimisers — both count rows.</p>
+<h3 id="null-handling">NULL handling</h3>
+<p>NULL is a marker for <strong>unknown or absent</strong>, not a value. Consequences:</p>
+<ul>
+<li><code>NULL = NULL</code> evaluates to UNKNOWN, not TRUE; therefore <code>WHERE col = NULL</code> returns <strong>zero rows</strong>. Same for <code>&lt;&gt; NULL</code>, <code>IN (NULL)</code>, <code>NOT IN (…, NULL)</code>.</li>
+<li>Use <code>IS NULL</code> / <code>IS NOT NULL</code>. <code>IS NULL</code> is a predicate, not a function.</li>
+<li><code>NOT IN (1, 2, NULL)</code> returns <strong>no rows</strong> for any value, because <code>x &lt;&gt; NULL</code> is UNKNOWN and <code>NOT UNKNOWN</code> is UNKNOWN. <code>NOT EXISTS</code> has no such trap — prefer it.</li>
+<li>Arithmetic with NULL yields NULL: <code>100 + NULL = NULL</code>. <code>CONCAT('a', NULL)</code> yields NULL in MySQL and SQL Server and in standard <code>||</code>; Oracle treats the empty string as NULL and <code>||</code> treats NULL as empty.</li>
+<li>Any comparison with NULL, except <code>IS [NOT] NULL</code> and <code>&lt;=&gt;</code> (MySQL null-safe equality), yields UNKNOWN.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Behaviour</th>
+<th>Example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>COALESCE(a, b, c, …)</code></td>
+<td>First non-NULL argument (standard SQL, any number of args)</td>
+<td><code>COALESCE(NULL, 5, 9)</code></td>
+<td>5</td>
+</tr>
+<tr>
+<td><code>NULLIF(a, b)</code></td>
+<td>NULL if <code>a = b</code>, else <code>a</code></td>
+<td><code>NULLIF(10, 10)</code> / <code>NULLIF(10, 3)</code></td>
+<td>NULL / 10</td>
+</tr>
+<tr>
+<td><code>IFNULL(a, b)</code></td>
+<td>MySQL/SQLite 2-argument <code>COALESCE</code></td>
+<td><code>IFNULL(NULL, 7)</code></td>
+<td>7</td>
+</tr>
+<tr>
+<td><code>ISNULL(a, b)</code></td>
+<td>SQL Server 2-argument function — <strong>not</strong> the <code>IS NULL</code> predicate</td>
+<td><code>ISNULL(NULL, 7)</code></td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Three-valued logic</strong> (TRUE / FALSE / UNKNOWN, where UNKNOWN is produced by any comparison involving NULL):</p>
+<table>
+<thead>
+<tr>
+<th><code>AND</code></th>
+<th>TRUE</th>
+<th>FALSE</th>
+<th>UNKNOWN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TRUE</strong></td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>UNKNOWN</td>
+</tr>
+<tr>
+<td><strong>FALSE</strong></td>
+<td>FALSE</td>
+<td>FALSE</td>
+<td>FALSE</td>
+</tr>
+<tr>
+<td><strong>UNKNOWN</strong></td>
+<td>UNKNOWN</td>
+<td>FALSE</td>
+<td>UNKNOWN</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><code>OR</code></th>
+<th>TRUE</th>
+<th>FALSE</th>
+<th>UNKNOWN</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TRUE</strong></td>
+<td>TRUE</td>
+<td>TRUE</td>
+<td>TRUE</td>
+</tr>
+<tr>
+<td><strong>FALSE</strong></td>
+<td>TRUE</td>
+<td>FALSE</td>
+<td>UNKNOWN</td>
+</tr>
+<tr>
+<td><strong>UNKNOWN</strong></td>
+<td>TRUE</td>
+<td>UNKNOWN</td>
+<td>UNKNOWN</td>
+</tr>
+</tbody>
+</table>
+<p><code>NOT UNKNOWN = UNKNOWN</code>. <code>WHERE</code> and <code>HAVING</code> keep a row <strong>only</strong> when the predicate is TRUE; FALSE and UNKNOWN are both discarded. A <code>CHECK</code> constraint, by contrast, passes when the condition is TRUE <strong>or UNKNOWN</strong>. In a <code>UNIQUE</code> column, most engines (PostgreSQL, MySQL, Oracle) allow many NULLs because NULLs are not equal; SQL Server allows only one per unique constraint. Aggregates, <code>GROUP BY</code> and <code>DISTINCT</code> all skip or collapse NULLs as shown above.</p>
+<h3 id="like-in-between-exists-subqueries">LIKE, IN, BETWEEN, EXISTS, subqueries</h3>
+<p><strong>LIKE</strong> — pattern matching. <code>%</code> = zero or more characters; <code>_</code> = exactly one character.</p>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Matches</th>
+<th>Does not match</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>'A%'</code></td>
+<td><code>Asha</code>, <code>A</code>, <code>Alok</code></td>
+<td><code>Ravi</code></td>
+</tr>
+<tr>
+<td><code>'%a'</code></td>
+<td><code>Asha</code>, <code>Divya</code></td>
+<td><code>Ravi</code></td>
+</tr>
+<tr>
+<td><code>'_sha'</code></td>
+<td><code>Asha</code></td>
+<td><code>Ash</code></td>
+</tr>
+<tr>
+<td><code>'%sh%'</code></td>
+<td><code>Asha</code></td>
+<td><code>Ravi</code></td>
+</tr>
+<tr>
+<td><code>'A_ha'</code></td>
+<td><code>Asha</code></td>
+<td><code>Aisha</code></td>
+</tr>
+</tbody>
+</table>
+<p>Escape a literal wildcard with <code>ESCAPE</code>: <code>LIKE '50\%%' ESCAPE '\'</code>. Case sensitivity follows the column collation, not the operator. <code>NOT LIKE</code> is not NULL-safe.</p>
+<p><strong>IN</strong> — shorthand for a chain of <code>OR</code> equalities: <code>x IN (1,2,3)</code> ≡ <code>x = 1 OR x = 2 OR x = 3</code>. <code>NOT IN</code> is the NULL trap described above.</p>
+<p><strong>BETWEEN a AND b</strong> — inclusive on both ends, equivalent to <code>x &gt;= a AND x &lt;= b</code>. <code>BETWEEN 10 AND 5</code> is always empty (bounds are not swapped). It works on dates and strings too.</p>
+<p><strong>EXISTS</strong> — returns TRUE/FALSE based on whether the subquery returns at least one row; the select list is irrelevant, so <code>EXISTS (SELECT 1 FROM …)</code> is idiomatic. It short-circuits on the first row, and <code>NOT EXISTS</code> is NULL-safe.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Non-correlated subquery</th>
+<th>Correlated subquery</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>References outer query</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Executed</td>
+<td>Once, independently — can be run standalone</td>
+<td>Once per candidate outer row</td>
+</tr>
+<tr>
+<td>Typical use</td>
+<td><code>WHERE id IN (SELECT …)</code>, <code>WHERE salary &gt; (SELECT AVG(salary) FROM emp)</code></td>
+<td><code>WHERE EXISTS (SELECT 1 FROM … WHERE inner.dept = outer.dept)</code></td>
+</tr>
+<tr>
+<td>Cost</td>
+<td>One extra execution</td>
+<td>Potentially O(outer rows) unless the optimiser rewrites it as a join</td>
+</tr>
+</tbody>
+</table>
+<p>A scalar subquery must return exactly one column and at most one row, and can be used anywhere a value is allowed. A subquery in <code>FROM</code> is a derived table and <strong>must</strong> have an alias.</p>
+<h3 id="indexes">Indexes</h3>
+<p>An index is a separate, sorted data structure that maps key values to row locations. The default structure is a <strong>B-tree</strong> (balanced tree, all leaves at the same depth), which makes equality and range lookups O(log n) instead of a full O(n) scan. Hash indexes support equality only. A B-tree's entries are sorted by the <strong>leading</strong> column first.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Clustered index</th>
+<th>Non-clustered index</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stores the table rows</td>
+<td>Yes — the leaf level <strong>is</strong> the data</td>
+<td>No — leaves hold a row locator</td>
+</tr>
+<tr>
+<td>Physical row order</td>
+<td>Determined by the key</td>
+<td>Unaffected</td>
+</tr>
+<tr>
+<td>Count per table</td>
+<td>Exactly one (or zero)</td>
+<td>Many</td>
+</tr>
+<tr>
+<td>Row locator</td>
+<td>—</td>
+<td>Clustering key value, or RID on a heap (SQL Server)</td>
+</tr>
+<tr>
+<td>Example</td>
+<td>InnoDB primary key; <code>PRIMARY KEY</code> clustered by default</td>
+<td>Every <code>CREATE INDEX</code></td>
+</tr>
+</tbody>
+</table>
+<p>InnoDB: the primary key <em>is</em> the clustered index, so secondary indexes store the primary-key value as their pointer — a lookup via a secondary index costs two B-tree traversals. If no primary key exists, InnoDB promotes the first <code>UNIQUE NOT NULL</code> index, else creates a hidden 6-byte row id.</p>
+<p><strong>An index helps when</strong></p>
+<ul>
+<li>The column appears in <code>WHERE</code> with <code>=</code>, <code>&lt;</code>, <code>&gt;</code>, <code>BETWEEN</code>, or a prefix <code>LIKE 'abc%'</code>.</li>
+<li>The column is a join key.</li>
+<li>The column drives <code>ORDER BY</code> / <code>GROUP BY</code> that matches the index order — avoiding a sort.</li>
+<li>The column has high selectivity (many distinct values relative to rows).</li>
+</ul>
+<p><strong>An index hurts when</strong></p>
+<ul>
+<li>The table is write-heavy: every <code>INSERT</code>, <code>UPDATE</code> of an indexed column, and <code>DELETE</code> must maintain every index.</li>
+<li>Storage grows, and the optimiser has more access paths to evaluate.</li>
+<li>The column is low-cardinality (e.g. a status flag with three values) — a scan is cheaper than the extra lookups.</li>
+<li>The optimiser estimates the predicate matches so many rows that a table scan wins anyway.</li>
+</ul>
+<p><strong>Why <code>LIKE '%x'</code> cannot use an index:</strong> a B-tree is sorted by the string's <em>prefix</em>. With a leading wildcard there is no known prefix, so no range of the tree can be isolated — the engine must read every entry (index scan or full table scan). <code>LIKE 'x%'</code> gives a prefix and becomes a range seek. The same logic explains why wrapping the column in a function kills index use: <code>WHERE YEAR(order_date) = 2024</code> cannot seek, but <code>WHERE order_date &gt;= '2024-01-01' AND order_date &lt; '2025-01-01'</code> can. Such predicates are called non-sargable.</p>
+<p><strong>Composite index / leftmost-prefix rule:</strong> an index on <code>(a, b)</code> serves <code>WHERE a = ?</code> and <code>WHERE a = ? AND b = ?</code>, but <strong>not</strong> <code>WHERE b = ?</code> alone. Column order in the index definition matters more than the columns chosen.</p>
+<p><strong>Covering index:</strong> an index that contains every column the query needs (key columns plus non-key <code>INCLUDE</code>d columns in SQL Server, or all referenced columns in the key elsewhere). The engine answers from the index alone — an index-only scan — with no lookup into the table or clustered index. This is the standard fix for a hot query that reads few columns from a wide table. Note that Oracle B-tree indexes store no entry for a row whose indexed columns are all NULL, so <code>IS NULL</code> on such a column cannot use that index.</p>
+<h3 id="views-stored-procedures-triggers">Views, stored procedures, triggers</h3>
+<p><strong>View</strong> — a named, stored <code>SELECT</code> that behaves like a read-only virtual table. It holds no data of its own (unless explicitly materialised), so it always reflects the underlying tables, and it is used to encapsulate a complex join, expose only certain columns or rows, and give a stable interface over a renamed schema. A plain view is updatable only when it maps simply to one base table with no aggregates, <code>DISTINCT</code>, <code>GROUP BY</code>, or <code>UNION</code>; complex views are read-only, and a <code>WITH CHECK OPTION</code> clause prevents inserts or updates that would not satisfy the view's <code>WHERE</code>.</p>
+<p><strong>Stored procedure</strong> — a named, precompiled block of SQL plus control flow (<code>IF</code>, loops, variables, exception handling) stored in the database and executed with <code>CALL</code> (MySQL/PostgreSQL) or <code>EXEC</code> (SQL Server). It accepts <code>IN</code>/<code>OUT</code> parameters, reduces round trips and repeated parsing, and centralises business logic; the trade-offs are database-vendor lock-in and logic that is harder to version than application code. Stored procedures do <strong>not</strong> run inside a SELECT statement, unlike functions, which are the correct tool when a computed value is needed inside a query.</p>
+<p><strong>Trigger</strong> — a block of code attached to a table that fires automatically in response to <code>INSERT</code>, <code>UPDATE</code>, or <code>DELETE</code>. It can run <code>BEFORE</code> or <code>AFTER</code> the statement, per row or per statement, and typically has access to <code>OLD</code> and <code>NEW</code> row values. The canonical use is <strong>audit logging</strong>: an <code>AFTER UPDATE</code> or <code>AFTER DELETE</code> trigger writes the changed row, the old and new values, the user, and a timestamp into an audit table, which cannot be bypassed by an application path that forgets to log. Other uses are maintaining derived or denormalised columns, cascading changes, and enforcing constraints that a <code>CHECK</code> cannot express. Risks: triggers fire invisibly (so a single <code>DELETE</code> can cascade into unexpected side effects), they add per-row overhead on every write, and they can recurse if a trigger writes to its own table.</p>
+<h2 id="4-must-memorise-block">4. Must-memorise block</h2>
+<p><strong>Data types</strong></p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>INT</code> / <code>INTEGER</code>, <code>SMALLINT</code>, <code>BIGINT</code></td>
+<td>Exact whole numbers</td>
+</tr>
+<tr>
+<td><code>DECIMAL(p,s)</code> / <code>NUMERIC(p,s)</code></td>
+<td>Exact fixed-point — the only correct choice for money</td>
+</tr>
+<tr>
+<td><code>FLOAT</code> / <code>REAL</code> / <code>DOUBLE</code></td>
+<td>Approximate binary floating point — never use for currency</td>
+</tr>
+<tr>
+<td><code>CHAR(n)</code></td>
+<td>Fixed length, space-padded</td>
+</tr>
+<tr>
+<td><code>VARCHAR(n)</code> / <code>TEXT</code> / <code>CLOB</code></td>
+<td>Variable-length character data</td>
+</tr>
+<tr>
+<td><code>DATE</code>, <code>TIME</code>, <code>TIMESTAMP</code> / <code>DATETIME</code></td>
+<td><code>TIMESTAMP</code> may carry time zone; <code>DATETIME</code> does not</td>
+</tr>
+<tr>
+<td><code>BOOLEAN</code></td>
+<td>TRUE / FALSE / UNKNOWN</td>
+</tr>
+<tr>
+<td><code>BLOB</code></td>
+<td>Binary large object</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Normal forms</strong></p>
+<table>
+<thead>
+<tr>
+<th>Form</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1NF</td>
+<td>Atomic values only; no repeating groups; each row identifiable by a key</td>
+</tr>
+<tr>
+<td>2NF</td>
+<td>1NF + no non-key attribute depends on <strong>part</strong> of a composite candidate key</td>
+</tr>
+<tr>
+<td>3NF</td>
+<td>2NF + no transitive dependency (non-key attribute depending on another non-key attribute)</td>
+</tr>
+<tr>
+<td>BCNF</td>
+<td>For every functional dependency <code>X → Y</code>, <code>X</code> is a superkey (stricter than 3NF; removes anomalies from overlapping candidate keys)</td>
+</tr>
+<tr>
+<td>4NF</td>
+<td>BCNF + no non-trivial multivalued dependencies</td>
+</tr>
+</tbody>
+</table>
+<p>Goal of normalisation: eliminate insert/update/delete anomalies. <strong>Denormalisation</strong> deliberately reintroduces redundancy to avoid joins on read-heavy workloads.</p>
+<p><strong>ACID</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Atomicity</td>
+<td>A transaction's statements all apply or none do</td>
+</tr>
+<tr>
+<td>Consistency</td>
+<td>A transaction moves the database from one valid state to another; constraints hold at commit</td>
+</tr>
+<tr>
+<td>Isolation</td>
+<td>Concurrent transactions do not see each other's uncommitted work</td>
+</tr>
+<tr>
+<td>Durability</td>
+<td>Committed changes survive a crash (write-ahead / redo log)</td>
+</tr>
+</tbody>
+</table>
+<p>Isolation levels vs phenomena: <code>READ UNCOMMITTED</code> allows dirty reads; <code>READ COMMITTED</code> allows non-repeatable reads and phantoms; <code>REPEATABLE READ</code> allows phantoms in the standard (InnoDB's <code>REPEATABLE READ</code> blocks them with next-key locks); <code>SERIALIZABLE</code> prevents all three. Higher isolation = more locking = less concurrency.</p>
+<p><strong>Join types</strong></p>
+<table>
+<thead>
+<tr>
+<th>Join</th>
+<th>Keeps</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>INNER</code></td>
+<td>Matched pairs only</td>
+</tr>
+<tr>
+<td><code>LEFT [OUTER]</code></td>
+<td>All left rows; unmatched right columns = NULL</td>
+</tr>
+<tr>
+<td><code>RIGHT [OUTER]</code></td>
+<td>All right rows; unmatched left columns = NULL</td>
+</tr>
+<tr>
+<td><code>FULL [OUTER]</code></td>
+<td>All rows from both sides, NULL-filled where unmatched</td>
+</tr>
+<tr>
+<td><code>CROSS</code></td>
+<td>Cartesian product, rows × rows, no <code>ON</code> clause</td>
+</tr>
+<tr>
+<td><code>SELF</code></td>
+<td>Same table joined to itself under two aliases</td>
+</tr>
+</tbody>
+</table>
+<p><code>A LEFT JOIN B ON … WHERE b.col = x</code> behaves as an INNER JOIN; put the condition in <code>ON</code> to preserve unmatched left rows.</p>
+<p><strong>WHERE vs HAVING</strong></p>
+<ul>
+<li><code>WHERE</code> filters rows before grouping; cannot use aggregates.</li>
+<li><code>HAVING</code> filters groups after grouping; can use aggregates.</li>
+<li>Aliases: never in <code>WHERE</code>; <code>ORDER BY</code> always; MySQL also allows them in <code>GROUP BY</code> and <code>HAVING</code>.</li>
+</ul>
+<p><strong>Logical execution order</strong></p>
+<p><code>FROM → ON → JOIN → WHERE → GROUP BY → HAVING → SELECT → DISTINCT → ORDER BY → LIMIT</code></p>
+<p>Alias available in <code>ORDER BY</code> because <code>SELECT</code> precedes it; unavailable in <code>WHERE</code>/<code>HAVING</code> because it follows them.</p>
+<p><strong>COUNT variants</strong></p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Counts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>COUNT(*)</code></td>
+<td>Every row, NULLs included</td>
+</tr>
+<tr>
+<td><code>COUNT(col)</code></td>
+<td>Non-NULL values of <code>col</code></td>
+</tr>
+<tr>
+<td><code>COUNT(DISTINCT col)</code></td>
+<td>Distinct non-NULL values of <code>col</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>AVG(col)</code> divides by the non-NULL count. <code>SUM</code>/<code>AVG</code>/<code>MIN</code>/<code>MAX</code> return NULL over an all-NULL (or empty) input; <code>COUNT</code> returns 0.</p>
+<p><strong>NULL rules</strong></p>
+<ul>
+<li>NULL is unknown/absent, not a value; <code>= NULL</code>, <code>&lt;&gt; NULL</code> and <code>NOT IN (…, NULL)</code> never return rows.</li>
+<li>Use <code>IS NULL</code> / <code>IS NOT NULL</code>; <code>COALESCE</code> for the first non-NULL; <code>NULLIF(a,b)</code> to turn a sentinel into NULL; <code>IFNULL</code>/<code>ISNULL</code> are 2-argument vendor equivalents.</li>
+<li>Aggregates (except <code>COUNT(*)</code>) ignore NULLs; <code>GROUP BY</code> and <code>DISTINCT</code> treat all NULLs as one group.</li>
+<li>Any arithmetic or comparison with NULL yields NULL/UNKNOWN; <code>WHERE</code> keeps only TRUE rows; <code>CHECK</code> passes on TRUE or UNKNOWN.</li>
+<li><code>NOT EXISTS</code> is NULL-safe where <code>NOT IN</code> is not.</li>
+</ul>
+<p><strong>Index rules of thumb</strong></p>
+<ul>
+<li>Index the columns used in <code>WHERE</code>, <code>JOIN</code>, <code>ORDER BY</code> and <code>GROUP BY</code>.</li>
+<li>Composite index follows the leftmost-prefix rule: <code>(a,b)</code> serves <code>a</code> and <code>a,b</code>, not <code>b</code>.</li>
+<li>One clustered index per table (InnoDB: the primary key); many non-clustered indexes allowed.</li>
+<li>Every index adds write cost on <code>INSERT</code>/<code>UPDATE</code>/<code>DELETE</code> plus storage — do not index everything.</li>
+<li>Low-selectivity columns rarely benefit from a standalone index.</li>
+<li><code>LIKE '%x'</code> and functions wrapping the column are non-sargable and force a scan; <code>LIKE 'x%'</code> and range predicates can seek.</li>
+<li>A covering index containing every referenced column enables an index-only scan with no table lookup.</li>
+</ul>
+<h2 id="5-worked-examples">5. Worked examples</h2>
+<h3 id="example-1-left-join-row-count-with-null-marks">Example 1 — LEFT JOIN row count with NULL marks</h3>
+<p>Students:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">student_id</th>
+<th>name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Asha</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Bina</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Chetan</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Dev</td>
+</tr>
+</tbody>
+</table>
+<p>Marks:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">student_id</th>
+<th>subject</th>
+<th style="text-align: right;">score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Math</td>
+<td style="text-align: right;">80</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Physics</td>
+<td style="text-align: right;">75</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Math</td>
+<td style="text-align: right;">NULL</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Math</td>
+<td style="text-align: right;">90</td>
+</tr>
+</tbody>
+</table>
+<p>Query:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">student_id</span><span class="p">,</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">subject</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">score</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="w"> </span><span class="n">s</span>
+<span class="k">LEFT</span><span class="w"> </span><span class="k">JOIN</span><span class="w"> </span><span class="n">marks</span><span class="w"> </span><span class="n">m</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">student_id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">student_id</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">s</span><span class="p">.</span><span class="n">student_id</span><span class="p">,</span><span class="w"> </span><span class="n">m</span><span class="p">.</span><span class="n">subject</span><span class="p">;</span>
+</code></pre></div>
+
+<p>Step-by-step:</p>
+<ul>
+<li>Matching join rows: student 1 has 2 marks, student 2 has 1 mark, student 4 has 1 mark.</li>
+<li>Matching total = 2 + 1 + 1 = 4.</li>
+<li>Unmatched left rows: student 3 has no marks. LEFT JOIN produces 1 row with <code>m.subject = NULL</code>, <code>m.score = NULL</code>.</li>
+<li>Total result rows = 4 + 1 = 5.</li>
+<li>Student 2's <code>score</code> is NULL, but the join condition is on <code>student_id</code>, so it is still a matching row. It does not create an extra nonmatching row.</li>
+</ul>
+<p>Result:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">student_id</th>
+<th>name</th>
+<th>subject</th>
+<th style="text-align: right;">score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Asha</td>
+<td>Math</td>
+<td style="text-align: right;">80</td>
+</tr>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Asha</td>
+<td>Physics</td>
+<td style="text-align: right;">75</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Bina</td>
+<td>Math</td>
+<td style="text-align: right;">NULL</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Chetan</td>
+<td>NULL</td>
+<td style="text-align: right;">NULL</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Dev</td>
+<td>Math</td>
+<td style="text-align: right;">90</td>
+</tr>
+</tbody>
+</table>
+<p><code>COUNT(*)</code> over this result = 5. <code>COUNT(m.score)</code> = 3, because two rows have NULL score.</p>
+<p><strong>Final answer: 5 rows.</strong></p>
+<hr />
+<h3 id="example-2-group-by-where-vs-having-character-count">Example 2 — GROUP BY, WHERE vs HAVING, character count</h3>
+<p>Employees:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">emp_id</th>
+<th>dept</th>
+<th style="text-align: right;">hire_year</th>
+<th style="text-align: right;">commission</th>
+<th>name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Sales</td>
+<td style="text-align: right;">2020</td>
+<td style="text-align: right;">1000</td>
+<td>anna</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Sales</td>
+<td style="text-align: right;">2019</td>
+<td style="text-align: right;">NULL</td>
+<td>alan</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Sales</td>
+<td style="text-align: right;">2021</td>
+<td style="text-align: right;">500</td>
+<td>bella</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>IT</td>
+<td style="text-align: right;">2020</td>
+<td style="text-align: right;">NULL</td>
+<td>aarav</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>IT</td>
+<td style="text-align: right;">2021</td>
+<td style="text-align: right;">200</td>
+<td>diya</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>HR</td>
+<td style="text-align: right;">2022</td>
+<td style="text-align: right;">NULL</td>
+<td>ravi</td>
+</tr>
+</tbody>
+</table>
+<p>Query:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="n">dept</span><span class="p">,</span>
+<span class="w">       </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">emp_count</span><span class="p">,</span>
+<span class="w">       </span><span class="k">COUNT</span><span class="p">(</span><span class="n">commission</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">comm_count</span><span class="p">,</span>
+<span class="w">       </span><span class="k">SUM</span><span class="p">(</span><span class="k">CHAR_LENGTH</span><span class="p">(</span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="k">CHAR_LENGTH</span><span class="p">(</span><span class="k">REPLACE</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;a&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">)))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">a_count</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">employees</span>
+<span class="k">WHERE</span><span class="w"> </span><span class="n">hire_year</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2020</span>
+<span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">dept</span>
+<span class="k">HAVING</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">2</span>
+<span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">dept</span><span class="p">;</span>
+</code></pre></div>
+
+<p>Step-by-step:</p>
+<ul>
+<li><code>WHERE hire_year &gt;= 2020</code> keeps emp_id 1, 3, 4, 5, 6. Excludes emp_id 2.</li>
+<li>Sales group: rows 1 and 3.</li>
+<li><code>COUNT(*)</code> = 2.</li>
+<li><code>COUNT(commission)</code> = 2, because 1000 and 500 are non-NULL.</li>
+<li><code>a_count</code>: <code>anna</code> = 4 − 2 = 2; <code>bella</code> = 5 − 4 = 1. Sum = 3.</li>
+<li>IT group: rows 4 and 5.</li>
+<li><code>COUNT(*)</code> = 2.</li>
+<li><code>COUNT(commission)</code> = 1, because row 4 commission is NULL.</li>
+<li><code>a_count</code>: <code>aarav</code> = 5 − 2 = 3; <code>diya</code> = 4 − 3 = 1. Sum = 4.</li>
+<li>HR group: row 6.</li>
+<li><code>COUNT(*)</code> = 1.</li>
+<li><code>HAVING COUNT(*) &gt;= 2</code> removes HR.</li>
+</ul>
+<p>Result:</p>
+<table>
+<thead>
+<tr>
+<th>dept</th>
+<th>emp_count</th>
+<th style="text-align: right;">comm_count</th>
+<th style="text-align: right;">a_count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IT</td>
+<td>2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr>
+<td>Sales</td>
+<td>2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+</tr>
+</tbody>
+</table>
+<p><code>WHERE</code> filtered rows before grouping. <code>HAVING</code> filtered groups after aggregation.</p>
+<p><strong>Final answer: IT (2, 1, 4) and Sales (2, 2, 3).</strong></p>
+<hr />
+<h3 id="example-3-null-handling-in-aggregates-and-predicates">Example 3 — NULL handling in aggregates and predicates</h3>
+<p>Scores:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">score</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">80</td>
+</tr>
+<tr>
+<td style="text-align: right;">NULL</td>
+</tr>
+<tr>
+<td style="text-align: right;">75</td>
+</tr>
+<tr>
+<td style="text-align: right;">NULL</td>
+</tr>
+<tr>
+<td style="text-align: right;">90</td>
+</tr>
+</tbody>
+</table>
+<p>Query:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="k">rows</span><span class="p">,</span>
+<span class="w">       </span><span class="k">COUNT</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">non_null_scores</span><span class="p">,</span>
+<span class="w">       </span><span class="k">SUM</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">total</span><span class="p">,</span>
+<span class="w">       </span><span class="k">AVG</span><span class="p">(</span><span class="n">score</span><span class="p">)</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">avg_score</span><span class="p">,</span>
+<span class="w">       </span><span class="k">AVG</span><span class="p">(</span><span class="k">COALESCE</span><span class="p">(</span><span class="n">score</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">))</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">avg_with_zero</span>
+<span class="k">FROM</span><span class="w"> </span><span class="n">marks</span><span class="p">;</span>
+</code></pre></div>
+
+<p>Step-by-step:</p>
+<ul>
+<li><code>COUNT(*)</code>: counts all 5 rows.</li>
+<li><code>COUNT(score)</code>: skips the 2 NULLs, so 3.</li>
+<li><code>SUM(score)</code>: 80 + 75 + 90 = 245.</li>
+<li><code>AVG(score)</code>: 245 / 3 = 81.6667.</li>
+<li><code>AVG(COALESCE(score, 0))</code>: (80 + 0 + 75 + 0 + 90) / 5 = 245 / 5 = 49.0000.</li>
+</ul>
+<p>Predicates:</p>
+<ul>
+<li><code>WHERE score &lt;&gt; 80</code> returns 75 and 90 only. NULL rows are not returned because <code>NULL &lt;&gt; 80</code> is UNKNOWN, not TRUE.</li>
+<li><code>WHERE score IS NULL</code> returns the two NULL rows.</li>
+</ul>
+<p><strong>Final answer: rows = 5, non_null_scores = 3, total = 245, avg_score = 81.6667, avg_with_zero = 49.0000.</strong></p>
+<hr />
+<h3 id="example-4-index-optimisation-on-email-like-primary-key-choice">Example 4 — Index optimisation on email, LIKE, primary-key choice</h3>
+<p>Table <code>users</code>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">user_id</th>
+<th>email</th>
+<th>created_at</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>a@b.com</td>
+<td>2024-01-01</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>c@d.com</td>
+<td>2024-01-02</td>
+</tr>
+</tbody>
+</table>
+<p>Assume <code>user_id</code> is the primary key and there is no index on <code>email</code>.</p>
+<p>Query comparison:</p>
+<table>
+<thead>
+<tr>
+<th>Query</th>
+<th>Index use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>WHERE email = 'a@b.com'</code></td>
+<td>B-tree index on <code>email</code> can be used. Create <code>UNIQUE INDEX ux_users_email ON users(email);</code> if uniqueness is required.</td>
+</tr>
+<tr>
+<td><code>WHERE email LIKE 'a%@b.com'</code></td>
+<td>Leading literal <code>a</code> allows a B-tree range scan on <code>email</code>, then residual filtering.</td>
+</tr>
+<tr>
+<td><code>WHERE email LIKE '%@b.com'</code></td>
+<td>Leading <code>%</code> prevents a normal B-tree seek. Likely full scan unless an index-only scan is cheaper or a trigram/full-text index exists.</td>
+</tr>
+<tr>
+<td><code>WHERE LOWER(email) = 'a@b.com'</code></td>
+<td>Function on the column is not sargable. A normal <code>email</code> index is not used. Use case-insensitive collation, store lowercased email, or create a function-based index on <code>LOWER(email)</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Primary-key choice:</p>
+<ul>
+<li><code>users</code>: email is unique but can change and is longer than an integer. Use <code>user_id</code> as a surrogate primary key and add <code>UNIQUE(email)</code>.</li>
+<li><code>enrollments(student_id, course_id, grade)</code> with rule “a student can take a course once”: use composite primary key <code>(student_id, course_id)</code>. It enforces the rule and gives a useful join index. If a surrogate <code>enrollment_id</code> is added, still add <code>UNIQUE(student_id, course_id)</code>.</li>
+</ul>
+<p><strong>Final answer: create a B-tree/UNIQUE index on email for equality and prefix LIKE; <code>LIKE '%@b.com'</code> and <code>LOWER(email)=</code> do not use a normal email index. For users choose <code>user_id</code> PK + <code>UNIQUE(email)</code>; for the enrollment table choose composite PK <code>(student_id, course_id)</code>.</strong></p>
+<hr />
+<h3 id="example-5-update-trigger-logging-delete-concurrency">Example 5 — UPDATE, trigger logging delete, concurrency</h3>
+<p>Tables:</p>
+<div class="codehilite"><pre><span></span><code><span class="n">employees</span><span class="p">(</span><span class="n">emp_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span><span class="w"> </span><span class="n">salary</span><span class="w"> </span><span class="nb">INT</span><span class="p">)</span>
+<span class="n">employee_delete_log</span><span class="p">(</span><span class="n">log_id</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="n">AUTO_INCREMENT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<span class="w">                    </span><span class="n">emp_id</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">50</span><span class="p">),</span><span class="w"> </span><span class="n">deleted_at</span><span class="w"> </span><span class="n">DATETIME</span><span class="p">)</span>
+</code></pre></div>
+
+<p>Trigger:</p>
+<div class="codehilite"><pre><span></span><code><span class="k">CREATE</span><span class="w"> </span><span class="k">TRIGGER</span><span class="w"> </span><span class="n">trg_employee_after_delete</span>
+<span class="k">AFTER</span><span class="w"> </span><span class="k">DELETE</span><span class="w"> </span><span class="k">ON</span><span class="w"> </span><span class="n">employees</span>
+<span class="k">FOR</span><span class="w"> </span><span class="k">EACH</span><span class="w"> </span><span class="k">ROW</span>
+<span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">employee_delete_log</span><span class="w"> </span><span class="p">(</span><span class="n">emp_id</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">deleted_at</span><span class="p">)</span>
+<span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="k">OLD</span><span class="p">.</span><span class="n">emp_id</span><span class="p">,</span><span class="w"> </span><span class="k">OLD</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="k">CURRENT_TIMESTAMP</span><span class="p">);</span>
+</code></pre></div>
+
+<p>Questions:</p>
+<ul>
+<li>(a) <code>DELETE FROM employees WHERE emp_id = 7;</code> succeeds. What log row appears?</li>
+<li>(b) If the transaction rolls back, what happens to the log row?</li>
+<li>(c) Initial salary for <code>emp_id = 5</code> is 5000. T1 and T2 each run <code>UPDATE employees SET salary = salary + 100 WHERE emp_id = 5;</code> and commit. Final salary?</li>
+<li>(d) If both run <code>UPDATE employees SET salary = 6000 WHERE emp_id = 5;</code> and commit, final salary?</li>
+<li>(e) Which isolation level can see the uncommitted log row?</li>
+</ul>
+<p>Step-by-step:</p>
+<ul>
+<li>(a) <code>AFTER DELETE</code> trigger fires once per deleted row. It inserts <code>OLD.emp_id = 7</code>, <code>OLD.name</code> = deleted employee's name, and current timestamp.</li>
+<li>(b) In a transactional engine with a transactional log table, the trigger insert is part of the same transaction. <code>ROLLBACK</code> undoes both the delete and the log insert. If the log table is non-transactional, the insert may persist; this is engine-dependent.</li>
+<li>(c) Row-level locking: T2 waits for T1. T1 writes 5100. T2 then reads 5100 and writes 5200. Final = 5000 + 100 + 100 = 5200.</li>
+<li>(d) Both write the absolute value 6000. T1 commits 6000; T2 then sets 6000 again. Final = 6000, not 6200.</li>
+<li>(e) <code>READ UNCOMMITTED</code> permits dirty reads. <code>READ COMMITTED</code>, <code>REPEATABLE READ</code>, and <code>SERIALIZABLE</code> prevent reading uncommitted data under normal locking/consistent reads.</li>
+</ul>
+<p><strong>Final answer: (a) one log row for emp_id = 7 with OLD values; (b) rolls back with the DELETE in transactional tables; (c) 5200; (d) 6000; (e) READ UNCOMMITTED.</strong></p>
+<hr />
+<h2 id="6-traps-and-gotchas">6. Traps and gotchas</h2>
+<table>
+<thead>
+<tr>
+<th>Trap</th>
+<th>Why it catches people</th>
+<th>How to avoid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LEFT JOIN then <code>WHERE right_table.col = ...</code></td>
+<td>The <code>WHERE</code> removes NULL-extended rows, making the result behave like an INNER JOIN.</td>
+<td>Put right-table conditions in the <code>ON</code> clause when unmatched left rows must remain. Use <code>WHERE</code> only for left-table or intended row filters.</td>
+</tr>
+<tr>
+<td><code>COUNT(*)</code> vs <code>COUNT(column)</code></td>
+<td><code>COUNT(*)</code> counts rows; <code>COUNT(column)</code> skips NULLs. They differ whenever the column has NULLs.</td>
+<td>Decide whether NULL rows should count. Use <code>COUNT(*)</code>, <code>COUNT(column)</code>, or <code>COUNT(COALESCE(column, ...))</code> deliberately.</td>
+</tr>
+<tr>
+<td><code>= NULL</code>, <code>&lt;&gt; NULL</code>, <code>NOT IN (..., NULL)</code></td>
+<td><code>= NULL</code> yields UNKNOWN, not TRUE. <code>NOT IN</code> with a NULL in the list/subquery is never TRUE for nonmatching values, often returning no rows.</td>
+<td>Use <code>IS NULL</code> / <code>IS NOT NULL</code>. Replace <code>NOT IN</code> with <code>NOT EXISTS</code> or remove NULLs from the list.</td>
+</tr>
+<tr>
+<td>WHERE vs HAVING</td>
+<td><code>WHERE</code> runs before grouping and cannot filter on aggregates; <code>HAVING</code> runs after grouping. Putting an aggregate in <code>WHERE</code> is an error.</td>
+<td>Row conditions go in <code>WHERE</code>; group/aggregate conditions go in <code>HAVING</code>.</td>
+</tr>
+<tr>
+<td>Selecting nonaggregated columns not in GROUP BY</td>
+<td>Some engines allow it and return arbitrary row values from the group; standard SQL rejects it.</td>
+<td>Include every nonaggregated selected column in <code>GROUP BY</code>, or wrap it in an aggregate.</td>
+</tr>
+<tr>
+<td>Index on email and <code>LIKE</code>/functions</td>
+<td><code>LIKE '%@x.com'</code> has a leading wildcard; <code>LOWER(email)=</code> wraps the column in a function. Normal B-tree indexes cannot seek on these.</td>
+<td>Use prefix patterns (<code>LIKE 'a%'</code>), store normalized case, use case-insensitive collation, or create an expression/trigram index.</td>
+</tr>
+<tr>
+<td>Primary key vs unique key, email as PK</td>
+<td>PK is NOT NULL and only one per table; unique allows NULLs (often multiple). Email can change and is long.</td>
+<td>Use a surrogate PK (<code>user_id</code>) plus <code>UNIQUE(email)</code>. For many-to-many tables, use a composite PK on the two FK columns.</td>
+</tr>
+<tr>
+<td>Trigger timing and rollback</td>
+<td><code>AFTER DELETE</code> is per row and uses <code>OLD</code>, but its insert is part of the same transaction in transactional engines. People expect the log to survive a rollback.</td>
+<td>Know engine/table type. If audit must survive rollback, write to a non-transactional/external log; otherwise expect rollback to undo it.</td>
+</tr>
+<tr>
+<td>UPDATE concurrency and lost updates</td>
+<td>Two sessions doing read-modify-write or absolute <code>SET x = 6000</code> can overwrite each other; <code>SET x = x + 100</code> is atomic at row level under row locking.</td>
+<td>Use atomic increments; rely on row locks; use appropriate isolation/optimistic locking for read-modify-write logic.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-practice-questions">7. Practice questions</h2>
+<ol>
+<li>
+<p><strong>[Easy]</strong> <em>(D6 — SQL UPDATE)</em> Which statement increases salary by 10% for every employee in department 10?
+   (a) <code>UPDATE employees WHERE dept_id = 10 SET salary = salary * 1.10;</code>
+   (b) <code>UPDATE employees SET salary = salary * 1.10 HAVING dept_id = 10;</code>
+   (c) <code>UPDATE employees SET salary = salary * 1.10 WHERE dept_id = 10;</code>
+   (d) <code>UPDATE employees SET salary = 10% WHERE dept_id = 10;</code></p>
+</li>
+<li>
+<p><strong>[Easy]</strong> <em>(D6 — NULL handling)</em> Which condition correctly finds rows where <code>email</code> has no value?
+   (a) <code>WHERE email IS NULL</code>
+   (b) <code>WHERE email = NULL</code>
+   (c) <code>WHERE email &lt;&gt; NULL</code>
+   (d) <code>WHERE email = ''</code></p>
+</li>
+<li>
+<p><strong>[Easy]</strong> <em>(D6 — primary-key choice)</em> For a Student table, which is the best primary key?
+   (a) <code>student_name</code>
+   (b) <code>email</code>
+   (c) <code>student_id</code> generated unique and not changing
+   (d) <code>phone_number</code></p>
+</li>
+<li>
+<p><strong>[Easy]</strong> <em>(D6 — LIKE)</em> Which query returns names that start with <code>A</code>?
+   (a) <code>WHERE name = 'A*'</code>
+   (b) <code>WHERE name LIKE '%A'</code>
+   (c) <code>WHERE name LIKE 'A%'</code>
+   (d) <code>WHERE name LIKE '_A%'</code></p>
+</li>
+<li>
+<p><strong>[Medium]</strong> <em>(D6 — LEFT JOIN)</em> <code>students</code> has 5 rows. <code>marks</code> has 3 rows: student_id 1 has two marks, student_id 2 has one mark, no other student has marks. How many rows does <code>SELECT * FROM students s LEFT JOIN marks m ON s.student_id = m.student_id</code> return?
+   (a) 5
+   (b) 6
+   (c) 3
+   (d) 8</p>
+</li>
+<li>
+<p><strong>[Medium]</strong> <em>(D6 — WHERE vs HAVING)</em> Which statement is correct about <code>WHERE</code> and <code>HAVING</code>?
+   (a) <code>WHERE</code> filters groups after grouping; <code>HAVING</code> filters rows before grouping.
+   (b) <code>HAVING</code> can only be used without <code>GROUP BY</code>.
+   (c) Both must appear before <code>GROUP BY</code>.
+   (d) <code>WHERE</code> filters rows before grouping; <code>HAVING</code> filters groups after grouping.</p>
+</li>
+<li>
+<p><strong>[Medium]</strong> <em>(D6 — index optimisation)</em> A users table is queried with <code>WHERE email = 'a@b.com'</code>. Which index is most directly useful?
+   (a) A B-tree index on <code>email</code>
+   (b) A bitmap index on <code>gender</code>
+   (c) An index on the primary key only
+   (d) No index, because email contains <code>@</code></p>
+</li>
+<li>
+<p><strong>[Medium]</strong> <em>(D6 — counting character occurrences)</em> Which expression counts occurrences of lowercase <code>a</code> in an ASCII text column <code>c</code>?
+   (a) <code>REPLACE(c, 'a', '') - LENGTH(c)</code>
+   (b) <code>LENGTH(c) - LENGTH(REPLACE(c, '', 'a'))</code>
+   (c) <code>LENGTH(c) - LENGTH(REPLACE(c, 'a', ''))</code>
+   (d) <code>COUNT(c) - COUNT(REPLACE(c, 'a', ''))</code></p>
+</li>
+<li>
+<p><strong>(c) <code>LENGTH(d) - LENGTH(REPLACE(c, 'a', ''))</code></strong> — Correct: removing <code>a</code> reduces length by the number of <code>a</code> occurrences.<br />
+   - (b) Replaces empty string, not <code>a</code>.<br />
+   - (d) <code>COUNT</code> counts rows, not characters.<br />
+   - (a) Subtracts lengths in the wrong order and is not meaningful.</p>
+</li>
+</ol>
+<hr />
+<ol start="9">
+<li>
+<p><strong>[Medium]</strong> <em>(D6 — SQL concurrency)</em> Two transactions read the same row, both add 10, and both write back. The second write overwrites the first, so one increment is lost. What is this problem called?
+   (a) Deadlock
+   (b) Phantom read
+   (c) Dirty read
+   (d) Lost update</p>
+</li>
+<li>
+<p><strong>(d) Lost update</strong> — Correct: one transaction's update overwrites another's, losing an increment.<br />
+   - (c) Dirty read reads uncommitted data.<br />
+   - (b) Phantom read sees new rows in a repeated range query.<br />
+   - (a) Deadlock is a cycle of transactions waiting on locks.</p>
+</li>
+</ol>
+<hr />
+<ol start="10">
+<li>
+<p><strong>[Medium]</strong> <em>(D6 — triggers)</em> You need to insert an audit row automatically whenever an employee row is deleted. Which trigger is appropriate?
+    (a) <code>BEFORE INSERT ON employee FOR EACH ROW</code>
+    (b) <code>INSTEAD OF UPDATE ON employee FOR EACH ROW</code>
+    (c) <code>AFTER SELECT ON employee FOR EACH ROW</code>
+    (d) <code>AFTER DELETE ON employee FOR EACH ROW</code></p>
+</li>
+<li>
+<p><strong>(d) <code>AFTER DELETE ON employee FOR EACH ROW</code></strong> — Correct: it fires after each deleted employee row, suitable for audit logging.  </p>
+<ul>
+<li>(a) Fires on inserts, not deletes.  </li>
+<li>(c) <code>SELECT</code> triggers are not standard.  </li>
+<li>(b) Fires on updates, not deletes.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<ol start="11">
+<li>
+<p><strong>[Medium]</strong> <em>(D6 — GROUP BY)</em> Which query is valid in standard SQL?
+    (a) <code>SELECT dept_id, COUNT(*) FROM employee GROUP BY dept_id;</code>
+    (b) <code>SELECT emp_name, dept_id, COUNT(*) FROM employee GROUP BY dept_id;</code>
+    (c) <code>SELECT dept_id, COUNT(*) FROM employee GROUP BY emp_name;</code>
+    (d) <code>SELECT COUNT(*) FROM employee GROUP BY COUNT(*);</code></p>
+</li>
+<li>
+<p><strong>(a) <code>SELECT dept_id, COUNT(*) FROM employee GROUP BY dept_id;</code></strong> — Correct: <code>dept_id</code> is grouped and <code>COUNT(*)</code> is aggregated.  </p>
+<ul>
+<li>(b) <code>emp_name</code> is neither grouped nor aggregated.  </li>
+<li>(c) <code>dept_id</code> is not grouped or aggregated.  </li>
+<li>(d) <code>GROUP BY COUNT(*)</code> is invalid.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<ol start="12">
+<li>
+<p><strong>[Medium]</strong> <em>(D6 — keys)</em> <code>Enrollment(student_id, course_id, grade)</code>. Which primary key best prevents a student from enrolling twice in the same course?
+    (a) <code>PRIMARY KEY(student_id)</code>
+    (b) <code>PRIMARY KEY(student_id, course_id)</code>
+    (c) <code>PRIMARY KEY(grade)</code>
+    (d) <code>PRIMARY KEY(course_id)</code></p>
+</li>
+<li>
+<p><strong>(b) <code>PRIMARY KEY(student_id, course_id)</code></strong> — Correct: the pair must be unique, so duplicate enrollment is blocked.  </p>
+<ul>
+<li>(a) Allows only one course per student.  </li>
+<li>(d) Allows only one student per course.  </li>
+<li>(c) Grade is not a unique enrollment identifier.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<ol start="13">
+<li>
+<p><strong>[Medium]</strong> <em>(D6 — index optimisation)</em> Query: <code>SELECT * FROM employees WHERE department_id = 5 ORDER BY hire_date DESC;</code> Which index best supports this?
+    (a) Index on <code>hire_date</code>
+    (b) Composite index on <code>(department_id, hire_date)</code>
+    (c) Index on <code>department_id</code>
+    (d) Composite index on <code>(hire_date, department_id)</code></p>
+</li>
+<li>
+<p><strong>(b) Composite index on <code>(department_id, hire_date)</code></strong> — Correct: equality on <code>department_id</code> plus ordering by <code>hire_date</code> matches the index order.  </p>
+<ul>
+<li>(c) Filters department but may still sort.  </li>
+<li>(a) Helps ordering but not the department filter.  </li>
+<li>(d) Wrong leading column for the equality predicate.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<ol start="14">
+<li>
+<p><strong>[Hard]</strong> <em>(D6 — composite index leftmost prefix)</em> Index <code>idx_ln_fn(last_name, first_name)</code> exists. Which query cannot use the index efficiently for the <code>first_name</code> filter alone?
+    (a) <code>WHERE last_name = 'Kumar'</code>
+    (b) <code>WHERE last_name LIKE 'K%'</code>
+    (c) <code>WHERE last_name = 'Kumar' AND first_name = 'Ravi'</code>
+    (d) <code>WHERE first_name = 'Ravi'</code></p>
+</li>
+<li>
+<p><strong>(d) <code>WHERE first_name = 'Ravi'</code></strong> — Correct: a composite index needs the leftmost column, <code>last_name</code>, to use <code>first_name</code> efficiently alone.  </p>
+<ul>
+<li>(a) Uses the leftmost column <code>last_name</code>.  </li>
+<li>(c) Uses both index columns.  </li>
+<li>(b) Uses <code>last_name</code> as a range on the leftmost column.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<ol start="15">
+<li>
+<p><strong>[Hard]</strong> <em>(D6 — NULL handling in aggregates)</em> Table <code>t</code> has salary values <code>100</code>, <code>NULL</code>, <code>200</code>. What does <code>SELECT COUNT(*), COUNT(salary), AVG(salary) FROM t</code> return?
+    (a) <code>3, 3, 150</code>
+    (b) <code>3, 2, 150</code>
+    (c) <code>2, 2, 150</code>
+    (d) <code>3, 2, NULL</code></p>
+</li>
+<li>
+<p><strong>(b) <code>3, 2, 150</code></strong> — Correct: <code>COUNT(*)</code> counts all 3 rows, <code>COUNT(salary)</code> ignores <code>NULL</code>, and <code>AVG(salary)</code> averages 100 and 200.  </p>
+<ul>
+<li>(a) Wrongly counts the <code>NULL</code> salary.  </li>
+<li>(c) Wrongly excludes the <code>NULL</code> row from <code>COUNT(*)</code>.  </li>
+<li>(d) Wrongly returns <code>NULL</code> for the average.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<ol start="16">
+<li><strong>[Hard]</strong> <em>(D6 — LEFT JOIN with WHERE)</em> <code>SELECT * FROM students s LEFT JOIN marks m ON s.student_id = m.student_id WHERE m.score &gt; 50;</code> What happens to students with no marks?
+    (a) They are excluded because <code>WHERE</code> on the right table filters out NULL-extended rows.
+    (b) The join becomes a <code>RIGHT JOIN</code>.
+    (c) They appear twice.
+    (d) They appear with <code>NULL</code> score.</li>
+</ol>
+<hr />
+<ol start="16">
+<li><strong>(a) They are excluded because <code>WHERE</code> on the right table filters out NULL-extended rows.</strong> — Correct: <code>m.score &gt; 50</code> is unknown for unmatched rows, so they are removed.  <ul>
+<li>(d) That would happen without the <code>WHERE</code> condition.  </li>
+<li>(c) A left join does not duplicate unmatched students here.  </li>
+<li>(b) The join type does not change to <code>RIGHT JOIN</code>.</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="8-resources">8. Resources</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Type</th>
+<th>Link</th>
+<th>Free/Paid</th>
+<th>Time</th>
+<th>Why this one</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GfG — SQL joins</td>
+<td>Article</td>
+<td>https://www.geeksforgeeks.org/dbms/sql-join-set-1-inner-left-right-and-full-joins/</td>
+<td>Free</td>
+<td>25 min</td>
+<td>Worked join examples with visible result rows — exactly the exam's format</td>
+</tr>
+<tr>
+<td>GfG — SQL tutorial</td>
+<td>Tutorial series</td>
+<td>https://www.geeksforgeeks.org/dbms/sql-tutorial/</td>
+<td>Free</td>
+<td>60 min</td>
+<td>Complete coverage; use the clauses, aggregates and NULL sections</td>
+</tr>
+<tr>
+<td>GfG — Normal forms in DBMS</td>
+<td>Article</td>
+<td>https://www.geeksforgeeks.org/dbms/normal-forms-in-dbms/</td>
+<td>Free</td>
+<td>25 min</td>
+<td>1NF to BCNF with the dependency definitions the exam uses</td>
+</tr>
+<tr>
+<td>CodeChef — SQL case studies, topic-wise</td>
+<td>Practice set</td>
+<td>https://www.codechef.com/practice/sql-case-studies-topic-wise</td>
+<td>Free</td>
+<td>90 min</td>
+<td><strong>Recommended by a selected candidate</strong> who used it to clear the SQL round</td>
+</tr>
+<tr>
+<td><code>question-banks/QB-T08-D6-dbms-sql.md</code></td>
+<td>Question bank</td>
+<td>(this library)</td>
+<td>Free</td>
+<td>45 min</td>
+<td>40 original questions with small-table join row counts</td>
+</tr>
+</tbody>
+</table>
+<p><em>All external links verified resolving 2026-09-16.</em></p>
+<h2 id="9-self-check">9. Self-check</h2>
+<ul>
+<li>[ ] I can define super, candidate, primary, alternate, composite, foreign and unique keys</li>
+<li>[ ] I can state how PRIMARY KEY differs from UNIQUE on NULLs and on count per table</li>
+<li>[ ] I can state the rule for 1NF, 2NF, 3NF and BCNF and name the anomaly each removes</li>
+<li>[ ] I can define partial and transitive dependency</li>
+<li>[ ] I can state the four ACID properties with an example of violating each</li>
+<li>[ ] Given two small tables, I can write the exact result rows of an INNER and a LEFT JOIN</li>
+<li>[ ] <strong>I can explain WHERE versus HAVING using the logical order of execution</strong></li>
+<li>[ ] I can recite the logical execution order of a SELECT statement</li>
+<li>[ ] I can explain why <code>= NULL</code> never matches anything</li>
+<li>[ ] I can state the difference between <code>COUNT(*)</code>, <code>COUNT(col)</code> and <code>COUNT(DISTINCT col)</code></li>
+<li>[ ] I can say when an index helps, when it hurts, and why <code>LIKE '%x'</code> cannot use one</li>
+<li>[ ] I scored 13/16 or better on the practice questions</li>
+</ul>
+<h2 id="10-sources">10. Sources</h2>
+<p><strong>Teaching content (§3–§9)</strong> is adapted from <code>accenture-prep-final/accenture-prep-library/topics/T08-D6-dbms-sql.md</code>, verified in that library's QA. <strong>Infosys evidence:</strong> first-hand interview accounts in <code>../data/reviews-online.csv</code> and <code>../data/questions-observed.csv</code> (rows <code>I01</code>–<code>I25</code>); interview format in <code>../research/03-pattern-synthesis.md</code> §6.</p>
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/interview/IV2-oop-four-pillars.html"><span>Previous</span><strong>IV2 — OOP — The Four Pillars, Overloading vs Overriding</strong></a><a class="pager next" href="../../infosys-se/interview/IV4-projects-and-resume.html"><span>Next</span><strong>IV4 — Projects and resume</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#iv3-dbms-and-sql-joins-group-by-keys-indexes-nulls">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a><a class="toc-l1" href="#1-why-this-topic-matters-here">1. Why this topic matters here</a><a class="toc-l1" href="#2-exactly-what-gets-asked">2. Exactly what gets asked</a><a class="toc-l1" href="#3-concept-notes">3. Concept notes</a><a class="toc-l1" href="#4-must-memorise-block">4. Must-memorise block</a><a class="toc-l1" href="#5-worked-examples">5. Worked examples</a><a class="toc-l1" href="#6-traps-and-gotchas">6. Traps and gotchas</a><a class="toc-l1" href="#7-practice-questions">7. Practice questions</a><a class="toc-l1" href="#8-resources">8. Resources</a><a class="toc-l1" href="#9-self-check">9. Self-check</a><a class="toc-l1" href="#10-sources">10. Sources</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

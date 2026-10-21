@@ -1,0 +1,2529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P6 — Conditionals and Branch Selection in Pseudocode · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem current" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Pseudocode</span></div>
+    <article class="prose">
+<h1 id="p6-conditionals-and-branch-selection-in-pseudocode">P6 — Conditionals and Branch Selection in Pseudocode</h1><p class="fm-line" style="color:var(--ink-faint);font-size:13px;margin:-.4em 0 1.2em">Tier 3 · Pseudocode · 1.1% of marks · about 0.6 h · confidence Medium</p>
+<p><em>Adapted from <code>accenture-prep-final/accenture-prep-library/topics/T07-B2-conditionals-nested-if.md</code>; verified in that library's QA. §1 and §10 are regenerated for Infosys from <code>data/weightage.json</code>; §2 gains an Infosys evidence table; §3–§9 are the source text unchanged, so "observed" in the worked examples refers to the source paper.</em></p>
+<h2 id="1-why-this-topic-matters-here">1. Why this topic matters here</h2>
+<p>Expect about <strong>0.4 questions and 0.8 marks</strong> on this topic (about 1.1% of the 75 scored marks). It sits in <strong>Pseudocode</strong>: 5 questions, 10 marks, 10 minutes. <strong>Tier 3</strong>, 0.6 hours to reach reliable recall, confidence <strong>Medium</strong>.</p>
+<p><strong>2 questions on this topic are in the observed Infosys pool</strong> (O46, O47), from 1 source. They are listed in §2 and solved in <code>../question-banks/QB-99-OBSERVED-POOL.md</code>.</p>
+<p><strong>Why the tier:</strong> expected marks per study hour, weighted by confidence, is 1.06 against a paper average of 1.84 (<code>../data/analysis-tables.md</code> §6). Every section has its own cut-off, so a zero here costs the whole section's chance, not only these marks. There is no calculator. Negative marking: none reported.</p>
+<h2 id="2-exactly-what-gets-asked">2. Exactly what gets asked</h2>
+<h3 id="what-infosys-asked">What Infosys asked</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Source date</th>
+<th>What was asked</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>O46</td>
+<td>2020-09-22</td>
+<td>Number = 90 tested against 90 &lt; Number &lt; 95: what is displayed?</td>
+</tr>
+<tr>
+<td>O47</td>
+<td>2020-09-22</td>
+<td>a=6, b=3, c=2 with a three-way condition, else a=b+1: print a+b+c</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>The pattern notes below come from the library this file was adapted from. Any frequency or "observed paper" remark in them describes that source paper, not Infosys. The Infosys evidence is the table above.</p>
+</blockquote>
+<ol>
+<li><strong>Trace a 6–12 line snippet ending in <code>Print a + b + c</code>.</strong> The universal shape.</li>
+</ol>
+<p><strong>1. (c) 15</strong><br />
+| Start | a=3 | b=5 | c=7 | sum=15 |
+|---|---|---|---|---|
+| Guard | a&gt;b | 3&gt;5 false | body skipped | final=15 |
+- (b) 25: adds 10 once despite false guard.<br />
+- (a) 45: executes all three +10 updates.<br />
+- (d) 55: overcounts updates by adding extra 10.</p>
+<hr />
+<ol start="2">
+<li><strong>The dead-guard pattern.</strong> Confirmed in 4 local items. The first condition is false, so nothing changes.</li>
+</ol>
+<p><strong>2. (b) 15</strong><br />
+| Start | a=2 | b=9 | c=4 | sum=15 |
+|---|---|---|---|---|
+| Guard | (a+b+c) &gt; (c+b+a) | 15&gt;15 false | body skipped | final=15 |
+- (a) 25: adds 10 to one variable despite identity guard false.<br />
+- (c) 45: treats identity guard as true and adds 10 to all three.<br />
+- (d) 55: treats guard true plus an extra update.</p>
+<hr />
+<ol start="3">
+<li><strong>Outer-true, inner-false.</strong> Confirmed in item 68, where the published answer key was itself wrong. You enter the outer block but the inner guard blocks everything.</li>
+</ol>
+<p><strong>3. (b) 17</strong><br />
+| Start | a=6 | b=2 | c=9 | sum=17 |
+|---|---|---|---|---|
+| Outer | a&gt;b | 6&gt;2 true | enter outer |  |
+| Inner | c&lt;b | 9&lt;2 false | skip inner body | final=17 |
+- (c) 18: increments only a as if inner guard true.<br />
+- (a) 19: increments a and c only.<br />
+- (d) 20: treats inner guard true and increments all three.</p>
+<hr />
+<ol start="4">
+<li><strong>Reassignment before a later read.</strong> Confirmed in 4 local items. A variable is updated, then a later condition must use the <em>new</em> value.</li>
+</ol>
+<p><strong>4. (a) 28</strong><br />
+| Start | a=4 | b=7 | c=3 |  |
+|---|---|---|---|---|
+| a<b | true |  |  |  |
+| a=a+5 | a=9 | b=7 | c=3 |  |
+| a>b | 9&gt;7 true |  |  |  |
+| c=c+a | a=9 | b=7 | c=12 | final=28 |
+- (b) 14: treats outer a<b false, no changes.<br />- (c) 19: updates a but treats inner a>b false, c unchanged.<br />
+- (d) 23: uses old a=4 in c=c+a, giving c=7.</p>
+<hr />
+<ol start="5">
+<li><strong>The identity comparison.</strong> Confirmed twice: <code>(a+b+c) &gt; (c+b+a)</code> is <strong>always false</strong> — both sides are equal and <code>&gt;</code> is strict.</li>
+</ol>
+<p><strong>5. (a) 44</strong><br />
+| Start | a=10 | b=4 | c=6 |  |
+|---|---|---|---|---|
+| a&gt;b | true |  |  |  |
+| b=a+b | a=10 | b=14 | c=6 |  |
+| b&gt;a | 14&gt;10 true |  |  |  |
+| c=c+b | a=10 | b=14 | c=20 | final=44 |
+- (b) 20: treats outer a&gt;b false, no changes.<br />
+- (c) 34: uses old b=4 in c=c+b, giving c=10.<br />
+- (d) 40: treats inner b&gt;a false, executes c=c+a, giving c=16.</p>
+<hr />
+<ol start="6">
+<li><strong>Truthiness of integers.</strong> A condition like <code>((r*q)+q)</code> is true whenever it is non-zero.</li>
+</ol>
+<blockquote>
+<p><strong>No pen and paper.</strong> Hold three variables as a mental triple and restate them after every assignment.</p>
+</blockquote>
+<h2 id="3-concept-notes">3. Concept notes</h2>
+<h3 id="31-boolean-foundations">3.1 Boolean foundations</h3>
+<p>In these papers a condition is <strong>any expression that evaluates to a truth value</strong>. The rule is:</p>
+<table>
+<thead>
+<tr>
+<th>Expression value</th>
+<th>Treated as</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>FALSE</td>
+</tr>
+<tr>
+<td>any non-zero integer (1, 5, −3, 100)</td>
+<td>TRUE</td>
+</tr>
+</tbody>
+</table>
+<p>So a condition like <code>if ((r * q) + q)</code> is <strong>not</strong> a comparison — it is a truthiness test.</p>
+<table>
+<thead>
+<tr>
+<th>r</th>
+<th>q</th>
+<th>(r·q)+q</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>9</td>
+<td>TRUE</td>
+</tr>
+<tr>
+<td>−1</td>
+<td>5</td>
+<td>0</td>
+<td>FALSE</td>
+</tr>
+<tr>
+<td>0</td>
+<td>7</td>
+<td>7</td>
+<td>TRUE</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>FALSE</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>−1, 5</code> case is the trap: non-zero is not the same as positive.</p>
+<p><strong>Truth tables</strong></p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A AND B</th>
+<th>A OR B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr>
+<td>F</td>
+<td>T</td>
+<td>F</td>
+<td>T</td>
+</tr>
+<tr>
+<td>T</td>
+<td>F</td>
+<td>F</td>
+<td>T</td>
+</tr>
+<tr>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>NOT A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T</td>
+<td>F</td>
+</tr>
+<tr>
+<td>F</td>
+<td>T</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-relational-operators">3.2 Relational operators</h3>
+<table>
+<thead>
+<tr>
+<th>Op</th>
+<th>Meaning</th>
+<th>True when…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&gt;</code></td>
+<td>strictly greater</td>
+<td>left &gt; right only</td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>greater or equal</td>
+<td>left &gt; right <strong>or</strong> equal</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>strictly less</td>
+<td>left &lt; right only</td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>less or equal</td>
+<td>left &lt; right <strong>or</strong> equal</td>
+</tr>
+<tr>
+<td><code>==</code></td>
+<td>equal to</td>
+<td>both sides same value</td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>not equal to</td>
+<td>sides differ</td>
+</tr>
+<tr>
+<td><code>=</code></td>
+<td>assignment (as a statement); in many papers an equality test when it appears inside a condition</td>
+<td>check the paper's convention</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The single most important fact:</strong> <code>&gt;</code> is <strong>strictly</strong> greater. If both sides are equal, the result is <strong>FALSE</strong>.</p>
+<p>Worked example:</p>
+<div class="codehilite"><pre><span></span><code>a = 4
+b = 9
+c = 2
+if ((a + b + c) &gt; (c + b + a)) then
+    print &quot;YES&quot;
+else
+    print &quot;NO&quot;
+end if
+</code></pre></div>
+
+<p>Both sides are <code>4 + 9 + 2 = 15</code>. The test is <code>15 &gt; 15</code>, which is <strong>FALSE</strong>. Output: <code>NO</code>.</p>
+<p>Any comparison of an expression with <strong>itself reordered</strong> is always FALSE for <code>&gt;</code> and <code>&lt;</code>, and always TRUE for <code>&gt;=</code>, <code>&lt;=</code>, <code>==</code>.</p>
+<h3 id="33-branch-constructs">3.3 Branch constructs</h3>
+<table>
+<thead>
+<tr>
+<th>Construct</th>
+<th>Shape</th>
+<th>Used when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>if</code></td>
+<td>one condition, body runs or is skipped</td>
+<td>single optional action</td>
+</tr>
+<tr>
+<td><code>if-else</code></td>
+<td>exactly one of two bodies runs</td>
+<td>two-way choice</td>
+</tr>
+<tr>
+<td><code>if-else-if</code> ladder</td>
+<td>first TRUE branch runs, <strong>all remaining branches skipped</strong></td>
+<td>mutually exclusive ranges/grades</td>
+</tr>
+<tr>
+<td>nested <code>if</code></td>
+<td>inner condition only tested if outer is TRUE</td>
+<td>dependent conditions</td>
+</tr>
+<tr>
+<td><code>switch/case</code></td>
+<td>jumps to matching <code>case</code>, needs <code>break</code> to stop</td>
+<td>one value, many discrete options</td>
+</tr>
+</tbody>
+</table>
+<p>Generic syntax:</p>
+<div class="codehilite"><pre><span></span><code>if (condition) then
+    statements
+end if
+
+if (condition) then
+    statements
+else
+    statements
+end if
+
+if (c1) then
+    s1
+else if (c2) then
+    s2
+else if (c3) then
+    s3
+else
+    s4
+end if
+
+if (outer) then
+    if (inner) then
+        s
+    end if
+end if
+</code></pre></div>
+
+<p><strong>Ladder vs nested:</strong> in a ladder, at most <strong>one</strong> branch executes and the rest are never tested. In a nested <code>if</code>, both outer and inner must be TRUE for the innermost body to run, and tests happen top-down.</p>
+<p><strong>Matching <code>End if</code>:</strong> <code>If</code> and <code>End if</code> pair like brackets. The nearest unmatched <code>If</code> is closed by the next <code>End if</code> (innermost-first). Indentation mirrors this:</p>
+<div class="codehilite"><pre><span></span><code>if (A) then          &lt;- If #1
+    if (B) then      &lt;- If #2
+        x = 1
+    end if           &lt;- closes If #2
+    y = 2            &lt;- still inside If #1
+end if               &lt;- closes If #1
+</code></pre></div>
+
+<p>A line indented at the level of <code>If #1</code> is <strong>outside</strong> <code>If #2</code>, so it runs whenever the outer guard is TRUE — even when the inner guard is FALSE. This is exactly Trap 2 below.</p>
+<p><strong>switch / case</strong></p>
+<div class="codehilite"><pre><span></span><code>switch (n)
+    case 1:
+        x = x + 1
+        break
+    case 2:
+        x = x + 2
+        break
+    default:
+        x = 0
+end switch
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Detail</th>
+<th>Behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>matching</td>
+<td>control jumps to the matching <code>case</code> label</td>
+</tr>
+<tr>
+<td><code>break</code></td>
+<td>exits the whole switch</td>
+</tr>
+<tr>
+<td>no <code>break</code></td>
+<td><strong>fall-through</strong>: execution continues into the next case body and onward</td>
+</tr>
+<tr>
+<td><code>default</code></td>
+<td>runs when no case matches — and is also reached by fall-through</td>
+</tr>
+</tbody>
+</table>
+<p>Fall-through worked example:</p>
+<div class="codehilite"><pre><span></span><code>x = 0
+switch (2)
+    case 1: x = x + 1
+    case 2: x = x + 2
+    case 3: x = x + 3
+    default: x = x + 10
+end switch
+print x
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Action</th>
+<th>x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>start</td>
+<td>x = 0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>match</td>
+<td>case 2</td>
+<td>0</td>
+</tr>
+<tr>
+<td>case 2</td>
+<td>x = 0 + 2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>falls into case 3</td>
+<td>x = 2 + 3</td>
+<td>5</td>
+</tr>
+<tr>
+<td>falls into default</td>
+<td>x = 5 + 10</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<p>Output <code>15</code>. <strong>With a <code>break</code> after each case, the output would be <code>2</code>.</strong> If no case matches and there is no <code>default</code>, nothing executes.</p>
+<h3 id="34-dry-run-trace-table-technique">3.4 Dry-run / trace table technique</h3>
+<p>One <strong>column per variable</strong>, one <strong>row per executed line</strong>. Add a "Note" column for the condition result. Update a variable's cell only on the line that assigns it; carry the old value forward otherwise.</p>
+<p>Snippet:</p>
+<div class="codehilite"><pre><span></span><code>1  a = 3
+2  b = 4
+3  c = a * b
+4  if (c &gt; 10) then
+5      a = c - b
+6  end if
+print a, b, c
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Row</th>
+<th>Line</th>
+<th>Statement</th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td><code>a = 3</code></td>
+<td>3</td>
+<td>—</td>
+<td>—</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td><code>b = 4</code></td>
+<td>3</td>
+<td>4</td>
+<td>—</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td><code>c = a * b</code></td>
+<td>3</td>
+<td>4</td>
+<td>12</td>
+<td>3 × 4</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4</td>
+<td><code>if (c &gt; 10)</code></td>
+<td>3</td>
+<td>4</td>
+<td>12</td>
+<td>12 &gt; 10 → TRUE, enter body</td>
+</tr>
+<tr>
+<td>5</td>
+<td>5</td>
+<td><code>a = c - b</code></td>
+<td>8</td>
+<td>4</td>
+<td>12</td>
+<td>12 − 4</td>
+</tr>
+<tr>
+<td>6</td>
+<td>6</td>
+<td><code>end if</code></td>
+<td>8</td>
+<td>4</td>
+<td>12</td>
+<td>no change</td>
+</tr>
+</tbody>
+</table>
+<p>Output: <code>8 4 12</code>.</p>
+<p>Rules that make this fast:</p>
+<ul>
+<li>Write the initial values in row 0 <strong>before</strong> reading any condition.</li>
+<li>Only assignment lines change a cell.</li>
+<li><code>print</code> reads the <strong>current</strong> cell values, i.e. the last row.</li>
+</ul>
+<h3 id="35-short-circuit-evaluation">3.5 Short-circuit evaluation</h3>
+<table>
+<thead>
+<tr>
+<th>Chain</th>
+<th>Behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>A AND B</code></td>
+<td>if <code>A</code> is FALSE, <code>B</code> is <strong>not evaluated</strong>; the result is FALSE</td>
+</tr>
+<tr>
+<td><code>A OR B</code></td>
+<td>if <code>A</code> is TRUE, <code>B</code> is <strong>not evaluated</strong>; the result is TRUE</td>
+</tr>
+<tr>
+<td><code>A AND B</code> with A TRUE</td>
+<td><code>B</code> <strong>is</strong> evaluated</td>
+</tr>
+<tr>
+<td><code>A OR B</code> with A FALSE</td>
+<td><code>B</code> <strong>is</strong> evaluated</td>
+</tr>
+</tbody>
+</table>
+<p>Why it changes output: the skipped operand never runs, so any <strong>side effect</strong> inside it never happens, and any error inside it never occurs.</p>
+<div class="codehilite"><pre><span></span><code>a = 0
+b = 5
+if (a != 0 AND b / a &gt; 1) then
+    print &quot;A&quot;
+else
+    print &quot;B&quot;
+end if
+</code></pre></div>
+
+<p><code>a != 0</code> is FALSE, so <code>b / a</code> is never evaluated (no division by zero) and the AND is FALSE. Output <code>B</code>.</p>
+<div class="codehilite"><pre><span></span><code>count = 0
+flag = 0
+if (flag != 0 OR count = count + 1) then
+    print &quot;X&quot;
+end if
+</code></pre></div>
+
+<p><code>flag != 0</code> is FALSE, so the OR <strong>does</strong> evaluate the second operand and <code>count</code> becomes 1.</p>
+<p><strong>Fast eliminator:</strong> if neither operand has a side effect and neither can error, short-circuit cannot change the printed output. Ignore it and evaluate normally.</p>
+<h3 id="36-the-four-branch-selection-traps">3.6 The four branch-selection traps</h3>
+<h4 id="trap-1-false-outer-guard-makes-the-body-dead-code">Trap 1 — FALSE outer guard makes the body dead code</h4>
+<div class="codehilite"><pre><span></span><code>x = 5
+y = 3
+if (x &lt; y) then
+    x = x + 10
+    y = y * 2
+end if
+print x, y
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Row</th>
+<th>Line</th>
+<th>Statement</th>
+<th>x</th>
+<th>y</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td><code>x = 5</code></td>
+<td>5</td>
+<td>—</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td><code>y = 3</code></td>
+<td>5</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td><code>if (x &lt; y)</code></td>
+<td>5</td>
+<td>3</td>
+<td>5 &lt; 3 → <strong>FALSE</strong></td>
+</tr>
+<tr>
+<td>4</td>
+<td>4–5</td>
+<td>body</td>
+<td>5</td>
+<td>3</td>
+<td><strong>skipped, never executed</strong></td>
+</tr>
+<tr>
+<td>5</td>
+<td>6</td>
+<td><code>end if</code></td>
+<td>5</td>
+<td>3</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Output: <code>5 3</code>.</p>
+<p><strong>Rule: evaluate the outermost condition BEFORE tracing the body.</strong> If it is FALSE, the answer is the current variable values. This alone answers many questions in seconds.</p>
+<h4 id="trap-2-outer-true-but-inner-false">Trap 2 — outer TRUE but inner FALSE</h4>
+<div class="codehilite"><pre><span></span><code>a = 4
+b = 9
+if (a &lt; b) then
+    if (a &gt; b) then
+        a = a + b
+        b = a - b
+    end if
+end if
+print a, b
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Row</th>
+<th>Line</th>
+<th>Statement</th>
+<th>a</th>
+<th>b</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td><code>a = 4</code></td>
+<td>4</td>
+<td>—</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td><code>b = 9</code></td>
+<td>4</td>
+<td>9</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td><code>if (a &lt; b)</code></td>
+<td>4</td>
+<td>9</td>
+<td>4 &lt; 9 → TRUE, enter outer</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4</td>
+<td><code>if (a &gt; b)</code></td>
+<td>4</td>
+<td>9</td>
+<td>4 &gt; 9 → <strong>FALSE</strong>, skip inner</td>
+</tr>
+<tr>
+<td>5</td>
+<td>7</td>
+<td><code>end if</code> (inner)</td>
+<td>4</td>
+<td>9</td>
+<td>no change</td>
+</tr>
+<tr>
+<td>6</td>
+<td>8</td>
+<td><code>end if</code> (outer)</td>
+<td>4</td>
+<td>9</td>
+<td>no change</td>
+</tr>
+</tbody>
+</table>
+<p>Output: <code>4 9</code>.</p>
+<p>Wrong answer to avoid: if the inner guard were TRUE the body would give <code>a = 13</code>, then <code>b = 13 − 9 = 4</code>. Candidates who assume "we entered the outer block, so the body runs" answer <code>13 4</code>. It is <code>4 9</code>.</p>
+<h4 id="trap-3-a-variable-reassigned-before-a-later-condition-reads-it">Trap 3 — a variable reassigned before a later condition reads it</h4>
+<div class="codehilite"><pre><span></span><code>a = 10
+b = 7
+if (a &gt; b) then
+    a = a - 5
+end if
+if (a &gt; b) then
+    b = a * 2
+else
+    b = b * 2
+end if
+print a, b
+</code></pre></div>
+
+<p>Correct trace (second condition uses the <strong>NEW</strong> <code>a</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Row</th>
+<th>Line</th>
+<th>Statement</th>
+<th>a</th>
+<th>b</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td><code>a = 10</code></td>
+<td>10</td>
+<td>—</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td><code>b = 7</code></td>
+<td>10</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td><code>if (a &gt; b)</code></td>
+<td>10</td>
+<td>7</td>
+<td>10 &gt; 7 → TRUE</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4</td>
+<td><code>a = a - 5</code></td>
+<td><strong>5</strong></td>
+<td>7</td>
+<td>a is now 5</td>
+</tr>
+<tr>
+<td>5</td>
+<td>6</td>
+<td><code>if (a &gt; b)</code></td>
+<td>5</td>
+<td>7</td>
+<td>5 &gt; 7 → <strong>FALSE</strong></td>
+</tr>
+<tr>
+<td>6</td>
+<td>9</td>
+<td><code>b = b * 2</code></td>
+<td>5</td>
+<td><strong>14</strong></td>
+<td>else-branch taken</td>
+</tr>
+</tbody>
+</table>
+<p>Output: <code>5 14</code>.</p>
+<p>Stale-value trace (using the original <code>a = 10</code> at line 6):</p>
+<table>
+<thead>
+<tr>
+<th>Row</th>
+<th>Line</th>
+<th>Statement</th>
+<th>a</th>
+<th>b</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5′</td>
+<td>6</td>
+<td><code>if (a &gt; b)</code></td>
+<td>10</td>
+<td>7</td>
+<td>10 &gt; 7 → TRUE — <strong>WRONG</strong></td>
+</tr>
+<tr>
+<td>6′</td>
+<td>7</td>
+<td><code>b = a * 2</code></td>
+<td>10</td>
+<td>20</td>
+<td>WRONG</td>
+</tr>
+</tbody>
+</table>
+<p>Wrong answer: <code>10 20</code>. The branch flips <strong>and</strong> the value is wrong. Whenever a variable is reassigned above, cross out its old value.</p>
+<h4 id="trap-4-the-always-false-identity-comparison">Trap 4 — the always-false identity comparison</h4>
+<div class="codehilite"><pre><span></span><code>x = 6
+y = 2
+z = 9
+if ((x + y + z) &gt; (z + y + x)) then
+    print &quot;YES&quot;
+else
+    print &quot;NO&quot;
+end if
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Row</th>
+<th>Line</th>
+<th>Statement</th>
+<th>x</th>
+<th>y</th>
+<th>z</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td><code>x = 6</code></td>
+<td>6</td>
+<td>—</td>
+<td>—</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td><code>y = 2</code></td>
+<td>6</td>
+<td>2</td>
+<td>—</td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td>3</td>
+<td><code>z = 9</code></td>
+<td>6</td>
+<td>2</td>
+<td>9</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>4</td>
+<td><code>if (...)</code></td>
+<td>6</td>
+<td>2</td>
+<td>9</td>
+<td>17 &gt; 17 → <strong>FALSE</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Output: <code>NO</code>. Both sides are the same three variables summed, so <code>&gt;</code> is FALSE and <code>&gt;=</code>/<code>&lt;=</code>/<code>==</code> would be TRUE.</p>
+<h3 id="37-operator-precedence-inside-a-condition">3.7 Operator precedence inside a condition</h3>
+<p>Highest binds first:</p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Operators</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 (highest)</td>
+<td><code>( )</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>*</code> <code>/</code> <code>%</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>+</code> <code>-</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>&lt;</code> <code>&lt;=</code> <code>&gt;</code> <code>&gt;=</code> <code>==</code> <code>!=</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>NOT</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>AND</code></td>
+</tr>
+<tr>
+<td>7 (lowest)</td>
+<td><code>OR</code></td>
+</tr>
+</tbody>
+</table>
+<p>Arithmetic binds tighter than relational, which binds tighter than logical. So:</p>
+<ul>
+<li><code>a + b &gt; c</code> → <code>(a + b) &gt; c</code></li>
+<li><code>a &gt; b AND c &gt; d</code> → <code>(a &gt; b) AND (c &gt; d)</code></li>
+<li><code>NOT a &gt; b</code> → <code>NOT (a &gt; b)</code> — <code>NOT</code> sits below relational, above <code>AND</code></li>
+<li><code>a OR b AND c</code> → <code>a OR (b AND c)</code></li>
+</ul>
+<p>Use brackets when tracing to remove all doubt.</p>
+<h3 id="38-60-second-attack-checklist">3.8 60-second attack checklist</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Step</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>List every variable and its initial value in a row.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Scan for assignments <strong>above</strong> the first condition and apply them first.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Evaluate the <strong>outermost</strong> condition with current values. FALSE → entire block is dead code → jump to the print.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>TRUE → step into the block; check each inner condition separately.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Wherever a variable was reassigned, use the <strong>new</strong> value in every later condition.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>For <code>&gt;</code> or <code>&lt;</code> with visibly equal sides (especially identical expressions reordered), answer FALSE immediately.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>For <code>switch</code>, check for missing <code>break</code> → fall-through; check for <code>default</code>.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Apply short-circuit only if the skipped operand has a side effect or can error.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Print the <strong>final</strong> values, in the order the print statement asks for them.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-must-memorise-block">4. Must-memorise block</h2>
+<p><strong>Truth tables</strong></p>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>A AND B</th>
+<th>A OR B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr>
+<td>F</td>
+<td>T</td>
+<td>F</td>
+<td>T</td>
+</tr>
+<tr>
+<td>T</td>
+<td>F</td>
+<td>F</td>
+<td>T</td>
+</tr>
+<tr>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+<td>T</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>NOT A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>T</td>
+<td>F</td>
+</tr>
+<tr>
+<td>F</td>
+<td>T</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Truthy / falsy</strong></p>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Condition result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td>FALSE</td>
+</tr>
+<tr>
+<td>any non-zero integer, including negatives</td>
+<td>TRUE</td>
+</tr>
+</tbody>
+</table>
+<p><code>if ((r * q) + q)</code> is TRUE whenever <code>(r*q)+q ≠ 0</code>. With <code>r = −1, q = 5</code> it is <code>0</code> → FALSE.</p>
+<p><strong>Relational operators</strong></p>
+<table>
+<thead>
+<tr>
+<th>Op</th>
+<th>True when</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&gt;</code></td>
+<td>left <strong>strictly</strong> greater</td>
+</tr>
+<tr>
+<td><code>&gt;=</code></td>
+<td>greater or equal</td>
+</tr>
+<tr>
+<td><code>&lt;</code></td>
+<td>left strictly less</td>
+</tr>
+<tr>
+<td><code>&lt;=</code></td>
+<td>less or equal</td>
+</tr>
+<tr>
+<td><code>==</code></td>
+<td>equal</td>
+</tr>
+<tr>
+<td><code>!=</code></td>
+<td>not equal</td>
+</tr>
+<tr>
+<td><code>=</code></td>
+<td>assignment as a statement; equality test inside a condition in many papers</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Strict-greater rule:</strong> if both sides are equal, <code>&gt;</code> is FALSE and <code>&lt;</code> is FALSE.</p>
+<p><strong>Always-false identity pattern:</strong> <code>(a + b + c) &gt; (c + b + a)</code> is <strong>always FALSE</strong>, whatever the values. Same expression reordered is never greater than itself. (<code>&gt;=</code>, <code>&lt;=</code>, <code>==</code> are always TRUE.)</p>
+<p><strong>The four traps</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Trap</th>
+<th>One-line rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>FALSE outer guard</td>
+<td>Evaluate the outermost condition first; if FALSE, the whole body is dead code and the output is the current values.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Outer TRUE, inner FALSE</td>
+<td>Entering the outer block does not run the inner body; re-test every inner condition.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Reassignment before a later condition</td>
+<td>The later condition reads the <strong>new</strong> value, not the original.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Identity comparison</td>
+<td><code>(x + y + z) &gt; (z + y + x)</code> is always FALSE.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Branch constructs</strong></p>
+<table>
+<thead>
+<tr>
+<th>Construct</th>
+<th>Key fact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>if</code></td>
+<td>body runs or is skipped entirely</td>
+</tr>
+<tr>
+<td><code>if-else</code></td>
+<td>exactly one of the two bodies runs</td>
+</tr>
+<tr>
+<td><code>if-else-if</code> ladder</td>
+<td>first TRUE branch runs; every later branch is skipped untested</td>
+</tr>
+<tr>
+<td>nested <code>if</code></td>
+<td>inner guard is evaluated only if the outer guard is TRUE</td>
+</tr>
+<tr>
+<td><code>switch</code> + <code>break</code></td>
+<td>exactly one case body runs</td>
+</tr>
+<tr>
+<td><code>switch</code> without <code>break</code></td>
+<td>fall-through: continues into every subsequent case and into <code>default</code></td>
+</tr>
+<tr>
+<td><code>switch</code>, no match, no <code>default</code></td>
+<td>nothing executes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>End-if matching:</strong> pair <code>If</code>/<code>End if</code> like brackets, innermost first. A line indented at the outer level is outside the inner <code>If</code> and runs whenever the outer guard is TRUE.</p>
+<p><strong>Short-circuit</strong></p>
+<table>
+<thead>
+<tr>
+<th>Chain</th>
+<th>Rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>A AND B</code></td>
+<td><code>A</code> FALSE → <code>B</code> not evaluated → FALSE</td>
+</tr>
+<tr>
+<td><code>A OR B</code></td>
+<td><code>A</code> TRUE → <code>B</code> not evaluated → TRUE</td>
+</tr>
+</tbody>
+</table>
+<p>Matters only when the skipped operand has a side effect or can error (e.g. division by zero). Otherwise it cannot change the output.</p>
+<p><strong>Precedence (high → low):</strong> <code>( )</code> → <code>* / %</code> → <code>+ -</code> → <code>&lt; &lt;= &gt; &gt;= == !=</code> → <code>NOT</code> → <code>AND</code> → <code>OR</code>. Arithmetic beats relational; relational beats logical.</p>
+<p><strong>60-second attack checklist</strong></p>
+<ol>
+<li>Write all initial values.</li>
+<li>Apply assignments that sit above the first condition.</li>
+<li>Evaluate the outermost condition. FALSE → dead code → skip to the print.</li>
+<li>TRUE → test each inner condition separately.</li>
+<li>Use reassigned values in every later condition.</li>
+<li>Equal sides with <code>&gt;</code> or <code>&lt;</code> → FALSE, instantly.</li>
+</ol>
+<p><strong>6. (b) 13</strong><br />
+| Start | a=5 | b=8 | c=2 |  |
+|---|---|---|---|---|
+| a&lt;b | true |  |  |  |
+| b=b-a | a=5 | b=3 | c=2 |  |
+| b&lt;c | 3&lt;2 false |  |  |  |
+| c=c+b | a=5 | b=3 | c=5 | final=13 |
+- (a) 12: treats inner b&lt;c true, executes a=a+c, giving a=7.<br />
+- (c) 15: treats outer a&lt;b false, no changes.<br />
+- (d) 23: does not update b before inner test; c=c+b uses b=8, giving c=10.</p>
+<hr />
+<ol start="7">
+<li><code>switch</code>: check <code>break</code> (fall-through) and <code>default</code>.</li>
+</ol>
+<p><strong>7. (a) 28</strong><br />
+| Start | a=2 | b=6 | c=3 |  |
+|---|---|---|---|---|
+| a<b | true |  |  |  |
+| c=a+b | a=2 | b=6 | c=8 |  |
+| a=c+b | a=14 | b=6 | c=8 |  |
+| identity | 28>28 false |  |  | final=28 |
+- (b) 29: treats identity guard as true, increments a.<br />
+- (c) 11: treats outer a&lt;b false, no changes.<br />
+- (d) 18: skips c=a+b but executes a=c+b using old c=3, giving a=9.</p>
+<hr />
+<ol start="8">
+<li>Ignore short-circuit unless an operand has a side effect or errors.</li>
+</ol>
+<p><strong>8. (a) 12</strong></p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–3</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>3 &gt; 4 is FALSE → skip 5–6</td>
+</tr>
+<tr>
+<td>8</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>3 + 4 + 5 = <strong>12</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) 20: treated <code>a &gt; b</code> as TRUE and ran both body lines (b = 7, c = 10).</li>
+<li>(c) 15: ran only line 5 (b = 7) and left c = 5.</li>
+<li>(d) 7: printed the skipped body's <code>a + b</code> and ignored c.</li>
+</ul>
+<hr />
+<ol start="9">
+<li>Print final values, in the order asked.</li>
+</ol>
+<h2 id="5-worked-examples">5. Worked examples</h2>
+<h3 id="example-1-dead-outer-guard">Example 1 — dead outer guard</h3>
+<div class="codehilite"><pre><span></span><code>1  a = 4
+2  b = 7
+3  c = 2
+4  if a &gt; b
+5      c = a + b
+6      if c &gt; 10
+7          a = c - b
+8      else
+9          b = c + a
+10 Print a + b + c
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Line</th>
+<th style="text-align: right;">a</th>
+<th style="text-align: right;">b</th>
+<th style="text-align: right;">c</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td><code>a = 4</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">—</td>
+<td><code>b = 7</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">2</td>
+<td><code>c = 2</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">2</td>
+<td><code>a &gt; b</code> → <code>4 &gt; 7</code> false; skip 5–9</td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">2</td>
+<td><code>Print a + b + c</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Final answer: 13</strong></p>
+<h3 id="example-2-outer-guard-true-inner-guard-false">Example 2 — outer guard true, inner guard false</h3>
+<div class="codehilite"><pre><span></span><code>1  a = 6
+2  b = 8
+3  c = 3
+4  if a &lt; b
+5      if c &gt; a
+6          a = a + c
+7          b = b - c
+8  Print a + b + c
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Line</th>
+<th style="text-align: right;">a</th>
+<th style="text-align: right;">b</th>
+<th style="text-align: right;">c</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td><code>a = 6</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">—</td>
+<td><code>b = 8</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">3</td>
+<td><code>c = 3</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">3</td>
+<td><code>a &lt; b</code> → <code>6 &lt; 8</code> true</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">3</td>
+<td><code>c &gt; a</code> → <code>3 &gt; 6</code> false; skip 6–7</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">3</td>
+<td><code>Print a + b + c</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Final answer: 17</strong></p>
+<h3 id="example-3-reassignment-before-a-later-condition">Example 3 — reassignment before a later condition</h3>
+<div class="codehilite"><pre><span></span><code>1  a = 3
+2  b = 9
+3  c = 5
+4  if a &lt; b
+5      c = a + b
+6      if c &gt; b
+7          a = c + b
+8      else
+9          b = c - a
+10 Print a + b + c
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Line</th>
+<th style="text-align: right;">a</th>
+<th style="text-align: right;">b</th>
+<th style="text-align: right;">c</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td><code>a = 3</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">—</td>
+<td><code>b = 9</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">5</td>
+<td><code>c = 5</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">5</td>
+<td><code>a &lt; b</code> → <code>3 &lt; 9</code> true</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">12</td>
+<td><code>c = a + b</code> → <code>3 + 9 = 12</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">12</td>
+<td><code>c &gt; b</code> → <code>12 &gt; 9</code> true; uses new <code>c</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">12</td>
+<td><code>a = c + b</code> → <code>12 + 9 = 21</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">12</td>
+<td><code>Print a + b + c</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Final answer: 42</strong></p>
+<h3 id="example-4-identity-comparison-is-always-false">Example 4 — identity comparison is always false</h3>
+<div class="codehilite"><pre><span></span><code>1  a = 2
+2  b = 4
+3  c = 6
+4  if (a + b + c) &gt; (c + b + a)
+5      a = a + 10
+6      b = b + 10
+7      c = c + 10
+8  if a &lt; b
+9      c = a + b + 5
+10 Print a + b + c
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Line</th>
+<th style="text-align: right;">a</th>
+<th style="text-align: right;">b</th>
+<th style="text-align: right;">c</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td><code>a = 2</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">—</td>
+<td><code>b = 4</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td><code>c = 6</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td><code>(a+b+c) &gt; (c+b+a)</code> → <code>12 &gt; 12</code> false; skip 5–7</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td><code>a &lt; b</code> → <code>2 &lt; 4</code> true</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">11</td>
+<td><code>c = a + b + 5</code> → <code>2 + 4 + 5 = 11</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">11</td>
+<td><code>Print a + b + c</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Final answer: 17</strong></p>
+<h3 id="example-5-nested-ifelse-after-outer-true">Example 5 — nested if/else after outer true</h3>
+<div class="codehilite"><pre><span></span><code>1  a = 10
+2  b = 4
+3  c = 7
+4  if a &gt; b
+5      b = a - c
+6      if b &gt; c
+7          a = a - b
+8      else
+9          c = b + a
+10 Print a + b + c
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Line</th>
+<th style="text-align: right;">a</th>
+<th style="text-align: right;">b</th>
+<th style="text-align: right;">c</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">—</td>
+<td><code>a = 10</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">—</td>
+<td><code>b = 4</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td><code>c = 7</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td><code>a &gt; b</code> → <code>10 &gt; 4</code> true</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">7</td>
+<td><code>b = a - c</code> → <code>10 - 7 = 3</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">7</td>
+<td><code>b &gt; c</code> → <code>3 &gt; 7</code> false</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">13</td>
+<td><code>c = b + a</code> → <code>3 + 10 = 13</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">13</td>
+<td><code>Print a + b + c</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Final answer: 26</strong></p>
+<h2 id="6-traps-and-gotchas">6. Traps and gotchas</h2>
+<table>
+<thead>
+<tr>
+<th>Trap</th>
+<th>Why it catches people</th>
+<th>How to avoid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dead outer guard</td>
+<td>The <code>if</code> is false, so every indented line under it is skipped. People still compute the body.</td>
+<td>Check the guard first. If false, jump straight to the next line at the same indent or after the block.</td>
+</tr>
+<tr>
+<td>True outer, false inner</td>
+<td>The outer guard runs, so people assume all nested code runs. The inner guard can still skip its body.</td>
+<td>Trace each <code>if</code> independently. A true outer only exposes the inner test.</td>
+</tr>
+<tr>
+<td>Reassignment before a later condition</td>
+<td>A variable is changed in the body, then used in the next condition. People read the old value.</td>
+<td>After every assignment, update the variable value in your trace before evaluating any later condition.</td>
+</tr>
+<tr>
+<td>Identity comparison <code>(a+b+c) &gt; (c+b+a)</code></td>
+<td>Looks like two different sums. Addition is commutative, so both sides are the same number.</td>
+<td>Cancel or reorder: <code>a+b+c</code> equals <code>c+b+a</code>. Strict <code>&gt;</code> is false.</td>
+</tr>
+<tr>
+<td><code>else</code> binds to nearest <code>if</code></td>
+<td>Nested <code>if</code> without braces or clear indentation makes people attach <code>else</code> to the outer <code>if</code>.</td>
+<td>Match <code>else</code> to the closest unmatched <code>if</code> at the same indentation level.</td>
+</tr>
+<tr>
+<td><code>&gt;</code> vs <code>&gt;=</code>, <code>&lt;</code> vs <code>&lt;=</code></td>
+<td>Boundary values decide the branch. People drop the equality case.</td>
+<td>Read the operator exactly. Test the boundary value when values are equal.</td>
+</tr>
+<tr>
+<td>Compound <code>and</code> / <code>or</code></td>
+<td>People evaluate only one side or misapply short-circuit logic.</td>
+<td><code>and</code>: both must be true. <code>or</code>: at least one true. Evaluate left-to-right only if needed.</td>
+</tr>
+<tr>
+<td>Sequential <code>if</code>s vs <code>else if</code></td>
+<td>Two separate <code>if</code>s can both execute; an <code>else if</code> chain stops after the first true branch.</td>
+<td>Check whether the second condition is a new <code>if</code> or an <code>else if</code>.</td>
+</tr>
+<tr>
+<td>Assignment inside branch changes later output</td>
+<td>The final <code>Print</code> uses the latest values, not the initial values.</td>
+<td>Keep a running value table. Do not use original values for the print unless no assignment ran.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-practice-questions">7. Practice questions</h2>
+<ol>
+<li><strong>[Easy]</strong> <em>(B2 — false guard / dead code)</em><br />
+What is the output?</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>1 a = 3
+2 b = 5
+3 c = 7
+4 if a &gt; b then
+5   a = a + 10
+6   b = b + 10
+7   c = c + 10
+8 end if
+9 Print a + b + c
+</code></pre></div>
+
+<p>(a) 45
+(b) 25
+(c) 15
+(d) 55</p>
+<ol start="2">
+<li><strong>[Easy]</strong> <em>(B2 — identity comparison trap)</em><br />
+What is the output?</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>1 a = 2
+2 b = 9
+3 c = 4
+4 if (a + b + c) &gt; (c + b + a) then
+5   a = a + 10
+6   b = b + 10
+7   c = c + 10
+8 end if
+9 Print a + b + c
+</code></pre></div>
+
+<p>(a) 25<br />
+(b) 15<br />
+(c) 45<br />
+(d) 55  </p>
+<ol start="3">
+<li><strong>[Medium]</strong> <em>(B2 — outer true, inner false)</em><br />
+What is the output?</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>1 a = 6
+2 b = 2
+3 c = 9
+4 if a &gt; b then
+5   if c &lt; b then
+6     a = a + 1
+7     b = b + 1
+8     c = c + 1
+9   end if
+10 end if
+11 Print a + b + c
+</code></pre></div>
+
+<p>(a) 19
+(b) 17
+(c) 18
+(d) 20</p>
+<ol start="4">
+<li><strong>[Medium]</strong> <em>(B2 — reassignment before later condition)</em><br />
+What is the output?</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>1 a = 4
+2 b = 7
+3 c = 3
+4 if a &lt; b then
+5   a = a + 5
+6   if a &gt; b then
+7     c = c + a
+8   end if
+9 end if
+10 Print a + b + c
+</code></pre></div>
+
+<p>(a) 28
+(b) 14
+(c) 19
+(d) 23</p>
+<ol start="5">
+<li><strong>[Medium]</strong> <em>(B2 — nested if/else after reassignment)</em><br />
+What is the output?</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>1 a = 10
+2 b = 4
+3 c = 6
+4 if a &gt; b then
+5   b = a + b
+6   if b &gt; a then
+7     c = c + b
+8   else
+9     c = c + a
+10  end if
+11 end if
+12 Print a + b + c
+</code></pre></div>
+
+<p>(a) 44<br />
+(b) 20<br />
+(c) 34<br />
+(d) 40  </p>
+<ol start="6">
+<li><strong>[Hard]</strong> <em>(B2 — inner false, else executes)</em><br />
+What is the output?</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>1 a = 5
+2 b = 8
+3 c = 2
+4 if a &lt; b then
+5   b = b - a
+6   if b &lt; c then
+7     a = a + c
+8   else
+9     c = c + b
+10  end if
+11 end if
+12 Print a + b + c
+</code></pre></div>
+
+<p>(a) 12<br />
+(b) 13<br />
+(c) 15<br />
+(d) 23  </p>
+<ol start="7">
+<li><strong>[Hard]</strong> <em>(B2 — reassignment plus identity comparison)</em><br />
+What is the output?</li>
+</ol>
+<div class="codehilite"><pre><span></span><code>1 a = 2
+2 b = 6
+3 c = 3
+4 if a &lt; b then
+5   c = a + b
+6   a = c + b
+7 end if
+8 if (a + b + c) &gt; (c + b + a) then
+9   a = a + 1
+10 end if
+11 Print a + b + c
+</code></pre></div>
+
+<p>(a) 28
+(b) 29
+(c) 11
+(d) 18</p>
+<hr />
+<p><strong>8. [Easy]</strong> <em>(B2 — dead code under a FALSE guard)</em></p>
+<div class="codehilite"><pre><span></span><code>1  a = 3
+2  b = 4
+3  c = 5
+4  IF a &gt; b THEN
+5      b = a + b
+6      c = b + a
+7  END IF
+8  Print a + b + c
+</code></pre></div>
+
+<p>(a) 12  (b) 20  (c) 15  (d) 7</p>
+<p><strong>9. [Medium]</strong> <em>(B2 — nested guard, inner FALSE)</em></p>
+<div class="codehilite"><pre><span></span><code>1  p = 6
+2  q = 2
+3  r = 9
+4  IF p &gt; q THEN
+5      IF r &lt; p THEN
+6          q = p + r
+7          r = q - p
+8      END IF
+9  END IF
+10 Print p + q + r
+</code></pre></div>
+
+<p>(a) 30  (b) 17  (c) 42  (d) 15</p>
+<p><strong>9. (b) 17</strong></p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>p</th>
+<th>q</th>
+<th>r</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–3</td>
+<td>6</td>
+<td>2</td>
+<td>9</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>6</td>
+<td>2</td>
+<td>9</td>
+<td>6 &gt; 2 TRUE → enter</td>
+</tr>
+<tr>
+<td>5</td>
+<td>6</td>
+<td>2</td>
+<td>9</td>
+<td>9 &lt; 6 FALSE → skip 6–7</td>
+</tr>
+<tr>
+<td>10</td>
+<td>6</td>
+<td>2</td>
+<td>9</td>
+<td>6 + 2 + 9 = <strong>17</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 30: read <code>r &lt; p</code> as TRUE (q = 15, r = 9).</li>
+<li>(c) 42: read the inner guard as TRUE and used <code>r = q + p</code> = 21.</li>
+<li>(d) 15: stopped after computing q = p + r and printed only that.</li>
+</ul>
+<hr />
+<p><strong>10. [Medium]</strong> <em>(B2 — reassignment before the guard)</em></p>
+<div class="codehilite"><pre><span></span><code>1  a = 5
+2  b = 9
+3  c = 2
+4  a = a + b
+5  IF a &gt; 10 THEN
+6      c = a - b
+7  ELSE
+8      c = b - a
+9  END IF
+10 Print a + b + c
+</code></pre></div>
+
+<p>(a) 18  (b) 23  (c) 28  (d) 46</p>
+<p><strong>10. (c) 28</strong></p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–3</td>
+<td>5</td>
+<td>9</td>
+<td>2</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>14</td>
+<td>9</td>
+<td>2</td>
+<td>a = 5 + 9</td>
+</tr>
+<tr>
+<td>5–6</td>
+<td>14</td>
+<td>9</td>
+<td>5</td>
+<td>14 &gt; 10 TRUE → c = 14 − 9</td>
+</tr>
+<tr>
+<td>10</td>
+<td>14</td>
+<td>9</td>
+<td>5</td>
+<td>14 + 9 + 5 = <strong>28</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 18: used the stale a = 5 in line 5, so the ELSE ran (c = 9 − 5 = 4).</li>
+<li>(b) 23: printed only a + b, dropping c.</li>
+<li>(d) 46: computed c = a + b = 23 instead of a − b.</li>
+</ul>
+<hr />
+<p><strong>11. [Medium]</strong> <em>(B2 — identity comparison guard)</em></p>
+<div class="codehilite"><pre><span></span><code>1  a = 7
+2  b = 3
+3  c = 6
+4  IF (a + b + c) &gt; (c + b + a) THEN
+5      a = a + b + c
+6      b = a - c
+7  ELSE
+8      c = a + b
+9  END IF
+10 Print a + b + c
+</code></pre></div>
+
+<p>(a) 16  (b) 32  (c) 14  (d) 20</p>
+<p><strong>11. (d) 20</strong></p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–3</td>
+<td>7</td>
+<td>3</td>
+<td>6</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>7</td>
+<td>3</td>
+<td>6</td>
+<td>16 &gt; 16 is FALSE → ELSE</td>
+</tr>
+<tr>
+<td>8</td>
+<td>7</td>
+<td>3</td>
+<td>10</td>
+<td>c = 7 + 3</td>
+</tr>
+<tr>
+<td>10</td>
+<td>7</td>
+<td>3</td>
+<td>10</td>
+<td>7 + 3 + 10 = <strong>20</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) 32: read the identity comparison as TRUE (a = 16, b = 10).</li>
+<li>(a) 16: applied neither branch, printing the initial values.</li>
+<li>(c) 14: used c = a − b = 4 in the ELSE branch.</li>
+</ul>
+<hr />
+<p><strong>12. [Medium]</strong> <em>(B2 — always-false conditions)</em>
+A fragment contains <code>IF (x + y) &gt; (y + x) THEN ...</code>. Which statement is correct?</p>
+<p>(a) The body runs whenever x &gt; y
+(b) The body runs whenever x &lt; y
+(c) The body always runs
+(d) The body never runs, because both sides are the same sum written in a different order</p>
+<p><strong>12. (d)</strong> Both sides are the same sum reordered, so <code>&gt;</code> is never satisfied and the body is unreachable.
+- (a) Wrong: the condition never tests x against y at all.
+- (b) Wrong: same error — the brackets differ, the value does not.
+- (c) Wrong: <code>&gt;</code> needs a strict difference; equal sides make it FALSE.</p>
+<hr />
+<p><strong>13. [Hard]</strong> <em>(B2 — sequential IFs sharing one variable)</em></p>
+<div class="codehilite"><pre><span></span><code>1  p = 10
+2  q = 4
+3  r = 7
+4  IF p &gt; q THEN
+5      r = p - q
+6  END IF
+7  IF r &gt; p THEN
+8      p = r + q
+9  ELSE
+10     q = r + p
+11 END IF
+12 Print p + q + r
+</code></pre></div>
+
+<p>(a) 20  (b) 34  (c) 32  (d) 33</p>
+<p><strong>13. (c) 32</strong></p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>p</th>
+<th>q</th>
+<th>r</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–3</td>
+<td>10</td>
+<td>4</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td>4–5</td>
+<td>10</td>
+<td>4</td>
+<td>6</td>
+<td>10 &gt; 4 TRUE → r = 10 − 4</td>
+</tr>
+<tr>
+<td>7</td>
+<td>10</td>
+<td>4</td>
+<td>6</td>
+<td>6 &gt; 10 FALSE → ELSE</td>
+</tr>
+<tr>
+<td>10</td>
+<td>10</td>
+<td>16</td>
+<td>6</td>
+<td>q = 6 + 10</td>
+</tr>
+<tr>
+<td>12</td>
+<td>10</td>
+<td>16</td>
+<td>6</td>
+<td>10 + 16 + 6 = <strong>32</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) 34: never updated r (kept 7), so q = 7 + 10 = 17 and the sum uses 7.</li>
+<li>(a) 20: took <code>r &gt; p</code> as TRUE → p = r + q = 10, leaving the sum at 20.</li>
+<li>(d) 33: used the stale r = 7 in the final print with the updated q = 16.</li>
+</ul>
+<hr />
+<p><strong>14. [Hard]</strong> <em>(B2 — IF / ELSE IF chain after a false identity guard)</em></p>
+<div class="codehilite"><pre><span></span><code>1  a = 8
+2  b = 5
+3  c = 3
+4  IF (a + b + c) &gt; (c + b + a) THEN
+5      a = a + 1
+6  ELSE IF a &gt; b + c THEN
+7      c = a + b
+8  ELSE
+9      c = b + c
+10 END IF
+11 Print a + b + c
+</code></pre></div>
+
+<p>(a) 26  (b) 16  (c) 17  (d) 21</p>
+<hr />
+<p><strong>14. (d) 21</strong></p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1–3</td>
+<td>8</td>
+<td>5</td>
+<td>3</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td>8</td>
+<td>5</td>
+<td>3</td>
+<td>16 &gt; 16 FALSE</td>
+</tr>
+<tr>
+<td>6</td>
+<td>8</td>
+<td>5</td>
+<td>3</td>
+<td>8 &gt; 5 + 3 = 8 → FALSE</td>
+</tr>
+<tr>
+<td>9</td>
+<td>8</td>
+<td>5</td>
+<td>8</td>
+<td>c = 5 + 3</td>
+</tr>
+<tr>
+<td>11</td>
+<td>8</td>
+<td>5</td>
+<td>8</td>
+<td>8 + 5 + 8 = <strong>21</strong></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) 26: took the ELSE IF as TRUE (8 &gt; 8), so c = a + b = 13.</li>
+<li>(c) 17: took the first branch as TRUE, incrementing a to 9.</li>
+<li>(b) 16: ran no branch and printed the initial values.</li>
+</ul>
+<hr />
+<h2 id="8-resources">8. Resources</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>Type</th>
+<th>Link</th>
+<th>Free/Paid</th>
+<th>Time</th>
+<th>Why this one</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PrepInsta — Accenture pseudocode</td>
+<td>Practice set</td>
+<td>https://prepinsta.com/accenture/pseudo-code/general-pseudo-code/</td>
+<td>Free</td>
+<td>45 min</td>
+<td>Largest free volume of output-prediction items in the observed style</td>
+</tr>
+<tr>
+<td>CodeChef — Accenture interview questions</td>
+<td>Practice set</td>
+<td>https://www.codechef.com/practice/accenture-interview-questions</td>
+<td>Free</td>
+<td>45 min</td>
+<td>Company-tagged practice</td>
+</tr>
+<tr>
+<td>GfG — Bitwise operators</td>
+<td>Article</td>
+<td>https://www.geeksforgeeks.org/cpp/bitwise-operators-in-c-cpp/</td>
+<td>Free</td>
+<td>20 min</td>
+<td>Conditions in this exam usually contain a bitwise operation; read with T11</td>
+</tr>
+<tr>
+<td><code>question-banks/QB-T07-B2-conditionals-nested-if.md</code></td>
+<td>Question bank</td>
+<td>(this library)</td>
+<td>Free</td>
+<td>40 min</td>
+<td>35 original traces weighted to the four observed traps</td>
+</tr>
+</tbody>
+</table>
+<p><em>All external links verified resolving 2026-09-16.</em></p>
+<h2 id="9-self-check">9. Self-check</h2>
+<ul>
+<li>[ ] <strong>I evaluate the outermost guard before tracing any body</strong></li>
+<li>[ ] I recognise <code>(x+y+z) &gt; (z+y+x)</code> as always false, instantly</li>
+<li>[ ] I know that <code>&gt;</code> fails when both sides are equal</li>
+<li>[ ] I know that any non-zero integer is truthy and 0 is falsy</li>
+<li>[ ] I restate all three variables after every assignment line</li>
+<li>[ ] I can match <code>End if</code> to its opening <code>If</code> by indentation</li>
+<li>[ ] I can trace a 12-line nested snippet in under 60 seconds without writing anything</li>
+<li>[ ] I can spot a dead body and answer from the initial values alone</li>
+<li>[ ] I scored 11/14 or better on the practice questions</li>
+</ul>
+<h2 id="10-sources">10. Sources</h2>
+<p><strong>Teaching content (§3–§9)</strong> is adapted from <code>accenture-prep-final/accenture-prep-library/topics/T07-B2-conditionals-nested-if.md</code>, which lists its own sources and was verified in that library's QA. <strong>Infosys evidence</strong> for this file: observed questions O46, O47 in <code>../data/questions-observed.csv</code>; section structure and marks in <code>../research/03-pattern-synthesis.md</code> §1; weightage, tier and hours in <code>../data/weightage.json</code> (code <code>P6</code>). Confidence <strong>Medium</strong>. Nothing in this file is a published Infosys syllabus.</p>
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/pseudocode/P5-arrays.html"><span>Previous</span><strong>P5 — Arrays — 1D and 2D Traversal and Indexing</strong></a><a class="pager next" href="../../infosys-se/pseudocode/P7-functions-scope.html"><span>Next</span><strong>P7 — Functions — Scope and Pass by Value vs Reference</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#p6-conditionals-and-branch-selection-in-pseudocode">P6 — Conditionals and Branch Selection in Pseudocode</a><a class="toc-l1" href="#1-why-this-topic-matters-here">1. Why this topic matters here</a><a class="toc-l1" href="#2-exactly-what-gets-asked">2. Exactly what gets asked</a><a class="toc-l1" href="#3-concept-notes">3. Concept notes</a><a class="toc-l1" href="#4-must-memorise-block">4. Must-memorise block</a><a class="toc-l1" href="#5-worked-examples">5. Worked examples</a><a class="toc-l1" href="#6-traps-and-gotchas">6. Traps and gotchas</a><a class="toc-l1" href="#7-practice-questions">7. Practice questions</a><a class="toc-l1" href="#8-resources">8. Resources</a><a class="toc-l1" href="#9-self-check">9. Self-check</a><a class="toc-l1" href="#10-sources">10. Sources</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

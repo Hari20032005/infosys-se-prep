@@ -1,0 +1,17 @@
+disc_id,source,item,reason,topic_hint
+X01,YT-2MBO,interchange-two-numbers equation,operators lost in ASR; cannot re-pose,aptitude-operator
+X02,YT-2MBO,histogram DI (pass % at 60% of 50),chart values never spoken,aptitude-di
+X03,YT-2MBO,DS probability (red/green/blue),value in statement II not spoken,aptitude-ds
+X04,YT-2YHL/YT-U7HK,"figure puzzle ""5, ?, 68, 73"" -> 52",layout unrecoverable,puzzle-pair
+X05,YT-5XTG,"""100 in between"" shift-one puzzle",stub; data inaudible,puzzle-pair
+X06,YT-5XTG,"shift-two ""412 - 39? = 40"" puzzle",stated arithmetic (412 - 398 = 14) does not produce 40; transcription defective,puzzle-pair
+X07,YT-6UFT,grid 5 3 7 / 2 4 1 / 1 3 ? -> 75,cell layout lost,puzzle-grid
+X08,YT-6UFT,3 and 2 -> 11 pattern,presenter never states a working rule,puzzle-pair
+X09,YT-6UFT,triangle figure -> 15,stub,puzzle-pair
+X10,YT-6UFT,ring 6 15 23 48 / 30 45 41 36,"presenter: ""if 46 is in the options take 46, otherwise 50"" - no determinable rule",puzzle-pair
+X11,YT-6UFT,50 16 32 / 49 33 16 / ? grid,"presenter calls it a ""junk question""; rule incomplete",puzzle-grid
+X12,YT-KC2G,"series 8705, 263, 11, 951, 15123",digit grouping unrecoverable,aptitude-series
+X13,YT-KC2G,series 28456 ... 777,stub,aptitude-series
+X14,YT-KC2G,"quiz series 5821, 55117",stub,aptitude-series
+X15,YT-KC2G,quiz question shown on screen,content never spoken,unknown
+X16,YT-U7HK,"puzzle ""question four""",stub,puzzle-unknown

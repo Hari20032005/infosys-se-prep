@@ -1,0 +1,2562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QB-P6 — Conditionals and Branch Selection in Pseudocode · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem current" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Question banks &amp; mock</span></div>
+    <article class="prose">
+<h1 id="qb-p6-conditionals-and-branch-selection-in-pseudocode">QB-P6 — Conditionals and Branch Selection in Pseudocode</h1>
+<p><strong>Pseudocode</strong> · <strong>Tier 3</strong> · 36 questions</p>
+<p>Topic file: <a href="/Users/hariharansundaramoorthy/Documents/my projects/infosys/infosys-prep-library/pseudocode/P6-conditionals-nested-if.md"><code>P6-conditionals-nested-if.md</code></a></p>
+<p><em>Adapted from <code>accenture-prep-final/accenture-prep-library/question-banks/QB-T07-B2-conditionals-nested-if.md</code>; verified in that library's QA. Questions and answer key are unchanged.</em></p>
+<p><strong>How to use this bank.</strong> Attempt every question before opening the key, at the real pace for this section (120 seconds a question). Answer letters are balanced across a–d.</p>
+<hr />
+<p><strong>1.</strong> <strong>[Easy]</strong> <em>(B2 — truthiness of non-zero integers)</em></p>
+<div class="codehilite"><pre><span></span><code>1.  SET x = 0
+2.  SET y = 7
+3.  IF x THEN
+4.      PRINT &quot;A&quot;
+5.  END IF
+6.  IF y THEN
+7.      PRINT &quot;B&quot;
+8.  ELSE
+9.      PRINT &quot;C&quot;
+10. END IF
+</code></pre></div>
+
+<p>Each <code>PRINT</code> writes its own line. What is the output?</p>
+<p>(a) B then C
+(b) B
+(c) C
+(d) A</p>
+<p><strong>1. (b) B</strong></p>
+<p><code>x</code> is 0, which is falsy, so line 4 never runs and nothing is printed for the first block. <code>y</code> is 7, which is truthy, so the <code>IF y</code> branch prints <code>B</code> and the <code>ELSE</code> is skipped.</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>x</th>
+<th>y</th>
+<th>Decision</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>0</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0</td>
+<td>7</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>3-5</td>
+<td>0</td>
+<td>7</td>
+<td><code>IF x</code> false</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0</td>
+<td>7</td>
+<td><code>IF y</code> true</td>
+<td>—</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0</td>
+<td>7</td>
+<td>—</td>
+<td>B</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Treats <code>IF x</code> as true. In this pseudocode a condition is true only when the value is non-zero.</li>
+<li>(c) Prints the <code>ELSE</code> arm of the second <code>IF</code>, which is unreachable because <code>y</code> is non-zero.</li>
+<li>(d) Assumes both the <code>IF</code> and the <code>ELSE</code> arm of a single <code>IF</code> can execute. Only one arm runs.</li>
+</ul>
+<hr />
+<p><strong>2.</strong> <strong>[Easy]</strong> <em>(B2 — dead code under a false guard)</em></p>
+<div class="codehilite"><pre><span></span><code>1.  SET a = 4
+2.  SET b = 9
+3.  SET c = 6
+4.  IF a &gt; b THEN
+5.      c = c + 1
+6.  END IF
+7.  PRINT c
+</code></pre></div>
+
+<p>(a) 5
+(b) 9
+(c) 6
+(d) 7</p>
+<p><strong>2. (c) 6</strong></p>
+<p>The guard <code>a &gt; b</code> is <code>4 &gt; 9</code>, which is false, so the body <code>c = c + 1</code> is dead code. <code>c</code> keeps its initial value of 6.</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-3</td>
+<td>4</td>
+<td>9</td>
+<td>6</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4</td>
+<td>9</td>
+<td>6</td>
+<td><code>4 &gt; 9</code> false</td>
+</tr>
+<tr>
+<td>5</td>
+<td>4</td>
+<td>9</td>
+<td>6</td>
+<td>skipped (dead code)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>4</td>
+<td>9</td>
+<td>6</td>
+<td>prints 6</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Adds 1 to <code>c</code> as if the guard were true.</li>
+<li>(b) Prints <code>b</code> instead of <code>c</code>.</li>
+<li>(d) Subtracts 1 from <code>c</code>; the body is a <code>+1</code>, not a <code>-1</code>, and it does not run anyway.</li>
+</ul>
+<hr />
+<p><strong>3.</strong> <strong>[Easy]</strong> <em>(B2 — ordering in an if / else-if ladder)</em></p>
+<div class="codehilite"><pre><span></span><code>1.  SET n = 12
+2.  IF n &gt; 10 THEN
+3.      PRINT &quot;LARGE&quot;
+4.  ELSE IF n &gt; 5 THEN
+5.      PRINT &quot;MEDIUM&quot;
+6.  ELSE
+7.      PRINT &quot;SMALL&quot;
+8.  END IF
+</code></pre></div>
+
+<p>(a) LARGE
+(b) MEDIUM
+(c) LARGE then MEDIUM
+(d) SMALL</p>
+<p><strong>3. (a) LARGE</strong></p>
+<p>The ladder is evaluated top-down and the first true guard wins. <code>12 &gt; 10</code> is true, so <code>LARGE</code> is printed and the remaining arms are not evaluated.</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>n</th>
+<th>Guard</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>12</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>2</td>
+<td>12</td>
+<td><code>12 &gt; 10</code> true</td>
+<td>enter</td>
+</tr>
+<tr>
+<td>3</td>
+<td>12</td>
+<td>—</td>
+<td>prints LARGE</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) <code>n &gt; 5</code> is also true, but the <code>ELSE IF</code> is only reached when the first guard fails.</li>
+<li>(d) <code>SMALL</code> is the final <code>ELSE</code>, reached only when both guards fail.</li>
+<li>(d) Assumes every matching arm executes; an <code>else-if</code> ladder stops at the first match.</li>
+</ul>
+<hr />
+<p><strong>4.</strong> <strong>[Easy]</strong> <em>(B2 — truthiness of zero and of negative integers)</em></p>
+<div class="codehilite"><pre><span></span><code>1.  SET p = -3
+2.  SET q = 0
+3.  IF p THEN
+4.      PRINT &quot;P&quot;
+5.  END IF
+6.  IF q THEN
+7.      PRINT &quot;Q&quot;
+8.  END IF
+9.  IF NOT q THEN
+10.     PRINT &quot;R&quot;
+11. END IF
+</code></pre></div>
+
+<p>(a) P
+(b) P then R
+(c) P, Q, R
+(d) Q then R</p>
+<p><strong>4. (b) P then R</strong></p>
+<p><code>p = -3</code> is non-zero, so it is truthy and <code>P</code> prints. <code>q = 0</code> is falsy, so <code>Q</code> does not print; <code>NOT q</code> is therefore true and <code>R</code> prints.</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>p</th>
+<th>q</th>
+<th>Decision</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td>-3</td>
+<td>0</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>3-5</td>
+<td>-3</td>
+<td>0</td>
+<td><code>IF p</code> true</td>
+<td>P</td>
+</tr>
+<tr>
+<td>6-8</td>
+<td>-3</td>
+<td>0</td>
+<td><code>IF q</code> false</td>
+<td>—</td>
+</tr>
+<tr>
+<td>9-11</td>
+<td>-3</td>
+<td>0</td>
+<td><code>NOT q</code> true</td>
+<td>R</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Stops after the first block, ignoring the third <code>IF</code>.</li>
+<li>(a) Treats <code>q = 0</code> as truthy, which is the whole point of the truthiness rule.</li>
+<li>(a) Prints both <code>Q</code> and <code>R</code>, which is impossible since <code>IF q</code> and <code>IF NOT q</code> cannot both be true.</li>
+</ul>
+<hr />
+<p><strong>5.</strong> <strong>[Medium]</strong> <em>(B2 — outer guard true, inner guard false)</em></p>
+<div class="codehilite"><pre><span></span><code>1.  SET a = 8
+2.  SET b = 3
+3.  SET c = 5
+4.  IF a &gt; b THEN
+5.      IF b &gt; c THEN
+6.          PRINT &quot;INNER&quot;
+7.      ELSE
+8.          PRINT &quot;OUTER-ONLY&quot;
+9.      END IF
+10. ELSE
+11.     PRINT &quot;NOTHING&quot;
+12. END IF
+</code></pre></div>
+
+<p>(a) INNER
+(b) OUTER-ONLY
+(c) NOTHING
+(d) No output at all</p>
+<p><strong>5. (b) OUTER-ONLY</strong></p>
+<p><code>a &gt; b</code> is <code>8 &gt; 3</code>, true, so the outer body is entered. The inner guard <code>b &gt; c</code> is <code>3 &gt; 5</code>, false, so the inner <code>ELSE</code> runs and prints <code>OUTER-ONLY</code>. The outer <code>ELSE</code> at line 10-11 is never reached.</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>Decision</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-3</td>
+<td>8</td>
+<td>3</td>
+<td>5</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4</td>
+<td>8</td>
+<td>3</td>
+<td>5</td>
+<td><code>8 &gt; 3</code> true</td>
+<td>—</td>
+</tr>
+<tr>
+<td>5</td>
+<td>8</td>
+<td>3</td>
+<td>5</td>
+<td><code>3 &gt; 5</code> false</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8</td>
+<td>8</td>
+<td>3</td>
+<td>5</td>
+<td>—</td>
+<td>OUTER-ONLY</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Reads the inner guard as true; <code>3 &gt; 5</code> is false.</li>
+<li>(c) Takes the outer <code>ELSE</code>, which requires <code>a &gt; b</code> to be false.</li>
+<li>(d) The inner <code>ELSE</code> always prints something in this block.</li>
+</ul>
+<hr />
+<p><strong>6.</strong> <strong>[Medium]</strong> <em>(B2 — reassignment before a later condition reads the variable)</em></p>
+<div class="codehilite"><pre><span></span><code>1.  SET x = 4
+2.  SET y = 4
+3.  IF x &gt;= y THEN
+4.      x = x + 10
+5.  END IF
+6.  IF x = y THEN
+7.      PRINT &quot;EQUAL&quot;
+8.  ELSE
+9.      PRINT &quot;NOT EQUAL&quot;
+10. END IF
+11. PRINT x
+</code></pre></div>
+
+<p><code>PRINT</code> writes one value per line. What is the full output?</p>
+<p>(a) EQUAL then 4
+(b) NOT EQUAL then 4
+(c) NOT EQUAL then 14
+(d) EQUAL then 14</p>
+<p><strong>6. (c) NOT EQUAL then 14</strong></p>
+<p><code>4 &gt;= 4</code> is true, so line 4 runs and sets <code>x</code> to 14. The later test <code>x = y</code> is <code>14 = 4</code>, false, so <code>NOT EQUAL</code> prints. Line 11 then prints the current <code>x</code>, which is 14.</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>x</th>
+<th>y</th>
+<th>Decision</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td>4</td>
+<td>4</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>3-4</td>
+<td>14</td>
+<td>4</td>
+<td><code>4 &gt;= 4</code> true</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6</td>
+<td>14</td>
+<td>4</td>
+<td><code>14 = 4</code> false</td>
+<td>—</td>
+</tr>
+<tr>
+<td>9</td>
+<td>14</td>
+<td>4</td>
+<td>—</td>
+<td>NOT EQUAL</td>
+</tr>
+<tr>
+<td>11</td>
+<td>14</td>
+<td>4</td>
+<td>—</td>
+<td>14</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Uses the original <code>x = 4</code> at line 6 and again at line 11, forgetting the reassignment.</li>
+<li>(b) Correctly sees <code>x</code> became 14 but then treats <code>14 = 4</code> as true.</li>
+<li>(d) Uses the stale value of <code>x</code> for the print on line 11.</li>
+</ul>
+<hr />
+<p><strong>7.</strong> <strong>[Medium]</strong> <em>(B2 — the always-false identity comparison)</em></p>
+<div class="codehilite"><pre><span></span><code>1.  SET a = 2
+2.  SET b = 5
+3.  SET c = 7
+4.  IF (a + b + c) &gt; (c + b + a) THEN
+5.      PRINT &quot;TRUE-BRANCH&quot;
+6.  ELSE
+7.      PRINT &quot;FALSE-BRANCH&quot;
+8.  END IF
+</code></pre></div>
+
+<p>(a) FALSE-BRANCH
+(b) TRUE-BRANCH
+(c) TRUE-BRANCH then FALSE-BRANCH
+(d) No output at all</p>
+<p><strong>7. (a) FALSE-BRANCH</strong></p>
+<p>Both sides sum to the same value: <code>2 + 5 + 7 = 14</code> and <code>7 + 5 + 2 = 14</code>. Addition is commutative, so <code>14 &gt; 14</code> is false, the <code>ELSE</code> arm runs and prints <code>FALSE-BRANCH</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>LHS</th>
+<th>RHS</th>
+<th>Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-3</td>
+<td>2</td>
+<td>5</td>
+<td>7</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4</td>
+<td>2</td>
+<td>5</td>
+<td>7</td>
+<td>14</td>
+<td>14</td>
+<td><code>14 &gt; 14</code> false</td>
+</tr>
+<tr>
+<td>7</td>
+<td>2</td>
+<td>5</td>
+<td>7</td>
+<td>14</td>
+<td>14</td>
+<td>prints FALSE-BRANCH</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) Reads the reversed sum as a different quantity; swapping the order of addition changes nothing.</li>
+<li>(c) Assumes both arms run; a single <code>IF / ELSE</code> executes exactly one arm.</li>
+<li>(d) The <code>ELSE</code> arm always prints here.</li>
+</ul>
+<hr />
+<p><strong>8.</strong> <strong>[Medium]</strong> <em>(B2 — nested guard plus truthiness of a reassigned integer)</em></p>
+<div class="codehilite"><pre><span></span><code>1.  SET a = 0
+2.  SET b = 1
+3.  IF b THEN
+4.      a = 5
+5.      IF a THEN
+6.          b = 0
+7.      END IF
+8.  END IF
+9.  PRINT a
+10. PRINT b
+</code></pre></div>
+
+<p>(a) 0 then 1
+(b) 5 then 1
+(c) 0 then 0
+(d) 5 then 0</p>
+<p><strong>8. (d) 5 then 0</strong></p>
+<p><code>b = 1</code> is truthy, so <code>a</code> is set to 5. <code>a = 5</code> is truthy, so <code>b</code> is set to 0. The prints then output the final <code>a</code> and the final <code>b</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>a</th>
+<th>b</th>
+<th>Decision</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td>0</td>
+<td>1</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0</td>
+<td>1</td>
+<td><code>IF b</code> true</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4</td>
+<td>5</td>
+<td>1</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>5</td>
+<td>5</td>
+<td>1</td>
+<td><code>IF a</code> true</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6</td>
+<td>5</td>
+<td>0</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>9-10</td>
+<td>5</td>
+<td>0</td>
+<td>—</td>
+<td>5, 0</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Ignores the nested block entirely.</li>
+<li>(b) Executes <code>a = 5</code> but not the inner <code>b = 0</code>.</li>
+<li>(c) Uses the initial <code>a = 0</code>, missing that line 4 overwrote it before the inner guard read it.</li>
+</ul>
+<hr />
+<p><strong>9.</strong> <strong>[Medium]</strong> <em>(B2 — else-if ladder combined with reassignment)</em></p>
+<div class="codehilite"><pre><span></span><code>1.  SET m = 10
+2.  SET n = 4
+3.  IF m &gt; n THEN
+4.      m = m - n
+5.  ELSE IF m &lt; n THEN
+6.      n = n - m
+7.  END IF
+8.  IF m &gt; n THEN
+9.      PRINT &quot;M&quot;
+10. ELSE
+11.     PRINT &quot;N&quot;
+12. END IF
+</code></pre></div>
+
+<p>(a) N
+(b) M then N
+(c) No output at all
+(d) M</p>
+<p><strong>9. (d) M</strong></p>
+<p><code>10 &gt; 4</code> is true, so <code>m</code> becomes 6 and the <code>ELSE IF</code> is skipped. After the ladder, <code>m &gt; n</code> is <code>6 &gt; 4</code>, true, so <code>M</code> prints.</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>m</th>
+<th>n</th>
+<th>Decision</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td>10</td>
+<td>4</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>3-4</td>
+<td>6</td>
+<td>4</td>
+<td><code>10 &gt; 4</code> true</td>
+<td>—</td>
+</tr>
+<tr>
+<td>5-6</td>
+<td>6</td>
+<td>4</td>
+<td><code>ELSE IF</code> skipped</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8</td>
+<td>6</td>
+<td>4</td>
+<td><code>6 &gt; 4</code> true</td>
+<td>M</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Takes the final <code>ELSE</code>, which requires <code>m &lt;= n</code> after the ladder.</li>
+<li>(b) Assumes both branches of the ladder execute.</li>
+<li>(c) Both <code>IF</code> statements always produce a print here.</li>
+</ul>
+<hr />
+<p><strong>10.</strong> <strong>[Medium]</strong> <em>(B2 — truthiness of a computed zero)</em></p>
+<div class="codehilite"><pre><span></span><code>1.  SET k = 3
+2.  SET flag = k - 3
+3.  IF flag THEN
+4.      PRINT &quot;ON&quot;
+5.  ELSE
+6.      PRINT &quot;OFF&quot;
+7.  END IF
+8.  IF k - 3 THEN
+9.      PRINT &quot;YES&quot;
+10. ELSE
+11.     PRINT &quot;NO&quot;
+12. END IF
+</code></pre></div>
+
+<p>(a) ON then NO
+(b) ON then YES
+(c) OFF then YES
+(d) OFF then NO</p>
+<p><strong>10. (d) OFF then NO</strong></p>
+<p><code>flag</code> is <code>3 - 3 = 0</code>, which is falsy, so the first block prints <code>OFF</code>. The second condition recomputes the same value, <code>0</code>, so it is also falsy and prints <code>NO</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>k</th>
+<th>flag</th>
+<th>Decision</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td>3</td>
+<td>0</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>3-6</td>
+<td>3</td>
+<td>0</td>
+<td><code>IF flag</code> false</td>
+<td>OFF</td>
+</tr>
+<tr>
+<td>8</td>
+<td>3</td>
+<td>0</td>
+<td><code>3 - 3</code> is 0, false</td>
+<td>—</td>
+</tr>
+<tr>
+<td>11</td>
+<td>3</td>
+<td>0</td>
+<td>—</td>
+<td>NO</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) Treats <code>0</code> as true in both blocks.</li>
+<li>(c) Mixes the two arms: the second block must also take its <code>ELSE</code>.</li>
+<li>(a) Treats <code>0</code> as true in the first block only.</li>
+</ul>
+<hr />
+<p><strong>11.</strong> <strong>[Hard]</strong> <em>(B2 — reassignment feeding an identity comparison)</em></p>
+<div class="codehilite"><pre><span></span><code>1.  SET a = 6
+2.  SET b = 2
+3.  SET c = 4
+4.  IF a &gt; b THEN
+5.      c = a - b
+6.      IF (a + b + c) &gt; (c + b + a) THEN
+7.          c = c + 1
+8.      ELSE
+9.          c = c - 1
+10.     END IF
+11. END IF
+12. PRINT c
+</code></pre></div>
+
+<p>(a) 2
+(b) 3
+(c) 4
+(d) 5</p>
+<p><strong>11. (b) 3</strong></p>
+<p><code>6 &gt; 2</code> is true, so <code>c</code> is set to <code>6 - 2 = 4</code>. The identity comparison <code>(6 + 2 + 4) &gt; (4 + 2 + 6)</code> is <code>12 &gt; 12</code>, false, so the <code>ELSE</code> runs and <code>c</code> becomes <code>4 - 1 = 3</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>LHS</th>
+<th>RHS</th>
+<th>Decision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-3</td>
+<td>6</td>
+<td>2</td>
+<td>4</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4</td>
+<td>6</td>
+<td>2</td>
+<td>4</td>
+<td>—</td>
+<td>—</td>
+<td><code>6 &gt; 2</code> true</td>
+</tr>
+<tr>
+<td>5</td>
+<td>6</td>
+<td>2</td>
+<td>4</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6</td>
+<td>6</td>
+<td>2</td>
+<td>4</td>
+<td>12</td>
+<td>12</td>
+<td>false</td>
+</tr>
+<tr>
+<td>9</td>
+<td>6</td>
+<td>2</td>
+<td>3</td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>12</td>
+<td>6</td>
+<td>2</td>
+<td>3</td>
+<td>—</td>
+<td>—</td>
+<td>prints 3</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(d) Takes the <code>THEN</code> arm and increments <code>c</code> to 5.</li>
+<li>(d) Skips the inner block and leaves <code>c</code> at the value set on line 5.</li>
+<li>(a) Subtracts 2 somewhere; only 1 is subtracted.</li>
+</ul>
+<hr />
+<p><strong>12.</strong> <strong>[Hard]</strong> <em>(B2 — inner guard false because a computed value is zero)</em></p>
+<div class="codehilite"><pre><span></span><code>1.  SET x = 5
+2.  SET y = 5
+3.  SET z = 1
+4.  IF x &gt;= y THEN
+5.      z = x - y
+6.      IF z THEN
+7.          PRINT &quot;FIRST&quot;
+8.      ELSE
+9.          PRINT &quot;SECOND&quot;
+10.     END IF
+11. ELSE
+12.     PRINT &quot;THIRD&quot;
+13. END IF
+</code></pre></div>
+
+<p>(a) FIRST
+(b) THIRD
+(c) No output at all
+(d) SECOND</p>
+<p><strong>12. (d) SECOND</strong></p>
+<p><code>5 &gt;= 5</code> is true, so the outer body runs and sets <code>z = 5 - 5 = 0</code>. The inner guard <code>IF z</code> sees 0, which is falsy, so the inner <code>ELSE</code> prints <code>SECOND</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>x</th>
+<th>y</th>
+<th>z</th>
+<th>Decision</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-3</td>
+<td>5</td>
+<td>5</td>
+<td>1</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4</td>
+<td>5</td>
+<td>5</td>
+<td>1</td>
+<td><code>5 &gt;= 5</code> true</td>
+<td>—</td>
+</tr>
+<tr>
+<td>5</td>
+<td>5</td>
+<td>5</td>
+<td>0</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6</td>
+<td>5</td>
+<td>5</td>
+<td>0</td>
+<td><code>IF z</code> false</td>
+<td>—</td>
+</tr>
+<tr>
+<td>9</td>
+<td>5</td>
+<td>5</td>
+<td>0</td>
+<td>—</td>
+<td>SECOND</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Treats the inner <code>IF z</code> as true even though <code>z</code> is 0.</li>
+<li>(b) Takes the outer <code>ELSE</code>, which requires <code>x &gt;= y</code> to be false.</li>
+<li>(c) The inner <code>ELSE</code> always prints in this block.</li>
+</ul>
+<hr />
+<p><strong>13.</strong> <strong>[Hard]</strong> <em>(B2 — dead code plus identity comparison plus equality test)</em></p>
+<div class="codehilite"><pre><span></span><code>1.  SET a = 3
+2.  SET b = 8
+3.  SET c = 3
+4.  IF a &gt; b THEN
+5.      a = 100
+6.  END IF
+7.  IF (a + b + c) &gt; (c + b + a) THEN
+8.      b = 0
+9.  END IF
+10. IF a = c THEN
+11.     PRINT &quot;SAME&quot;
+12. ELSE
+13.     PRINT &quot;DIFFERENT&quot;
+14. END IF
+15. PRINT a
+</code></pre></div>
+
+<p>(a) DIFFERENT then 3
+(b) SAME then 100
+(c) SAME then 3
+(d) DIFFERENT then 100</p>
+<p><strong>13. (c) SAME then 3</strong></p>
+<p><code>3 &gt; 8</code> is false, so line 5 never runs and <code>a</code> stays 3. The identity comparison is <code>14 &gt; 14</code>, false, so line 8 never runs and <code>b</code> stays 8. Finally <code>a = c</code> is <code>3 = 3</code>, true, so <code>SAME</code> prints and line 15 prints <code>a = 3</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>Decision</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-3</td>
+<td>3</td>
+<td>8</td>
+<td>3</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4-5</td>
+<td>3</td>
+<td>8</td>
+<td>3</td>
+<td><code>3 &gt; 8</code> false, dead code</td>
+<td>—</td>
+</tr>
+<tr>
+<td>7-8</td>
+<td>3</td>
+<td>8</td>
+<td>3</td>
+<td><code>14 &gt; 14</code> false</td>
+<td>—</td>
+</tr>
+<tr>
+<td>10-11</td>
+<td>3</td>
+<td>8</td>
+<td>3</td>
+<td><code>3 = 3</code> true</td>
+<td>SAME</td>
+</tr>
+<tr>
+<td>15</td>
+<td>3</td>
+<td>8</td>
+<td>3</td>
+<td>—</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Executes the dead <code>a = 100</code> and the dead <code>b = 0</code>.</li>
+<li>(b) Executes <code>a = 100</code> but correctly skips the identity-comparison body.</li>
+<li>(d) Correctly keeps <code>a = 3</code> but takes the <code>ELSE</code> arm at line 12.</li>
+</ul>
+<hr />
+<p><strong>14.</strong> <strong>[Hard]</strong> <em>(B2 — else-if chain inside a truthy outer guard)</em></p>
+<div class="codehilite"><pre><span></span><code>1.  SET p = 2
+2.  SET q = 0
+3.  SET r = 9
+4.  IF p THEN
+5.      q = p - 2
+6.      IF q THEN
+7.          r = 1
+8.      ELSE IF p &gt; 1 THEN
+9.          r = 2
+10.     ELSE
+11.         r = 3
+12.     END IF
+13. END IF
+14. PRINT q
+15. PRINT r
+</code></pre></div>
+
+<p>(a) 0 then 9
+(b) 0 then 1
+(c) 2 then 2
+(d) 0 then 2</p>
+<p><strong>14. (d) 0 then 2</strong></p>
+<p><code>p = 2</code> is truthy, so the outer body runs and <code>q</code> becomes <code>2 - 2 = 0</code>. The inner <code>IF q</code> sees 0 and is false, so control moves to <code>ELSE IF p &gt; 1</code>, i.e. <code>2 &gt; 1</code>, true, setting <code>r = 2</code>. The prints show <code>q = 0</code> and <code>r = 2</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>p</th>
+<th>q</th>
+<th>r</th>
+<th>Decision</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-3</td>
+<td>2</td>
+<td>0</td>
+<td>9</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4-5</td>
+<td>2</td>
+<td>0</td>
+<td>9</td>
+<td><code>IF p</code> true</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6</td>
+<td>2</td>
+<td>0</td>
+<td>9</td>
+<td><code>IF q</code> false</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8-9</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+<td><code>2 &gt; 1</code> true</td>
+<td>—</td>
+</tr>
+<tr>
+<td>14-15</td>
+<td>2</td>
+<td>0</td>
+<td>2</td>
+<td>—</td>
+<td>0, 2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Takes the first inner branch <code>r = 1</code>, which requires <code>q</code> to be truthy.</li>
+<li>(c) Prints <code>q</code>'s pre-assignment value of 2 instead of the value after line 5.</li>
+<li>(b) Prints <code>r</code>'s initial value of 9, taking no inner branch at all.</li>
+</ul>
+<hr />
+<p><strong>15.</strong> <strong>[Hard]</strong> <em>(B2 — equality branch of the identity comparison)</em></p>
+<div class="codehilite"><pre><span></span><code>1.  SET a = 1
+2.  SET b = 2
+3.  SET c = 3
+4.  IF a + b + c &gt; c + b + a THEN
+5.      PRINT &quot;GREATER&quot;
+6.  ELSE IF a + b + c = c + b + a THEN
+7.      PRINT &quot;EQUAL&quot;
+8.  ELSE
+9.      PRINT &quot;LESS&quot;
+10. END IF
+11. c = a + b
+12. IF c THEN
+13.     PRINT c
+14. END IF
+</code></pre></div>
+
+<p>(a) LESS then 3
+(b) EQUAL then 1
+(c) GREATER then 3
+(d) EQUAL then 3</p>
+<p><strong>15. (d) EQUAL then 3</strong></p>
+<p>The first test <code>6 &gt; 6</code> is false. The <code>ELSE IF</code> tests <code>6 = 6</code>, which is true, so <code>EQUAL</code> prints. Then <code>c</code> is set to <code>1 + 2 = 3</code>, which is non-zero, so the final <code>IF</code> prints <code>3</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>Decision</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-3</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td><code>6 &gt; 6</code> false</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6-7</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td><code>6 = 6</code> true</td>
+<td>EQUAL</td>
+</tr>
+<tr>
+<td>11</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>12-13</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td><code>IF c</code> true</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Reads the reversed sum as strictly larger; the two sides are equal.</li>
+<li>(b) Correctly prints <code>EQUAL</code> but prints <code>c</code> from before line 11.</li>
+<li>(c) Takes the <code>ELSE</code> arm instead of the <code>ELSE IF</code>.</li>
+</ul>
+<hr />
+<p><strong>16.</strong> <strong>[Hard]</strong> <em>(B2 — sequential guards where an earlier write changes a later test)</em></p>
+<div class="codehilite"><pre><span></span><code>1.  SET x = 7
+2.  SET y = 12
+3.  IF x &gt; 5 THEN
+4.      x = x + 8
+5.  END IF
+6.  IF x &gt; y THEN
+7.      y = x
+8.  ELSE
+9.      x = x + 1
+10. END IF
+11. IF x &gt; y THEN
+12.     PRINT &quot;X WINS&quot;
+13. ELSE IF x = y THEN
+14.     PRINT &quot;TIE&quot;
+15. ELSE
+16.     PRINT &quot;Y WINS&quot;
+17. END IF
+</code></pre></div>
+
+<p>(a) X WINS
+(b) TIE
+(c) Y WINS
+(d) No output at all</p>
+<p><strong>16. (b) TIE</strong></p>
+<p><code>x &gt; 5</code> is <code>7 &gt; 5</code>, true, so <code>x</code> becomes 15. Then <code>15 &gt; 12</code> is true, so <code>y</code> becomes <code>x</code>, i.e. 15. The last ladder tests <code>x &gt; y</code> as <code>15 &gt; 15</code>, false, then <code>x = y</code> as <code>15 = 15</code>, true, printing <code>TIE</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>x</th>
+<th>y</th>
+<th>Decision</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-2</td>
+<td>7</td>
+<td>12</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>3-4</td>
+<td>15</td>
+<td>12</td>
+<td><code>7 &gt; 5</code> true</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6-7</td>
+<td>15</td>
+<td>15</td>
+<td><code>15 &gt; 12</code> true</td>
+<td>—</td>
+</tr>
+<tr>
+<td>11</td>
+<td>15</td>
+<td>15</td>
+<td><code>15 &gt; 15</code> false</td>
+<td>—</td>
+</tr>
+<tr>
+<td>13-14</td>
+<td>15</td>
+<td>15</td>
+<td><code>15 = 15</code> true</td>
+<td>TIE</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Takes the <code>THEN</code> arm of the last ladder without noticing <code>y</code> was set equal to <code>x</code>.</li>
+<li>(c) Takes the final <code>ELSE</code>, which requires <code>x &lt; y</code>.</li>
+<li>(d) The last ladder always prints one of its three arms.</li>
+</ul>
+<hr />
+<p><strong>17.</strong> <strong>[Hard]</strong> <em>(B2 — switching to an else-if branch when the first guard is false)</em></p>
+<div class="codehilite"><pre><span></span><code>1.  SET a = 4
+2.  SET b = 4
+3.  SET c = 4
+4.  IF a &gt; b THEN
+5.      c = 1
+6.      IF a &gt; c THEN
+7.          c = 2
+8.      END IF
+9.  ELSE IF a = b THEN
+10.     c = 10
+11.     IF c &gt; b THEN
+12.         c = 20
+13.     END IF
+14. ELSE
+15.     c = 30
+16. END IF
+17. PRINT c
+</code></pre></div>
+
+<p>(a) 20
+(b) 10
+(c) 2
+(d) 30</p>
+<p><strong>17. (a) 20</strong></p>
+<p><code>a &gt; b</code> is <code>4 &gt; 4</code>, false, so lines 5-8 are skipped entirely. The <code>ELSE IF a = b</code> is <code>4 = 4</code>, true, so <code>c</code> becomes 10. Then <code>c &gt; b</code> is <code>10 &gt; 4</code>, true, so <code>c</code> becomes 20.</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>Decision</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-3</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4-8</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+<td><code>4 &gt; 4</code> false, dead code</td>
+<td>—</td>
+</tr>
+<tr>
+<td>9-10</td>
+<td>4</td>
+<td>4</td>
+<td>10</td>
+<td><code>4 = 4</code> true</td>
+<td>—</td>
+</tr>
+<tr>
+<td>11-12</td>
+<td>4</td>
+<td>4</td>
+<td>20</td>
+<td><code>10 &gt; 4</code> true</td>
+<td>—</td>
+</tr>
+<tr>
+<td>17</td>
+<td>4</td>
+<td>4</td>
+<td>20</td>
+<td>—</td>
+<td>20</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(c) Enters the outer <code>THEN</code> and applies the nested <code>c = 2</code>.</li>
+<li>(b) Stops after <code>c = 10</code>, ignoring the nested <code>IF c &gt; b</code>.</li>
+<li>(d) Takes the final <code>ELSE</code>, which requires <code>a = b</code> to be false.</li>
+</ul>
+<hr />
+<p><strong>18.</strong> <strong>[Hard]</strong> <em>(B2 — identity comparison first, truthiness second)</em></p>
+<div class="codehilite"><pre><span></span><code>1.  SET a = 5
+2.  SET b = 5
+3.  SET c = 0
+4.  IF (a + b) &gt; (b + a) THEN
+5.      c = -1
+6.  ELSE IF a &gt;= b THEN
+7.      c = 2
+8.      IF c - 2 THEN
+9.          c = 3
+10.     END IF
+11. ELSE
+12.     c = 4
+13. END IF
+14. PRINT c
+</code></pre></div>
+
+<p>(a) 3
+(b) 2
+(c) 4
+(d) -1</p>
+<hr />
+<p><strong>18. (a) 2</strong></p>
+<p><code>(5 + 5) &gt; (5 + 5)</code> is <code>10 &gt; 10</code>, false. The <code>ELSE IF a &gt;= b</code> is <code>5 &gt;= 5</code>, true, so <code>c</code> becomes 2. The inner guard is <code>c - 2</code> = 0, falsy, so line 9 is skipped and <code>c</code> stays 2.</p>
+<table>
+<thead>
+<tr>
+<th>Line</th>
+<th>a</th>
+<th>b</th>
+<th>c</th>
+<th>Decision</th>
+<th>Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1-3</td>
+<td>5</td>
+<td>5</td>
+<td>0</td>
+<td>—</td>
+<td>—</td>
+</tr>
+<tr>
+<td>4</td>
+<td>5</td>
+<td>5</td>
+<td>0</td>
+<td><code>10 &gt; 10</code> false</td>
+<td>—</td>
+</tr>
+<tr>
+<td>6-7</td>
+<td>5</td>
+<td>5</td>
+<td>2</td>
+<td><code>5 &gt;= 5</code> true</td>
+<td>—</td>
+</tr>
+<tr>
+<td>8</td>
+<td>5</td>
+<td>5</td>
+<td>2</td>
+<td><code>c - 2</code> is 0, false</td>
+<td>—</td>
+</tr>
+<tr>
+<td>14</td>
+<td>5</td>
+<td>5</td>
+<td>2</td>
+<td>—</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) Reads <code>c - 2</code> as true and executes <code>c = 3</code>, but 0 is falsy.</li>
+<li>(c) Takes the outer <code>ELSE</code>; <code>a &gt;= b</code> is true, so the <code>ELSE</code> is unreachable.</li>
+<li>(d) Takes the first <code>THEN</code> arm even though the two sums are equal.</li>
+</ul>
+<hr />
+<p><strong>19.</strong> <strong>[Easy]</strong> <em>(B2 — truthiness of non-zero integers)</em></p>
+<p>In pseudocode, a condition is true when its value is non-zero. What is printed?</p>
+<div class="codehilite"><pre><span></span><code>x = 0
+y = -7
+if (x) then
+    print &quot;A&quot;
+else
+    if (y) then
+        print &quot;B&quot;
+    else
+        print &quot;C&quot;
+    end if
+end if
+</code></pre></div>
+
+<p>(a) A
+(b) Nothing is printed
+(c) C
+(d) B</p>
+<p><strong>19. (d) B</strong>
+<code>x = 0</code> is falsy so the outer <code>if</code> fails; <code>y = -7</code> is non-zero so it is truthy and "B" prints.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+<th>Truthy?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>0</td>
+<td>No</td>
+</tr>
+<tr>
+<td>y</td>
+<td>-7</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Assumes 0 is truthy — in pseudocode only non-zero is true.</li>
+<li>(c) Reached only if both <code>x</code> and <code>y</code> were falsy; <code>y = -7</code> is non-zero.</li>
+<li>(b) Something is always printed here because the <code>else</code> chain is exhaustive.</li>
+</ul>
+<hr />
+<p><strong>20.</strong> <strong>[Easy]</strong> <em>(B2 — false guard makes the body dead code)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code>a = 5
+b = 3
+c = 8
+if (a &gt; b + c) then
+    print &quot;YES&quot;
+    print a + b + c
+else
+    print &quot;NO&quot;
+end if
+</code></pre></div>
+
+<p>(a) YES then 16
+(b) YES then 8
+(c) NO
+(d) Nothing is printed</p>
+<p><strong>20. (c) NO</strong>
+<code>b + c = 11</code>, and <code>5 &gt; 11</code> is false, so the whole <code>if</code> body is dead code and only "NO" prints.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>5</td>
+</tr>
+<tr>
+<td>b</td>
+<td>3</td>
+</tr>
+<tr>
+<td>c</td>
+<td>8</td>
+</tr>
+<tr>
+<td>b + c</td>
+<td>11</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Assumes the guard passes and prints the sum 16.</li>
+<li>(b) Prints "YES" and misreads the sum as 8.</li>
+<li>(d) The <code>else</code> branch always prints "NO".</li>
+</ul>
+<hr />
+<p><strong>21.</strong> <strong>[Easy]</strong> <em>(B2 — outer-true-inner-false)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code>p = 10
+q = 4
+r = 6
+if (p &gt; q) then
+    if (p &gt; r + q) then
+        print &quot;INNER&quot;
+    else
+        print &quot;OUTER&quot;
+    end if
+else
+    print &quot;NONE&quot;
+end if
+</code></pre></div>
+
+<p>(a) INNER
+(b) INNER then OUTER
+(c) NONE
+(d) OUTER</p>
+<p><strong>21. (d) OUTER</strong>
+<code>p &gt; q</code> is <code>10 &gt; 4</code> true, so the inner <code>if</code> runs; <code>p &gt; r + q</code> is <code>10 &gt; 10</code> false, so "OUTER" prints.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p</td>
+<td>10</td>
+</tr>
+<tr>
+<td>q</td>
+<td>4</td>
+</tr>
+<tr>
+<td>r</td>
+<td>6</td>
+</tr>
+<tr>
+<td>r + q</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Treats <code>10 &gt; 10</code> as true; it is false.</li>
+<li>(c) Reached only if <code>p &gt; q</code> failed, but <code>10 &gt; 4</code> is true.</li>
+<li>(b) Only one branch of a nested <code>if</code> executes.</li>
+</ul>
+<hr />
+<p><strong>22.</strong> <strong>[Easy]</strong> <em>(B2 — variable reassigned before a later condition reads it)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code>m = 2
+n = 9
+m = m + 8
+if (m &gt; n) then
+    print &quot;BIG&quot;
+else
+    print &quot;SMALL&quot;
+end if
+</code></pre></div>
+
+<p>(a) BIG
+(b) SMALL
+(c) BIG then SMALL
+(d) Nothing is printed</p>
+<p><strong>22. (a) BIG</strong>
+<code>m</code> is reassigned to <code>2 + 8 = 10</code> before the test; <code>10 &gt; 9</code> is true, so "BIG" prints.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>m (initial)</td>
+<td>2</td>
+</tr>
+<tr>
+<td>n</td>
+<td>9</td>
+</tr>
+<tr>
+<td>m (after <code>m + 8</code>)</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) Uses the stale <code>m = 2</code> and concludes <code>2 &gt; 9</code> is false.</li>
+<li>(c) Only one branch executes.</li>
+<li>(d) The <code>else</code> branch always prints "SMALL".</li>
+</ul>
+<hr />
+<p><strong>23.</strong> <strong>[Medium]</strong> <em>(B2 — always-false identity comparison)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code>a = 4
+b = 7
+c = 2
+if (a + b + c) &gt; (c + b + a) then
+    print &quot;LEFT&quot;
+else
+    print &quot;RIGHT&quot;
+end if
+</code></pre></div>
+
+<p>(a) LEFT
+(b) LEFT then RIGHT
+(c) RIGHT
+(d) Nothing is printed</p>
+<p><strong>23. (c) RIGHT</strong>
+<code>a + b + c</code> and <code>c + b + a</code> are the same sum, so the comparison is false and "RIGHT" prints.</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a + b + c</td>
+<td>13</td>
+</tr>
+<tr>
+<td>c + b + a</td>
+<td>13</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Assumes reordering changes the sum; addition is commutative.</li>
+<li>(b) Only one branch executes.</li>
+<li>(d) The <code>else</code> branch always prints "RIGHT".</li>
+</ul>
+<hr />
+<p><strong>24.</strong> <strong>[Medium]</strong> <em>(B2 — false guard makes the body dead code)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code>x = 12
+y = 5
+z = 5
+if (x &lt; y) then
+    z = z + 100
+    print z
+end if
+print z
+</code></pre></div>
+
+<p>(a) 105
+(b) 5
+(c) 105 then 5
+(d) 5 then 105</p>
+<p><strong>24. (b) 5</strong>
+<code>12 &lt; 5</code> is false, so <code>z = z + 100</code> never runs; <code>z</code> stays 5 and the final <code>print z</code> outputs 5.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>12</td>
+</tr>
+<tr>
+<td>y</td>
+<td>5</td>
+</tr>
+<tr>
+<td>z (initial)</td>
+<td>5</td>
+</tr>
+<tr>
+<td>z (final)</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Assumes the guard passes and prints 105.</li>
+<li>(c) Prints the dead-code value first.</li>
+<li>(d) Reverses the order of the two prints.</li>
+</ul>
+<hr />
+<p><strong>25.</strong> <strong>[Medium]</strong> <em>(B2 — outer-true-inner-false)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code>a = 3
+b = 3
+c = 3
+if (a &gt;= b) then
+    if (a &gt; b) then
+        print &quot;STRICT&quot;
+    else
+        print &quot;EQUAL&quot;
+    end if
+else
+    print &quot;LESS&quot;
+end if
+</code></pre></div>
+
+<p>(a) EQUAL
+(b) STRICT
+(c) LESS
+(d) Nothing is printed</p>
+<p><strong>25. (a) EQUAL</strong>
+<code>a &gt;= b</code> is <code>3 &gt;= 3</code> true, so the inner <code>if</code> runs; <code>a &gt; b</code> is <code>3 &gt; 3</code> false, so "EQUAL" prints.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>3</td>
+</tr>
+<tr>
+<td>b</td>
+<td>3</td>
+</tr>
+<tr>
+<td>c</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) Treats <code>3 &gt; 3</code> as true; it is false.</li>
+<li>(c) Reached only if <code>a &gt;= b</code> failed, but it is true.</li>
+<li>(d) The inner <code>else</code> always prints "EQUAL".</li>
+</ul>
+<hr />
+<p><strong>26.</strong> <strong>[Medium]</strong> <em>(B2 — variable reassigned before a later condition reads it)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code>k = 1
+j = 1
+k = k + j
+j = k + j
+if (k &gt; j) then
+    print &quot;K&quot;
+else
+    print &quot;J&quot;
+end if
+</code></pre></div>
+
+<p>(a) K
+(b) J
+(c) K then J
+(d) Nothing is printed</p>
+<p><strong>26. (b) J</strong>
+<code>k = 1 + 1 = 2</code>, then <code>j = 2 + 1 = 3</code>; <code>2 &gt; 3</code> is false, so "J" prints.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>k (initial)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>j (initial)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>k (after <code>k + j</code>)</td>
+<td>2</td>
+</tr>
+<tr>
+<td>j (after <code>k + j</code>)</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Compares <code>k</code> against the stale <code>j = 1</code>.</li>
+<li>(c) Only one branch executes.</li>
+<li>(d) The <code>else</code> branch always prints "J".</li>
+</ul>
+<hr />
+<p><strong>27.</strong> <strong>[Medium]</strong> <em>(B2 — truthiness of non-zero integers)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code>t = 3 - 3
+u = 3 - 4
+if (t) then
+    print &quot;T&quot;
+else
+    if (u) then
+        print &quot;U&quot;
+    else
+        print &quot;V&quot;
+    end if
+end if
+</code></pre></div>
+
+<p>(a) T
+(b) V
+(c) U
+(d) Nothing is printed</p>
+<p><strong>27. (c) U</strong>
+<code>t = 3 - 3 = 0</code>, which is falsy, so the outer <code>if (t)</code> fails and control passes to the <code>else</code>. <code>u = 3 - 4 = -1</code>, which is <strong>non-zero and therefore truthy</strong>, so the inner <code>if (u)</code> succeeds and <strong><code>U</code></strong> is printed.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+<th>Truthy?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>t</code></td>
+<td>0</td>
+<td>No — 0 is the only falsy integer</td>
+</tr>
+<tr>
+<td><code>u</code></td>
+<td>−1</td>
+<td><strong>Yes</strong> — truthiness means non-zero, not positive</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) <code>T</code> requires <code>t</code> to be truthy, but <code>t</code> is exactly 0.</li>
+<li>(b) <code>V</code> is the inner <code>else</code>, reached only if <code>u</code> were also 0.</li>
+<li>(d) Something is always printed — every branch of this chain ends in a <code>print</code>.</li>
+</ul>
+<hr />
+<p><strong>28.</strong> <strong>[Medium]</strong> <em>(B2 — always-false identity comparison)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code>a = 9
+b = 1
+c = 6
+if (a + b + c) &gt; (c + b + a) then
+    print &quot;GREATER&quot;
+else
+    if (a + b + c) &lt; (c + b + a) then
+        print &quot;LESSER&quot;
+    else
+        print &quot;EQUAL&quot;
+    end if
+end if
+</code></pre></div>
+
+<p>(a) GREATER
+(b) LESSER
+(c) EQUAL
+(d) Nothing is printed</p>
+<p><strong>28. (c) EQUAL</strong>
+Both sums are 16, so <code>&gt;</code> is false and <code>&lt;</code> is false; the innermost <code>else</code> prints "EQUAL".</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a + b + c</td>
+<td>16</td>
+</tr>
+<tr>
+<td>c + b + a</td>
+<td>16</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Assumes reordering makes the left sum larger.</li>
+<li>(b) Assumes reordering makes the left sum smaller.</li>
+<li>(d) The final <code>else</code> always prints "EQUAL".</li>
+</ul>
+<hr />
+<p><strong>29.</strong> <strong>[Hard]</strong> <em>(B2 — false guard makes the body dead code)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code>a = 6
+b = 2
+c = 3
+if (a * b &lt; c) then
+    a = a + 1
+    b = b + 1
+    c = c + 1
+end if
+print a + b + c
+</code></pre></div>
+
+<p>(a) 14
+(b) 11
+(c) 12
+(d) 9</p>
+<p><strong>29. (b) 11</strong>
+<code>a * b = 12</code>, and <code>12 &lt; 3</code> is false, so the body is dead code; <code>a + b + c = 6 + 2 + 3 = 11</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>6</td>
+</tr>
+<tr>
+<td>b</td>
+<td>2</td>
+</tr>
+<tr>
+<td>c</td>
+<td>3</td>
+</tr>
+<tr>
+<td>a * b</td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Assumes the guard passes and adds 1 to each variable.</li>
+<li>(c) Adds 1 to only one variable.</li>
+<li>(d) Miscalculates the sum as 9.</li>
+</ul>
+<hr />
+<p><strong>30.</strong> <strong>[Hard]</strong> <em>(B2 — outer-true-inner-false)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code>x = 8
+y = 8
+z = 20
+if (x + y &lt;= z) then
+    if (x + y &lt; z) then
+        print &quot;UNDER&quot;
+    else
+        print &quot;EXACT&quot;
+    end if
+else
+    print &quot;OVER&quot;
+end if
+</code></pre></div>
+
+<p>(a) UNDER
+(b) Nothing is printed
+(c) OVER
+(d) EXACT</p>
+<p><strong>30. (a) UNDER</strong>
+<code>x + y = 16</code> and <code>z = 20</code>. The outer guard <code>16 &lt;= 20</code> is <strong>true</strong>, so the inner <code>if</code> is evaluated. The inner guard <code>16 &lt; 20</code> is <strong>also true</strong>, so <strong><code>UNDER</code></strong> is printed.</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Value</th>
+<th>Guard</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x + y</code></td>
+<td>16</td>
+<td><code>16 &lt;= 20</code></td>
+<td>true — enter</td>
+</tr>
+<tr>
+<td><code>x + y</code></td>
+<td>16</td>
+<td><code>16 &lt; 20</code></td>
+<td>true — print <code>UNDER</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) Nothing printed: impossible — every path through this chain reaches a <code>print</code>.</li>
+<li>(c) <code>OVER</code> is the outer <code>else</code>, reached only if <code>x + y &gt; z</code>.</li>
+<li>(d) <code>EXACT</code> is the inner <code>else</code>, reached only when <code>x + y == z</code> — that is, when the <code>&lt;=</code> holds but the <code>&lt;</code> does not. Here 16 is strictly less than 20, so the inner <code>if</code> succeeds.</li>
+</ul>
+<hr />
+<p><strong>31.</strong> <strong>[Hard]</strong> <em>(B2 — variable reassigned before a later condition reads it)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code>a = 5
+b = 2
+c = 0
+c = a - b
+b = c - b
+if (b &gt; c) then
+    print &quot;B&quot;
+else
+    if (b == c) then
+        print &quot;SAME&quot;
+    else
+        print &quot;C&quot;
+    end if
+end if
+</code></pre></div>
+
+<p>(a) B
+(b) SAME
+(c) C
+(d) Nothing is printed</p>
+<p><strong>31. (c) C</strong>
+<code>c = 5 - 2 = 3</code>, then <code>b = 3 - 2 = 1</code>; <code>1 &gt; 3</code> is false and <code>1 == 3</code> is false, so "C" prints.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>5</td>
+</tr>
+<tr>
+<td>b (initial)</td>
+<td>2</td>
+</tr>
+<tr>
+<td>c (after <code>a - b</code>)</td>
+<td>3</td>
+</tr>
+<tr>
+<td>b (after <code>c - b</code>)</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Compares <code>b</code> against the stale <code>c = 0</code>.</li>
+<li>(b) Assumes <code>b</code> and <code>c</code> end equal; they are 1 and 3.</li>
+<li>(d) The <code>else</code> chain always prints something.</li>
+</ul>
+<hr />
+<p><strong>32.</strong> <strong>[Hard]</strong> <em>(B2 — always-false identity comparison)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code>a = 2
+b = 5
+c = 8
+if (a + b + c) &gt; (c + b + a) then
+    print &quot;X&quot;
+else
+    if (a + b + c) == (c + b + a) then
+        print &quot;Y&quot;
+    else
+        print &quot;Z&quot;
+    end if
+end if
+</code></pre></div>
+
+<p>(a) X
+(b) Nothing is printed
+(c) Z
+(d) Y</p>
+<p><strong>32. (d) Y</strong>
+Both sums are 15, so <code>&gt;</code> is false; the inner test <code>==</code> is true, so "Y" prints.</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a + b + c</td>
+<td>15</td>
+</tr>
+<tr>
+<td>c + b + a</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Assumes reordering makes the left sum larger.</li>
+<li>(c) Reached only if the sums were unequal; they are equal.</li>
+<li>(b) The <code>else</code> chain always prints something.</li>
+</ul>
+<hr />
+<p><strong>33.</strong> <strong>[Hard]</strong> <em>(B2 — truthiness of non-zero integers)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code>a = 4
+b = 4
+c = 0
+if (a - b) then
+    print &quot;P&quot;
+else
+    if (a - b + c) then
+        print &quot;Q&quot;
+    else
+        if (c) then
+            print &quot;R&quot;
+        else
+            print &quot;S&quot;
+        end if
+    end if
+end if
+</code></pre></div>
+
+<p>(a) P
+(b) Q
+(c) R
+(d) S</p>
+<p><strong>33. (d) S</strong>
+<code>a - b = 0</code> is falsy, so "P" is skipped; <code>a - b + c = 0</code> is falsy, so "Q" is skipped; <code>c = 0</code> is falsy, so "S" prints.</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Value</th>
+<th>Truthy?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a - b</td>
+<td>0</td>
+<td>No</td>
+</tr>
+<tr>
+<td>a - b + c</td>
+<td>0</td>
+<td>No</td>
+</tr>
+<tr>
+<td>c</td>
+<td>0</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Assumes <code>a - b = 0</code> is truthy.</li>
+<li>(b) Assumes <code>a - b + c</code> is non-zero; it is 0.</li>
+<li>(c) Assumes <code>c</code> is non-zero; it is 0.</li>
+</ul>
+<hr />
+<p><strong>34.</strong> <strong>[Hard]</strong> <em>(B2 — false guard makes the body dead code)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code>a = 7
+b = 7
+c = 7
+if (a &gt; b) then
+    c = c * 2
+else
+    if (b &gt; c) then
+        c = c * 3
+    else
+        c = c + 1
+    end if
+end if
+print c
+</code></pre></div>
+
+<p>(a) 14
+(b) 8
+(c) 21
+(d) 7</p>
+<p><strong>34. (b) 8</strong>
+<code>a &gt; b</code> is <code>7 &gt; 7</code> false, so the first body is skipped; <code>b &gt; c</code> is <code>7 &gt; 7</code> false, so <code>c = c + 1 = 8</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>7</td>
+</tr>
+<tr>
+<td>b</td>
+<td>7</td>
+</tr>
+<tr>
+<td>c (initial)</td>
+<td>7</td>
+</tr>
+<tr>
+<td>c (final)</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Assumes <code>a &gt; b</code> is true and doubles <code>c</code>.</li>
+<li>(c) Assumes <code>b &gt; c</code> is true and triples <code>c</code>.</li>
+<li>(d) Forgets the <code>c = c + 1</code> assignment.</li>
+</ul>
+<hr />
+<p><strong>35.</strong> <strong>[Hard]</strong> <em>(B2 — outer-true-inner-false)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code>p = 15
+q = 5
+r = 5
+if (p &gt; q) then
+    if (q &gt; r) then
+        print &quot;FIRST&quot;
+    else
+        if (p &gt; q + r) then
+            print &quot;SECOND&quot;
+        else
+            print &quot;THIRD&quot;
+        end if
+    end if
+else
+    print &quot;FOURTH&quot;
+end if
+</code></pre></div>
+
+<p>(a) FIRST
+(b) THIRD
+(c) SECOND
+(d) FOURTH</p>
+<p><strong>35. (c) SECOND</strong>
+<code>p &gt; q</code> is <code>15 &gt; 5</code> true, so the inner <code>if</code> runs; <code>q &gt; r</code> is <code>5 &gt; 5</code> false, so the nested <code>if</code> runs; <code>p &gt; q + r</code> is <code>15 &gt; 10</code> true, so "SECOND" prints.</p>
+<table>
+<thead>
+<tr>
+<th>Expression</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>p</td>
+<td>15</td>
+</tr>
+<tr>
+<td>q</td>
+<td>5</td>
+</tr>
+<tr>
+<td>r</td>
+<td>5</td>
+</tr>
+<tr>
+<td>q + r</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(a) Treats <code>5 &gt; 5</code> as true.</li>
+<li>(b) Treats <code>15 &gt; 10</code> as false.</li>
+<li>(d) Reached only if <code>p &gt; q</code> failed, but it is true.</li>
+</ul>
+<hr />
+<p><strong>36.</strong> <strong>[Hard]</strong> <em>(B2 — variable reassigned before a later condition reads it)</em></p>
+<p>What is printed?</p>
+<div class="codehilite"><pre><span></span><code>a = 10
+b = 4
+c = 6
+a = b + c
+b = a - b
+if (a &gt; b) then
+    if (b &gt; c) then
+        print &quot;ONE&quot;
+    else
+        print &quot;TWO&quot;
+    end if
+else
+    print &quot;THREE&quot;
+end if
+</code></pre></div>
+
+<p>(a) TWO
+(b) ONE
+(c) THREE
+(d) Nothing is printed</p>
+<hr />
+<hr />
+<p><strong>36. (a) TWO</strong>
+<code>a = 4 + 6 = 10</code>, then <code>b = 10 - 4 = 6</code>; <code>10 &gt; 6</code> is true, so the inner <code>if</code> runs; <code>6 &gt; 6</code> is false, so "TWO" prints.</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a (initial)</td>
+<td>10</td>
+</tr>
+<tr>
+<td>b (initial)</td>
+<td>4</td>
+</tr>
+<tr>
+<td>c</td>
+<td>6</td>
+</tr>
+<tr>
+<td>a (after <code>b + c</code>)</td>
+<td>10</td>
+</tr>
+<tr>
+<td>b (after <code>a - b</code>)</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>(b) Treats <code>6 &gt; 6</code> as true.</li>
+<li>(c) Reached only if <code>a &gt; b</code> failed, but <code>10 &gt; 6</code> is true.</li>
+<li>(d) The inner <code>else</code> always prints "TWO".</li>
+</ul>
+<hr />
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/question-banks/QB-P5-arrays.html"><span>Previous</span><strong>QB-P5 — Arrays — 1D and 2D Traversal and Indexing</strong></a><a class="pager next" href="../../infosys-se/question-banks/QB-P7-functions-scope.html"><span>Next</span><strong>QB-P7 — Functions — Scope and Pass by Value vs Reference</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#qb-p6-conditionals-and-branch-selection-in-pseudocode">QB-P6 — Conditionals and Branch Selection in Pseudocode</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lesson 05. Data sufficiency · Infosys SE Prep</title>
+<link rel="stylesheet" href="../../assets/style.css">
+<script>
+  try { var t = localStorage.getItem('aprep-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+</script>
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <button class="menu" id="menuBtn" aria-label="Open navigation" aria-expanded="false">☰</button>
+  <a class="brand" href="../../index.html">Infosys SE Prep</a>
+  <div class="searchwrap">
+    <input id="q" type="search" placeholder="Search all 4 libraries…" autocomplete="off"
+           aria-label="Search" data-base="../../">
+    <div id="results" class="results" hidden></div>
+  </div>
+  <button class="themeBtn" id="themeBtn" aria-label="Toggle theme">◐</button>
+</header>
+<div class="shell">
+  <nav class="sidenav" aria-label="Library">
+<a class="home" href="../../index.html">Library home</a>
+<div class="navlib open">
+<a class="navlib-h" href="../../infosys-se/00-MASTER-INDEX.html"><span class="navlib-name">Infosys SE</span><span class="navlib-n">213</span></a>
+<div class="navsec">Start here</div>
+<a class="navitem" href="../../infosys-se/00-MASTER-INDEX.html">00 — Master Index: Infosys Systems Engineer (Trainee), campus 2026-27</a>
+<a class="navitem" href="../../infosys-se/01-APPLICATION-CHECKLIST.html">01 — Application Checklist</a>
+<a class="navitem" href="../../infosys-se/02-TOPIC-WEIGHTAGE-ANALYSIS.html">02 — Topic Weightage Analysis</a>
+<a class="navitem" href="../../infosys-se/03-TEST-STRATEGY.html">03 — Test Strategy</a>
+<a class="navitem" href="../../infosys-se/90-RESOURCE-LIBRARY.html">90 — Resource Library</a>
+<a class="navitem" href="../../infosys-se/91-CHEATSHEET.html">91 — Cheat Sheet</a>
+<a class="navitem" href="../../infosys-se/99-STUDY-PLAN.html">99 — Study Plan</a>
+<a class="navitem" href="../../infosys-se/PROGRESS.html">PROGRESS</a>
+<div class="navsec">Core Course: start here</div>
+<a class="navitem" href="../../infosys-se/core-course/00-START-HERE.html">Core Course: start here</a>
+<a class="navitem" href="../../infosys-se/core-course/01-Z2-pair-and-figure-puzzles.html">Lesson 01. Pair and figure puzzles</a>
+<a class="navitem" href="../../infosys-se/core-course/02-Z1-number-grids.html">Lesson 02. Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/core-course/03-A2-number-and-letter-series.html">Lesson 03. Number and letter series</a>
+<a class="navitem" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html">Lesson 04. Coding and decoding</a>
+<a class="navitem current" href="../../infosys-se/core-course/05-A6-data-sufficiency.html">Lesson 05. Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html">Lesson 06. Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/core-course/07-A3-operator-logic.html">Lesson 07. Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/core-course/08-A5-blood-relations.html">Lesson 08. Blood relations</a>
+<a class="navitem" href="../../infosys-se/core-course/09-A21-non-verbal-reasoning.html">Lesson 09. Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/10-A7-data-interpretation.html">Lesson 10. Data interpretation</a>
+<a class="navitem" href="../../infosys-se/core-course/11-A8-linear-equations-and-ages.html">Lesson 11. Linear equations, ages and heads-and-legs</a>
+<a class="navitem" href="../../infosys-se/core-course/12-G1-cloze-and-fill-in-the-blanks.html">Lesson 12. Cloze and fill in the blanks</a>
+<a class="navitem" href="../../infosys-se/core-course/13-G2-tenses-articles-prepositions.html">Lesson 13. Tenses, articles and prepositions</a>
+<a class="navitem" href="../../infosys-se/core-course/14-V2-spotting-errors.html">Lesson 14. Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/core-course/15-V3-sentence-correction.html">Lesson 15. Sentence correction and completion</a>
+<a class="navitem" href="../../infosys-se/core-course/16-V1-reading-comprehension.html">Lesson 16. Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/core-course/17-V6-critical-reasoning.html">Lesson 17. Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/core-course/18-W1-essay-and-email.html">Lesson 18. The essay and the email</a>
+<a class="navitem" href="../../infosys-se/core-course/19-P1-loops-and-traces.html">Lesson 19. Loops and trace tables</a>
+<a class="navitem" href="../../infosys-se/core-course/20-P4-increment-operators.html">Lesson 20. Pre- and post-increment</a>
+<a class="navitem" href="../../infosys-se/core-course/21-P3-bitwise-operators.html">Lesson 21. Bitwise operators</a>
+<a class="navitem" href="../../infosys-se/core-course/22-P5-arrays.html">Lesson 22. Arrays</a>
+<a class="navitem" href="../../infosys-se/core-course/99-LAST-48-HOURS.html">The last 48 hours</a>
+<div class="navsec">Aptitude — from zero</div>
+<a class="navitem" href="../../infosys-se/aptitude/00-INDEX.html">Aptitude — what to study and in what order</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-LOGICAL-FROM-ZERO.html">Logical-and-Analytical-Reasoning — From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-QUANT-FROM-ZERO.html">Quantitative – From Zero</a>
+<a class="navitem" href="../../infosys-se/aptitude/00-VERBAL-FROM-ZERO.html">Verbal-Ability - From Zero</a>
+<div class="navsec">Topic files</div>
+<a class="navitem" href="../../infosys-se/topics/A1-coding-and-decoding.html">A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/topics/A2-number-and-letter-series.html">A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/topics/A3-operator-logic.html">A3 — Operator logic and equation balancing</a>
+<a class="navitem" href="../../infosys-se/topics/A4-syllogisms-and-logical-deduction.html">A4 — Syllogisms and logical deduction</a>
+<a class="navitem" href="../../infosys-se/topics/A5-blood-relations.html">A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/topics/A6-data-sufficiency.html">A6 — Data sufficiency</a>
+<a class="navitem" href="../../infosys-se/topics/A7-data-interpretation.html">A7 — Data interpretation: tables and charts</a>
+<a class="navitem" href="../../infosys-se/topics/A8-linear-equations-and-ages.html">A8 — Linear equations: ages, heads-and-legs, two-variable systems</a>
+<a class="navitem" href="../../infosys-se/topics/A9-averages-mixtures-and-alligation.html">A9 — Averages, mixtures and alligation</a>
+<a class="navitem" href="../../infosys-se/topics/A10-number-system.html">A10 — Number system: primes, divisibility, powers and roots</a>
+<a class="navitem" href="../../infosys-se/topics/A11-mensuration.html">A11 — Mensuration: area, surface area, volume</a>
+<a class="navitem" href="../../infosys-se/topics/A12-percentages.html">A12 — Percentages and successive change</a>
+<a class="navitem" href="../../infosys-se/topics/A13-profit-loss-and-discount.html">A13 — Profit, loss and discount</a>
+<a class="navitem" href="../../infosys-se/topics/A14-simple-and-compound-interest.html">A14 — Simple and compound interest</a>
+<a class="navitem" href="../../infosys-se/topics/A15-time-speed-distance.html">A15 — Time, speed, distance and trains</a>
+<a class="navitem" href="../../infosys-se/topics/A16-time-and-work.html">A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/topics/A17-ratio-and-proportion.html">A17 — Ratio, proportion and cost models</a>
+<a class="navitem" href="../../infosys-se/topics/A18-permutations-combinations-probability.html">A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/topics/A19-seating-and-analytical-puzzle-sets.html">A19 — Analytical puzzle SETS on shared premises</a>
+<a class="navitem" href="../../infosys-se/topics/A20-cryptarithmetic.html">A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/topics/A21-non-verbal-reasoning.html">A21 — Non-verbal reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/G1-fill-in-the-blanks-and-cloze.html">G1 — Fill in the blanks and cloze</a>
+<a class="navitem" href="../../infosys-se/topics/G2-grammar-tense-articles-prepositions.html">G2 — Tense, articles, prepositions and voice</a>
+<a class="navitem" href="../../infosys-se/topics/G2a-active-and-passive-voice.html">G2 — Active and passive voice</a>
+<a class="navitem" href="../../infosys-se/topics/V1-reading-comprehension.html">V1 — Reading comprehension</a>
+<a class="navitem" href="../../infosys-se/topics/V2-spotting-errors-and-grammar-rules.html">V2 — Spotting errors and grammar rules</a>
+<a class="navitem" href="../../infosys-se/topics/V3-sentence-correction.html">V3 — Sentence correction and improvement</a>
+<a class="navitem" href="../../infosys-se/topics/V4-synonyms-antonyms-and-vocabulary.html">V4 — Synonyms, antonyms and vocabulary</a>
+<a class="navitem" href="../../infosys-se/topics/V5-para-jumbles.html">V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/topics/V6-critical-reasoning.html">V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/topics/W1-english-writing.html">W1 — English writing: essay and email</a>
+<div class="navsec">Numerical puzzles</div>
+<a class="navitem" href="../../infosys-se/puzzles/00-INDEX.html">Numerical Puzzle — index</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z1-number-grids-and-matrices.html">Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/puzzles/Z2-pair-and-figure-rules.html">Z2 — Pair and figure rules</a>
+<div class="navsec">Pseudocode</div>
+<a class="navitem" href="../../infosys-se/pseudocode/00-INDEX.html">Pseudocode — index</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P1-loops-iteration.html">P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P2-recursion.html">P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P3-bitwise-operators.html">P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P4-increment-operators-and-dialect.html">P4 — Pre/post-increment and fill-the-blank</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P5-arrays.html">P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P6-conditionals-nested-if.html">P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P7-functions-scope.html">P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P8-snippet-complexity.html">P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P9-oop-in-pseudocode.html">P9 — OOP in pseudocode: inheritance and overriding</a>
+<a class="navitem" href="../../infosys-se/pseudocode/P10-strings-ascii.html">P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<div class="navsec">Question banks &amp; mock</div>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01-ANSWERS.html">MOCK-01 — Answers and working</a>
+<a class="navitem" href="../../infosys-se/question-banks/MOCK-01.html">MOCK-01 — Full-length Systems Engineer mock test</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-98-OFFICIAL-SAMPLE-SOLVED.html">QB-98 — The official sample paper, solved</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-99-OBSERVED-POOL.html">QB-99 — Observed Question Pool</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A1-coding-decoding.html">QB-A1 — Coding and decoding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A2-number-and-letter-series.html">QB-A2 — Number and letter series</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A3-operator-logic.html">QB-A3 — Operator logic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A4-ordered-deduction.html">QB-A4 — Deductive reasoning: which statements entail which</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A5-blood-relations.html">QB-A5 — Blood relations</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A6-data-sufficiency-1234.html">QB-A6 — Data sufficiency in the official 1-2-3-4 format</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A7-data-interpretation.html">QB-A7 — Data interpretation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A8-linear-equations-and-ages.html">QB-A8 — Linear equations and ages</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A9-replacement-mixtures.html">QB-A9 — Replacement mixtures (milk and water)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A10-number-system.html">QB-A10 — Number system</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A11-mensuration.html">QB-A11 — Mensuration</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A16-time-and-work.html">QB-A16 — Time and work</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A18-permutations-combinations-probability.html">QB-A18 — Permutations, combinations and probability</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A19-if-then-rules.html">QB-A19 — If-then attendance puzzles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A20-cryptarithmetic.html">QB-A20 — Cryptarithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-A21-non-verbal-reasoning.html">QB-A21 — Non-verbal reasoning (text forms)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-G2-cloze-passages.html">QB-G2 — Cloze passages (five blanks each)</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV1-sdlc-agile-testing.html">QB-IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV2-oop-four-pillars.html">QB-IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-IV3-dbms-sql.html">QB-IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-infosys-dialect-traces.html">QB-P1 — Loop and trace questions in the Infosys dialect</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P1-loops-iteration.html">QB-P1 — Loops and Iteration Counting</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P2-recursion.html">QB-P2 — Recursion — Trace, Base Case, Accumulation</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P3-bitwise-operators.html">QB-P3 — Bitwise Operators and Operator Precedence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P4-increment-operators-and-dialect.html">QB-P4 — Increment operators</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P5-arrays.html">QB-P5 — Arrays — 1D and 2D Traversal and Indexing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P6-conditionals-nested-if.html">QB-P6 — Conditionals and Branch Selection in Pseudocode</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P7-functions-scope.html">QB-P7 — Functions — Scope and Pass by Value vs Reference</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P8-snippet-complexity.html">QB-P8 — Reading Time and Space Complexity off a Snippet</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P9-oop-in-pseudocode.html">QB-P9 — OOP tracing</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-P10-strings-ascii.html">QB-P10 — Strings — Traversal, Reversal and ASCII Arithmetic</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V2-identify-the-correct-sentence.html">QB-V2 — Identify the correct sentence</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V5-para-jumbles.html">QB-V5 — Para-jumbles</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-V6-critical-reasoning.html">QB-V6 — Critical reasoning</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-W1-writing-prompts.html">QB-W1 — Writing prompts</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z1-number-grids-and-matrices.html">QB-Z1 — Number grids and matrices</a>
+<a class="navitem" href="../../infosys-se/question-banks/QB-Z2-pair-and-figure-rules.html">QB-Z2 — Pair and figure rules</a>
+<div class="navsec">Interview</div>
+<a class="navitem" href="../../infosys-se/interview/00-AFTER-SELECTION.html">After You Are Selected — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/00-INDEX.html">Interview — index</a>
+<a class="navitem" href="../../infosys-se/interview/00-INFOSYS-SPECIFIC.html">Infosys-specific Items — verified, not asserted</a>
+<a class="navitem" href="../../infosys-se/interview/00-INTERVIEW-FORMAT.html">Interview Format — what is known</a>
+<a class="navitem" href="../../infosys-se/interview/00-UPGRADE-TRACK.html">The Upgrade Track (DSE and SP) — what candidates report</a>
+<a class="navitem" href="../../infosys-se/interview/IV1-sdlc-agile-testing.html">IV1 — SDLC, Agile vs Waterfall, Testing and Version Control</a>
+<a class="navitem" href="../../infosys-se/interview/IV2-oop-four-pillars.html">IV2 — OOP — The Four Pillars, Overloading vs Overriding</a>
+<a class="navitem" href="../../infosys-se/interview/IV3-dbms-sql.html">IV3 — DBMS and SQL — Joins, GROUP BY, Keys, Indexes, NULLs</a>
+<a class="navitem" href="../../infosys-se/interview/IV4-projects-and-resume.html">IV4 — Projects and resume</a>
+<a class="navitem" href="../../infosys-se/interview/IV5-hr-and-behavioural.html">IV5 — HR and behavioural</a>
+<a class="navitem" href="../../infosys-se/interview/IV5a-star-stories.html">IV5 — STAR stories from your own work</a>
+<a class="navitem" href="../../infosys-se/interview/IV5b-technology-flexibility.html">IV5 — Are you willing to work in any technology?</a>
+<a class="navitem" href="../../infosys-se/interview/IV6-generative-ai.html">IV6 — Generative AI and everyday AI use</a>
+<a class="navitem" href="../../infosys-se/interview/IV7-light-coding-in-java.html">IV7 — Light coding in Java</a>
+<div class="navsec">Evidence &amp; method</div>
+<a class="navitem" href="../../infosys-se/research/00-official-terms.html">00 — Official Terms</a>
+<a class="navitem" href="../../infosys-se/research/02-online-research-log.html">02 — Online Research Log</a>
+<a class="navitem" href="../../infosys-se/research/03-pattern-synthesis.html">03 — Pattern Synthesis</a>
+<a class="navitem" href="../../infosys-se/research/04-qa-report.html">04 — QA Report</a>
+<a class="navitem" href="../../infosys-se/research/05-source-credibility.html">05 — Source Credibility: previous-year questions</a>
+<a class="navitem" href="../../infosys-se/research/06-method-sources.html">06 — Method Sources for the Core Course</a>
+<a class="navitem" href="../../infosys-se/research/07-reddit-arctic-shift.html">Reddit research through Arctic Shift</a>
+<div class="navsec">Data &amp; verifiers</div>
+<a class="navitem" href="../../infosys-se/data/analysis-tables.html">Analysis Tables</a>
+<a class="navitem code" href="../../infosys-se/data/analyze.html">analyze.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_mock.html">bank_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/bank_verbal.html">bank_verbal.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_cheatsheet.html">build_cheatsheet.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_core_course.html">build_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_docs.html">build_docs.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_interview.html">build_interview.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_mock.html">build_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_observed.html">build_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_plan.html">build_plan.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb98.html">build_qb98.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_qb99.html">build_qb99.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_resources.html">build_resources.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_reviews.html">build_reviews.py</a>
+<a class="navitem code" href="../../infosys-se/data/build_topics.html">build_topics.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_examples.html">cc_examples.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_practice.html">cc_practice.py</a>
+<a class="navitem code" href="../../infosys-se/data/cc_readability.html">cc_readability.py</a>
+<a class="navitem code" href="../../infosys-se/data/check_links.html">check_links.py</a>
+<a class="navitem code" href="../../infosys-se/data/copy_reused.html">copy_reused.py</a>
+<a class="navitem code" href="../../infosys-se/data/filemap.html">filemap.json</a>
+<a class="navitem code" href="../../infosys-se/data/gen_cc_code.html">gen_cc_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_code.html">gen_code.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_core.html">gen_core.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_iv7.html">gen_iv7.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_oop.html">gen_oop.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_puzzles.html">gen_puzzles.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_quant.html">gen_quant.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_reasoning.html">gen_reasoning.py</a>
+<a class="navitem code" href="../../infosys-se/data/gen_syllogism.html">gen_syllogism.py</a>
+<a class="navitem code" href="../../infosys-se/data/lib_common.html">lib_common.py</a>
+<a class="navitem code" href="../../infosys-se/data/links-checked.html">links-checked.json</a>
+<a class="navitem code" href="../../infosys-se/data/official_sample.html">official_sample.py</a>
+<a class="navitem code" href="../../infosys-se/data/questions-discarded.html">questions-discarded.csv</a>
+<a class="navitem code" href="../../infosys-se/data/questions-observed.html">questions-observed.csv</a>
+<a class="navitem code" href="../../infosys-se/data/reviews-online.html">reviews-online.csv</a>
+<a class="navitem code" href="../../infosys-se/data/shuffle.html">shuffle.py</a>
+<a class="navitem code" href="../../infosys-se/data/syllabus-claims.html">syllabus-claims.csv</a>
+<a class="navitem code" href="../../infosys-se/data/test_core_course.html">test_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_copied.html">verify_copied.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_core_course.html">verify_core_course.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_generated.html">verify_generated.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_keys.html">verify_keys.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_mock.html">verify_mock.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_observed.html">verify_observed.py</a>
+<a class="navitem code" href="../../infosys-se/data/verify_structure.html">verify_structure.py</a>
+<a class="navitem code" href="../../infosys-se/data/weightage.html">weightage.json</a>
+<div class="navsec">data / cc_src</div>
+<a class="navitem" href="../../infosys-se/data/cc_src/A1.html">A1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A2.html">A2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A3.html">A3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A4.html">A4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A5.html">A5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A6.html">A6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A7.html">A7</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A8.html">A8</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/A21.html">A21</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G1.html">G1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/G2.html">G2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P1.html">P1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P3.html">P3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P4.html">P4</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/P5.html">P5</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V1.html">V1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V2.html">V2</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V3.html">V3</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/V6.html">V6</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/W1.html">W1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z1.html">Z1</a>
+<a class="navitem" href="../../infosys-se/data/cc_src/Z2.html">Z2</a>
+</div>
+</nav>
+  <main id="main">
+    <div class="crumb"><span>Infosys SE</span><span class="sep">/</span><span>Core Course: start here</span></div>
+    <article class="prose">
+<h1 id="lesson-05-data-sufficiency">Lesson 05. Data sufficiency</h1><p class="fm-line" style="color:var(--ink-faint);font-size:13px;margin:-.4em 0 1.2em">Tier 1 · Reasoning Ability · 2.5% of marks · about 0.8 h · confidence High</p>
+<p><em>Topic <code>A6</code> · about 1.9 of the 75 marks · plan about 0.8 hours.</em></p>
+<h2 id="1-the-idea">1. The idea</h2>
+<p>A data sufficiency question asks one thing: <strong>is the information enough?</strong> You do not have to find the answer. You only have to decide whether the facts you are given would let you find it, and whether there is exactly one possible answer.</p>
+<p>There is a question, and two statements, called I and II. You judge:</p>
+<ul>
+<li>Is statement I alone enough?</li>
+<li>Is statement II alone enough?</li>
+<li>If neither is enough alone, are they enough together?</li>
+</ul>
+<p>"Enough" means the question can only have <strong>one</strong> answer. If the facts leave two or more possible answers, they are not enough.</p>
+<p>A good picture comes from the exam owners of a similar test, GMAC. They describe the two statements as two peepholes in a sealed box. Both look onto the same box. So the statements never contradict each other, and each shows only part of it.</p>
+<h2 id="2-what-infosys-actually-asks">2. What Infosys actually asks</h2>
+<p>In the official 2020 sample, five questions in the reasoning section were data sufficiency, and the page gave one answer scale <code>[CONFIRMED — official sample 2020]</code>:</p>
+<ul>
+<li><strong>1</strong>: exactly one statement alone is enough;</li>
+<li><strong>2</strong>: either statement alone is enough;</li>
+<li><strong>3</strong>: both together are needed;</li>
+<li><strong>4</strong>: even both together are not enough.</li>
+</ul>
+<p>Do not mix this up with the GMAT's A to E options. Infosys uses numbers 1 to 4.</p>
+<p>The five sample questions were about juice from orange trees (a cup is not a measure in litres, so the answer is 4), three consecutive integers in no fixed order (answer 3), coins (answer 1), the cost of copper in an alloy (answer 4) and whether 2000 was an average (answer 4). The PDF has no answer key, so these answers were worked out for this library; the juice one is a judgement call. One 2025 report asked for the smallest of four consecutive even numbers, with the sum given in statement I <code>[REPORTED]</code>.</p>
+<p>Notice that, by these solutions, 4 appears three times out of five. Many of these questions are about spotting what is <em>missing</em>.</p>
+<h2 id="3-the-method">3. The method</h2>
+<ol>
+<li><strong>Read the question and decide what must be found.</strong> Write it down: "I need x", or "I need the area".</li>
+<li><strong>Test statement I on its own.</strong> Ignore statement II completely. Does it leave exactly one possible answer?</li>
+<li><strong>Test statement II on its own.</strong> Ignore statement I.</li>
+<li><strong>Count.</strong> If both alone are enough, the mark is 2. If just one, the mark is 1.</li>
+<li><strong>If neither alone is enough, put them together.</strong> One answer only? The mark is 3. Still more than one? The mark is 4.</li>
+</ol>
+<p>You are not solving the question. You are counting possible answers: none, one, or many. "One" is the only good result.</p>
+<p>A table makes the marks easy to remember:</p>
+<table>
+<thead>
+<tr>
+<th>Statement I alone</th>
+<th>Statement II alone</th>
+<th>Together</th>
+<th>Mark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>enough</td>
+<td>enough</td>
+<td>not needed</td>
+<td><strong>2</strong></td>
+</tr>
+<tr>
+<td>enough</td>
+<td>not enough</td>
+<td>not needed</td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td>not enough</td>
+<td>enough</td>
+<td>not needed</td>
+<td><strong>1</strong></td>
+</tr>
+<tr>
+<td>not enough</td>
+<td>not enough</td>
+<td>enough</td>
+<td><strong>3</strong></td>
+</tr>
+<tr>
+<td>not enough</td>
+<td>not enough</td>
+<td>not enough</td>
+<td><strong>4</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-shortcuts-and-when-they-fail">4. Shortcuts and when they fail</h2>
+<p><strong>Count the unknowns.</strong> To find two unknowns (x and y) from equations you usually need two different equations. One equation with two unknowns usually leaves many answers. <em>It fails with squares, ranges and whole-number conditions</em>, which can pin down an answer from one equation. Check them one by one.</p>
+<p><strong>Squares give two answers.</strong> A statement such as x² = 16 gives x = 4 or x = −4, so it is not enough on its own, unless another fact says x is positive. <em>It fails if the question already tells you x is positive.</em> Read the question again.</p>
+<p><strong>Inequalities rarely give one answer.</strong> "x &gt; 2" leaves many values. <em>It fails when combined with a statement that pins x to one value</em>, so use inequalities as filters.</p>
+<p><strong>Check units and words.</strong> A statement can sound helpful but be about the wrong thing, as in the sample's cup and litre question. <em>It fails when the units match</em>, so only worry when they do not.</p>
+<h2 id="5-worked-examples">5. Worked examples</h2>
+<p>All the answers were checked by trying every possible case by code, or by exact arithmetic.</p>
+<p><strong>Example 1 (the mark is 3).</strong> Rita has only 2-rupee and 5-rupee coins. How many 5-rupee coins does she have? I. She has 7 coins in all. II. The coins are worth Rs 26 in all.</p>
+<p>Statement I alone: she could have 0 to 7 five-rupee coins, so not enough. Statement II alone: the number of five-rupee coins could be 0, 2 or 4, so not enough. Together: 7 coins worth Rs 26 gives only 4 five-rupee coins. Mark <strong>3</strong>.</p>
+<p><strong>Example 2 (the mark is 2).</strong> What is x? I. 3x + 4 = 19. II. x is positive and x² = 25.</p>
+<p>Statement I: 3x = 15, so x = 5. Enough. Statement II: x² = 25 gives 5 or −5, and "positive" leaves 5. Enough. Mark <strong>2</strong>.</p>
+<p><strong>Example 3 (the mark is 1).</strong> What is x? I. x² = 16. II. 2x − 3 = 9.</p>
+<p>Statement I gives 4 or −4, so it is not enough. Statement II gives x = 6, so it is enough. Mark <strong>1</strong>.</p>
+<p><strong>Example 4 (the mark is 4).</strong> What is x? I. x + y = 9. II. x &gt; 2.</p>
+<p>I leaves many pairs (1 and 8, 2 and 7, 3 and 6 and so on). II leaves many values. Together x could still be 3, 4, 5 and so on. Mark <strong>4</strong>.</p>
+<p><strong>Example 5 (the mark is 3).</strong> What is the area of a rectangle? I. The perimeter is 20. II. The length is twice the width.</p>
+<p>Statement I alone: a width of 3 gives an area of 21, and a width of 4 gives 24. So not enough. Statement II alone: no size is fixed. Together: the length plus the width is 10 and the length is twice the width, so the width is 10 over 3. Then the area is one number, 200 over 9. Mark <strong>3</strong>.</p>
+<h2 id="6-traps">6. Traps</h2>
+<ul>
+<li><strong>Solving when you should be counting.</strong> You only need to know if there is one answer, not what it is.</li>
+<li><strong>Using statement II while testing statement I.</strong> Test each one alone first.</li>
+<li><strong>Saying "together" too early.</strong> Together comes only when neither is enough alone.</li>
+<li><strong>Forgetting that squares give two answers.</strong> x² = 16 means 4 or −4.</li>
+<li><strong>Trusting a sample-style answer without the units.</strong> If a statement talks about cups and the question asks for litres, the information may not help.</li>
+<li><strong>Calling the mark 3 when one statement was already enough.</strong> If statement II alone works, the mark is 1 or 2, never 3.</li>
+</ul>
+<h2 id="7-practice-questions">7. Practice questions</h2>
+<p>Attempt each level before opening the key. Level 3 is harder than anything in the 2020 official sample, on purpose: if you can do Level 3, the real paper will feel easy.</p>
+<h3 id="level-1-warm-up">Level 1: warm-up</h3>
+<p><em>Simple equations, inequalities and plain numbers.</em></p>
+<p><strong>1.</strong> <strong>[Data sufficiency (1-2-3-4)]</strong> Is the information enough to find the value of x? Mark <strong>1</strong> if exactly one statement alone is enough, <strong>2</strong> if either statement alone is enough, <strong>3</strong> if both together are needed, <strong>4</strong> if even both together are not enough.  </p>
+<p>I. y = 5
+II. x + y = 4</p>
+<p>a) 1<br />
+b) 2<br />
+c) 3<br />
+d) 4  </p>
+<p><strong>2.</strong> <strong>[Data sufficiency (1-2-3-4)]</strong> Is the information enough to find the value of x? Mark <strong>1</strong> if exactly one statement alone is enough, <strong>2</strong> if either statement alone is enough, <strong>3</strong> if both together are needed, <strong>4</strong> if even both together are not enough.  </p>
+<p>I. 2x + 3 = 7
+II. x³ = 8</p>
+<p>a) 1<br />
+b) 2<br />
+c) 3<br />
+d) 4  </p>
+<p><strong>3.</strong> <strong>[Data sufficiency (1-2-3-4)]</strong> Is the information enough to find the value of x? Mark <strong>1</strong> if exactly one statement alone is enough, <strong>2</strong> if either statement alone is enough, <strong>3</strong> if both together are needed, <strong>4</strong> if even both together are not enough.  </p>
+<p>I. 2x + 3 = -1
+II. y = -2</p>
+<p>a) 1<br />
+b) 2<br />
+c) 3<br />
+d) 4  </p>
+<p><strong>4.</strong> <strong>[Data sufficiency (1-2-3-4)]</strong> Is the information enough to find the value of x? Mark <strong>1</strong> if exactly one statement alone is enough, <strong>2</strong> if either statement alone is enough, <strong>3</strong> if both together are needed, <strong>4</strong> if even both together are not enough.  </p>
+<p>I. x is even
+II. x + y = -6</p>
+<p>a) 1<br />
+b) 2<br />
+c) 3<br />
+d) 4  </p>
+<p><strong>5.</strong> <strong>[Data sufficiency (1-2-3-4)]</strong> Is the information enough to find the value of x? Mark <strong>1</strong> if exactly one statement alone is enough, <strong>2</strong> if either statement alone is enough, <strong>3</strong> if both together are needed, <strong>4</strong> if even both together are not enough.  </p>
+<p>I. y = -4
+II. x + y = 4</p>
+<p>a) 1<br />
+b) 2<br />
+c) 3<br />
+d) 4  </p>
+<h3 id="level-2-exam-level">Level 2: exam level</h3>
+<p><em>Squares, cubes and products, and one coin problem.</em></p>
+<p><strong>6.</strong> <strong>[Data sufficiency (1-2-3-4)]</strong> Is the information enough to find the value of x? Mark <strong>1</strong> if exactly one statement alone is enough, <strong>2</strong> if either statement alone is enough, <strong>3</strong> if both together are needed, <strong>4</strong> if even both together are not enough.  </p>
+<p>I. x - y = 7
+II. x³ = -8</p>
+<p>a) 1<br />
+b) 2<br />
+c) 3<br />
+d) 4  </p>
+<p><strong>7.</strong> <strong>[Data sufficiency (1-2-3-4)]</strong> Is the information enough to find the value of x? Mark <strong>1</strong> if exactly one statement alone is enough, <strong>2</strong> if either statement alone is enough, <strong>3</strong> if both together are needed, <strong>4</strong> if even both together are not enough.  </p>
+<p>I. x² = 9
+II. x + y = -2</p>
+<p>a) 1<br />
+b) 2<br />
+c) 3<br />
+d) 4  </p>
+<p><strong>8.</strong> <strong>[Data sufficiency (1-2-3-4)]</strong> Is the information enough to find the value of x? Mark <strong>1</strong> if exactly one statement alone is enough, <strong>2</strong> if either statement alone is enough, <strong>3</strong> if both together are needed, <strong>4</strong> if even both together are not enough.  </p>
+<p>I. 2x + 3 = -1
+II. x³ = -8</p>
+<p>a) 1<br />
+b) 2<br />
+c) 3<br />
+d) 4  </p>
+<p><strong>9.</strong> <strong>[Data sufficiency (coins)]</strong> Rita has only 1-rupee and 5-rupee coins. How many 5-rupee coins does she have? Mark <strong>1</strong> if exactly one statement alone is enough, <strong>2</strong> if either statement alone is enough, <strong>3</strong> if both together are needed, <strong>4</strong> if even both together are not enough.  </p>
+<p>I. The number of 1-rupee coins is even.
+II. The coins are worth Rs 11 in all.</p>
+<p>a) 1<br />
+b) 2<br />
+c) 3<br />
+d) 4  </p>
+<p><strong>10.</strong> <strong>[Data sufficiency (1-2-3-4)]</strong> Is the information enough to find the value of x? Mark <strong>1</strong> if exactly one statement alone is enough, <strong>2</strong> if either statement alone is enough, <strong>3</strong> if both together are needed, <strong>4</strong> if even both together are not enough.  </p>
+<p>I. x &lt; -3
+II. x - y = 7</p>
+<p>a) 1<br />
+b) 2<br />
+c) 3<br />
+d) 4  </p>
+<h3 id="level-3-beyond-the-exam">Level 3: beyond the exam</h3>
+<p><em>Compound statements ("positive and squares to 25") and coin problems with several facts.</em></p>
+<p><strong>11.</strong> <strong>[Data sufficiency (coins)]</strong> Rita has only 2-rupee and 10-rupee coins. How many 10-rupee coins does she have? Mark <strong>1</strong> if exactly one statement alone is enough, <strong>2</strong> if either statement alone is enough, <strong>3</strong> if both together are needed, <strong>4</strong> if even both together are not enough.  </p>
+<p>I. She has more 2-rupee coins than 10-rupee coins.
+II. The number of 2-rupee coins is even.</p>
+<p>a) 1<br />
+b) 2<br />
+c) 3<br />
+d) 4  </p>
+<p><strong>12.</strong> <strong>[Data sufficiency (1-2-3-4)]</strong> Is the information enough to find the value of x? Mark <strong>1</strong> if exactly one statement alone is enough, <strong>2</strong> if either statement alone is enough, <strong>3</strong> if both together are needed, <strong>4</strong> if even both together are not enough.  </p>
+<p>I. x² = 25
+II. x &lt; 4</p>
+<p>a) 1<br />
+b) 2<br />
+c) 3<br />
+d) 4  </p>
+<p><strong>13.</strong> <strong>[Data sufficiency (coins)]</strong> Rita has only 2-rupee and 5-rupee coins. How many 5-rupee coins does she have? Mark <strong>1</strong> if exactly one statement alone is enough, <strong>2</strong> if either statement alone is enough, <strong>3</strong> if both together are needed, <strong>4</strong> if even both together are not enough.  </p>
+<p>I. She has at most 2 5-rupee coins.
+II. The coins are worth Rs 9 in all.</p>
+<p>a) 1<br />
+b) 2<br />
+c) 3<br />
+d) 4  </p>
+<p><strong>14.</strong> <strong>[Data sufficiency (1-2-3-4)]</strong> Is the information enough to find the value of x? Mark <strong>1</strong> if exactly one statement alone is enough, <strong>2</strong> if either statement alone is enough, <strong>3</strong> if both together are needed, <strong>4</strong> if even both together are not enough.  </p>
+<p>I. x³ = -27
+II. x² = 9 and x &lt; 0</p>
+<p>a) 1<br />
+b) 2<br />
+c) 3<br />
+d) 4  </p>
+<p><strong>15.</strong> <strong>[Data sufficiency (1-2-3-4)]</strong> Is the information enough to find the value of x? Mark <strong>1</strong> if exactly one statement alone is enough, <strong>2</strong> if either statement alone is enough, <strong>3</strong> if both together are needed, <strong>4</strong> if even both together are not enough.  </p>
+<p>I. x² = 9 and x &lt; 0
+II. x × y = 18</p>
+<p>a) 1<br />
+b) 2<br />
+c) 3<br />
+d) 4  </p>
+<h3 id="answer-key">ANSWER KEY</h3>
+<ol>
+<li><strong>c</strong> — Statement I alone: x has many possible values (for example -12, -11, -10). Statement II alone: x has many possible values (for example -8, -7, -6). Together: x = -1. So the mark is <strong>3</strong>. (Found by listing every integer pair (x, y) from −12 to 12 that fits each statement.)</li>
+<li><strong>b</strong> — Statement I alone: x = 2. Statement II alone: x = 2. Together: x = 2. So the mark is <strong>2</strong>. (Found by listing every integer pair (x, y) from −12 to 12 that fits each statement.)</li>
+<li><strong>a</strong> — Statement I alone: x = -2. Statement II alone: x has many possible values (for example -12, -11, -10). Together: x = -2. So the mark is <strong>1</strong>. (Found by listing every integer pair (x, y) from −12 to 12 that fits each statement.)</li>
+<li><strong>d</strong> — Statement I alone: x has many possible values (for example -12, -10, -8). Statement II alone: x has many possible values (for example -12, -11, -10). Together: x has many possible values (for example -12, -10, -8). So the mark is <strong>4</strong>. (Found by listing every integer pair (x, y) from −12 to 12 that fits each statement.)</li>
+<li><strong>c</strong> — Statement I alone: x has many possible values (for example -12, -11, -10). Statement II alone: x has many possible values (for example -8, -7, -6). Together: x = 8. So the mark is <strong>3</strong>. (Found by listing every integer pair (x, y) from −12 to 12 that fits each statement.)</li>
+<li><strong>a</strong> — Statement I alone: x has many possible values (for example -5, -4, -3). Statement II alone: x = -2. Together: x = -2. So the mark is <strong>1</strong>. (Found by listing every integer pair (x, y) from −12 to 12 that fits each statement.)</li>
+<li><strong>d</strong> — Statement I alone: x could be -3 or 3. Statement II alone: x has many possible values (for example -12, -11, -10). Together: x could be -3 or 3. So the mark is <strong>4</strong>. (Found by listing every integer pair (x, y) from −12 to 12 that fits each statement.)</li>
+<li><strong>b</strong> — Statement I alone: x = -2. Statement II alone: x = -2. Together: x = -2. So the mark is <strong>2</strong>. (Found by listing every integer pair (x, y) from −12 to 12 that fits each statement.)</li>
+<li><strong>c</strong> — Try every pair (number of 1-rupee coins, number of 5-rupee coins) up to 30 each. Statement I alone leaves [0, 1, 2, 3, 4, 5]… as possible counts of 5-rupee coins; statement II alone leaves [0, 1, 2]; together they leave [1]. So the mark is <strong>3</strong>.</li>
+<li><strong>d</strong> — Statement I alone: x has many possible values (for example -12, -11, -10). Statement II alone: x has many possible values (for example -5, -4, -3). Together: x could be -5 or -4. So the mark is <strong>4</strong>. (Found by listing every integer pair (x, y) from −12 to 12 that fits each statement.)</li>
+<li><strong>d</strong> — Try every pair (number of 2-rupee coins, number of 10-rupee coins) up to 30 each. Statement I alone leaves [0, 1, 2, 3, 4, 5]… as possible counts of 10-rupee coins; statement II alone leaves [0, 1, 2, 3, 4, 5]…; together they leave [0, 1, 2, 3, 4, 5]. So the mark is <strong>4</strong>.</li>
+<li><strong>c</strong> — Statement I alone: x could be -5 or 5. Statement II alone: x has many possible values (for example -12, -11, -10). Together: x = -5. So the mark is <strong>3</strong>. (Found by listing every integer pair (x, y) from −12 to 12 that fits each statement.)</li>
+<li><strong>a</strong> — Try every pair (number of 2-rupee coins, number of 5-rupee coins) up to 30 each. Statement I alone leaves [0, 1, 2] as possible counts of 5-rupee coins; statement II alone leaves [1]; together they leave [1]. So the mark is <strong>1</strong>.</li>
+<li><strong>b</strong> — Statement I alone: x = -3. Statement II alone: x = -3. Together: x = -3. So the mark is <strong>2</strong>. (Found by listing every integer pair (x, y) from −12 to 12 that fits each statement.)</li>
+<li><strong>a</strong> — Statement I alone: x = -3. Statement II alone: x has many possible values (for example -9, -6, -3). Together: x = -3. So the mark is <strong>1</strong>. (Found by listing every integer pair (x, y) from −12 to 12 that fits each statement.)</li>
+</ol>
+<h2 id="8-recap-in-60-seconds">8. Recap in 60 seconds</h2>
+<ul>
+<li>Count the possible answers. <strong>One</strong> is enough. More than one is not.</li>
+<li>Test I alone, then II alone, then together if you must.</li>
+<li>Marks: both alone = <strong>2</strong>; one alone = <strong>1</strong>; only together = <strong>3</strong>; not even together = <strong>4</strong>.</li>
+<li>One equation, two unknowns: usually not enough. A square gives two values unless something fixes the sign.</li>
+<li>You are judging, not solving. Do not waste time finding the answer.</li>
+</ul>
+<h2 id="9-sources">9. Sources</h2>
+<ul>
+<li>Infosys's own 2020 sample paper, reasoning section: the 1-2-3-4 scale and the five questions (see <code>../research/05-source-credibility.md</code>).</li>
+<li><a href="https://www.gmac.com/resources/learners/how-to-apply/exams-preparation/gmat-data-insights">GMAT Data Insights (GMAC)</a>: the idea that the task is to decide whether the information is sufficient, and the two-peepholes picture (S9 in <code>../research/06-method-sources.md</code>).</li>
+<li>Every mark in the examples was decided by trying every possible case in code, or by exact fractions (<code>data/cc_examples.py</code>).</li>
+</ul>
+    </article>
+    <div class="pagers"><a class="pager prev" href="../../infosys-se/core-course/04-A1-coding-and-decoding.html"><span>Previous</span><strong>Lesson 04. Coding and decoding</strong></a><a class="pager next" href="../../infosys-se/core-course/06-A4-syllogisms-and-deduction.html"><span>Next</span><strong>Lesson 06. Syllogisms and logical deduction</strong></a></div>
+  </main>
+  <aside class="toc"><div class="toc-h">On this page</div><a class="toc-l0" href="#lesson-05-data-sufficiency">Lesson 05. Data sufficiency</a><a class="toc-l1" href="#1-the-idea">1. The idea</a><a class="toc-l1" href="#2-what-infosys-actually-asks">2. What Infosys actually asks</a><a class="toc-l1" href="#3-the-method">3. The method</a><a class="toc-l1" href="#4-shortcuts-and-when-they-fail">4. Shortcuts and when they fail</a><a class="toc-l1" href="#5-worked-examples">5. Worked examples</a><a class="toc-l1" href="#6-traps">6. Traps</a><a class="toc-l1" href="#7-practice-questions">7. Practice questions</a><a class="toc-l1" href="#8-recap-in-60-seconds">8. Recap in 60 seconds</a><a class="toc-l1" href="#9-sources">9. Sources</a></aside>
+</div>
+<div class="scrim" id="scrim"></div>
+<script src="../../assets/app.js"></script>
+</body>
+</html>
